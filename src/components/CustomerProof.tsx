@@ -193,7 +193,7 @@ export function CustomerProof() {
             revenue, and improved loyalty.
           </p>
           <a
-            href="#"
+            href="https://parcellab.com/case-studies/"
             className="mt-8 inline-flex items-center rounded-full bg-[#3D3AD3] px-6 py-4 text-base font-medium text-white transition-colors hover:bg-[#3230b8]"
           >
             View all customer stories

@@ -34,6 +34,8 @@ interface NavItemConfig {
   };
 }
 
+const PL = "https://parcellab.com";
+
 const NAV_ITEMS: NavItemConfig[] = [
   {
     label: "Platform",
@@ -44,7 +46,7 @@ const NAV_ITEMS: NavItemConfig[] = [
           {
             title: "Convert",
             desc: "Boost cart conversion with delivery promises",
-            href: "/boost-cart-conversion/",
+            href: `${PL}/boost-cart-conversion/`,
             icon: "M3 3h18v18H3zM12 8v8m-4-4h8",
             iconColor: "#035740",
             iconBg: "#035740",
@@ -52,7 +54,7 @@ const NAV_ITEMS: NavItemConfig[] = [
           {
             title: "Engage",
             desc: "Enhance delivery experience with branded tracking",
-            href: "/enhance-delivery-experience/",
+            href: `${PL}/enhance-delivery-experience/`,
             icon: "M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z",
             iconColor: "#3D3AD3",
             iconBg: "#3D3AD3",
@@ -60,7 +62,7 @@ const NAV_ITEMS: NavItemConfig[] = [
           {
             title: "Retain",
             desc: "Make returns seamless and drive loyalty",
-            href: "/make-returns-seamless/",
+            href: `${PL}/make-returns-seamless/`,
             icon: "M17 1l4 4-4 4M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4M21 13v2a4 4 0 0 1-4 4H3",
             iconColor: "#EF4444",
             iconBg: "#EF4444",
@@ -68,7 +70,7 @@ const NAV_ITEMS: NavItemConfig[] = [
           {
             title: "Insights",
             desc: "Get data-driven analytics and benchmarks",
-            href: "/get-data-driven-insights/",
+            href: `${PL}/get-data-driven-insights/`,
             icon: "M18 20V10M12 20V4M6 20v-6",
             iconColor: "#FFC943",
             iconBg: "#F59E0B",
@@ -81,7 +83,7 @@ const NAV_ITEMS: NavItemConfig[] = [
           {
             title: "Platform overview",
             desc: "See all platform features",
-            href: "/post-purchase-platform/",
+            href: `${PL}/post-purchase-platform/`,
             icon: "M4 6h16M4 12h16M4 18h16",
             iconColor: "#6B7280",
             iconBg: "#6B7280",
@@ -89,7 +91,7 @@ const NAV_ITEMS: NavItemConfig[] = [
           {
             title: "AI & automation",
             desc: "Intelligent workflow automation",
-            href: "/ai-powered-post-purchase/",
+            href: `${PL}/ai-powered-post-purchase/`,
             icon: "M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z",
             iconColor: "#8B5CF6",
             iconBg: "#8B5CF6",
@@ -99,7 +101,7 @@ const NAV_ITEMS: NavItemConfig[] = [
           {
             title: "App Store",
             desc: "Extend with integrations",
-            href: "/app-store/",
+            href: `${PL}/app-store/`,
             icon: "M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z",
             iconColor: "#6B7280",
             iconBg: "#6B7280",
@@ -110,7 +112,7 @@ const NAV_ITEMS: NavItemConfig[] = [
   },
   {
     label: "AI Agents",
-    href: "/ai-powered-post-purchase/",
+    href: `${PL}/ai-powered-post-purchase/`,
   },
   {
     label: "Solutions",
@@ -118,19 +120,19 @@ const NAV_ITEMS: NavItemConfig[] = [
       {
         label: "By role",
         links: [
-          { title: "eCommerce & digital", href: "/ecommerce-and-digital/", icon: "M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z", iconColor: "#3D3AD3", iconBg: "#3D3AD3" },
-          { title: "Operations & Logistics", href: "/operations-and-logistics/", icon: "M1 3h15v13H1zM16 8h4l3 3v5h-7V8z", iconColor: "#035740", iconBg: "#035740" },
-          { title: "Customer service", href: "/customer-service/", icon: "M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2", iconColor: "#F59E0B", iconBg: "#F59E0B" },
-          { title: "Customer experience", href: "/customer-experience/", icon: "M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z", iconColor: "#EF4444", iconBg: "#EF4444" },
-          { title: "Marketing", href: "/marketing/", icon: "M22 12h-4l-3 9L9 3l-3 9H2", iconColor: "#8B5CF6", iconBg: "#8B5CF6" },
+          { title: "eCommerce & digital", href: `${PL}/ecommerce-and-digital/`, icon: "M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z", iconColor: "#3D3AD3", iconBg: "#3D3AD3" },
+          { title: "Operations & Logistics", href: `${PL}/operations-and-logistics/`, icon: "M1 3h15v13H1zM16 8h4l3 3v5h-7V8z", iconColor: "#035740", iconBg: "#035740" },
+          { title: "Customer service", href: `${PL}/customer-service/`, icon: "M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2", iconColor: "#F59E0B", iconBg: "#F59E0B" },
+          { title: "Customer experience", href: `${PL}/customer-experience/`, icon: "M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z", iconColor: "#EF4444", iconBg: "#EF4444" },
+          { title: "Marketing", href: `${PL}/marketing/`, icon: "M22 12h-4l-3 9L9 3l-3 9H2", iconColor: "#8B5CF6", iconBg: "#8B5CF6" },
         ],
       },
       {
         label: "By journey stage",
         links: [
-          { title: "Pre-purchase", desc: "Convert browsers into buyers", href: "/boost-cart-conversion/" },
-          { title: "Post-purchase", desc: "Delight after checkout", href: "/enhance-delivery-experience/" },
-          { title: "Returns & loyalty", desc: "Turn returns into retention", href: "/make-returns-seamless/" },
+          { title: "Pre-purchase", desc: "Convert browsers into buyers", href: `${PL}/boost-cart-conversion/` },
+          { title: "Post-purchase", desc: "Delight after checkout", href: `${PL}/enhance-delivery-experience/` },
+          { title: "Returns & loyalty", desc: "Turn returns into retention", href: `${PL}/make-returns-seamless/` },
         ],
       },
     ],
@@ -138,14 +140,14 @@ const NAV_ITEMS: NavItemConfig[] = [
       label: "Case study",
       title: "How Wyze cut WISMO by 20%",
       desc: "See how Wyze transformed their post-purchase experience and saved thousands of support hours.",
-      href: "/case-studies/wyze/",
+      href: `${PL}/case-studies/wyze/`,
       gradient: "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)",
       accentColor: "#FFC943",
     },
   },
   {
     label: "Customers",
-    href: "/case-studies/",
+    href: `${PL}/case-studies/`,
   },
   {
     label: "Resources",
@@ -153,30 +155,30 @@ const NAV_ITEMS: NavItemConfig[] = [
       {
         label: "Learn",
         links: [
-          { title: "Blog", href: "/blog/", icon: "M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z", iconColor: "#3D3AD3", iconBg: "#3D3AD3" },
-          { title: "Guides", href: "/guide/", icon: "M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5V5a2 2 0 0 1 2-2h14v14H6.5A2.5 2.5 0 0 0 4 19.5z", iconColor: "#035740", iconBg: "#035740" },
-          { title: "Research", href: "/research/", icon: "M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z", iconColor: "#8B5CF6", iconBg: "#8B5CF6" },
-          { title: "Glossary", href: "/glossary/" },
-          { title: "Compare", href: "/comparison/" },
-          { title: "PPX Maturity Curve", href: "/ppx-maturity-curve/", badge: "Interactive", badgeColor: "#035740" },
+          { title: "Blog", href: `${PL}/blog/`, icon: "M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z", iconColor: "#3D3AD3", iconBg: "#3D3AD3" },
+          { title: "Guides", href: `${PL}/guide/`, icon: "M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5V5a2 2 0 0 1 2-2h14v14H6.5A2.5 2.5 0 0 0 4 19.5z", iconColor: "#035740", iconBg: "#035740" },
+          { title: "Research", href: `${PL}/research/`, icon: "M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z", iconColor: "#8B5CF6", iconBg: "#8B5CF6" },
+          { title: "Glossary", href: `${PL}/glossary/` },
+          { title: "Compare", href: `${PL}/comparison/` },
+          { title: "PPX Maturity Curve", href: `${PL}/ppx-maturity-curve/`, badge: "Interactive", badgeColor: "#035740" },
         ],
       },
       {
         label: "Connect",
         links: [
-          { title: "Live demo", href: "/live-demo/", badge: "Popular", badgeColor: "#EF4444" },
-          { title: "Webinars", href: "/webinars/" },
-          { title: "Events", href: "/events/" },
-          { title: "Press", href: "/press/" },
+          { title: "Live demo", href: `${PL}/live-demo/`, badge: "Popular", badgeColor: "#EF4444" },
+          { title: "Webinars", href: `${PL}/webinars/` },
+          { title: "Events", href: `${PL}/events/` },
+          { title: "Press", href: `${PL}/press/` },
         ],
       },
       {
         label: "Support",
         links: [
-          { title: "Developer resources", href: "#" },
-          { title: "Partners & integrations", href: "#" },
-          { title: "System status", href: "#" },
-          { title: "Contact us", href: "/contact-us/" },
+          { title: "Developer resources", href: `${PL}/developer-resources/` },
+          { title: "Partners & integrations", href: `${PL}/app-store/` },
+          { title: "System status", href: `${PL}/contact-us/` },
+          { title: "Contact us", href: `${PL}/contact-us/` },
         ],
       },
     ],
@@ -187,12 +189,12 @@ const NAV_ITEMS: NavItemConfig[] = [
       {
         label: "About",
         links: [
-          { title: "Why parcelLab", desc: "Our mission and values", href: "/why-parcellab/", icon: "M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z", iconColor: "#FFC943", iconBg: "#F59E0B" },
-          { title: "About us", desc: "Our story and team", href: "/about-us/", icon: "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75", iconColor: "#3D3AD3", iconBg: "#3D3AD3" },
-          { title: "Leadership", href: "/meet-the-team/" },
-          { title: "Careers", href: "/careers/", badge: "Hiring", badgeColor: "#035740" },
-          { title: "In the media", href: "/in-the-press/" },
-          { title: "Contact", href: "/contact-us/" },
+          { title: "Why parcelLab", desc: "Our mission and values", href: `${PL}/why-parcellab/`, icon: "M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z", iconColor: "#FFC943", iconBg: "#F59E0B" },
+          { title: "About us", desc: "Our story and team", href: `${PL}/about-us/`, icon: "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75", iconColor: "#3D3AD3", iconBg: "#3D3AD3" },
+          { title: "Leadership", href: `${PL}/meet-the-team/` },
+          { title: "Careers", href: `${PL}/careers/`, badge: "Hiring", badgeColor: "#035740" },
+          { title: "In the media", href: `${PL}/in-the-press/` },
+          { title: "Contact", href: `${PL}/contact-us/` },
         ],
       },
     ],
@@ -434,7 +436,7 @@ export function Header() {
             <span className="inline-flex h-5 items-center rounded-full bg-[#3D3AD3] px-2 text-[10px] font-bold uppercase tracking-wider text-white">New</span>
             <span>
               Join our newsletter for post-purchase and CX insights{" "}
-              <a href="#" className="font-semibold text-white underline decoration-white/30 underline-offset-2 transition-all hover:decoration-white">
+              <a href="https://parcellab.com/blog/" className="font-semibold text-white underline decoration-white/30 underline-offset-2 transition-all hover:decoration-white">
                 Subscribe &rarr;
               </a>
             </span>
@@ -460,7 +462,7 @@ export function Header() {
           onMouseLeave={closeDropdown}
         >
           {/* Logo */}
-          <a href="/" className="shrink-0 transition-opacity hover:opacity-80">
+          <a href={`${import.meta.env.BASE_URL}/`} className="shrink-0 transition-opacity hover:opacity-80">
             <img src={`${import.meta.env.BASE_URL}/images/logos/parcelab-logo-white-1.svg`} alt="parcelLab" width={132} height={44} />
           </a>
 
@@ -521,10 +523,10 @@ export function Header() {
 
           {/* Right Actions */}
           <div className="flex items-center gap-3">
-            <a href="#" className="hidden text-[13px] font-medium text-gray-500 transition-colors hover:text-gray-900 sm:inline-block">
+            <a href="https://portal.parcellab.com/login" className="hidden text-[13px] font-medium text-gray-500 transition-colors hover:text-gray-900 sm:inline-block">
               Log in
             </a>
-            <a href="#" className="nav-cta-btn hidden rounded-full bg-[#3D3AD3] px-5 py-2.5 text-[13px] font-semibold text-white transition-all hover:bg-[#3230b8] active:scale-[0.97] sm:inline-block">
+            <a href="https://parcellab.com/live-demo/" className="nav-cta-btn hidden rounded-full bg-[#3D3AD3] px-5 py-2.5 text-[13px] font-semibold text-white transition-all hover:bg-[#3230b8] active:scale-[0.97] sm:inline-block">
               Book a demo
             </a>
             <button
@@ -600,8 +602,8 @@ export function Header() {
                 )
               )}
               <hr className="my-2 border-gray-100" />
-              <a href="#" className="px-4 py-3 text-sm text-gray-700">Log in</a>
-              <a href="#" className="mt-1 block rounded-full bg-[#3D3AD3] px-6 py-3 text-center text-sm font-semibold text-white">Book a demo</a>
+              <a href="https://portal.parcellab.com/login" className="px-4 py-3 text-sm text-gray-700">Log in</a>
+              <a href="https://parcellab.com/live-demo/" className="mt-1 block rounded-full bg-[#3D3AD3] px-6 py-3 text-center text-sm font-semibold text-white">Book a demo</a>
             </div>
           </div>
         )}

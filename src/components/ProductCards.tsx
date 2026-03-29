@@ -187,7 +187,7 @@ export function ProductCards() {
 
               {/* CTA */}
               <a
-                href="#"
+                href={`https://parcellab.com/${card.id === "retain" ? "make-returns-seamless" : card.id === "engage" ? "enhance-delivery-experience" : card.id === "convert" ? "boost-cart-conversion" : card.id === "insights" ? "get-data-driven-insights" : "ai-powered-post-purchase"}/`}
                 className="group mb-6 inline-flex items-center gap-2 text-sm font-medium text-white"
               >
                 {card.cta}
