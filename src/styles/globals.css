@@ -99,3 +99,72 @@
 .scrollbar-none::-webkit-scrollbar {
   display: none;
 }
+
+/* ─── Mega Menu Animations ─── */
+
+/* Dropdown panel entrance */
+.nav-dropdown-container {
+  animation: nav-dropdown-enter 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes nav-dropdown-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Dropdown panel morphing between items */
+.nav-dropdown-panel {
+  transition:
+    height 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    width 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Staggered item fade-in */
+.nav-dropdown-item {
+  animation: nav-item-enter 0.25s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+@keyframes nav-item-enter {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile menu slide-down */
+.nav-mobile-menu {
+  animation: nav-mobile-enter 0.2s ease-out;
+}
+
+@keyframes nav-mobile-enter {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 1000px;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .nav-dropdown-container,
+  .nav-dropdown-item,
+  .nav-mobile-menu {
+    animation: none;
+  }
+  .nav-dropdown-panel {
+    transition: none;
+  }
+}
