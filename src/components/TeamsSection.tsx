@@ -7,24 +7,26 @@ interface TeamCard {
   description: string;
 }
 
+const base = import.meta.env.BASE_URL;
+
 const teams: TeamCard[] = [
   {
-    image: "/images/ecommerce-and-digital-1.webp",
+    image: `${base}images/ecommerce-digital.webp`,
     title: "eCommerce & digital",
     description: "Boost sales, build loyalty, and drive more repeat purchases.",
   },
   {
-    image: "/images/operations-and-logistics-1.webp",
+    image: `${base}images/Operations-logistics-1.webp`,
     title: "Operations & Logistics",
     description: "Improve visibility, cut costs, and manage exceptions.",
   },
   {
-    image: "/images/customer-service.webp",
+    image: `${base}images/customer-service-1.webp`,
     title: "Customer service",
     description: "Fewer WISMO/WISMR calls, more time for value support.",
   },
   {
-    image: "/images/marketing.webp",
+    image: `${base}images/Marketing.webp`,
     title: "Marketing",
     description:
       "Drive engagement with personalized post-purchase campaigns.",
