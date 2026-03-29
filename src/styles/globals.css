@@ -104,36 +104,38 @@
 
 /* Dropdown panel entrance */
 .nav-dropdown-container {
-  animation: nav-dropdown-enter 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: nav-dropdown-enter 0.28s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 @keyframes nav-dropdown-enter {
   from {
     opacity: 0;
-    transform: translateY(-4px) scale(0.98);
+    transform: translateY(-8px);
+    filter: blur(4px);
   }
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
+    filter: blur(0);
   }
 }
 
-/* Dropdown panel morphing between items */
+/* Dropdown panel smooth transitions */
 .nav-dropdown-panel {
   transition:
-    height 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-    width 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    height 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* Staggered item fade-in */
 .nav-dropdown-item {
-  animation: nav-item-enter 0.25s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+  animation: nav-item-enter 0.35s cubic-bezier(0.22, 1, 0.36, 1) backwards;
 }
 
 @keyframes nav-item-enter {
   from {
     opacity: 0;
-    transform: translateY(4px);
+    transform: translateY(8px);
   }
   to {
     opacity: 1;
@@ -141,19 +143,78 @@
   }
 }
 
-/* Mobile menu slide-down */
-.nav-mobile-menu {
-  animation: nav-mobile-enter 0.2s ease-out;
+/* Icon box hover glow */
+.nav-link-item:hover .nav-icon-box {
+  box-shadow: 0 4px 16px var(--icon-glow, #6B7280)24;
+  background-color: var(--icon-glow, #6B7280)18 !important;
 }
 
+/* Hover pill sliding indicator */
+.nav-hover-pill {
+  transition: left 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              width 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* CTA button glow */
+.nav-cta-btn {
+  box-shadow: 0 2px 12px rgba(61, 58, 211, 0.25), 0 0 0 0 rgba(61, 58, 211, 0);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.nav-cta-btn:hover {
+  box-shadow: 0 4px 20px rgba(61, 58, 211, 0.35), 0 0 0 2px rgba(61, 58, 211, 0.08);
+  transform: translateY(-1px);
+}
+.nav-cta-btn:active {
+  transform: translateY(0) scale(0.97);
+  box-shadow: 0 2px 8px rgba(61, 58, 211, 0.2);
+}
+
+/* Featured card shimmer on hover */
+.nav-featured-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.04) 45%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 55%, transparent 60%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transition: background-position 0.6s ease;
+  pointer-events: none;
+  border-radius: inherit;
+}
+.nav-featured-card:hover::after {
+  background-position: -100% 0;
+}
+
+/* Backdrop overlay */
+.nav-backdrop {
+  animation: backdrop-enter 0.25s ease forwards;
+}
+@keyframes backdrop-enter {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Announcement banner */
+.nav-banner {
+  animation: banner-enter 0.4s ease;
+}
+@keyframes banner-enter {
+  from { opacity: 0; transform: translateY(-100%); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile menu slide-down */
+.nav-mobile-menu {
+  animation: nav-mobile-enter 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
 @keyframes nav-mobile-enter {
   from {
     opacity: 0;
-    max-height: 0;
+    transform: translateY(-8px);
   }
   to {
     opacity: 1;
-    max-height: 1000px;
+    transform: translateY(0);
   }
 }
 
@@ -161,10 +222,17 @@
 @media (prefers-reduced-motion: reduce) {
   .nav-dropdown-container,
   .nav-dropdown-item,
-  .nav-mobile-menu {
+  .nav-mobile-menu,
+  .nav-banner,
+  .nav-backdrop {
     animation: none;
   }
-  .nav-dropdown-panel {
+  .nav-dropdown-panel,
+  .nav-hover-pill,
+  .nav-cta-btn {
     transition: none;
+  }
+  .nav-featured-card::after {
+    display: none;
   }
 }
