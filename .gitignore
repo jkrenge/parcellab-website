@@ -1,25 +1,17 @@
 # Dependencies
 node_modules/
-.pnp
-.pnp.js
 
 # Build
-.next/
-out/
-build/
 dist/
+.astro/
 
 # Environment
 .env
 .env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*
 
 # Debug
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
 # IDE
 .idea/
@@ -33,13 +25,6 @@ Thumbs.db
 
 # TypeScript
 *.tsbuildinfo
-next-env.d.ts
 
-# Vercel
-.vercel
-
-# Local settings (not project config)
+# Claude Code local settings
 .claude/settings.local.json
-
-# User-specific skills (not part of the template)
-.claude/skills/customize/

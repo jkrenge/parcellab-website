@@ -1,0 +1,90 @@
+---
+---
+
+<section class="rounded-t-[32px] bg-[#212121]">
+  <div class="mx-auto flex max-w-[1440px] flex-col items-center gap-12 px-6 py-20 md:flex-row md:gap-0 md:px-12 md:py-0">
+    <div class="flex-1 md:py-24">
+      <h2 class="text-[40px] leading-[50px] font-medium tracking-[-1.5px] text-white md:text-[50px] md:leading-[60px]">
+        Discover your<br />PPX maturity
+      </h2>
+      <p class="mt-5 max-w-md text-lg leading-[29px] text-white/70">
+        See how your post-purchase experience compares and what it takes to level up.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="#" class="inline-flex items-center gap-2 rounded-full bg-[#3D3AD3] px-6 py-4 text-sm font-medium text-white transition-colors hover:bg-[#3230b8]">
+          Get your PPX assessment
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="#" class="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-4 text-sm font-medium text-white transition-colors hover:border-white/50">
+          Explore the platform
+        </a>
+      </div>
+    </div>
+    <div class="relative hidden h-[567px] flex-1 md:block">
+      <!-- Score Card -->
+      <div class="absolute top-12 right-16 w-[200px] rotate-3 rounded-2xl bg-[#2a2a2a] p-5 shadow-2xl">
+        <p class="mb-1 text-xs text-white/50">Your score</p>
+        <p class="mb-3 text-3xl font-semibold text-emerald-400">3.45</p>
+        <div class="flex items-end gap-1.5">
+          {[40,65,50,80,55,70,90,60,75,85].map((h) => (
+            <div class="w-2.5 rounded-sm bg-emerald-400/80" style={`height:${h * 0.4}px`} />
+          ))}
+        </div>
+      </div>
+      <!-- Tracking Card -->
+      <div class="absolute top-[160px] right-0 w-[260px] -rotate-2 rounded-2xl bg-[#2a2a2a] p-5 shadow-2xl">
+        <p class="mb-0.5 text-sm font-medium text-white">Track your delivery</p>
+        <p class="mb-4 text-xs text-white/40">Order #PL12345</p>
+        <div class="flex items-center">
+          <div class="flex flex-1 flex-col items-center">
+            <div class="relative mb-2 flex w-full items-center">
+              <div class="relative z-10 h-3 w-3 shrink-0 rounded-full bg-emerald-400"></div>
+              <div class="h-0.5 flex-1 bg-emerald-400"></div>
+            </div>
+            <p class="text-[10px] text-white/50">Shipped</p>
+          </div>
+          <div class="flex flex-1 flex-col items-center">
+            <div class="relative mb-2 flex w-full items-center">
+              <div class="h-0.5 flex-1 bg-emerald-400"></div>
+              <div class="relative z-10 h-3 w-3 shrink-0 rounded-full bg-emerald-400"></div>
+              <span class="absolute -top-5 left-1/2 -translate-x-1/2 rounded-full bg-emerald-400 px-1.5 py-0.5 text-[9px] font-medium text-black">now</span>
+              <div class="h-0.5 flex-1 bg-white/20"></div>
+            </div>
+            <p class="text-[10px] text-white/50">In transit</p>
+          </div>
+          <div class="flex flex-1 flex-col items-center">
+            <div class="relative mb-2 flex w-full items-center">
+              <div class="h-0.5 flex-1 bg-white/20"></div>
+              <div class="relative z-10 h-3 w-3 shrink-0 rounded-full border-2 border-white/30 bg-transparent"></div>
+            </div>
+            <p class="text-[10px] text-white/50">Delivered</p>
+          </div>
+        </div>
+      </div>
+      <!-- EDP Card -->
+      <div class="absolute bottom-[120px] right-32 w-[210px] rotate-2 rounded-2xl bg-white p-5 shadow-2xl">
+        <p class="mb-1 text-xs text-gray-500">Your zip code: 07008</p>
+        <div class="mb-3 flex items-baseline gap-2">
+          <span class="text-2xl font-semibold text-gray-900">Apr 14</span>
+          <span class="text-xs text-gray-400">Mon</span>
+        </div>
+        <p class="text-[10px] leading-tight text-gray-400">Act fast and order within 2 hours for expected delivery</p>
+      </div>
+      <!-- Returns Card -->
+      <div class="absolute bottom-12 right-8 w-[200px] -rotate-1 rounded-2xl bg-white p-5 shadow-2xl">
+        <div class="mb-3 flex items-center gap-3">
+          <div class="h-10 w-10 shrink-0 rounded-lg bg-gray-100"></div>
+          <div>
+            <p class="text-xs font-medium text-gray-900">Moisturising cream</p>
+            <p class="text-[10px] text-gray-400">Reason for return</p>
+          </div>
+        </div>
+        <div class="flex gap-1.5">
+          <span class="rounded-full bg-emerald-600 px-2.5 py-1 text-[10px] font-medium text-white">Exchange</span>
+          <span class="rounded-full border border-gray-200 px-2.5 py-1 text-[10px] font-medium text-gray-600">Store credit</span>
+          <span class="rounded-full border border-gray-200 px-2.5 py-1 text-[10px] font-medium text-gray-600">Refund</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

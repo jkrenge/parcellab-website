@@ -1,0 +1,33 @@
+---
+const logos = [
+  { name: "IKEA", src: "/images/logos/IKEA_Logo_Black.svg" },
+  { name: "Hugo Boss", src: "/images/brands/Hugo-Boss.svg" },
+  { name: "dyson", src: "/images/brands/Dyson.svg" },
+  { name: "Urban Outfitters", src: "/images/brands/Urban-Outfitters-1.svg" },
+  { name: "HC Group", src: "/images/brands/Group-1000002364.svg" },
+  { name: "True Classic", src: "/images/brands/True-Classic-1.svg" },
+  { name: "Puma", src: "/images/brands/Puma.svg" },
+  { name: "Farfetch", src: "/images/brands/Farfetch.svg" },
+  { name: "John Lewis", src: "/images/brands/JohnLewis-1.svg" },
+  { name: "Wyze", src: "/images/logos/Wyze_Logo_Black.svg" },
+];
+---
+
+<section class="w-full py-16" aria-label="Trusted by leading brands">
+  <div class="mx-auto max-w-[1440px] px-12">
+    <div class="flex gap-6 overflow-x-auto scrollbar-none snap-x snap-mandatory">
+      {logos.map((logo) => (
+        <div class="flex h-[180px] w-[260px] shrink-0 snap-start items-center justify-center rounded-2xl bg-[#f4f4f4] p-10">
+          <img
+            src={logo.src}
+            alt={`${logo.name} logo`}
+            width="200"
+            height="80"
+            class="max-h-20 max-w-[200px] object-contain"
+            loading="lazy"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
