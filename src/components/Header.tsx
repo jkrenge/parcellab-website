@@ -461,7 +461,7 @@ export function Header() {
         >
           {/* Logo */}
           <a href="/" className="shrink-0 transition-opacity hover:opacity-80">
-            <img src={`${import.meta.env.BASE_URL}images/logos/parcelab-logo-white-1.svg`} alt="parcelLab" width={132} height={44} />
+            <img src={`${import.meta.env.BASE_URL}/images/logos/parcelab-logo-white-1.svg`} alt="parcelLab" width={132} height={44} />
           </a>
 
           {/* Desktop Nav Items */}

@@ -29,7 +29,7 @@ const cards: ProductCard[] = [
     cta: "See returns",
     bgColor: "bg-[#EF4444]",
     pillColor: "bg-[#EF4444]",
-    image: `${base}images/parcellab-returns-solution-retain.webp`,
+    image: `${base}/images/parcellab-returns-solution-retain.webp`,
     icon: <ShoppingCart className="h-4 w-4 text-[#EF4444]" />,
   },
   {
@@ -40,7 +40,7 @@ const cards: ProductCard[] = [
     cta: "Explore delivery experience",
     bgColor: "bg-[#FFC943]",
     pillColor: "bg-[#FFC943]",
-    image: `${base}images/parcellab-engage-delivery-notifications-tracking-page.webp`,
+    image: `${base}/images/parcellab-engage-delivery-notifications-tracking-page.webp`,
     icon: <ShoppingCart className="h-4 w-4 text-[#FFC943]" />,
   },
   {
@@ -51,7 +51,7 @@ const cards: ProductCard[] = [
     cta: "Get converting",
     bgColor: "bg-[#035740]",
     pillColor: "bg-[#035740]",
-    image: `${base}images/parcellab-engage-estimated-delivery-date.webp`,
+    image: `${base}/images/parcellab-engage-estimated-delivery-date.webp`,
     icon: <ShoppingCart className="h-4 w-4 text-[#035740]" />,
   },
   {
@@ -62,7 +62,7 @@ const cards: ProductCard[] = [
     cta: "Explore insights",
     bgColor: "bg-[#5046E5]",
     pillColor: "bg-[#5046E5]",
-    image: `${base}images/parcellab-data-logistics-analytics.webp`,
+    image: `${base}/images/parcellab-data-logistics-analytics.webp`,
     icon: <BarChart3 className="h-4 w-4 text-[#5046E5]" />,
   },
   {
@@ -73,7 +73,7 @@ const cards: ProductCard[] = [
     cta: "Discover AI agents",
     bgColor: "bg-[#1e1b4b]",
     pillColor: "bg-[#1e1b4b]",
-    image: `${base}images/parcellab-AI-shipping-artificial-intelligence.webp`,
+    image: `${base}/images/parcellab-AI-shipping-artificial-intelligence.webp`,
     icon: <Sparkles className="h-4 w-4 text-[#1e1b4b]" />,
   },
 ];
