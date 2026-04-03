@@ -136,10 +136,10 @@ export function ProductCards() {
   }, []);
 
   return (
-    <section className="py-20 md:py-28">
+    <section className="section-standard">
       <div className="mx-auto max-w-[1440px] px-5 md:px-12">
         {/* Tab Pills */}
-        <div className="mb-10 flex flex-wrap items-center justify-center gap-2">
+        <div className="mb-10 flex flex-wrap items-center justify-center gap-2 md:mb-14">
           {cards.map((card) => (
             <button
               key={card.id}
@@ -166,7 +166,7 @@ export function ProductCards() {
               key={card.id}
               ref={setCardRef(card.id)}
               className={cn(
-                "relative flex min-h-[600px] w-[340px] shrink-0 flex-col overflow-hidden rounded-3xl p-8 md:w-[380px]",
+                "relative flex min-h-[600px] w-[320px] shrink-0 flex-col overflow-hidden rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl md:w-[380px]",
                 card.bgColor
               )}
             >

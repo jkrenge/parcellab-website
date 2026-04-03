@@ -181,14 +181,14 @@ export function CustomerProof() {
   }, []);
 
   return (
-    <section className="py-24">
+    <section className="section-generous">
       <div className="mx-auto max-w-[1440px] px-6 md:px-12">
         {/* Heading area */}
-        <div className="mb-16 max-w-3xl">
-          <h2 className="text-[50px] leading-[60px] font-medium tracking-[-1.5px] text-black">
+        <div className="mb-14 max-w-2xl md:mb-20">
+          <h2 className="text-display" style={{ color: "var(--ink)" }}>
             Proof that post-purchase drives growth
           </h2>
-          <p className="mt-4 text-lg text-[#666666]">
+          <p className="mt-4 text-lg font-light" style={{ color: "var(--ink-secondary)" }}>
             Real brands. Real results. Discover how leaders cut costs, grew
             revenue, and improved loyalty.
           </p>

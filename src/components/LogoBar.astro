@@ -12,23 +12,20 @@ const logos = [
   { name: "John Lewis", src: `${b}/images/brands/JohnLewis-1.svg` },
   { name: "Wyze", src: `${b}/images/logos/Wyze_Logo_Black.svg` },
 ];
+const doubled = [...logos, ...logos];
 ---
 
-<section class="w-full py-16" aria-label="Trusted by leading brands">
-  <div class="mx-auto max-w-[1440px] px-12">
-    <div class="flex gap-6 overflow-x-auto scrollbar-none snap-x snap-mandatory">
-      {logos.map((logo) => (
-        <div class="flex h-[180px] w-[260px] shrink-0 snap-start items-center justify-center rounded-2xl bg-[#f4f4f4] p-10">
-          <img
-            src={logo.src}
-            alt={`${logo.name} logo`}
-            width="200"
-            height="80"
-            class="max-h-20 max-w-[200px] object-contain"
-            loading="lazy"
-          />
-        </div>
-      ))}
-    </div>
+<section class="w-full overflow-hidden border-y border-[var(--line-subtle)] py-8 md:py-10" aria-label="Trusted by leading brands">
+  <div class="animate-marquee flex items-center gap-16 md:gap-20" style="width: max-content;">
+    {doubled.map((logo) => (
+      <img
+        src={logo.src}
+        alt={`${logo.name} logo`}
+        width="120"
+        height="48"
+        class="h-7 w-auto shrink-0 object-contain opacity-25 grayscale transition-all duration-300 hover:opacity-50 hover:grayscale-0 md:h-9"
+        loading="lazy"
+      />
+    ))}
   </div>
 </section>

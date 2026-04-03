@@ -21,12 +21,14 @@ const b = import.meta.env.BASE_URL;
     <link rel="icon" type="image/webp" sizes="32x32" href={`${b}/seo/favicon-32x32.webp`} />
     <link rel="icon" type="image/webp" sizes="192x192" href={`${b}/seo/favicon-192x192.webp`} />
     <link rel="apple-touch-icon" href={`${b}/seo/apple-touch-icon-180x180.webp`} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body class="min-h-full flex flex-col font-sans">
+  <body class="min-h-full flex flex-col font-sans text-[var(--ink)] bg-[var(--surface)]">
     <slot />
   </body>
 </html>

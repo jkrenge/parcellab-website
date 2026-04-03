@@ -1,88 +1,88 @@
 ---
 ---
 
-<section class="rounded-t-[32px] bg-[#212121]">
-  <div class="mx-auto flex max-w-[1440px] flex-col items-center gap-12 px-6 py-20 md:flex-row md:gap-0 md:px-12 md:py-0">
-    <div class="flex-1 md:py-24">
-      <h2 class="text-[40px] leading-[50px] font-medium tracking-[-1.5px] text-white md:text-[50px] md:leading-[60px]">
+<section class="rounded-t-[40px] bg-[var(--surface-dark)]">
+  <div class="mx-auto flex max-w-[1440px] flex-col items-center gap-12 px-6 py-24 md:flex-row md:gap-0 md:px-12 md:py-0">
+    <div class="flex-1 md:py-28">
+      <h2 class="text-hero text-white">
         Discover your<br />PPX maturity
       </h2>
-      <p class="mt-5 max-w-md text-lg leading-[29px] text-white/70">
+      <p class="mt-6 max-w-md text-lg font-light leading-relaxed text-white/60">
         See how your post-purchase experience compares and what it takes to level up.
       </p>
-      <div class="mt-8 flex flex-wrap gap-4">
-        <a href="https://parcellab.com/ppx-maturity-curve/" class="inline-flex items-center gap-2 rounded-full bg-[#3D3AD3] px-6 py-4 text-sm font-medium text-white transition-colors hover:bg-[#3230b8]">
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a href="https://parcellab.com/ppx-maturity-curve/" class="group inline-flex items-center gap-2 rounded-full bg-[#3D3AD3] px-7 py-4 text-sm font-medium text-white shadow-[0_2px_16px_rgba(61,58,211,0.4)] transition-all hover:shadow-[0_4px_24px_rgba(61,58,211,0.5)] hover:-translate-y-0.5">
           Get your PPX assessment
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-0.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </a>
-        <a href="https://parcellab.com/post-purchase-platform/" class="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-4 text-sm font-medium text-white transition-colors hover:border-white/50">
+        <a href="https://parcellab.com/post-purchase-platform/" class="inline-flex items-center gap-2 rounded-full border border-white/20 px-7 py-4 text-sm font-medium text-white/80 transition-all hover:border-white/40 hover:text-white">
           Explore the platform
         </a>
       </div>
     </div>
-    <div class="relative hidden h-[567px] flex-1 md:block">
+    <div class="relative hidden h-[620px] flex-1 md:block">
       <!-- Score Card -->
-      <div class="absolute top-12 right-16 w-[200px] rotate-3 rounded-2xl bg-[#2a2a2a] p-5 shadow-2xl">
-        <p class="mb-1 text-xs text-white/50">Your score</p>
+      <div class="absolute top-16 right-16 w-[200px] rotate-3 rounded-2xl bg-white/[0.08] p-5 shadow-2xl backdrop-blur-sm border border-white/[0.06]">
+        <p class="mb-1 text-xs text-white/40">Your score</p>
         <p class="mb-3 text-3xl font-semibold text-emerald-400">3.45</p>
         <div class="flex items-end gap-1.5">
           {[40,65,50,80,55,70,90,60,75,85].map((h) => (
-            <div class="w-2.5 rounded-sm bg-emerald-400/80" style={`height:${h * 0.4}px`} />
+            <div class="w-2.5 rounded-sm bg-emerald-400/60" style={`height:${h * 0.4}px`} />
           ))}
         </div>
       </div>
       <!-- Tracking Card -->
-      <div class="absolute top-[160px] right-0 w-[260px] -rotate-2 rounded-2xl bg-[#2a2a2a] p-5 shadow-2xl">
+      <div class="absolute top-[180px] right-0 w-[260px] -rotate-2 rounded-2xl bg-white/[0.08] p-5 shadow-2xl backdrop-blur-sm border border-white/[0.06]">
         <p class="mb-0.5 text-sm font-medium text-white">Track your delivery</p>
-        <p class="mb-4 text-xs text-white/40">Order #PL12345</p>
+        <p class="mb-4 text-xs text-white/30">Order #PL12345</p>
         <div class="flex items-center">
           <div class="flex flex-1 flex-col items-center">
             <div class="relative mb-2 flex w-full items-center">
               <div class="relative z-10 h-3 w-3 shrink-0 rounded-full bg-emerald-400"></div>
               <div class="h-0.5 flex-1 bg-emerald-400"></div>
             </div>
-            <p class="text-[10px] text-white/50">Shipped</p>
+            <p class="text-[10px] text-white/40">Shipped</p>
           </div>
           <div class="flex flex-1 flex-col items-center">
             <div class="relative mb-2 flex w-full items-center">
               <div class="h-0.5 flex-1 bg-emerald-400"></div>
               <div class="relative z-10 h-3 w-3 shrink-0 rounded-full bg-emerald-400"></div>
-              <span class="absolute -top-5 left-1/2 -translate-x-1/2 rounded-full bg-emerald-400 px-1.5 py-0.5 text-[9px] font-medium text-black">now</span>
-              <div class="h-0.5 flex-1 bg-white/20"></div>
+              <span class="absolute -top-5 left-1/2 -translate-x-1/2 rounded-full bg-emerald-400 px-1.5 py-0.5 text-[9px] font-medium text-[var(--surface-dark)]">now</span>
+              <div class="h-0.5 flex-1 bg-white/10"></div>
             </div>
-            <p class="text-[10px] text-white/50">In transit</p>
+            <p class="text-[10px] text-white/40">In transit</p>
           </div>
           <div class="flex flex-1 flex-col items-center">
             <div class="relative mb-2 flex w-full items-center">
-              <div class="h-0.5 flex-1 bg-white/20"></div>
-              <div class="relative z-10 h-3 w-3 shrink-0 rounded-full border-2 border-white/30 bg-transparent"></div>
+              <div class="h-0.5 flex-1 bg-white/10"></div>
+              <div class="relative z-10 h-3 w-3 shrink-0 rounded-full border-2 border-white/20 bg-transparent"></div>
             </div>
-            <p class="text-[10px] text-white/50">Delivered</p>
+            <p class="text-[10px] text-white/40">Delivered</p>
           </div>
         </div>
       </div>
       <!-- EDP Card -->
-      <div class="absolute bottom-[120px] right-32 w-[210px] rotate-2 rounded-2xl bg-white p-5 shadow-2xl">
-        <p class="mb-1 text-xs text-gray-500">Your zip code: 07008</p>
+      <div class="absolute bottom-[140px] right-32 w-[210px] rotate-2 rounded-2xl bg-[var(--surface-raised)] p-5 shadow-2xl">
+        <p class="mb-1 text-xs text-[var(--ink-muted)]">Your zip code: 07008</p>
         <div class="mb-3 flex items-baseline gap-2">
-          <span class="text-2xl font-semibold text-gray-900">Apr 14</span>
-          <span class="text-xs text-gray-400">Mon</span>
+          <span class="text-2xl font-semibold text-[var(--ink)]">Apr 14</span>
+          <span class="text-xs text-[var(--ink-muted)]">Mon</span>
         </div>
-        <p class="text-[10px] leading-tight text-gray-400">Act fast and order within 2 hours for expected delivery</p>
+        <p class="text-[10px] leading-tight text-[var(--ink-muted)]">Act fast and order within 2 hours for expected delivery</p>
       </div>
       <!-- Returns Card -->
-      <div class="absolute bottom-12 right-8 w-[200px] -rotate-1 rounded-2xl bg-white p-5 shadow-2xl">
+      <div class="absolute bottom-14 right-8 w-[200px] -rotate-1 rounded-2xl bg-[var(--surface-raised)] p-5 shadow-2xl">
         <div class="mb-3 flex items-center gap-3">
-          <div class="h-10 w-10 shrink-0 rounded-lg bg-gray-100"></div>
+          <div class="h-10 w-10 shrink-0 rounded-lg bg-[var(--surface-sunken)]"></div>
           <div>
-            <p class="text-xs font-medium text-gray-900">Moisturising cream</p>
-            <p class="text-[10px] text-gray-400">Reason for return</p>
+            <p class="text-xs font-medium text-[var(--ink)]">Moisturising cream</p>
+            <p class="text-[10px] text-[var(--ink-muted)]">Reason for return</p>
           </div>
         </div>
         <div class="flex gap-1.5">
           <span class="rounded-full bg-emerald-600 px-2.5 py-1 text-[10px] font-medium text-white">Exchange</span>
-          <span class="rounded-full border border-gray-200 px-2.5 py-1 text-[10px] font-medium text-gray-600">Store credit</span>
-          <span class="rounded-full border border-gray-200 px-2.5 py-1 text-[10px] font-medium text-gray-600">Refund</span>
+          <span class="rounded-full border border-[var(--line)] px-2.5 py-1 text-[10px] font-medium text-[var(--ink-secondary)]">Store credit</span>
+          <span class="rounded-full border border-[var(--line)] px-2.5 py-1 text-[10px] font-medium text-[var(--ink-secondary)]">Refund</span>
         </div>
       </div>
     </div>

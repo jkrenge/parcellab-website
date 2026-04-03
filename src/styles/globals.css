@@ -44,25 +44,42 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #1a1a1a;
+  --background: #fafbfc;
+  --foreground: #0f172a;
   --card: #ffffff;
-  --card-foreground: #1a1a1a;
+  --card-foreground: #0f172a;
   --popover: #ffffff;
-  --popover-foreground: #1a1a1a;
+  --popover-foreground: #0f172a;
   --primary: #5046e5;
-  --primary-foreground: #ffffff;
-  --secondary: #f4f4f4;
-  --secondary-foreground: #212121;
-  --muted: #f4f4f4;
-  --muted-foreground: #6b7280;
-  --accent: #f4f4f4;
-  --accent-foreground: #212121;
+  --primary-foreground: #fafbfc;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #1e293b;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #f1f5f9;
+  --accent-foreground: #1e293b;
   --destructive: #ef4444;
-  --border: #ebebeb;
-  --input: #ebebeb;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
   --ring: #5046e5;
   --radius: 0.625rem;
+
+  /* Fluid type scale */
+  --text-hero: clamp(2.75rem, 4vw + 1rem, 4rem);
+  --text-display: clamp(2.25rem, 3vw + 0.5rem, 3.125rem);
+  --text-heading: clamp(1.75rem, 2vw + 0.25rem, 2.25rem);
+  --text-body-lg: clamp(1rem, 0.5vw + 0.75rem, 1.125rem);
+
+  /* Tinted neutrals — blue-slate tint for premium feel */
+  --ink: #0f172a;
+  --ink-secondary: #475569;
+  --ink-muted: #94a3b8;
+  --surface: #fafbfc;
+  --surface-raised: #ffffff;
+  --surface-sunken: #f1f5f9;
+  --surface-dark: #1e293b;
+  --line: #e2e8f0;
+  --line-subtle: #f1f5f9;
 }
 
 @layer base {
@@ -218,6 +235,50 @@
   }
 }
 
+/* ─── Fluid Type Utilities ─── */
+
+.text-hero {
+  font-size: var(--text-hero);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  font-weight: 600;
+}
+
+.text-display {
+  font-size: var(--text-display);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  font-weight: 500;
+}
+
+.text-heading {
+  font-size: var(--text-heading);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+}
+
+/* ─── Logo Marquee ─── */
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* ─── Section Transitions ─── */
+
+.section-generous { padding-top: clamp(5rem, 8vw, 8rem); padding-bottom: clamp(5rem, 8vw, 8rem); }
+.section-standard { padding-top: clamp(4rem, 6vw, 6rem); padding-bottom: clamp(4rem, 6vw, 6rem); }
+.section-tight { padding-top: clamp(2rem, 4vw, 3.5rem); padding-bottom: clamp(2rem, 4vw, 3.5rem); }
+
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .nav-dropdown-container,
@@ -234,5 +295,8 @@
   }
   .nav-featured-card::after {
     display: none;
+  }
+  .animate-marquee {
+    animation: none;
   }
 }

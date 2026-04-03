@@ -91,16 +91,14 @@ export function TeamsSection() {
   }, []);
 
   return (
-    <section className="py-20 md:py-28">
+    <section className="section-standard">
       <div className="mx-auto max-w-[1440px] px-6 md:px-12">
         {/* Heading area */}
         <div className="mb-12 md:mb-16">
-          <h2
-            className="mb-4 text-[36px] leading-[44px] font-medium tracking-[-1px] text-black md:text-[50px] md:leading-[60px] md:tracking-[-1.5px]"
-          >
+          <h2 className="text-display" style={{ color: "var(--ink)" }}>
             Built for every retail team
           </h2>
-          <p className="max-w-[600px] text-lg text-[rgb(102,102,102)]">
+          <p className="mt-4 max-w-[540px] text-lg font-light" style={{ color: "var(--ink-secondary)" }}>
             Every team wins: empower eCommerce, logistics, service, and
             marketing to perform better together.
           </p>
@@ -140,7 +138,7 @@ export function TeamsSection() {
             {teams.map((team) => (
               <div
                 key={team.title}
-                className="w-[85vw] min-w-[85vw] snap-start rounded-2xl bg-white shadow-sm transition-shadow duration-200 hover:shadow-lg md:w-[430px] md:min-w-[430px]"
+                className="w-[85vw] min-w-[85vw] snap-start overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg md:w-[430px] md:min-w-[430px]"
               >
                 <CardImage src={team.image} alt={team.title} />
                 <div className="p-6">
