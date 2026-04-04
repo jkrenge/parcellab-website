@@ -1,0 +1,304 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Turning Returns Into ROI: A Department-by-Department Playbook - parcelLab"
+  description="Returns touch every department. This playbook shows how each team can contribute to turning returns from a cost center into a growth lever."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <a
+          href={`${b}/blog/`}
+          class="mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+          Back to blog
+        </a>
+        <span class="mb-4 inline-block rounded-full bg-[#FFC943]/20 px-3 py-1 text-xs font-semibold text-[#92700c]">Returns</span>
+        <h1 class="text-display text-[var(--ink)]">Turning Returns Into ROI: A Department-by-Department Playbook for Retailers</h1>
+        <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+          <span>By <strong class="font-medium text-[var(--ink-secondary)]">Anna Lapezo</strong></span>
+          <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+          <time datetime="2026-03-11">March 11, 2026</time>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <div class="h-px w-full bg-[var(--line)] mb-12"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Most retailers believe that once they have deployed a returns portal, "returns are handled." But significant savings and customer experience improvements exist beyond basic portal functionality. True returns optimization requires a structured, department-by-department analysis rather than a feature-first approach.
+        </p>
+
+        <!-- Meet the expert -->
+        <h2 class="text-heading text-[var(--ink)] mt-14 mb-5">Meet the expert who's been inside the machine</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Thomas Wagener, Product Owner for Returns at parcelLab, has built the returns product from inception and implemented it across major brands including Dyson, Emma Mattress, Bestseller, and Conrad. His consistent first question to companies requesting features is always the same:
+        </p>
+        <blockquote class="my-6 border-l-4 border-[#3D3AD3] pl-6 italic text-[var(--ink)]">
+          "What problem are you trying to solve?"
+        </blockquote>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          This question typically reveals that the solution needed is completely different from the feature initially requested.
+        </p>
+
+        <!-- The real problem -->
+        <h2 class="text-heading text-[var(--ink)] mt-14 mb-5">The real problem: features first, questions never</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Most companies approach returns optimization by listing desired features, configuring them, and launching, completely skipping critical stakeholder discovery. The issue is that different departments have conflicting pain points: inbound logistics needs differ from customer service requirements; product teams need different data than web teams; fraud priorities differ from CX priorities.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Without structured conversations, companies solve the wrong problems and miss the highest-ROI opportunities.
+        </p>
+
+        <!-- The stakeholder audit -->
+        <h2 class="text-heading text-[var(--ink)] mt-14 mb-5">The stakeholder audit: ask before you build</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The methodology begins with one question posed separately to each department: <em>"What is your biggest pain point around returns?"</em> Results are quantified, prioritized, and solved by financial impact.
+        </p>
+        <div class="my-8 rounded-2xl border border-[var(--line)] bg-[var(--surface-sunken)] p-6">
+          <p class="text-sm font-semibold text-[var(--ink)] mb-2">Real example</p>
+          <p class="text-[var(--ink-secondary)] leading-relaxed text-sm">
+            A retailer's warranty process required customers to call customer service (touchpoint one), receive instructions to email photos and descriptions (touchpoint two), then wait for responses (touchpoint three). This three-step process cost approximately <strong class="text-[var(--ink)]">&euro;15 per case</strong>. A consolidated portal flow eliminated two touchpoints, directly reducing costs.
+          </p>
+        </div>
+
+        <!-- Department 1 -->
+        <h2 class="text-heading text-[var(--ink)] mt-14 mb-5">Department 1: Inbound Logistics and Warehouse</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mb-4">Start with the questions that matter most:</p>
+        <ul class="space-y-2 mb-6">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <span class="text-[var(--ink-secondary)]">Where do manual processes consume the most time?</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <span class="text-[var(--ink-secondary)]">Which steps could automation eliminate?</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <span class="text-[var(--ink-secondary)]">What advance information would improve planning?</span>
+          </li>
+        </ul>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Manual data entry dominates warehouse workflows. Workers manually type order numbers and item conditions when barcode scanning with pre-populated portal data could handle it. Lack of advance return volume visibility prevents staffing optimization. Damaged goods, open-box items, and resellable products follow identical routing despite requiring different handling.
+        </p>
+        <div class="my-8 rounded-2xl border border-[#035740]/20 bg-[#035740]/5 p-6">
+          <p class="text-sm font-semibold text-[#035740] mb-2">Financial impact</p>
+          <p class="text-[var(--ink-secondary)] leading-relaxed text-sm">
+            A large global retailer reduced manual entry through barcode scanning with pre-population. Saving just <strong class="text-[var(--ink)]">five seconds per return</strong> across their volume eliminated three full-time warehouse positions &mdash; approximately <strong class="text-[var(--ink)]">&euro;50,000 annually</strong>. Return volume forecasts available 24 hours ahead enabled dynamic staffing adjustments.
+          </p>
+        </div>
+
+        <!-- Department 2 -->
+        <h2 class="text-heading text-[var(--ink)] mt-14 mb-5">Department 2: Product and Merchandising</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mb-4">The key questions for product teams:</p>
+        <ul class="space-y-2 mb-6">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <span class="text-[var(--ink-secondary)]">What returns data currently reaches product teams?</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <span class="text-[var(--ink-secondary)]">How granular is the information, and how quickly does it arrive?</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <span class="text-[var(--ink-secondary)]">What would change with better data?</span>
+          </li>
+        </ul>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Return reasons typically lack the granularity product teams need. "Too small" reveals nothing actionable, but distinguishing between "too short," "too tight," or "wrong cut" enables precise fixes. Most portals apply flat dropdowns across all categories even though these meanings vary significantly by product type.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Digital portals enable follow-up questions that are impossible on paper forms. "Too small" becomes "In what way?" with category-specific responses that feed directly into product description optimization, sizing guides, and design decisions.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          One large global brand received returns data <strong class="text-[var(--ink)]">six months delayed</strong>, meaning corrective actions lagged two full collection cycles. Real-time data delivery enables in-season description adjustments and sizing guide improvements rather than waiting until next season.
+        </p>
+
+        <!-- Department 3 -->
+        <h2 class="text-heading text-[var(--ink)] mt-14 mb-5">Department 3: Customer Service</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mb-4">Ask your CS team:</p>
+        <ul class="space-y-2 mb-6">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <span class="text-[var(--ink-secondary)]">Which return-related requests dominate your volume?</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <span class="text-[var(--ink-secondary)]">Which requests are repetitive and rule-based?</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <span class="text-[var(--ink-secondary)]">Which require human judgment?</span>
+          </li>
+        </ul>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          High volumes of repetitive, low-decision tasks are the norm: issuing labels, explaining policies, confirming receipt. These can move entirely to self-service. Warranty and claims cases requiring multi-step back-and-forth can be consolidated into single portal interactions. Customer segmentation is typically missing, meaning loyal customers are treated identically to first-time buyers.
+        </p>
+        <div class="my-8 rounded-2xl border border-[var(--line)] bg-[var(--surface-sunken)] p-6">
+          <p class="text-sm font-semibold text-[var(--ink)] mb-2">Warranty flow: before and after</p>
+          <div class="grid gap-4 sm:grid-cols-2 mt-4">
+            <div class="rounded-xl bg-[var(--surface-raised)] p-4 border border-[var(--line)]">
+              <p class="text-xs font-semibold text-[#F4373D] mb-2">Before</p>
+              <p class="text-sm text-[var(--ink-secondary)]">Customer calls (&euro;5&ndash;8), receives instruction to email photos (&euro;5&ndash;8), waits for response (&euro;5&ndash;8). <strong class="text-[var(--ink)]">Total: &euro;15&ndash;24 per case.</strong></p>
+            </div>
+            <div class="rounded-xl bg-[var(--surface-raised)] p-4 border border-[var(--line)]">
+              <p class="text-xs font-semibold text-[#035740] mb-2">After</p>
+              <p class="text-sm text-[var(--ink-secondary)]">Portal collects photos, descriptions, and declarations in a single step. Pre-filled tickets give agents everything immediately. <strong class="text-[var(--ink)]">Two touchpoints eliminated.</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Department 4 -->
+        <h2 class="text-heading text-[var(--ink)] mt-14 mb-5">Department 4: Web, Shop, CRM, and Commercial Teams</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mb-4">The questions that unlock revenue:</p>
+        <ul class="space-y-2 mb-6">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <span class="text-[var(--ink-secondary)]">How do post-purchase touchpoints integrate with your CRM strategy?</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <span class="text-[var(--ink-secondary)]">Are returns connected to loyalty programs?</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <span class="text-[var(--ink-secondary)]">Do you track how return experiences affect repeat purchases?</span>
+          </li>
+        </ul>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Returns typically exist as separate silos disconnected from CRM and loyalty programs. There is no differentiated treatment based on customer value or history. Return-to-store options remain unused despite their direct revenue-rescue potential. Gift card and store credit options are significantly underutilized.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Customers shopping in physical stores to return items frequently spend additional money during their visit. Returns processed as gift cards with a bonus amount (return value plus 10% store credit) retain money within the ecosystem. Loyal members can receive faster refunds, waived fees, and streamlined claims processes, while flagged accounts undergo standard or enhanced verification.
+        </p>
+
+        <!-- What changes -->
+        <h2 class="text-heading text-[var(--ink)] mt-14 mb-5">What changes when you run the audit</h2>
+        <div class="space-y-4">
+          <div class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <div>
+              <p class="font-medium text-[var(--ink)]">Warehouse efficiency</p>
+              <p class="text-sm text-[var(--ink-secondary)]">Time savings per return compound at scale. Five-second reductions translate to workforce reductions at enterprise volumes.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <div>
+              <p class="font-medium text-[var(--ink)]">Customer service deflection</p>
+              <p class="text-sm text-[var(--ink-secondary)]">Warranty, claims, and troubleshooting consolidation creates the largest financial gains, generating six-figure annual savings at enterprise volumes.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <div>
+              <p class="font-medium text-[var(--ink)]">Product improvement velocity</p>
+              <p class="text-sm text-[var(--ink-secondary)]">Real-time return data accelerates in-season corrections rather than waiting for next season's fixes.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <div>
+              <p class="font-medium text-[var(--ink)]">Revenue rescue</p>
+              <p class="text-sm text-[var(--ink-secondary)]">Return-to-store programs, gift card incentives, and "keep the item" logic for expensive returns maintain ecosystem revenue.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <div>
+              <p class="font-medium text-[var(--ink)]">Organizational clarity</p>
+              <p class="text-sm text-[var(--ink-secondary)]">Unified ownership, a single system, and shared feedback loops replace departmental fragmentation.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Real-world examples -->
+        <h2 class="text-heading text-[var(--ink)] mt-14 mb-5">Real-world applications</h2>
+        <div class="space-y-4">
+          <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <p class="text-sm font-semibold text-[#3D3AD3] mb-1">Emma Mattress</p>
+            <p class="text-[var(--ink-secondary)] leading-relaxed text-sm">
+              Rather than processing returns for mattresses deemed "too hard," customer service offers free toppers. A topper's cost is a fraction of the return expense, resulting in higher per-case savings than faster processing alone.
+            </p>
+          </div>
+          <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <p class="text-sm font-semibold text-[#3D3AD3] mb-1">Dyson</p>
+            <p class="text-[var(--ink-secondary)] leading-relaxed text-sm">
+              Damaged batteries cannot legally ship via standard parcel. Portal integration now automatically routes such cases to specialist hazardous-goods carriers, addressing a previously invisible edge case.
+            </p>
+          </div>
+        </div>
+
+        <!-- Where this goes next -->
+        <h2 class="text-heading text-[var(--ink)] mt-14 mb-5">Where this goes next</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The initial methodology requires low technology: structured conversations across four departments, one key question each, with prioritization by financial impact. No new software is needed for step one.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          However, this demands a continuous mindset, not a one-time project. Companies extracting maximum value treat returns optimization as a perpetual cycle. The space is moving toward automated, CRM-driven decision-making: customer data will trigger dynamic approval thresholds, AI will validate damage photos, and chatbots will handle end-to-end returns through natural language. The portal becomes invisible infrastructure between customer intent and operational fulfillment.
+        </p>
+
+        <!-- Key Takeaways -->
+        <div class="mt-14 rounded-2xl border border-[var(--line)] bg-[var(--surface-sunken)] p-8">
+          <h3 class="text-lg font-semibold text-[var(--ink)] mb-4">Key takeaways</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="text-[var(--ink-secondary)]">Start by asking each department one question: "What is your biggest pain point around returns?"</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="text-[var(--ink-secondary)]">Small warehouse time savings (5 seconds per return) compound into significant cost reductions at scale.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="text-[var(--ink-secondary)]">Granular return reasons feed product improvements; "too small" is not enough &mdash; you need to know <em>how</em>.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="text-[var(--ink-secondary)]">Consolidating warranty flows from three touchpoints to one can save &euro;15&ndash;24 per case.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="text-[var(--ink-secondary)]">Returns optimization is not a one-time project. Assign ownership and treat it as a continuous process.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Related articles -->
+        <div class="mt-14 pt-10 border-t border-[var(--line)]">
+          <h3 class="text-lg font-semibold text-[var(--ink)] mb-6">Related articles</h3>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <a href={`${b}/blog/what-is-ecommerce-returns-management/`} class="group rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-5 transition-shadow hover:shadow-md">
+              <span class="text-xs font-semibold text-[var(--ink-muted)]">Returns</span>
+              <p class="mt-1 text-sm font-medium text-[var(--ink)] group-hover:text-[#3D3AD3] transition-colors">What Is eCommerce Returns Management?</p>
+            </a>
+            <a href={`${b}/blog/how-to-handle-customer-returns/`} class="group rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-5 transition-shadow hover:shadow-md">
+              <span class="text-xs font-semibold text-[var(--ink-muted)]">Operations</span>
+              <p class="mt-1 text-sm font-medium text-[var(--ink)] group-hover:text-[#3D3AD3] transition-colors">How to Handle Customer Returns</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

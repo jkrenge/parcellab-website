@@ -1,0 +1,179 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="What Is a Self-Service Return? - parcelLab"
+  description="Self-service returns empower customers and reduce support costs. Learn how to implement them and why they matter for your brand."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <a
+          href={`${b}/blog/`}
+          class="mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+          Back to blog
+        </a>
+        <span class="mb-4 inline-block rounded-full bg-[#F4373D]/10 px-3 py-1 text-xs font-semibold text-[#F4373D]">Returns</span>
+        <h1 class="text-display text-[var(--ink)]">What Is a Self-Service Return? Why Should Retailers Care?</h1>
+        <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+          <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab</strong></span>
+          <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+          <time datetime="2026-02-26">February 26, 2026</time>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <div class="h-px w-full bg-[var(--line)] mb-12"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          According to the NRF's Retail Returns Landscape report, <strong class="text-[var(--ink)]">$849.9 billion worth of merchandise was returned in 2025</strong>. Retailers face dual pressures: escalating return costs alongside expensive customer acquisition. This makes the post-purchase experience &mdash; especially returns &mdash; a critical lever for retention and long-term profitability.
+        </p>
+
+        <!-- What are self-service returns? -->
+        <h2 class="text-heading text-[var(--ink)] mt-14 mb-5">What are self-service returns?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Self-service returns are processes that allow shoppers to return items through a returns portal on a retailer's website. Customers can select items to return or exchange, provide return reasons, and obtain labels or QR codes &mdash; all without contacting customer service.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          A well-designed self-service return portal includes:
+        </p>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Digital QR codes that eliminate printing requirements</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Clear refund options and step-by-step instructions</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Return status tracking within customer accounts</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">In-store drop-off or home pickup alternatives</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Support for complex processes (damage claims, warranty repairs, replacements)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Photo submission capabilities for faster claim processing</span>
+          </li>
+        </ul>
+
+        <!-- Why should retailers care? -->
+        <h2 class="text-heading text-[var(--ink)] mt-14 mb-5">Why should retailers care about self-service returns?</h2>
+
+        <div class="my-8 grid gap-4 sm:grid-cols-2">
+          <div class="rounded-2xl border border-[#3D3AD3]/20 bg-[#3D3AD3]/5 p-6 text-center">
+            <p class="text-3xl font-semibold text-[#3D3AD3]">71%</p>
+            <p class="mt-2 text-sm text-[var(--ink-secondary)]">of shoppers say a poor returns experience makes them less likely to shop with that retailer again</p>
+          </div>
+          <div class="rounded-2xl border border-[#035740]/20 bg-[#035740]/5 p-6 text-center">
+            <p class="text-3xl font-semibold text-[#035740]">3x</p>
+            <p class="mt-2 text-sm text-[var(--ink-secondary)]">more repeat purchases for retailers using self-service returns portals (parcelLab data)</p>
+          </div>
+        </div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The numbers speak for themselves. Self-service returns are not just a nice-to-have &mdash; they are a competitive necessity that directly impacts customer retention and revenue.
+        </p>
+
+        <!-- Benefit 1 -->
+        <h3 class="text-xl font-medium text-[var(--ink)] mt-10 mb-3">More efficient warehouse operations</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Self-service systems provide immediate visibility into which items are being returned and why. This enables better workforce planning and inventory decisions compared to paper-based processes where warehouses are blindsided by incoming returns. When you know what's coming back, you can allocate resources more efficiently.
+        </p>
+
+        <!-- Benefit 2 -->
+        <h3 class="text-xl font-medium text-[var(--ink)] mt-10 mb-3">Improved data collection and inventory management</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Return data helps eCommerce teams identify patterns, update product descriptions, and inform future product iterations based on customer feedback. Instead of guessing why products come back, you get structured data from every return that flows directly into decision-making systems.
+        </p>
+
+        <!-- Benefit 3 -->
+        <h3 class="text-xl font-medium text-[var(--ink)] mt-10 mb-3">Revenue protection and faster re-purchases</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Returns portals enable personalized alternatives &mdash; exchanges, store credit, or gift cards &mdash; rather than defaulting to refunds. Customers who received the wrong size can see available alternatives immediately. Those dissatisfied with a color get instant recommendations. Promotions and incentives can be surfaced at the exact right moment to encourage repeat purchases instead of lost revenue.
+        </p>
+
+        <!-- Benefit 4 -->
+        <h3 class="text-xl font-medium text-[var(--ink)] mt-10 mb-3">Elevated customer experience and loyalty</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Customizable portals allow segmentation strategies that treat different customers appropriately. First-time customers might receive store credit incentives to encourage a second purchase, while loyal customers get instant refunds as a reward for their continued business. This differentiation drives loyalty in ways that one-size-fits-all policies never can.
+        </p>
+
+        <!-- The returns experience as part of the journey -->
+        <h2 class="text-heading text-[var(--ink)] mt-14 mb-5">The returns experience is part of the customer journey</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Returns should not be treated as a dead end. They are a continuation of the customer relationship and an opportunity to demonstrate your brand's commitment to service. Self-service initiatives enhance convenience while enabling retailers to gain deeper customer insights, create personalized experiences, and provide proactive support.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          The best retailers are already treating returns as a strategic touchpoint rather than a cost center. By investing in self-service infrastructure, you are investing in the lifetime value of every customer who shops with you.
+        </p>
+
+        <!-- Key Takeaways -->
+        <div class="mt-14 rounded-2xl border border-[var(--line)] bg-[var(--surface-sunken)] p-8">
+          <h3 class="text-lg font-semibold text-[var(--ink)] mb-4">Key takeaways</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="text-[var(--ink-secondary)]">$849.9 billion in merchandise was returned in 2025 &mdash; returns are too big to ignore.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="text-[var(--ink-secondary)]">Self-service portals reduce support tickets while giving customers the control they expect.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="text-[var(--ink-secondary)]">71% of shoppers will leave after a poor return experience &mdash; 3x more repeat purchases come from portal users.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="text-[var(--ink-secondary)]">Revenue protection through exchanges and store credit keeps money in your ecosystem.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="text-[var(--ink-secondary)]">Customer segmentation in return portals lets you treat loyal customers differently from first-time buyers.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Related articles -->
+        <div class="mt-14 pt-10 border-t border-[var(--line)]">
+          <h3 class="text-lg font-semibold text-[var(--ink)] mb-6">Related articles</h3>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <a href={`${b}/blog/how-to-handle-customer-returns/`} class="group rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-5 transition-shadow hover:shadow-md">
+              <span class="text-xs font-semibold text-[var(--ink-muted)]">Operations</span>
+              <p class="mt-1 text-sm font-medium text-[var(--ink)] group-hover:text-[#3D3AD3] transition-colors">How to Handle Customer Returns</p>
+            </a>
+            <a href={`${b}/blog/turning-returns-into-roi/`} class="group rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-5 transition-shadow hover:shadow-md">
+              <span class="text-xs font-semibold text-[var(--ink-muted)]">Returns</span>
+              <p class="mt-1 text-sm font-medium text-[var(--ink)] group-hover:text-[#3D3AD3] transition-colors">Turning Returns Into ROI: A Department-by-Department Playbook</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

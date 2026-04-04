@@ -1,0 +1,140 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="NRF '26 Recap: How True Classic Built a Post-Purchase Journey That Never Ends - parcelLab"
+  description="At NRF, parcelLab's Chief Product Officer sat down with Jordan Gesky of True Classic to discuss redefining customer journeys beyond the checkout."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Featured</span>
+          <h1 class="text-display text-[var(--ink)]">NRF '26 Recap: How True Classic Built a Post-Purchase Journey That Never Ends</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2026-01-20">January 20, 2026</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>8 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          At NRF 2026, parcelLab's Chief Product Officer sat down with Jordan Gesky, VP of Customer Experience at True Classic, to discuss how the fast-growing menswear brand has redefined the customer journey beyond checkout. The conversation revealed a masterclass in turning post-purchase touchpoints into lasting brand moments.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Key Takeaway</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">"The post-purchase experience isn't the end of the journey -- it's the beginning of the next one."</p>
+          <p class="mt-1 text-sm text-[var(--ink-muted)]">-- Jordan Gesky, VP of Customer Experience, True Classic</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">The True Classic Story</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          True Classic has become one of the fastest-growing DTC brands in menswear, known for their premium basics at accessible price points. But what sets them apart isn't just the product -- it's the experience they've built around every order. From the moment a customer clicks "buy," True Classic treats every touchpoint as an opportunity to deepen the relationship.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Jordan Gesky shared how the brand's approach to post-purchase evolved from a cost center into one of their most powerful retention channels. The shift didn't happen overnight, but the results have been remarkable.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Why Post-Purchase Matters More Than Ever</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The conversation at NRF highlighted a growing reality in eCommerce: customer acquisition costs have skyrocketed, making retention the most efficient path to growth. According to Gesky, True Classic realized early that the gap between checkout and delivery was a "black hole" where customer excitement would die.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Instead of handing the experience off to carriers, True Classic took ownership of every communication. Order confirmations, shipping updates, delivery notifications, and even return flows all carry the True Classic brand and voice.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">The Three Pillars of True Classic's Strategy</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          During the session, Gesky outlined three core pillars that drive their post-purchase success:
+        </p>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">1. Proactive Communication</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Rather than waiting for customers to ask "where's my order?", True Classic sends proactive updates at every stage. This has reduced their WISMO (Where Is My Order) tickets by over 40%, freeing up their support team to focus on higher-value interactions.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">2. Branded Tracking Experience</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Every tracking page is a True Classic experience, not a generic carrier page. These branded pages feature product recommendations, content, and cross-sell opportunities. The tracking page has become one of their highest-traffic pages, with repeat visit rates that rival their homepage.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">3. Returns as Retention</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              True Classic reframed returns from a loss event to a retention opportunity. Their self-service return portal encourages exchanges over refunds, offers instant store credit, and makes the process so smooth that customers are more likely to come back -- even when a product didn't work out.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Results That Speak for Themselves</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The impact of True Classic's post-purchase strategy has been measurable across every dimension of the business:
+        </p>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">40%+ reduction</strong> in WISMO support tickets</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Higher repeat purchase rates</strong> driven by branded tracking engagement</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Increased exchange rate</strong> on returns, recovering revenue that would have been lost to refunds</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Improved NPS scores</strong> with customers citing the delivery experience as a differentiator</span>
+          </li>
+        </ul>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Lessons for Every Retailer</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The session closed with actionable advice for retailers of all sizes. Gesky emphasized that you don't need True Classic's scale to start improving your post-purchase experience. The key is to start with what you can control:
+        </p>
+        <ol class="mt-4 space-y-3 list-decimal list-inside">
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Audit your current experience.</strong> Place a test order and experience every touchpoint as your customer would. Identify the gaps.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Own the communication.</strong> Stop letting carriers be the face of your brand after checkout. Take control of the narrative.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Measure what matters.</strong> Track post-purchase metrics like tracking page engagement, WISMO rate, and return-to-exchange conversion alongside traditional eCommerce KPIs.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Think long-term.</strong> Every post-purchase touchpoint is either building or eroding loyalty. Design accordingly.</li>
+        </ol>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The NRF 2026 session with True Classic reinforced a truth that the best retailers already know: the sale isn't the finish line. It's the starting point for the relationship that drives lifetime value. With the right tools and mindset, every brand can build a post-purchase journey that never ends.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>
