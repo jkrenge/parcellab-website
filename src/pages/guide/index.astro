@@ -1,0 +1,102 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import PageHero from "../../components/PageHero.astro";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const guides = [
+  {
+    title: "Choosing the Right Returns Experience Management Solution",
+    description: "A comprehensive framework for evaluating and selecting the returns management platform that best fits your business needs and customer expectations.",
+    category: "Returns",
+    accent: "from-[#3D3AD3] to-[#6360e8]",
+  },
+  {
+    title: "The Final Hurdle: The 30-Day Guide for Peak Season Success",
+    description: "Prepare your post-purchase operations for peak season with this actionable 30-day countdown covering logistics, communications, and customer experience.",
+    category: "Operations",
+    accent: "from-[#035740] to-[#0d7a5f]",
+  },
+  {
+    title: "Building a Business Case for a Returns Experience Management Solution",
+    description: "Learn how to build a compelling internal business case with ROI projections, stakeholder alignment strategies, and implementation timelines.",
+    category: "Strategy",
+    accent: "from-[#FFC943] to-[#ffd970]",
+  },
+  {
+    title: "From Pain Point to Opportunity: How Self-Service Returns Empower Customers",
+    description: "Discover how self-service returns can transform a friction point into a competitive advantage that boosts revenue and customer satisfaction.",
+    category: "Returns",
+    accent: "from-[#F4373D] to-[#f76b6f]",
+  },
+  {
+    title: "The Hidden Profit Power of Returns",
+    description: "A guide to increasing customer satisfaction and revenue by rethinking your returns strategy from cost center to profit driver.",
+    category: "Revenue",
+    accent: "from-[#3D3AD3] to-[#6360e8]",
+  },
+  {
+    title: "Mastering the Art of Powerful Analytics",
+    description: "Unlock the full potential of post-purchase data with advanced analytics strategies that drive smarter decisions and better customer outcomes.",
+    category: "Analytics",
+    accent: "from-[#035740] to-[#0d7a5f]",
+  },
+  {
+    title: "The Ultimate Post-Purchase Guide: Tips for Successful Shipping Communications",
+    description: "Best practices for crafting shipping notifications that inform, engage, and delight customers at every stage of the delivery journey.",
+    category: "Communications",
+    accent: "from-[#FFC943] to-[#ffd970]",
+  },
+  {
+    title: "Understanding the Post-Purchase Experience",
+    description: "A foundational guide to the post-purchase experience — what it is, why it matters, and how leading brands are turning it into a growth engine.",
+    category: "Fundamentals",
+    accent: "from-[#F4373D] to-[#f76b6f]",
+  },
+  {
+    title: "Cut Down on 'Where Is My Order?' Inquiries",
+    description: "Practical strategies to reduce WISMO support tickets while enhancing customer satisfaction through proactive communication and self-service tools.",
+    category: "Support",
+    accent: "from-[#3D3AD3] to-[#6360e8]",
+  },
+];
+---
+
+<Layout title="Post-Purchase Playbooks & Guides - parcelLab" description="Dive into expert-crafted guides covering everything post-purchase. From retention strategies to operational efficiency, get the insights you need.">
+  <Header client:load />
+  <main>
+    <PageHero
+      eyebrow="Resources"
+      title="Your go-to post-purchase playbooks"
+      description="Dive into expert-crafted guides covering everything post-purchase. From retention strategies to operational efficiency, get the insights you need to elevate your customer experience."
+    />
+
+    <section class="section-standard">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {guides.map((guide) => (
+            <article class="group flex flex-col overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] transition-shadow hover:shadow-lg">
+              <div class={`flex h-52 items-center justify-center bg-gradient-to-br ${guide.accent}`}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="opacity-30"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              </div>
+              <div class="flex flex-1 flex-col p-6">
+                <span class="mb-3 inline-block w-fit rounded-full bg-[var(--surface-sunken)] px-3 py-1 text-xs font-semibold text-[var(--ink-secondary)]">{guide.category}</span>
+                <h3 class="text-lg font-medium leading-snug text-[var(--ink)] group-hover:text-[#3D3AD3] transition-colors">{guide.title}</h3>
+                <p class="mt-2 flex-1 text-sm leading-relaxed text-[var(--ink-secondary)]">{guide.description}</p>
+                <div class="mt-4 flex items-center gap-1 text-sm font-medium text-[#3D3AD3] opacity-0 transition-opacity group-hover:opacity-100">
+                  Read guide
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

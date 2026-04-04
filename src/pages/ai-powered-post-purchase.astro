@@ -1,0 +1,626 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/globals.css";
+import { Header } from "../components/Header";
+import PageHero from "../components/PageHero.astro";
+import InnerPageCTA from "../components/InnerPageCTA.astro";
+import Footer from "../components/Footer.astro";
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="AI-powered post-purchase experiences - parcelLab"
+  description="AI-powered automation and predictive insights transform post-purchase experiences into a real competitive advantage while saving time and cost."
+>
+  <Header client:load />
+  <main>
+    <PageHero
+      eyebrow="AI-Powered"
+      title="Optimize every post-purchase interaction with parcelLab AI"
+      description="We're ushering in a new era of post-purchase excellence with AI seamlessly embedded across our platform."
+      ctaText="Book a demo"
+      ctaHref={`${base}/live-demo/`}
+      secondaryCtaText="See how it works"
+      secondaryCtaHref={`${base}/live-demo/`}
+    />
+
+    <!-- Problem Statement -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2 class="text-display text-[var(--ink)]">Are manual, time-consuming processes holding you back?</h2>
+          <p class="mt-5 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+            With our AI post-purchase platform, you can automate workflows, predict issues before they happen, and turn post-purchase into a competitive advantage. Optimize operations, drive revenue, and keep customers coming back &mdash; all without the extra effort.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Four Key Benefits -->
+    <section class="section-generous bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="grid gap-8 md:grid-cols-2">
+          <!-- Resolve issues -->
+          <div class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8 transition-all hover:shadow-lg hover:shadow-[#3D3AD3]/5">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#3D3AD3]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold text-[var(--ink)]">Resolve issues before they arise</h3>
+            <p class="mt-3 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+              Don't wait for issues to pile up. Spot delivery delays, WISMO risks, and return spikes early with AI-powered predictions, so you can act before customers are impacted.
+            </p>
+          </div>
+          <!-- Smarter support -->
+          <div class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8 transition-all hover:shadow-lg hover:shadow-[#3D3AD3]/5">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#035740]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold text-[var(--ink)]">Smarter support, happier customers</h3>
+            <p class="mt-3 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+              Give your service teams everything they need to resolve issues faster. AI-powered chatbots, centralized order and tracking data, and automated workflows cut down inquiries and speed up resolutions.
+            </p>
+          </div>
+          <!-- Revenue -->
+          <div class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8 transition-all hover:shadow-lg hover:shadow-[#3D3AD3]/5">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFC943]/15">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b8860b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold text-[var(--ink)]">Turn every touchpoint into revenue</h3>
+            <p class="mt-3 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+              Turn post-purchase moments into growth opportunities with AI-driven personalization, product recommendations, and targeted messaging that increase conversions and boost retention.
+            </p>
+          </div>
+          <!-- Automation -->
+          <div class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8 transition-all hover:shadow-lg hover:shadow-[#3D3AD3]/5">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#3D3AD3]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold text-[var(--ink)]">Work smarter with AI automation</h3>
+            <p class="mt-3 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+              Let AI do the heavy lifting. Cut down on manual effort with intelligent automation, smart agents, and self-service tools that free up resources while delivering a seamless post-purchase experience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Banner -->
+    <section class="section-standard">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto mb-12 max-w-2xl text-center">
+          <h2 class="text-display text-[var(--ink)]">Smarter operations, happier customers, higher conversions</h2>
+        </div>
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8 text-center">
+            <div class="text-4xl font-semibold text-[#3D3AD3] md:text-5xl">29%</div>
+            <p class="mt-2 text-sm font-semibold text-[var(--ink)]">Higher conversion</p>
+            <p class="mt-2 text-sm text-[var(--ink-secondary)]">Set clear expectations with real-time delivery promises and personalized options that keep customers reassured and engaged.</p>
+          </div>
+          <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8 text-center">
+            <div class="text-4xl font-semibold text-[#035740] md:text-5xl">20%</div>
+            <p class="mt-2 text-sm font-semibold text-[var(--ink)]">Fewer WISMO inquiries</p>
+            <p class="mt-2 text-sm text-[var(--ink-secondary)]">Keep customers informed with AI-powered tracking and self-service solutions, reducing support costs while enhancing their experience.</p>
+          </div>
+          <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8 text-center">
+            <div class="text-4xl font-semibold text-[#b8860b] md:text-5xl">40%</div>
+            <p class="mt-2 text-sm font-semibold text-[var(--ink)]">More accurate returns forecasting</p>
+            <p class="mt-2 text-sm text-[var(--ink-secondary)]">Optimize staffing and logistics with AI-powered predictions, ensuring seamless returns management.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Capabilities: Execute with AI agents -->
+    <section class="section-generous bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto mb-16 max-w-2xl text-center">
+          <h2 class="text-display text-[var(--ink)]">With parcelLab, you can</h2>
+        </div>
+
+        <div class="grid items-center gap-16 md:grid-cols-2">
+          <div>
+            <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-[#3D3AD3]">Execute</span>
+            <h2 class="text-heading text-[var(--ink)]">Execute with AI agents</h2>
+            <p class="mt-4 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+              Boost efficiency and customer satisfaction with AI agents that handle tasks, resolve issues, and streamline key post-purchase processes.
+            </p>
+            <ul class="mt-8 space-y-4">
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Assistive agents:</strong> Help your team work faster with AI-driven insights that automate repetitive tasks</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Autonomous agents:</strong> Resolve WISMO inquiries, process claims, and recover revenue &mdash; no manual effort needed</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Conversational returns:</strong> Let customers manage returns through AI-powered chat and self-service portals</span>
+              </li>
+            </ul>
+          </div>
+          <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-10">
+            <div class="flex flex-col items-center text-center">
+              <div class="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#3D3AD3]/10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><path d="M9 9h6v6H9z"/><path d="M9 1v3"/><path d="M15 1v3"/><path d="M9 20v3"/><path d="M15 20v3"/><path d="M20 9h3"/><path d="M20 14h3"/><path d="M1 9h3"/><path d="M1 14h3"/></svg>
+              </div>
+              <div class="text-sm font-medium text-[var(--ink-muted)]">AI Agent Status</div>
+              <div class="mt-2 text-2xl font-semibold text-[var(--ink)]">Agents Active</div>
+              <div class="mt-1 text-sm text-[#035740]">Handling 40% of WISMO calls autonomously</div>
+              <div class="mt-6 w-full space-y-3">
+                <div class="flex items-center justify-between rounded-xl bg-[var(--surface-sunken)] p-4 text-sm">
+                  <span class="text-[var(--ink-muted)]">WISMO resolution</span>
+                  <span class="font-medium text-[#035740]">Automated</span>
+                </div>
+                <div class="flex items-center justify-between rounded-xl bg-[var(--surface-sunken)] p-4 text-sm">
+                  <span class="text-[var(--ink-muted)]">Claims processing</span>
+                  <span class="font-medium text-[#035740]">Automated</span>
+                </div>
+                <div class="flex items-center justify-between rounded-xl bg-[var(--surface-sunken)] p-4 text-sm">
+                  <span class="text-[var(--ink-muted)]">Revenue recovery</span>
+                  <span class="font-medium text-[#035740]">Active</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Simplify with AI -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="grid items-center gap-16 md:grid-cols-2">
+          <div class="order-2 md:order-1 rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-10">
+            <div class="flex flex-col items-center text-center">
+              <div class="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#035740]/10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              </div>
+              <div class="text-sm font-medium text-[var(--ink-muted)]">Copilot</div>
+              <div class="mt-2 text-2xl font-semibold text-[var(--ink)]">AI-powered workflow</div>
+              <div class="mt-1 text-sm text-[#035740]">Real-time guidance &amp; automation</div>
+              <div class="mt-6 w-full space-y-3">
+                <div class="flex items-center gap-3 rounded-xl bg-[var(--surface-sunken)] p-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span class="text-sm text-[var(--ink-secondary)]">Simplified workflow creation</span>
+                </div>
+                <div class="flex items-center gap-3 rounded-xl bg-[var(--surface-sunken)] p-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span class="text-sm text-[var(--ink-secondary)]">Intuitive journey builder</span>
+                </div>
+                <div class="flex items-center gap-3 rounded-xl bg-[var(--surface-sunken)] p-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span class="text-sm text-[var(--ink-secondary)]">Centralized service integration</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="order-1 md:order-2">
+            <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-[#035740]">Simplify</span>
+            <h2 class="text-heading text-[var(--ink)]">Simplify with AI</h2>
+            <p class="mt-4 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+              Work smarter, not harder. Automate workflows, streamline customer service, and give your team the AI-powered tools they need to deliver faster, better experiences.
+            </p>
+            <ul class="mt-8 space-y-4">
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">AI-powered agents:</strong> Handle WISMO inquiries, automate claims, and resolve issues proactively</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Copilot:</strong> Get real-time AI guidance to simplify workflows and make automation effortless</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Journey Manager:</strong> Design and optimize customer journeys with an intuitive self-service flow builder</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Service integration:</strong> Give agents a centralized view of order, tracking, and communication data</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Predict with AI -->
+    <section class="section-generous bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="grid items-center gap-16 md:grid-cols-2">
+          <div>
+            <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-[#3D3AD3]">Predict</span>
+            <h2 class="text-heading text-[var(--ink)]">Predict with AI</h2>
+            <p class="mt-4 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+              Anticipate customer needs and optimize operations with real-time data and machine learning so you're always one step ahead.
+            </p>
+            <ul class="mt-8 space-y-4">
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Predictive delivery promises:</strong> AI-driven estimates with 92% precision to boost confidence and conversions</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Predictive delivery delays:</strong> Spot shipment delays before customers do and notify them proactively</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Better returns forecasting:</strong> Predict return volumes with 40% increased accuracy to optimize staffing</span>
+              </li>
+            </ul>
+          </div>
+          <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-10">
+            <div class="flex flex-col items-center text-center">
+              <div class="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#3D3AD3]/10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <div class="text-sm font-medium text-[var(--ink-muted)]">Predictive Analytics</div>
+              <div class="mt-2 text-2xl font-semibold text-[var(--ink)]">92% delivery precision</div>
+              <div class="mt-1 text-sm text-[#035740]">AI-powered predictions across all carriers</div>
+              <div class="mt-6 w-full rounded-xl bg-[var(--surface-sunken)] p-4">
+                <div class="flex items-center justify-between text-sm">
+                  <span class="text-[var(--ink-muted)]">Delivery accuracy</span>
+                  <span class="font-medium text-[#3D3AD3]">92%</span>
+                </div>
+                <div class="mt-2 h-2 w-full rounded-full bg-[var(--line)]">
+                  <div class="h-2 rounded-full bg-[#3D3AD3]" style="width: 92%"></div>
+                </div>
+                <div class="mt-4 flex items-center justify-between text-sm">
+                  <span class="text-[var(--ink-muted)]">Returns forecast improvement</span>
+                  <span class="font-medium text-[#035740]">+40%</span>
+                </div>
+                <div class="mt-2 h-2 w-full rounded-full bg-[var(--line)]">
+                  <div class="h-2 rounded-full bg-[#035740]" style="width: 85%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Personalize with AI -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="grid items-center gap-16 md:grid-cols-2">
+          <div class="order-2 md:order-1 rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-10">
+            <div class="flex flex-col items-center text-center">
+              <div class="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#FFC943]/15">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#b8860b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <div class="text-sm font-medium text-[var(--ink-muted)]">Personalization Engine</div>
+              <div class="mt-2 text-2xl font-semibold text-[var(--ink)]">Tailored for every customer</div>
+              <div class="mt-1 text-sm text-[#035740]">160+ languages supported</div>
+              <div class="mt-6 w-full space-y-3">
+                <div class="flex items-center gap-3 rounded-xl bg-[var(--surface-sunken)] p-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span class="text-sm text-[var(--ink-secondary)]">AI-generated emails in 160+ languages</span>
+                </div>
+                <div class="flex items-center gap-3 rounded-xl bg-[var(--surface-sunken)] p-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span class="text-sm text-[var(--ink-secondary)]">Smart customer segmentation</span>
+                </div>
+                <div class="flex items-center gap-3 rounded-xl bg-[var(--surface-sunken)] p-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span class="text-sm text-[var(--ink-secondary)]">Personalized product recommendations</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="order-1 md:order-2">
+            <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-[#b8860b]">Personalize</span>
+            <h2 class="text-heading text-[var(--ink)]">Personalize with AI</h2>
+            <p class="mt-4 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+              Engage customers effortlessly with AI-driven personalization that saves time and boosts revenue.
+            </p>
+            <ul class="mt-8 space-y-4">
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">AI email editor:</strong> Create and translate post-purchase emails instantly in over 160 languages</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Smart segmentation:</strong> Reach the right customers at the right time with data-driven experiences</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Product recommendations:</strong> Boost upsells and cross-sells with AI-powered suggestions tailored to each shopper</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Agents Deep Dive -->
+    <section class="section-generous bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto mb-16 max-w-2xl text-center">
+          <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-[#3D3AD3]">AI Agents</span>
+          <h2 class="text-display text-[var(--ink)]">Explore parcelLab's AI Agents for smart automation</h2>
+          <p class="mt-4 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+            Purpose-built AI agents that handle complex post-purchase tasks autonomously, so your team can focus on strategy.
+          </p>
+        </div>
+        <div class="grid gap-6 md:grid-cols-2">
+          <!-- WISMO Agent -->
+          <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8 transition-all hover:shadow-lg hover:shadow-[#3D3AD3]/5">
+            <div class="flex items-start gap-5">
+              <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#3D3AD3]/10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-[var(--ink)]">WISMO Resolution Agent</h3>
+                <p class="mt-2 text-sm leading-relaxed text-[var(--ink-secondary)]">
+                  Give customers instant answers with intelligent, conversational AI that automatically handles up to 40% of WISMO calls. Delivers data-rich, automated responses while seamlessly escalating complex issues when needed.
+                </p>
+                <div class="mt-4 inline-flex items-center gap-2 rounded-full bg-[#3D3AD3]/5 px-3 py-1.5 text-xs font-medium text-[#3D3AD3]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                  Handles 40% of WISMO calls
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Fraud Agent -->
+          <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8 transition-all hover:shadow-lg hover:shadow-[#3D3AD3]/5">
+            <div class="flex items-start gap-5">
+              <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#F4373D]/10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F4373D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-[var(--ink)]">Fraud Protection Agent</h3>
+                <p class="mt-2 text-sm leading-relaxed text-[var(--ink-secondary)]">
+                  Stop fraud before it happens. AI-powered profiling detects bad actors in real-time, blocks fraudulent refunds, and reduces fraud by up to 80%, keeping your deliveries and returns secure.
+                </p>
+                <div class="mt-4 inline-flex items-center gap-2 rounded-full bg-[#F4373D]/5 px-3 py-1.5 text-xs font-medium text-[#F4373D]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  Reduces fraud by 80%
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Escalation Agent -->
+          <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8 transition-all hover:shadow-lg hover:shadow-[#3D3AD3]/5">
+            <div class="flex items-start gap-5">
+              <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#035740]/10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-[var(--ink)]">Escalation Handling Agent</h3>
+                <p class="mt-2 text-sm leading-relaxed text-[var(--ink-secondary)]">
+                  Stay ahead of shipping issues with AI that detects exceptions, identifies risks, and reforecasts deliveries automatically. With 24/7 monitoring across hundreds of carriers, problems are resolved before customers even notice.
+                </p>
+                <div class="mt-4 inline-flex items-center gap-2 rounded-full bg-[#035740]/5 px-3 py-1.5 text-xs font-medium text-[#035740]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  24/7 proactive monitoring
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Revenue Recovery -->
+          <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8 transition-all hover:shadow-lg hover:shadow-[#3D3AD3]/5">
+            <div class="flex items-start gap-5">
+              <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#FFC943]/15">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#b8860b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-[var(--ink)]">Revenue Recovery Agent</h3>
+                <p class="mt-2 text-sm leading-relaxed text-[var(--ink-secondary)]">
+                  Prevent revenue loss with AI-powered, personalized outreach that re-engages customers with tailored offers and transforms returns into retention.
+                </p>
+                <div class="mt-4 inline-flex items-center gap-2 rounded-full bg-[#FFC943]/10 px-3 py-1.5 text-xs font-medium text-[#b8860b]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                  Personalized revenue recovery
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Role-Based Solutions -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto mb-16 max-w-2xl text-center">
+          <h2 class="text-display text-[var(--ink)]">Built for retail teams that care about customer experience</h2>
+        </div>
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <a href={`${base}/ecommerce-and-digital/`} class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-7 transition-all hover:shadow-lg hover:shadow-[#3D3AD3]/5 hover:border-[#3D3AD3]/20">
+            <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#3D3AD3]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            </div>
+            <h3 class="text-base font-semibold text-[var(--ink)] group-hover:text-[#3D3AD3] transition-colors">eCommerce &amp; Digital</h3>
+            <p class="mt-2 text-sm text-[var(--ink-secondary)]">Drive higher conversion and customer lifetime value with AI-powered delivery transparency, real-time tracking, and personalized post-purchase engagement.</p>
+          </a>
+          <a href={`${base}/operations-and-logistics/`} class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-7 transition-all hover:shadow-lg hover:shadow-[#3D3AD3]/5 hover:border-[#3D3AD3]/20">
+            <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#035740]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <h3 class="text-base font-semibold text-[var(--ink)] group-hover:text-[#3D3AD3] transition-colors">Operations &amp; Logistics</h3>
+            <p class="mt-2 text-sm text-[var(--ink-secondary)]">Optimize operations with AI-driven delivery predictions, proactive delay management, and data-backed return forecasts to enhance efficiency and reduce costs.</p>
+          </a>
+          <a href={`${base}/customer-service/`} class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-7 transition-all hover:shadow-lg hover:shadow-[#3D3AD3]/5 hover:border-[#3D3AD3]/20">
+            <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#FFC943]/15">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b8860b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3 class="text-base font-semibold text-[var(--ink)] group-hover:text-[#3D3AD3] transition-colors">Customer Service</h3>
+            <p class="mt-2 text-sm text-[var(--ink-secondary)]">Reduce WISMO inquiries and speed up resolution times with AI-driven self-service tools, automated workflows, and centralized tracking insights.</p>
+          </a>
+          <a href={`${base}/customer-experience/`} class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-7 transition-all hover:shadow-lg hover:shadow-[#3D3AD3]/5 hover:border-[#3D3AD3]/20">
+            <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#3D3AD3]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3 class="text-base font-semibold text-[var(--ink)] group-hover:text-[#3D3AD3] transition-colors">Customer Experience</h3>
+            <p class="mt-2 text-sm text-[var(--ink-secondary)]">Deliver seamless, branded, and proactive post-purchase journeys with AI-powered automation, ensuring customer satisfaction and loyalty.</p>
+          </a>
+          <a href={`${base}/marketing/`} class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-7 transition-all hover:shadow-lg hover:shadow-[#3D3AD3]/5 hover:border-[#3D3AD3]/20">
+            <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#035740]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            </div>
+            <h3 class="text-base font-semibold text-[var(--ink)] group-hover:text-[#3D3AD3] transition-colors">Marketing</h3>
+            <p class="mt-2 text-sm text-[var(--ink-secondary)]">Boost retention and revenue by leveraging AI for hyper-personalized email communications, product recommendations, and targeted post-purchase engagement.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Integration Stats -->
+    <section class="section-standard bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto mb-10 max-w-2xl text-center">
+          <h2 class="text-heading text-[var(--ink)]">Work seamlessly with your existing tools</h2>
+          <p class="mt-3 text-sm text-[var(--ink-secondary)]">
+            Supercharge your delivery operations with parcelLab's 550+ global carrier integrations for smooth, reliable shipping. Rapid onboarding gets new carriers up and running in under four weeks.
+          </p>
+        </div>
+        <div class="flex flex-col items-center gap-8 md:flex-row md:justify-center md:gap-16">
+          <div class="text-center">
+            <div class="text-3xl font-semibold text-[var(--ink)]">550+</div>
+            <div class="mt-1 text-sm text-[var(--ink-muted)]">Global carrier integrations</div>
+          </div>
+          <div class="hidden h-12 w-px bg-[var(--line)] md:block"></div>
+          <div class="text-center">
+            <div class="text-3xl font-semibold text-[var(--ink)]">&lt;4 weeks</div>
+            <div class="mt-1 text-sm text-[var(--ink-muted)]">Carrier onboarding time</div>
+          </div>
+          <div class="hidden h-12 w-px bg-[var(--line)] md:block"></div>
+          <div class="text-center">
+            <div class="text-3xl font-semibold text-[var(--ink)]">92%</div>
+            <div class="mt-1 text-sm text-[var(--ink-muted)]">Delivery prediction precision</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="section-standard">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-3xl text-center">
+          <div class="mb-6 text-4xl font-semibold text-[#3D3AD3]">29% revenue growth</div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="#3D3AD3" opacity="0.15" class="mx-auto mb-6"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1zm12 0c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+          <blockquote class="text-xl font-light leading-relaxed text-[var(--ink)] md:text-2xl">
+            &ldquo;Partnering with parcelLab allows us to bring our commitment to exceptional customer experience to the post-purchase journey &mdash; keeping customers informed, reducing frustration, and ensuring every interaction reflects our brand values.&rdquo;
+          </blockquote>
+          <div class="mt-6">
+            <div class="font-medium text-[var(--ink)]">Jordan Gesky</div>
+            <div class="text-sm text-[var(--ink-muted)]">Senior Customer Experience Manager, True Classic</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- G2 Recognition -->
+    <section class="section-standard bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto mb-12 max-w-2xl text-center">
+          <h2 class="text-display text-[var(--ink)]">Why users love parcelLab</h2>
+          <p class="mt-4 text-sm text-[var(--ink-secondary)]">
+            Over 150 reviews on G2 and recognition as a Leader in post-purchase prove we're making a real impact. Named one of G2's Top 50 Supply Chain &amp; Logistics Software products for 2025.
+          </p>
+        </div>
+        <div class="flex flex-col items-center gap-8 mb-12 md:flex-row md:justify-center md:gap-16">
+          <div class="text-center">
+            <div class="text-3xl font-semibold text-[var(--ink)]">150+</div>
+            <div class="mt-1 text-sm text-[var(--ink-muted)]">G2 Reviews</div>
+          </div>
+          <div class="hidden h-12 w-px bg-[var(--line)] md:block"></div>
+          <div class="text-center">
+            <div class="text-lg font-semibold text-[var(--ink)]">G2 Leader</div>
+            <div class="mt-1 text-sm text-[var(--ink-muted)]">in Post-Purchase</div>
+          </div>
+          <div class="hidden h-12 w-px bg-[var(--line)] md:block"></div>
+          <div class="text-center">
+            <div class="text-lg font-semibold text-[var(--ink)]">Top 50</div>
+            <div class="mt-1 text-sm text-[var(--ink-muted)]">Supply Chain &amp; Logistics Software 2025</div>
+          </div>
+        </div>
+        <div class="grid gap-8 md:grid-cols-2">
+          <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#3D3AD3" opacity="0.15" class="mb-4"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1zm12 0c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+            <blockquote class="text-base font-light leading-relaxed text-[var(--ink)]">
+              &ldquo;The tool has allowed us to excel in our customer communication journeys. The best upsides are the span of customizability, the option to segment on many different data points, and the dedicated support team.&rdquo;
+            </blockquote>
+            <div class="mt-4">
+              <div class="text-sm font-medium text-[var(--ink)]">Kai W.</div>
+              <div class="text-xs text-[var(--ink-muted)]">Retail, G2 Review</div>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#3D3AD3" opacity="0.15" class="mb-4"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1zm12 0c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+            <blockquote class="text-base font-light leading-relaxed text-[var(--ink)]">
+              &ldquo;Upon implementing parcelLab, we experienced an immediate ~20% drop in WISMO requests, which significantly lowered the load on our customer service team. Their satisfaction has noticeably improved.&rdquo;
+            </blockquote>
+            <div class="mt-4">
+              <div class="text-sm font-medium text-[var(--ink)]">Validated Reviewer</div>
+              <div class="text-xs text-[var(--ink-muted)]">G2 Review</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-3xl">
+          <h2 class="text-display text-center text-[var(--ink)]">Your questions, answered</h2>
+          <div class="mt-12 space-y-4">
+            <details class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 text-base font-semibold text-[var(--ink)]">
+                How do AI agents improve efficiency in post-purchase operations?
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 transition-transform group-open:rotate-180"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <p class="mt-4 text-sm leading-relaxed text-[var(--ink-secondary)]">
+                parcelLab's AI agents automate routine customer interactions, handling WISMO inquiries, claims processing, and revenue recovery. With assistive agents supporting human teams and autonomous agents executing tasks independently, retailers can scale customer service, logistics, and post-purchase operations while reducing manual effort and optimizing efficiency.
+              </p>
+            </details>
+            <details class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 text-base font-semibold text-[var(--ink)]">
+                How does AI improve the post-purchase experience for retailers?
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 transition-transform group-open:rotate-180"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <p class="mt-4 text-sm leading-relaxed text-[var(--ink-secondary)]">
+                AI enhances the post-purchase experience by automating workflows, predicting delivery delays, and personalizing customer communication. With AI-driven insights, retailers can proactively resolve issues, reduce WISMO inquiries, and increase customer satisfaction &mdash; all while streamlining operations and lowering costs.
+              </p>
+            </details>
+            <details class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 text-base font-semibold text-[var(--ink)]">
+                Can parcelLab integrate with my existing eCommerce and customer service tools?
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 transition-transform group-open:rotate-180"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <p class="mt-4 text-sm leading-relaxed text-[var(--ink-secondary)]">
+                Yes, parcelLab seamlessly integrates with major eCommerce platforms like Shopify, Magento, and SAP, as well as customer service tools like Salesforce, Zendesk, and Gorgias. This ensures real-time access to order tracking data, AI-powered automation, and enhanced support efficiency.
+              </p>
+            </details>
+            <details class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 text-base font-semibold text-[var(--ink)]">
+                How do AI-powered predictive analytics help reduce WISMO inquiries?
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 transition-transform group-open:rotate-180"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <p class="mt-4 text-sm leading-relaxed text-[var(--ink-secondary)]">
+                parcelLab's predictive analytics analyze historical and real-time data to accurately predict delivery timelines and delays before they happen. This allows retailers to keep customers informed proactively, reducing unnecessary support tickets and improving the overall delivery experience.
+              </p>
+            </details>
+            <details class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 text-base font-semibold text-[var(--ink)]">
+                What are the key benefits of AI-driven customer engagement?
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 transition-transform group-open:rotate-180"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <p class="mt-4 text-sm leading-relaxed text-[var(--ink-secondary)]">
+                AI-powered engagement tools like the AI Email Editor, Customer Segmentation, and Product Recommendations ensure personalized, timely communication. This leads to higher customer retention, increased upsell opportunities, and stronger brand loyalty, driving long-term revenue growth.
+              </p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <InnerPageCTA
+      title="Supercharge your post-purchase with AI"
+      description="See how parcelLab's AI-powered platform can transform every post-purchase interaction into a loyalty-building moment."
+    />
+  </main>
+  <Footer />
+</Layout>

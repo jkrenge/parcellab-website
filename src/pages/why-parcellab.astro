@@ -1,0 +1,147 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/globals.css";
+import { Header } from "../components/Header";
+import PageHero from "../components/PageHero.astro";
+import InnerPageCTA from "../components/InnerPageCTA.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Why parcelLab - Post-Purchase Experience Platform" description="Discover why parcelLab is your go-to post-purchase partner for top retailers across the globe. Our powerful, purpose-driven platform helps brands create lasting customer relationships.">
+  <Header client:load />
+  <main>
+    <PageHero
+      eyebrow="Company"
+      title="Why parcelLab"
+      description="Discover why parcelLab is your go-to post-purchase partner for top retailers across the globe. Our powerful, purpose-driven platform and trusted partnership help brands create lasting customer relationships."
+      ctaText="Book a demo"
+      ctaHref={`${import.meta.env.BASE_URL}/live-demo/`}
+    />
+
+    <!-- Key Stats -->
+    <section class="section-standard">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">
+          {[
+            { value: "1,000+", label: "Customers worldwide" },
+            { value: "190+", label: "Countries tracked" },
+            { value: "600+", label: "Carriers integrated" },
+            { value: "10B+", label: "Packages tracked" },
+            { value: "500+", label: "Global employees" },
+          ].map((stat) => (
+            <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-6 text-center">
+              <p class="text-display text-[#3D3AD3]">{stat.value}</p>
+              <p class="mt-2 text-sm font-medium text-[var(--ink-secondary)]">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Capabilities -->
+    <section class="section-generous bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-2xl text-center">
+          <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-[#3D3AD3]">Platform Capabilities</span>
+          <h2 class="text-display text-[var(--ink)]">Drive measurable business impact</h2>
+          <p class="mt-4 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">Retailers benefit through increased revenue, reduced operational costs, and enhanced brand loyalty.</p>
+        </div>
+        <div class="mt-16 grid gap-8 md:grid-cols-3">
+          <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#3D3AD3]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold text-[var(--ink)]">Increase Revenue</h3>
+            <p class="mt-3 text-[var(--ink-secondary)] leading-relaxed">AI-powered logistics forecasting for stock and staffing. Turn post-purchase touchpoints into revenue-generating moments with personalized upselling and cross-selling.</p>
+          </div>
+          <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#035740]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold text-[var(--ink)]">Decrease WISMO</h3>
+            <p class="mt-3 text-[var(--ink-secondary)] leading-relaxed">Reduce "Where is my order?" support inquiries by over 40% with proactive, branded delivery updates that keep customers informed at every step.</p>
+          </div>
+          <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFC943]/20">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b8860b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold text-[var(--ink)]">Boost Customer Lifetime Value</h3>
+            <p class="mt-3 text-[var(--ink-secondary)] leading-relaxed">Personalized experiences across purchase-to-delivery-to-returns that build lasting loyalty and turn one-time buyers into repeat customers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Forrester TEI Report -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="rounded-3xl bg-[var(--surface-dark)] p-8 md:p-16">
+          <div class="mx-auto max-w-2xl text-center">
+            <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-white/50">Forrester Total Economic Impact</span>
+            <h2 class="text-display text-white">Proven financial impact</h2>
+            <p class="mt-4 text-lg font-light leading-relaxed text-white/60">Independent research by Forrester Consulting quantified the ROI of parcelLab for enterprise retailers.</p>
+          </div>
+          <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { value: "412%", label: "Return on investment" },
+              { value: "$33M", label: "Incremental profit from recaptured traffic" },
+              { value: "$8.6M", label: "Efficiency savings (22% reduction in call time)" },
+              { value: "$2.1M", label: "Cost savings (23% reduction in WISMO)" },
+            ].map((stat) => (
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-6 text-center">
+                <p class="text-heading text-[#FFC943]">{stat.value}</p>
+                <p class="mt-2 text-sm text-white/60">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Platform Differentiators -->
+    <section class="section-generous bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-2xl text-center">
+          <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-[#3D3AD3]">What Sets Us Apart</span>
+          <h2 class="text-display text-[var(--ink)]">Platform differentiators</h2>
+        </div>
+        <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {[
+            { title: "Built for Modern Retailers", desc: "Purpose-built for enterprise retail with delivery promises and personalized post-purchase journeys that match your brand." },
+            { title: "Continuously Optimized AI", desc: "Our AI engine continuously adapts to evolving customer expectations, ensuring your post-purchase experience improves over time." },
+            { title: "Active Product Roadmap", desc: "A roadmap focused on innovation, with regular releases that keep your post-purchase experience ahead of the competition." },
+            { title: "Extensive Integrations", desc: "Connect with hundreds of retail systems, carriers, and platforms out of the box for seamless implementation." },
+            { title: "In-House Expert Support", desc: "A dedicated team of post-purchase specialists who understand retail and ensure your success from day one." },
+            { title: "Enterprise-Grade Security", desc: "SOC 2, GDPR-compliant platform trusted by the world's leading retail brands to handle billions of data points securely." },
+          ].map((item) => (
+            <div class="flex gap-4">
+              <div class="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#3D3AD3]/10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-[var(--ink)]">{item.title}</h3>
+                <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-3xl text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="#3D3AD3" opacity="0.15" class="mx-auto mb-6"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+          <blockquote class="text-heading text-[var(--ink)]">
+            "We lacked control and visibility... there was potential for brand damage from inconsistent messaging."
+          </blockquote>
+          <p class="mt-6 text-sm font-medium text-[var(--ink-secondary)]">Senior Business Analyst, Luxury Fashion Retailer</p>
+        </div>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

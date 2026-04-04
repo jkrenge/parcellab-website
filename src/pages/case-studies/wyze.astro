@@ -1,0 +1,184 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout title="Wyze Case Study - parcelLab" description="How Wyze reduced WISMO inquiries by 20% with parcelLab's post-purchase communication and returns management platform.">
+  <Header client:load />
+  <main>
+    <!-- Hero -->
+    <section class="section-generous rounded-b-[32px]" style="background: linear-gradient(135deg, #3D3AD3 0%, #2d2aa0 100%)">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between">
+          <div class="max-w-2xl">
+            <a href={`${b}/case-studies/`} class="mb-6 inline-flex items-center gap-2 text-sm font-medium text-white/60 transition-colors hover:text-white/90">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+              All case studies
+            </a>
+            <span class="mb-4 inline-block rounded-full border border-white/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.15em] text-white/60">
+              Electronics & Media
+            </span>
+            <h1 class="text-hero text-white">
+              Wyze reduces WISMO inquiries by 20%
+            </h1>
+            <p class="mt-5 max-w-xl text-lg font-light leading-relaxed text-white/70">
+              How the Seattle-based smart home company unified post-purchase communications and returns management to cut support costs and boost customer satisfaction.
+            </p>
+          </div>
+
+          <!-- Key stat card -->
+          <div class="flex-shrink-0">
+            <div class="rounded-2xl bg-white/10 p-10 text-center backdrop-blur-sm">
+              <p class="text-6xl font-bold text-white">20%</p>
+              <p class="mt-2 text-sm font-medium text-white/70">Reduction in WISMO<br/>inquiries</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Overview -->
+    <section class="section-standard border-b border-[var(--line)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto grid max-w-4xl gap-8 md:grid-cols-3">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.15em] text-[var(--ink-muted)]">Company</p>
+            <p class="mt-2 text-lg font-medium text-[var(--ink)]">Wyze</p>
+          </div>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.15em] text-[var(--ink-muted)]">Industry</p>
+            <p class="mt-2 text-lg font-medium text-[var(--ink)]">Electronics & Media</p>
+          </div>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.15em] text-[var(--ink-muted)]">Products Used</p>
+            <p class="mt-2 text-lg font-medium text-[var(--ink)]">Delivery, Returns</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Challenge -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-3xl">
+          <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-[#3D3AD3]">The Challenge</span>
+          <h2 class="text-heading text-[var(--ink)]">Silent emails and split shipments overwhelmed support</h2>
+          <div class="mt-6 space-y-4 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+            <p>
+              Founded in 2017 by former Amazon employees, Wyze builds affordable smart home products and wireless cameras. The company discovered that their previous provider had stopped sending post-purchase emails for nine months due to a technology error -- prompting a comprehensive review of their entire post-purchase experience.
+            </p>
+            <p>
+              Wyze's operational model prioritizes rapid delivery by shipping from multiple warehouses, which frequently results in split shipments. Customers receiving partial orders without notification of subsequent shipments contacted support repeatedly, driving up service costs and eroding satisfaction.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section-generous bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-3xl">
+          <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-[#3D3AD3]">The Solution</span>
+          <h2 class="text-heading text-[var(--ink)]">Unified communications across shipments and returns</h2>
+          <div class="mt-6 space-y-4 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+            <p>
+              Wyze partnered with parcelLab to integrate post-purchase communications and returns management into a unified platform, eliminating departmental silos and enabling automation that reduced support workload.
+            </p>
+          </div>
+
+          <div class="mt-10 grid gap-6 sm:grid-cols-3">
+            <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+              <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#3D3AD3]/10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+              </div>
+              <h3 class="font-semibold text-[var(--ink)]">Split shipment tracking</h3>
+              <p class="mt-2 text-sm leading-relaxed text-[var(--ink-secondary)]">Targeted emails for each individual shipment with clear tracking updates for multi-package orders.</p>
+            </div>
+            <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+              <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#035740]/10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+              </div>
+              <h3 class="font-semibold text-[var(--ink)]">Proactive delay alerts</h3>
+              <p class="mt-2 text-sm leading-relaxed text-[var(--ink-secondary)]">Automated exception rules trigger proactive notifications when shipments face delays.</p>
+            </div>
+            <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+              <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#FFC943]/20">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b8941f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4"/><path d="M12 16V8"/></svg>
+              </div>
+              <h3 class="font-semibold text-[var(--ink)]">Personalized upsells</h3>
+              <p class="mt-2 text-sm leading-relaxed text-[var(--ink-secondary)]">Product recommendations based on purchase history embedded directly in tracking communications.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-3xl">
+          <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-[#3D3AD3]">The Results</span>
+          <h2 class="text-heading text-[var(--ink)]">Measurable impact on support and sales</h2>
+        </div>
+
+        <div class="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-3">
+          <div class="rounded-2xl bg-[#3D3AD3] p-8 text-center text-white">
+            <p class="text-5xl font-bold">20%</p>
+            <p class="mt-3 text-sm font-medium text-white/70">Reduction in WISMO inquiries</p>
+          </div>
+          <div class="rounded-2xl bg-[#035740] p-8 text-center text-white">
+            <p class="text-5xl font-bold">&uarr;</p>
+            <p class="mt-3 text-sm font-medium text-white/70">Increased sales through personalized recommendations</p>
+          </div>
+          <div class="rounded-2xl bg-[var(--surface-dark)] p-8 text-center text-white">
+            <p class="text-5xl font-bold">&uarr;</p>
+            <p class="mt-3 text-sm font-medium text-white/70">Boosted customer satisfaction scores</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote -->
+    <section class="section-generous bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-3xl text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-6 opacity-30"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+          <blockquote class="text-heading text-[var(--ink)]">
+            &ldquo;Integrated communications allow teams to collaborate rather than work in silos, reducing support tickets significantly.&rdquo;
+          </blockquote>
+          <div class="mt-8">
+            <p class="font-semibold text-[var(--ink)]">Richard Wang</p>
+            <p class="mt-1 text-sm text-[var(--ink-secondary)]">eCommerce and Retail Operations Manager, Wyze</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Second Quote -->
+    <section class="section-standard">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-3xl rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8 md:p-12">
+          <p class="text-lg font-light leading-relaxed text-[var(--ink-secondary)]">
+            &ldquo;parcelLab excelled in our competitor evaluation for their exceptional support and tailored solutions. The platform gave us the flexibility we needed to handle complex multi-warehouse shipments.&rdquo;
+          </p>
+          <div class="mt-6">
+            <p class="font-semibold text-[var(--ink)]">Logan Dunn</p>
+            <p class="mt-1 text-sm text-[var(--ink-secondary)]">Head of eCommerce, Wyze</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <InnerPageCTA
+      title="Ready to reduce your WISMO inquiries?"
+      description="See how parcelLab can help you unify post-purchase communications and turn every delivery into a loyalty-building moment."
+    />
+  </main>
+  <Footer />
+</Layout>

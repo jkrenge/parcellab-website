@@ -1,0 +1,186 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import PageHero from "../../components/PageHero.astro";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const PL = import.meta.env.BASE_URL;
+
+const pressReleases = [
+  {
+    title: "U.S. Retail Leaders Shine in Sales -- But Have Room to Grow After the Sale",
+    date: "Sep 3, 2025",
+    category: "Post-Purchase",
+    description: "New study reveals that America's leading retailers excel at driving sales but fall short in shipping communication and post-purchase customer experience.",
+    accent: "bg-[#3D3AD3]",
+    tagColor: "bg-[#3D3AD3]/10 text-[#3D3AD3]",
+    featured: true,
+  },
+  {
+    title: "parcelLab recognized as a leader in post-purchase with 27 badges in the G2 Summer reports",
+    date: "Jun 24, 2025",
+    category: "Awards",
+    description: "parcelLab earns 27 badges across multiple G2 Summer 2025 report categories, reinforcing its position as a leader in post-purchase, returns, and shipping.",
+    accent: "bg-[#FFC943]",
+    tagColor: "bg-[#FFC943]/20 text-[#92700a]",
+  },
+  {
+    title: "parcelLab introduces Smart Survey to transform customer feedback into opportunities for business growth",
+    date: "Apr 10, 2025",
+    category: "Product Updates",
+    description: "New Smart Survey feature enables brands to capture and act on customer feedback at critical post-purchase touchpoints, converting insights into growth.",
+    accent: "bg-[#3D3AD3]",
+    tagColor: "bg-[#3D3AD3]/10 text-[#3D3AD3]",
+  },
+  {
+    title: "G2 Spring 2025 report awards parcelLab with 25 badges, including 'Industry Leader in Post-Purchase Experience'",
+    date: "Mar 25, 2025",
+    category: "Awards",
+    description: "Following its Top 50 Best Software Award for Supply Chain & Logistics, parcelLab continues its momentum with 25 G2 Spring report badges.",
+    accent: "bg-[#FFC943]",
+    tagColor: "bg-[#FFC943]/20 text-[#92700a]",
+  },
+  {
+    title: "parcelLab debuts industry defining AI Agents at Shoptalk Spring 2025",
+    date: "Mar 24, 2025",
+    category: "AI & Analytics",
+    description: "parcelLab introduces its new AI Agents platform at Shoptalk Spring, delivering intelligent automation for exception management, predictive ETAs, and personalized post-purchase communication.",
+    accent: "bg-[#035740]",
+    tagColor: "bg-[#035740]/10 text-[#035740]",
+  },
+  {
+    title: "parcelLab announces the first-ever 'Post-Purchase Experience (PPX) Institute' at Shoptalk Spring",
+    date: "Mar 20, 2025",
+    category: "Post-Purchase",
+    description: "The industry's first PPX Institute launches at a major retail conference, establishing a new standard for post-purchase excellence and benchmarking.",
+    accent: "bg-[#3D3AD3]",
+    tagColor: "bg-[#3D3AD3]/10 text-[#3D3AD3]",
+  },
+  {
+    title: "parcelLab Earns Spot on G2's 2025 Best Software Awards for Supply Chain & Logistics Products",
+    date: "Feb 19, 2025",
+    category: "Awards",
+    description: "Recognition in G2's 2025 Best Software Awards program highlights parcelLab's continued leadership in supply chain and logistics technology.",
+    accent: "bg-[#FFC943]",
+    tagColor: "bg-[#FFC943]/20 text-[#92700a]",
+  },
+  {
+    title: "parcelLab Launches the Industry's First Ever 'PPX Maturity Curve' for Retailers at NRF 2025",
+    date: "Jan 14, 2025",
+    category: "Post-Purchase",
+    description: "New benchmarking tool launched at NRF helps retailers assess and improve their post-purchase experience maturity against industry peers.",
+    accent: "bg-[#3D3AD3]",
+    tagColor: "bg-[#3D3AD3]/10 text-[#3D3AD3]",
+  },
+  {
+    title: "parcelLab Enhances Their AI-Powered Post-Purchase Platform with Copilot and AI Email Editor at NRF 2025",
+    date: "Jan 13, 2025",
+    category: "AI & Analytics",
+    description: "Platform enhancements featuring AI Copilot and AI Email Editor bring new levels of intelligent automation to post-purchase communication workflows.",
+    accent: "bg-[#035740]",
+    tagColor: "bg-[#035740]/10 text-[#035740]",
+  },
+  {
+    title: "parcelLab Announces Partnership with OrderProtection to Revolutionize Post-Purchase Customer Experience",
+    date: "Jan 10, 2025",
+    category: "Partnerships",
+    description: "Strategic partnership announced at NRF 2025 combines shipping protection with post-purchase experience management for a comprehensive customer journey solution.",
+    accent: "bg-[#035740]",
+    tagColor: "bg-[#035740]/10 text-[#035740]",
+  },
+  {
+    title: "parcelLab Unveils Game-Changing Benchmarking Solution to Empower Retailers with Data-Driven Post-Purchase Insights",
+    date: "Nov 12, 2024",
+    category: "Product Updates",
+    description: "New benchmarking solution provides retailers with data-driven analytics to compare their post-purchase performance against industry benchmarks.",
+    accent: "bg-[#3D3AD3]",
+    tagColor: "bg-[#3D3AD3]/10 text-[#3D3AD3]",
+  },
+  {
+    title: "parcelLab and Metapack Partner to Empower Retailers with Seamless End-to-End Delivery Experiences",
+    date: "Oct 10, 2024",
+    category: "Partnerships",
+    description: "Partnership delivers integrated delivery solutions, combining Metapack's carrier management with parcelLab's post-purchase communication platform.",
+    accent: "bg-[#035740]",
+    tagColor: "bg-[#035740]/10 text-[#035740]",
+  },
+];
+---
+
+<Layout
+  title="Press - parcelLab"
+  description="The latest parcelLab news, press releases, product announcements, awards, and partnership updates."
+>
+  <Header client:load />
+  <main>
+    <PageHero
+      eyebrow="Newsroom"
+      title="Press"
+      description="The latest parcelLab news, press releases, product announcements, awards, and partnership updates."
+    />
+
+    <section class="section-standard">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+
+        <!-- Featured press release -->
+        <div class="mb-16">
+          <a href={`${PL}/press/`} class="group block overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] transition-shadow hover:shadow-lg">
+            <div class="grid md:grid-cols-2">
+              <div class="relative flex h-64 items-center justify-center bg-gradient-to-br from-[#1e293b] to-[#0f172a] md:h-auto md:min-h-[300px]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="opacity-30"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+                <span class="absolute top-4 left-4 rounded-full bg-white/20 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+                  Latest
+                </span>
+              </div>
+              <div class="flex flex-col justify-center p-8 md:p-10">
+                <div class="mb-3 flex items-center gap-3">
+                  <span class="inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">{pressReleases[0].category}</span>
+                  <span class="text-xs text-[var(--ink-muted)]">{pressReleases[0].date}</span>
+                </div>
+                <h2 class="text-heading text-[var(--ink)] group-hover:text-[#3D3AD3] transition-colors">{pressReleases[0].title}</h2>
+                <p class="mt-3 text-[var(--ink-secondary)] leading-relaxed">{pressReleases[0].description}</p>
+                <div class="mt-6 flex items-center gap-2 text-sm font-medium text-[#3D3AD3]">
+                  Read more
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Press grid -->
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {pressReleases.slice(1).map((press) => (
+            <article class="group flex flex-col overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] transition-shadow hover:shadow-lg">
+              <div class="border-b border-[var(--line)] p-6 pb-4">
+                <div class="flex items-center justify-between gap-3">
+                  <span class:list={["inline-block rounded-full px-3 py-1 text-xs font-semibold", press.tagColor]}>
+                    {press.category}
+                  </span>
+                  <time class="shrink-0 text-xs text-[var(--ink-muted)]">{press.date}</time>
+                </div>
+              </div>
+              <div class="flex flex-1 flex-col p-6 pt-4">
+                <h3 class="text-base font-medium leading-snug text-[var(--ink)] group-hover:text-[#3D3AD3] transition-colors">
+                  {press.title}
+                </h3>
+                <p class="mt-3 flex-1 text-sm leading-relaxed text-[var(--ink-secondary)]">
+                  {press.description}
+                </p>
+                <div class="mt-4 flex items-center gap-2 text-sm font-medium text-[#3D3AD3]">
+                  Read more
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

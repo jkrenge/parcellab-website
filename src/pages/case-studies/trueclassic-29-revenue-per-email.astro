@@ -1,0 +1,192 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout title="True Classic Case Study - parcelLab" description="How True Classic drove 29% revenue growth per email with parcelLab's AI-powered post-purchase experience platform.">
+  <Header client:load />
+  <main>
+    <!-- Hero -->
+    <section class="section-generous rounded-b-[32px]" style="background: linear-gradient(135deg, #035740 0%, #023a2b 100%)">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between">
+          <div class="max-w-2xl">
+            <a href={`${b}/case-studies/`} class="mb-6 inline-flex items-center gap-2 text-sm font-medium text-white/60 transition-colors hover:text-white/90">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+              All case studies
+            </a>
+            <span class="mb-4 inline-block rounded-full border border-white/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.15em] text-white/60">
+              Fashion & Apparel
+            </span>
+            <h1 class="text-hero text-white">
+              True Classic drives 29% revenue growth per email
+            </h1>
+            <p class="mt-5 max-w-xl text-lg font-light leading-relaxed text-white/70">
+              How the fast-growing menswear brand used AI-powered post-purchase messaging and branded tracking pages to boost revenue and cut support tickets.
+            </p>
+          </div>
+
+          <!-- Key stat card -->
+          <div class="flex-shrink-0">
+            <div class="rounded-2xl bg-white/10 p-10 text-center backdrop-blur-sm">
+              <p class="text-6xl font-bold text-white">29%</p>
+              <p class="mt-2 text-sm font-medium text-white/70">Revenue growth<br/>per email</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Overview -->
+    <section class="section-standard border-b border-[var(--line)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto grid max-w-4xl gap-8 md:grid-cols-4">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.15em] text-[var(--ink-muted)]">Company</p>
+            <p class="mt-2 text-lg font-medium text-[var(--ink)]">True Classic</p>
+          </div>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.15em] text-[var(--ink-muted)]">Industry</p>
+            <p class="mt-2 text-lg font-medium text-[var(--ink)]">Fashion & Luxury</p>
+          </div>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.15em] text-[var(--ink-muted)]">Products Used</p>
+            <p class="mt-2 text-lg font-medium text-[var(--ink)]">AI, Delivery, Insights, Returns</p>
+          </div>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.15em] text-[var(--ink-muted)]">Integrations</p>
+            <p class="mt-2 text-lg font-medium text-[var(--ink)]">Klaviyo, Shopify, Happy Returns</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Challenge -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-3xl">
+          <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-[#035740]">The Challenge</span>
+          <h2 class="text-heading text-[var(--ink)]">Unclear delivery dates drove frustration and support tickets</h2>
+          <div class="mt-6 space-y-4 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+            <p>
+              True Classic partners with third-party delivery providers. When customers purchased items and shipments were sent out, delivery providers would send notification emails containing tracking numbers. However, these communications lacked clarity about expected delivery dates due to handoffs between delivery services and local carriers.
+            </p>
+            <p>
+              This uncertainty frustrated customers, who would contact True Classic's support team asking when orders would arrive or why shipments hadn't been delivered yet -- driving up WISMO inquiry volume and putting pressure on the customer experience team.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section-generous bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-3xl">
+          <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-[#035740]">The Solution</span>
+          <h2 class="text-heading text-[var(--ink)]">AI-powered delivery predictions and branded tracking</h2>
+          <div class="mt-6 space-y-4 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+            <p>
+              parcelLab's AI capabilities analyzed average transit times and integrated this data into True Classic's post-purchase experience, allowing the company to proactively inform customers of expected delivery timeframes from the moment of order placement.
+            </p>
+          </div>
+
+          <div class="mt-10 grid gap-6 sm:grid-cols-3">
+            <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+              <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#035740]/10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+              </div>
+              <h3 class="font-semibold text-[var(--ink)]">Automated updates</h3>
+              <p class="mt-2 text-sm leading-relaxed text-[var(--ink-secondary)]">parcelLab triggered shipment notifications automatically, replacing manual processes with reliable automation.</p>
+            </div>
+            <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+              <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#3D3AD3]/10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+              </div>
+              <h3 class="font-semibold text-[var(--ink)]">Branded tracking page</h3>
+              <p class="mt-2 text-sm leading-relaxed text-[var(--ink-secondary)]">A dedicated tracking page and returns portal directed customers to the True Classic website instead of carrier sites.</p>
+            </div>
+            <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+              <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#FFC943]/20">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b8941f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <h3 class="font-semibold text-[var(--ink)]">Proactive communication</h3>
+              <p class="mt-2 text-sm leading-relaxed text-[var(--ink-secondary)]">From order placement onward, customers received clear expectations about arrival dates, significantly decreasing WISMO inquiries.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-3xl">
+          <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-[#035740]">The Results</span>
+          <h2 class="text-heading text-[var(--ink)]">Revenue growth and reduced support burden</h2>
+        </div>
+
+        <div class="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="rounded-2xl bg-[#035740] p-8 text-center text-white">
+            <p class="text-5xl font-bold">29%</p>
+            <p class="mt-3 text-sm font-medium text-white/70">Revenue growth per email</p>
+          </div>
+          <div class="rounded-2xl bg-[#3D3AD3] p-8 text-center text-white">
+            <p class="text-5xl font-bold">&darr;</p>
+            <p class="mt-3 text-sm font-medium text-white/70">Shipment-related support tickets reduced</p>
+          </div>
+          <div class="rounded-2xl bg-[var(--surface-dark)] p-8 text-center text-white">
+            <p class="text-5xl font-bold">&darr;</p>
+            <p class="mt-3 text-sm font-medium text-white/70">Negative reviews on third-party sites decreased</p>
+          </div>
+          <div class="rounded-2xl bg-[#035740] p-8 text-center text-white">
+            <p class="text-5xl font-bold">&uarr;</p>
+            <p class="mt-3 text-sm font-medium text-white/70">Q1 performance notably improved over prior year</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote -->
+    <section class="section-generous bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-3xl text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-6 opacity-30"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+          <blockquote class="text-heading text-[var(--ink)]">
+            &ldquo;Partnering with parcelLab allows us to bring exceptional service to post-purchase journeys, keeping customers informed and reducing frustration while reflecting our brand values.&rdquo;
+          </blockquote>
+          <div class="mt-8">
+            <p class="font-semibold text-[var(--ink)]">Jordan Gesky</p>
+            <p class="mt-1 text-sm text-[var(--ink-secondary)]">Senior Customer Experience Manager, True Classic</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Second Quote -->
+    <section class="section-standard">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-3xl rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8 md:p-12">
+          <p class="text-lg font-light leading-relaxed text-[var(--ink-secondary)]">
+            &ldquo;Our partnership has enhanced transparency and reduced friction in post-purchase experiences through proactive delivery updates, decreasing inquiries while improving customer confidence.&rdquo;
+          </p>
+          <div class="mt-6">
+            <p class="font-semibold text-[var(--ink)]">Max Wainer</p>
+            <p class="mt-1 text-sm text-[var(--ink-secondary)]">Team Lead, Customer Success at parcelLab</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <InnerPageCTA
+      title="Ready to drive revenue from every email?"
+      description="See how parcelLab's AI-powered platform can transform your post-purchase communications into a revenue channel."
+    />
+  </main>
+  <Footer />
+</Layout>

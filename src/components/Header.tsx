@@ -34,7 +34,7 @@ interface NavItemConfig {
   };
 }
 
-const PL = "https://parcellab.com";
+const PL = import.meta.env.BASE_URL;
 
 const NAV_ITEMS: NavItemConfig[] = [
   {
@@ -436,7 +436,7 @@ export function Header() {
             <span className="inline-flex h-5 items-center rounded-full bg-[#3D3AD3] px-2 text-[10px] font-bold uppercase tracking-wider text-white">New</span>
             <span>
               Join our newsletter for post-purchase and CX insights{" "}
-              <a href="https://parcellab.com/blog/" className="font-semibold text-white underline decoration-white/30 underline-offset-2 transition-all hover:decoration-white">
+              <a href={`${import.meta.env.BASE_URL}/blog/`} className="font-semibold text-white underline decoration-white/30 underline-offset-2 transition-all hover:decoration-white">
                 Subscribe &rarr;
               </a>
             </span>
@@ -526,7 +526,7 @@ export function Header() {
             <a href="https://portal.parcellab.com/login" className="hidden text-[13px] font-medium text-gray-500 transition-colors hover:text-gray-900 sm:inline-block">
               Log in
             </a>
-            <a href="https://parcellab.com/live-demo/" className="nav-cta-btn hidden rounded-full bg-[#3D3AD3] px-5 py-2.5 text-[13px] font-semibold text-white transition-all hover:bg-[#3230b8] active:scale-[0.97] sm:inline-block">
+            <a href={`${import.meta.env.BASE_URL}/live-demo/`} className="nav-cta-btn hidden rounded-full bg-[#3D3AD3] px-5 py-2.5 text-[13px] font-semibold text-white transition-all hover:bg-[#3230b8] active:scale-[0.97] sm:inline-block">
               Book a demo
             </a>
             <button
@@ -603,7 +603,7 @@ export function Header() {
               )}
               <hr className="my-2 border-gray-100" />
               <a href="https://portal.parcellab.com/login" className="px-4 py-3 text-sm text-gray-700">Log in</a>
-              <a href="https://parcellab.com/live-demo/" className="mt-1 block rounded-full bg-[#3D3AD3] px-6 py-3 text-center text-sm font-semibold text-white">Book a demo</a>
+              <a href={`${import.meta.env.BASE_URL}/live-demo/`} className="mt-1 block rounded-full bg-[#3D3AD3] px-6 py-3 text-center text-sm font-semibold text-white">Book a demo</a>
             </div>
           </div>
         )}

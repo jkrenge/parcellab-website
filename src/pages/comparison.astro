@@ -1,0 +1,139 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/globals.css";
+import { Header } from "../components/Header";
+import PageHero from "../components/PageHero.astro";
+import InnerPageCTA from "../components/InnerPageCTA.astro";
+import Footer from "../components/Footer.astro";
+
+const comparisons = [
+  {
+    competitor: "AfterShip",
+    tagline: "Full customization vs. basic tracking",
+    description: "AfterShip offers basic post-purchase solutions, while parcelLab provides a fully customizable, AI-powered platform with real-time data accuracy, direct carrier integrations, and advanced engagement tools.",
+    differentiators: [
+      "Complete white-labeling and customization",
+      "550+ direct carrier integrations for real-time tracking",
+      "50+ event triggers and personalized automation",
+    ],
+    accent: "#3D3AD3",
+  },
+  {
+    competitor: "Loop Returns",
+    tagline: "All-in-one platform vs. returns-only focus",
+    description: "Loop Returns focuses exclusively on returns management. parcelLab provides an all-in-one post-purchase platform that integrates shipping, delivery, and returns into a unified experience.",
+    differentiators: [
+      "Customizable branded returns portals",
+      "AI-driven automation for faster processing",
+      "Unified platform reducing WISMO/WISMR inquiries",
+    ],
+    accent: "#035740",
+  },
+  {
+    competitor: "Malomo",
+    tagline: "Enterprise scale vs. Shopify-only",
+    description: "Malomo offers Shopify-focused solutions. parcelLab provides a scalable, AI-powered platform supporting brands of all sizes across any commerce platform and tech stack.",
+    differentiators: [
+      "Extensive global carrier network",
+      "Multi-language and cross-border capabilities",
+      "Advanced customization beyond template limitations",
+    ],
+    accent: "#FFC943",
+  },
+  {
+    competitor: "Narvar",
+    tagline: "Flexible innovation vs. standard solutions",
+    description: "Narvar offers standard post-purchase solutions. parcelLab emphasizes greater flexibility, customization, and dedicated local support with faster implementation timelines.",
+    differentiators: [
+      "Flexible customization at every touchpoint",
+      "Real-time insights and predictive analytics",
+      "Faster 4-8 week implementation timeline",
+    ],
+    accent: "#F4373D",
+  },
+];
+---
+
+<Layout title="Comparing the Best PPX Software Solutions - parcelLab" description="We've gathered insights on top solutions, so you can choose the platform that builds stronger, lasting customer relationships.">
+  <Header client:load />
+  <main>
+    <PageHero
+      eyebrow="Comparisons"
+      title="Comparing the best PPX software solutions"
+      description="We've gathered insights on top post-purchase experience solutions, so you can choose the platform that builds stronger, lasting customer relationships."
+    />
+
+    <!-- Key differentiators banner -->
+    <section class="section-tight bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-3">
+          <div class="flex items-start gap-4 rounded-2xl bg-[var(--surface-raised)] p-6">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#3D3AD3]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg>
+            </div>
+            <div>
+              <h3 class="text-sm font-semibold text-[var(--ink)]">AI-Powered Personalization</h3>
+              <p class="mt-1 text-xs text-[var(--ink-secondary)]">Self-service tools and intelligent automation at every touchpoint</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 rounded-2xl bg-[var(--surface-raised)] p-6">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#035740]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div>
+              <h3 class="text-sm font-semibold text-[var(--ink)]">Customer Lifetime Value Focus</h3>
+              <p class="mt-1 text-xs text-[var(--ink-secondary)]">Building lasting relationships, not just transactional touchpoints</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 rounded-2xl bg-[var(--surface-raised)] p-6">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#FFC943]/20">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b8860b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+            </div>
+            <div>
+              <h3 class="text-sm font-semibold text-[var(--ink)]">Full Brand Control</h3>
+              <p class="mt-1 text-xs text-[var(--ink-secondary)]">Complete customization across the entire post-purchase journey</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison cards -->
+    <section class="section-standard">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="space-y-8">
+          {comparisons.map((comp) => (
+            <article class="overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] transition-shadow hover:shadow-lg">
+              <div class="grid lg:grid-cols-[1fr_2fr]">
+                <!-- Left: competitor label -->
+                <div class="flex flex-col justify-center border-b border-[var(--line)] p-8 lg:border-b-0 lg:border-r" style={`border-top: 4px solid ${comp.accent}`}>
+                  <span class="text-xs font-semibold uppercase tracking-[0.15em] text-[var(--ink-muted)]">parcelLab vs.</span>
+                  <h3 class="mt-2 text-2xl font-semibold text-[var(--ink)]">{comp.competitor}</h3>
+                  <p class="mt-2 text-sm font-medium" style={`color: ${comp.accent}`}>{comp.tagline}</p>
+                </div>
+                <!-- Right: details -->
+                <div class="p-8">
+                  <p class="text-[var(--ink-secondary)] leading-relaxed">{comp.description}</p>
+                  <ul class="mt-6 space-y-3">
+                    {comp.differentiators.map((diff) => (
+                      <li class="flex items-start gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={comp.accent} stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
+                        <span class="text-sm text-[var(--ink)]">{diff}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <InnerPageCTA
+      title="See how parcelLab compares for your brand"
+      description="Get a personalized demo and discover why leading brands choose parcelLab for their post-purchase experience."
+    />
+  </main>
+  <Footer />
+</Layout>

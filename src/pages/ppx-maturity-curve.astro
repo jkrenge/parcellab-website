@@ -1,0 +1,231 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/globals.css";
+import { Header } from "../components/Header";
+import PageHero from "../components/PageHero.astro";
+import InnerPageCTA from "../components/InnerPageCTA.astro";
+import Footer from "../components/Footer.astro";
+
+const stages = [
+  {
+    level: 1,
+    name: "Reactive",
+    subtitle: "Basic transactional",
+    description: "Reliance on carrier-default tracking pages. Customer communication is minimal and reactive, primarily triggered by inbound WISMO inquiries. No ownership of the post-purchase experience.",
+    traits: [
+      "Carrier-default tracking pages",
+      "Reactive WISMO handling",
+      "No branded communications",
+      "Siloed data across teams",
+    ],
+    color: "#F4373D",
+    bgLight: "#FEF2F2",
+  },
+  {
+    level: 2,
+    name: "Defined",
+    subtitle: "Standardized basics",
+    description: "Basic branded tracking pages and order status emails are in place. Communication is templated but not personalized. Returns are handled through manual or basic self-service flows.",
+    traits: [
+      "Branded tracking page live",
+      "Template-based email notifications",
+      "Basic returns portal",
+      "Single-channel communication",
+    ],
+    color: "#FFC943",
+    bgLight: "#FFFBEB",
+  },
+  {
+    level: 3,
+    name: "Standardized",
+    subtitle: "Proactive engagement",
+    description: "Most brands are between this stage and the previous one. Proactive shipping notifications are sent across multiple channels. Returns are streamlined with self-service options and basic analytics inform decisions.",
+    traits: [
+      "Multi-channel notifications (email + SMS)",
+      "Self-service returns with exchanges",
+      "Basic post-purchase analytics",
+      "Carrier performance monitoring",
+    ],
+    color: "#3D3AD3",
+    bgLight: "#EEF2FF",
+    current: true,
+  },
+  {
+    level: 4,
+    name: "Optimized",
+    subtitle: "Personalized journeys",
+    description: "Communications are personalized based on customer segments and behavior. AI-driven recommendations appear on tracking pages. Returns are a revenue recovery channel with intelligent exchange offers.",
+    traits: [
+      "Segment-based personalization",
+      "AI-powered product recommendations",
+      "Revenue recovery through returns",
+      "Predictive delivery estimates",
+    ],
+    color: "#035740",
+    bgLight: "#ECFDF5",
+  },
+  {
+    level: 5,
+    name: "Innovative",
+    subtitle: "Continuous intelligence",
+    description: "The post-purchase experience is a strategic growth lever. AI continuously optimizes every touchpoint. Real-time data drives proactive issue resolution and every interaction builds lifetime value.",
+    traits: [
+      "AI-optimized touchpoints",
+      "Proactive issue resolution",
+      "Unified cross-channel orchestration",
+      "Post-purchase as profit center",
+    ],
+    color: "#1a1a2e",
+    bgLight: "#F8FAFC",
+  },
+];
+---
+
+<Layout title="Post-Purchase Experience Maturity Curve - parcelLab" description="Benchmark your post-purchase experience against competitors and adopt strategic methods to exceed best practices.">
+  <Header client:load />
+  <main>
+    <PageHero
+      eyebrow="Assessment"
+      title="Post-Purchase Experience Maturity Curve"
+      description="Benchmark against competitors and adopt strategic methods to exceed best practices. As you move through the curve, the complexity of what is possible increases."
+      gradient="linear-gradient(135deg, #1e293b 0%, #3D3AD3 100%)"
+    />
+
+    <!-- Visual maturity curve -->
+    <section class="section-standard">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mb-12 text-center">
+          <h2 class="text-display text-[var(--ink)]">Where does your brand stand?</h2>
+          <p class="mx-auto mt-4 max-w-2xl text-[var(--ink-secondary)] leading-relaxed">Most brands are between the Defined and Standardized stages. Discover where you fall and what it takes to reach the next level.</p>
+        </div>
+
+        <!-- Progress bar visualization -->
+        <div class="mb-16 hidden lg:block">
+          <div class="relative mx-auto max-w-4xl">
+            <div class="h-3 rounded-full bg-[var(--surface-sunken)]">
+              <div class="h-3 rounded-full bg-gradient-to-r from-[#F4373D] via-[#FFC943] via-[#3D3AD3] to-[#035740]" style="width: 100%"></div>
+            </div>
+            <div class="mt-4 flex justify-between">
+              {stages.map((stage) => (
+                <div class="flex flex-col items-center">
+                  <div
+                    class="flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold text-white"
+                    style={`background-color: ${stage.color}`}
+                  >
+                    {stage.level}
+                  </div>
+                  <span class="mt-2 text-xs font-medium text-[var(--ink)]">{stage.name}</span>
+                </div>
+              ))}
+            </div>
+            <!-- "Most brands" indicator -->
+            <div class="absolute left-[30%] top-0 -translate-x-1/2 -translate-y-full pb-2">
+              <div class="rounded-full bg-[var(--ink)] px-3 py-1 text-xs font-medium text-white">Most brands are here</div>
+              <div class="mx-auto h-3 w-px bg-[var(--ink)]"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stage cards -->
+        <div class="space-y-6">
+          {stages.map((stage) => (
+            <div
+              class:list={[
+                "relative overflow-hidden rounded-2xl border bg-[var(--surface-raised)] transition-shadow hover:shadow-lg",
+                stage.current ? "border-[#3D3AD3] ring-1 ring-[#3D3AD3]/20" : "border-[var(--line)]",
+              ]}
+            >
+              {stage.current && (
+                <div class="bg-[#3D3AD3] px-4 py-1.5 text-center text-xs font-semibold text-white">
+                  Most brands are between Defined and Standardized
+                </div>
+              )}
+              <div class="grid lg:grid-cols-[200px_1fr_1fr]">
+                <!-- Level indicator -->
+                <div class="flex items-center gap-4 border-b border-[var(--line)] p-6 lg:flex-col lg:justify-center lg:border-b-0 lg:border-r" style={`background-color: ${stage.bgLight}`}>
+                  <div
+                    class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl text-xl font-bold text-white"
+                    style={`background-color: ${stage.color}`}
+                  >
+                    {stage.level}
+                  </div>
+                  <div class="lg:text-center">
+                    <h3 class="text-lg font-semibold text-[var(--ink)]">{stage.name}</h3>
+                    <p class="text-xs text-[var(--ink-secondary)]">{stage.subtitle}</p>
+                  </div>
+                </div>
+                <!-- Description -->
+                <div class="border-b border-[var(--line)] p-6 lg:border-b-0 lg:border-r">
+                  <p class="text-sm leading-relaxed text-[var(--ink-secondary)]">{stage.description}</p>
+                </div>
+                <!-- Traits -->
+                <div class="p-6">
+                  <ul class="space-y-2.5">
+                    {stage.traits.map((trait) => (
+                      <li class="flex items-start gap-2.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={stage.color} stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
+                        <span class="text-sm text-[var(--ink)]">{trait}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Assessment CTA -->
+    <section class="section-standard bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2 class="text-display text-[var(--ink)]">Request a free assessment</h2>
+          <p class="mx-auto mt-4 max-w-xl text-[var(--ink-secondary)] leading-relaxed">Discover your position on the maturity curve and receive actionable insights to close gaps, enhance customer satisfaction, and drive measurable results.</p>
+          <div class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-5">
+              <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[#3D3AD3]/10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+              </div>
+              <h3 class="text-sm font-semibold text-[var(--ink)]">PPX Analysis</h3>
+              <p class="mt-1 text-xs text-[var(--ink-secondary)]">Comprehensive analysis via test orders</p>
+            </div>
+            <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-5">
+              <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[#035740]/10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+              </div>
+              <h3 class="text-sm font-semibold text-[var(--ink)]">Benchmarking</h3>
+              <p class="mt-1 text-xs text-[var(--ink-secondary)]">Compare against 1,500+ brands</p>
+            </div>
+            <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-5">
+              <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[#FFC943]/20">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b8860b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <h3 class="text-sm font-semibold text-[var(--ink)]">Maturity Score</h3>
+              <p class="mt-1 text-xs text-[var(--ink-secondary)]">Internal organizational assessment</p>
+            </div>
+            <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-5">
+              <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[#F4373D]/10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F4373D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><path d="M14 2v6h6"/></svg>
+              </div>
+              <h3 class="text-sm font-semibold text-[var(--ink)]">Strategic Roadmap</h3>
+              <p class="mt-1 text-xs text-[var(--ink-secondary)]">Custom roadmap development</p>
+            </div>
+          </div>
+          <div class="mt-10">
+            <a
+              href={`${import.meta.env.BASE_URL}/ppx-maturity-curve/`}
+              class="group inline-flex items-center gap-3 rounded-full bg-[#3D3AD3] py-4 pl-7 pr-6 text-base font-medium text-white shadow-[0_2px_16px_rgba(61,58,211,0.3)] transition-all hover:shadow-[0_4px_24px_rgba(61,58,211,0.4)] hover:-translate-y-0.5"
+            >
+              Request a free assessment
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-0.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

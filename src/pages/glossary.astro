@@ -1,0 +1,120 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/globals.css";
+import { Header } from "../components/Header";
+import PageHero from "../components/PageHero.astro";
+import InnerPageCTA from "../components/InnerPageCTA.astro";
+import Footer from "../components/Footer.astro";
+
+const glossary: Record<string, { term: string; description: string }[]> = {
+  A: [
+    { term: "Average Order Value", description: "The average dollar amount spent each time a customer places an order. AOV is calculated by dividing total revenue by the number of orders." },
+  ],
+  B: [
+    { term: "Branded Tracking", description: "A customized, brand-owned tracking experience that replaces generic carrier tracking pages with on-brand communications and upsell opportunities." },
+    { term: "Branded Emails", description: "Personalized, on-brand email notifications sent throughout the post-purchase journey to keep customers informed and engaged." },
+  ],
+  C: [
+    { term: "Customer Retention", description: "The ability of a company to retain its customers over a period of time. Post-purchase experience plays a critical role in driving retention rates." },
+    { term: "Customer Lifetime Value", description: "The total revenue a business can expect from a single customer account throughout the entire business relationship." },
+    { term: "Churn Rate", description: "The percentage of customers who stop doing business with a company over a given period, often influenced by poor post-purchase experiences." },
+    { term: "Carrier Scorecard", description: "A performance measurement tool that evaluates carrier partners across metrics like on-time delivery, damage rates, and customer satisfaction." },
+    { term: "Cargo Tracking", description: "The process of monitoring and tracking the movement of goods from origin to destination through the supply chain." },
+  ],
+  D: [
+    { term: "Direct to Consumer", description: "A business model where brands sell directly to end consumers, bypassing traditional retail intermediaries and gaining full control of the customer experience." },
+    { term: "Delivery Status", description: "Real-time information about the current state of a shipment, from dispatch through to final delivery confirmation." },
+    { term: "Delivery Notification Software", description: "Technology that automates the sending of delivery updates and notifications to customers via email, SMS, or push notifications." },
+    { term: "Delivery Management", description: "The end-to-end coordination of the delivery process, including carrier selection, route optimization, and customer communication." },
+    { term: "Delivery Date Estimate", description: "A predicted delivery date provided to customers based on carrier data, shipping method, and historical performance patterns." },
+  ],
+  E: [
+    { term: "eCommerce Tracking Updates", description: "Automated notifications sent to online shoppers about the status of their orders, from order confirmation through delivery." },
+  ],
+  F: [
+    { term: "Final Mile Carrier", description: "The logistics provider responsible for the last leg of delivery, transporting packages from a local distribution center to the customer's door." },
+  ],
+  I: [
+    { term: "Improve Carrier Performance", description: "Strategies and tools for monitoring, benchmarking, and optimizing carrier partner performance to ensure reliable delivery experiences." },
+  ],
+  L: [
+    { term: "Last Mile Delivery Analytics", description: "Data analysis focused on the final stage of the delivery process, providing insights into performance, cost, and customer satisfaction." },
+  ],
+  M: [
+    { term: "Marketing Automation", description: "Technology that manages marketing processes and campaigns across multiple channels automatically, often triggered by post-purchase events." },
+  ],
+  O: [
+    { term: "Order Fulfillment", description: "The comprehensive process involved in receiving, processing, packing, and delivering orders to customers efficiently and accurately." },
+    { term: "Omnichannel Returns", description: "A returns strategy that allows customers to return items through multiple channels — in-store, by mail, at drop-off points — for maximum convenience." },
+  ],
+  P: [
+    { term: "Pre-Shipment", description: "The phase between order placement and carrier pickup, including order processing, picking, packing, and label generation." },
+    { term: "Parcel Tracking Automation", description: "Automated systems that monitor parcel movements across carriers and trigger notifications or actions based on tracking events." },
+    { term: "Parcel Monitoring", description: "Continuous surveillance of parcel status and location throughout the delivery journey, enabling proactive issue resolution." },
+  ],
+  R: [
+    { term: "Return Merchandise Authorization", description: "A formal approval process that authorizes a customer to return a product, typically including a unique RMA number for tracking and processing." },
+  ],
+  S: [
+    { term: "Shipment Tracking API", description: "A programming interface that enables businesses to integrate real-time shipment tracking data from multiple carriers into their own systems." },
+  ],
+  T: [
+    { term: "Third-Party Logistics (3PL)", description: "An outsourced logistics provider that handles warehousing, fulfillment, and shipping operations on behalf of eCommerce businesses." },
+  ],
+  W: [
+    { term: "WISMR", description: "'Where Is My Return?' — customer inquiries about return status. Reducing WISMR tickets is a key goal of returns experience management." },
+  ],
+};
+
+const letters = Object.keys(glossary);
+---
+
+<Layout title="Glossary for Returns Management - parcelLab" description="This glossary includes different eCommerce terminology including words pertaining to the post-purchase experience and returns management.">
+  <Header client:load />
+  <main>
+    <PageHero
+      eyebrow="Resources"
+      title="Post-purchase glossary"
+      description="This glossary includes eCommerce terminology pertaining to the post-purchase experience and returns management."
+    />
+
+    <section class="section-standard">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <!-- Letter navigation -->
+        <nav class="mb-12 flex flex-wrap gap-2" aria-label="Glossary alphabet navigation">
+          {letters.map((letter) => (
+            <a
+              href={`#letter-${letter}`}
+              class="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--line)] text-sm font-semibold text-[var(--ink)] transition-all hover:border-[#3D3AD3] hover:bg-[#3D3AD3]/5 hover:text-[#3D3AD3]"
+            >
+              {letter}
+            </a>
+          ))}
+        </nav>
+
+        <!-- Glossary entries -->
+        <div class="space-y-12">
+          {letters.map((letter) => (
+            <div id={`letter-${letter}`} class="scroll-mt-32">
+              <div class="mb-6 flex items-center gap-4">
+                <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#3D3AD3] text-xl font-bold text-white">{letter}</span>
+                <div class="h-px flex-1 bg-[var(--line)]"></div>
+              </div>
+              <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                {glossary[letter].map((entry) => (
+                  <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-6 transition-shadow hover:shadow-md">
+                    <h3 class="text-base font-semibold text-[var(--ink)]">{entry.term}</h3>
+                    <p class="mt-2 text-sm leading-relaxed text-[var(--ink-secondary)]">{entry.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

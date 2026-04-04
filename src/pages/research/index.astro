@@ -1,0 +1,115 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import PageHero from "../../components/PageHero.astro";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const studies = [
+  {
+    title: "German Fashion UNBOXED -- Teil 2 (Qualitative Studie)",
+    description: "A qualitative analysis of the delivery and returns experience across 125 fashion retailers in Germany, uncovering best practices and gaps.",
+    category: "Featured",
+    accent: "bg-[#3D3AD3]",
+  },
+  {
+    title: "German Fashion UNBOXED Study",
+    description: "In-depth analysis of the post-purchase experience among leading fashion retailers in Germany, benchmarking performance across key touchpoints.",
+    category: "Featured",
+    accent: "bg-[#035740]",
+  },
+  {
+    title: "eCommerce Shipping Experience Study 2025",
+    description: "A comprehensive examination of the post-purchase experiences of the top retailers in the U.S., revealing trends and opportunities in shipping communications.",
+    category: "Featured",
+    accent: "bg-[#FFC943]",
+  },
+  {
+    title: "The Total Economic Impact of parcelLab Engage",
+    description: "A Forrester study examining the cost savings, revenue impact, and efficiency gains achieved by brands using parcelLab's Engage platform.",
+    category: "ROI",
+    accent: "bg-[#F4373D]",
+  },
+  {
+    title: "Inside the UK's Top 100 Retailers' Post-Purchase Secrets",
+    description: "A study uncovering the returns, tracking, and sustainability strategies of the UK's top 100 retailers and what sets the leaders apart.",
+    category: "Featured",
+    accent: "bg-[#3D3AD3]",
+  },
+  {
+    title: "German eCommerce Customer Perspective Study 2024",
+    description: "Consumer insights on the eCommerce experience from the customer viewpoint, revealing expectations and satisfaction drivers in the German market.",
+    category: "Research",
+    accent: "bg-[#035740]",
+  },
+  {
+    title: "German eCommerce Study 2023",
+    description: "Analysis of leading retailers in Germany and the strategies driving their success in post-purchase customer experience.",
+    category: "Research",
+    accent: "bg-[#FFC943]",
+  },
+  {
+    title: "The Total Economic Impact of parcelLab",
+    description: "An ROI and economic impact assessment of parcelLab solutions, quantifying the business value delivered across operations and customer satisfaction.",
+    category: "ROI",
+    accent: "bg-[#F4373D]",
+  },
+  {
+    title: "German Shipping Study 2023",
+    description: "A detailed shipping experience analysis for the German market, benchmarking carrier performance and customer communication standards.",
+    category: "Research",
+    accent: "bg-[#3D3AD3]",
+  },
+];
+---
+
+<Layout title="Research Archive - parcelLab" description="Data-driven insights for the future of post-purchase. Explore industry-leading research, shipping studies, and consumer trends shaping the post-purchase experience.">
+  <Header client:load />
+  <main>
+    <PageHero
+      eyebrow="Resources"
+      title="Data-driven insights for the future of post-purchase"
+      description="Explore industry-leading research, shipping studies, and consumer trends shaping the post-purchase experience."
+    />
+
+    <section class="section-standard">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <!-- Featured row -->
+        <div class="mb-12 grid grid-cols-1 gap-8 lg:grid-cols-2">
+          {studies.slice(0, 2).map((study) => (
+            <article class="group flex flex-col overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] transition-shadow hover:shadow-lg">
+              <div class={`flex h-56 items-center justify-center ${study.accent}`}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="opacity-30"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+              </div>
+              <div class="flex flex-1 flex-col p-6">
+                <span class="mb-3 inline-block w-fit rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">{study.category}</span>
+                <h3 class="text-xl font-medium leading-snug text-[var(--ink)] group-hover:text-[#3D3AD3] transition-colors">{study.title}</h3>
+                <p class="mt-2 flex-1 text-sm leading-relaxed text-[var(--ink-secondary)]">{study.description}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <!-- Remaining grid -->
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {studies.slice(2).map((study) => (
+            <article class="group flex flex-col overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] transition-shadow hover:shadow-lg">
+              <div class={`flex h-44 items-center justify-center ${study.accent}`}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="opacity-30"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+              </div>
+              <div class="flex flex-1 flex-col p-6">
+                <span class="mb-3 inline-block w-fit rounded-full bg-[var(--surface-sunken)] px-3 py-1 text-xs font-semibold text-[var(--ink-secondary)]">{study.category}</span>
+                <h3 class="text-lg font-medium leading-snug text-[var(--ink)] group-hover:text-[#3D3AD3] transition-colors">{study.title}</h3>
+                <p class="mt-2 flex-1 text-sm leading-relaxed text-[var(--ink-secondary)]">{study.description}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

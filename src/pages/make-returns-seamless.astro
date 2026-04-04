@@ -1,0 +1,242 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/globals.css";
+import { Header } from "../components/Header";
+import PageHero from "../components/PageHero.astro";
+import InnerPageCTA from "../components/InnerPageCTA.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="Industry-leading returns management solution - parcelLab"
+  description="Transform your returns process into a loyalty-building experience with our innovative returns management solutions."
+>
+  <Header client:load />
+  <main>
+    <PageHero
+      eyebrow="Returns"
+      title="Turn returns into revenue, retention, and loyalty"
+      description="Most brands see returns as a cost center. Industry leaders use returns as a strategic growth engine. Create loyalty-building experiences today with parcelLab's innovative returns management solutions."
+      ctaText="Book a demo"
+      ctaHref={`${import.meta.env.BASE_URL}/live-demo/`}
+      secondaryCtaText="See how it works"
+      secondaryCtaHref={`${import.meta.env.BASE_URL}/live-demo/`}
+    />
+
+    <!-- Value Props -->
+    <section class="section-standard bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div class="rounded-2xl bg-[var(--surface-raised)] p-6 text-center shadow-sm">
+            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#3D3AD3]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3 class="text-base font-semibold text-[var(--ink)]">Brand-Positive Moments</h3>
+            <p class="mt-2 text-sm text-[var(--ink-secondary)]">Create intentional brand interactions during returns through customized tone and personalized touchpoints.</p>
+          </div>
+          <div class="rounded-2xl bg-[var(--surface-raised)] p-6 text-center shadow-sm">
+            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#035740]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            </div>
+            <h3 class="text-base font-semibold text-[var(--ink)]">Retain Revenue</h3>
+            <p class="mt-2 text-sm text-[var(--ink-secondary)]">Encourage exchanges over refunds using AI-driven product recommendations and streamlined processes.</p>
+          </div>
+          <div class="rounded-2xl bg-[var(--surface-raised)] p-6 text-center shadow-sm">
+            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFC943]/15">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b8860b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </div>
+            <h3 class="text-base font-semibold text-[var(--ink)]">Leverage Data</h3>
+            <p class="mt-2 text-sm text-[var(--ink-secondary)]">Transform returns data into actionable intelligence for product development and operational decisions.</p>
+          </div>
+          <div class="rounded-2xl bg-[var(--surface-raised)] p-6 text-center shadow-sm">
+            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#EF4444]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3 class="text-base font-semibold text-[var(--ink)]">Cut Costs</h3>
+            <p class="mt-2 text-sm text-[var(--ink-secondary)]">Automate workflows to reduce manual effort across support, warehouse, and operations teams.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature Sections -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto mb-16 max-w-2xl text-center">
+          <h2 class="text-display text-[var(--ink)]">A complete returns management suite</h2>
+          <p class="mt-4 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+            From self-service portals to AI-powered forecasting, everything you need to transform returns into a competitive advantage.
+          </p>
+        </div>
+
+        <!-- Feature 1: Track Returns -->
+        <div class="grid items-center gap-16 md:grid-cols-2">
+          <div>
+            <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-[#3D3AD3]">Tracking</span>
+            <h3 class="text-heading text-[var(--ink)]">Track and inform returns status</h3>
+            <p class="mt-4 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+              Monitor return shipments with real-time tracking and automated multi-channel updates via email, SMS, and push notifications. A centralized dashboard with analytics helps optimize refund processing.
+            </p>
+            <ul class="mt-6 space-y-3">
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-sm text-[var(--ink-secondary)]">Real-time return shipment monitoring</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-sm text-[var(--ink-secondary)]">Multi-channel automated updates</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-sm text-[var(--ink-secondary)]">Zendesk & Salesforce integrations</span>
+              </li>
+            </ul>
+          </div>
+          <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8">
+            <div class="space-y-4">
+              <div class="flex items-center gap-4 rounded-xl bg-[var(--surface-sunken)] p-4">
+                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#035740]/10">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div>
+                  <div class="text-sm font-medium text-[var(--ink)]">Return initiated</div>
+                  <div class="text-xs text-[var(--ink-muted)]">Email confirmation sent</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-4 rounded-xl bg-[var(--surface-sunken)] p-4">
+                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#3D3AD3]/10">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                </div>
+                <div>
+                  <div class="text-sm font-medium text-[var(--ink)]">Package in transit</div>
+                  <div class="text-xs text-[var(--ink-muted)]">SMS update sent to customer</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-4 rounded-xl bg-[#035740]/5 p-4 border border-[#035740]/10">
+                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#035740]/10">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                </div>
+                <div>
+                  <div class="text-sm font-medium text-[var(--ink)]">Return received at warehouse</div>
+                  <div class="text-xs text-[#035740]">Refund processing initiated</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature 2: Self-Service Portal -->
+    <section class="section-generous bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="grid items-center gap-16 md:grid-cols-2">
+          <div class="order-2 md:order-1 rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8">
+            <div class="mb-6 text-center">
+              <div class="inline-flex items-center gap-2 rounded-full bg-[#3D3AD3]/10 px-4 py-2 text-sm font-medium text-[#3D3AD3]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                Self-Service Returns Portal
+              </div>
+            </div>
+            <div class="space-y-3">
+              <div class="flex items-center gap-3 rounded-lg bg-[var(--surface-sunken)] p-3 text-sm">
+                <span class="text-[var(--ink-muted)]">Return window</span>
+                <span class="ml-auto font-medium text-[var(--ink)]">30 days</span>
+              </div>
+              <div class="flex items-center gap-3 rounded-lg bg-[var(--surface-sunken)] p-3 text-sm">
+                <span class="text-[var(--ink-muted)]">Carrier options</span>
+                <span class="ml-auto font-medium text-[var(--ink)]">50+ carriers</span>
+              </div>
+              <div class="flex items-center gap-3 rounded-lg bg-[var(--surface-sunken)] p-3 text-sm">
+                <span class="text-[var(--ink-muted)]">Return methods</span>
+                <span class="ml-auto font-medium text-[var(--ink)]">Drop-off, pickup, QR code</span>
+              </div>
+              <div class="flex items-center gap-3 rounded-lg bg-[var(--surface-sunken)] p-3 text-sm">
+                <span class="text-[var(--ink-muted)]">Compensation</span>
+                <span class="ml-auto font-medium text-[var(--ink)]">Refund, exchange, credit</span>
+              </div>
+            </div>
+          </div>
+          <div class="order-1 md:order-2">
+            <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-[#035740]">Self-Service</span>
+            <h3 class="text-heading text-[var(--ink)]">Self-service returns portal</h3>
+            <p class="mt-4 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+              A policy-driven portal with configurable return windows, flexible compensation options, warehouse automation, and built-in fraud detection. Support 50+ carrier integrations with multiple return methods.
+            </p>
+            <ul class="mt-6 space-y-3">
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-sm text-[var(--ink-secondary)]">Configurable return windows and policies</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-sm text-[var(--ink-secondary)]">Built-in fraud detection and prevention</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-sm text-[var(--ink-secondary)]">QR codes, drop-off, and premium pickup options</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Features Grid -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="grid gap-6 md:grid-cols-3">
+          <!-- Personalize -->
+          <div class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-7 transition-all hover:shadow-lg hover:shadow-[#3D3AD3]/5">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#3D3AD3]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Personalize the Journey</h3>
+            <p class="mt-3 text-sm leading-relaxed text-[var(--ink-secondary)]">
+              AI-powered approvals, intelligent workflows, real-time customer updates via multiple channels, and unified online/in-store returns experiences.
+            </p>
+          </div>
+          <!-- Forecast -->
+          <div class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-7 transition-all hover:shadow-lg hover:shadow-[#3D3AD3]/5">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#035740]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Forecast Returns Volume</h3>
+            <p class="mt-3 text-sm leading-relaxed text-[var(--ink-secondary)]">
+              AI-driven forecasting with anomaly detection, seasonal data integration, and granular reporting on trends and revenue impact.
+            </p>
+          </div>
+          <!-- Flexible Returns -->
+          <div class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-7 transition-all hover:shadow-lg hover:shadow-[#3D3AD3]/5">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFC943]/15">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b8860b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Offer Flexible Returns</h3>
+            <p class="mt-3 text-sm leading-relaxed text-[var(--ink-secondary)]">
+              Enable partial and split returns, smart routing, VIP extensions, product-specific rules, seasonal adjustments, and multiple return methods including QR codes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="section-standard bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-3xl text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="#3D3AD3" opacity="0.15" class="mx-auto mb-6"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1zm12 0c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+          <blockquote class="text-xl font-light leading-relaxed text-[var(--ink)] md:text-2xl">
+            &ldquo;Upon implementing parcelLab, we experienced an immediate ~20% drop in WISMR requests. The exchange features help us recover revenue that would otherwise be lost to refunds.&rdquo;
+          </blockquote>
+          <div class="mt-6">
+            <div class="font-medium text-[var(--ink)]">True Classic</div>
+            <div class="text-sm text-[var(--ink-muted)]">29% increase in revenue per email</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

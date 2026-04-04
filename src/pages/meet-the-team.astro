@@ -1,0 +1,125 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/globals.css";
+import { Header } from "../components/Header";
+import PageHero from "../components/PageHero.astro";
+import InnerPageCTA from "../components/InnerPageCTA.astro";
+import Footer from "../components/Footer.astro";
+
+const leadership = [
+  { name: "Tobias Buxhoidt", title: "Co-Founder & Chief Executive Officer", initials: "TB" },
+  { name: "Julian Krenge", title: "Co-Founder & Chief Product Officer", initials: "JK" },
+  { name: "Anton Eder", title: "Co-Founder & Chief Operating Officer", initials: "AE" },
+  { name: "Stefan Gersmann", title: "Chief Technology Officer", initials: "SG" },
+];
+
+const boardMembers = [
+  { name: "Philipp Schroeder", initials: "PS" },
+  { name: "Crissy Costa Behrens", initials: "CB" },
+  { name: "Matt Gatto", initials: "MG" },
+  { name: "Christian Schulte", initials: "CS" },
+  { name: "Christian Siegele", initials: "CS" },
+  { name: "Tom Ebling", initials: "TE" },
+];
+
+const advisoryBoard = [
+  { name: "Curt Graff", title: "SVP Fulfillment, VGM Fulfillment", initials: "CG" },
+  { name: "John Rilli", title: "Manager Digital Commerce Operations, Acushnet", initials: "JR" },
+];
+---
+
+<Layout title="Meet the Team - parcelLab" description="Meet the visionaries driving innovation at parcelLab. Our leaders are passionate about helping retailers create customers for life.">
+  <Header client:load />
+  <main>
+    <PageHero
+      eyebrow="Company"
+      title="Meet the visionaries driving innovation at parcelLab"
+      description="Our leaders are passionate about helping retailers create customers for life. That's why our parcelCrew is full of ambitious, talented experts who make us the best at what we do."
+    />
+
+    <!-- Leadership Team -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mb-12">
+          <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-[#3D3AD3]">Leadership</span>
+          <h2 class="text-display text-[var(--ink)]">Executive team</h2>
+        </div>
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {leadership.map((person) => (
+            <div class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-6 transition-all hover:border-[#3D3AD3]/20 hover:shadow-[0_4px_24px_rgba(61,58,211,0.08)]">
+              <div class="mb-5 flex h-24 w-24 items-center justify-center rounded-2xl bg-gradient-to-br from-[#3D3AD3]/10 to-[#3D3AD3]/5">
+                <span class="text-2xl font-semibold text-[#3D3AD3]">{person.initials}</span>
+              </div>
+              <h3 class="text-lg font-semibold text-[var(--ink)]">{person.name}</h3>
+              <p class="mt-1 text-sm text-[var(--ink-secondary)]">{person.title}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Board Members -->
+    <section class="section-standard bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mb-12">
+          <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-[#3D3AD3]">Governance</span>
+          <h2 class="text-display text-[var(--ink)]">Board members</h2>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+          {boardMembers.map((person) => (
+            <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-5 text-center">
+              <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[var(--surface-sunken)]">
+                <span class="text-lg font-semibold text-[var(--ink-secondary)]">{person.initials}</span>
+              </div>
+              <h3 class="text-sm font-semibold text-[var(--ink)]">{person.name}</h3>
+              <p class="mt-1 text-xs text-[var(--ink-secondary)]">Board Member</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Advisory Board -->
+    <section class="section-standard">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mb-12">
+          <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-[#3D3AD3]">Industry Experts</span>
+          <h2 class="text-display text-[var(--ink)]">Customer advisory board</h2>
+        </div>
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {advisoryBoard.map((person) => (
+            <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+              <div class="mb-5 flex h-16 w-16 items-center justify-center rounded-xl bg-[#035740]/10">
+                <span class="text-xl font-semibold text-[#035740]">{person.initials}</span>
+              </div>
+              <h3 class="text-lg font-semibold text-[var(--ink)]">{person.name}</h3>
+              <p class="mt-1 text-sm text-[var(--ink-secondary)]">{person.title}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Join the Team CTA -->
+    <section class="section-generous bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="text-display text-[var(--ink)]">Want to join the parcelCrew?</h2>
+          <p class="mt-4 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">We're always looking for talented people who share our passion for creating exceptional post-purchase experiences.</p>
+          <div class="mt-8">
+            <a
+              href={`${import.meta.env.BASE_URL}/careers/`}
+              class="group inline-flex items-center gap-3 rounded-full bg-[#3D3AD3] py-4 pl-7 pr-6 text-base font-medium text-white shadow-[0_2px_16px_rgba(61,58,211,0.3)] transition-all hover:shadow-[0_4px_24px_rgba(61,58,211,0.4)] hover:-translate-y-0.5"
+            >
+              View open positions
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-0.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

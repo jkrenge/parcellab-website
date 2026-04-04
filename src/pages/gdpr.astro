@@ -1,0 +1,156 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/globals.css";
+import { Header } from "../components/Header";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="GDPR Compliance - parcelLab" description="Learn about parcelLab's commitment to GDPR compliance, our data processing practices, and the measures we take to protect your personal data.">
+  <Header client:load />
+  <main>
+    <section class="section-generous">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <h1 class="text-display text-[var(--ink)] mb-8">GDPR Compliance</h1>
+        <p class="text-sm text-[var(--ink-secondary)] mb-12 border-b border-[var(--line)] pb-8">
+          Last updated: January 15, 2026
+        </p>
+
+        <div class="space-y-6 text-[var(--ink-secondary)]">
+
+          <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">1. Our Commitment to GDPR</h2>
+          <p class="text-base leading-relaxed">
+            parcelLab GmbH is fully committed to complying with the General Data Protection Regulation (EU) 2016/679 ("GDPR"). As a company headquartered in Munich, Germany, and serving customers across the European Union and worldwide, we recognize the importance of protecting personal data and upholding the rights of data subjects.
+          </p>
+          <p class="text-base leading-relaxed">
+            This page provides an overview of how we ensure GDPR compliance across our operations, products, and services.
+          </p>
+
+          <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">2. Roles and Responsibilities</h2>
+
+          <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-3">2.1 parcelLab as Data Processor</h3>
+          <p class="text-base leading-relaxed">
+            When providing our post-purchase experience platform to customers, parcelLab acts as a data processor on behalf of our customers (the data controllers). We process personal data only in accordance with our customers' documented instructions and applicable data processing agreements.
+          </p>
+
+          <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-3">2.2 parcelLab as Data Controller</h3>
+          <p class="text-base leading-relaxed">
+            For our own business activities — such as operating our website, managing customer relationships, and conducting marketing — parcelLab acts as a data controller. In this capacity, we determine the purposes and means of processing personal data and are directly responsible for GDPR compliance.
+          </p>
+
+          <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">3. Data Processing Agreement</h2>
+          <p class="text-base leading-relaxed">
+            We offer a comprehensive Data Processing Agreement (DPA) to all customers, in accordance with Article 28 of the GDPR. Our DPA covers:
+          </p>
+          <ul class="list-disc pl-6 space-y-2 text-base leading-relaxed">
+            <li>Subject matter, duration, nature, and purpose of processing</li>
+            <li>Types of personal data processed and categories of data subjects</li>
+            <li>Obligations and rights of the data controller</li>
+            <li>Subprocessor engagement and management</li>
+            <li>Data breach notification procedures</li>
+            <li>Data deletion and return upon contract termination</li>
+          </ul>
+          <p class="text-base leading-relaxed">
+            To request a copy of our DPA or to execute an agreement, please contact your account manager or reach out to privacy@parcellab.com.
+          </p>
+
+          <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">4. Technical and Organizational Measures</h2>
+          <p class="text-base leading-relaxed">
+            parcelLab implements robust technical and organizational measures (TOMs) to ensure the security of personal data, as required by Article 32 of the GDPR. Key measures include:
+          </p>
+
+          <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-3">4.1 Encryption</h3>
+          <p class="text-base leading-relaxed">
+            All data is encrypted in transit using TLS 1.2 or higher, and at rest using AES-256 encryption. Database backups and stored credentials are also encrypted.
+          </p>
+
+          <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-3">4.2 Access Controls</h3>
+          <p class="text-base leading-relaxed">
+            Access to personal data is restricted to authorized personnel on a need-to-know basis. We enforce multi-factor authentication, role-based access control, and regular access reviews.
+          </p>
+
+          <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-3">4.3 Infrastructure Security</h3>
+          <p class="text-base leading-relaxed">
+            Our platform is hosted on enterprise-grade cloud infrastructure within the European Union. We conduct regular vulnerability assessments, penetration testing, and maintain intrusion detection systems.
+          </p>
+
+          <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-3">4.4 Monitoring and Logging</h3>
+          <p class="text-base leading-relaxed">
+            We maintain comprehensive audit logs and monitoring systems to detect and respond to potential security incidents in real time.
+          </p>
+
+          <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">5. Subprocessors</h2>
+          <p class="text-base leading-relaxed">
+            parcelLab engages a limited number of subprocessors to deliver our services. We carefully vet all subprocessors for GDPR compliance and maintain binding data processing agreements with each. Our current list of subprocessors is available upon request and is regularly updated.
+          </p>
+          <p class="text-base leading-relaxed">
+            We provide our customers with prior notice of any intended changes to subprocessors, giving them the opportunity to object in accordance with their DPA.
+          </p>
+
+          <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">6. Data Subject Rights</h2>
+          <p class="text-base leading-relaxed">
+            parcelLab supports the exercise of data subject rights as set out in Articles 15&ndash;22 of the GDPR. When we act as a data processor, we assist our customers in fulfilling data subject requests. When we act as a data controller, we handle requests directly. These rights include:
+          </p>
+          <ul class="list-disc pl-6 space-y-2 text-base leading-relaxed">
+            <li>Right of access (Article 15)</li>
+            <li>Right to rectification (Article 16)</li>
+            <li>Right to erasure / right to be forgotten (Article 17)</li>
+            <li>Right to restriction of processing (Article 18)</li>
+            <li>Right to data portability (Article 20)</li>
+            <li>Right to object (Article 21)</li>
+            <li>Rights related to automated decision-making and profiling (Article 22)</li>
+          </ul>
+
+          <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">7. Data Breach Notification</h2>
+          <p class="text-base leading-relaxed">
+            In the event of a personal data breach, parcelLab will notify affected customers without undue delay and no later than 72 hours after becoming aware of the breach, in accordance with Articles 33 and 34 of the GDPR. Our notification includes the nature of the breach, data categories affected, likely consequences, and measures taken to address and mitigate the breach.
+          </p>
+
+          <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">8. Data Protection Impact Assessments</h2>
+          <p class="text-base leading-relaxed">
+            We conduct Data Protection Impact Assessments (DPIAs) for processing activities that are likely to result in a high risk to the rights and freedoms of data subjects, as required by Article 35 of the GDPR. DPIAs are reviewed and updated periodically and whenever significant changes to processing activities occur.
+          </p>
+
+          <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">9. International Data Transfers</h2>
+          <p class="text-base leading-relaxed">
+            Where personal data is transferred outside the European Economic Area (EEA), we ensure compliance with Chapter V of the GDPR through appropriate safeguards, including:
+          </p>
+          <ul class="list-disc pl-6 space-y-2 text-base leading-relaxed">
+            <li>Standard Contractual Clauses (SCCs) approved by the European Commission</li>
+            <li>Adequacy decisions by the European Commission</li>
+            <li>Transfer impact assessments where required</li>
+          </ul>
+
+          <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">10. Data Protection Officer</h2>
+          <p class="text-base leading-relaxed">
+            parcelLab has appointed a Data Protection Officer (DPO) who oversees our GDPR compliance program and serves as a point of contact for data protection matters. You can reach our DPO at:
+          </p>
+          <p class="text-base leading-relaxed">
+            Data Protection Officer<br />
+            parcelLab GmbH<br />
+            Landwehrstra&szlig;e 39<br />
+            80336 Munich, Germany<br />
+            Email: dpo@parcellab.com
+          </p>
+
+          <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">11. Certifications and Audits</h2>
+          <p class="text-base leading-relaxed">
+            parcelLab undergoes regular third-party audits and maintains relevant certifications to demonstrate our commitment to data protection and information security. Details of current certifications are available upon request.
+          </p>
+
+          <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">12. Contact</h2>
+          <p class="text-base leading-relaxed">
+            For questions about our GDPR compliance practices, to request our DPA, or to raise a data protection concern, please contact:
+          </p>
+          <p class="text-base leading-relaxed">
+            parcelLab GmbH<br />
+            Landwehrstra&szlig;e 39<br />
+            80336 Munich, Germany<br />
+            Email: privacy@parcellab.com
+          </p>
+
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

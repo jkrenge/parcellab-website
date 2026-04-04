@@ -1,0 +1,232 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/globals.css";
+import { Header } from "../components/Header";
+import PageHero from "../components/PageHero.astro";
+import InnerPageCTA from "../components/InnerPageCTA.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="You know that the journey doesn't end at checkout - parcelLab"
+  description="Deliver exceptional experiences that increase customer lifetime value and encourages repeat business and brand advocacy."
+>
+  <Header client:load />
+  <main>
+    <PageHero
+      eyebrow="Customer Experience"
+      title="Transform every post-purchase interaction into lasting loyalty"
+      description="Elevate every customer touchpoint at checkout and beyond with personalized, seamless experiences that drive repeat business and brand advocacy."
+      ctaText="Book a demo"
+      ctaHref={`${import.meta.env.BASE_URL}/live-demo/`}
+      secondaryCtaText="Take a tour"
+      secondaryCtaHref={`${import.meta.env.BASE_URL}/product-tour/`}
+    />
+
+    <!-- Stats row -->
+    <section class="section-tight">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="grid gap-px overflow-hidden rounded-2xl bg-[var(--line)] sm:grid-cols-3">
+          <div class="flex flex-col items-center justify-center bg-gradient-to-br from-[#3D3AD3] to-[#6360e8] px-8 py-10 text-center">
+            <span class="text-[3rem] font-bold leading-none tracking-tight text-white">356%</span>
+            <p class="mt-2 text-sm font-medium text-white/70">Rise in product reviews</p>
+          </div>
+          <div class="flex flex-col items-center justify-center bg-gradient-to-br from-[#3D3AD3] to-[#6360e8] px-8 py-10 text-center">
+            <span class="text-[3rem] font-bold leading-none tracking-tight text-white">21.5%</span>
+            <p class="mt-2 text-sm font-medium text-white/70">WISMO reduction on Black Friday</p>
+          </div>
+          <div class="flex flex-col items-center justify-center bg-gradient-to-br from-[#3D3AD3] to-[#6360e8] px-8 py-10 text-center">
+            <span class="text-[3rem] font-bold leading-none tracking-tight text-white">20%</span>
+            <p class="mt-2 text-sm font-medium text-white/70">Fewer WISMO inquiries at Wyze</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Capabilities -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mb-14 max-w-2xl">
+          <span class="mb-3 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-[#3D3AD3]">For CX Leaders</span>
+          <h2 class="text-display text-[var(--ink)]">Every touchpoint is a chance to build loyalty</h2>
+          <p class="mt-4 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+            Post-purchase frustration erodes loyalty. Resource drain from order follow-ups and inconsistent carrier messaging damages your brand. parcelLab transforms these pain points into brand-building moments.
+          </p>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-7 transition-all hover:border-[#3D3AD3]/20 hover:shadow-[0_4px_24px_rgba(61,58,211,0.06)]">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#3D3AD3]/8">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Keep Customers Informed</h3>
+            <p class="mt-2 text-sm leading-relaxed text-[var(--ink-secondary)]">Real-time updates throughout the delivery journey reduce anxiety and build trust at every step.</p>
+          </div>
+          <div class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-7 transition-all hover:border-[#3D3AD3]/20 hover:shadow-[0_4px_24px_rgba(61,58,211,0.06)]">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#7c3aed]/8">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Personalized Journeys</h3>
+            <p class="mt-2 text-sm leading-relaxed text-[var(--ink-secondary)]">Messages and offers tailored by behavior, preferences, location, and purchase history for every customer.</p>
+          </div>
+          <div class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-7 transition-all hover:border-[#3D3AD3]/20 hover:shadow-[0_4px_24px_rgba(61,58,211,0.06)]">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#035740]/8">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-[var(--ink)]">CX Metrics Enhancement</h3>
+            <p class="mt-2 text-sm leading-relaxed text-[var(--ink-secondary)]">A connected platform across eCommerce, logistics, support, and marketing reduces friction and improves NPS and CSAT.</p>
+          </div>
+          <div class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-7 transition-all hover:border-[#3D3AD3]/20 hover:shadow-[0_4px_24px_rgba(61,58,211,0.06)]">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFC943]/12">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#b8860b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Retention & Loyalty</h3>
+            <p class="mt-2 text-sm leading-relaxed text-[var(--ink-secondary)]">Exceptional post-purchase experiences drive repeat business, increase lifetime value, and turn customers into advocates.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Deep Dive -->
+    <section class="section-standard bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mb-14 max-w-2xl">
+          <span class="mb-3 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-[#3D3AD3]">Platform</span>
+          <h2 class="text-display text-[var(--ink)]">Craft exceptional experiences end to end</h2>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-2">
+          <!-- Feature Card 1 -->
+          <div class="rounded-2xl bg-[var(--surface-raised)] p-8 shadow-sm">
+            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#3D3AD3] to-[#6360e8]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold text-[var(--ink)]">Real-Time Branded Notifications</h3>
+            <p class="mt-3 text-sm leading-relaxed text-[var(--ink-secondary)]">Automate dispatch-to-delivery alerts with fully customizable messaging that matches your brand voice. Deliver via email, SMS, or in-app notifications.</p>
+            <ul class="mt-5 space-y-2.5">
+              <li class="flex items-start gap-2.5 text-sm text-[var(--ink-secondary)]">
+                <svg class="mt-0.5 shrink-0" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Multi-channel delivery (email, SMS, in-app)
+              </li>
+              <li class="flex items-start gap-2.5 text-sm text-[var(--ink-secondary)]">
+                <svg class="mt-0.5 shrink-0" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Full brand customization and voice matching
+              </li>
+              <li class="flex items-start gap-2.5 text-sm text-[var(--ink-secondary)]">
+                <svg class="mt-0.5 shrink-0" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Automated dispatch-to-delivery lifecycle
+              </li>
+            </ul>
+          </div>
+
+          <!-- Feature Card 2 -->
+          <div class="rounded-2xl bg-[var(--surface-raised)] p-8 shadow-sm">
+            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#035740] to-[#0d7a5f]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold text-[var(--ink)]">Self-Service Returns Portal</h3>
+            <p class="mt-3 text-sm leading-relaxed text-[var(--ink-secondary)]">A guided, quick return initiation experience with real-time return status tracking. Offer alternatives like exchanges and store credit to recover revenue.</p>
+            <ul class="mt-5 space-y-2.5">
+              <li class="flex items-start gap-2.5 text-sm text-[var(--ink-secondary)]">
+                <svg class="mt-0.5 shrink-0" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Guided return initiation flow
+              </li>
+              <li class="flex items-start gap-2.5 text-sm text-[var(--ink-secondary)]">
+                <svg class="mt-0.5 shrink-0" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Smart exchange and store credit suggestions
+              </li>
+              <li class="flex items-start gap-2.5 text-sm text-[var(--ink-secondary)]">
+                <svg class="mt-0.5 shrink-0" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Real-time return status tracking
+              </li>
+            </ul>
+          </div>
+
+          <!-- Feature Card 3 -->
+          <div class="rounded-2xl bg-[var(--surface-raised)] p-8 shadow-sm">
+            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#7c3aed] to-[#a78bfa]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold text-[var(--ink)]">Customer Support Empowerment</h3>
+            <p class="mt-3 text-sm leading-relaxed text-[var(--ink-secondary)]">Centralized order and customer data with CRM integrations. Automated proactive updates reduce "Where Is My Order?" inquiries before they reach your team.</p>
+            <ul class="mt-5 space-y-2.5">
+              <li class="flex items-start gap-2.5 text-sm text-[var(--ink-secondary)]">
+                <svg class="mt-0.5 shrink-0" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Salesforce, Zendesk, Gorgias integrations
+              </li>
+              <li class="flex items-start gap-2.5 text-sm text-[var(--ink-secondary)]">
+                <svg class="mt-0.5 shrink-0" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Centralized order and customer data
+              </li>
+              <li class="flex items-start gap-2.5 text-sm text-[var(--ink-secondary)]">
+                <svg class="mt-0.5 shrink-0" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Proactive WISMO prevention
+              </li>
+            </ul>
+          </div>
+
+          <!-- Feature Card 4 - AI -->
+          <div class="rounded-2xl bg-[var(--surface-raised)] p-8 shadow-sm">
+            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#f59e0b] to-[#FFC943]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold text-[var(--ink)]">parcelLab Copilot</h3>
+            <p class="mt-3 text-sm leading-relaxed text-[var(--ink-secondary)]">An in-app AI assistant that helps your teams unlock the full potential of the platform. Surfaces insights, suggests optimizations, and automates routine tasks.</p>
+            <ul class="mt-5 space-y-2.5">
+              <li class="flex items-start gap-2.5 text-sm text-[var(--ink-secondary)]">
+                <svg class="mt-0.5 shrink-0" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b8860b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                AI-powered platform guidance
+              </li>
+              <li class="flex items-start gap-2.5 text-sm text-[var(--ink-secondary)]">
+                <svg class="mt-0.5 shrink-0" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b8860b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Smart optimization suggestions
+              </li>
+              <li class="flex items-start gap-2.5 text-sm text-[var(--ink-secondary)]">
+                <svg class="mt-0.5 shrink-0" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b8860b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Automated routine task handling
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mb-14 max-w-2xl">
+          <span class="mb-3 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-[#3D3AD3]">Customer Stories</span>
+          <h2 class="text-display text-[var(--ink)]">CX leaders who chose parcelLab</h2>
+        </div>
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8">
+            <svg class="mb-4 text-[var(--ink-muted)]" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" opacity="0.15"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            <p class="text-sm leading-relaxed text-[var(--ink-secondary)]">"Service in luxury fashion is expected... parcelLab is a big game changer because instead of following up on orders, teams' resources are freed up to build loyal client relationships."</p>
+            <div class="mt-6 border-t border-[var(--line)] pt-5">
+              <p class="text-sm font-semibold text-[var(--ink)]">Olga Burfan</p>
+              <p class="mt-0.5 text-xs text-[var(--ink-muted)]">Head of Global eCommerce, Philipp Plein</p>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8">
+            <svg class="mb-4 text-[var(--ink-muted)]" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" opacity="0.15"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            <p class="text-sm leading-relaxed text-[var(--ink-secondary)]">"By working with parcelLab we offer customers a service plus... we reduced shipping inquiries by 21.5% on Black Friday, greatly relieving our teams."</p>
+            <div class="mt-6 border-t border-[var(--line)] pt-5">
+              <p class="text-sm font-semibold text-[var(--ink)]">Nicole Rosenthal</p>
+              <p class="mt-0.5 text-xs text-[var(--ink-muted)]">Head of Customer Care, BERGZEIT</p>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8">
+            <svg class="mb-4 text-[var(--ink-muted)]" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" opacity="0.15"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            <p class="text-sm leading-relaxed text-[var(--ink-secondary)]">"With parcelLab, we tailored shipping communication to various stages so our request reaches customers exactly when ready to evaluate and give feedback."</p>
+            <div class="mt-6 border-t border-[var(--line)] pt-5">
+              <p class="text-sm font-semibold text-[var(--ink)]">Deborah Kirchner</p>
+              <p class="mt-0.5 text-xs text-[var(--ink-muted)]">Online Marketing Manager, Hessnatur</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

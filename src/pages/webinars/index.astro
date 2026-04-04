@@ -1,0 +1,141 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import PageHero from "../../components/PageHero.astro";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const PL = import.meta.env.BASE_URL;
+
+const webinars = [
+  {
+    title: "The new rules of beauty eCommerce",
+    description: "Discover how leading brands are transforming the online shopping experience with hyper-personalization, operational excellence, and seamless customer journeys.",
+    category: "Beauty & Retail",
+    accent: "bg-[#3D3AD3]",
+    tagColor: "bg-[#3D3AD3]/10 text-[#3D3AD3]",
+    featured: true,
+  },
+  {
+    title: "Choppy waters ahead: Opportunities and challenges for retailers and brands in 2025",
+    description: "Industry experts discuss the shifting retail landscape, supply chain volatility, and how post-purchase innovation is becoming a competitive differentiator.",
+    category: "Industry Trends",
+    accent: "bg-[#035740]",
+    tagColor: "bg-[#035740]/10 text-[#035740]",
+  },
+  {
+    title: "Unleashing AI's peak power: Drive conversions and loyalty that lasts",
+    description: "Learn how AI-driven personalization and automation can supercharge your peak season performance and build lasting customer relationships.",
+    category: "AI & Automation",
+    accent: "bg-[#3D3AD3]",
+    tagColor: "bg-[#3D3AD3]/10 text-[#3D3AD3]",
+  },
+  {
+    title: "Conversational commerce: Hype or game-changer for conversion?",
+    description: "Explore whether conversational commerce lives up to the hype and how brands are using messaging channels to drive real conversion uplift.",
+    category: "Conversion",
+    accent: "bg-[#FFC943]",
+    tagColor: "bg-[#FFC943]/20 text-[#92700a]",
+  },
+  {
+    title: "Boosting the bottom line by improving the post-purchase journey with parcelLab Engage: A TEI deep dive",
+    description: "A deep dive into the Total Economic Impact of parcelLab Engage, featuring ROI data and real-world results from leading retailers.",
+    category: "ROI & Business",
+    accent: "bg-[#035740]",
+    tagColor: "bg-[#035740]/10 text-[#035740]",
+  },
+  {
+    title: "Fit for profit: Tackling bracketing & apparel returns",
+    description: "Apparel bracketing is a growing challenge. Discover strategies to reduce size-related returns while maintaining a great customer experience.",
+    category: "Returns",
+    accent: "bg-[#F4373D]",
+    tagColor: "bg-[#F4373D]/10 text-[#F4373D]",
+  },
+  {
+    title: "The AI advantage: Reducing returns with smarter personalization",
+    description: "See how AI-powered personalization helps brands reduce return rates by giving customers better product information and size guidance pre-purchase.",
+    category: "AI & Automation",
+    accent: "bg-[#3D3AD3]",
+    tagColor: "bg-[#3D3AD3]/10 text-[#3D3AD3]",
+  },
+  {
+    title: "Mastering the post-purchase experience: Insights & best practices from the UK's top 100 retailers",
+    description: "An in-depth analysis of how Britain's largest retailers handle shipping communication, tracking pages, and returns — and what you can learn from the best.",
+    category: "Research",
+    accent: "bg-[#035740]",
+    tagColor: "bg-[#035740]/10 text-[#035740]",
+  },
+];
+---
+
+<Layout
+  title="Webinars - parcelLab"
+  description="Watch on-demand webinars covering post-purchase experience, returns management, AI in retail, and eCommerce best practices."
+>
+  <Header client:load />
+  <main>
+    <PageHero
+      eyebrow="Resources"
+      title="Webinars"
+      description="Watch on-demand sessions covering post-purchase experience, returns management, AI in retail, and eCommerce best practices from industry leaders."
+    />
+
+    <section class="section-standard">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+
+        <!-- Featured webinar -->
+        <div class="mb-16">
+          <a href={`${PL}/webinars/`} class="group block overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] transition-shadow hover:shadow-lg">
+            <div class="grid md:grid-cols-2">
+              <div class="flex h-64 items-center justify-center bg-gradient-to-br from-[#3D3AD3] to-[#6360e8] md:h-auto md:min-h-[320px]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="opacity-40"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+              </div>
+              <div class="flex flex-col justify-center p-8 md:p-10">
+                <span class="mb-3 inline-block w-fit rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Featured</span>
+                <h2 class="text-heading text-[var(--ink)] group-hover:text-[#3D3AD3] transition-colors">{webinars[0].title}</h2>
+                <p class="mt-3 text-[var(--ink-secondary)] leading-relaxed">{webinars[0].description}</p>
+                <div class="mt-6 flex items-center gap-2 text-sm font-medium text-[#3D3AD3]">
+                  Watch now
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Webinar grid -->
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {webinars.slice(1).map((webinar) => (
+            <article class="group flex flex-col overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] transition-shadow hover:shadow-lg">
+              <div class={`relative flex h-48 items-center justify-center ${webinar.accent}`}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="opacity-30"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+                <span class="absolute top-4 left-4 rounded-full bg-white/20 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+                  On-demand
+                </span>
+              </div>
+              <div class="flex flex-1 flex-col p-6">
+                <span class:list={["mb-3 inline-block w-fit rounded-full px-3 py-1 text-xs font-semibold", webinar.tagColor]}>
+                  {webinar.category}
+                </span>
+                <h3 class="text-lg font-medium leading-snug text-[var(--ink)] group-hover:text-[#3D3AD3] transition-colors">
+                  {webinar.title}
+                </h3>
+                <p class="mt-2 flex-1 text-sm leading-relaxed text-[var(--ink-secondary)]">
+                  {webinar.description}
+                </p>
+                <div class="mt-4 flex items-center gap-2 text-sm font-medium text-[#3D3AD3]">
+                  Watch now
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

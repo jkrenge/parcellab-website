@@ -1,0 +1,188 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout title="Farfetch Case Study - parcelLab" description="How Farfetch sees 79% of customers return to their website via tracking, while reducing delivery-related contacts by 30-40%.">
+  <Header client:load />
+  <main>
+    <!-- Hero -->
+    <section class="section-generous rounded-b-[32px]" style="background: linear-gradient(135deg, #3D3AD3 0%, #2d2aa0 100%)">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between">
+          <div class="max-w-2xl">
+            <a href={`${b}/case-studies/`} class="mb-6 inline-flex items-center gap-2 text-sm font-medium text-white/60 transition-colors hover:text-white/90">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+              All case studies
+            </a>
+            <span class="mb-4 inline-block rounded-full border border-white/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.15em] text-white/60">
+              Fashion & Luxury
+            </span>
+            <h1 class="text-hero text-white">
+              Farfetch sees 79% of customers return to website via tracking
+            </h1>
+            <p class="mt-5 max-w-xl text-lg font-light leading-relaxed text-white/70">
+              How the global luxury fashion marketplace consolidated fragmented tracking across 190+ countries into a seamless branded experience.
+            </p>
+          </div>
+
+          <!-- Key stat cards -->
+          <div class="flex flex-shrink-0 flex-col gap-4">
+            <div class="rounded-2xl bg-white/10 p-8 text-center backdrop-blur-sm">
+              <p class="text-5xl font-bold text-white">79%</p>
+              <p class="mt-2 text-sm font-medium text-white/70">Return to website<br/>via tracking</p>
+            </div>
+            <div class="rounded-2xl bg-white/10 p-8 text-center backdrop-blur-sm">
+              <p class="text-5xl font-bold text-white">30-40%</p>
+              <p class="mt-2 text-sm font-medium text-white/70">Fewer delivery-related<br/>contacts</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Overview -->
+    <section class="section-standard border-b border-[var(--line)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto grid max-w-4xl gap-8 md:grid-cols-3">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.15em] text-[var(--ink-muted)]">Company</p>
+            <p class="mt-2 text-lg font-medium text-[var(--ink)]">Farfetch</p>
+          </div>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.15em] text-[var(--ink-muted)]">Industry</p>
+            <p class="mt-2 text-lg font-medium text-[var(--ink)]">Fashion & Luxury</p>
+          </div>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.15em] text-[var(--ink-muted)]">Scale</p>
+            <p class="mt-2 text-lg font-medium text-[var(--ink)]">190+ countries, 1,400 brands</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Challenge -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-3xl">
+          <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-[#3D3AD3]">The Challenge</span>
+          <h2 class="text-heading text-[var(--ink)]">Fragmented tracking across a global luxury marketplace</h2>
+          <div class="mt-6 space-y-4 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+            <p>
+              Farfetch faced difficulties maintaining a consistent post-purchase experience due to their global marketplace model connecting customers across 190+ countries with nearly 1,400 brands. The complexity stemmed from managing multiple carriers and navigating international customs.
+            </p>
+            <p>
+              When customers ordered multiple items shipped from different locations, fragmented tracking updates from various carriers created a disjointed experience that contradicted their seamless pre-purchase journey. The team needed greater control over customer communications and consolidated tracking information.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section-generous bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-3xl">
+          <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-[#3D3AD3]">The Solution</span>
+          <h2 class="text-heading text-[var(--ink)]">Consolidated tracking and targeted campaigns</h2>
+          <div class="mt-6 space-y-4 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+            <p>
+              parcelLab empowered Farfetch to take full control of the post-purchase experience across their global marketplace through three key implementations.
+            </p>
+          </div>
+
+          <div class="mt-10 grid gap-6 sm:grid-cols-3">
+            <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+              <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#3D3AD3]/10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <h3 class="font-semibold text-[var(--ink)]">Seamless tracking</h3>
+              <p class="mt-2 text-sm leading-relaxed text-[var(--ink-secondary)]">Consolidated real-time updates covering customs, split shipments, and delays into a single platform where customers can monitor orders and adjust delivery options.</p>
+            </div>
+            <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+              <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#035740]/10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <h3 class="font-semibold text-[var(--ink)]">Enhanced support</h3>
+              <p class="mt-2 text-sm leading-relaxed text-[var(--ink-secondary)]">Customer care teams gained access to comprehensive, up-to-date information from parcelLab's advanced data core, enabling faster and more informed responses.</p>
+            </div>
+            <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+              <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#FFC943]/20">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b8941f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+              </div>
+              <h3 class="font-semibold text-[var(--ink)]">Targeted campaigns</h3>
+              <p class="mt-2 text-sm leading-relaxed text-[var(--ink-secondary)]">Campaign Manager enabled segment-specific messaging -- for example, notifying Australian customers about rescheduling options to address delivery failures.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-3xl">
+          <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-[#3D3AD3]">The Results</span>
+          <h2 class="text-heading text-[var(--ink)]">World-class engagement at global scale</h2>
+        </div>
+
+        <div class="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-3">
+          <div class="rounded-2xl bg-[#3D3AD3] p-8 text-center text-white">
+            <p class="text-5xl font-bold">79%</p>
+            <p class="mt-3 text-sm font-medium text-white/70">Customers return to website via tracking</p>
+          </div>
+          <div class="rounded-2xl bg-[#035740] p-8 text-center text-white">
+            <p class="text-5xl font-bold">30-40%</p>
+            <p class="mt-3 text-sm font-medium text-white/70">Reduction in delivery-related contacts</p>
+          </div>
+          <div class="rounded-2xl bg-[var(--surface-dark)] p-8 text-center text-white">
+            <p class="text-5xl font-bold">190+</p>
+            <p class="mt-3 text-sm font-medium text-white/70">Countries with localized experiences</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote -->
+    <section class="section-generous bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-3xl text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-6 opacity-30"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+          <blockquote class="text-heading text-[var(--ink)]">
+            &ldquo;By launching Campaign Manager, we enhanced delivery experience by sending alerts for customs info. We reduced delivery contacts by 30-40% in our first rollout.&rdquo;
+          </blockquote>
+          <div class="mt-8">
+            <p class="font-semibold text-[var(--ink)]">Jos&eacute; Pedro S&aacute;</p>
+            <p class="mt-1 text-sm text-[var(--ink-secondary)]">Senior Business Analyst, Farfetch</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Second Quote -->
+    <section class="section-standard">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-3xl rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8 md:p-12">
+          <p class="text-lg font-light leading-relaxed text-[var(--ink-secondary)]">
+            &ldquo;Farfetch delivers world-class luxury experiences; our partnership ensures that excellence extends beyond checkout through streamlined logistics and proactive communication.&rdquo;
+          </p>
+          <div class="mt-6">
+            <p class="font-semibold text-[var(--ink)]">Nick Clark</p>
+            <p class="mt-1 text-sm text-[var(--ink-secondary)]">Strategic Customer Success Manager, parcelLab</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <InnerPageCTA
+      title="Ready to unify your global post-purchase experience?"
+      description="See how parcelLab helps luxury and marketplace brands deliver consistent, branded experiences across every country and carrier."
+    />
+  </main>
+  <Footer />
+</Layout>

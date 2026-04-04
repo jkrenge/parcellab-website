@@ -1,0 +1,184 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout title="Conrad Case Study - parcelLab" description="How Conrad Electronics saves 6,000+ man-hours annually with parcelLab's self-service returns portal.">
+  <Header client:load />
+  <main>
+    <!-- Hero -->
+    <section class="section-generous rounded-b-[32px]" style="background: linear-gradient(135deg, #3D3AD3 0%, #2d2aa0 100%)">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between">
+          <div class="max-w-2xl">
+            <a href={`${b}/case-studies/`} class="mb-6 inline-flex items-center gap-2 text-sm font-medium text-white/60 transition-colors hover:text-white/90">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+              All case studies
+            </a>
+            <span class="mb-4 inline-block rounded-full border border-white/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.15em] text-white/60">
+              Electronics & Media
+            </span>
+            <h1 class="text-hero text-white">
+              Conrad saves 6,000+ man-hours with self-service returns
+            </h1>
+            <p class="mt-5 max-w-xl text-lg font-light leading-relaxed text-white/70">
+              How the century-old German electronics retailer streamlined returns operations with a self-service portal that gives customers autonomy and reduces support costs.
+            </p>
+          </div>
+
+          <!-- Key stat card -->
+          <div class="flex-shrink-0">
+            <div class="rounded-2xl bg-white/10 p-10 text-center backdrop-blur-sm">
+              <p class="text-6xl font-bold text-white">6,000+</p>
+              <p class="mt-2 text-sm font-medium text-white/70">Man-hours saved<br/>annually</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Overview -->
+    <section class="section-standard border-b border-[var(--line)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto grid max-w-4xl gap-8 md:grid-cols-3">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.15em] text-[var(--ink-muted)]">Company</p>
+            <p class="mt-2 text-lg font-medium text-[var(--ink)]">Conrad Electronics</p>
+          </div>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.15em] text-[var(--ink-muted)]">Industry</p>
+            <p class="mt-2 text-lg font-medium text-[var(--ink)]">Electronics & Media</p>
+          </div>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.15em] text-[var(--ink-muted)]">Founded</p>
+            <p class="mt-2 text-lg font-medium text-[var(--ink)]">1923, Germany</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Challenge -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-3xl">
+          <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-[#3D3AD3]">The Challenge</span>
+          <h2 class="text-heading text-[var(--ink)]">Complex returns across a large electronics operation</h2>
+          <div class="mt-6 space-y-4 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+            <p>
+              Conrad, a Germany-based multinational electronics retailer founded in 1923, operated multiple complex specialized branches with a B2B marketplace and sourcing platform. The company faced significant challenges with returns management across various customer touchpoints.
+            </p>
+            <p>
+              Their objectives were to reduce "Where Is My Order" (WISMO) inquiries while simultaneously providing customers autonomy over their return processes. With a large organizational structure, streamlining operations became critical to prevent overcomplication of the returns process and reduce man-hours spent resolving customer queries.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section-generous bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-3xl">
+          <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-[#3D3AD3]">The Solution</span>
+          <h2 class="text-heading text-[var(--ink)]">A self-service returns portal with real-time transparency</h2>
+          <div class="mt-6 space-y-4 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+            <p>
+              Conrad partnered with parcelLab to implement an online self-service returns portal. The platform enables customers to easily register returns and track status in real-time, while giving Conrad advance visibility into incoming returns.
+            </p>
+          </div>
+
+          <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+              <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#3D3AD3]/10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+              </div>
+              <h3 class="font-semibold text-[var(--ink)]">Real-time transparency</h3>
+              <p class="mt-2 text-sm leading-relaxed text-[var(--ink-secondary)]">Customers access instant return status updates at every stage, from registration to refund processing.</p>
+            </div>
+            <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+              <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#035740]/10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+              </div>
+              <h3 class="font-semibold text-[var(--ink)]">Product intelligence</h3>
+              <p class="mt-2 text-sm leading-relaxed text-[var(--ink-secondary)]">Ability to identify which returned items require restocking versus alternative processing, protecting revenue.</p>
+            </div>
+            <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+              <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#FFC943]/20">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b8941f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22 16 8"/><path d="m3.47 12.53 4.24-2.12a1 1 0 0 1 1.18.2l2.5 2.5a1 1 0 0 0 1.18.2l4.24-2.12"/><path d="M5.7 20.3a1 1 0 1 0 1.4-1.4"/><path d="m2.83 15.17 3.54-3.54"/><path d="m14.12 5.88 3.54-3.54"/><path d="M22 2 12 12"/></svg>
+              </div>
+              <h3 class="font-semibold text-[var(--ink)]">Sustainability focus</h3>
+              <p class="mt-2 text-sm leading-relaxed text-[var(--ink-secondary)]">Online registration replaced pre-printed labels; customers receive printable labels or QR codes only when needed, reducing paper waste.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-3xl">
+          <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-[#3D3AD3]">The Results</span>
+          <h2 class="text-heading text-[var(--ink)]">Massive time savings and operational efficiency</h2>
+        </div>
+
+        <div class="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-3">
+          <div class="rounded-2xl bg-[#3D3AD3] p-8 text-center text-white">
+            <p class="text-5xl font-bold">6,000+</p>
+            <p class="mt-3 text-sm font-medium text-white/70">Man-hours saved annually</p>
+          </div>
+          <div class="rounded-2xl bg-[#035740] p-8 text-center text-white">
+            <p class="text-5xl font-bold">&darr;</p>
+            <p class="mt-3 text-sm font-medium text-white/70">Faster return processing with full transparency</p>
+          </div>
+          <div class="rounded-2xl bg-[var(--surface-dark)] p-8 text-center text-white">
+            <p class="text-5xl font-bold">&darr;</p>
+            <p class="mt-3 text-sm font-medium text-white/70">Reduced paper waste through digital-first labels</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote -->
+    <section class="section-generous bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-3xl text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-6 opacity-30"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+          <blockquote class="text-heading text-[var(--ink)]">
+            &ldquo;Returns are a core part of any shopping experience. It's less a question of 'if' and more 'when.' The key is making the process as painless as possible for the customer.&rdquo;
+          </blockquote>
+          <div class="mt-8">
+            <p class="font-semibold text-[var(--ink)]">Silvio Heider</p>
+            <p class="mt-1 text-sm text-[var(--ink-secondary)]">Business Expert Project & Digital Process Management, Conrad</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Second Quote -->
+    <section class="section-standard">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-3xl rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8 md:p-12">
+          <p class="text-lg font-light leading-relaxed text-[var(--ink-secondary)]">
+            &ldquo;Customers want to know you care after checkout. Working with Conrad, we have crafted a returns process that is not only easy but offers peace of mind at every step.&rdquo;
+          </p>
+          <div class="mt-6">
+            <p class="font-semibold text-[var(--ink)]">Pieter Griebe</p>
+            <p class="mt-1 text-sm text-[var(--ink-secondary)]">Customer Success Manager, parcelLab</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <InnerPageCTA
+      title="Ready to transform your returns experience?"
+      description="See how parcelLab can help you build a self-service returns portal that saves thousands of hours and delights customers."
+    />
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,284 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/globals.css";
+import { Header } from "../components/Header";
+import PageHero from "../components/PageHero.astro";
+import InnerPageCTA from "../components/InnerPageCTA.astro";
+import Footer from "../components/Footer.astro";
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Drive repeat purchases with our post-purchase platform - parcelLab"
+  description="Manage everything from delivery promises to order tracking and returns in a single fully integrated post-purchase platform."
+>
+  <Header client:load />
+  <main>
+    <PageHero
+      eyebrow="Platform Overview"
+      title="The industry's first and only PPX platform tailor-made for retailers"
+      description="Manage everything from delivery promises to order tracking and returns in a single, fully integrated post-purchase experience platform."
+      ctaText="Book a demo"
+      ctaHref={`${base}/live-demo/`}
+      secondaryCtaText="Take a tour"
+      secondaryCtaHref={`${base}/live-demo/`}
+    />
+
+    <!-- Problem Statement -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2 class="text-display text-[var(--ink)]">Because retailers can't afford to stay disconnected</h2>
+          <p class="mt-5 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+            Customers expect seamless, proactive, personalized post-purchase experiences. Yet many retailers rely on fragmented solutions that lead to inconsistent experiences, operational inefficiencies, and missed loyalty opportunities.
+          </p>
+        </div>
+        <div class="mt-16 grid gap-6 md:grid-cols-3">
+          <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-7 text-center">
+            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#EF4444]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+            </div>
+            <h3 class="text-base font-semibold text-[var(--ink)]">Inconsistent Experiences</h3>
+            <p class="mt-2 text-sm text-[var(--ink-secondary)]">Fragmented tools create disjointed customer journeys that damage brand perception.</p>
+          </div>
+          <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-7 text-center">
+            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFC943]/15">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b8860b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3 class="text-base font-semibold text-[var(--ink)]">Operational Inefficiencies</h3>
+            <p class="mt-2 text-sm text-[var(--ink-secondary)]">Manual processes and disconnected systems waste time, money, and team resources.</p>
+          </div>
+          <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-7 text-center">
+            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#3D3AD3]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3 class="text-base font-semibold text-[var(--ink)]">Missed Loyalty Opportunities</h3>
+            <p class="mt-2 text-sm text-[var(--ink-secondary)]">Every disconnected touchpoint is a missed chance to build lasting customer relationships.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Platform Pillars -->
+    <section class="section-generous bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto mb-16 max-w-2xl text-center">
+          <h2 class="text-display text-[var(--ink)]">From patchwork solutions to a connected platform</h2>
+          <p class="mt-4 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+            Five core pillars power the parcelLab PPX platform, giving you complete control over every post-purchase interaction.
+          </p>
+        </div>
+
+        <div class="space-y-6">
+          <!-- Connectivity -->
+          <div class="grid items-center gap-10 rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8 md:grid-cols-[auto_1fr] md:p-10">
+            <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#3D3AD3]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-[var(--ink)]">Connectivity</h3>
+              <p class="mt-1 text-sm font-medium text-[#3D3AD3]">One connected platform for total control</p>
+              <p class="mt-3 text-sm leading-relaxed text-[var(--ink-secondary)]">Headless, API-first integration across logistics, warehouse, transportation, CRM, CDP, and marketing tools. Break free from data silos through seamless connectivity.</p>
+            </div>
+          </div>
+          <!-- Automation -->
+          <div class="grid items-center gap-10 rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8 md:grid-cols-[auto_1fr] md:p-10">
+            <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#035740]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-[var(--ink)]">Automation</h3>
+              <p class="mt-1 text-sm font-medium text-[#035740]">Automate smarter, cut manual work</p>
+              <p class="mt-3 text-sm leading-relaxed text-[var(--ink-secondary)]">Dynamic delivery promises, proactive updates, intelligent exception management, and shipping delay anticipation. Let the platform handle the complexity so your team can focus on strategy.</p>
+            </div>
+          </div>
+          <!-- Insights -->
+          <div class="grid items-center gap-10 rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8 md:grid-cols-[auto_1fr] md:p-10">
+            <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#FFC943]/15">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#b8860b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-[var(--ink)]">Insights</h3>
+              <p class="mt-1 text-sm font-medium text-[#b8860b]">Turn data into your competitive edge</p>
+              <p class="mt-3 text-sm leading-relaxed text-[var(--ink-secondary)]">Real-time analytics, carrier performance measurement, behavioral analysis, and industry benchmarks. Make decisions backed by data from across your entire post-purchase operation.</p>
+            </div>
+          </div>
+          <!-- AI Integration -->
+          <div class="grid items-center gap-10 rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8 md:grid-cols-[auto_1fr] md:p-10">
+            <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#3D3AD3]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><path d="M9 9h6v6H9z"/><path d="M9 1v3"/><path d="M15 1v3"/><path d="M9 20v3"/><path d="M15 20v3"/><path d="M20 9h3"/><path d="M20 14h3"/><path d="M1 9h3"/><path d="M1 14h3"/></svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-[var(--ink)]">AI Integration</h3>
+              <p class="mt-1 text-sm font-medium text-[#3D3AD3]">Smarter post-purchase, powered by AI</p>
+              <p class="mt-3 text-sm leading-relaxed text-[var(--ink-secondary)]">AI-driven predictions, dynamic messaging, and personalized recommendations at scale. Let machine learning optimize every interaction for maximum impact.</p>
+            </div>
+          </div>
+          <!-- Experience Design -->
+          <div class="grid items-center gap-10 rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8 md:grid-cols-[auto_1fr] md:p-10">
+            <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#035740]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-[var(--ink)]">Experience Design</h3>
+              <p class="mt-1 text-sm font-medium text-[#035740]">Own the experience, create standout moments</p>
+              <p class="mt-3 text-sm leading-relaxed text-[var(--ink-secondary)]">Complete control for hyper-personalized, data-driven experiences that boost conversions. Design every touchpoint to reflect your brand and delight your customers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto mb-16 max-w-2xl text-center">
+          <h2 class="text-display text-[var(--ink)]">Built for every post-purchase need</h2>
+        </div>
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <a href={`${base}/boost-cart-conversion/`} class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-7 transition-all hover:shadow-lg hover:shadow-[#3D3AD3]/5 hover:border-[#3D3AD3]/20">
+            <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#3D3AD3]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            </div>
+            <h3 class="text-base font-semibold text-[var(--ink)] group-hover:text-[#3D3AD3] transition-colors">Boost Cart Conversion</h3>
+            <p class="mt-2 text-sm text-[var(--ink-secondary)]">Reduce checkout uncertainty with dynamic delivery promises and order protection.</p>
+          </a>
+          <a href={`${base}/enhance-delivery-experience/`} class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-7 transition-all hover:shadow-lg hover:shadow-[#3D3AD3]/5 hover:border-[#3D3AD3]/20">
+            <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#035740]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <h3 class="text-base font-semibold text-[var(--ink)] group-hover:text-[#3D3AD3] transition-colors">Enhance Delivery Experience</h3>
+            <p class="mt-2 text-sm text-[var(--ink-secondary)]">Personalized communications throughout the delivery journey.</p>
+          </a>
+          <a href={`${base}/make-returns-seamless/`} class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-7 transition-all hover:shadow-lg hover:shadow-[#3D3AD3]/5 hover:border-[#3D3AD3]/20">
+            <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#FFC943]/15">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b8860b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+            </div>
+            <h3 class="text-base font-semibold text-[var(--ink)] group-hover:text-[#3D3AD3] transition-colors">Make Returns Seamless</h3>
+            <p class="mt-2 text-sm text-[var(--ink-secondary)]">Simplify returns and transform them into revenue opportunities.</p>
+          </a>
+          <a href={`${base}/get-data-driven-insights/`} class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-7 transition-all hover:shadow-lg hover:shadow-[#3D3AD3]/5 hover:border-[#3D3AD3]/20">
+            <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#3D3AD3]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <h3 class="text-base font-semibold text-[var(--ink)] group-hover:text-[#3D3AD3] transition-colors">Get Data-Driven Insights</h3>
+            <p class="mt-2 text-sm text-[var(--ink-secondary)]">Real-time analytics and benchmarking for optimization.</p>
+          </a>
+          <a href={`${base}/ai-powered-post-purchase/`} class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-7 transition-all hover:shadow-lg hover:shadow-[#3D3AD3]/5 hover:border-[#3D3AD3]/20">
+            <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#035740]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><path d="M9 9h6v6H9z"/><path d="M9 1v3"/><path d="M15 1v3"/><path d="M9 20v3"/><path d="M15 20v3"/><path d="M20 9h3"/><path d="M20 14h3"/><path d="M1 9h3"/><path d="M1 14h3"/></svg>
+            </div>
+            <h3 class="text-base font-semibold text-[var(--ink)] group-hover:text-[#3D3AD3] transition-colors">AI-Powered Post-Purchase</h3>
+            <p class="mt-2 text-sm text-[var(--ink-secondary)]">Assistive and autonomous agents for exceptional experiences at scale.</p>
+          </a>
+          <a href={`${base}/app-store/`} class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-7 transition-all hover:shadow-lg hover:shadow-[#3D3AD3]/5 hover:border-[#3D3AD3]/20">
+            <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#EF4444]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </div>
+            <h3 class="text-base font-semibold text-[var(--ink)] group-hover:text-[#3D3AD3] transition-colors">App Store</h3>
+            <p class="mt-2 text-sm text-[var(--ink-secondary)]">Plug-and-play tools and partner integrations for your returns stack.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Platform Capabilities -->
+    <section class="section-generous bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto mb-16 max-w-2xl text-center">
+          <h2 class="text-display text-[var(--ink)]">Enterprise-grade capabilities</h2>
+        </div>
+        <div class="grid gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
+          <div class="text-center">
+            <div class="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--surface-raised)] shadow-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink-secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </div>
+            <div class="text-sm font-semibold text-[var(--ink)]">Composable Architecture</div>
+            <div class="mt-1 text-xs text-[var(--ink-muted)]">Headless & API-first</div>
+          </div>
+          <div class="text-center">
+            <div class="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--surface-raised)] shadow-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink-secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><path d="M9 9h6v6H9z"/><path d="M9 1v3"/><path d="M15 1v3"/><path d="M9 20v3"/><path d="M15 20v3"/><path d="M20 9h3"/><path d="M20 14h3"/><path d="M1 9h3"/><path d="M1 14h3"/></svg>
+            </div>
+            <div class="text-sm font-semibold text-[var(--ink)]">AI Agents</div>
+            <div class="mt-1 text-xs text-[var(--ink-muted)]">Intelligent automation</div>
+          </div>
+          <div class="text-center">
+            <div class="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--surface-raised)] shadow-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink-secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <div class="text-sm font-semibold text-[var(--ink)]">550+ Carriers</div>
+            <div class="mt-1 text-xs text-[var(--ink-muted)]">Unified management</div>
+          </div>
+          <div class="text-center">
+            <div class="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--surface-raised)] shadow-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink-secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="text-sm font-semibold text-[var(--ink)]">Enterprise Security</div>
+            <div class="mt-1 text-xs text-[var(--ink-muted)]">SOC 2, HIPAA, GDPR</div>
+          </div>
+          <div class="text-center">
+            <div class="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--surface-raised)] shadow-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink-secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div class="text-sm font-semibold text-[var(--ink)]">Performance Benchmarks</div>
+            <div class="mt-1 text-xs text-[var(--ink-muted)]">Industry comparisons</div>
+          </div>
+          <div class="text-center">
+            <div class="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--surface-raised)] shadow-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink-secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <div class="text-sm font-semibold text-[var(--ink)]">Custom App Builder</div>
+            <div class="mt-1 text-xs text-[var(--ink-muted)]">Build your own tools</div>
+          </div>
+          <div class="text-center">
+            <div class="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--surface-raised)] shadow-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink-secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <div class="text-sm font-semibold text-[var(--ink)]">Live Event Streams</div>
+            <div class="mt-1 text-xs text-[var(--ink-muted)]">Real-time data</div>
+          </div>
+          <div class="text-center">
+            <div class="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--surface-raised)] shadow-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink-secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            </div>
+            <div class="text-sm font-semibold text-[var(--ink)]">App Store</div>
+            <div class="mt-1 text-xs text-[var(--ink-muted)]">Plug-and-play tools</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section-standard">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="grid gap-8 md:grid-cols-2">
+          <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#3D3AD3" opacity="0.15" class="mb-4"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1zm12 0c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+            <blockquote class="text-base font-light leading-relaxed text-[var(--ink)]">
+              &ldquo;parcelLab is an excellent post-purchase experience platform that enhances customer engagement by providing real-time shipment tracking and personalized updates.&rdquo;
+            </blockquote>
+            <div class="mt-4">
+              <div class="text-sm font-medium text-[var(--ink)]">Alex B.</div>
+              <div class="text-xs text-[var(--ink-muted)]">Helen of Troy, G2 Review</div>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#3D3AD3" opacity="0.15" class="mb-4"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1zm12 0c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+            <blockquote class="text-base font-light leading-relaxed text-[var(--ink)]">
+              &ldquo;Unlike the somewhat rigid template options in Aftership, parcelLab offered a more flexible platform, letting us tailor our post-purchase communications more effectively.&rdquo;
+            </blockquote>
+            <div class="mt-4">
+              <div class="text-sm font-medium text-[var(--ink)]">Niklas R.</div>
+              <div class="text-xs text-[var(--ink-muted)]">G2 Review</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

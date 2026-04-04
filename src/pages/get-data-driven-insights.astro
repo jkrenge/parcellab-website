@@ -1,0 +1,229 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/globals.css";
+import { Header } from "../components/Header";
+import PageHero from "../components/PageHero.astro";
+import InnerPageCTA from "../components/InnerPageCTA.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="Data-driven insights of your PPX performance - parcelLab"
+  description="Get comprehensive data-driven insights of your logistics, carrier performance, and customer interactions with real-time tracking & analytics."
+>
+  <Header client:load />
+  <main>
+    <PageHero
+      eyebrow="Insights"
+      title="Unlock smarter decisions with data-driven insights"
+      description="Harness the power of real-time analytics, reporting, benchmarking, and surveys to optimize your operations, enhance customer experiences, and drive business growth."
+      ctaText="Book a demo"
+      ctaHref={`${import.meta.env.BASE_URL}/live-demo/`}
+      secondaryCtaText="Take a platform tour"
+      secondaryCtaHref={`${import.meta.env.BASE_URL}/live-demo/`}
+    />
+
+    <!-- Stats -->
+    <section class="section-standard bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+          <div class="text-center">
+            <div class="text-4xl font-semibold text-[#3D3AD3] md:text-5xl">50%</div>
+            <p class="mt-2 text-sm font-medium text-[var(--ink-secondary)]">Decrease in WISMO inquiries</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-semibold text-[#3D3AD3] md:text-5xl">150+</div>
+            <p class="mt-2 text-sm font-medium text-[var(--ink-secondary)]">G2 reviews</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-semibold text-[#3D3AD3] md:text-5xl">550+</div>
+            <p class="mt-2 text-sm font-medium text-[var(--ink-secondary)]">Carrier integrations</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-semibold text-[#3D3AD3] md:text-5xl">24/7</div>
+            <p class="mt-2 text-sm font-medium text-[var(--ink-secondary)]">Real-time monitoring</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Capabilities -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto mb-16 max-w-2xl text-center">
+          <h2 class="text-display text-[var(--ink)]">Powerful analytics for every team</h2>
+          <p class="mt-4 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+            From real-time dashboards to AI-powered predictions, get the insights you need to make confident decisions across your entire post-purchase operation.
+          </p>
+        </div>
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Analyze & Report -->
+          <div class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-7 transition-all hover:shadow-lg hover:shadow-[#3D3AD3]/5">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#3D3AD3]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Analyze & Report</h3>
+            <p class="mt-3 text-sm leading-relaxed text-[var(--ink-secondary)]">
+              Interactive dashboards for real-time monitoring. Customizable reports focused on your business priorities, with AI-driven insights for process optimization.
+            </p>
+          </div>
+          <!-- Benchmark -->
+          <div class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-7 transition-all hover:shadow-lg hover:shadow-[#3D3AD3]/5">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#035740]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Benchmark Performance</h3>
+            <p class="mt-3 text-sm leading-relaxed text-[var(--ink-secondary)]">
+              Track carrier performance, regional and global benchmarking, communication engagement assessment, and delivery exception analytics across your operations.
+            </p>
+          </div>
+          <!-- Customer Feedback -->
+          <div class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-7 transition-all hover:shadow-lg hover:shadow-[#3D3AD3]/5">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFC943]/15">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b8860b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Collect Customer Feedback</h3>
+            <p class="mt-3 text-sm leading-relaxed text-[var(--ink-secondary)]">
+              Automated surveys including post-purchase and NPS. Sentiment analysis tools with AI-driven analysis of customer preferences and satisfaction trends.
+            </p>
+          </div>
+          <!-- Claims Reporting -->
+          <div class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-7 transition-all hover:shadow-lg hover:shadow-[#3D3AD3]/5">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#EF4444]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Claims & Incident Reporting</h3>
+            <p class="mt-3 text-sm leading-relaxed text-[var(--ink-secondary)]">
+              Automated claims management with real-time tracking of issues. Get data-driven recommendations for resolutions to minimize loss and improve processes.
+            </p>
+          </div>
+          <!-- Predict with AI -->
+          <div class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-7 transition-all hover:shadow-lg hover:shadow-[#3D3AD3]/5">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#3D3AD3]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Predict with AI</h3>
+            <p class="mt-3 text-sm leading-relaxed text-[var(--ink-secondary)]">
+              Predictive forecasting tools for demand trends. AI-powered analysis to optimize inventory and returns, anticipating issues before they impact customers.
+            </p>
+          </div>
+          <!-- End-to-End Visibility -->
+          <div class="group rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-7 transition-all hover:shadow-lg hover:shadow-[#3D3AD3]/5">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#035740]/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-[var(--ink)]">End-to-End Visibility</h3>
+            <p class="mt-3 text-sm leading-relaxed text-[var(--ink-secondary)]">
+              Complete visibility of your logistics operations with data-backed decision making. Enable customer-centric optimization and proactive issue resolution at scale.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dashboard Preview -->
+    <section class="section-generous bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="grid items-center gap-16 md:grid-cols-2">
+          <div>
+            <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-[#3D3AD3]">Real-Time Analytics</span>
+            <h2 class="text-heading text-[var(--ink)]">Dashboards built for action</h2>
+            <p class="mt-4 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+              Monitor carrier performance, customer engagement, delivery exceptions, and communication effectiveness in real time. Make confident decisions backed by data from across your entire post-purchase operation.
+            </p>
+            <ul class="mt-8 space-y-4">
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-[var(--ink-secondary)]">Interactive, customizable dashboards</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-[var(--ink-secondary)]">Carrier performance comparisons and benchmarks</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-[var(--ink-secondary)]">AI-driven optimization recommendations</span>
+              </li>
+            </ul>
+          </div>
+          <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8">
+            <!-- Mock Dashboard -->
+            <div class="mb-6 flex items-center justify-between">
+              <div class="text-sm font-semibold text-[var(--ink)]">Performance Overview</div>
+              <div class="text-xs text-[var(--ink-muted)]">Last 30 days</div>
+            </div>
+            <div class="grid grid-cols-2 gap-4 mb-6">
+              <div class="rounded-xl bg-[var(--surface-sunken)] p-4">
+                <div class="text-xs text-[var(--ink-muted)]">On-time delivery</div>
+                <div class="mt-1 text-2xl font-semibold text-[#035740]">94.2%</div>
+                <div class="mt-1 text-xs text-[#035740]">+2.1% vs last month</div>
+              </div>
+              <div class="rounded-xl bg-[var(--surface-sunken)] p-4">
+                <div class="text-xs text-[var(--ink-muted)]">Email open rate</div>
+                <div class="mt-1 text-2xl font-semibold text-[#3D3AD3]">68.5%</div>
+                <div class="mt-1 text-xs text-[#3D3AD3]">+5.3% vs last month</div>
+              </div>
+              <div class="rounded-xl bg-[var(--surface-sunken)] p-4">
+                <div class="text-xs text-[var(--ink-muted)]">WISMO reduction</div>
+                <div class="mt-1 text-2xl font-semibold text-[#3D3AD3]">-50%</div>
+                <div class="mt-1 text-xs text-[#035740]">Below target</div>
+              </div>
+              <div class="rounded-xl bg-[var(--surface-sunken)] p-4">
+                <div class="text-xs text-[var(--ink-muted)]">NPS score</div>
+                <div class="mt-1 text-2xl font-semibold text-[#035740]">72</div>
+                <div class="mt-1 text-xs text-[#035740]">+8 vs last quarter</div>
+              </div>
+            </div>
+            <div class="rounded-xl bg-[var(--surface-sunken)] p-4">
+              <div class="flex items-center justify-between mb-3">
+                <div class="text-xs font-medium text-[var(--ink-muted)]">Carrier Performance</div>
+              </div>
+              <div class="space-y-3">
+                <div>
+                  <div class="flex items-center justify-between text-xs mb-1">
+                    <span class="text-[var(--ink-secondary)]">DHL Express</span>
+                    <span class="font-medium text-[var(--ink)]">96.8%</span>
+                  </div>
+                  <div class="h-2 rounded-full bg-[var(--line)]"><div class="h-2 rounded-full bg-[#035740]" style="width: 96.8%"></div></div>
+                </div>
+                <div>
+                  <div class="flex items-center justify-between text-xs mb-1">
+                    <span class="text-[var(--ink-secondary)]">FedEx</span>
+                    <span class="font-medium text-[var(--ink)]">93.2%</span>
+                  </div>
+                  <div class="h-2 rounded-full bg-[var(--line)]"><div class="h-2 rounded-full bg-[#3D3AD3]" style="width: 93.2%"></div></div>
+                </div>
+                <div>
+                  <div class="flex items-center justify-between text-xs mb-1">
+                    <span class="text-[var(--ink-secondary)]">UPS</span>
+                    <span class="font-medium text-[var(--ink)]">91.5%</span>
+                  </div>
+                  <div class="h-2 rounded-full bg-[var(--line)]"><div class="h-2 rounded-full bg-[#FFC943]" style="width: 91.5%"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="section-standard">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-3xl text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="#3D3AD3" opacity="0.15" class="mx-auto mb-6"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1zm12 0c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+          <blockquote class="text-xl font-light leading-relaxed text-[var(--ink)] md:text-2xl">
+            &ldquo;parcelLab has brought our business into the future. We are now able to provide fully digital tracking solutions to our customers across all channels.&rdquo;
+          </blockquote>
+          <div class="mt-6">
+            <div class="font-medium text-[var(--ink)]">Jan Hesse</div>
+            <div class="text-sm text-[var(--ink-muted)]">PartyLite</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>
