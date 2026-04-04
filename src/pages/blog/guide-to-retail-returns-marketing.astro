@@ -1,0 +1,86 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Guide to Retail Returns Marketing - parcelLab"
+  description="Explore strategic approaches to retail returns management that transform the returns process into a growth opportunity."
+>
+  <Header client:load />
+  <main>
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Returns</span>
+          <h1 class="text-display text-[var(--ink)]">Guide to Retail Returns Marketing</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">Tinka Carrick</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2023-05-14">May 14, 2023</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Retail returns marketing refers to techniques retailers use to manage their returns processes optimally, making them part of growth strategies. It involves using the returns process to interact with customers, identify their needs, and grow sales through personalized recommendations.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Top Returns Marketing Tactics</h2>
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">1. Coupons</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">A 5% discount could persuade 39% of customers ready to return an item to keep it, while a 30% discount could persuade nearly 59%.</p>
+          </div>
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">2. Personalized Recommendations</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">78% of consumers indicate that personalization encourages them to make purchases. Use data on previous purchases and returns to craft tailored recommendations.</p>
+          </div>
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">3. Alternative Products</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Given that "wrong fit or size" is the leading cause of returns, there's significant opportunity to convert returns into seamless exchanges.</p>
+          </div>
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">4. Loyalty Programs</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Offering rewards for customers making fewer returns discourages product returns. Free returns exclusively for loyal customers optimizes management.</p>
+          </div>
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">5. Feedback Surveys</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Returns provide opportunities to understand customers better. Collecting feedback helps optimize product design, operations, and customer support.</p>
+          </div>
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">6. Returns Portal</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">92% of consumers prefer seamless returns experiences, yet only 23% of retailers enable return tracking. An intuitive portal enables self-service while allowing product recommendations.</p>
+          </div>
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">7. In-Store Returns</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Allowing in-store returns saves reverse logistics costs and provides conversion opportunities. Many customers prefer in-store returns to avoid shipping fees.</p>
+          </div>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Returns offer fantastic opportunities to cultivate customer relationships and boost satisfaction. A personalized approach focusing on simplified returns processes is essential for competitive success.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,78 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="parcelLab CEO Featured on The Retail Focus Podcast - parcelLab"
+  description="Founder and CEO Tobias Buxhoidt discusses post-sales communication in e-commerce and why retailers should own their complete customer experience."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Company News</span>
+          <h1 class="text-display text-[var(--ink)]">parcelLab CEO Featured on The Retail Focus Podcast</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2021-02-18">February 18, 2021</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>3 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Founder and CEO Tobi Buxhoidt appeared on The Retail Focus Podcast discussing post-sales communication in e-commerce. The episode explored why retailers should control their complete customer experience rather than relying on third-party carriers for communications.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Close the Experience Gap</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The conversation emphasized the importance of end-to-end customer experience. When carriers communicate directly with customers, quality standards may suffer. By owning the communication channel, retailers can ensure messaging aligns with business objectives, brand identity, and visual guidelines.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          This control enables retailers to proactively address challenges like shipping delays and returns while building customer satisfaction.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Key Insight</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">"If you're not taking care of the overall experience, it can lead to quite a lot of frustration from the consumer and missed opportunities for creating happiness."</p>
+          <p class="mt-1 text-sm text-[var(--ink-muted)]">-- Tobias Buxhoidt, CEO, parcelLab</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">"We Believe in Communication"</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Retailers benefit from consistent customer engagement throughout the entire journey. The parcelLab platform provides white-label solutions enabling customized post-purchase communications spanning warehouse updates, shipping notifications, returns processing, and warranty services.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Retailers can enhance engagement by including relevant content -- such as product care instructions for items like bicycles or recommendations for complementary products -- thereby strengthening brand loyalty and encouraging repeat purchases.
+        </p>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The podcast offers valuable insights for e-commerce retailers interested in leveraging post-sales communication to build sustainable growth and loyal customer bases. Listen now to learn how taking ownership of the post-purchase experience can transform your customer relationships.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

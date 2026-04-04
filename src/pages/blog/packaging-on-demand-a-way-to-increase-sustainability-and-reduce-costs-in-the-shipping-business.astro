@@ -1,0 +1,130 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Packaging on Demand: A Way to Increase Sustainability and Reduce Costs in the Shipping Business - parcelLab"
+  description="Packaging on demand systems optimize both sustainability and operational costs by manufacturing custom shipping boxes at the dispatch point."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">Packaging on Demand: A Way to Increase Sustainability and Reduce Costs in the Shipping Business</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2021-04-23">April 23, 2021</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>6 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          The pandemic has accelerated the shift from physical retail to e-commerce, creating massive growth in shipping volumes. This expansion has highlighted the need for innovative packaging solutions -- particularly packaging on demand systems that can optimize both sustainability and operational costs.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">What Is Packaging on Demand?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Packaging on demand involves manufacturing outer packaging at the dispatch point within a company's facility. The key advantage is individualized control over carton quantity and dimensions. The central component is a carton cutting machine (box-on-demand machine) that scores, perforates, and cuts continuous corrugated board to exact specifications, producing custom shipping boxes from blanks.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          These systems can be enhanced with supplementary equipment including carton erectors, sealers, conveyor systems, and scanning stations to streamline the entire packaging workflow.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Advantages for Distribution</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The benefits extend across the entire supply chain:
+        </p>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Filler material decreases by up to half</strong> through right-sized packaging</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Shipping costs reduce by up to 30%</strong> through smaller, optimized box dimensions</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Optimal material utilization</strong> minimizes waste</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Significant warehouse space savings</strong> compared to storing pre-folded standard cartons</span>
+          </li>
+        </ul>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Advantages for Recipients</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Customers also benefit directly from right-sized packaging:
+        </p>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Reduced cardboard and filler waste from appropriately-sized packaging</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Lower damage rates due to custom-fitted boxes</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Enhanced unboxing experience</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Increased customer satisfaction regarding environmental responsibility</span>
+          </li>
+        </ul>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">When Is Investment Worthwhile?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Packaging on demand makes the most sense for online retailers with high shipping volumes, product manufacturers with significant individual shipments, and fulfillment service providers. Key cost considerations include material expenses, shipping fees, storage requirements, staff retention, and ongoing operational expenses.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Choosing the Right Provider</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          When evaluating packaging-on-demand providers, consider these critical factors:
+        </p>
+        <ol class="mt-4 space-y-3 list-decimal list-inside">
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Equipment flexibility</strong> across different sizes and product types</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">System integration</strong> -- ability to construct and install suitable peripheral equipment</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Machine quality and durability</strong> under continuous mechanical stress</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Transparent cost projections</strong> over multiple years</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Avoidance of lock-in</strong> -- no long-term cardboard purchase commitments at inflated prices</li>
+        </ol>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Successful adoption requires selecting high-quality systems from providers capable of customizing solutions to specific operational needs. Organizations should develop comprehensive profitability analyses covering both equipment and material processing costs over several years before committing.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4 text-sm italic">
+          Guest post by Horstmann Maschinenbau.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

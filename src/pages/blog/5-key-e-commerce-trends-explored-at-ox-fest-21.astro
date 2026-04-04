@@ -1,0 +1,117 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="5 Key E-Commerce Trends Explored at OX Fest '21 - parcelLab"
+  description="Recap of parcelLab's OX Fest '21 exploring sustainability, loyal communities, personalization, customer experience, and operations experience management."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Trends</span>
+          <h1 class="text-display text-[var(--ink)]">5 Key E-Commerce Trends Explored at OX Fest '21</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2021-12-17">December 17, 2021</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>9 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          parcelLab hosted its flagship OX Fest '21 event, bringing together industry experts across multiple sectors to discuss e-commerce's future. The virtual gathering featured live and on-demand speakers, roundtables, and brainstorming sessions exploring emerging retail trends.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">1. The Sustainability Movement</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Consumer purchasing decisions now extend beyond product quality and price. Shoppers increasingly select brands aligned with their personal values regarding packaging, ingredients, and materials. This represents a fundamental shift in market dynamics.
+        </p>
+        <div class="my-6 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Expert Insight</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">"A sustainable business considers people, planet, and profit, always putting people and planet first."</p>
+          <p class="mt-1 text-sm text-[var(--ink-muted)]">-- Krissie Leyland, Co-founder of Mindful Commerce</p>
+        </div>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The challenge facing brands involves moving beyond superficial sustainability gestures to implement genuine organizational change while managing customer fatigue from eco-messaging.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">2. Curating Loyal Communities</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Technology advancements enable brands to deliver tailored content to specific customer personas. Two-way engagement through social listening and community building creates deeper customer bonds and long-term loyalty.
+        </p>
+        <div class="my-6 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Expert Insight</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">"Customer lifetime value is becoming a board-level metric measuring business health, requiring flexible data integration across all systems."</p>
+          <p class="mt-1 text-sm text-[var(--ink-muted)]">-- Payal Hindocha, E-Director Customer Engagement Solutions GTM at EMARSYS</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">3. New Personalization Capabilities</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Personalization delivery has become non-negotiable. As market competition intensifies, customers expect customized experiences rather than generic communications. Strong data foundations enable faster personalization implementation.
+        </p>
+        <div class="my-6 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Expert Insight</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">"Storytelling connects people, but effectiveness depends on demonstrating genuine value and clear differentiation in messaging."</p>
+          <p class="mt-1 text-sm text-[var(--ink-muted)]">-- Nate Harvey</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">4. Pushing Boundaries of Customer Experience</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Customer expectations continuously evolve. Buy-Online-Pick-Up-In-Store (BOPIS) exemplifies emerging acquisition methods. Success requires understanding audience preferences and proactively addressing potential friction points.
+        </p>
+        <div class="my-6 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Expert Insight</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">"Supply chain represents significant customer pain points; focus preventative communication on biggest risks affecting experience."</p>
+          <p class="mt-1 text-sm text-[var(--ink-muted)]">-- Rob Siefker, Zappos</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">5. Operations Experience Management (OXM)</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Operations Experience Management combines operational processes with customer experience through personalization, managing warehousing, returns, and repairs as customer-facing touchpoints.
+        </p>
+        <div class="my-6 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Expert Insight</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">"OXM delivers real-time value through personalized experiences, maximizing loyalty and increasing revenue while reducing inquiries."</p>
+          <p class="mt-1 text-sm text-[var(--ink-muted)]">-- Katharine Briggs, Head of Marketing Communications at parcelLab</p>
+        </div>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Benefits include improved basket sizes, enhanced retention, reduced customer contact, and competitive differentiation.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Bonus: Embodying Your Brand at Every Opportunity</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Branding has transcended marketing departments. Brands strategically represent themselves throughout customer journeys -- from packaging to customer service interactions -- ensuring consistent tone and messaging. Cross-functional understanding of customer pain points breaks organizational silos, improving company-wide communication and perspective.
+        </p>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          OX Fest '21 featured speakers from major brands including NASA, Patagonia, Royal Canin, Zappos, and Emarsys. Full sessions are available on-demand through parcelLab's platform.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

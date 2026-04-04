@@ -1,0 +1,117 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Black Friday 2022 in Numbers - parcelLab"
+  description="Black Friday 2022 data reveals record-breaking sales, faster fulfillment, and key insights on returns patterns across global markets."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Returns</span>
+          <h1 class="text-display text-[var(--ink)]">Black Friday 2022 in Numbers</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">Tinka Carrick</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2022-12-15">December 15, 2022</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Black Friday 2022 paints an all-round positive picture for online retailers and shoppers! Order volumes for the week increased compared to 2021, aligning with global online shopping trends.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Global Sales Performance</h2>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">$9.12 billion</strong> spent online by US shoppers on Black Friday -- a new record</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">John Lewis averaged 5.5 products per second</strong> sold online during the period</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Barclaycard reported a 3.2% increase</strong> compared to the previous year by 5pm</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">parcelLab sent over 30.5 million tracking emails</strong> globally between Black Friday and Cyber Monday</span>
+          </li>
+        </ul>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Fulfillment and Delivery Metrics</h2>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">47% faster</strong> retailer fulfillment, averaging 2.96 days from order to delivery</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">19% faster</strong> carrier delivery, averaging 2.58 days from pickup to delivery</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">99.6% on-time deliveries</strong> by carriers</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Orders spread <strong class="text-[var(--ink)]">more evenly across the week</strong> rather than concentrated on Friday</span>
+          </li>
+        </ul>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">2022 Returns Insights</h2>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">January</strong> represents the most popular returns month globally with mid-month spikes exceeding twice the annual average</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">44% of returns</strong> resulted from bracketing (purchasing multiple sizes/colors, returning some)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Average return timeframe: <strong class="text-[var(--ink)]">21 days</strong> from receipt to retailer</span>
+          </li>
+        </ul>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Key Finding</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">Positive returns experiences can generate 22-46% profit increases per customer over six months.</p>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The data makes it clear: investing in post-purchase and returns experiences pays off. Retailers who optimize their fulfillment speed and returns processes during peak season stand to gain significantly in customer loyalty and revenue.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,128 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="10 Health and Beauty Industry Experts to Follow in 2021 - parcelLab"
+  description="From DTC founders to beauty editors and podcasters, here are ten health and beauty industry experts worth following."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Trends</span>
+          <h1 class="text-display text-[var(--ink)]">10 Health and Beauty Industry Experts to Follow in 2021</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2021-09-04">September 4, 2021</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          The health and beauty sector has undergone significant transformation recently. The landscape shifted from established legacy companies to innovative e-commerce startups, with product development moving from behind closed doors to new DTC brands building in public. Experts in the field are now openly sharing their work and insights.
+        </p>
+
+        <div class="mt-8 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Emily Weiss -- The Beauty Founder</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Transitioned from running the popular blog Into the Gloss to establishing Glossier, a direct-to-consumer brand recognized for minimal packaging and engaged communities. Her social media presence covers topics ranging from diversity initiatives to personal interests.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Dr. Megan Rossi -- The Gut Health Expert</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Specializes in clarifying health and nutrition information. Her Instagram platform provides wellness advice, meal suggestions, and myth-debunking content about current health trends.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Gabby Shacknai -- The Industry Journalist</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Reports on wellness and lifestyle from New York, examining emerging trends and celebrity skincare practices. Her work covers significant developments across the health and beauty sector.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Kate Morris -- The E-Commerce Entrepreneur</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Founded Australia's largest online beauty retailer, Adore Beauty, featuring innovative tools for matching makeup shades. Her work demonstrates the industry's rapid e-commerce evolution.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Brooke Devard -- The Podcaster</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Established the Naked Beauty podcast and newsletter in 2016, building a worldwide audience interested in trends, reviews, and personal wellness narratives. She also collaborates with Instagram on influencer marketing strategies.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Aaron Orendorff -- The DTC Growth Expert</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Serves as VP of Marketing at Common Thread Collective and shares expertise on e-commerce development through analysis and strategic recommendations.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Jackie Aina -- The Make-Up Artist</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Transformed her makeup practice into a successful YouTube channel featuring beauty tutorials and product reviews, with particular emphasis on inclusive approaches for darker skin tones.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Khalea Underwood -- The Big-Brand Beauty Expert</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Works as an editorial professional for MAC Cosmetics, bringing insider perspective through celebrity interviews, industry panels, and Fashion Week coverage.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Chloe Hall -- The Beauty Editor</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Serves as beauty director at ELLE, covering hair, makeup, health, and fitness topics. Her Instagram showcases magazine features and style inspiration.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Kayley Melissa -- The YouTuber</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Approaching 2 million YouTube subscribers, she provides haircare tutorials, wellness tips, and honest product evaluations that reveal everyday beauty product usage patterns.
+            </p>
+          </div>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          For additional industry insights, explore parcelLab's UK health and beauty operations study examining how leading brands handle the post-purchase experience.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

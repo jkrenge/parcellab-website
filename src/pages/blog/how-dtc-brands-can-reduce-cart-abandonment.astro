@@ -1,0 +1,116 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="How DTC Brands Can Reduce Cart Abandonment - parcelLab"
+  description="parcelLab analyzed the top 50 UK DTC retailers to evaluate their checkout experiences and reveal how customer choices remain severely limited."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">D2C</span>
+          <h1 class="text-display text-[var(--ink)]">How DTC Brands Can Reduce Cart Abandonment</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2021-12-03">December 3, 2021</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          parcelLab analyzed the top 50 UK DTC retailers to evaluate their checkout experiences. The research reveals that customer choices at checkout remain severely limited across delivery types, shipping options, and payment methods -- contributing to an industry-wide cart abandonment rate of approximately 70%.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">1. DTC Brands Must Offer Delivery Choices</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The findings paint a stark picture of delivery limitations. 52% of brands exclusively offer standard delivery, while only 38% provide next-day delivery options. A mere 10% offer flexible alternatives like click-and-collect, and just 20% of retailers allow carrier selection -- with 80% of those charging for the privilege.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Consumers now expect next-day delivery and prefer carrier choice. Most DTC brands lag behind modern retail expectations and must implement immediate changes to remain competitive.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">2. DTC Brands Need a Smoother Checkout Process</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Checkout friction is a conversion killer. 34% of UK DTC brands require mandatory account login, deterring first-time buyers. Only 20% offer buy-now-pay-later options, compared to 41% across wider retail. Klarna emerges as the dominant BNPL provider among those who do offer it.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Guest checkout significantly reduces cart abandonment by offering speed and lower commitment barriers for new customers. Brands that force account creation are leaving money on the table.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">3. Shipping Costs Remain High</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Shipping costs continue to be a major conversion blocker. 16% of brands always charge for shipping, while 56% impose minimum order value thresholds that are often prohibitively high. Brands need regular shipping audits to maintain competitive pricing and reasonable order thresholds.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Key Stat</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">With approximately 70% cart abandonment industry-wide, DTC brands can capture immediate conversion gains by implementing customer-first checkout strategies.</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">4. Sustainability Options Are Rarely Offered</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Despite growing consumer demand for eco-conscious options, the gap between brand messaging and checkout reality is significant. Only 4% of DTC brands offer carbon-neutral delivery, and only 6% provide reduced packaging options. Despite many brands making sustainability commitments on their websites, few operationalize these values where it matters most -- at checkout.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">The Path Forward</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The research emphasizes that Operations Experience Management -- taking end-to-end ownership of post-purchase experiences -- enables brands to offer the delivery, payment, and sustainability choices customers now expect. The brands that address these gaps will see the most significant improvements in conversion rates.
+        </p>
+
+        <div class="mt-8 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Quick Wins for DTC Brands</h3>
+            <ul class="mt-4 space-y-3">
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-[var(--ink-secondary)]">Enable <strong class="text-[var(--ink)]">guest checkout</strong> to reduce friction for first-time buyers</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-[var(--ink-secondary)]">Add <strong class="text-[var(--ink)]">next-day delivery</strong> and click-and-collect options</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-[var(--ink-secondary)]">Integrate <strong class="text-[var(--ink)]">buy-now-pay-later</strong> payment options</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-[var(--ink-secondary)]">Offer <strong class="text-[var(--ink)]">carbon-neutral delivery</strong> and sustainable packaging at checkout</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Cart abandonment is not inevitable. By addressing the gaps in delivery choice, checkout friction, shipping costs, and sustainability options, DTC brands can turn their checkout into a competitive advantage rather than a conversion bottleneck.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

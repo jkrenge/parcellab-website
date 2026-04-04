@@ -1,0 +1,121 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="August Product Innovations – parcelLab Portal - parcelLab"
+  description="Discover what's new in the parcelLab portal this August, including redesigned analytics, new fulfillment metrics, EmotionAI, and returns forecasting."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Product Updates</span>
+          <h1 class="text-display text-[var(--ink)]">August Product Innovations -- parcelLab Portal</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">Tinka Carrick</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2023-08-23">August 23, 2023</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Welcome to a new series of blogs where we discuss what is new in parcelLab products. We continuously innovate and look for ways to improve our products so our customers can continue to build strong connections and develop a personalized journey throughout the entire buying experience.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Powerful Insights Drive Smarter Decisions</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Know exactly how your business is performing and make smart data-driven decisions with parcelLab's Analytics module. This is where you can find visualizations of your data according to various metrics. In this section of the parcelLab portal, you can track logistics performance, monitor customer engagement and satisfaction, and more.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          This month, the parcelLab Portal was redesigned to make the data presented clearer and easier to understand at a glance. We also added new filter options to allow for more granularity, along with new reports and metrics to give you greater insights.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">What's New</h2>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Fulfillment &amp; Delivery</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              In addition to the existing reports, these new metrics give you even greater visibility of your fulfillment operations including more analytics on general performance, lead times, and delivery issues.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Engagement -- EmotionAI</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              EmotionAI is a new subsection that helps you analyze your customers' text reviews, easily highlighting strengths and weaknesses. It also helps identify topics your customers are talking about in reviews, which orders received a bad score and areas in which your customers rate you best or worst.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Network Monitoring</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              New metrics around outbound orders, emails, and orders with issues will offer more granular insights in near real-time, so you can take corrective action quickly and stay in control.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Customer Promise</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              A new report offers a one-glance view of early and late deliveries based on customer promise. This includes:
+            </p>
+            <ul class="mt-3 space-y-2">
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-[var(--ink-secondary)]">Number of parcels arriving before the promise date</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-[var(--ink-secondary)]">Delays at the warehouse location</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-[var(--ink-secondary)]">On-time delivery (performance versus promise)</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Retain -- Returns Forecasting</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              With returns forecasting, your brand can view a forecast about returns volume versus actual returns, so you can plan workload and resources more accurately. Additional enhancements include estimated returns arrival date which helps to optimize stock planning and inventory status with details on when each item will arrive at your warehouse.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">New Filter Options</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Achieve greater granularity and make comparisons easier and quicker by filtering by warehouse or region of the world.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">How to Get Started</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          All these new features are now available in the parcelLab portal. Please note that some of these are based on which parcelLab products you use. Contact your account manager to learn more or log in to the parcelLab portal to get started.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,91 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="parcelLab Features in CB Insights' Retail Tech 100 2022 - parcelLab"
+  description="parcelLab has been recognized by CB Insights in their Retail Tech 100 ranking for 2022, identifying the 100 most promising B2B retail technology companies."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Company News</span>
+          <h1 class="text-display text-[var(--ink)]">parcelLab Features in CB Insights' Retail Tech 100 2022</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2022-04-15">April 15, 2022</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>4 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          parcelLab has been recognized by CB Insights in their prestigious Retail Tech 100 ranking for 2022, which identifies the 100 most promising B2B retail technology companies globally. The 2022 cohort showcases startups revolutionizing retail across 13 categories, representing 19 countries worldwide.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">CEO Response</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">"We are so excited to be included in CB Insights' Retail Tech 100 list for the second time!"</p>
+          <p class="mt-1 text-sm text-[var(--ink-muted)]">-- Tobias Buxhoidt, CEO, parcelLab</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Quick Facts on Retail Tech 100 2022</h2>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">$13.1B raised</strong> in 2021 across 109 deals -- triple the 2020 amount</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Nearly two-thirds</strong> are early or mid-stage companies (20 seed/Series A and 43 Series B/C)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">36 unicorns</strong> (36%) valued at $1B or above</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">40% based outside the US;</strong> UK and India each have 6 companies</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Top investors:</strong> Salesforce Ventures leads with 10 investments; Tiger Global and Insight Partners tied with 9 each</span>
+          </li>
+        </ul>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Selection Methodology</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The CB Insights research team evaluated over 7,000 companies using evidence-based criteria including patent activity, business relations, investor profiles, news sentiment analysis, Mosaic Scores, market potential, competitive landscape, team strength, and technological innovation.
+        </p>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          parcelLab is the leading Operations Experience Management platform globally, serving 500+ brands including IKEA, Bose, Puma, Farfetch, and Nespresso. The company operates offices in Munich, London, Paris, and Boston.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

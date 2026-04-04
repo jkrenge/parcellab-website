@@ -1,0 +1,45 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout title="What is the Post-Purchase Experience? - parcelLab" description="A comprehensive guide exploring the importance of post-purchase experience in building customer loyalty and driving repeat business.">
+  <Header client:load />
+  <main>
+    <section class="section-generous"><div class="mx-auto max-w-[1440px] px-6 md:px-12"><div class="mx-auto max-w-[800px]">
+      <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>Back to blog</a>
+      <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Post-Purchase</span>
+      <h1 class="text-display text-[var(--ink)]">What is the Post-Purchase Experience?</h1>
+      <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+        <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab</strong></span><span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+        <time datetime="2023-02-09">February 9, 2023</time><span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span><span>8 min read</span>
+      </div>
+    </div></div></section>
+    <section class="pb-16 md:pb-24"><div class="mx-auto max-w-[800px] px-6 md:px-12">
+      <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">The post-purchase experience encompasses all interactions and touchpoints occurring after a customer completes a purchase. 53% of shoppers view post-purchase as the most emotional part of any shopping experience.</p>
+      <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">How to Create the Best Post-Purchase Experience</h2>
+      <ol class="mt-4 space-y-3 list-decimal list-inside">
+        <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Map the customer journey</strong> -- Understand backend processes to craft relevant, timely communications.</li>
+        <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Prioritize branding</strong> -- Maintain consistency across all post-purchase touchpoints with branded tracking pages.</li>
+        <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Measure and evaluate performance</strong> -- Track email engagement, website traffic, logistics performance, and retention metrics.</li>
+      </ol>
+      <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Key Stat</p>
+        <p class="mt-2 text-lg font-medium text-[var(--ink)]">Granit Parts achieved a 20% reduction in customer service inquiry calls and 15% fewer inquiry emails after implementing improved post-purchase communications.</p>
+      </div>
+      <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Ways to Innovate</h2>
+      <ul class="mt-4 space-y-3">
+        <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg><span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Gamify experiences</strong> with rewards, badges, and recognition programs</span></li>
+        <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg><span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Go omnichannel</strong> across chat, email, phone, and knowledge bases</span></li>
+        <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg><span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Streamline returns</strong> -- 62% of customers are unlikely to re-engage with brands offering poor returns</span></li>
+      </ul>
+    </div></section>
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

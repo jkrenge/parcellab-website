@@ -1,0 +1,129 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="How to Build an eCommerce Tech Stack - parcelLab"
+  description="Learn how to build the right ecommerce technology stack, from shopping carts and payment gateways to shipping logistics and post-purchase software."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Trends</span>
+          <h1 class="text-display text-[var(--ink)]">How to Build an eCommerce Tech Stack</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">Julian Krenge</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2023-05-24">May 24, 2023</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>8 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          A technology stack for ecommerce websites represents the collection of platforms, applications, tools, frameworks, and technologies that online retailers use to manage operations efficiently. These solutions work together to help store owners streamline day-to-day activities and drive business growth.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Key Stat</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">Global ecommerce retail sales exceeded $5.7 trillion in 2022 and constitute approximately 20% of total retail sales.</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Essential Features an Ecommerce Tech Stack Should Include</h2>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Shopping Cart</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Software that allows customers to select and store items before checkout, similar to physical retail. Solutions should optimize checkout experience and minimize abandonment rates. Popular options include Shift4Shop, X-Cart, and OpenCart.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Payment Gateway</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Services that facilitate credit card and digital payments securely and with PCI compliance. Leading solutions include Square, Stripe, PayPal, and Authorize.net.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Inventory Management System</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Tracks stock levels in real-time, forecasts demand, and automates replenishment. Notable tools include Cin7, ShipStation, Fishbowl, and SkuVault.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Order Management System</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Tracks orders across marketing channels to streamline fulfillment. Leading options are Skubana, LinnWorks, Orderhive, and Adobe Commerce.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Customer Relationship Management (CRM)</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Stores customer information and enables automation of relationships and communications. Popular platforms include Salesforce, HubSpot, Pipedrive, and Zoho CRM.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Shipping and Logistics Management</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Automates shipping, logistics, and fulfillment processes while optimizing distribution. Featured solutions include ShipBob, Easyship, and ShipStation.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Post-Purchase Software</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Optimizes the customer journey after purchase through order notifications, tracking, and returns management. Leading options include parcelLab.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Can an Ecommerce Tech Stack Support Marketing?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Yes. The right marketing technology stack enables businesses to craft effective promotional strategies, maintain competitiveness, and attract target audiences. An efficient marketing stack can execute automated email campaigns, conduct keyword research, manage PPC and social media, and provide visitor insights.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Choosing the Best Ecommerce Tech Stack</h2>
+        <ol class="mt-4 space-y-3 list-decimal list-inside">
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Identify your business needs.</strong> Conduct an internal audit of goals and requirements before selecting solutions. Consider sales volume, product count, and target audience.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Consider your budget.</strong> Balance desired functionality with affordable spending. Costs range from hundreds to thousands of dollars depending on specific needs.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Research and compare solutions.</strong> Evaluate options based on scalability, security, compliance, customization, support, and documentation.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Don't forget about integrations.</strong> Ensure different tools work seamlessly together without creating data silos or requiring excessive manual work.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Seek expert advice.</strong> Consult specialists about whether managed or all-inclusive solutions better suit your business requirements.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Implement and test.</strong> Allocate time and resources for proper setup, configuration, and integration after selecting your tech stack.</li>
+        </ol>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The ecommerce industry is positioned for growth and innovation. Business owners must remain adaptable to shifting customer expectations, technological advances, and economic changes. Selecting an appropriate technology stack prepares retailers to address emerging challenges effectively.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

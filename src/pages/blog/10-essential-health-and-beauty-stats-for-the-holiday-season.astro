@@ -1,0 +1,158 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="10 Essential Health and Beauty Stats for the Holiday Season - parcelLab"
+  description="Key statistics and trends shaping the health and beauty sector during holiday shopping, from online buying shifts to sustainability demands and loyalty program gaps."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Trends</span>
+          <h1 class="text-display text-[var(--ink)]">10 Essential Health and Beauty Stats for the Holiday Season</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2021-10-30">October 30, 2021</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          The holiday season presents enormous opportunities for health and beauty brands -- but success depends on staying current with rapidly evolving consumer trends. From the surge in online purchasing to the demand for sustainability, here are 10 statistics every brand in the sector should know.
+        </p>
+
+        <div class="mt-8 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <div class="flex items-start gap-4">
+              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#3D3AD3]/10 text-sm font-bold text-[#3D3AD3]">1</span>
+              <div>
+                <h3 class="text-lg font-semibold text-[var(--ink)]">Online Shopping Has Surged</h3>
+                <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Shoppers are 4 times more likely to buy health and beauty products online than before. The shift reflects a growing preference for digital channels, enabled by product recommenders, augmented reality testing, and live chat support.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <div class="flex items-start gap-4">
+              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#3D3AD3]/10 text-sm font-bold text-[#3D3AD3]">2</span>
+              <div>
+                <h3 class="text-lg font-semibold text-[var(--ink)]">Self-Care and Travel Drive Sales</h3>
+                <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Beyond seasonal gifting, self-care routines and travel-related purchases fuel growth. Rising holiday bookings boost demand for travel toiletries and sun protection products.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <div class="flex items-start gap-4">
+              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#3D3AD3]/10 text-sm font-bold text-[#3D3AD3]">3</span>
+              <div>
+                <h3 class="text-lg font-semibold text-[var(--ink)]">42% of US Consumers Buy Online</h3>
+                <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">42% of US consumers now buy their health and beauty products online. These shoppers are typically well-informed and willing to pay premium prices for quality products.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <div class="flex items-start gap-4">
+              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#3D3AD3]/10 text-sm font-bold text-[#3D3AD3]">4</span>
+              <div>
+                <h3 class="text-lg font-semibold text-[var(--ink)]">70% Delivery Volume Growth</h3>
+                <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">The sector experienced 70% growth in delivery volume, signaling accelerated e-commerce expansion heading into peak season.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <div class="flex items-start gap-4">
+              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#3D3AD3]/10 text-sm font-bold text-[#3D3AD3]">5</span>
+              <div>
+                <h3 class="text-lg font-semibold text-[var(--ink)]">96% Fail on Personalized Shipping Messages</h3>
+                <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">96% of health and beauty brands fail to send personalized messages during shipping. This represents a massive missed opportunity, as shipping communications can build loyalty and encourage repeat purchases.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <div class="flex items-start gap-4">
+              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#3D3AD3]/10 text-sm font-bold text-[#3D3AD3]">6</span>
+              <div>
+                <h3 class="text-lg font-semibold text-[var(--ink)]">Natural Makeup Dominates</h3>
+                <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Camera-friendly, low-maintenance makeup dominates consumer searches. Multi-purpose products that support a professional video call look have replaced party glamour trends.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <div class="flex items-start gap-4">
+              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#3D3AD3]/10 text-sm font-bold text-[#3D3AD3]">7</span>
+              <div>
+                <h3 class="text-lg font-semibold text-[var(--ink)]">Skincare Accounts for 40% of Cosmetics</h3>
+                <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Skincare accounts for 40% of the global cosmetics market and continues growing, with e-commerce brands leading this segment through customization and personalized recommendations.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <div class="flex items-start gap-4">
+              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#3D3AD3]/10 text-sm font-bold text-[#3D3AD3]">8</span>
+              <div>
+                <h3 class="text-lg font-semibold text-[var(--ink)]">41% Want Sustainable Products</h3>
+                <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">41% of consumers are looking for sustainable products for the holidays. Environmental considerations increasingly influence purchasing decisions, particularly among younger demographics.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <div class="flex items-start gap-4">
+              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#3D3AD3]/10 text-sm font-bold text-[#3D3AD3]">9</span>
+              <div>
+                <h3 class="text-lg font-semibold text-[var(--ink)]">Brand Differentiation Through Exclusivity</h3>
+                <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Online shoppers prioritize exclusive discounts, unique products, and rewards programs when selecting e-commerce brands. Differentiation comes from experience, not just product.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <div class="flex items-start gap-4">
+              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#3D3AD3]/10 text-sm font-bold text-[#3D3AD3]">10</span>
+              <div>
+                <h3 class="text-lg font-semibold text-[var(--ink)]">Only 36% Offer Loyalty Programs</h3>
+                <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Despite consumer preference for rewards schemes, subscription boxes, mobile apps, and exclusive drops, only 36% of health and beauty brands offer loyalty programs. This represents significant untapped growth potential, especially for peak season launches.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Retailers prioritizing personalized post-purchase communications and loyalty initiatives could significantly enhance customer retention during the holiday shopping season. The data is clear: the brands that invest in the experience beyond the transaction will capture the greatest share of holiday spending.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

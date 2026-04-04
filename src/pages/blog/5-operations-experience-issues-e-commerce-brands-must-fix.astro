@@ -1,0 +1,98 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="5 Operations Experience Issues E-Commerce Brands Must Fix - parcelLab"
+  description="parcelLab's US Operations Experience Study reveals five critical issues in shipping, communication, tracking, delivery, and returns that retailers must address."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Post-Purchase</span>
+          <h1 class="text-display text-[var(--ink)]">5 Operations Experience Issues E-Commerce Brands Must Fix</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2021-03-17">March 17, 2021</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          parcelLab's inaugural US Operations Experience Study revealed significant opportunities for retailers to enhance their shipping and delivery practices. Here are the five most critical issues brands must address.
+        </p>
+
+        <div class="mt-8 space-y-8">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h2 class="text-lg font-semibold text-[var(--ink)]">1. Provide More Delivery Choices</h2>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Currently, only 4% of e-commerce sites display their carrier information or allow customers to select preferred carriers -- a standard practice in Europe. However, progress is evident: 62% of US retailers now offer curbside pickup alongside traditional delivery, and 18% provide next-day delivery options.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h2 class="text-lg font-semibold text-[var(--ink)]">2. Communication Around the Post-Purchase Experience is Minimal</h2>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Most retailers underutilize post-purchase touchpoints. The research found that 56% send only three to four emails before delivery, despite having at least five potential communication opportunities. Even more concerning, 25% send just two emails or fewer, often missing shipping updates, delivery confirmations, and returns communications.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h2 class="text-lg font-semibold text-[var(--ink)]">3. Package Tracking is Lacking</h2>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Only 27% of retailers host branded tracking pages on their websites. The remaining 73% outsource tracking to third-party carrier sites, forfeiting opportunities to strengthen customer loyalty and engagement through owned experiences.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h2 class="text-lg font-semibold text-[var(--ink)]">4. Free Delivery is Essentially a Myth</h2>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Truly free shipping is rare. The study found only four retailers offering genuine free delivery. Additionally, 52% require minimum order values (averaging $35), and 30% charge for shipping entirely (averaging $4.25 per order).
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h2 class="text-lg font-semibold text-[var(--ink)]">5. Return Processes Are Extremely Difficult for Customers</h2>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Returns present significant friction points. 43% of retailers charge for returns, with over half of those charging more than $10. Further, 56% require over six days for full processing and refunds, while 64% fail to notify customers about receipt or expected refund timelines.
+            </p>
+          </div>
+        </div>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Key Takeaway</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">A positive Operations Experience drives customer loyalty and sales -- this is the critical focus area for US retailers moving forward.</p>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The research emphasizes that each of these issues represents both a gap and an opportunity. Retailers who address these operational experience shortcomings will gain significant competitive advantages in customer retention and lifetime value.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

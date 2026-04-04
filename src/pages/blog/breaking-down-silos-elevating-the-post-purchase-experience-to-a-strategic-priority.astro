@@ -1,0 +1,82 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Breaking Down Silos: Elevating the Post-Purchase Experience to a Strategic Priority - parcelLab"
+  description="Many brands manage post-purchase experience in departmental silos, fragmenting the customer journey. Cross-functional collaboration is essential for success."
+>
+  <Header client:load />
+  <main>
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Post-Purchase</span>
+          <h1 class="text-display text-[var(--ink)]">Breaking Down Silos: Elevating the Post-Purchase Experience to a Strategic Priority</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">Anton Eder</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2024-09-24">September 24, 2024</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>8 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          The post-purchase experience (PPX) has become a critical component of the customer's experience that can mean maximizing customer lifetime value or churning customers at a record pace. However, many brands still manage their PPX strategy in silos, with different departments handling isolated tasks.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">The Siloed Approach: Challenges and Pitfalls</h2>
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Inconsistent Customer Communication</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Different departments often manage their own communication channels, leading to inconsistent messaging and customer confusion that erodes trust.</p>
+          </div>
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Operational Inefficiencies</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Siloed operations result in fragmented processes, with each team focusing on its own KPIs rather than a unified strategy, leading to bottlenecks and increased costs.</p>
+          </div>
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Missed Revenue Opportunities</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Without a cohesive strategy, opportunities for cross-selling and upselling during the post-purchase phase are often overlooked.</p>
+          </div>
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Data Silos and Lack of Insights</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Data scattered across different systems makes it difficult to gain comprehensive insights into customer behavior and logistics performance.</p>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">The Path Forward</h2>
+        <ol class="mt-4 space-y-3 list-decimal list-inside">
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Foster cross-functional collaboration</strong> among seven core stakeholders to create a unified PPX strategy.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Leverage technology and data</strong> to gain insights into customer behavior, enabling informed decision-making.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Streamline processes and communication</strong> to ensure consistent messaging across all touchpoints.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Focus on customer-centricity</strong> at every stage of the post-purchase journey.</li>
+        </ol>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The post-purchase experience is not just a series of tasks; it's a critical component of your brand's success. By breaking down silos and elevating PPX to a strategic priority, brands can close the experience gap and unlock significant value.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,103 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Innovation Is the Key to Success in Traditional Retail - parcelLab"
+  description="Traditional retail remains viable -- the real issue is insufficient innovation. Learn how brick-and-mortar stores can compete by bridging online and offline."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">Innovation Is the Key to Success in Traditional Retail</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2019-03-06">March 6, 2019</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Online retailers are thriving while brick-and-mortar stores struggle with foot traffic. Yet traditional retail remains viable -- the real issue is insufficient innovation both online and in physical locations.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Going Physical</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Major retailers have closed due to failure to innovate. Meanwhile, Amazon's acquisition of Whole Foods and opening of pop-up shops demonstrate how pure-play online businesses now recognize the value of physical retail experiences.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Traditional retailers possess an inherent advantage: they already have the physical element. To compete effectively, they must:
+        </p>
+        <ol class="mt-4 space-y-3 list-decimal list-inside">
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Elevate online experiences</strong> to match leading e-commerce standards</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Create in-store innovation</strong> that enhances the customer experience, such as enabling online ordering for unavailable sizes</li>
+        </ol>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Meet the Scale-ups</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Large traditional retailers face barriers to rapid innovation -- lengthy decision-making processes and expensive in-house development. A practical alternative involves partnering with creative startups to trial new concepts with manageable risk and faster time-to-market.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Beyond the Checkout</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          A critical opportunity exists post-purchase. Traditional retailers typically neglect this phase, whereas e-commerce businesses leverage it extensively. Beyond basic tracking, retailers can:
+        </p>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Send personalized shipping messages</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Monitor deliveries proactively</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Provide advance problem warnings</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Reinforce brand messaging throughout delivery</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Drive additional sales through complementary offers</span>
+          </li>
+        </ul>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Most online retailers haven't fully optimized this phase either, creating an opportunity for traditional retailers to gain competitive advantage by getting it right first.
+        </p>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Success in modern retail requires bridging online and offline channels to deliver seamless customer experiences across both touchpoints. Traditional retailers who embrace innovation -- particularly in the post-purchase phase -- can turn their physical presence from a liability into a genuine competitive advantage.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

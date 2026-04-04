@@ -1,0 +1,131 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Guide to Luxury Brands Post-Purchase Experience - parcelLab"
+  description="Customer experience sits at the core of retail brand promises, yet luxury ecommerce requires particularly distinctive and unforgettable experiences."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Post-Purchase</span>
+          <h1 class="text-display text-[var(--ink)]">Guide to Luxury Brands Post-Purchase Experience</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">Anna Lapezo</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2023-05-17">May 17, 2023</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>8 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Customer experience sits at the core of retail brand promises, yet luxury ecommerce requires particularly distinctive and unforgettable experiences. According to Forrester research, U.S. adults purchasing luxury items online spent significantly more ($1,814) than in-store shoppers ($1,187), underscoring the importance of prioritizing digital channels.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Evaluate Your Post-Purchase Experience</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The post-purchase experience encompasses all activities following a purchase, from order confirmation through package opening. This often-overlooked phase represents the most emotionally charged shopping moment and serves as a critical differentiation point for luxury retailers.
+        </p>
+
+        <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-3">A Luxury Experience After the Purchase</h3>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">1. Mapping Your Customer Journey</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Understanding backend processes after checkout proves essential. Key questions include: Where does order information flow post-confirmation? What are pick, pack, and ship timeframes? Which carriers handle specific orders?
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">2. Branding the Post-Purchase Experience</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Maintain consistency across touchpoints by ensuring communications align with pre-purchase messaging, all channels reflect brand aesthetics, and hosting tracking from your own website -- rather than third-party providers -- keeps customers in your ecosystem.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">3. Identifying Trends and Improvement Opportunities</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Track metrics including email engagement rates, website traffic, logistics performance, customer support volume, retention rates, return rates, and qualitative feedback.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Innovate to Stay Ahead of the Game</h2>
+
+        <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-3">Offer Advanced Omnichannel Services</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Top-performing luxury brands provide customers access to their order information no matter where they are through preferred communication channels -- live chat, email, or knowledge bases.
+        </p>
+
+        <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-3">Build a Strong Digital Presence</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Leading luxury brands maintain robust social media strategies emphasizing high-quality content, storytelling, and emotional engagement, encouraging customers to tag and share unboxing experiences.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Luxury Brands are Seeing Results of a Tailored Post-Purchase Experience</h2>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Fashionette Personalizes for Better Conversions</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Fashionette sends automated, personalized shipping messages containing relevant product recommendations directly to customers. Their embedded tracking page maintains engagement within their website.
+            </p>
+            <ul class="mt-4 space-y-2">
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">75% of customers</strong> returned to their site</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">45% revenue increase</strong> from post-purchase engagement</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">FARFETCH Boosts Customer Satisfaction</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              FARFETCH consolidated multiple orders and tracking links through a unified communication and tracking interface. Each touchpoint is fully customizable, personalized, and sent from FARFETCH's ecosystem, providing valuable data and end-to-end experience control.
+            </p>
+          </div>
+        </div>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Key Takeaway</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">Luxury ecommerce requires particularly distinctive post-purchase experiences. U.S. adults purchasing luxury items online spend 53% more than in-store shoppers.</p>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The post-purchase experience is a critical differentiator for luxury brands in the digital age. By mapping customer journeys, maintaining brand consistency across all touchpoints, and leveraging data to drive continuous improvement, luxury retailers can create the kind of memorable experiences that turn one-time buyers into lifelong brand advocates.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

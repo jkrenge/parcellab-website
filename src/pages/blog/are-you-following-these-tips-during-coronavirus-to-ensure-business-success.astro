@@ -1,0 +1,113 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Are You Following These Tips During Coronavirus to Ensure Business Success? - parcelLab"
+  description="How online retailers can lower customer stress, create loyalty, and increase revenue during the Covid-19 crisis."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Trends</span>
+          <h1 class="text-display text-[var(--ink)]">Are You Following These Tips During Coronavirus to Ensure Business Success?</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2020-05-01">May 1, 2020</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>7 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Tough measures have been implemented in the UK to curb the spread of Covid-19, with households told to stay home, social distance and self-isolate. Non-essential stores were forced to close, resulting in a huge surge in online orders. People who don't often or may have never shopped online are highly likely to start now. Could Covid-19 be the driving force for e-commerce adoption across the world?
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Which Industries Are Seeing a Peak?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Grocery items and healthcare goods are seeing large increases. Smaller independent and convenience stores are coming into their own -- close to people's homes, easy and quick to navigate, and agile in changing product offerings.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Beyond the obvious, UK consumers are buying home improvement/DIY products, craft and hobby goods, "work from home" tech, children's toys, and more. As boredom strikes, many people are trying new activities or rediscovering old hobbies.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Sadly, the fast fashion industry is one of the worst-hit. People don't need new outfits for weekly nights out, and if money is tight, such novelties are non-essential. Internet Retailing's RetailX tracker reported a steep decline in online clothing sales -- 28% of people said they had stopped buying clothes online altogether.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">How Can Retailers Lower Customer Stress and Create Loyalty?</h2>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Reassure and Communicate Proactively</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Delays are inevitable as online orders increase and supply chain capabilities decrease. Your customer will understand this as long as you communicate any delays proactively. Provide regular updates on where their order is, when it will be delivered and by whom. Acknowledge and apologise for any delays.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Include Cross and Up-Sell Products</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              The items popular online lend themselves well to cross and up-selling. Encourage repurchases by including product recommendations in delivery and marketing emails. More books by the same author? A more challenging paint by numbers? A top to go with the yoga pants?
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Reward Loyalty</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Use marketing emails to send discount codes to existing customers. Send offers in dispatch or shipping communications to encourage repeat purchases. Many customers may struggle financially during this pandemic, so discounts will make them feel valued. Think outside the box -- add an extra gift to the parcel or include wellness tips in shipping communications.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Provide Inspiration</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Many items purchased during the coming months will be by consumers trying new hobbies or making home improvements. Include videos, blogs, and other content around the product. If they bought a guitar, include a beginners guide to chords. If they bought a flat-pack desk, include a blog about how to decorate a home office.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Share Uplifting Content</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Now is the time to work on your brand image. Sharing uplifting content will create a community within your customers and positive sentiment around your brand. In the Style pledged to donate 10% of proceeds to Age UK. H&M allowed global aid organisations to use their social channels to spread messages about Covid-19.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Prepare for Life After Coronavirus</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              There will be life after coronavirus. Brands have never had to relaunch their offline and e-commerce stores before. Take time to assess your customer journey from start to finish and identify areas of improvement. Now is the prime time to put new tools in place so your customers have the best possible experience once it is "business as usual."
+            </p>
+          </div>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Effective post-purchase communications are more important than ever. Retailers need to communicate proactively with their customers in order to minimise customer enquiries and build lasting loyalty.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

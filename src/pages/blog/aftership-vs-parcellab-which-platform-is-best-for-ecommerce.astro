@@ -1,0 +1,117 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="AfterShip vs parcelLab: Which Platform is Best for Ecommerce? - parcelLab"
+  description="A detailed comparison of AfterShip and parcelLab across implementation, notifications, tracking, returns, data quality, support, and pricing."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Post-Purchase</span>
+          <h1 class="text-display text-[var(--ink)]">AfterShip vs parcelLab: Which Platform is Best for Ecommerce?</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2023-03-14">March 14, 2023</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>12 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          As two of the most popular solutions in the market, parcelLab and AfterShip have capabilities that facilitate the post-purchase experience, including customer comms, order notifications, and more. However, they also have fundamental differences, particularly in the areas of customer support, data quality, and pricing structures.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Platform Overviews</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          <strong class="text-[var(--ink)]">parcelLab</strong> is a cloud-based post-purchase experience platform that helps brands improve customer engagement and retention by providing personalized and branded communication throughout the customer journey. With offices in Boston, Munich, London, and Paris, parcelLab's key customers are Yeti, Bose, LIDL, and H&amp;M.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          <strong class="text-[var(--ink)]">AfterShip</strong> is a platform that allows businesses to manage post-purchase processes and customer communications, offering shipment monitoring, label generation, and rate calculators. Headquartered in Singapore with offices globally, notable customers include TOMS, Gymshark, and Aesop.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Implementation: How Long Does Onboarding Take?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          <strong class="text-[var(--ink)]">parcelLab:</strong> parcelLab's policy is to get brands up and running within 30 days or less. For most users, the process takes about two weeks. During this time, parcelLab handles data transfer setup, brand configuration, notification design, tracking page creation, portal accounts, and testing -- minimizing work required on the retailer's side.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          <strong class="text-[var(--ink)]">AfterShip:</strong> AfterShip provides onboarding options for various business sizes, including self-serve and support teams. If you have a simple webshop, the process can take a day or so. However, if you have limited time or complex workflows, the setup process may take longer.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Customer Communications</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          <strong class="text-[var(--ink)]">parcelLab:</strong> Supports multiple communication channels including email, SMS, mobile apps, and instant messaging (WhatsApp, Messenger, Line). Over 50 email triggers keep shoppers in the loop at every stage. The solution is 100% white labeled and customizable, with emails sent from your domain.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          <strong class="text-[var(--ink)]">AfterShip:</strong> Supports email and SMS notifications with an email editor that lets you customize elements like the email header, body, footer, and more.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Branding and Package Tracking</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          <strong class="text-[var(--ink)]">parcelLab:</strong> Offers a fully white-labeled and tailored order tracking page hosted on your domain, meaning you're sending users back to your website (3 out of 4 users return) when they view their tracking status. This paves the way for additional traffic and sales.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          <strong class="text-[var(--ink)]">AfterShip:</strong> AfterShip's tracking page can be implemented using a self-service tool with customizable fonts, colors, and content. It also offers a white-label domain feature to set up a custom domain for your tracking page.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Returns Management</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          <strong class="text-[var(--ink)]">parcelLab:</strong> Offers a digital returns portal where customers can select items to return, share reasons, and print labels with optional QR codes. The portal is hosted on your website and is fully customizable, with built-in returns communication managing the entire post-purchase process on a single platform.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          <strong class="text-[var(--ink)]">AfterShip:</strong> AfterShip's returns management capabilities are strong, featuring a digital returns portal that facilitates returns and exchanges. A unique feature is incentivized exchanges, which encourage shoppers to exchange items rather than ask for refunds.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Data and Delivery Estimates</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          <strong class="text-[var(--ink)]">parcelLab:</strong> Direct integration with over 350 carriers enables brands to provide nearly real-time updates on order shipments, reducing WISMO inquiries and managing customer expectations effectively.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          <strong class="text-[var(--ink)]">AfterShip:</strong> While AfterShip technically supports more carriers (1,053), some customers have reported difficulties getting accurate carrier data with AfterShip.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Customer Service</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Customer support is one of the biggest areas where AfterShip and parcelLab differ. parcelLab delivers prompt and efficient service with dedicated account management, striving to be a post-purchase experience partner. AfterShip relies more heavily on self-service tools and its Help Center, with 24/7 support available via live chat and email.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Pricing</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          <strong class="text-[var(--ink)]">parcelLab:</strong> Pricing varies based on desired capabilities and number of shipments. Packages include Convert (Promise), Engage (Track &amp; Communicate, Service, Campaign Manager), Retain (Returns), and Platform (Insights, Connect, Security).
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          <strong class="text-[var(--ink)]">AfterShip:</strong> Four pricing tiers: Essentials (starting at $11/mo for 100 shipments), Pro ($119/mo for 2,000 shipments), Premium ($199/mo for 2,000 shipments), and Enterprise (customized for 300,000+ labels/year). Note that additional fees apply for team members ($10/member/month) and priority support (20-30% added to subscription).
+        </p>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Both parcelLab and AfterShip offer unique benefits that cater to different business needs. parcelLab is a premium platform that provides high-touch support and advanced tools, making it an excellent choice for large and enterprise brands that prioritize a personalized experience. AfterShip is more affordable and self-serve, so it's better suited for smaller brands with basic workflows.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

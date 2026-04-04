@@ -1,0 +1,69 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="The Future of Operations Experience: Endless Opportunity -- My Thoughts on Our Series C Investment - parcelLab"
+  description="The founder reflects on parcelLab's $112 million Series C funding and the company's vision for transforming post-purchase journeys."
+>
+  <Header client:load />
+  <main>
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Company News</span>
+          <h1 class="text-display text-[var(--ink)]">The Future of Operations Experience: Endless Opportunity</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">Tobias Buxhoidt</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2021-06-12">June 12, 2021</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          I founded parcelLab alongside my friends and esteemed partners Julian and Anton in 2015 with a passion for transforming traditionally opaque, frictional operational experiences into a joyful customer experience, with transparency and guidance.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Our recent announcement of $112 million in Series C funding, led by global venture capital and private equity firm Insight Partners, has validated our firm belief in Operations Experience Management. It makes us even more confident that this will become a major category that will disrupt e-commerce as we know it.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Scaling Up to Deliver to New Industries</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          I could not be prouder of the progress we have made in the past six years, alongside our incredible team. Our post-purchase platform now monitors between two to three million shipments and sends between seven million proactive, personalized, event-driven emails every day. We process shipping data from more than 150+ carriers worldwide, including DHL, FedEx and DPD.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          We're super excited to be on this journey and looking forward to disrupting new industry sectors through Operations Experience. As e-commerce becomes increasingly competitive, providing unique and branded experiences will drive growth.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Shaping the Future</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Brands that leverage Operations Experience Management are transforming operational complexity into opportunities to outperform in the market. Household names, including IKEA, Puma and Lidl have already partnered with us to transform their Operations Experiences.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Our Vision</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">With this funding round, our ambition is to shape the future of Operations Experience. And what does that look like? Endless opportunity.</p>
+        </div>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

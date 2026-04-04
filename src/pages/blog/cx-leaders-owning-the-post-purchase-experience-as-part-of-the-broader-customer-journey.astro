@@ -1,0 +1,79 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="CX Leaders: Owning the Post-Purchase Experience as Part of the Broader Customer Journey - parcelLab"
+  description="CX leaders who limit their strategy to checkout are missing a critical opportunity. The post-purchase experience is essential for building loyalty and trust."
+>
+  <Header client:load />
+  <main>
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Customer Experience</span>
+          <h1 class="text-display text-[var(--ink)]">CX Leaders: Owning the Post-Purchase Experience as Part of the Broader Customer Journey</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">Anton Eder</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2024-10-01">October 1, 2024</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>9 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          As a Customer Experience (CX) leader, your mission is clear: deliver seamless, memorable experiences that keep customers coming back. But if your customer journey strategy stops at checkout, you're missing out on one of the biggest opportunities to drive loyalty, build trust, and boost your bottom line.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">How to Own PPX Cross-Functionally</h2>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">1. Build a Consistent, Branded Post-Purchase Journey</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Work with Marketing to ensure every post-purchase email, notification, or update is on-brand and consistent with your voice. Leverage your Digital Leader to personalize communications based on customer behavior.</p>
+          </div>
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">2. Ensure Real-Time Communication and Transparency</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Partner with Operations to ensure seamless integration between order management systems and customer-facing platforms for real-time tracking updates. If there's a delay, tell customers before they have to ask.</p>
+          </div>
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">3. Optimize Issue Resolution and Returns</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Collaborate with Customer Service to empower agents with real-time access to order data. Ensure the returns process is as seamless as the purchase process.</p>
+          </div>
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">4. Leverage Data for Continuous Improvement</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Partner with your CIO to capture real-time, actionable data across the entire post-purchase journey including order tracking, delivery times, and return rates.</p>
+          </div>
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">5. Make CX a Strategic Priority for the Entire Organization</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Use your position as a customer advocate to push for the resources, technology, and cross-functional collaboration needed to make PPX seamless. Show the business impact through reduced WISMO calls and increased CLTV.</p>
+          </div>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The PPX isn't a siloed phase -- it's a core part of the entire customer journey. The brands that master the end-to-end experience will win the battle for customer loyalty, trust, and long-term growth.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

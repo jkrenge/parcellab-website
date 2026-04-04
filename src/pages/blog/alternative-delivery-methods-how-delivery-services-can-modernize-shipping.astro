@@ -1,0 +1,100 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Alternative Delivery Methods -- How Delivery Services Can Modernize Shipping - parcelLab"
+  description="From e-bikes and delivery robots to trunk delivery and parcel stations, explore how alternative methods are modernizing last-mile shipping."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">Alternative Delivery Methods -- How Delivery Services Can Modernize Shipping</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2019-02-16">February 16, 2019</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>7 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Transportation generates roughly 18% of greenhouse gas emissions in Germany. Shipping companies are exploring alternative delivery methods to address environmental concerns while solving last-mile delivery challenges. From electric mobility and depot solutions to autonomous robots, innovation is transforming the logistics landscape.
+        </p>
+
+        <div class="mt-8 space-y-8">
+          <div>
+            <h2 class="text-heading text-[var(--ink)] mb-4">1. City Hub and E-Bike</h2>
+            <p class="text-[var(--ink-secondary)] leading-relaxed">
+              Deutsche Post operates "Cubicycles" -- four-wheeled pedal-powered vehicles with cargo boxes -- reducing CO2 compared to delivery trucks. GSL similarly deployed e-bikes with adjustable trailers across multiple German cities including Nuremberg and Dortmund. These solutions prove advantageous in congested urban centers by eliminating parking search time.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-heading text-[var(--ink)] mb-4">2. Container</h2>
+            <p class="text-[var(--ink-secondary)] leading-relaxed">
+              UPS piloted container concepts in Hamburg, positioning interim storage units throughout city centers. Messengers then complete deliveries on foot, via handcart, or by bicycle. This approach addresses double-parking disruptions and enables better scheduling predictions, improving customer communication regarding delivery timing.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-heading text-[var(--ink)] mb-4">3. Starship Delivery Robot</h2>
+            <p class="text-[var(--ink-secondary)] leading-relaxed">
+              Autonomous robots travel at approximately 6.4 km/h and carry up to 10 kilograms across 5-kilometer distances. Hermes conducted trials with Domino's in Hamburg. However, challenges include inability to ring doorbells, vulnerability to vandalism, and reliance on smartphone notifications. One operator reportedly monitored up to 100 vehicles via the Internet.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-heading text-[var(--ink)] mb-4">4. Trunk Delivery</h2>
+            <p class="text-[var(--ink-secondary)] leading-relaxed">
+              DHL and Volkswagen partnered on a program allowing customers to receive packages directly in vehicle trunks. Owners generate transaction authorization numbers via smartphone apps, specifying delivery windows. Vehicles must park within 300 meters of delivery addresses. Urban parking constraints present practical limitations.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-heading text-[var(--ink)] mb-4">5. Electric Delivery Truck</h2>
+            <p class="text-[var(--ink-secondary)] leading-relaxed">
+              Volkswagen's e-Crafter offers 173-kilometer range at 90 km/h maximum speed. Operating costs reportedly represent less than half those of comparable diesel vehicles. Federal subsidies apply to eligible models, with extended vehicle tax exemptions for early registrations.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-heading text-[var(--ink)] mb-4">6. Parcel Stations for Multi-Family Houses</h2>
+            <p class="text-[var(--ink-secondary)] leading-relaxed">
+              DHL deployed parcel boxes at apartment buildings in Berlin. Customers receive notifications via email or app upon delivery. Return parcels can be placed in boxes for carrier pickup. This eliminates neighbor deliveries and unnecessary vehicle trips.
+            </p>
+          </div>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Alternative delivery methods demonstrate viable modernization pathways. Companies implementing electric vehicles, depot solutions, and innovative logistics strategies simultaneously reduce traffic congestion, improve last-mile efficiency, and generate environmental benefits. Continued market evolution suggests further optimization opportunities ahead.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

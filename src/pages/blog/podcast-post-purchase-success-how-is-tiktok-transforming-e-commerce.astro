@@ -1,0 +1,92 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="[Podcast] Post-Purchase Success: How is TikTok Transforming E-Commerce? - parcelLab"
+  description="Episode 3 of the Post-Purchase Success podcast features Logan Dunn from Wyze discussing TikTok's role in transforming third-party e-commerce."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <div class="mb-4 flex gap-2">
+            <span class="inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Post-Purchase</span>
+            <span class="inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Trends</span>
+          </div>
+          <h1 class="text-display text-[var(--ink)]">[Podcast] Post-Purchase Success: How is TikTok Transforming E-Commerce?</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2024-05-09">May 9, 2024</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>2 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          In the third episode of the Post-Purchase Success podcast, we sit down with Logan Dunn, Head of E-Commerce at Wyze, recorded during ShopTalk 2024 in Las Vegas. The discussion centers on social media's evolving role in e-commerce, particularly examining how TikTok is transforming third-party e-commerce.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Episode 3</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">How is TikTok Transforming E-Commerce?</p>
+          <p class="mt-1 text-sm text-[var(--ink-muted)]">Guest: Logan Dunn, Head of E-Commerce at Wyze</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Key Discussion Topics</h2>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="1"/></svg>
+            <span class="text-[var(--ink-secondary)]">Scalability and commerce platforms in the social media age</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="1"/></svg>
+            <span class="text-[var(--ink-secondary)]">The significance of post-purchase experiences for Wyze customers</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="1"/></svg>
+            <span class="text-[var(--ink-secondary)]">Customer re-engagement methodologies employed by the brand</span>
+          </li>
+        </ul>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Listen Now</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The episode is available across multiple streaming services:
+        </p>
+        <div class="mt-4 flex flex-wrap gap-3">
+          <a href="https://parcellab.com" class="inline-flex items-center gap-2 rounded-lg border border-[var(--line)] bg-[var(--surface-raised)] px-4 py-2 text-sm font-medium text-[var(--ink)] transition-colors hover:border-[#3D3AD3] hover:text-[#3D3AD3]">YouTube</a>
+          <a href="https://parcellab.com" class="inline-flex items-center gap-2 rounded-lg border border-[var(--line)] bg-[var(--surface-raised)] px-4 py-2 text-sm font-medium text-[var(--ink)] transition-colors hover:border-[#3D3AD3] hover:text-[#3D3AD3]">Spotify</a>
+          <a href="https://parcellab.com" class="inline-flex items-center gap-2 rounded-lg border border-[var(--line)] bg-[var(--surface-raised)] px-4 py-2 text-sm font-medium text-[var(--ink)] transition-colors hover:border-[#3D3AD3] hover:text-[#3D3AD3]">Apple Podcasts</a>
+          <a href="https://parcellab.com" class="inline-flex items-center gap-2 rounded-lg border border-[var(--line)] bg-[var(--surface-raised)] px-4 py-2 text-sm font-medium text-[var(--ink)] transition-colors hover:border-[#3D3AD3] hover:text-[#3D3AD3]">Amazon Music</a>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Subscribe to the Post-Purchase Success podcast for ongoing episodes featuring e-commerce leaders sharing insights on customer experience, social commerce, and the future of retail.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

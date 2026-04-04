@@ -1,0 +1,114 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="The Next Era of Post-Purchase: Introducing parcelLab AI Agents - parcelLab"
+  description="parcelLab introduces AI Agents that act, adapt, and assist in real time -- transforming post-purchase from task automation to intelligent, autonomous action."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">AI and Analytics</span>
+          <h1 class="text-display text-[var(--ink)]">The Next Era of Post-Purchase: Introducing parcelLab AI Agents</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">Tobias Buxhoidt</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2025-05-21">May 21, 2025</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          The post-purchase experience represents a critical evolution in retail operations. Rather than viewing customer interactions as "tickets," parcelLab frames them as strategic "touchpoints." We're moving beyond basic task automation toward intelligent agents that act, adapt, and assist in real time.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">The Difference</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">While competitors focus on automating workflows, parcelLab empowers retailers with Agents that can think, respond, and deliver value independently.</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Meet the Agents: Autonomous and Assistive</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          ParcelLab AI Agents operate in two distinct modes:
+        </p>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Autonomous Agents</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Work independently to resolve customer issues at scale, designed to reduce costs while elevating customer experience and driving revenue.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Assistive Agents</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Supercharge internal teams by offering real-time insights and guidance, enabling faster and smarter decision-making. These agents work alongside users to optimize platform utilization.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Our AI Strategy Is Quite Simple</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          ParcelLab's approach follows three interconnected layers:
+        </p>
+        <ol class="mt-4 space-y-3 list-decimal list-inside">
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">The Platform</strong> serves as the foundational engine, housing data and orchestrating workflows at scale.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Embedded AI and Machine Learning</strong> provide native capabilities like return volume forecasting and delivery delay prediction.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">AI Agents</strong> comprise the application layer, translating platform intelligence into actionable outcomes.</li>
+        </ol>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          The platform enables the Agents. The Agents activate the platform.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Built for Retail. Designed to Deliver Real Results.</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Retailers using parcelLab AI Agents can expect tangible outcomes:
+        </p>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Resolve issues before they escalate</strong> into complaints</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Free team members</strong> to focus on higher-value activities</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Transform support interactions</strong> into loyalty-building opportunities</span>
+          </li>
+        </ul>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          This is the next era of post-purchase. Not just smarter automation -- but intelligent agents that understand retail, anticipate needs, and deliver measurable results.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,115 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Interview of Guillaume Truchet with Le Figaro - parcelLab"
+  description="Guillaume Truchet, parcelLab's Head of Sales for Southern Europe, discusses the benefits of post-purchase experiences and e-commerce growth in France."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">Interview of Guillaume Truchet with Le Figaro</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2021-09-04">September 4, 2021</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>4 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Guillaume Truchet, Head of Sales -- Southern Europe at parcelLab, appeared on the program "Itin&eacute;raire Entreprise" in partnership with Le Figaro to discuss the benefits of post-purchase experiences and the rapid growth of e-commerce in France.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">The Growth of E-Commerce in France</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          According to FEVAD, the e-commerce sector reached nearly &euro;30 million in Q1 2021, representing approximately 15% growth compared to Q1 2020. This competitive environment demands that brands deliver post-purchase experiences matching customer expectations to foster loyalty and differentiation.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Post-Purchase Communication: The French Landscape</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Research on France's top 100 e-tailers revealed critical gaps in post-purchase communication:
+        </p>
+
+        <div class="mt-6 space-y-4">
+          <div class="flex items-center gap-4 rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-4">
+            <span class="text-2xl font-bold text-[#3D3AD3]">24%</span>
+            <span class="text-[var(--ink-secondary)]">lack control over post-purchase communication, delegating entirely to carriers</span>
+          </div>
+          <div class="flex items-center gap-4 rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-4">
+            <span class="text-2xl font-bold text-[#3D3AD3]">55%</span>
+            <span class="text-[var(--ink-secondary)]">communicate alongside carriers during post-purchase, risking customer confusion</span>
+          </div>
+        </div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-6">
+          Many e-tailers inadvertently delegate their customer relationships to third parties after checkout. When a carrier sends a delivery notification, the customer associates that experience with the carrier -- not with the brand they bought from.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Benefits of Enhanced Post-Purchase Experiences</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Truchet emphasized that investing in superior post-purchase experiences strengthens brand-customer bonds and increases long-term customer value through several measurable outcomes:
+        </p>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Reduced Service Requests</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Fluid, proactive communication minimizes customer inquiries. When customers know where their order is without having to ask, support teams can focus on higher-value interactions.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Increased Positive Reviews</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Well-timed review requests during moments of positive customer sentiment boost favorable ratings. The key is asking at the right moment -- immediately after a successful delivery, not days later.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Higher Sales</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Post-purchase communications and follow-up pages drive repeat purchases and cross-selling opportunities. Every touchpoint after the sale is a chance to deepen the relationship.
+            </p>
+          </div>
+        </div>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Key Stat</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">"55% of customers who have encountered a delivery issue will no longer order from that site."</p>
+          <p class="mt-1 text-sm text-[var(--ink-muted)]">-- E-commerce Nation</p>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          A negative delivery experience does not just lose a single sale -- it loses a customer. As online consumption continues to grow in France and across Europe, delivering exceptional post-purchase experiences is no longer optional. It is essential for building the brand loyalty that drives sustainable growth.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

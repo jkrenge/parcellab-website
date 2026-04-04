@@ -1,0 +1,60 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Sifted Recognizes parcelLab as One of the Top 100 Startups 2021 - parcelLab"
+  description="Sifted celebrates European tech startups and recognizes parcelLab among the top 100 most interesting startups and scale-ups from 2021."
+>
+  <Header client:load />
+  <main>
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Company News</span>
+          <h1 class="text-display text-[var(--ink)]">Sifted Recognizes parcelLab as One of the Top 100 Startups 2021</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2021-03-04">March 4, 2021</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>3 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Sifted celebrates European tech startups! "The dynamism, ideas and ambition seen across Europe deserve to be heard around the world. Our goal is to be the voice of this community of European startups," says Sifted.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Recently, Sifted's Top 100 list identified the most interesting startups and scale-ups from 2021. "It's a mix of the big and the small, the known and the ones flying under the radar."
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          The parcelLab team is thrilled to be included in the top 100. Founded by Anton Ender, Tobias Buxhoidt and Julian Krenge in 2015, parcelLab has completely reinvented the post-sales experience. Since then, the platform has enabled online retailers worldwide to design and self-manage the end-to-end journey. This is how the company transforms complex data into unique customer experiences and helps companies impress customers and stand out from competitors.
+        </p>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          To learn more about how the solution works, interested parties can book a demo or contact the team with questions.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

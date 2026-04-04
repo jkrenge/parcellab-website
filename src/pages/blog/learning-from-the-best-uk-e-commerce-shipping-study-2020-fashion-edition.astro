@@ -1,0 +1,91 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Learning From the Best: UK E-Commerce Shipping Study 2020 Fashion Edition - parcelLab"
+  description="Examining delivery and returns processes among the UK's top 100 online fashion retailers, featuring award winners JD Sports, Missguided, and Hugo Boss."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">Learning From the Best: UK E-Commerce Shipping Study 2020 -- Fashion Edition</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2020-01-06">January 6, 2020</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>7 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          We examined delivery and returns processes among the UK's top 100 online fashion retailers. Three standout companies received awards for excellence across different dimensions of the customer experience.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Best Customer Experience: JD Sports</h2>
+        <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6 mt-4">
+          <p class="text-sm text-[var(--ink-muted)]">Founded 1981 | 2,400+ stores | Revenue: $4,717.8 million</p>
+          <p class="mt-3 text-[var(--ink-secondary)] leading-relaxed">
+            JD Sports excelled with integrated tracking in customer accounts, multiple payment options including Klarna, an annual delivery pass at just $9.99, and guest checkout functionality. Areas for improvement include lack of post-checkout product recommendations and non-branded tracking emails from carriers.
+          </p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Best Brand Experience: Missguided</h2>
+        <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6 mt-4">
+          <p class="text-sm text-[var(--ink-muted)]">Founded 2009 | E-commerce revenue: $215.9 million</p>
+          <p class="mt-3 text-[var(--ink-secondary)] leading-relaxed">
+            Missguided stood out with social sharing integration, friend referral schemes, branded track-and-trace pages, and consistent branded email communications. Potential improvements include expanding upselling on tracking pages and disabling external carrier communications.
+          </p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Best Personalisation: Hugo Boss</h2>
+        <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6 mt-4">
+          <p class="text-sm text-[var(--ink-muted)]">Founded 1924 | E-commerce revenue: $2,733 million</p>
+          <p class="mt-3 text-[var(--ink-secondary)] leading-relaxed">
+            Hugo Boss delivered end-to-end personalized communications, product recommendations on tracking pages, integrated online and offline purchase history, and personalized offers. A minor limitation: they could expand upselling within delivery communications.
+          </p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Key Learnings for Fashion Retailers</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The study identifies four critical success factors:
+        </p>
+        <ol class="mt-4 space-y-3 list-decimal list-inside">
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Provide transparency</strong> across the entire customer journey through account tracking, branded shipping communication, and integrated track-and-trace pages.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Offer delivery passes</strong> to encourage repeat purchases through perceived value.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Create personalized experiences</strong> integrating both online and offline channels.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Build community</strong> through social sharing initiatives.</li>
+        </ol>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The best fashion retailers demonstrate that a great post-purchase experience requires investment across customer experience, brand consistency, and personalization. By learning from these leaders, retailers of all sizes can elevate their shipping and delivery operations.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

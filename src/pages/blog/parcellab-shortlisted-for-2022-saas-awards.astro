@@ -1,0 +1,82 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="parcelLab Shortlisted for 2022 SaaS Awards - parcelLab"
+  description="parcelLab has been shortlisted in the 2022 SaaS Awards program in the Best SaaS Product for E-Commerce category."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Company News</span>
+          <h1 class="text-display text-[var(--ink)]">parcelLab Shortlisted for 2022 SaaS Awards</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2022-08-22">August 22, 2022</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>3 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          parcelLab has been selected as a shortlisted candidate in the 2022 SaaS Awards program within the "Best SaaS Product for E-Commerce / E-Shops" category.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Quote</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">"The shortlisted candidates have proven to be truly innovative thinkers in the SaaS industry."</p>
+          <p class="mt-1 text-sm text-[var(--ink-muted)]">-- James Williams, Head of Operations for the SaaS Awards</p>
+        </div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The Software Awards program, now in its seventh year, welcomes entries from across the globe, covering regions including the US, Canada, Australasia, EMEA, and the UK. This year's categories expanded to include distinctions such as "Most Agile or Responsive SaaS Solution of the Year" alongside existing honors for enterprise-level and data-driven solutions.
+        </p>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Tobias Buxhoidt, Founder and CEO of parcelLab, expressed pride in the recognition, stating it "demonstrates a true commitment to excellence and innovation from our team."
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Competition Timeline</h2>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Finalists announcement:</strong> Tuesday, August 23, 2022</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Category winners announcement:</strong> Tuesday, September 13, 2022</span>
+          </li>
+        </ul>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The SaaS Awards program accepts entries from North America, Canada, Australia, the UK, Europe, and the Middle East, with the next program cycle launching in Spring 2023.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

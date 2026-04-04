@@ -1,0 +1,131 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Guide to Post-Purchase Customer Experience Software Selection - parcelLab"
+  description="Five critical questions to ask when selecting a post-purchase customer experience software solution for your business."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Post-Purchase</span>
+          <h1 class="text-display text-[var(--ink)]">Guide to Post-Purchase Customer Experience Software Selection</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">Angus Knights</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2023-03-30">March 30, 2023</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>10 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Post-purchase customer experience software solutions help businesses improve the customer journey after purchase. These solutions provide real-time order status updates, delivery tracking, and personalized communications throughout the post-purchase process.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Key Features</h2>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Delivery prediction:</strong> Accurate delivery timeframes based on warehouse distance, traffic, weather, and workload</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Order tracking:</strong> Real-time status including expected delivery dates, carrier details, and tracking numbers</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Communication and engagement:</strong> Personalized messages like shipping confirmations via email or SMS</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Returns Portal:</strong> Online return initiation, label generation, pickup scheduling, and status updates</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Analytics and reporting:</strong> Detailed insights on customer behavior and order data to identify trends</span>
+          </li>
+        </ul>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">5 Questions to Ask When Selecting a Provider</h2>
+
+        <div class="mt-6 space-y-8">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">1. How Do They Handle Complexity?</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Ideal circumstances rarely exist in digital retail. Most operations involve split orders, high-value items, multiple carriers, and intricate supply chains. Updates must reach customers in multiple languages across different regions. Before committing, thoroughly assess your operational complexity and ask technical questions about language selection, multi-leg fulfillment, carrier data access, and local market flexibility.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">2. How Do They Work with Your Tech Stack?</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              As retailers adopt composable and headless e-commerce, integration compatibility is more critical than ever. Your post-purchase provider should help you build your ideal integrated system -- not fight against it. The solution should integrate flexibly across your existing technology and work seamlessly across commerce channels.
+            </p>
+            <div class="mt-4 rounded-lg bg-[var(--surface-sunken)] p-4">
+              <p class="text-sm text-[var(--ink-secondary)]">"Everything from stocks, inventory, and marketplace connections runs through 4Sellers...parcelLab gave us post-purchase capabilities we couldn't build ourselves."</p>
+              <p class="mt-1 text-xs text-[var(--ink-muted)]">-- Marco Hormann, IT Manager</p>
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">3. Do They Care About Your Customers' Experience?</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Post-purchase represents the most emotional part of the customer journey. Generic, one-size-fits-all communication fails here. Your provider should understand the emotional arc and provide technology enabling personalized, contextual experiences -- guiding customers through flawless logistics updates, understanding your brand voice, and managing expectations for late orders.
+            </p>
+            <div class="mt-4 rounded-lg bg-[var(--surface-sunken)] p-4">
+              <p class="text-sm text-[var(--ink-secondary)]">"parcelLab provides transparency throughout shipping...customers know order status and we understand logistics partner performance."</p>
+              <p class="mt-1 text-xs text-[var(--ink-muted)]">-- Robin Jakoby, E-Commerce Product Owner, GRAVIS</p>
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">4. Are They Future-Proof?</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Retail technology is becoming increasingly composable and best-in-breed. Consider how your fulfillment complexity will evolve, whether data silos are limiting teams, if the provider is nimble during disruptions, and whether they align with your desired future architecture. Future-proof software is flexible, adaptable, customizable, and grows with your business.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">5. Do They Care About Your Business?</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Post-purchase platforms require integration and configuration -- they're not plug-and-play solutions. Your provider should be your ally, equally committed to your business goals and tracking outcomes that matter to you.
+            </p>
+            <div class="mt-4 rounded-lg bg-[var(--surface-sunken)] p-4">
+              <p class="text-sm text-[var(--ink-secondary)]">"parcelLab's flexibility impressed us, especially with template testing...internally this takes much longer, but their team was incredibly responsive and fast."</p>
+              <p class="mt-1 text-xs text-[var(--ink-muted)]">-- Tim Volkmann, Manager -- Digital Consumer Direct Europe, Bose</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Your business and customers deserve a post-purchase experience provider that is capable, flexible, service-focused, future-ready, and genuinely invested in your success.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

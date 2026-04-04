@@ -1,0 +1,87 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Shoe Zone and parcelLab: A Seamless Transition from Offline to Online Retail in the Age of Covid-19 - parcelLab"
+  description="When COVID-19 forced UK non-essential retailers to close, Shoe Zone pivoted to online sales with parcelLab's support, reducing customer service inquiries through proactive shipping communications."
+>
+  <Header client:load />
+  <main>
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Case Study</span>
+          <h1 class="text-display text-[var(--ink)]">Shoe Zone and parcelLab: A Seamless Transition from Offline to Online Retail in the Age of Covid-19</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2020-06-29">June 29, 2020</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          The coronavirus has changed the way the British public shops -- perhaps forever. When Boris Johnson announced on March 23 that all non-essential stores would have to close with immediate effect, sales of bricks-and-mortar retailers plummeted. Many retailers who had traditionally relied heavily on their brick-and-mortar stores were forced to upgrade their online businesses.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          One that experienced this was Shoe Zone, a retailer that offers shoes for all ages. The company immediately introduced a "buy one get the cheapest free" offer on their website to encourage customers to continue shopping with them online.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Turning Rummagers into Loyal Customers During the Crisis</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Unlike many UK retailers, Shoe Zone had previously invested heavily in their e-commerce site, so they were already well placed to handle an increase in orders and the shift from offline to online. A partnership had been agreed with operations experience (OX) specialist, parcelLab. Shoe Zone was already proactively communicating with its customers during the shipping process via an integrated track and trace page in the company's branding.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">WISMO Inquiries Now Account for 70% of Customer Service Calls</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Reports indicate that the issue of WISMO (Where is my order?) is accounting for over 70 percent of inquiries for merchant customer service. Through the proactive communication Shoe Zone had implemented with the help of parcelLab, they actually saw a decrease in WISMO inquiries in March.
+        </p>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Engagement Results</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Shoe Zone has seen engagement rates of <strong class="text-[var(--ink)]">74%</strong>, open rates of <strong class="text-[var(--ink)]">68%</strong> and click rates of <strong class="text-[var(--ink)]">27%</strong> specifically attributed to shipping-related emails -- far exceeding typical marketing email benchmarks of 15-25% open rates and 2.5% click-through rates.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">The Future Looks Bright</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Both Shoe Zone and parcelLab are excited about what the future holds for the partnership. Undoubtedly, Shoe Zone's customers will receive an optimized customer experience, making them both happy and, at best, loyal brand ambassadors.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Client Quote</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">"In these difficult times, it is especially important that we provide our customers with the best possible Customer Experience. Thanks to parcelLab, we are able to keep them informed of the status of their order at all times."</p>
+          <p class="mt-1 text-sm text-[var(--ink-muted)]">-- Shoe Zone</p>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          By communicating with their customers when they are most engaged and creating a pleasant customer experience during the delivery phase, Shoe Zone has been able to increase customer retention tremendously.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

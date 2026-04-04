@@ -1,0 +1,112 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="6 Final Mile Delivery Tracking Tips and Examples to Try in Your Business - parcelLab"
+  description="Combat delivery anxiety with these 6 final mile delivery tracking tips, from real-time tracking to branded hubs and proof of delivery."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">6 Final Mile Delivery Tracking Tips and Examples to Try in Your Business</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2022-04-25">April 25, 2022</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>7 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          "Delivery anxiety" -- the uncertainty customers feel when they lack communication about their order status post-purchase -- can lead to order cancellations, increased support inquiries, and damaged brand perception. Final mile delivery tracking serves as a solution to maintain customer confidence throughout the delivery process.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Key Stat</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">21% of customers wouldn't buy from a brand offering no or limited shipment tracking.</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">6 Tips and Examples of Final Mile Delivery Tracking</h2>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">1. Offer Real-Time Order Tracking</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Real-time tracking empowers customers to monitor their orders independently, reducing support ticket volume. For retailers, tracking visibility helps identify complications and streamline logistics coordination.
+            </p>
+            <p class="mt-2 text-sm text-[var(--ink-muted)]"><strong>Example:</strong> Gravis provides detailed order status updates covering preparation, shipping, and delivery notifications.</p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">2. Set Up a Dedicated Branded Hub for Order Tracking</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Many retailers focus on brand consistency during shopping but abandon it post-purchase. A branded tracking hub maintains brand identity and customer confidence. This touchpoint significantly influences customer retention.
+            </p>
+            <p class="mt-2 text-sm text-[var(--ink-muted)]"><strong>Example:</strong> parcelLab collaborated with Bose to create a custom tracking hub featuring brand content and personalized product recommendations.</p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">3. Send "Out for Delivery" Notifications</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Nearly half of consumers (49%) want regular delivery updates. Communication often stops after the shipping notification, leaving customers uncertain. Proactive "out for delivery" alerts ease anxiety, particularly for same-day orders.
+            </p>
+            <p class="mt-2 text-sm text-[var(--ink-muted)]"><strong>Example:</strong> Peter Hahn's notifications resulted in 73% of customers rating communication as "very good" and 98% finding it "clear, helpful, and reliable."</p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">4. Allow Customers to Communicate with Delivery Personnel</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Complex deliveries -- to rural areas or apartments -- frequently fail. One in twenty deliveries encounter issues. Including contact information enables customers to share access codes and instructions, reducing failed deliveries while personalizing the experience.
+            </p>
+            <p class="mt-2 text-sm text-[var(--ink-muted)]"><strong>Example:</strong> Bergzeit allows customers to arrange preferred delivery options or time slots with final mile carriers.</p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">5. Send a Delivery Notification</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              45% of consumers report that guaranteed delivery dates reduce stress. Immediate delivery confirmation combats "porch pirates" -- 14% of Americans experienced package theft in the past year, affecting approximately 35.5 million people.
+            </p>
+            <p class="mt-2 text-sm text-[var(--ink-muted)]"><strong>Example:</strong> American Eagle sends delivery confirmation emails immediately upon drop-off, enabling quick parcel retrieval.</p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">6. Add Proof of Delivery</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Neglecting post-purchase communication diminishes customer loyalty. Investing in tracking infrastructure and regular updates creates positive experiences encouraging repeat purchases and revenue growth. Proof of delivery documentation confirms where and how a package was delivered.
+            </p>
+          </div>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          parcelLab's Operations Experience Management platform helps retailers implement these strategies, transforming operational complexity into competitive advantages.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

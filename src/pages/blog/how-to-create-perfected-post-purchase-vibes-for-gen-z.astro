@@ -1,0 +1,100 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="How to Create Perfected Post-Purchase Vibes for Gen Z - parcelLab"
+  description="Compare Gen Z and Millennial shopping behaviors and learn how to tailor post-purchase experiences for each generation."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Trends</span>
+          <h1 class="text-display text-[var(--ink)]">How to Create Perfected Post-Purchase Vibes for Gen Z</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">Anna Lapezo</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2025-05-14">May 14, 2025</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>7 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Gen Z and Millennials represent distinctly different shopping cohorts despite their proximity in age. While Millennials currently command approximately 54.3% higher consumer expenditures, Gen Z represents roughly $450 billion in global spending power -- and this figure continues expanding as they reach adulthood.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Discovery: Search Engines vs. Social Feeds</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Millennials initiate shopping through Google and brand websites, prioritizing research and deliberate purchase decisions through review comparison. Gen Z, on the other hand, discovers products via TikTok, Instagram, and influencer content. Nearly 40% prefer TikTok over Google for product discovery.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Key Takeaway</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">Millennials demonstrate intentional search behavior while Gen Z engages through social scrolling, making social presence essential for brands targeting younger consumers.</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Shopping Habits: Experiences vs. Values</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Millennials pursue personalized experiences -- curated recommendations, loyalty programs, and seamless omnichannel journeys justify premium pricing. Gen Z splits between value-driven purchases and impulse buys triggered by social media influencers.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          McKinsey research indicates social commerce in the United States will expand to $145 billion by 2027 from $67 billion presently. Gen Z and Millennials complete social media purchases four times more frequently than older generations.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Interestingly, Gen Z ranks quality slightly higher than price in purchasing considerations, contrary to assumptions about extreme price sensitivity.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Checkout and Post-Purchase: Speed vs. Transparency</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Millennials require flexible payment options, transparent shipping costs, and friction-free checkout experiences. Poor site optimization or cumbersome returns processes trigger cart abandonment.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Gen Z demands accelerated processes and transparency -- real-time delivery updates, straightforward order tracking, and clear return policies represent baseline expectations. Brands must anticipate needs throughout the post-purchase journey.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Key Takeaway</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">Winning Gen Z requires excellence in post-purchase experiences through branded tracking pages, proactive notifications, and seamless returns.</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Loyalty: Programs vs. Personalization</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Millennials maintain brand loyalty through rewards programs and preference recognition that streamline their experience. Gen Z prioritizes alignment with brand values, aesthetics, and cultural energy. Approximately 46% of Gen Z opt for cheaper store-brand alternatives over established brands.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">So, Who's Ruling Retail?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Both generations shape retail's future. Millennials possess greater purchasing power while Gen Z wields cultural influence. Success requires rejecting one-size-fits-all approaches in favor of tailored messaging, optimized experiences, and authentic brand positioning.
+        </p>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Retailers bridging experience and values considerations will achieve competitive advantage. ParcelLab enables retailers to create post-purchase experiences retaining Millennials while converting Gen Z browsers into brand advocates.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

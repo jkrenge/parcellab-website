@@ -1,0 +1,140 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Sustainability in E-Commerce: How Can Online Retailers Make Their Business Greener? - parcelLab"
+  description="Practical tips for online retailers to reduce their environmental impact, from green shipping options and reusable packaging to right-sized boxes and better product descriptions."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">Sustainability in E-Commerce: How Can Online Retailers Make Their Business Greener?</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2020-03-25">March 25, 2020</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>8 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Online shopping offers convenience but comes at an environmental cost. Nearly one-third of US solid waste originates from e-commerce packaging, and with predictions that half of all retail sales will occur online by 2028, sustainability is no longer optional. A Deloitte study found that 67.1% of consumers either sometimes or always check a brand's sustainability before purchasing. Here is what retailers can do about it.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Tips for Online Retailers</h2>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Offer Greener Shipping Options</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Partner with eco-friendly carriers that use bikes and electric vehicles for urban deliveries. Companies like Green Courier and DPD have led the way, with DPD winning the Green Apple Award for environmental best practices.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Eliminate Plastic Packaging</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Adopt cardboard alternatives, as Zara has done with their plastic-free approach. Avoid individual item packaging when possible, and ensure boxes are reusable or easily recyclable.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Use Reusable Packaging Systems</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Follow Ted Baker's model: removable label slips allow boxes to be reused for returns. Returned packaging in original condition can serve future orders, creating a circular system.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Stop Destroying Returns</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Amazon faced criticism for destroying returned items instead of reselling them. This practice sends functional goods to landfills, wasting resources and generating unnecessary waste.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Reconsider Free Returns</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Returns cost retailers &pound;60 billion annually. Fashion sees the highest return rates at 56%, and US returns generate 5 billion pounds of landfill waste and 15 million tons of annual carbon emissions. Research shows 30% of shoppers intentionally overorder and return unwanted items. Charging for returns discourages this behavior.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Right-Size Packaging</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Avoid shipping small items in oversized boxes. Standard sizes waste packing materials and van space. Right-sized packaging reduces material usage, shipping costs, and environmental impact simultaneously.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Improve Product Descriptions</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Detailed descriptions and high-quality photos reduce returns. Tools like ASOS's "See My Fit" augmented reality feature help customers assess fit before purchasing, preventing unnecessary returns and the associated environmental cost.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Consolidate Shipments</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Combine multi-package orders when possible and educate customers about the environmental benefits of patience. A single consolidated delivery is far more efficient than multiple individual shipments.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Tips for Customers</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Sustainability is a shared responsibility. Customers can also reduce their impact:
+        </p>
+
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Avoid express delivery</strong> -- standard shipping allows carriers to optimize routes and consolidate deliveries</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Ensure first-attempt delivery</strong> -- missed deliveries trigger second attempts, effectively doubling emissions</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Consider click-and-collect</strong> -- within 3 miles of a store, it is more sustainable than home delivery</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Avoid try-before-you-buy</strong> -- shopping in-store then buying online duplicates emissions</span>
+          </li>
+        </ul>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Online retailers must prioritize sustainability strategies now. While comprehensive overhauls will not happen overnight, those implementing environmental improvements will gain a competitive advantage as eco-conscious consumers increasingly seek greener alternatives. The brands that act first will be remembered by the customers who care most.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

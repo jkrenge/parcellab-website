@@ -1,0 +1,80 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="3 Unexpected Trends in US E-Commerce in 2022 - parcelLab"
+  description="Explore three emerging trends reshaping US e-commerce in 2022: sustainability, resale platforms, and legacy brands going direct-to-consumer."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Trends</span>
+          <h1 class="text-display text-[var(--ink)]">3 Unexpected Trends in US E-Commerce in 2022</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2022-06-10">June 10, 2022</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          It's safe to say that the last two years have been full of surprises for retailers -- often unwelcome ones. But recent research into US e-commerce has also found considerable innovation, original thinking, and creativity. Here are three emerging trends in 2022.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">1. Sustainability</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Sustainability has been a talking point for some time. However, brands and retailers have only recently begun implementing serious sustainability measures -- largely driven by consumer demand.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Products manufactured, marketed, and delivered sustainably perform better with shoppers and regularly outperform conventional products across multiple industries. Consumers actively demonstrate willingness to pay premium prices for reduced environmental impact. The focus is expected to center on carbon-neutral delivery and packaging alternatives.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">2. Resale Platforms</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Pre-loved, refurbished, and vintage item resale represents significant business opportunity in 2022. This trend connects to broader sustainability interests and growing consumer attraction to nostalgic fashion from earlier decades.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Prominent retailers now launch their own resale platforms, such as PrettyLittleThing, enabling them to reach additional customers while strengthening environmental positioning. Success requires excellent returns management infrastructure -- an effective resale operation demands smooth, affordable item collection systems alongside consistent customer communication.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">3. Legacy Brands Turn to DTC</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Established brands like Nike and Levi's, previously focused on wholesale retail, are now reasserting direct sales control through pop-up stores and robust online direct channels.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Supply chain complications have partly motivated this shift. Levi's restructured operations enabling retail locations to support e-commerce logistics. However, numerous brands prioritize deeper customer engagement and expanded post-purchase interaction opportunities as the primary driver.
+        </p>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          These trends all share a common thread: the growing importance of owning the customer relationship from start to finish. Whether through sustainable practices, resale programs, or direct-to-consumer channels, the retailers winning in 2022 are those investing in every touchpoint of the customer journey.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

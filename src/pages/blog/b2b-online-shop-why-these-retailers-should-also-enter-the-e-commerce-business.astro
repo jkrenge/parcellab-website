@@ -1,0 +1,132 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="B2B Online Shop - Why These Retailers Should Also Enter the E-Commerce Business - parcelLab"
+  description="While 59% of B2B retailers operate online stores, most generate less than 5% of sales through them. Learn how to build a successful B2B e-commerce presence."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">B2B Online Shop -- Why These Retailers Should Also Enter the E-Commerce Business</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2019-08-04">August 4, 2019</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>8 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Online stores dominate B2C retail with substantial sales, yet B2B retailers lag significantly behind. While 59% of B2B retailers operate online stores, only 26% generate less than 5% of sales through them. The primary obstacles cited are weak customer demand and implementation complexity.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Something Has to Change in B2B Online Retail</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Despite these barriers, demand clearly exists. Research shows 93% of B2B customers prefer purchasing online, with 74% already researching products there. Approximately 30% complete half their transactions digitally, indicating substantial untapped potential for retailers willing to invest in their digital presence.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Essential Elements for a B2B Online Shop</h2>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">No Detours for the Customer</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              B2B purchasers operate under time constraints for work-related orders. Quick-order functions, QR code searches, and watch lists reduce friction. Frequently purchased items should appear prominently on homepages for immediate cart addition.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Individuality in Prices</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Unlike B2C models, B2B requires flexible pricing. Regular customers receive discounts, and volume purchases trigger tiered pricing. Store software must support real-time individual pricing displays with transparent structures.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Detailed Product Information</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              B2B orders carry organizational responsibility. Comprehensive product details -- including accessories, delivery times, costs, and transparent pricing explanations -- are essential for confident purchasing decisions.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Personalization in Addressing and Products</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Logged-in customers should access customized pages featuring company-specific offers, pricing, and catalogs. Stock availability, order history, and appointment ordering capabilities enhance functionality. Personalized shipping notifications keep customers informed throughout order processing.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Various Release Processes</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Multiple stakeholders participate in B2B purchasing. Store software must support different approval workflows, allowing production staff to add items, managers to review, and supervisors to authorize purchases across multiple login credentials.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Advantages of a B2B Online Shop</h2>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">International reach</strong> -- minimal country-specific modifications enable global expansion</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Enhanced brand presentation</strong> -- professional product displays and SEO increase visibility</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Data analysis capabilities</strong> -- track product performance, campaign effectiveness, and evolving behavior</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Generational shift</strong> -- three-quarters of Millennials influence B2B purchasing and prefer digital</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">High success rate</strong> -- 90% of companies implementing e-commerce achieve associated objectives</span>
+          </li>
+        </ul>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Challenges to Consider</h2>
+        <ul class="mt-4 space-y-3">
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Time-intensive management:</strong> Careful planning regarding design, structure, and software selection is required</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Staff training needs:</strong> Employees need comprehensive education on new distribution channel functionalities</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Structural integration:</strong> Existing organizational frameworks require modification to accommodate new technologies</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Strategic development:</strong> Success demands a deliberate e-commerce strategy -- haphazard implementation yields poor results</li>
+        </ul>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          B2B online stores represent increasingly viable opportunities beyond traditional retail. Contemporary businesses must embrace technological advancement and change. Success requires adapting platform functions specifically for business transactions, enabling streamlined customer shopping experiences and driving measurable results.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

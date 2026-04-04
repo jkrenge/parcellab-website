@@ -1,0 +1,95 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Interview with Tobias Buxhoidt: Why Retailers Should Manage the Customer Experience Themselves - parcelLab"
+  description="parcelLab founder and CEO Tobias Buxhoidt explains why retailers must take control of post-purchase communications and delivery management."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">Interview with Tobias Buxhoidt: Why Retailers Should Manage the Customer Experience Themselves</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2020-06-07">June 7, 2020</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          In this interview, parcelLab founder and CEO Tobias Buxhoidt makes the case for why retailers must take ownership of their post-purchase customer experience -- from delivery communications to WISMO management -- rather than delegating these critical touchpoints to logistics partners.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Core Belief</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">"Communication should not stop after the order is placed, because that is where the most important part of the customer journey begins: waiting for the package!"</p>
+          <p class="mt-1 text-sm text-[var(--ink-muted)]">-- Tobias Buxhoidt, CEO &amp; Founder, parcelLab</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Customer Experience to Ensure Loyalty</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Buxhoidt emphasizes that retailers must provide consistent support throughout the entire buying journey. Too many brands invest heavily in acquisition and the pre-purchase experience, only to go silent after the order is placed. This leaves a critical gap in the customer journey -- one that directly impacts repeat purchase rates.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Retailers should identify gaps in their customer journey and maintain continuous engagement to foster repeat purchases and brand loyalty. Every moment of silence after checkout is a missed opportunity to build the relationship.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Processing WISMO Requests</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          "Where Is My Order?" (WISMO) inquiries represent a significant customer service burden for most retailers. Rather than reactively answering these questions one at a time, retailers should proactively communicate delivery status through shipping emails and branded tracking pages -- making such inquiries unnecessary in the first place.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          The shift from reactive to proactive is fundamental. Every WISMO call that does not happen is a better experience for the customer and a cost saving for the retailer.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Delivery as the Most Critical Touchpoint</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Delivery represents the most emotionally significant phase of the customer journey. Buxhoidt notes that customers anxiously await their purchases, making timely, accurate communication essential. During the coronavirus pandemic, customers particularly needed reassurance regarding package status -- and the brands that provided it strengthened their relationships.
+        </p>
+
+        <div class="mt-8 rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+          <h3 class="text-lg font-semibold text-[var(--ink)]">Real-World Impact</h3>
+          <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+            IKEA Italy experienced <strong class="text-[var(--ink)]">a 25% decrease in customer service requests</strong> upon implementing parcelLab's post-purchase communication solutions. Proactive communication reduces the burden on support teams while improving the customer experience.
+          </p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">The Bottom Line</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Buxhoidt's message is clear and consistent: the customer experience does not end at checkout. Retailers who hand off the post-purchase phase to carriers are effectively handing off the customer relationship. Those who take control of every touchpoint -- from order confirmation to delivery to returns -- build the kind of loyalty that drives sustainable growth.
+        </p>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The most important part of the customer journey is the part most retailers neglect. Taking ownership of post-purchase communications is not just a nice-to-have -- it is a strategic imperative for any retailer serious about customer retention and lifetime value.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

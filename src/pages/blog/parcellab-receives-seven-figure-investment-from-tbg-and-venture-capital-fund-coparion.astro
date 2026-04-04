@@ -1,0 +1,87 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="parcelLab Receives Seven-Figure Investment from TBG and Venture Capital Fund coparion - parcelLab"
+  description="Munich-based startup parcelLab GmbH secures seven-figure Series A funding from TBG and coparion to expand IT, sales, and international operations."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Company News</span>
+          <h1 class="text-display text-[var(--ink)]">parcelLab Receives Seven-Figure Investment from TBG and Venture Capital Fund coparion</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2018-02-10">February 10, 2018</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>3 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Munich-based startup parcelLab GmbH successfully secured seven-figure Series A funding from TAKKT Beteiligungsgesellschaft mbH (TBG) and coparion GmbH & Co. KG. The company planned to allocate capital toward expanding IT and sales teams while pursuing international expansion.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Quote</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">"We are very pleased to have two more strong, strategic partners on board with TBG and coparion."</p>
+          <p class="mt-1 text-sm text-[var(--ink-muted)]">-- Tobias Buxhoidt, Co-founder and CEO, parcelLab</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Company Overview</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Founded in 2014 by Tobias Buxhoidt, Anton Eder, and Julian Krenge, parcelLab employed over 20 people at the time of funding. The platform monitors shipments in real-time across the DACH region, Italy, UK, and USA markets.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Core Offering</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The technology identifies delivery delays through algorithmic analysis and communicates updates via email, SMS, and other channels. Clients included Marc O'Polo, Jochen Schweizer, Thomann, and Weltbild.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Investor Perspectives</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Christian Stein from coparion highlighted the company's "impressive" ability to extract insights from logistics data, praising measurable results achieved rapidly. Franziskus Josten from TBG emphasized the value of personalized post-purchase communications for enhancing customer experiences.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">At a Glance</p>
+          <ul class="mt-4 space-y-2">
+            <li class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Founded:</strong> 2014</li>
+            <li class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Presence:</strong> 32 countries, 17 languages</li>
+            <li class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Clients:</strong> 280+ international retailers</li>
+            <li class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Team:</strong> 20+ employees</li>
+          </ul>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          At the time of the announcement, the startup operated across 32 countries in 17 languages, serving 280+ international retailers. The Series A funding marked a significant milestone in parcelLab's growth trajectory.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

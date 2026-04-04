@@ -1,0 +1,115 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="How to Deliver a More Sustainable Holiday Season - parcelLab"
+  description="Practical strategies for retailers to make their holiday season more sustainable, from delivery options to intelligent packaging."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Trends</span>
+          <h1 class="text-display text-[var(--ink)]">How to Deliver a More Sustainable Holiday Season</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2021-12-11">December 11, 2021</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Consumer attitudes toward sustainability have shifted dramatically. Research spanning 29 countries reveals that over half of consumers are prepared to modify their purchasing behaviors to benefit the environment. Notably, more than 70% indicated willingness to pay premium prices for transparent and traceable retail practices.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Key Insight</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">Over 50% of German consumers expressed willingness to accept slower deliveries in exchange for reduced carbon emissions.</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Customers Want Sustainable Retail</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The pandemic has intensified environmental consciousness among shoppers. Sustainability is no longer a niche concern -- it's a mainstream expectation. Retailers who fail to address this shift risk losing customers to more environmentally conscious competitors.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">What Does Sustainability Mean During the Holiday Season?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Sustainability encompasses multiple dimensions beyond packaging considerations. Here are the key areas retailers should focus on:
+        </p>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Delivery Options</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Shipping companies increasingly employ electric vehicles and bicycle-based delivery services. Offering varied delivery choices lets customers pick the most sustainable option.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Extended Delivery Timelines</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Over 50% of German consumers surveyed expressed willingness to accept slower deliveries in exchange for reduced carbon emissions. Early holiday shopping patterns suggest consumer openness to sustainability trade-offs.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Data Intelligence</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Leveraging customer data improves operational efficiency across supply chains, from inventory forecasting to minimizing returns-related waste.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Click and Collect</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Eliminating last-mile delivery costs -- both financial and environmental -- by enabling in-store pickup significantly reduces carbon footprints. This approach also benefits older demographic shoppers.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Intelligent Packaging</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Beyond recyclable materials and refill options, strategic design and alternative materials like wool insulation instead of polystyrene reduce spatial requirements and waste.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Social Sustainability</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Fair compensation and working conditions throughout supply chains represent essential components, from warehouse employees to delivery personnel.
+            </p>
+          </div>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Despite supply chain pressures and logistics challenges during peak season, sustainability represents a critical factor in consumer holiday shopping decisions. Retailers cannot afford to overlook these expectations. Major retailers and platforms -- including Amazon's electric vehicle transition and Shopify's Black Friday carbon offsetting -- demonstrate that mainstream adoption of sustainable practices is well underway.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

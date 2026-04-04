@@ -1,0 +1,107 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="25 Years of Online Trade - The Development of E-Commerce - parcelLab"
+  description="From the first online purchase of a Sting CD in 1994 to a 53.4 billion euro industry -- explore the fascinating evolution of e-commerce over 25 years."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">25 Years of Online Trade -- The Development of E-Commerce</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2019-10-19">October 19, 2019</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>7 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          E-commerce emerged approximately 25 years ago. The first documented transaction occurred on August 11, 1994, though three competing origin stories exist regarding online commerce's inception.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Three Origin Stories</h2>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">1. The Stanford Students Account</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              University students at Stanford conducted a transaction via Arpanet (the Internet's predecessor) with MIT colleagues in the 1970s. While this predates modern e-commerce, it represents an early form of digital trade.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">2. The Teletext Purchase</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              A 72-year-old British woman named Jane Snowball purchased groceries through television-based teletext technology before the modern internet existed, selecting items like margarine, cornflakes, and eggs from approximately 1,000 products offered by grocer Tesco.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">3. The First Official Online Purchase</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              On August 11, 1994, Phil Brandenberger purchased a Sting CD titled "Ten Summoner's Tales" from Noteworthy Music via Netmarket. This transaction included checkout and encrypted credit card payment, making it the first documented sale via an online store. This account remains the most widely recognized and celebrated.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">How Popular E-Commerce Is</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Online shopping adoption has grown substantially. Over 90 percent of Germans shop online annually. German e-commerce users increased from approximately 65 million in 2017 to a projected 71 million by 2023.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Sales figures demonstrate explosive growth: German online retail generated only 1.1 billion euros in 1999, reaching 53.4 billion euros by 2018. Leading retailers include Amazon, Otto, and Zalando.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">The Founding of Internet Giants</h2>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Amazon (1994)</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Jeff Bezos founded Amazon in his Seattle garage, initially selling only books. The first order was for "Fluid Concepts and Creative Analogies." Amazon celebrated its millionth customer four years later, subsequently expanding to Germany and gradually adding diverse product categories to become the everything store we know today.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">eBay (1995)</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Pierre Omidyar created "AuctionWeb," functioning as an online marketplace for used items. A broken laser pointer sold for $14.83, generating early momentum. After two years, the platform adopted the "eBay" name and evolved to include professional dealers, transforming from consumer-to-consumer into a business-to-consumer model.
+            </p>
+          </div>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Contemporary online stores proliferate rapidly, with continuously expanding product offerings and simplified purchasing processes. What began modestly with a single CD purchase has evolved into a massive industry. Amazon and eBay remain dominant players today, while the sector continues advancing through emerging technologies and evolving consumer expectations.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

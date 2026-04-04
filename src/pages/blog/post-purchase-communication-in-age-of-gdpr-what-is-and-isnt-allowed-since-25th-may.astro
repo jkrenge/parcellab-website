@@ -1,0 +1,147 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Post-Purchase Communication in Age of GDPR - What Is and Isn't Allowed Since 25th May - parcelLab"
+  description="Learn what post-purchase communications are permitted under GDPR, from transactional emails to advertising in order confirmations."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">Post-Purchase Communication in Age of GDPR -- What Is and Isn't Allowed Since 25th May</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2018-08-16">August 16, 2018</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          The GDPR supplanted the Data Protection Act 1998 in the UK, generating significant uncertainty among British businesses. A Federation of Small Businesses survey revealed fewer than one in ten UK small enterprises were fully prepared for the new EU-wide personal data regulations.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Post-purchase communication confusion extends across the retail sector. Retailers questioned whether they could inform customers about order shipment status or delivery dates without special consent agreements. This analysis addresses common data protection concerns regarding transactional communications.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">What is Personal Data?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The EU's General Data Protection Regulation governs personal data processing by both private companies and public authorities, establishing unprecedented protections. Its objective involves harmonizing data protection standards across member states while restoring individual control over personal information.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Personal data examples include:
+        </p>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="1"/></svg>
+            <span class="text-[var(--ink-secondary)]">Name and surname</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="1"/></svg>
+            <span class="text-[var(--ink-secondary)]">Address</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="1"/></svg>
+            <span class="text-[var(--ink-secondary)]">Email address</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="1"/></svg>
+            <span class="text-[var(--ink-secondary)]">Location data</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="1"/></svg>
+            <span class="text-[var(--ink-secondary)]">Phone or mobile number</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="1"/></svg>
+            <span class="text-[var(--ink-secondary)]">Date of birth</span>
+          </li>
+        </ul>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          From May 25, retailers collecting such information require user consent. Additionally, organizations may collect only data necessary for order processing and fulfillment -- such as name, address, and email -- nothing beyond these essentials.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Are Online Retailers Allowed Post-Purchase Communication?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Article 6(1)(B) of GDPR addresses lawful data processing:
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">GDPR Article 6(1)(B)</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">"The processing is lawful if [it] is for the performance of a contract, party to the data subject, or necessary to carry out pre-contractual action."</p>
+        </div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          This provision permits transaction-related messages for contract fulfillment. Communications connected to order processing -- even if not directly serving the primary service -- remain permissible. Transaction-based customer communications require no explicit consent. This constitutes customer service rather than advertising.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          However, once notification content diverges from order processing, retailers must obtain explicit customer consent for additional communications. Compliant emails include notifications regarding:
+        </p>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Order confirmation</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Pre-shipping status updates</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Shipping status</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Parcel tracking information</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Delivery station directions</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Return status information</span>
+          </li>
+        </ul>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Advertising in Post-Purchase Communication</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Emails combining necessary order information with supplementary product details remain classified as customer service. Examples include instructional videos demonstrating product usage, recipes for food purchases, or cycling route links following bicycle purchases. This value-added content enhances product experience without constituting promotion.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Advertisements may appear in confirmations, status updates, and dispatch messages -- including offers, promotions, and coupons -- provided items represent similar products within the same category as the original purchase. A bicycle helmet advertisement following a bicycle purchase proves acceptable; however, iPhone advertisements in bicycle dispatch messages violate guidelines.
+        </p>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          GDPR hasn't eliminated post-purchase communication possibilities. Rather, retailers must prioritize valuable, customer-relevant content. This approach strengthens customer loyalty, satisfaction, and repeat business prospects over time.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

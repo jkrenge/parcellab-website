@@ -1,0 +1,63 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout title="Turning Returns Into ROI: A Department-by-Department Playbook - parcelLab" description="A structured methodology for optimizing returns processes across enterprise retail, covering warehouse, product, customer service, and commercial teams.">
+  <Header client:load />
+  <main>
+    <section class="section-generous"><div class="mx-auto max-w-[1440px] px-6 md:px-12"><div class="mx-auto max-w-[800px]">
+      <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>Back to blog</a>
+      <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Returns</span>
+      <h1 class="text-display text-[var(--ink)]">Turning Returns Into ROI: A Department-by-Department Playbook for Retailers</h1>
+      <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+        <span>By <strong class="font-medium text-[var(--ink-secondary)]">Anna Lapezo</strong></span><span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+        <time datetime="2026-03-11">March 11, 2026</time><span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span><span>10 min read</span>
+      </div>
+    </div></div></section>
+    <section class="pb-16 md:pb-24"><div class="mx-auto max-w-[800px] px-6 md:px-12">
+      <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">Most retailers implement returns portals then consider the work finished. But having a portal might be your first 5k -- significant savings exist in deeper optimization work that requires departmental analysis. Thomas Wagener, parcelLab's Product Owner for Returns, advocates starting with one fundamental question posed to each department: "What is your biggest pain point around returns?"</p>
+      <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Four-Department Audit Framework</h2>
+      <div class="mt-6 space-y-6">
+        <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+          <h3 class="text-lg font-semibold text-[var(--ink)]">Warehouse and Inbound Logistics</h3>
+          <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Manual data entry is the primary efficiency drain. Barcode scanning with pre-populated data can eliminate five seconds per return. For large retailers, this translates to potential savings of approximately EUR 50,000 per year through reduced staffing needs. Return volume forecasting enables better workforce planning.</p>
+        </div>
+        <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+          <h3 class="text-lg font-semibold text-[var(--ink)]">Product and Merchandising</h3>
+          <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Current return reasons often lack necessary granularity. Portals can ask category-specific follow-up questions. Real-time data delivery enables in-season corrections versus delayed next-season fixes. One global brand experienced six-month delays in receiving returns data.</p>
+        </div>
+        <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+          <h3 class="text-lg font-semibold text-[var(--ink)]">Customer Service</h3>
+          <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Three common touchpoints in warranty flows can be consolidated to one. Warranty case handling costs approximately EUR 5-8 per contact; eliminating two touchpoints saves EUR 15-24 per case. Dynamic approval thresholds adjustable by season and customer segment improve efficiency.</p>
+        </div>
+        <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+          <h3 class="text-lg font-semibold text-[var(--ink)]">Web, CRM, and Commercial Teams</h3>
+          <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Returns typically operate as isolated silos disconnected from loyalty programs. In-store return drops represent untapped revenue rescue opportunities. Gift card options with top-up incentives retain revenue within the ecosystem.</p>
+        </div>
+      </div>
+      <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Real-World Examples</h2>
+      <ul class="mt-4 space-y-3">
+        <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg><span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Emma Mattress</strong> -- offers free toppers for "too hard" complaints rather than processing expensive bulky returns</span></li>
+        <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg><span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Dyson</strong> -- portal automatically routes damaged-battery returns to hazardous-goods specialists</span></li>
+        <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg><span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Conrad</strong> -- consolidated warranty flows eliminate manual touchpoints while ensuring fraud departments receive required documentation</span></li>
+      </ul>
+      <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Quantified Benefits</p>
+        <div class="mt-4 grid grid-cols-2 gap-4">
+          <div><p class="text-2xl font-bold text-[var(--ink)]">EUR 50K+</p><p class="text-sm text-[var(--ink-muted)]">annual warehouse labor savings</p></div>
+          <div><p class="text-2xl font-bold text-[var(--ink)]">EUR 5-8</p><p class="text-sm text-[var(--ink-muted)]">saved per deflected CS contact</p></div>
+        </div>
+      </div>
+      <div class="my-12 border-t border-[var(--line)]"></div>
+      <p class="text-[var(--ink-secondary)] leading-relaxed">Optimization success depends on treating returns as a continuous improvement loop rather than a one-time project, with cross-functional ownership and prioritization by financial impact.</p>
+    </div></section>
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

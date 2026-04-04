@@ -1,0 +1,174 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="AfterShip vs Narvar vs WISMOlabs vs parcelLab - parcelLab"
+  description="A comprehensive comparison of the top post-purchase platforms: AfterShip, Narvar, WISMOlabs, and parcelLab. Find the right solution for your ecommerce business."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Post-Purchase</span>
+          <h1 class="text-display text-[var(--ink)]">AfterShip vs Narvar vs WISMOlabs vs parcelLab</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2023-05-11">May 11, 2023</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>10 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          One of the most critical factors to ecommerce success lies in ensuring customers experience a smooth and positive shopping experience. This experience extends beyond the initial purchase, making post-purchase solutions essential. Here's how the four leading platforms compare.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Platform Overviews</h2>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Narvar</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Narvar enables brands to manage their "after sale" journey, including order notifications, package tracking, delivery, and returns management. Operating from offices in San Mateo, London, Germany, and India, Narvar serves notable clients including Sonos, Lululemon, and Sephora.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">AfterShip</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              AfterShip provides shipment monitoring, branded tracking pages, return portals, and shipping management tools like label generation and rate calculators. The company maintains offices across Singapore, Austin, Toronto, Barcelona, India, Shenzhen, and Hong Kong, serving brands such as TOMS, Gymshark, and Aesop.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">WISMOlabs</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Founded in 2019, WISMOlabs offers post-purchase software for order tracking, delivery date predictions, customer communication, and data analytics. The platform currently operates only in the United States and targets small businesses. Customers include Monoprice, Tecovas, and Capezio.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">parcelLab</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              parcelLab's award-winning platform optimizes every post-purchase stage with features including white-labeled communications, brand portals, logistics reporting, and returns management. The platform tracks shipping data from over 350 carriers. Notable customers include IKEA, Chico's, H&amp;M, and Yeti.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Head-to-Head Comparisons</h2>
+
+        <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-2">Narvar vs AfterShip</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Onboarding takes significantly longer with Narvar (up to 6 months) versus AfterShip's flexible options. Narvar communications lack white-label capabilities, while AfterShip offers customizable solutions. AfterShip provides transparent tiered pricing; Narvar does not publicly display pricing. Both platforms support 300+ carriers.
+        </p>
+
+        <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-2">parcelLab vs AfterShip</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          parcelLab completes onboarding in 2-30 days versus AfterShip's variable timeline. parcelLab offers fully white-labeled solutions; AfterShip provides customizable but limited white-label options. parcelLab integrates 350+ carriers via direct API without data scraping. Both solutions include returns management and comparable customer support.
+        </p>
+
+        <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-2">parcelLab vs Narvar</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          parcelLab accelerates onboarding significantly (weeks vs. months). parcelLab provides complete white-label customization; Narvar includes branding overlays. Both platforms support enterprise-level customers. parcelLab achieves higher customer ratings (4.62 vs. 4.2 stars).
+        </p>
+
+        <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-2">AfterShip vs WISMOlabs</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          AfterShip serves diverse business sizes; WISMOlabs targets small businesses. WISMOlabs pricing starts at $99 monthly. AfterShip supports over 1,000 carriers versus WISMOlabs' 200+.
+        </p>
+
+        <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-2">parcelLab vs WISMOlabs</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          parcelLab serves major brands; WISMOlabs caters to smaller businesses. parcelLab delivers advanced, customizable workflows and offers comprehensive white-labeling across all customer touchpoints.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Overall Comparison</h2>
+        <div class="mt-6 overflow-x-auto rounded-xl border border-[var(--line)]">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-[var(--line)] bg-[var(--surface-sunken)]">
+                <th class="px-4 py-3 text-left font-semibold text-[var(--ink)]">Feature</th>
+                <th class="px-4 py-3 text-left font-semibold text-[var(--ink)]">parcelLab</th>
+                <th class="px-4 py-3 text-left font-semibold text-[var(--ink)]">Narvar</th>
+                <th class="px-4 py-3 text-left font-semibold text-[var(--ink)]">AfterShip</th>
+                <th class="px-4 py-3 text-left font-semibold text-[var(--ink)]">WISMOlabs</th>
+              </tr>
+            </thead>
+            <tbody class="text-[var(--ink-secondary)]">
+              <tr class="border-b border-[var(--line)]">
+                <td class="px-4 py-3 font-medium text-[var(--ink)]">Avg Rating</td>
+                <td class="px-4 py-3">4.62 stars</td>
+                <td class="px-4 py-3">4.2 stars</td>
+                <td class="px-4 py-3">4.2 stars</td>
+                <td class="px-4 py-3">4.98 stars</td>
+              </tr>
+              <tr class="border-b border-[var(--line)]">
+                <td class="px-4 py-3 font-medium text-[var(--ink)]">Onboarding</td>
+                <td class="px-4 py-3">2-30 days</td>
+                <td class="px-4 py-3">Up to 6 months</td>
+                <td class="px-4 py-3">Variable</td>
+                <td class="px-4 py-3">Limited data</td>
+              </tr>
+              <tr class="border-b border-[var(--line)]">
+                <td class="px-4 py-3 font-medium text-[var(--ink)]">White-Labeling</td>
+                <td class="px-4 py-3">Full</td>
+                <td class="px-4 py-3">None</td>
+                <td class="px-4 py-3">Available</td>
+                <td class="px-4 py-3">Unclear</td>
+              </tr>
+              <tr class="border-b border-[var(--line)]">
+                <td class="px-4 py-3 font-medium text-[var(--ink)]">Carriers</td>
+                <td class="px-4 py-3">350+</td>
+                <td class="px-4 py-3">300+</td>
+                <td class="px-4 py-3">1,000+</td>
+                <td class="px-4 py-3">200+</td>
+              </tr>
+              <tr class="border-b border-[var(--line)]">
+                <td class="px-4 py-3 font-medium text-[var(--ink)]">Returns</td>
+                <td class="px-4 py-3">Yes</td>
+                <td class="px-4 py-3">Yes</td>
+                <td class="px-4 py-3">Yes</td>
+                <td class="px-4 py-3">No info</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium text-[var(--ink)]">CSM</td>
+                <td class="px-4 py-3">Yes</td>
+                <td class="px-4 py-3">Yes</td>
+                <td class="px-4 py-3">Yes</td>
+                <td class="px-4 py-3">Limited</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Selecting the appropriate post-purchase platform depends on business size, workflow complexity, and support requirements. parcelLab excels for enterprises prioritizing rapid deployment and comprehensive white-labeling. Narvar serves larger organizations seeking industry-specific solutions. AfterShip accommodates mid-market businesses through transparent, tiered pricing. WISMOlabs provides cost-effective options for emerging ecommerce brands.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

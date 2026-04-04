@@ -1,0 +1,122 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Unlocking Customer Loyalty: How Glossier and BaubleBar Build Thriving Communities - parcelLab"
+  description="Learn how Glossier and BaubleBar turn casual buyers into passionate brand advocates through community building, active listening, and empowered CX teams."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Customer Experience</span>
+          <h1 class="text-display text-[var(--ink)]">Unlocking Customer Loyalty: How Glossier and BaubleBar Build Thriving Communities</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">Larry Thoma</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2025-06-27">June 27, 2025</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>7 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Building a loyal customer base isn't just about selling products. It's about creating a community. Insights from the CX Mixer podcast featuring Cati from Glossier and Maritza from BaubleBar reveal game-changing strategies for turning casual buyers into passionate brand advocates.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">The Power of Listening and Responding</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Both Glossier and BaubleBar have mastered truly hearing their customers. Glossier's iconic Milky Jelly Cleanser originated from a blog post asking customers to describe their perfect face wash. This crowdsourced approach resulted in a product customers loved because it was literally made for them.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Expert Insight</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">"If you're not engaging with your customers, if you're not engaging to see what the response is on a new product -- you're really missing the mark here."</p>
+          <p class="mt-1 text-sm text-[var(--ink-muted)]">-- Maritza, BaubleBar</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Turning Challenges into Opportunities</h2>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Glossier's "Balm Dotcom" Saga</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              When Glossier released a vegan version of their popular Balm Dotcom, they received mixed feedback. Their response: listen to customer concerns about texture and moisturizing properties, return to the drawing board to improve the formula, communicate transparently about changes, and release a new flavor alongside the improved formula.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">BaubleBar's Custom Order Conundrum</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              BaubleBar faced challenges with their custom order process, which takes up to four weeks. To maintain customer excitement during waiting periods, they provide personalized product recommendations, offer early access to new launches for loyal customers, and communicate proactively about order status and timelines.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Building Community Through Unexpected Channels</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Glossier has chosen not to offer phone support. As Cati explained: "So many of our customers see us either on our website or on social. And so if we can just meet them there versus being like, well, we know you're on our website, but you do, in fact, have to call us -- that's an extra step for the customer."
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          BaubleBar launched a dedicated Instagram channel called "Superfan by BaubleBar" that showcases their biggest customer advocates, provides exclusive content and community events, and deepens engagement with loyal followers.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Empowering Customer Service Teams</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Both emphasized the importance of empowering customer service teams to go above and beyond. Cati shared: "I tell my team all the time -- use your judgment, and I trust your judgment. Nobody has ever gotten in trouble for sending a free lip balm to somebody to turn their experience around."
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Key Takeaways for Building Customer Loyalty</h2>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Listen actively</strong> and respond authentically to customer feedback</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Transform challenges</strong> into opportunities demonstrating commitment to customers</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Meet audiences where they are,</strong> even when bucking industry trends</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Create exclusive spaces</strong> for passionate customers to connect with your brand</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Empower CX teams</strong> to make judgment calls that benefit customers</span>
+          </li>
+        </ul>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Building thriving communities is essential for long-term success in competitive markets. The playbook is clear: listen deeply, respond authentically, and give your teams the freedom to make things right.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

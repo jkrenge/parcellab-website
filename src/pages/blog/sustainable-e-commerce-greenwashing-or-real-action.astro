@@ -1,0 +1,129 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Sustainable E-Commerce: Greenwashing or Real Action? - parcelLab"
+  description="Explore what sustainability really means for e-commerce in 2022, how leading brands are rising to the challenge, and key strategies for genuine action."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">Sustainable E-Commerce: Greenwashing or Real Action?</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2022-07-01">July 1, 2022</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>7 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Consumers in every country say they want sustainability. But they have a hard time defining what that means. People are not confident about which types of packaging are better for the planet or how to know whether a product was sustainably produced.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">What Does Sustainability Mean in 2022?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The concept of sustainability has grown to include many different aspects. When we talk about sustainable e-commerce, that can include:
+        </p>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Products made from recycled or recyclable materials</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Lightweight, recycled or recyclable packaging</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Carbon-neutral delivery options</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Sharing profits with charity or community initiatives</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Providing opportunities for staff at all levels of the business</span>
+          </li>
+        </ul>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">How E-Commerce Brands Are Rising to the Challenge</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Macy's announced a $5 billion sustainability initiative with three aspects: planet, people, and communities. The "planet" aspect includes using more sustainable materials, reducing waste, and auditing supplier factories. They're also working on social equity by investing in education, setting diversity targets, and increasing minimum hourly pay.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Other retailers focus on what happens post-purchase, looking for ways to make their shipping, delivery, and returns more sustainable. In Canada, Walmart is pioneering carbon-neutral delivery with an electric vehicle fleet and carbon offset program.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Key Points for Sustainable E-Commerce</h2>
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Create a Strategy</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Individual ideas for sustainability are great, but they need to be part of a coherent project. Find opportunities to make every part of your e-commerce business more sustainable.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Understand Your Supply Chains</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              From materials to manufacturers to stock levels, knowledge is power. Mapping supply chains and tracking stock levels can help improve efficiency.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Offer Sustainable Packaging and Delivery</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              90% of consumers say they are more likely to choose an e-commerce brand that offers eco-friendly delivery.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Look Into Resale and Repair Programs</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Increasingly popular with brands and shoppers alike. The EU is introducing regulations to force fashion companies to use more sustainable materials and give customers more repair support.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Include Customers in Your Strategy</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Talk about what you're doing. Encourage customers to choose sustainable products or delivery options. Footwear brand Toms is a great example with their "buy one, give one" initiative and "Impact" section prominently featured on their website.
+            </p>
+          </div>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          A big part of any sustainability initiative is collecting information to understand what's actually going on in your business. Data about your deliveries, stock levels, and customer behavior can all feed back into sustainability plans. From supply chains to shipping, resale to returns, the green revolution in e-commerce will be built on better data.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

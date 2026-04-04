@@ -1,0 +1,100 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="6 Trends That Will Surge in E-Commerce in 2022 - parcelLab"
+  description="From sustainability to augmented reality, here are 6 e-commerce trends set to dominate in 2022."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Trends</span>
+          <h1 class="text-display text-[var(--ink)]">6 Trends That Will Surge in E-Commerce in 2022</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2022-01-10">January 10, 2022</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>6 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          In 2021, e-commerce has continued to thrive. More people are now more willing to buy online than they ever have before. As we look ahead, we've broken down six key trends we expect to dominate in e-commerce in 2022.
+        </p>
+
+        <div class="mt-8 space-y-8">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">1. Sustainability</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              People now have the luxury of choice when they shop, and they're choosing brands by shared values. The biggest example is sustainability. Questions like "Where are the materials sourced from? What is the packaging made of? Do they offer green delivery options?" are becoming more common. Brands are taking notice, and the New Year will bring new sustainability initiatives.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">2. Circular Economy</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              More e-commerce retailers will embrace the circular economy -- the idea that everything should be designed to be reused and shared, rather than disposed of. Products are designed, produced, and distributed to serve a primary purpose but have longevity. After use, products can be disassembled and materials reused, or repaired, restocked, and redistributed. Selfridges has started selling second-hand toys, for example. Savings on production and sourcing costs make this model commercially beneficial.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">3. Subscription-Style Shopping</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              It costs more to win new business than to maintain your customer base. The rise of online shopping has brought an opportunity for subscription-style shopping. Customers choose items they need to refill regularly, choose frequency, and the brand does the rest. Customers enjoy the flexibility of editing order frequency and choosing delivery dates. Some brands offer discounts for subscription customers.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">4. Operations Experience Management</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              With many retailers competing to sell like-for-like products online, the experience has become a key differentiator. Brands are reflecting on their processes end-to-end: how they present themselves to prospects, what experience they deliver during checkout, delivery, or returns. Operations Experience Management means taking back control of end-to-end customer data to manage the experience during operational processes.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">5. Blockchain and Cryptocurrency</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Brands are adapting to be as accommodating to their customers as possible, offering flexibility on delivery methods and payment types. Many believe that payment by cryptocurrency will become more popular, and as a result, more brands will be willing to accept it as a form of payment.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">6. Augmented Reality (AR)</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              One of the biggest cons of online shopping is the inability to interact with the product. Augmented reality is changing that. Fashion retailers can demonstrate what a dress would look like on your body. Furniture retailers let you try a new sofa in your living room before buying. In this way, retailers don't just match the in-store experience -- they outperform it.
+            </p>
+          </div>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          What an exciting time to be part of the e-commerce space. One thing is for sure: brands that have control of their end-to-end customer journey will have an advantage. Managing the entire experience provides brands with agility and flexibility that will help them stay ahead.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

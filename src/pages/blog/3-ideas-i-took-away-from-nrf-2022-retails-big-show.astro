@@ -1,0 +1,109 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="3 Ideas I Took Away from NRF 2022: Retail's Big Show - parcelLab"
+  description="Three key takeaways from NRF 2022: prioritizing customer closeness, breaking down silos, and embracing a different world post-pandemic."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Trends</span>
+          <h1 class="text-display text-[var(--ink)]">3 Ideas I Took Away from NRF 2022: Retail's Big Show</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2022-03-03">March 3, 2022</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          I recently celebrated three fantastic years at parcelLab. As luck would have it, this personal milestone coincided with a significant event for our team, NRF 2022: Retail's Big Show. I was fortunate to attend the event in a rather chilly New York City, along with colleagues from our US and Global teams. It was my first face-to-face networking event for quite some time (think pre-pandemic!), and the energy did not disappoint.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Marking a significant on-the-ground presence in New York, parcelLab's message was shining brightly from the iconic billboards of Times Square! It was surreal to see in person, but an exciting indication of where we're going -- and this is just the beginning.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          I want to share three ideas from NRF that matter most in 2022.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">1. Brands That Prioritize Being Closer to the Customer Will Win</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Every part of the retail proposition exists to serve one group above all others: the customer. Fulfilment strategy and digital architecture therefore must be guided not by our own preferences or vanity, but by what is right for the customer.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          This idea shone brightly in almost every conversation throughout the conference. The voice of the customer has never been more important.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Creating the right channels to really listen to the customer, and being prepared to demonstrate empathy to them, are two of the primary ways this will happen.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Brands most effectively aligned with their customers benefit from earning their loyalty and trust. If this isn't at the top of your agenda, it should be.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">2. We Must Exit 2022 with Fewer Silos Than We Started With</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Silos once provided a clear and helpful division of responsibility. They created an organization of "specialists" and "specialist technology." In so many cases today, people and technology operate in separate functional groups. As a result, they lack the structures needed to act effectively as a "whole" rather than a sum of many separate parts.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          In 2022, the vision is to nurture the much needed collaboration across the organisation. To work jointly to serve the customer. Sumit Sing, CEO of Chewy, shares the vision of every single employee as the Chief Customer Officer. You can imagine how positive an approach this is for business.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          We are not there yet, but brands are working hard to enable cross-function collaboration and drive cultural change. The goal is to create a world where all employees are equipped to put on their "customer goggles" -- and to do so effectively.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          On the technology and data side, pooling and leveraging data from every part of the organization will continue to rise in retailers' priorities. This is already reflected in today's technology buying decisions.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">3. This World Is Different (to Before)</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          There was a masked enthusiasm on the NRF tradeshow floor. It served as a fond reminder of conferences past, yet also felt utterly different.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Everything about today's customer proposition is reflected in this dichotomy. We've been forced over the past two years to improvise, to make faster decisions, and to operate through necessity rather than design.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          But we've also benefitted from more human conversations. We've embraced compromise; we've been honest about our shortcomings; and we've walked into every situation with optimism and a healthy dose of empathy.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          And this shall continue. It'll continue as it has in the last two years, but simultaneously nothing like before.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">We'll Be Back for 2023's Big Show</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          That's a wrap on NRF 2022: Retail's Big Show! I felt energized by the event and humbled by our collective willingness to make this one work. We enjoyed some amazing conversations, many of which will continue over the next days and weeks.
+        </p>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Keep an eye on parcelLab's Event page to be the first to know about the events we're hosting and attending. See you out there!
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,66 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Guide to Retail Returns Management: How Do Top Retailers Manage Returns? - parcelLab"
+  description="Discover key strategies and examples for retail returns management, so you can reduce costs and improve customer satisfaction."
+>
+  <Header client:load />
+  <main>
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Returns</span>
+          <h1 class="text-display text-[var(--ink)]">Guide to Retail Returns Management: How Do Top Retailers Manage Returns?</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">Tobias Buxhoidt</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2023-04-01">April 1, 2023</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>7 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          parcelLab's State of Online Order Returns found that 78% of customers have had to return an online purchase, and 92% of consumers indicated that a retailer's returns policy influences their purchase decisions. Retailers can't afford to neglect the returns experience.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">How to Efficiently Manage Retail Returns</h2>
+        <ol class="mt-4 space-y-3 list-decimal list-inside">
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Start with efficient checkout and delivery.</strong> Set proper expectations with accurate product photos and detailed descriptions. Offer estimated delivery dates.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Offer clear instructions for returns.</strong> Make information easy to find -- not buried in an obscure help center article.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Implement self-service returns.</strong> A portal empowers customers to initiate and track returns on their own.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Make returns as easy as possible.</strong> 62% of customers are unlikely to shop with a retailer again after a poor returns experience.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Offer multiple return options.</strong> 47% of shoppers prefer in-store returns, while 34% prefer online.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Notify customers at every stage.</strong> Communication is the third most important consideration for shoppers regarding returns.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Be sustainable.</strong> 66% of consumers are willing to pay more for sustainable products.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Collect data to improve over time.</strong> Returns offer valuable insights to improve products, marketing, and processes.</li>
+        </ol>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Efficient returns management is crucial for ecommerce retailers. A smooth returns experience across the entire shopping journey can help you retain customers and build long-term loyalty.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

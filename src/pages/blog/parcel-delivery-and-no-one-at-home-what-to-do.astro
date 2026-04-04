@@ -1,0 +1,112 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Parcel Delivery and No One at Home: What to Do? - parcelLab"
+  description="A guide to alternative parcel delivery options when no one is home, from personal parcel boxes to packstations and trunk delivery."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">Parcel Delivery and No One at Home -- What to Do?</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2019-08-29">August 29, 2019</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          When anticipated packages arrive while you're away, delivery services offer multiple alternatives to ensure safe parcel receipt. Here's a comprehensive guide to the options available.
+        </p>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">1. Personal Parcel Boxes</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Customers install boxes at their residences that delivery personnel can access via key chip or smartphone application. This system supports returns as well, allowing carriers to collect pre-franked items.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">2. Neighbor Delivery</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Parcels can be left with neighboring residents. Some carriers permit customers to designate preferred neighbors. However, customers may face delays locating neighbors and retrieving packages.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">3. Drop-off Permissions</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Customers authorize specific locations -- garages, porches, or other safe spots -- for parcel placement without signatures. The customer assumes liability for theft or damage at the designated site.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">4. Packstations</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Automated locker facilities allow delivery to secure stations. Customers register and select their preferred station, receiving notifications upon deposit. This free service operates around the clock.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">5. Post Office and Parcel Shops</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Branches and shops offer seven-day pickup windows. Customers present identification documents, and proxy authorization enables others to retrieve parcels on their behalf.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">6. Trunk Delivery</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Partnerships with vehicle manufacturers permit parcel placement in car trunks via app coordination. Adoption remains limited -- only 2% of German respondents use this service -- but it represents an innovative alternative.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">7. Multi-Family Parcel Boxes</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Apartment buildings install compartmentalized boxes allowing carriers to deposit multiple parcels securely, making delivery convenient for all residents.
+            </p>
+          </div>
+        </div>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Key Statistic</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">53 of 100 retailers observed do not communicate with customers during shipping, while only 15 engage in direct communication rather than delegating to logistics providers.</p>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Regardless of which delivery alternative customers choose, retailers should prioritize proactive shipping communication through branded tracking pages and personalized notifications. Keeping customers informed reduces failed deliveries and builds a stronger post-purchase experience.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

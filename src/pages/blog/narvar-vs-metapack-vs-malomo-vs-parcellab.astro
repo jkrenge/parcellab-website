@@ -1,0 +1,127 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Narvar vs Metapack vs Malomo vs parcelLab - parcelLab"
+  description="Compare post-purchase software platforms across critical dimensions: onboarding, communications, tracking, delivery estimates, returns, and support."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Post-Purchase</span>
+          <h1 class="text-display text-[var(--ink)]">Narvar vs Metapack vs Malomo vs parcelLab</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">Anna Lapezo</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2023-05-04">May 4, 2023</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>12 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Choosing the right post-purchase software platform is critical for ecommerce success. This article evaluates four leading platforms -- parcelLab, Narvar, Metapack, and Malomo -- across critical dimensions including onboarding, customer communications, order tracking, delivery estimates, returns management, and customer support.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Target Market Analysis</h2>
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">parcelLab</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Enterprise e-commerce brands including H&amp;M, Bose, Puma, LIDL, Chicos, and Farfetch. Average review rating: 4.62 stars across G2, Capterra, Featured Customers, and SaaSworthy.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Narvar</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Large enterprises across retail and healthcare, including Neiman Marcus, Glossier, Levi's, Gap, and Everlane. Average review rating: 4.35 stars.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Metapack</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Fulfillment and 3PL focused, serving Halfords, River Island, Boohoo, and ASOS. Average review rating: 3.87 stars.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Malomo</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              DTC Shopify merchants including Magic Spoon, Soylent, Rebag, and Summersalt. G2 rating: 4 stars.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Onboarding Process</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          parcelLab handles most setup with minimal merchant involvement, achieving deployment within 30 days or less. Narvar requires collaborative engagement but can extend to 6 months. Metapack's self-service approach lacks clarity. Malomo uses a 5-step self-service model with optional support.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Customer Communications</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          All platforms offer brand-customized emails. Only parcelLab and Malomo provide complete white-labeling without vendor attribution. Narvar displays "Powered by Narvar" branding. All support sending from branded domains except Narvar.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Order Tracking Pages</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Similar to communications, parcelLab and Malomo offer fully white-labeled tracking pages hosted on merchant domains. Narvar includes platform attribution. Metapack's white-labeling status remains unclear.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Delivery Estimates &amp; Carrier Integrations</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          parcelLab and Metapack each integrate 350+ carriers. Narvar connects 300+. Malomo supports 60+ carriers. All four maintain direct API integrations with major logistics providers.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Returns Management</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          parcelLab, Narvar, and Metapack offer built-in returns workflows. Malomo requires third-party Loop integration for returns functionality.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Customer Support</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          All platforms provide dedicated account managers and knowledge bases. parcelLab, Narvar, and Malomo maintain system status pages. All offer responsive support, with parcelLab and Narvar noted for proactive guidance.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Pricing Models</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          parcelLab uses customizable bundled pricing based on shipment volume and users. Narvar and Metapack require direct consultation with no published pricing. Malomo offers transparent tiered plans starting at $84/month (Starter) and $124/month (Plus), with custom enterprise options.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Recommendation</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">Enterprise merchants should evaluate parcelLab or Narvar for comprehensive capabilities, with parcelLab excelling in branding and implementation speed. Small-to-mid Shopify brands benefit from Malomo's simplicity.</p>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The right post-purchase platform depends on your business size, technical requirements, and strategic priorities. Enterprise merchants benefit from parcelLab's comprehensive capabilities and fast implementation, while DTC Shopify brands may find Malomo's simplicity and transparent pricing more aligned with their needs.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

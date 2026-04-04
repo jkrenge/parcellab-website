@@ -1,0 +1,124 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Valentine's Day in E-Commerce (Infographic) - parcelLab"
+  description="Key statistics on Valentine's Day e-commerce trends, from consumer spending patterns and popular gift categories to mobile shopping and flower delivery spikes."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">Valentine's Day in E-Commerce</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2020-03-10">March 10, 2020</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>3 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Valentine's Day ranks as the third most significant shopping occasion after Christmas and birthdays for online gift purchases. Approximately 40% of German consumers buy Valentine's gifts online, with flowers and presents increasingly shipped through e-commerce channels. Here are the key statistics every retailer should know.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Consumer Spending Patterns</h2>
+
+        <div class="mt-6 space-y-4">
+          <div class="flex items-center gap-4 rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-4">
+            <span class="text-2xl font-bold text-[#3D3AD3]">50%</span>
+            <span class="text-[var(--ink-secondary)]">of consumers spend over &euro;30 on Valentine's gifts</span>
+          </div>
+          <div class="flex items-center gap-4 rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-4">
+            <span class="text-2xl font-bold text-[#3D3AD3]">36.5%</span>
+            <span class="text-[var(--ink-secondary)]">of women prefer online stores for gift shopping</span>
+          </div>
+          <div class="flex items-center gap-4 rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-4">
+            <span class="text-2xl font-bold text-[#3D3AD3]">34%</span>
+            <span class="text-[var(--ink-secondary)]">of men traditionally favor flower shops</span>
+          </div>
+          <div class="flex items-center gap-4 rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-4">
+            <span class="text-2xl font-bold text-[#3D3AD3]">30%</span>
+            <span class="text-[var(--ink-secondary)]">of purchases are made on mobile devices</span>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Market Data</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Q1 2018 online retail sales reached &euro;14.6 billion in Germany, with jewelry and watches experiencing a remarkable 34.8% growth in that same period. The data shows that Valentine's Day is a major driver of first-quarter e-commerce performance.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">The Flower Spike</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">500% more flowers are bought or ordered on February 13 compared to the rest of the year. This dramatic spike makes logistics and delivery communication critical for the floral industry.</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Popular Gift Categories</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The most popular Valentine's Day gift categories for online shoppers remain consistent year over year:
+        </p>
+
+        <div class="mt-6 space-y-4">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <div class="flex items-center gap-4">
+              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#3D3AD3]/10 text-sm font-bold text-[#3D3AD3]">1</span>
+              <div>
+                <h3 class="font-semibold text-[var(--ink)]">Jewelry</h3>
+                <p class="text-sm text-[var(--ink-secondary)]">The top category, with 34.8% growth in Q1 online sales</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <div class="flex items-center gap-4">
+              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#3D3AD3]/10 text-sm font-bold text-[#3D3AD3]">2</span>
+              <div>
+                <h3 class="font-semibold text-[var(--ink)]">Flowers</h3>
+                <p class="text-sm text-[var(--ink-secondary)]">Demand spikes 500% on the day before Valentine's Day</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <div class="flex items-center gap-4">
+              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#3D3AD3]/10 text-sm font-bold text-[#3D3AD3]">3</span>
+              <div>
+                <h3 class="font-semibold text-[var(--ink)]">Beauty Products</h3>
+                <p class="text-sm text-[var(--ink-secondary)]">Consistently popular across both online and in-store channels</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          For retailers, Valentine's Day represents a significant opportunity -- but one that demands flawless logistics and delivery communication. With flowers and perishable gifts, the margin for error is razor-thin. Brands that invest in branded tracking pages, proactive delivery updates, and a smooth delivery experience will capture the most value from this emotionally-driven shopping occasion.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,53 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout title="What Peak Season Revealed About eCommerce Growth and Customer Behavior in 2026 - parcelLab" description="Peak season data analysis showing 3.26% order growth, 6.34% increase in post-purchase emails, and how retailers are using post-purchase more strategically.">
+  <Header client:load />
+  <main>
+    <section class="section-generous"><div class="mx-auto max-w-[1440px] px-6 md:px-12"><div class="mx-auto max-w-[800px]">
+      <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>Back to blog</a>
+      <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">AI and Analytics</span>
+      <h1 class="text-display text-[var(--ink)]">What Peak Season Revealed About eCommerce Growth and Customer Behavior in 2026</h1>
+      <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+        <span>By <strong class="font-medium text-[var(--ink-secondary)]">Anna Lapezo</strong></span><span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+        <time datetime="2026-01-16">January 16, 2026</time><span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span><span>6 min read</span>
+      </div>
+    </div></div></section>
+    <section class="pb-16 md:pb-24"><div class="mx-auto max-w-[800px] px-6 md:px-12">
+      <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">Peak season data reveals continued eCommerce expansion and a growing emphasis on post-purchase sophistication over pure volume. Here is what the numbers tell us about where retail is heading.</p>
+      <div class="mt-6 space-y-6">
+        <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+          <h3 class="text-lg font-semibold text-[var(--ink)]">Online Orders Were Up</h3>
+          <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Order tracking activity increased year-over-year, with 53.5 million trackings generated in 2025 versus 51.8 million in 2024 -- a 3.26% growth reflecting continued eCommerce expansion driven by convenience and mobile adoption.</p>
+        </div>
+        <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+          <h3 class="text-lg font-semibold text-[var(--ink)]">Post-Purchase Communication Took Center Stage</h3>
+          <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Retailers sent 161.7 million messages during December 1-26, 2025, compared to 152.1 million in the same 2024 period -- a 6.34% increase demonstrating growing recognition that post-purchase communication impacts customer experience, reduces support inquiries, and strengthens lifetime value.</p>
+        </div>
+        <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+          <h3 class="text-lg font-semibold text-[var(--ink)]">Engagement Increased, But Shoppers Became More Selective</h3>
+          <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Customer email opens rose 9.32% to 110.5 million globally. However, click-through rates dipped slightly from 14.6% to 14.47%, suggesting customers prioritize relevance over volume and engage primarily with timely, personalized content.</p>
+        </div>
+        <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+          <h3 class="text-lg font-semibold text-[var(--ink)]">Tracking Pages Became More Efficient</h3>
+          <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Order tracking page visits declined 6.58% while unique visitors increased 9.43% (from 23.1M to 25.3M). This indicates improved communication efficiency -- customers receive proactive updates rather than repeatedly checking pages.</p>
+        </div>
+        <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+          <h3 class="text-lg font-semibold text-[var(--ink)]">Retailers Used Post-Purchase More Strategically</h3>
+          <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Campaign creation increased 8.18% during peak season. Brands deployed targeted campaigns addressing delays, promotions, customs documentation, and product launches -- shifting from purely operational messaging toward experience-focused retention strategies.</p>
+        </div>
+      </div>
+      <div class="my-12 border-t border-[var(--line)]"></div>
+      <p class="text-[var(--ink-secondary)] leading-relaxed">Growth in 2025 emphasized sophistication over pure volume. Retailers scaling communication without overwhelming customers, delivering efficient tracking experiences, and leveraging post-purchase engagement as a retention mechanism emerged as industry leaders.</p>
+    </div></section>
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

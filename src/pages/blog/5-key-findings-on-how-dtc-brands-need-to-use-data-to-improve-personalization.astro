@@ -1,0 +1,109 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="5 Key Findings on How DTC Brands Need to Use Data to Improve Personalization - parcelLab"
+  description="Research examining 50 leading DTC brands reveals how most underutilize customer data in post-purchase communications, creating competitive opportunities."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">D2C</span>
+          <h1 class="text-display text-[var(--ink)]">5 Key Findings on How DTC Brands Need to Use Data to Improve Personalization</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2021-10-28">October 28, 2021</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>6 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Research examining 50 leading direct-to-consumer brands and their U.S.-focused customer journeys reveals that most DTC companies underutilize available customer data, creating significant opportunities for competitive differentiation. These discoveries emphasize the importance of implementing improvements that enhance customer retention.
+        </p>
+
+        <div class="mt-8 space-y-8">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h2 class="text-lg font-semibold text-[var(--ink)]">Finding 1: Product Recommendations in Shipping Confirmations</h2>
+            <div class="mt-3 rounded-lg bg-[#3D3AD3]/5 px-4 py-2">
+              <p class="text-sm font-semibold text-[#3D3AD3]">94% of DTC brands do not include dynamic product recommendations in their shipping confirmations.</p>
+            </div>
+            <p class="mt-3 text-[var(--ink-secondary)] leading-relaxed">
+              Only 2% incorporate personalized recommendations; the remaining 4% employ generic suggestions. Given that shipping confirmations achieve a 148% average open rate, this represents substantial untapped potential for cross-selling opportunities.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h2 class="text-lg font-semibold text-[var(--ink)]">Finding 2: Order Tracking Page Hosting</h2>
+            <div class="mt-3 rounded-lg bg-[#3D3AD3]/5 px-4 py-2">
+              <p class="text-sm font-semibold text-[#3D3AD3]">78% of brands are still using a 3rd party order tracking page.</p>
+            </div>
+            <p class="mt-3 text-[var(--ink-secondary)] leading-relaxed">
+              Site-hosted order tracking pages increase return traffic by 85% and reduce "Where's my order?" inquiries by at least 25%. Maintaining branded tracking pages allows companies to retain control of customer experience while building trust.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h2 class="text-lg font-semibold text-[var(--ink)]">Finding 3: SMS Notification Offerings</h2>
+            <div class="mt-3 rounded-lg bg-[#3D3AD3]/5 px-4 py-2">
+              <p class="text-sm font-semibold text-[#3D3AD3]">A full 26% of brands do not offer SMS tracking notifications.</p>
+            </div>
+            <p class="mt-3 text-[var(--ink-secondary)] leading-relaxed">
+              Among those providing SMS notifications, only 12% allow customers to select their preferred communication channel. SMS represents a highly valued notification method that enables intimate customer engagement.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h2 class="text-lg font-semibold text-[var(--ink)]">Finding 4: Delivery Confirmation Notifications</h2>
+            <div class="mt-3 rounded-lg bg-[#3D3AD3]/5 px-4 py-2">
+              <p class="text-sm font-semibold text-[#3D3AD3]">62% of brands fail to send a delivery confirmation notification.</p>
+            </div>
+            <p class="mt-3 text-[var(--ink-secondary)] leading-relaxed">
+              Of companies sending these notifications, 36% include no supplementary content. Forrester research indicates 70% of shoppers actually want more frequent order updates. Effective delivery confirmations include relevant, comprehensible information such as product instructions or educational materials.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h2 class="text-lg font-semibold text-[var(--ink)]">Finding 5: Product Review Requests</h2>
+            <div class="mt-3 rounded-lg bg-[#3D3AD3]/5 px-4 py-2">
+              <p class="text-sm font-semibold text-[#3D3AD3]">50% of brands are still not requesting a product review.</p>
+            </div>
+            <p class="mt-3 text-[var(--ink-secondary)] leading-relaxed">
+              Among those requesting reviews, 11% do so before order arrival, while 69% send requests after customers initiate returns. This timing creates poor reviews programs and signals organizational disconnect regarding order delivery.
+            </p>
+          </div>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Strategic Implications</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          As DTC companies prioritize customer retention for long-term success, these findings demonstrate considerable improvement opportunities throughout existing customer journeys. Leveraging order data enables personalized experiences at scale, fostering loyalty. Companies should analyze their data systems to identify overlooked touchpoints and deliver relevant personalized information proactively.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

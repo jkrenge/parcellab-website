@@ -1,0 +1,110 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="AI Trends Shaping the Post-Purchase Experience - parcelLab"
+  description="Explore six key AI trends that are helping retailers convert one-time buyers into loyal brand advocates in the post-purchase space."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">AI and Analytics</span>
+          <h1 class="text-display text-[var(--ink)]">AI Trends Shaping the Post-Purchase Experience</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">Anna Lapezo</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2024-04-24">April 24, 2024</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>3 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          AI continues to be a huge topic of conversation in the post-purchase space. As retailers look for ways to stand out and build lasting customer relationships, artificial intelligence offers powerful tools to transform the experience between checkout and delivery -- and beyond.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Six Areas Where AI Transforms Post-Purchase</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          An infographic exploring six distinct areas where artificial intelligence can help retailers convert one-time buyers into loyal brand advocates highlights the breadth of opportunity in this space. From predictive delivery estimates to personalized communication timing, AI is reshaping every touchpoint after the buy button.
+        </p>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">1. Predictive Delivery Estimates</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              AI algorithms analyze historical shipping data, carrier performance, and external factors to provide customers with more accurate delivery windows, reducing uncertainty and WISMO inquiries.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">2. Personalized Communication</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Machine learning models determine the optimal timing, channel, and content for each customer's post-purchase messages, maximizing engagement and satisfaction.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">3. Intelligent Product Recommendations</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              AI-powered recommendation engines suggest relevant cross-sell and upsell products on tracking pages and in shipping notifications, driving incremental revenue.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">4. Proactive Issue Detection</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              AI identifies potential delivery issues before they impact customers, enabling brands to communicate proactively and resolve problems before they escalate.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">5. Returns Optimization</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              AI helps predict return likelihood, suggest exchanges over refunds, and optimize reverse logistics to reduce costs while maintaining customer satisfaction.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">6. Customer Sentiment Analysis</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Natural language processing analyzes customer feedback and support interactions to identify trends and opportunities for experience improvement.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">How parcelLab Can Help</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          parcelLab's post-purchase software incorporates AI capabilities to enable retailers to significantly improve customer satisfaction, streamline operations, and gain a competitive edge in the ever-evolving online marketplace. The company continues to evolve its product, with features like "Trending Late" that leverage AI for delivery predictions.
+        </p>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Interested in learning how AI can transform your post-purchase experience? Discover how parcelLab helps brands design impactful, data-driven customer journeys beyond checkout.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

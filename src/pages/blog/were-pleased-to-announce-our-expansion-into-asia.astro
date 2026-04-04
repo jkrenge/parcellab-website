@@ -1,0 +1,35 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout title="We're Pleased to Announce Our Expansion into Asia - parcelLab" description="parcelLab announces geographic expansion to support online businesses in Asia with multilingual post-sales communications capabilities.">
+  <Header client:load />
+  <main>
+    <section class="section-generous"><div class="mx-auto max-w-[1440px] px-6 md:px-12"><div class="mx-auto max-w-[800px]">
+      <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>Back to blog</a>
+      <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Company News</span>
+      <h1 class="text-display text-[var(--ink)]">We're Pleased to Announce Our Expansion into Asia</h1>
+      <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+        <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab</strong></span><span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+        <time datetime="2020-12-04">December 4, 2020</time><span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span><span>3 min read</span>
+      </div>
+    </div></div></section>
+    <section class="pb-16 md:pb-24"><div class="mx-auto max-w-[800px] px-6 md:px-12">
+      <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">parcelLab has extended its platform to assist forward-thinking online businesses throughout Asia. This expansion enables customers to transmit branded post-sales communications in Chinese, Korean, and Japanese.</p>
+      <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">CEO Quote</p>
+        <p class="mt-2 text-lg font-medium text-[var(--ink)]">"We believe the best post-sales customer experience requires focusing on clients' specific customer and brand requirements."</p>
+        <p class="mt-1 text-sm text-[var(--ink-muted)]">-- Tobias Buxhoidt, Founder and CEO</p>
+      </div>
+      <p class="text-[var(--ink-secondary)] leading-relaxed">Customers report increased retention rates, larger basket sizes, and reduced inbound inquiry volumes. Notable examples include True Classic achieving a 29% increase in revenue per email, and MediaMarktSaturn generating substantial additional monthly revenue through cross-selling communications.</p>
+    </div></section>
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

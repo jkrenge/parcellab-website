@@ -1,0 +1,120 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Customer Experience Trends: Porsche with Innovative Loyalty Program - parcelLab"
+  description="A roundup of the latest CX trends including Porsche's e-mobility loyalty program, fashion return challenges, and logistics innovations across Europe."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Trends</span>
+          <h1 class="text-display text-[var(--ink)]">Customer Experience Trends: Porsche with Innovative Loyalty Program</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2020-10-01">October 1, 2020</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>6 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          This edition of customer experience trends covers innovation across loyalty programs, customer experience improvements, and logistics developments -- from Porsche's electric mobility rewards to Finland's Posti Box and shifting payment preferences in Germany.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Customer Loyalty</h2>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Porsche's E-Mobility Loyalty Platform</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Porsche Digital launched "&amp;Charge," a digital loyalty platform for electric mobility. Users earn "kilometers" through everyday purchases and transactions, which can be redeemed as charging credits for electric vehicles or discounts on e-scooter and car-sharing services. It is a compelling example of how loyalty programs can extend beyond traditional retail.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">P&amp;C Loyalty Card Relaunch</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Fashion retailer Peek &amp; Cloppenburg relaunched its loyalty program, allowing cardholders to earn points across physical stores, Anson's, and online platforms, with potential expansions to partner retailers. A modern omnichannel approach to customer retention.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Fashion Returns Challenge</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Startups are addressing the high return rates in fashion e-commerce through digital measuring technologies. As Presize.ai founder Leon Szeli notes: "Incorrectly ordered sizes are the main reason for returns in the fashion sector." Solving this problem reduces costs for retailers and waste for the environment.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Customer Experience</h2>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Posti Box Innovation</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Finland's Posti Box offers try-on services, direct returns, packaging disposal, and curated product displays to optimize the parcel pickup experience. It reimagines the humble pickup point as a full-service retail touchpoint.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">German Payment Preferences</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Nearly one-third of German online shoppers prefer purchasing on account (up 1.5% annually), followed by PayPal (20.2%) and direct debit (18.3%). Understanding payment preferences is essential for reducing checkout friction.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Logistics</h2>
+
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Brack.ch</strong> expanded using three AutoStore systems during pandemic demand surges</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">3U</strong> invested &euro;10 million in a 15,000 sqm Koblenz distribution center</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Amazon Seller Fulfilled Prime</strong> requires weekend shipping for two-day delivery compliance</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Only <strong class="text-[var(--ink)]">52% of fashion/beauty companies</strong> use perforated packaging for easier opening</span>
+          </li>
+        </ul>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          From Porsche's creative approach to electric vehicle loyalty to innovations in pickup points and payment preferences, the common theme is clear: brands that innovate on experience -- not just product -- will build the deepest customer relationships.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

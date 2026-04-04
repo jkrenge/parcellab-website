@@ -1,0 +1,108 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="How Tariffs Are Reshaping Retail From Checkout to Returns - parcelLab"
+  description="Discover how steep tariffs are disrupting retail supply chains and learn actionable strategies to protect your post-purchase experience."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Post-Purchase</span>
+          <h1 class="text-display text-[var(--ink)]">How Tariffs Are Reshaping Retail From Checkout to Returns</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">Anna Lapezo</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2025-05-07">May 7, 2025</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>6 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          The retail sector faces significant disruption from steep tariffs. The Port of Los Angeles anticipates a 35% reduction in cargo volumes from Asia, which represents approximately 45% of port trade. This translates to limited inventory, reduced product selection, and elevated pricing -- creating consumer frustration across the board.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Supply Warning</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">With only 6-8 weeks of supply remaining, retailers face imminent shortages affecting customer satisfaction and brand loyalty.</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Impact on the Post-Purchase Experience</h2>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Delayed Deliveries and Stockouts</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Supply chain disruptions extend delivery timelines. With limited supply remaining, retailers face shortages that directly affect customer satisfaction and brand loyalty.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Compromised Product Quality</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Cost pressures may force retailers toward alternative suppliers, potentially reducing product consistency and increasing return rates.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Strained Customer Service</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Increased complaints from delays and quality issues overwhelm support teams, resulting in longer wait times and elevated operational costs.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Actionable Strategies for Retailers</h2>
+
+        <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-3">Transparent Communication</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Maintain honest customer dialogue about delays and availability issues. Leverage personalized email updates and tracking pages with contextual messaging about shipping delays.
+        </p>
+
+        <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-3">Diversified Supply Chain</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Reduce dependency on single suppliers or countries. Consider nearshoring, multi-vendor partnerships, and strategic buffer inventory during tariff-free periods. Utilize post-purchase data to identify products benefiting from alternative sourcing.
+        </p>
+
+        <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-3">Enhanced Customer Support</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Empower support teams with training and AI-powered tools for efficient issue resolution. Create dedicated support flows for tariff-related inquiries.
+        </p>
+
+        <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-3">Flexible Return Policies</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Extend return windows and simplify processes. Implement self-service return portals, offer store credit options, and prioritize exchange alternatives.
+        </p>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          While tariff policies shift frequently, preparation remains essential. Retailers strengthening post-purchase experiences through customer-centric strategies can build brand resilience amid economic uncertainty.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

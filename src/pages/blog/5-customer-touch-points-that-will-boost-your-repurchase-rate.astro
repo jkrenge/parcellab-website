@@ -1,0 +1,101 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="5 Customer Touch Points That Will Boost Your Repurchase Rate - parcelLab"
+  description="From order confirmation to follow-up offers, here are the 5 post-purchase touchpoints that turn one-time buyers into loyal customers."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">5 Customer Touch Points That Will Boost Your Repurchase Rate</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2020-07-25">July 25, 2020</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>4 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Retail brands spend considerable time and effort optimizing customer touch points before and during the purchase. But what happens then? For many retailers, the line of communication disappears completely. Customers are often contacted by third-party companies that they've never heard of, or worse -- they're left in radio silence.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          At parcelLab, we believe these companies are wasting an opportunity. A positive experience post-purchase can turn a one-off buy into a long-term customer. From "Add to basket" to "on their doorstep," here are parcelLab's top 5 customer touchpoints retailers should use to make a lasting impression.
+        </p>
+
+        <div class="mt-8 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">1. Order Confirmation</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              A personal and branded order confirmation is important. Customers are likely to refer back to this email, so make sure it's clear what they've bought and who they bought it from. Use this email to set clear, specific expectations for delivery as well as a link to your FAQs. This will reduce the amount of calls your customer service team will receive.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">2. Tracking Information</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              People want to know when their purchase is going to arrive -- share this information as soon as possible. parcelLab recommends using a Track and Trace page that provides instant access to the live status and location of their order.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">3. Returns Communication</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Keep customers updated with the progress of their return order to reduce customer enquiries. Sending a returns acknowledgment and a returns success notification will keep the customer relaxed throughout this otherwise stressful process. This is a great way to go above and beyond expectations and increase your repurchase rate.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">4. Feedback Request</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              The product was delivered without a hitch -- hooray! Why not ask for your customers' feedback? Adding a simple rating poll to your delivery notice will give customers the opportunity to give feedback quickly and conveniently. The results can be used to calculate a NPS (Net Promoter Score) that gives great insight into your performance.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">5. Follow-Up Offer</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              To encourage the customer to make another purchase, consider sending them an incentive. This could be a discount, a free trial of a different product, or a "refer a friend" benefit. This gives customers an extra nudge to come back to your company rather than trying a competitor.
+            </p>
+          </div>
+        </div>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Results</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">Our clients report a 90% repurchase rate and a 55% increase in customer satisfaction.</p>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Aim to make every interaction with your customer pre-delivery delightful. Look for opportunities to keep in touch across every digital touch point. Include useful information and link back to your FAQ pages to increase traffic to your site and reduce your customer service calls.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

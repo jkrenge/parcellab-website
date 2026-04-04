@@ -1,0 +1,75 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="parcelLab CEO Talks Peak Season on Retail Focus Podcast - parcelLab"
+  description="CEO Tobias Buxhoidt discusses how brands can manage customer expectations during peak season and transform supply chain challenges into positive experiences."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Company News</span>
+          <h1 class="text-display text-[var(--ink)]">parcelLab CEO Talks Peak Season on Retail Focus Podcast</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2022-01-01">January 1, 2022</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>4 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Tobias Buxhoidt, CEO and co-founder of parcelLab, appeared on a peak season edition of The Retail Focus Podcast. The episode, titled "Communicating with Consumers About Holiday Purchases," explores how brands can manage expectations during the busy holiday season and transform negative supply chain situations into positive customer experiences.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Turning Challenges into Opportunities</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The podcast discusses how retailers can transform negative supply chain situations -- spanning fulfillment, last-mile delivery, and returns -- into positive customer experiences. Buxhoidt emphasizes that brands must eliminate consumer uncertainty by communicating clearly about order timelines and delivery status.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          He advocates for proactive communication throughout the entire process, alerting customers to any issues and offering solutions before frustration sets in.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">CEO Perspective</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">"If I utilize this right, if I'm really on top of my capabilities, operationally and with customer communication, I can really make people excited by standing out from the crowd and creating great experiences."</p>
+          <p class="mt-1 text-sm text-[var(--ink-muted)]">-- Tobias Buxhoidt, CEO, parcelLab</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">About parcelLab</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          parcelLab was established in 2015 by Tobias alongside co-founders Julian Krenge (CTO) and Anton Eder (COO). The company, employing over 100 staff members, operates as an Operations Experience Management platform helping brands worldwide enhance experiences during operational processes including delivery, returns, and repairs.
+        </p>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Peak season presents unique challenges for retailers, but with the right communication strategy and tools, brands can stand out from the competition by delivering exceptional customer experiences -- even when things don't go according to plan.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,107 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Flying Suppliers: When Will Delivery Drones Become Established in E-Commerce? - parcelLab"
+  description="From DHL's pharmaceutical deliveries to Amazon's Prime Air, explore the state of delivery drones and what stands between them and mainstream e-commerce adoption."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">Flying Suppliers: When Will Delivery Drones Become Established in E-Commerce?</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2018-12-05">December 5, 2018</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>7 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          The evolution of aerial delivery spans from military applications in the early 20th century to modern commercial implementation. With a projected market of $4.8 billion by 2021 and China aiming to deploy long-range cargo drones capable of transporting one-ton loads across 1,500 kilometers by 2025, the question is not if -- but when.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">From Kite to Drone</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Key milestones in drone delivery include DHL's 2014 pharmaceutical delivery to a North Sea island and Amazon's 2016 successful parcel drop in England containing a Fire TV box and popcorn.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Amazon continues experimenting with "Prime Air" expansion initiatives, while DHL tested its third-generation parcel copter in 2016, achieving 130 autonomous operations with two-kilogram capacity at 70 kilometers per hour. Meanwhile, companies like ele.me operate delivery networks across Chinese industrial zones, and Flirtey delivers pizzas via drone in New Zealand.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">When Will Drone Packages Become Available to Everyone?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Technological advances include obstacle-avoidance capabilities developed in 2016, enabling drones to detect and navigate around objects. Weather-resistance remains the next frontier for widespread deployment.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Consumer adoption shows hesitation: only 45% of Germans would opt for drone delivery services, indicating substantial room for market growth and acceptance improvement.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Opportunities for E-Commerce and Suppliers</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Delivery drones address the critical "last mile" challenge by reducing carbon emissions from traditional vehicles while circumventing traffic congestion. Potential applications include rapid medicine and blood donation transport.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Amazon's research focuses on gesture recognition -- enabling drones to interpret hand signals for delivery confirmation or rejection. Boeing develops heavy-lift variants capable of carrying payloads exceeding 200 kilograms.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">What Is the Catch?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Significant obstacles prevent immediate mainstream implementation:
+        </p>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F4373D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Limited payload capacity (five kilograms maximum for line-of-sight operations)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F4373D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Poor performance during adverse weather conditions</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F4373D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Regulatory gaps regarding airspace usage and operational parameters</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F4373D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Insufficient battery technology for extended-range delivery</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F4373D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Restrictions against flying over residential areas or populated zones</span>
+          </li>
+        </ul>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Despite developmental challenges, delivery drones represent an eco-conscious alternative warranting investment and patience. Enhanced tracking capabilities enable retailers to communicate precise delivery status updates, improving customer satisfaction. As research advances, drones will become faster, more capable, and economically viable, eventually revolutionizing e-commerce logistics.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,129 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Guide to Shipping Notifications - parcelLab"
+  description="A comprehensive guide to shipping notifications: what messages to send, what customers want, and how they benefit your business."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Shipping</span>
+          <h1 class="text-display text-[var(--ink)]">Guide to Shipping Notifications</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">Anna Lapezo</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2023-08-28">August 28, 2023</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>6 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Shipping represents an emotionally significant phase in the customer journey. Many retailers face a critical problem: they outsource shipping notifications to third-party carriers after checkout, losing control over communication quality and consistency.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Key Messages in Every Brand's Communication Workflow</h2>
+
+        <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-3">Shipping Notifications</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Shipping notifications -- also termed shipment or delivery notifications -- provide customers with order status updates. These messages vary depending on product type and brand approach, covering events like dispatch confirmation, delivery updates, and failed delivery notices. Brands can distribute these messages across multiple channels: email, SMS, chatbot platforms, or dedicated order tracking pages.
+        </p>
+
+        <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-3">Delivery Notifications</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          While "shipping notification" and "delivery notification" are frequently used interchangeably, they technically differ. Shipping notifications cover the period from warehouse departure through delivery. Once an order arrives, subsequent updates qualify as delivery notifications. In practice, many brands use both terms flexibly for any post-purchase communication.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">What Updates Do Your Customers Want?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Research reveals compelling consumer preferences:
+        </p>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="1"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">90% of consumers</strong> desire brand engagement during delivery</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="1"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">56%</strong> want immediate alerts when delays occur</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="1"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">31%</strong> prefer contacting brands rather than checking carrier websites</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="1"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">26%</strong> value how-to guides related to purchases</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="1"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">23%</strong> appreciate personalized product recommendations</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="1"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">87%</strong> expect proactive returns communication</span>
+          </li>
+        </ul>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          The underlying pattern shows customers prioritize personalized, real-time updates delivered proactively rather than requiring them to search for information independently.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">How Shipment Notifications Help Your Business</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Brands regaining communication control after checkout experience measurable benefits:
+        </p>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Reduction in expensive customer service inquiries</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Extended customer engagement throughout the journey</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Increased repeat purchasing and returning traffic</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Higher customer satisfaction scores</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Improved customer lifetime value</span>
+          </li>
+        </ul>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          parcelLab partners with hundreds of global carriers including DHL, FedEx, and DPD, providing access to real-time delivery data. The platform transforms this information into personalized, branded experiences, enabling companies to create lasting customer relationships during typically transactional moments.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,120 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="What Different Generations Expect from E-Commerce - parcelLab"
+  description="From Gen Z to Baby Boomers, learn what each generation expects from online shopping and how retailers can meet those expectations."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Post-Purchase</span>
+          <h1 class="text-display text-[var(--ink)]">What Different Generations Expect from E-Commerce</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2022-10-26">October 26, 2022</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>7 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          A few short years ago, e-commerce retailers focused primarily on younger consumers, with older generations adopting online shopping more slowly. However, by 2022, the landscape shifted dramatically. People across all age groups now make significant portions of their purchases online. Here's how different generations shop and what they expect from retailers.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Gen Z</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Gen Z represents the youngest economically active generation, with their spending power increasing as they enter the workforce. This demographic is extraordinarily online, with over 40% making most clothing purchases through digital channels.
+        </p>
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Key Characteristics for Retailers</h3>
+            <ul class="mt-2 space-y-2 text-[var(--ink-secondary)]">
+              <li class="flex items-start gap-2">
+                <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3D3AD3]"></span>
+                <span>Lower brand loyalty requiring personalized service and unique experiences</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3D3AD3]"></span>
+                <span>Strong visual orientation, responding best to video content and visual search tools</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3D3AD3]"></span>
+                <span>Fast-paced decision-making with lower tolerance for slow websites, sluggish customer service, or delayed deliveries</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Millennials</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Millennials were the first generation to grow up with internet and mobile technology, earning them a reputation for challenging retailers and driving innovation. They're characterized as purpose-driven consumers.
+        </p>
+        <div class="my-6 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Defining Feature</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">The "try before you buy" mentality -- frequently ordering multiple sizes with plans to return most items -- makes generous return policies essential.</p>
+        </div>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Millennials value brand loyalty and interest in loyalty programs with expected rewards. They seek comprehensive product information including reviews, specifications, stock levels, and educational materials. Brand storytelling that highlights company values, backstory, and social impact resonates deeply.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Gen X</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Often overlooked as the "forgotten generation," Gen X currently maintains the largest average household income and family units, positioning them as significant spenders.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          This generation prioritizes financial prudence, seeking discounts, coupons, and loyalty rewards above other considerations. They value smooth checkout experiences and affordability. Customer reviews and testimonials prove more persuasive than brand messaging, as Gen X trusts peer recommendations.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Baby Boomers</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Baby Boomers represent the oldest demographic but are far from offline. During the pandemic, over-65s became the fastest-growing online shopper segment, with spending increasing by nearly 50% annually.
+        </p>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Simple interfaces</strong> and transparent refund policies that demonstrate reliability</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Localized experiences</strong> with locally customized information</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Flexible delivery options,</strong> including curbside pickup preferred over home delivery</span>
+          </li>
+        </ul>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">What This Means for E-Commerce Retailers</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Younger shoppers prioritize media, storytelling, and personalization, while older customers emphasize value and convenience. However, all generations actively engage with e-commerce. Successful retailers offer flexible options ensuring every age group feels welcomed in their online stores.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

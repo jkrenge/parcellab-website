@@ -1,0 +1,112 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="7 Post-Sales Experience Recommendations for Fashion Brands - parcelLab"
+  description="Research reveals that major UK fashion retailers fail to deliver best-in-class post-checkout experiences. Here are 7 recommendations."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">7 Post-Sales Experience Recommendations for Fashion Brands</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2020-07-09">July 9, 2020</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>7 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          parcelLab examined 100 top UK fashion brands' checkout, shipping, and returns processes, finding that "customer centricity usually ends after checkout. Once a customer purchases something, they are left on their own."
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Key Finding</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">93% of retailers end communication with the customer after dispatch, instead relying on the delivery carrier.</p>
+        </div>
+
+        <div class="mt-8 space-y-8">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">1. Shipping Costs and Delivery Passes</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Only 12 retailers offered free shipping; 65 provided it with minimum order requirements. Shipping costs significantly block conversions -- brands should consider implementing delivery passes to encourage loyalty.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">2. Logistics Provider Choice</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              None of the studied brands allowed customers to select their preferred delivery carrier. Providing this choice helps avoid customer service inquiries from frustrated customers who have negative experiences with specific carriers.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">3. Post-Dispatch Communication</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              93% of retailers end communication with the customer after dispatch. Brands should view post-checkout communication as an engagement opportunity rather than mere logistics updates.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">4. Personalization in Shipping Communications</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Only 1% of fashion brands sent personalized updates, while 99% failed to tailor shipping communications. Retailers should leverage this as an untapped marketing channel through branded, personalized messaging.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">5. Tracking Page Ownership</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              For 60% of fashion brands, parcel tracking is hosted by the logistics provider. 20% provide broken links. 14% don't provide any tracking information. Hosting tracking within the retailer's ecosystem captures traffic and maintains brand consistency. Tracking email open rates exceed 60%.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">6. Returns Labels and Options</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              51% enclosed Royal Mail returns labels while 11% provided none. However, 64% offered in-store returns, and 85% allowed free returns. Providing multiple return options improves customer convenience and satisfaction.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">7. Refund Timelines</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              92% of brands refunded returns within three working days, with 38% processing faster than predicted. However, 24% gave no refund prediction. Providing refund timelines helps manage customer expectations effectively.
+            </p>
+          </div>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          UK fashion retailers severely limit flexibility regarding shipping and returns options. Maintaining post-checkout communication within branded ecosystems, rather than delegating to carriers, enables retailers to control experience quality. Optimizing delivery and returns experiences directly boosts customer loyalty, retention, and repeat purchases.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

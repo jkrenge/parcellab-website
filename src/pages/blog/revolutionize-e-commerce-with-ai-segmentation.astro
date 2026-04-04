@@ -1,0 +1,93 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Revolutionize eCommerce with AI Segmentation - parcelLab"
+  description="Discover how leveraging AI Customer Segmentation can help with targeted marketing strategies and tailored customer experiences."
+>
+  <Header client:load />
+  <main>
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">AI and Analytics</span>
+          <h1 class="text-display text-[var(--ink)]">Revolutionize eCommerce with AI Segmentation</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">Preslav Kisyov</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2024-08-21">August 21, 2024</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>6 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          A key challenge for retailers in today's competitive market is the need to truly understand their customers. Customer behavior is difficult to analyze and predict, however, it is vital for a business's ongoing growth.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          According to a study performed by McKinsey, offering personalized buyer experiences has two advantages. First, rapidly growing companies generate 40% more of their revenue from personalization compared to their competitors. On the customer side, over 70% of customers expect companies to deliver personalized interactions. Retailers face this scenario and realize they can enhance profitability by integrating segments across various stages of the customer journey. That's why Artificial Intelligence (AI) is a differentiator when delivering a personalized experience.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">What is Customer Segmentation?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Customer segmentation is an already well-known commercial approach that divides a broad customer base into distinct groups defined by similar characteristics or behaviors. This enables retailers to gain deeper insights into their preferences and customize their offerings and services to meet those specific requirements, enhancing overall customer satisfaction and reducing the time to the customer's next purchase, ultimately increasing Customer Lifetime Value (CLV).
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Looking into the evolution of segmentation, traditional behavioral segmentation has difficulties in integrating the complexity of modern consumer habits and the flexibility to adapt to the rapidly changing retail environment. AI, on the other hand, has overcome many of these limitations.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          The challenges in developing an AI-driven customer segmentation model are twofold: on the technical side, ensuring the model's reliability, seamless integration with existing systems, scalability to handle growing data volumes, and flexibility to adapt to changing market conditions are critical. On the business and commercial side, it is essential to plan for and address issues such as transparency in how the model operates, explainability to help stakeholders understand the model's decisions, and ongoing monitoring to ensure the model remains effective and aligned with business goals.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">parcelLab's Approach</p>
+          <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+            At parcelLab, we prioritize transparency in the development and deployment of our artificial intelligence models and algorithms. Our Customer Segmentation solution expands on traditional Recency, Frequency, Monetary (RFM) analysis by incorporating returns data -- an additional parameter essential for accurately estimating CLV.
+          </p>
+        </div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Our AI Customer Segmentation solution leverages historical data on customer purchases and returns, along with regional industry insights. It employs a sophisticated set of metrics at various levels of order and product detail. For instance, metrics like the total and average number of purchased items help us understand overall consumer behavior. However, by incorporating metrics such as the number of returned purchases and the average return rate per order, we can more accurately measure the end-to-end customer value for our parcelLab clients.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Our unsupervised clustering model converges all considered data points into clusters, revealing underlying group structures based on customer behavior. By doing so, we can identify and manage data anomalies that might deviate segments significantly from existing cluster patterns.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">How Our AI Solutions Can Benefit Your Business</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The parcelLab segmentation method effectively identifies key customer groups, such as high-value customers, frequent returners, and those with the potential for personalized engagement. By leveraging our Customer Segmentation model, businesses can implement targeted marketing strategies and tailored customer experiences. This enables concrete actions like tailored discounts, exclusive access, and special perks, enhancing customer retention and boosting profitability.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Moreover, integrating additional product and demographic customer data will enhance our AI model's precision, enabling it to target customers more accurately. This improvement ensures that parcelLab's Customer Segmentation solution is finely tuned and customized to meet the specific needs of each retailer.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          By having our AI integrated directly into the parcelLab ecosystem, we are also able to provide customer segmentation metrics for the personalization of campaigns through our Campaign Manager, or over API access to be used across pre-checkout processes, on the order status page, or loyalty programs, providing the customer with enhanced engagement experiences.
+        </p>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          AI-driven customer segmentation represents the next frontier for eCommerce personalization, enabling retailers to deliver the right message to the right customer at the right time.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

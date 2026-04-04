@@ -1,0 +1,83 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="The Power of Instagram to Drive Sales - parcelLab"
+  description="With over 1 billion active monthly users, Instagram has evolved beyond brand awareness into a direct sales channel. Learn how to leverage it for e-commerce."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">The Power of Instagram to Drive Sales</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2019-03-21">March 21, 2019</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>6 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Instagram has grown remarkably in less than a decade, now boasting over 1 billion active monthly users. The platform has evolved beyond brand awareness into a direct sales channel. Nearly one-third of consumers now shop through social platforms.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Key Statistic</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">54% of people surveyed made a purchase either in the moment or after seeing a product or service on Instagram.</p>
+          <p class="mt-1 text-sm text-[var(--ink-muted)]">-- Facebook Research, 21,000 users across 13 countries</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Social Media Is Important in Product Discovery</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Even when Instagram doesn't directly drive sales, it remains crucial for brand building. Research found that 83% of users discovered new products on the platform, while 81% actively research items there.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Visual product displays -- whether from brands or customers -- help potential buyers make purchasing decisions. Notably, 46% purchased after seeing products on Instagram. Recent features including product tagging and "swipe up" in Stories have streamlined the path to purchase.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Engaging with Customers</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Consumers want to hear from brands in authentic ways, requiring interesting and relevant content. Successful strategies include encouraging customer content sharing through branded hashtags like ASOS's #AsSeenOnMe, which builds community and engagement while providing user-generated marketing materials.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Social Media's Role in Post-Purchase Communications</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Over 64% of customers follow brands on social media after purchasing. Shipping confirmation emails achieve 80-90% open rates -- these are optimal moments for engagement. Featuring Instagram feeds in shipping notifications provides purchase inspiration while capitalizing on customer enthusiasm.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Reposting customer content strengthens brand loyalty. Research indicates existing customers are significantly more likely to repeat purchases, potentially increasing profits by at least 25% through these strengthened relationships.
+        </p>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          A comprehensive social media strategy is essential for acquiring and retaining customers. By integrating Instagram into post-purchase communications, retailers create immersive, two-way relationships with customers that extend well beyond the initial transaction.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

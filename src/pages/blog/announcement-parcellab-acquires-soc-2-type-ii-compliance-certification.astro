@@ -1,0 +1,80 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Announcement: parcelLab Acquires SOC 2 Type II Compliance Certification - parcelLab"
+  description="parcelLab achieves SOC 2 Type II certification, demonstrating enterprise-level security for customer data management."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Company News</span>
+          <h1 class="text-display text-[var(--ink)]">Announcement: parcelLab Acquires SOC 2 Type II Compliance Certification</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2022-09-20">September 20, 2022</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>3 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          We are extremely excited to share this announcement about achieving SOC 2 Type II certification. That means, we are fully committed to keeping your and your customers' data secure and are proud to be recognized as enterprise compliant secure data managers. Your data is safe with us, and it's 100% certified!
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">About SOC 2</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          parcelLab achieved a Service Organization Standards (SOC) 2 Type II certification in accordance with American Institute of Certified Public Accountants (AICPA) standards for SOC also known as SSAE 18. For the past few months, the organization has been working hard to increase security and data controls.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          The company underwent a rigorous audit by Prescient Assurance, a third-party industry leader in security and compliance attestation for B2B Software as a Service (SaaS) companies to gain this certification. Prescient Assurance is a registered public accounting firm in the US and Canada and provides risk management and assurance services to US and international firms.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          This certification builds upon previous achievements -- SOC2 Type I, HIPAA (Health Insurance Portability and Accountability Act) and ePrivacy Seal of Approval -- obtained in July.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">What This Means for Our Customers</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          parcelLab takes the security of customer data very seriously. This certification emphasizes the organization's continued commitment to providing secure products and services that manage consumer data safely and easily across the globe.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Achieving this standard with an unqualified opinion serves as third-party industry validation that parcelLab demonstrates enterprise-level security for customer data.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Our Commitment</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">Data integrity and security are fundamental to how parcelLab operates. Meeting those challenges remains central to everything we do.</p>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          parcelLab is a leading post-purchase experience platform whose data machine cleans and harmonizes customer and carrier data to turn logistical updates into personalized messages for brands and their customers.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

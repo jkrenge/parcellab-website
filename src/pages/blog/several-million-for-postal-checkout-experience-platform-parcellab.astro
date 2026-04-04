@@ -1,0 +1,90 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Several Million for Postal Checkout Experience Platform parcelLab - parcelLab"
+  description="parcelLab completes Series B financing round led by Capnamic Ventures to fuel technology advancement and European expansion."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Company News</span>
+          <h1 class="text-display text-[var(--ink)]">Several Million for Postal Checkout Experience Platform parcelLab</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2019-11-17">November 17, 2019</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>4 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Munich-based parcelLab, a specialist in post-purchase checkout communication, successfully completed its Series B financing round in October 2019. Capnamic Ventures led the investment, joined by existing backers including coparion.
+        </p>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          The company plans to deploy the capital toward technology advancement and team expansion across Germany, the UK, and France, while entering new markets.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Customer Loyalty in E-Commerce</h2>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Investor Perspective</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">"Rising acquisition costs mean customer loyalty matters greatly in retail."</p>
+          <p class="mt-1 text-sm text-[var(--ink-muted)]">-- Christian Siegele, Capnamic Ventures</p>
+        </div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          parcelLab operates with approximately 50 employees across Munich, London, and Paris, serving over 350 retailers including IKEA, Lidl, MediaMarktSaturn, and Fressnapf.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">European Growth Strategy</h2>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Investor Perspective</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">"parcelLab's solution is technically mature, easily implemented, and delivers impressive metrics."</p>
+          <p class="mt-1 text-sm text-[var(--ink-muted)]">-- Christian Schulte, coparion</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Market Opportunity</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Co-founder Anton Eder explained that retailers have optimized pre-purchase experiences extensively, but significant potential remains in post-purchase engagement. Improved shipping communications help retain customers and generate incremental sales through strategic messaging at moments when customer attention is at its peak.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Company Background</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Founded in 2014 by Tobias Buxhoidt, Anton Eder, and Julian Krenge, parcelLab provides white-label solutions delivering real-time delivery monitoring and personalized notifications across email, SMS, and social channels. The platform enables customer journey management and upselling opportunities across 38 countries in 25 languages.
+        </p>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          This funding milestone marks an important step in parcelLab's mission to transform the post-purchase experience for retailers across Europe and beyond. With strong investor backing and a growing customer base, the company is well-positioned to lead the evolution of post-checkout communication.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

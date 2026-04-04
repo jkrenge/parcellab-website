@@ -1,0 +1,155 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Artificial Intelligence in E-Commerce: What Should We Be Prepared For? - parcelLab"
+  description="Explore how AI is transforming e-commerce, from chatbots and delivery robots to recommendation engines and voice assistants."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">Artificial Intelligence in E-Commerce: What Should We Be Prepared For?</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2018-08-03">August 3, 2018</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>7 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          From the 2013 film "Her" depicting an AI assistant companion to real-world applications reshaping industries, artificial intelligence is transforming how we interact with technology. In e-commerce, AI is opening new frontiers in mobile commerce, customer experience, and operational efficiency.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">The History of Artificial Intelligence</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Computer scientist John McCarthy coined "artificial intelligence" during a 1956 Dartmouth College conference. Key milestones include:
+        </p>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="1"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">1966:</strong> Chatbots exchanged information</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="1"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">1997:</strong> Chess computer defeated world champion Kasparov</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="1"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">2011:</strong> Computer program won Jeopardy</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="1"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">2011:</strong> Siri launched</span>
+          </li>
+        </ul>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Futurist Ray Kurzweil predicts AI will surpass human intelligence by 2045.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Applications of Artificial Intelligence</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          AI functions across medicine, manufacturing, and gaming. A HubSpot survey of 1,400 consumers showed 58% expressed curiosity about AI-based tools. However, German consumers expressed concerns about cybersecurity and personal data handling, while American and South American markets demonstrated greater adoption enthusiasm.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Four Types of Artificial Intelligence</h2>
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">1. Purely Reactive AI</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Responds directly to environments without memory. Example: IBM's Deep Blue chess computer.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">2. Limited Memory Systems</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Incorporates past information into current decisions. Examples: autonomous vehicles, chatbots, digital assistants.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">3. Self-Aware Systems</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Develops consciousness, understands emotions and motivations. Currently theoretical -- like "Sonny" from the film I, Robot.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">4. Super-Intelligent Systems</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Forms self-concepts and predicts others' feelings. Theoretical example: "Eva" from Ex Machina.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Liability and Ethical Concerns</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          When AI systems malfunction, accountability becomes critical. A tragic March 2018 incident involving an autonomous vehicle raised fundamental questions about responsibility assignment -- legal discussions on this front continue to evolve.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">AI Applications in E-Commerce</h2>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Chatbots</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Answer customer inquiries and relieve service team burdens while potentially serving as shopping advisors for personalized recommendations.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Delivery Robots and Drones</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              McKinsey research predicts autonomous vehicles will deliver 80% of parcels by 2025. European companies already employ robot delivery services; drones suit rural regions where traditional delivery proves costly.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Recommendation Engines</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Leverage collected data to suggest personalized products through dynamic pages and self-learning algorithms that optimize continuously based on customer behavior.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Voice Assistants</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Siri and Alexa enable convenient shopping. Queries like "where is my package?" will become commonplace, simplifying shipping communication for customers.
+            </p>
+          </div>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          AI is integral to e-commerce's future, addressing current applications and emerging possibilities while acknowledging implementation challenges and consumer concerns. Retailers who embrace these technologies thoughtfully will gain significant competitive advantages.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

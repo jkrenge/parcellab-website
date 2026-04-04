@@ -1,0 +1,126 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Abandoned Purchases in E-Commerce: Recognizing and Solving Problems - parcelLab"
+  description="Learn why customers abandon their shopping carts and discover eight proven strategies to reduce e-commerce purchase abandonment and boost conversions."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">Abandoned Purchases in E-Commerce: Recognizing and Solving Problems</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2019-05-18">May 18, 2019</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>7 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          A full shopping cart followed by checkout completion represents every online retailer's goal. However, customers frequently abandon their purchase process before completing it. The most common reasons include excessive delivery costs (26%) and changes of mind (29%). Approximately two-thirds of customers ultimately purchase from competitor stores instead.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Abandonment Rates</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">16% of respondents frequently abandon purchases, 39% do so occasionally, and 27% rarely abandon carts.</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Reasons for Purchase Abandonment</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Abandonment occurs at multiple stages of the shopping journey. In the store itself, customers may leave when desired products are unavailable, features don't match preferences, or prices seem excessive. At the shopping cart stage, customers often use carts as watchlists or face uncertainty about purchase decisions. At checkout, issues range from technical problems and insufficient product information to unexpected costs, limited payment options, and mandatory account creation.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">How to Avoid Purchase Abandonment</h2>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">1. User-Friendly Shopping Cart</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Effective carts should display product images alongside details, enable easy navigation back to product pages, allow straightforward addition and deletion of items, and feature visible progression indicators. Avoid information overload by displaying only essential details.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">2. Show Additional Costs Early</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Unexpected charges like shipping represent a primary abandonment trigger. Merchants should disclose all costs upfront on product pages or homepages to prevent checkout surprises.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">3. Offer Guest Checkout Options</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Guest purchasing creates the impression of faster transactions. Many customers resist account creation, and requiring mandatory registration can significantly increase abandonment rates.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">4. Don't Overload the Checkout</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Streamlined processes improve completion rates. Auto-fill fields where possible, use billing address data for shipping unless modified, and display checkout progress timelines.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">5. Create Trust</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Customers need confidence in data security and financial safety. Display security certificates, showcase customer reviews and ratings, and clearly state privacy and security policies.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">6. Show Delivery Options Early</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Extended delivery times frequently trigger abandonment. Display fastest shipping options on product pages and during checkout to set clear expectations.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">7. Offer Different Payment Options</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Payment preferences vary by geography and customer. Retailers should provide multiple methods including credit cards, PayPal, and region-specific options.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">8. Enable Simple Return Conditions</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Complicated or expensive returns discourage purchases. Allow customers to download return labels independently, include return labels in packages, and minimize return process friction.
+            </p>
+          </div>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Multiple factors drive e-commerce abandonment, with high delivery costs, limited payment methods, and competitive pricing being primary culprits. Beyond the shopping experience, strong post-purchase communication significantly influences repeat purchasing behavior and customer loyalty.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

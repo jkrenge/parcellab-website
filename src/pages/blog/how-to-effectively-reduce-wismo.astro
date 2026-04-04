@@ -1,0 +1,68 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="How to Effectively Reduce WISMO - parcelLab"
+  description="WISMO represents 30-50% of customer service inquiries for most retailers. This guide explores strategies to reduce these high-volume requests."
+>
+  <Header client:load />
+  <main>
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">How to Effectively Reduce WISMO</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2020-05-09">May 9, 2020</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>6 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          WISMO stands for 'Where is my order?' and is the most frequently received query for most retailers. These calls normally account for around 30-50% of all customer service enquiries and can reach 70-80% during peak periods.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">How Can Retailers Reduce WISMO?</h2>
+        <ol class="mt-4 space-y-3 list-decimal list-inside">
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Proactive multi-channel post-purchase communication</strong> -- Send regular updates via SMS, email, WhatsApp, and Facebook Messenger.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Communicate delivery delays at checkout</strong> -- Advertise prominently how many days delivery is likely to take.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Keep shipping status up-to-date</strong> -- Inform customers in real-time about order status.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Set up FAQ pages</strong> -- Direct customers to answers about delivery status and times.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Direct support traffic to other channels</strong> -- If telephone support is limited, direct to Messenger or WhatsApp.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Measure satisfaction using NPS</strong> -- Quickly recognize problems with your services through customer feedback.</li>
+        </ol>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Expert Quote</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">"Customers are currently very lenient when it comes to shipping times. Anyone who surprises customers with excellent service has a good chance of turning occasional customers into permanent regular customers."</p>
+          <p class="mt-1 text-sm text-[var(--ink-muted)]">-- Anton Eder, COO, parcelLab</p>
+        </div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          parcelLab has helped retailers reduce WISMO calls by 25% instantly, as customers are kept informed about the status of their order.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

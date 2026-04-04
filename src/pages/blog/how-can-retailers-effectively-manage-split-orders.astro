@@ -1,0 +1,101 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="How Can Retailers Effectively Manage Split Orders? - parcelLab"
+  description="Split shipments present notable challenges. Learn why retailers split orders and how to manage customer expectations across multiple deliveries."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">How Can Retailers Effectively Manage Split Orders?</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2021-03-10">March 10, 2021</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Split orders are a common reality in ecommerce. When items differ significantly in size or fragility, come from different warehouse locations, or have varying stock availability, retailers often need to split a single order into multiple shipments. While this can make delivery more convenient and timely, it also introduces unique challenges.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Why Do Retailers Split Orders?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Retailers split orders for several practical and logistical reasons:
+        </p>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3D3AD3]"></span>
+            <span class="text-[var(--ink-secondary)]">Items differ significantly in size or fragility, requiring separate shipments</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3D3AD3]"></span>
+            <span class="text-[var(--ink-secondary)]">Products are stored in different warehouse locations and ship more efficiently separately</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3D3AD3]"></span>
+            <span class="text-[var(--ink-secondary)]">One item is ready while another isn't -- sending available products prevents unnecessary delays</span>
+          </li>
+        </ul>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">The Challenge with Split Orders</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Split shipments present notable drawbacks. Multiple packages increase shipping costs, which either the retailer or customer must absorb. For sustainability-focused brands, this approach enlarges the carbon footprint compared to consolidated shipments.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          The most significant challenge involves managing customer expectations. Once carriers take possession, retailers often lose visibility into package locations. Customers inquiring about their orders may receive incomplete information. Managing expectations across multiple deliveries -- potentially from different locations and carriers -- becomes exceptionally difficult.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">The Solution</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">An all-in-one tracking page provides customers live updates on each package regardless of carrier, warehouse origin, or delivery date -- so they can see which products arrive when.</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Managing Split Orders Effectively</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Retailers must establish carrier transparency to create realistic customer expectations. An all-in-one tracking page solves this problem effectively. Such pages provide customers live updates on each package regardless of carrier, warehouse origin, or delivery date.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Customers can monitor progress and receive delay notifications without contacting support. This solution enables customers to see which products arrive when, reducing anxiety and support inquiries simultaneously.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">How to Deliver Branded Tracking Pages</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          parcelLab transforms operational data into customized customer experiences. The platform monitors over 150+ carriers worldwide, enabling partners to deliver proactive, personalized content. With branded tracking pages, retailers maintain visibility and control over the customer experience even when orders are split across multiple shipments and carriers.
+        </p>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Split orders don't have to mean a fragmented customer experience. With the right tracking infrastructure, retailers can turn a logistical necessity into a seamless, branded experience that keeps customers informed and engaged throughout every delivery.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,122 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Christmas in E-Commerce - The Most Important Facts - parcelLab"
+  description="From holiday spending patterns to carrier shipping deadlines, explore the key metrics every online retailer needs to know for the Christmas season."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">Christmas in E-Commerce -- The Most Important Facts</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2018-12-26">December 26, 2018</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          The Christmas season represents a significant revenue driver for e-commerce businesses. Holiday online sales have shown consistent growth year over year, making it the single most important period for online retailers. Here are the key metrics and insights.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">How High Are Christmas Sales in Online Retailing?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          E-commerce holiday revenues have demonstrated consistent growth, progressing from 7 billion euros in 2012 to 10 billion in 2015, reaching 12.2 billion euros the previous year, with projections of approximately 13.4 billion euros. The upward trajectory shows no signs of slowing.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">When Are Christmas Gifts Bought?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Shopping timelines vary considerably among consumers:
+        </p>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">18%</strong> are early adopters who shop well in advance</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">37%</strong> shop before December to avoid stress</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">~30%</strong> delay purchases until December or within 10 days before Christmas</span>
+          </li>
+        </ul>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Where Do People Look for Gift Inspiration?</h2>
+        <div class="mt-6 space-y-4">
+          <div class="flex items-center gap-4">
+            <span class="w-20 shrink-0 text-right text-sm font-semibold text-[var(--ink)]">47%</span>
+            <div class="h-3 flex-1 rounded-full bg-[var(--surface-sunken)]"><div class="h-3 rounded-full bg-[#3D3AD3]" style="width: 47%"></div></div>
+            <span class="w-32 text-sm text-[var(--ink-secondary)]">Internet searches</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <span class="w-20 shrink-0 text-right text-sm font-semibold text-[var(--ink)]">43%</span>
+            <div class="h-3 flex-1 rounded-full bg-[var(--surface-sunken)]"><div class="h-3 rounded-full bg-[#3D3AD3]/80" style="width: 43%"></div></div>
+            <span class="w-32 text-sm text-[var(--ink-secondary)]">Physical retail</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <span class="w-20 shrink-0 text-right text-sm font-semibold text-[var(--ink)]">35%</span>
+            <div class="h-3 flex-1 rounded-full bg-[var(--surface-sunken)]"><div class="h-3 rounded-full bg-[#3D3AD3]/60" style="width: 35%"></div></div>
+            <span class="w-32 text-sm text-[var(--ink-secondary)]">Recommendations</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <span class="w-20 shrink-0 text-right text-sm font-semibold text-[var(--ink)]">30%</span>
+            <div class="h-3 flex-1 rounded-full bg-[var(--surface-sunken)]"><div class="h-3 rounded-full bg-[#3D3AD3]/40" style="width: 30%"></div></div>
+            <span class="w-32 text-sm text-[var(--ink-secondary)]">Magazines</span>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Where Are Christmas Gifts Bought?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Physical retailers dominated at 53%, though this declined 15% compared to previous years. Online shopping increased from 12% to 21%, while 26% expressed no preference between channels.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Among online platforms, Amazon dominates at 72% of shoppers. eBay follows at 33%, with Zalando and Otto at 32%. Direct online stores capture approximately 30%.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Shipping Deadlines for Christmas Eve</h2>
+        <div class="mt-6 rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+          <p class="text-sm text-[var(--ink-muted)] mb-4">Last day for guaranteed delivery by Christmas Eve:</p>
+          <ul class="space-y-2">
+            <li class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">DHL:</strong> December 22</li>
+            <li class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">GLS / UPS / DPD:</strong> December 21</li>
+            <li class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Hermes:</strong> December 20</li>
+          </ul>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The Christmas season is the single biggest revenue opportunity for online retailers. Understanding when customers shop, where they find inspiration, and which deadlines matter most is essential for planning a successful holiday strategy -- from marketing campaigns to logistics and customer communication.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

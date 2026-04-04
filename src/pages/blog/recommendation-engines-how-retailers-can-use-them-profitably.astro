@@ -1,0 +1,121 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Recommendation Engines: How Retailers Can Use Them Profitably - parcelLab"
+  description="Understanding how recommendation engines work and how retailers can strategically deploy them to increase sales, cart values, and customer loyalty."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">Recommendation Engines: How Retailers Can Use Them Profitably</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2019-03-18">March 18, 2019</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Recommendation engines are software systems designed to predict customer interest in products with accuracy, suggesting items customers are likely to purchase. These systems filter products based on various criteria, creating personalized shopping experiences that drive measurable results.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">How Recommendation Engines Work</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Two primary types exist:
+        </p>
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Content-Based Systems</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Compare product characteristics with customer browsing and purchasing behavior. For example, a customer who rates a reggae CD positively receives suggestions for similar music genres.
+            </p>
+          </div>
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Collaborative Systems</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Analyze behavior patterns across user groups. If two users rate similar items positively, products unknown to one user get suggested based on the other's preferences.
+            </p>
+          </div>
+        </div>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          The most effective approaches combine both technologies, delivering truly personalized recommendations through shopping messages, newsletters, or direct store displays.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Benefits for Online Retailers</h2>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Increased sales and higher shopping cart values</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Enhanced customer loyalty through personalization</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Improved conversion rates and greater repurchase frequency</span>
+          </li>
+        </ul>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Strategic Placement Recommendations</h2>
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Product Pages</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Alternatives based on cart contents and purchase history increase conversion potential.
+            </p>
+          </div>
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Checkout</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Suggesting brand-matched products increases both order value and item quantity.
+            </p>
+          </div>
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Search Pages</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Display items similar to search terms and shopping cart contents to increase discovery.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Types of Recommendations</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Effective recommendation types include: top sellers, "other customers also bought," expert recommendations, "you might also like," "because you bought XY," matching products, and bundle or complete set suggestions.
+        </p>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Personalized product recommendations are a crucial e-commerce tool. While major retailers utilize them extensively, smaller businesses should adopt them too. When implemented correctly -- avoiding outdated or irrelevant suggestions -- they create personalized customer journeys that improve overall experiences and drive meaningful business results.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

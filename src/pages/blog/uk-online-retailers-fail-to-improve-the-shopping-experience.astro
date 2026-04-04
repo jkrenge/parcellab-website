@@ -1,0 +1,97 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="UK Online Retailers Fail to Improve the Shopping Experience - parcelLab"
+  description="The E-retail Performance Report reveals a troubling trend: online customer experience is actually declining among leading UK retailers."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">UK Online Retailers Fail to Improve the Shopping Experience</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2019-04-01">April 1, 2019</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          With rising competition in e-commerce, delivering an excellent shopping experience has become increasingly critical. Yet the second annual E-retail Performance Report reveals a troubling trend: online customer experience is actually declining among leading UK retailers.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Problem Areas</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Of 250 leading UK retailers surveyed, the proportion using live chat and virtual assistants to humanize shopping dropped 2% to just 37%. Research demonstrates this feature can boost conversion rates by up to 40%.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Website performance deteriorated significantly. Most retailers' sites were rated poorly for page loading speed, with nearly two-thirds requiring longer than nine seconds to load on 3G -- up from 54% the previous year.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Social sharing functionality declined as well. Only 83% of e-tailers included social sharing buttons despite their effectiveness, compared to 87% previously.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Room for Improvement</h2>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Onsite Search</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Nearly one-fifth of retailers failed to optimize site search through autocomplete or product recommendations, missing opportunities to potentially double conversion rates.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Account Requirements</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Over two-thirds still mandate account creation before purchase, despite 35% of abandoned baskets being attributable to this friction. Guest checkout is no longer optional -- it is essential.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Checkout Complexity</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Ten percent of sites forced customers through eight or more steps before completing purchases. Streamlining the checkout process is one of the most impactful changes a retailer can make.
+            </p>
+          </div>
+        </div>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Warning</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">The report indicates growing complacency among UK e-commerce retailers at precisely the wrong time. Customer expectations are rising while experience quality is falling.</p>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Retailers must guard against complacency and prioritize customer-centric strategies, placing shoppers at the foundation of their business models to remain competitive. The gap between what customers expect and what retailers deliver is widening -- and those who fail to close it risk losing market share to more customer-focused competitors.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

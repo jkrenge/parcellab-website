@@ -1,0 +1,104 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Interview: Mastering the Customer Experience from Purchase to Delivery - parcelLab"
+  description="An in-depth interview exploring how retailers can master the customer experience from purchase through delivery, reduce WISMO requests, and build loyalty."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">Interview: Mastering the Customer Experience from Purchase to Delivery</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2020-06-07">June 7, 2020</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>8 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          We sat down for an in-depth conversation about what defines an optimal customer experience, how retailers can reduce WISMO (Where Is My Order?) requests, and why delivery is the most emotionally significant part of the customer journey.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Good Customer Experience Helps Build Loyalty</h2>
+
+        <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-3">What is an optimal customer experience?</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The customer should receive equivalent support online as they would in physical retail environments. The entire purchasing journey must remain pleasant and comfortable, with retailers accompanying customers throughout. Communication shouldn't terminate after ordering -- this marks when the most crucial phase begins: awaiting delivery.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Optimal experiences require proactive retailer communication via branded emails and integrated tracking pages, delivering superior shopping experiences, eliminating delivery confusion, and critically, increasing retention and loyalty.
+        </p>
+
+        <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-3">How do retailers master the entire customer experience?</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Retailers must prioritize customer needs at each journey stage. Many overlook that the experience extends beyond purchase placement. This represents a continuous cycle -- when customers repurchase, it recommences. Consistent care throughout ensures repeat orders.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Retailers should evaluate their complete customer journey, identifying gaps requiring attention. Most frequently, gaps emerge post-purchase, when communication typically ceases.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Processing WISMO Requests</h2>
+
+        <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-3">What are WISMO requests?</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          WISMO (Where Is My Order?) encompasses customer service inquiries regarding parcel tracking or package location. Customers seek location and arrival information. Unable to locate these details, they contact customer service, significantly increasing support volume -- often unnecessarily.
+        </p>
+
+        <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-3">How should retailers respond?</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The primary objective involves minimizing WISMO requests, ideally eliminating them entirely. Though unavoidable sometimes, taking requests seriously remains essential. Customers worry about timely delivery; mishandled concerns or dismissive responses drive customers toward competitors.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Key Insight</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">Proactive, reliable, personalized communication throughout delivery substantially reduces or prevents WISMO requests entirely.</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Delivery: The Most Important Part of the Customer Journey</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Delivery represents the most emotionally charged customer journey component. Customers anticipate new shoes, last-minute birthday gifts, or essential medicines -- nothing can falter here. Online retailers must proactively communicate shipping status continuously, maintaining constant order information updates.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          During coronavirus-related logistics challenges, customers increasingly tracked order status. Providing requested information prevents unnecessary customer service contacts, which businesses aim to minimize.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Real Results from Implementation</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The results speak for themselves. During coronavirus lockdowns, IKEA Italy implemented the solution and immediately experienced a 25% decrease in customer inquiries. Additional clients including Lidl and MediaMarkt witnessed substantial post-implementation sales increases -- MediaMarkt generated 1.5 million euros in additional December sales following implementation.
+        </p>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The message is clear: retailers who invest in proactive, branded post-purchase communication see measurable improvements in customer satisfaction, reduced support costs, and increased revenue. The post-purchase experience is not optional -- it's a competitive necessity.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

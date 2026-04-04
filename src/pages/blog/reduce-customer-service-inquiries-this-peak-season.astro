@@ -1,0 +1,84 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Reduce Customer Service Inquiries This Peak Season - parcelLab"
+  description="Peak season presents major revenue opportunities for retailers, but maintaining high customer service standards during busy periods is critical for retention."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Trends</span>
+          <h1 class="text-display text-[var(--ink)]">Reduce Customer Service Inquiries This Peak Season</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2021-09-13">September 13, 2021</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          It's no secret. Peak season offers brands a huge opportunity to increase sales and maximize revenue. But this year more than ever, companies need to keep the customers they attract during peak season. Those that can will reap significant rewards. Harvard Business School found that "increasing customer retention rates by just 5% increases profits from 25% to 95%." So how can brands achieve this?
+        </p>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          According to Microsoft, "96% of consumers worldwide say customer service is an important factor for brand loyalty." So, to keep customers coming back after peak season, brands need to uphold the same high standard of service on their busiest days. But peak season can cause a huge strain on support staff due to an influx of 'Where is my order' (WISMO) calls. To combat this, a growing number of retailers are investing in their post-purchase experience.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Deliver Proactive Communication</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Reduce customer service inquiries during peak season by removing the need for it. Communicate proactively with customers from pre-dispatch to delivery and beyond to provide all necessary information. In effect, answer the customer's question before they have the chance to ask it.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Use Operations Experience Management to send bespoke, informative and branded messages to keep customers informed. Reflect on your sales journey to identify milestones to communicate with customers. Use data to prioritize these milestones by analyzing when you receive the most calls, what they relate to, and what issues customers highlight most. Create a communication workflow that better suits customer needs. Once touchpoints are planned, add relevant, valuable content to each interaction to improve engagement rates and reduce service inquiries.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Provide an Order Status Page</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Sending an order confirmation is standard procedure. However, the majority of brands are not taking advantage of this customer interaction. Instead of simply reviewing what the customer has ordered and when it will be delivered, retailers should add embedded content.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          An Order Status page is a customized landing page that provides customers with instant, real-time details about their order. Order Status pages can be fully branded and integrated into your online shop, automatically driving traffic back to your store rather than a third-party site. Customer data can personalize each touchpoint.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Using an Order Status page reduces inbound call rates by giving customers specific details about their order, delivery, and real-time updates. This helps customer support teams manage busy peak season. Customers confident that changes will be communicated proactively feel no need to call in.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Leverage Technology for the Best Service Experience</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Communicate proactively with customers to give them needed information in advance. This reduces inbound inquiry rates during peak season. Drive customers to self-service landing pages or social media support to ease strain on customer service teams. This leaves customers with a positive experience, making them confident to reuse and recommend your service repeatedly.
+        </p>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          By investing in proactive post-purchase communication, retailers can significantly reduce customer service inquiries during peak season while simultaneously improving customer satisfaction and loyalty.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

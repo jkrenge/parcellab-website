@@ -1,0 +1,131 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="The Perfect Shipping Communication: What Does It Look Like? - parcelLab"
+  description="Only 7% of retailers engage customers during shipping. Learn what perfect shipping communication looks like and how it drives sales and satisfaction."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">The Perfect Shipping Communication: What Does It Look Like?</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2020-02-27">February 27, 2020</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Waiting for a package represents an emotionally charged moment in the customer journey. Customers expect clear information about parcel location and anticipated delivery dates. Retailers should communicate proactively during delivery delays or failed attempts -- no news is worse than bad news for anxious customers.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">The Gap</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">parcelLab's E-Commerce Shipping Study revealed that merely 7% of surveyed retailers engaged customers during shipping. This means 93% essentially abandon customer communication post-purchase.</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">What Does Perfect Shipping Communication Look Like?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Retailers must intentionally design their shipping communication strategy by considering content, style, and presentation.
+        </p>
+
+        <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-3">1. Select an Appropriate Subject</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Email subject lines serve as the critical first impression determining whether customers open messages. Subject lines should communicate essential information concisely, incorporate relevant elements when brand-appropriate, and avoid spam trigger elements like excessive capitalization or special characters.
+        </p>
+
+        <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-3">2. Pay Attention to Corporate Language</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Messaging should consistently reflect brand personality and values. Language consistency across all communications -- from promotions through dispatch to returns -- reinforces brand identity.
+        </p>
+
+        <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-3">3. Adhere to Post-Purchase Values</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Four essential attributes characterize effective shipping emails:
+        </p>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Conciseness:</strong> Customers grasp main content at a glance</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Proactivity:</strong> Retailers inform customers about changes immediately</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Personalization:</strong> Messages address customers individually</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Relevance:</strong> Content provides genuine utility</span>
+          </li>
+        </ul>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">The Advantages of Good Shipping Communication</h2>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">More Sales</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Retailers leverage customer touchpoints for cross-selling and upselling opportunities. Branded tracking pages bring customers back to the storefront.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Reduction of Customer Service Enquiries</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Proactive communication eliminates common questions like "When will my parcel arrive?" This dramatically reduces support workload, freeing staff for higher-value tasks.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Happy Customers</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Well-informed customers feel valued and supported, increasing repeat purchase likelihood and generating positive word-of-mouth referrals.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Fewer Returns</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Proactive return warnings remind customers to collect parcels before automatic return processing occurs. Customers maintaining visibility throughout the journey experience smoother processes.
+            </p>
+          </div>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Good shipping communication represents a non-negotiable retail requirement. Since shipping profoundly influences customer experience, online retailers should actively manage this critical journey touchpoint rather than delegating it entirely to logistics providers.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

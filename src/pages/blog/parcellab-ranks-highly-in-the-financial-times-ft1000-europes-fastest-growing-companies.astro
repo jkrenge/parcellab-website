@@ -1,0 +1,80 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="parcelLab Ranks Highly in the Financial Times FT1000: Europe's Fastest Growing Companies - parcelLab"
+  description="parcelLab achieves position 73 in the Financial Times FT1000 2021 list with an impressive 1,529.4% absolute growth rate."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Company News</span>
+          <h1 class="text-display text-[var(--ink)]">parcelLab Ranks Highly in the Financial Times FT1000: Europe's Fastest Growing Companies</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2021-04-02">April 2, 2021</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>3 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          parcelLab achieved recognition in the Financial Times FT1000 2021 list, ranking at position 73 among Europe's fastest-growing companies. The company also ranked as the 20th fastest-growing German enterprise in the listing.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Key Metric</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">An impressive absolute growth rate of 1,529.4% across 2016-2019.</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">FT1000 2021 Insights</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Developed in partnership with Statista, the FT1000 list identifies European companies demonstrating the strongest organic revenue expansion during 2016-2019. Technology represented the most prevalent industry sector in the FT1000 2021 rankings, with parcelLab securing 26th position within this competitive category.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Since its 2015 founding, the company expanded from three founders to over 100 employees. Following two successful funding rounds, parcelLab more than doubled revenue in 2020, establishing itself as Europe's leading post-purchase platform.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">CEO Response</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">"We're thrilled to be recognized by the Financial Times as one of Europe's fastest growing companies."</p>
+          <p class="mt-1 text-sm text-[var(--ink-muted)]">-- Tobias Buxhoidt, CEO and Founder, parcelLab</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Our Solution</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The platform enables brands to transmit customized communications throughout the customer lifecycle. The service transforms complex data from international retailers into individualized experiences. parcelLab has partnered with 150+ carriers globally, providing access to comprehensive shipping intelligence and serving 500+ global customers including Farfetch, IKEA, and Nespresso.
+        </p>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The FT1000 2021 ranking represents significant validation of parcelLab's innovative approach to post-purchase experience management and supports the company's global expansion strategy.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

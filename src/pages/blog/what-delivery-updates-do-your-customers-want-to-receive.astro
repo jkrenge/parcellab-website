@@ -1,0 +1,81 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="What Delivery Updates Do Your Customers Want to Receive? - parcelLab"
+  description="Customer expectations around delivery communications have shifted significantly. Learn what updates your customers want and how to deliver them."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">What Delivery Updates Do Your Customers Want to Receive?</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2021-02-27">February 27, 2021</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>4 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Customer expectations around delivery communications have shifted significantly. The public now relies on online shopping and deliveries in a way they haven't before, creating heightened concerns about availability, shipping processes, and potential delays.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">All-in-One Tracking Page</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Providing customers with an Order Status page (branded tracking page) delivers automatic delivery updates. This approach reduces customer anxiety and the need for support inquiries. The page can be optimized with embedded product recommendations to drive repeat purchases and rating tools to increase reviews.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Key Insight</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">Branded tracking pages serve double duty: they reduce support inquiries while creating high-engagement touchpoints for product recommendations and review collection.</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Event-Triggered Delivery Updates</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Research indicates customers desire proactive delivery progress updates. During periods of extended delivery times and limited customer service availability, communicating changes -- particularly delays or stock issues -- quickly becomes essential for managing expectations.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Embedded Content</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Incorporating branded content and product recommendations into delivery update emails differentiates the customer experience while boosting engagement and click-through rates by delivering relevant, trustworthy information. Customers are highly receptive to content within transactional emails because they already trust the sender.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Keep in Touch</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Retailers can customize communications through the parcelLab platform to match their brand voice and customer preferences. The key is consistency -- every delivery update should feel like it comes from your brand, not a third-party carrier.
+        </p>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Customers want proactive, branded, and relevant delivery updates. By combining all-in-one tracking pages, event-triggered notifications, and embedded content, retailers can transform routine shipping communications into powerful engagement opportunities.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

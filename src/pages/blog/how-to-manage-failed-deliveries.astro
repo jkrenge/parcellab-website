@@ -1,0 +1,178 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="How to Manage Failed Deliveries - parcelLab"
+  description="A quarter of businesses experience 10% of orders with first attempt failed delivery. Learn how to manage and prevent failed deliveries."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Delivery Experience</span>
+          <h1 class="text-display text-[var(--ink)]">How to Manage Failed Deliveries</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">Tinka Carrick</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2023-02-12">February 12, 2023</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>7 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          A quarter of businesses experience 10% of orders with first attempt failed delivery. The average cost of a failed delivery reaches $17.2 in the U.S. and &pound;11.6 in the UK, significantly affecting margins for low-value product categories like apparel, accessories, and health/beauty items.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Key Insight</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">Most brands operate at a loss on initial purchases, making positive first delivery experiences critical for driving repeat sales and long-term profitability.</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Why Do Packages Fail to Deliver?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Common reasons for failed deliveries include:
+        </p>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3D3AD3]"></span>
+            <span class="text-[var(--ink-secondary)]">Delivery recalled by sender</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3D3AD3]"></span>
+            <span class="text-[var(--ink-secondary)]">Package not collected from parcel locker/shop in time</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3D3AD3]"></span>
+            <span class="text-[var(--ink-secondary)]">Customer refused acceptance</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3D3AD3]"></span>
+            <span class="text-[var(--ink-secondary)]">Customer unable or unwilling to pay cash on delivery</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3D3AD3]"></span>
+            <span class="text-[var(--ink-secondary)]">Unsuccessful customs processing</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3D3AD3]"></span>
+            <span class="text-[var(--ink-secondary)]">Incomplete or inaccurate address</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3D3AD3]"></span>
+            <span class="text-[var(--ink-secondary)]">Package damaged beyond repair</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3D3AD3]"></span>
+            <span class="text-[var(--ink-secondary)]">Force majeure events (severe weather)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3D3AD3]"></span>
+            <span class="text-[var(--ink-secondary)]">Recipient unavailable when signature required</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3D3AD3]"></span>
+            <span class="text-[var(--ink-secondary)]">Driver unable to locate secure placement spot</span>
+          </li>
+        </ul>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">How to Manage Failed Deliveries</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Five preventative steps to reduce failed deliveries:
+        </p>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">1. Accurate Delivery Predictions</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Display realistic timelines at checkout so customers can plan accordingly. Setting proper expectations from the start reduces the likelihood of missed deliveries.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">2. Click & Collect Options</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Offer "buy online, pick up in store" or curbside alternatives so customers can collect packages on their schedule.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">3. Real-Time Tracking</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Keep customers informed of delivery estimate changes so they can adjust their plans and be available for delivery.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">4. In-Flight Rerouting</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Provide easy access to carrier rerouting tools on tracking pages so customers can redirect packages when plans change.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">5. Strategic Post-Purchase Communications</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Include order confirmations with full delivery details, out-for-delivery notices, and SMS alert options to keep customers informed at every stage.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">How Can Retailers Fix Failed Deliveries for Customers?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Even with prevention efforts, failures occur. Here are recommended solutions:
+        </p>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Unsuccessful Delivery Alerts</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Communicate next steps including re-attempt timelines, redirect options, or pickup location rerouting with reminder messages.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Customer Service Watchlists</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Enable agents to view tracking information for proactive problem-solving and VIP outreach for rescheduling or expedited replacements.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Loss/Damage Journeys</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Create automated flows offering refunds, discounts, or replacement packages with claims processing initiation.
+            </p>
+          </div>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          With these strategies, e-commerce retailers can prevent delivery failures, reduce costs, and enhance customer experiences. The key is to combine proactive prevention with responsive recovery -- ensuring that even when things go wrong, the customer feels supported and valued.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

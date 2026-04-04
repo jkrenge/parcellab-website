@@ -1,0 +1,114 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Hotel Chocolat Puts Customers First Post-Purchase - parcelLab"
+  description="How Hotel Chocolat partnered with parcelLab to improve its post-purchase customer experience across email, push notifications, and branded tracking pages."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">Hotel Chocolat Puts Customers First Post-Purchase</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2021-09-25">September 25, 2021</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>4 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Hotel Chocolat, a British luxury chocolatier and cacao cultivator, has partnered with parcelLab's Operations Experience Management platform to improve its post-purchase customer experience. The collaboration responds to significant shifts in consumer behavior and e-commerce growth during the pandemic.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Business Context</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Hotel Chocolat operates over 140 physical locations alongside digital channels, plus a London restaurant and a hotel estate in Saint Lucia. E-commerce now represents 50% of overall sales, with the customer database expanding 66% since the end of 2019 to reach 3 million users.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Key Challenges</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          As online sales grew, Hotel Chocolat faced several challenges that needed to be addressed:
+        </p>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            <span class="text-[var(--ink-secondary)]">Increased customer service inquiries proportional to sales growth</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            <span class="text-[var(--ink-secondary)]">Need to reduce "WISMO" (Where Is My Order) customer support requests</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            <span class="text-[var(--ink-secondary)]">Demand for enhanced post-purchase communications to build loyalty</span>
+          </li>
+        </ul>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Solution Implementation</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Through the partnership with parcelLab, Hotel Chocolat will deliver a comprehensive post-purchase experience:
+        </p>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Email Communications</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Branded, proactive email updates at every stage of the delivery journey, keeping customers informed and engaged.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Push Notifications</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Real-time push notifications for VIP.ME app users, ensuring loyal customers receive timely delivery updates on their mobile devices.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Branded Tracking Pages</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Custom order tracking pages across web and mobile platforms, featuring product recommendations and community-building engagement opportunities.
+            </p>
+          </div>
+        </div>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Executive Quote</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">"We are committed to providing positive experiences that create differentiation."</p>
+          <p class="mt-1 text-sm text-[var(--ink-muted)]">-- Martin Bell, E-commerce Director, Hotel Chocolat</p>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The partnership between Hotel Chocolat and parcelLab demonstrates how luxury brands can elevate the post-purchase experience to match the quality of their products. By taking ownership of delivery communications and creating branded touchpoints, Hotel Chocolat ensures every interaction reinforces its premium brand identity.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

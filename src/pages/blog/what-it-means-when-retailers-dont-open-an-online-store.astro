@@ -1,0 +1,103 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="What It Means When Retailers Don't Open an Online Store - parcelLab"
+  description="Explore why some brick-and-mortar retailers resist eCommerce, the advantages of having an online store, and why omnichannel is the future of retail."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">What It Means When Retailers Don't Open an Online Store</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2019-07-17">July 17, 2019</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Major brick-and-mortar retailers now operate alongside online businesses. However, some offline retailers remain hesitant about web stores, viewing online and offline retail as competitors rather than complementary channels. The data tells a clear story: 65% of retailers still lack online stores, while only 25% operate their own web stores.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Reasons Against Having Your Own Online Shop</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Common objections include loss of direct customer contact, perceived inability to match in-store service quality, viewing e-commerce as trendy rather than essential, and skepticism about online product quality. However, personalized recommendations and customized shipping communications can establish meaningful customer relationships digitally.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Reasons for Having Your Own Online Shop</h2>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Expanding the Customer Base</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Geographic limitations disappear. Nationwide or statewide sales become possible, dramatically increasing reach beyond the physical store's catchment area.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Offering Niche Products Online</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Specialized items benefit from online distribution, eliminating customer search time and connecting products with buyers who might never visit the physical location.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Accepting Digitization</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Internet usage pervades daily life -- banking, travel booking, communications. Retail must adapt accordingly to meet customers where they already are.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Leveraging Existing Infrastructure</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Established businesses possess registered operations, warehouses, supplier relationships, and customer bases -- ideal foundations for online expansion.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">It Also Works the Other Way Around</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Online retailers are increasingly establishing physical locations. Omnichannel strategies combine the strengths of both models -- creating additional customer touchpoints, gathering customer insights, generating supplementary revenue streams, and reducing expensive online customer acquisition costs.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">The Bottom Line</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">Brick-and-mortar retail needs online retail to survive in the long run. Digitalization advances continuously; retailers must adapt to customer demands.</p>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Young consumers particularly research online presence before store visits. Successful online stores require equal maintenance and personalization as physical locations to avoid appearing impersonal. The two-track approach is no longer optional -- it's essential.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

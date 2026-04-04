@@ -1,0 +1,99 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="The Power of Benchmarking Data: How to Successfully Outperform Your Competitors - parcelLab"
+  description="Benchmarking helps retailers measure post-purchase performance and compare metrics against industry averages, enabling data-driven decisions."
+>
+  <Header client:load />
+  <main>
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">AI and Analytics</span>
+          <h1 class="text-display text-[var(--ink)]">The Power of Benchmarking Data: How to Successfully Outperform Your Competitors</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">Vansh Kukreja</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2024-11-21">November 21, 2024</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Benchmarking is a powerful tool for retailers to measure their post-purchase performance, comparing key metrics such as carrier performance and customer engagement against industry averages. It provides retailers with a clear view of where they stand in their market and helps identify areas ripe for improvement.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">What is Benchmarking and How Does It Help?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Consider a scenario where a retailer manages logistics across multiple regions. Some locations hit delivery SLAs while others consistently miss targets. Benchmarking pinpoints these discrepancies, showing exactly where improvements can be made and providing insights into why certain regions perform better.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Use Case 1: Logistics Performance</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Logistics performance forms the backbone of post-purchase customer satisfaction. Late deliveries, failed first attempts, or high exception rates can deeply impact a retailer's reputation. Key metrics include:
+        </p>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Carrier On-Time Percentage:</strong> How often carriers meet delivery SLAs</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Exception Rate:</strong> Percentage of deliveries facing issues</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Delivery on First Attempt:</strong> Whether packages reach customers without retries</span>
+          </li>
+        </ul>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Use Case 2: Communication Performance</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Communication is a powerful loyalty-building tool in the post-purchase phase. Key communication metrics include open rate, click rate, and open-to-click rate. Lower-than-average open rates may signal that timing or subject lines need refinement.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Key Benefits for Retailers</h2>
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Enhanced Operational Performance</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Identify bottlenecks and collaborate with carriers to address specific issues, lowering exception rates and improving delivery times.</p>
+          </div>
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Improved Customer Engagement</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Understand what drives engagement and fine-tune messaging strategies to optimize each post-purchase journey touchpoint.</p>
+          </div>
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Data-Driven Decision-Making</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Access to industry benchmarks enables confident, strategic decisions on logistics optimization and communication refinement.</p>
+          </div>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          By leveraging Benchmarking insights, retailers can enhance operations, deepen customer engagement, and make strategic decisions building loyalty and driving growth.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

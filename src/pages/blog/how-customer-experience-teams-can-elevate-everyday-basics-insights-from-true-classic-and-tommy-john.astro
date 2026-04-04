@@ -1,0 +1,107 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="How Customer Experience Teams Can Elevate Everyday Basics: Insights from True Classic and Tommy John - parcelLab"
+  description="Learn how True Classic and Tommy John transform everyday products into exceptional customer experiences through proactive communication, consistency, and authentic care."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Customer Experience</span>
+          <h1 class="text-display text-[var(--ink)]">How Customer Experience Teams Can Elevate Everyday Basics: Insights from True Classic and Tommy John</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">Larry Thoma</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2025-05-30">May 30, 2025</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>7 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Transforming mundane products into exceptional experiences isn't limited to luxury brands. True Classic and Tommy John demonstrate that everyday items like T-shirts and underwear can deliver outstanding customer service -- and it starts with flipping the script on traditional post-purchase communication.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Flipping the Script on Post-Purchase Communication</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          True Classic prioritizes proactive outreach about potential delivery issues. As Jordan from the company explains: "We should be reaching out to the customer first when we identify a problem. There are so many tools out there that allow you to identify that before they can reach out to you."
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          This approach transforms potential frustrations into trust-building opportunities rather than waiting for customer complaints.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Rethinking Phone Support</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Contrary to expectations, phone support remains valuable. Both brands experienced unexpected demand when offering this channel. Jordan notes: "Two years ago when we were like, 'Oh, should we offer phone support? Should we not?' And we offered it in that first week, our phone line blew up."
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          This shift challenges assumptions that younger consumers exclusively prefer digital interactions.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Busting Preconceptions About Offshore Support</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Business Process Outsourcing (BPO) support often faces unfair criticism. Jordan counters this bias: "If you train them right, you set them up with the right tools, you're constantly following up and making sure that they feel confident in their role, they will be amazing."
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Quality training and integration matter more than geographical location.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Surprise and Delight vs. Consistency</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          While surprise-and-delight tactics dominate industry discussions, Max from Tommy John advocates for reliability instead: "I don't think you need to constantly be doing that. I think more so it is important to be consistent with your support... customers really like that kind of predictability."
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Consistent service proves more sustainable than occasional grand gestures.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">The Balancing Act of Fraud Prevention</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Both brands combat "friendly fraud," where customers falsely claim non-receipt or make unauthorized returns. Max describes their approach: "What we've developed is guidelines to identify these sort of fraudsters. For delivery fraud, for claiming you didn't receive an order, we have them considering things such as -- is the customer demanding a refund instead of a replacement?"
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          This strategy protects businesses while maintaining customer-first values.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Key Insight</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">"The customer is not always right, but making sure that the customer is always heard is the right thing to do. You don't always have to tell them yes. But if you make them feel heard, that sometimes will solve all of the issues."</p>
+          <p class="mt-1 text-sm text-[var(--ink-muted)]">-- Jordan, True Classic</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Your New Competitive Edge</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Excellence in customer experience stems from fundamentals -- communication, consistency, and authentic care -- rather than flashy technology or extravagant gestures. These brands challenge conventional assumptions about customer needs, setting new standards in overlooked industries.
+        </p>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The takeaway is clear: examine your listening practices and question assumptions about customer requirements. Such reflection may unlock breakthrough improvements in your CX strategy.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

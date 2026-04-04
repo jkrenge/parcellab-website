@@ -1,0 +1,113 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Health and Beauty: A Guide to Post-Sales Communications - parcelLab"
+  description="How health and beauty retailers can use Operations Experience to create engaged online communities through better post-purchase communication strategies."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">Health and Beauty: A Guide to Post-Sales Communications</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2021-08-12">August 12, 2021</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>6 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Post-sales communication encompasses all customer interactions after purchase -- order confirmations, delivery tracking, complaints, returns, and reviews. Yet research reveals that 92% of health and beauty retailers ignore the customer altogether post-purchase. This guide explores how to turn that gap into a competitive advantage.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Key Finding</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">"92% of health and beauty retailers ignore the customer altogether" after purchase, despite evidence showing these communications significantly impact retention and referrals.</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">What Makes Health and Beauty Different?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The health and beauty sector has undergone substantial transformation, with direct-to-consumer brands and subscription services challenging traditional retail models. These products hold unique significance -- consumers purchase them for emotional satisfaction and self-expression, not merely functionality.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          The unboxing experience, distinctive packaging, and branded touchpoints throughout the delivery journey matter considerably. However, only 24% of retail brands offer branded tracking pages, and 38% don't use branded packaging at all. For a category driven by emotion and identity, this is a significant missed opportunity.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">How to Grow Your Brand With Post-Sales Communications</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The research uncovered both challenges and opportunities across the post-purchase journey:
+        </p>
+
+        <div class="mt-6 space-y-4">
+          <div class="flex items-center gap-4 rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-4">
+            <span class="text-2xl font-bold text-[#3D3AD3]">62%</span>
+            <span class="text-[var(--ink-secondary)]">provide delivery predictions at checkout</span>
+          </div>
+          <div class="flex items-center gap-4 rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-4">
+            <span class="text-2xl font-bold text-[#3D3AD3]">33%</span>
+            <span class="text-[var(--ink-secondary)]">send immediately functional tracking links</span>
+          </div>
+          <div class="flex items-center gap-4 rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-4">
+            <span class="text-2xl font-bold text-[#3D3AD3]">96%</span>
+            <span class="text-[var(--ink-secondary)]">fail to send personalized messages during shipping</span>
+          </div>
+          <div class="flex items-center gap-4 rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-4">
+            <span class="text-2xl font-bold text-[#3D3AD3]">40%</span>
+            <span class="text-[var(--ink-secondary)]">request post-purchase reviews</span>
+          </div>
+          <div class="flex items-center gap-4 rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-4">
+            <span class="text-2xl font-bold text-[#3D3AD3]">36%</span>
+            <span class="text-[var(--ink-secondary)]">offer loyalty programs</span>
+          </div>
+          <div class="flex items-center gap-4 rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-4">
+            <span class="text-2xl font-bold text-[#3D3AD3]">39%</span>
+            <span class="text-[var(--ink-secondary)]">confirm receipt of returns</span>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">The Path Forward</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Transparency, choice, and consistent branding throughout the post-purchase journey -- particularly during delivery and returns -- directly influence purchase intent and customer retention. Health and beauty brands have a unique advantage: their products already create emotional connections. Extending that emotional connection through the delivery experience is the logical next step.
+        </p>
+
+        <ol class="mt-6 space-y-3 list-decimal list-inside">
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Brand every touchpoint.</strong> From tracking pages to delivery notifications, make sure customers know they are in your world, not a carrier's.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Personalize communications.</strong> Use purchase history and customer data to send relevant, tailored messages at the right moments.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Invest in the unboxing experience.</strong> For a category driven by emotion, the moment of opening is a high-value brand moment.</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Close the returns loop.</strong> Always confirm receipt and communicate refund timelines -- 61% of brands fail to do this.</li>
+        </ol>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The health and beauty sector is uniquely positioned to benefit from post-sales communication improvements. When 92% of your competitors are ignoring customers after purchase, doing the basics well becomes a significant competitive advantage.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

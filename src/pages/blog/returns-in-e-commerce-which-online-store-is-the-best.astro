@@ -1,0 +1,108 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Returns in E-Commerce: Which Online Store Is the Best? - parcelLab"
+  description="An analysis of how Germany's top 100 online retailers handle returns, from free shipping and label availability to refund communication and best practices."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Returns</span>
+          <h1 class="text-display text-[var(--ink)]">Returns in E-Commerce: Which Online Store Is the Best?</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2020-07-10">July 10, 2020</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>6 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Returns remain a persistent challenge in e-commerce, with approximately 286 million annual returns in Germany alone. parcelLab's E-Commerce Shipping Study 2020 analyzed how the top 100 German online retailers handle returns processes based on test orders and detailed analysis.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Return Costs</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Free returns remain the industry standard. Of the 100 retailers studied, 93 offered free returns. Only 6 retailers charged fees (averaging around &euro;5), and 1 retailer required no physical return at all. The expectation of free returns is firmly established in the German market.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Return Label Availability</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          How customers access return labels varies significantly:
+        </p>
+
+        <div class="mt-6 space-y-4">
+          <div class="flex items-center gap-4 rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-4">
+            <span class="text-2xl font-bold text-[#3D3AD3]">40</span>
+            <span class="text-[var(--ink-secondary)]">retailers included return labels in the package (down from 48 in 2018)</span>
+          </div>
+          <div class="flex items-center gap-4 rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-4">
+            <span class="text-2xl font-bold text-[#3D3AD3]">26</span>
+            <span class="text-[var(--ink-secondary)]">retailers allowed digital label downloads via their website</span>
+          </div>
+          <div class="flex items-center gap-4 rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-4">
+            <span class="text-2xl font-bold text-[#3D3AD3]">20</span>
+            <span class="text-[var(--ink-secondary)]">retailers permitted returns to physical store locations</span>
+          </div>
+          <div class="flex items-center gap-4 rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-4">
+            <span class="text-2xl font-bold text-[#3D3AD3]">27</span>
+            <span class="text-[var(--ink-secondary)]">retailers required customers to request labels via email, phone, or online form</span>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Communication Gaps</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Communication during the returns process remains a major weak point. 68 retailers confirmed receipt of returns to customers, but 32 left customers completely uninformed about whether their return had arrived. Even worse, 75 of the 100 largest German online stores failed to communicate expected refund timing.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">The Standard Bearer</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">OTTO was identified as the market leader in returns excellence -- arranging convenient pickup via Hermes, providing immediate receipt notifications, communicating specific refund timelines, and processing refunds within two days.</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">What the Best Retailers Do Differently</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The study's findings point to clear best practices for retailers looking to improve their returns experience:
+        </p>
+
+        <ol class="mt-4 space-y-3 list-decimal list-inside">
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Maintain direct control</strong> over customer communications rather than delegating to logistics providers</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Enable data collection</strong> and personalization opportunities throughout the returns process</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Implement automated notifications</strong> for delivery delays and return receipt confirmations</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Use customer touchpoints</strong> during returns for cross-selling and engagement</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Communicate refund timelines</strong> proactively so customers know what to expect</li>
+        </ol>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Controlling the returns process directly benefits customer satisfaction, repeat visits, and revenue growth while maintaining brand consistency. In a market with 286 million returns per year, the returns experience is not a back-office concern -- it is a strategic differentiator.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

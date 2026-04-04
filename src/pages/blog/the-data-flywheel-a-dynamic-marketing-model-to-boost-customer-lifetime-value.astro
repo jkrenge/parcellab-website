@@ -1,0 +1,149 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="The Data Flywheel - A Dynamic Marketing Model to Boost Customer Lifetime Value - parcelLab"
+  description="The Flywheel model places customer learning, personalization, and engagement at the center of retail strategy, continuously building momentum through positive experiences."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Post-Purchase</span>
+          <h1 class="text-display text-[var(--ink)]">The Data Flywheel -- A Dynamic Marketing Model to Boost Customer Lifetime Value</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">Tobias Buxhoidt</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2025-01-10">January 10, 2025</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>7 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          The Flywheel model places customer learning, personalization, and engagement at the center of retail strategy. Rather than focusing solely on closing a sale, it continuously builds momentum through positive customer experiences. Each satisfied customer fuels the wheel, driving repeat business, referrals, and long-term loyalty.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">What Is the Data Flywheel Model?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The Data Flywheel captures and analyzes customer data and touchpoints to surface insights, then tests and evolves personalization across communication channels. It engages customers through exceptional service, open communication, appreciation, and exceeding expectations.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Benefits of the Data Flywheel Approach</h2>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Enhanced Efficiency</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Enables ongoing customer interaction rather than one-time transactions, fostering long-term relationships and generating recurring revenue.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Flexibility and Agility</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Continuous feedback allows businesses to adapt to evolving customer needs in real time, staying ahead of changing expectations.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Holistic Customer Lifecycle View</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Understanding customers at every stage enhances customer loyalty and increases the likelihood of referrals.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Flywheel vs. Funnel: Key Differences</h2>
+        <div class="mt-6 overflow-hidden rounded-xl border border-[var(--line)]">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-[var(--surface-sunken)]">
+                <th class="px-4 py-3 text-left font-semibold text-[var(--ink)]">Dimension</th>
+                <th class="px-4 py-3 text-left font-semibold text-[var(--ink)]">Funnel</th>
+                <th class="px-4 py-3 text-left font-semibold text-[var(--ink)]">Flywheel</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[var(--line)]">
+              <tr>
+                <td class="px-4 py-3 font-medium text-[var(--ink)]">Structure</td>
+                <td class="px-4 py-3 text-[var(--ink-secondary)]">Linear, A-to-B journey</td>
+                <td class="px-4 py-3 text-[var(--ink-secondary)]">Circular and continuous</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium text-[var(--ink)]">Customer Focus</td>
+                <td class="px-4 py-3 text-[var(--ink-secondary)]">Prioritizes closing sales</td>
+                <td class="px-4 py-3 text-[var(--ink-secondary)]">Prioritizes ongoing engagement</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium text-[var(--ink)]">Time Horizon</td>
+                <td class="px-4 py-3 text-[var(--ink-secondary)]">Short-term sales goals</td>
+                <td class="px-4 py-3 text-[var(--ink-secondary)]">Sustainable long-term growth</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium text-[var(--ink)]">Retention</td>
+                <td class="px-4 py-3 text-[var(--ink-secondary)]">Limited focus</td>
+                <td class="px-4 py-3 text-[var(--ink-secondary)]">Maximizes customer lifetime value</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Top Considerations for Transition</h2>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Foster a customer-first cultural mindset across all departments</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Invest in tools providing a 360-degree customer journey view</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Align integrated technology stacks (CRM, Supply Chain, Order Management, ERP, Marketing Automation)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Ensure consistency across all customer touchpoints from pre- to post-purchase</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Recognize that post-purchase of one transaction begins pre-purchase of the next</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Shift success metrics from conversion rates to retention rates, NPS, CLV, and referral rates</span>
+          </li>
+        </ul>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The Data Flywheel model represents a fundamental shift in how retailers think about customer relationships. By moving from a linear funnel to a continuous cycle of learning, personalizing, and engaging, brands can build sustainable growth powered by customer lifetime value rather than one-time transactions.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

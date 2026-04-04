@@ -1,0 +1,147 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="What is Post-Purchase Marketing? - parcelLab"
+  description="Post-purchase marketing encompasses strategies businesses use to engage customers after a transaction. Learn how to increase loyalty, generate repeat sales, and gather feedback."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Post-Purchase</span>
+          <h1 class="text-display text-[var(--ink)]">What is Post-Purchase Marketing?</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">Tinka Carrick</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2023-05-02">May 2, 2023</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>8 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Post-purchase marketing encompasses strategies businesses use to engage customers after a transaction. This includes order confirmations, personalized thank-you messages, product recommendations, and referral programs. The objective is fostering long-term relationships to drive repeat purchases and increase customer lifetime value.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">What Are Post-Purchase Activities?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Post-purchase activities reinforce purchase decisions and encourage repeat business. Common examples include:
+        </p>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3D3AD3]"></span>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Order confirmation</strong> -- acknowledging purchases with order details</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3D3AD3]"></span>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Shipping notifications</strong> -- informing customers when orders ship with tracking information</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3D3AD3]"></span>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Product recommendations</strong> -- personalized suggestions based on purchase history</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3D3AD3]"></span>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Customer feedback requests</strong> -- gathering insights to improve offerings</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3D3AD3]"></span>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Loyalty programs</strong> -- providing repeat purchase incentives</span>
+          </li>
+        </ul>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Crafting Your Post-Purchase Marketing Strategy</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Understanding post-purchase behavior -- how customers feel, think, and act after purchasing -- is essential. This assessment determines whether customers become repeat buyers or detractors. Two outcomes emerge:
+        </p>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Positive:</strong> Reviews, repeat business, brand advocacy</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink-muted)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            <span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Negative:</strong> Negative reviews, returns, refunds</span>
+          </li>
+        </ul>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Benefits of Post-Purchase Marketing</h2>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Increase Customer Loyalty</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Consistent post-purchase contact builds relationships encouraging repeat purchases. Athletic Greens sends informative lifestyle emails and spotlights customers, creating community and brand loyalty.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Generate Repeat Sales</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Strategic recommendations facilitate repeat purchases. Redbubble includes similar product suggestions in post-purchase emails, personalizing the shopping experience.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Referral Opportunities</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Incentivize customer referrals. Stitch Fix offers $25 discounts to both referrers and referred friends, turning satisfied customers into brand ambassadors.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Gather Customer Feedback</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Post-purchase communications gather reviews and ratings. Skincare brand Maelove requests customer ratings, demonstrating that opinions matter.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">How Do You Engage Customers Post Purchase?</h2>
+
+        <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-3">1. Order Confirmation Messages</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Clear confirmation emails with tracking links prove powerful. Approximately 30% of customer support inquiries involve "Where is my order?" questions. Proactive communications reduce support burden. GRAVIS uses parcelLab's platform to inform customers about delivery times and potential delays, providing real-time order status pages and feedback collection -- all white-labeled.
+        </p>
+
+        <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-3">2. Share Unique Value-Added Content</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Send content that enhances product value: assembly instructions, usage tips, FAQs, or complementary product recommendations. IKEA provides delivery-day video instructions for quick setup. New Look delivers timely, personalized communications with recommendations, enhancing satisfaction while generating additional revenue.
+        </p>
+
+        <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-3">3. Ask for Feedback</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Reviews strengthen customer relationships and demonstrate valuation of their opinions. Hessnatur uses parcelLab's platform to collect customer feedback systematically, building a cycle of continuous improvement.
+        </p>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Effective post-purchase strategies increase brand value and customer experience. Proactively sharing appropriate information -- confirmations, tracking updates, recommendations, or how-to content -- positions brands above competitors and turns one-time buyers into loyal advocates.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

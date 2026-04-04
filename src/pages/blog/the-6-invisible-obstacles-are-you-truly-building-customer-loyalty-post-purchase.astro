@@ -1,0 +1,86 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="The 6 Invisible Obstacles: Are You Truly Building Customer Loyalty Post-Purchase? - parcelLab"
+  description="A retail expert explores how companies often overlook the post-purchase phase despite its crucial role in building customer loyalty."
+>
+  <Header client:load />
+  <main>
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Post-Purchase</span>
+          <h1 class="text-display text-[var(--ink)]">The 6 Invisible Obstacles: Are You Truly Building Customer Loyalty Post-Purchase?</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">Mikael Aman</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2024-07-03">July 3, 2024</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>6 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          In nearly two decades working at the intersection of business and technology within retail, the post-purchase phase represents an underutilized opportunity. Retailers invest significantly in customer acquisition but frequently neglect what occurs after the sale -- precisely where meaningful, lasting relationships develop.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">The Invisible Obstacles</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Post-purchase obstacles often remain hidden but carry substantial consequences. Research indicates that among the top 100 companies, only half provide essential delivery information, and 40% fail to communicate during the returns process. This communication gap erodes trust and customer loyalty over time.
+        </p>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">1. The Power of Personalization</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Modern customers expect personalized touchpoints throughout their entire journey, not just at the point of sale. Machine learning technologies enable retailers to customize follow-up communications based on individual preferences and behaviors.</p>
+          </div>
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">2. Seamless Communication</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Inconsistent and disjointed communication is a frustrating experience that drives customers away. Automated systems delivering real-time updates on order status, tracking, and anticipated delays maintain customer confidence.</p>
+          </div>
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">3. Efficient Returns Management</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Returns are inevitable but need not be negative experiences. Implementing effective post-purchase platforms with self-service portals allows customers to initiate returns, print labels, and track status effortlessly.</p>
+          </div>
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">4. Building a Community</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Encouraging customers to share experiences on social media or forums creates authentic social proof while fostering trust. Technology platforms rewarding engagement through points, badges, and exclusive perks strengthen community bonds.</p>
+          </div>
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">5. Data-Driven Insights</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Analyzing patterns in returns, repeat purchases, and feedback reveals opportunities for continuous improvement and innovation, addressing issues proactively.</p>
+          </div>
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">6. Embrace Change</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Success requires viewing post-purchase as a long-term relationship investment rather than a transaction endpoint.</p>
+          </div>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          By addressing these six invisible obstacles, retailers can transform their post-purchase experience from a forgotten phase into a powerful loyalty-building engine.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

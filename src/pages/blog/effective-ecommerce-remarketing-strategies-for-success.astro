@@ -1,0 +1,147 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Effective Ecommerce Remarketing Strategies for Success - parcelLab"
+  description="Discover effective remarketing strategies including dynamic ads, behavioral targeting, and post-purchase remarketing to recapture lost ecommerce revenue."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <div class="mb-4 flex gap-2">
+            <span class="inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Marketing</span>
+            <span class="inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Post-Purchase</span>
+          </div>
+          <h1 class="text-display text-[var(--ink)]">Effective Ecommerce Remarketing Strategies for Success</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">Anna Lapezo</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2023-06-07">June 7, 2023</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>7 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Fewer than 3% of website visitors convert on their first visit, meaning ecommerce brands lose approximately 97% of potential customers. Additionally, roughly 70% of shoppers abandon their shopping carts. Remarketing offers a powerful solution to recapture these lost opportunities.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">What is Remarketing in Ecommerce?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Remarketing involves targeting shoppers who have previously visited an ecommerce store, whether they purchased or simply browsed. The strategy aims to re-engage existing customers and encourage repeat purchases or conversions from abandoned browsers.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Remarketing vs. Retargeting</p>
+          <ul class="mt-3 space-y-2">
+            <li class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Remarketing</strong> uses email and SMS to re-engage past customers, focusing on upselling and cross-selling</li>
+            <li class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Retargeting</strong> employs Google, Facebook, or Instagram ads to convert prospects who visited but didn't purchase</li>
+          </ul>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Remarketing Campaigns and Revenue Impact</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Research indicates 66% of consumers value personalized experiences, and 49% of shoppers believe purchase experiences improve with deals based on purchase history. Returning customers contribute to one-third of total ecommerce revenue and spend 3x more than first-time buyers on average.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          The case study of Tirendo demonstrates significant results: a 161% conversion rate increase, 43% reduction in cost per order, and 22% sales growth using remarketing lists.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Dynamic Ecommerce Remarketing</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          This approach automatically tailors ads based on previously viewed products. Key benefits include:
+        </p>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Lower cost-per-click than standard remarketing</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Re-ignites previous customer interactions</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Reduces distractions by directing users to specific products</span>
+          </li>
+        </ul>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Case Study</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">AliDropship achieved $467 in sales within two days with just $18 spent using Facebook dynamic remarketing.</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Remarketing Automation Tools</h2>
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Google Ads</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Set up remarketing tags and audience lists to reach visitors across the Google Display Network and Search.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Facebook Ads</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Create custom audiences through pixel installation, enabling highly targeted remarketing campaigns on Facebook and Instagram.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Mailchimp</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Automate email remarketing campaigns with personalization triggers based on customer behavior and purchase history.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">parcelLab</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Combine order tracking with personalized product recommendations in post-purchase communications, turning every delivery update into a remarketing opportunity.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Optimizing Existing Strategies</h2>
+        <ol class="mt-4 space-y-3 list-decimal list-inside">
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Revisit customer segments</strong> to ensure ads match actual interests rather than all browsing history</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Target multiple channels</strong> including display ads, social media, email, and video</li>
+          <li class="text-[var(--ink-secondary)] leading-relaxed"><strong class="text-[var(--ink)]">Leverage post-purchase communications</strong> by embedding remarketing within order updates</li>
+        </ol>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Behavioral Targeting Strategy</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          This approach goes beyond cookies to analyze browsing patterns, time spent on pages, visit frequency, and customer behavior signals. Netflix demonstrates this through its CineMatch algorithm, which recommends content based on viewing habits and preferences. The principle applies directly to ecommerce: understanding behavior leads to better recommendations and higher conversion rates.
+        </p>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Targeted, data-driven remarketing strategies increase repeat business and convert casual browsers into loyal customers. The key is combining multiple channels with personalized messaging to reach customers at the right moment with the right offer.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,122 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="6 Tips to Level Up Your Post-Purchase Communications - parcelLab"
+  description="Explore how brands can implement SMS delivery notifications and post-purchase text messaging to keep customers informed and engaged."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Post-Purchase</span>
+          <h1 class="text-display text-[var(--ink)]">6 Tips to Level Up Your Post-Purchase Communications</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2022-06-16">June 16, 2022</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>8 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Today's consumers expect seamless, instant communication from brands post-purchase. From emails to DMs on social media, your customers utilize multiple channels to make inquiries and customer service requests. Among the most popular? SMS.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          SMS, or Short Message Service, has fast become the preferred channel for consumers wanting instantaneous updates on orders and deliveries. According to CleverTap, "48% of consumers are interested in receiving SMS for shipping updates, yet just 15% ranked retailers as the best industry for text updates."
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Why E-Commerce Merchants Should Consider SMS Post-Purchase</h2>
+
+        <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-3">Personalized Post-Purchase Experiences</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Brands can provide delivery updates via a dedicated page on their website or by directing customers to the tracking hub of their parcel carrier. But this can feel rather cold and impersonal to your customer. A quick SMS sent at key milestones during the fulfillment and delivery process tells them that your brand has everything in hand. By making the effort to communicate with customers directly, you add an extra layer of personalization to the customer experience.
+        </p>
+
+        <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-3">High Open Rates</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          While email is the most common channel for delivery updates, the average consumer receives so many communications daily that an important message could easily get lost in their inbox. The average email open rate sits at just 21.5%. By comparison, 97% of SMS messages are read within just 15 minutes of delivery. This ensures that customers stay engaged with your brand.
+        </p>
+
+        <h3 class="text-lg font-semibold text-[var(--ink)] mt-8 mb-3">Instant Updates</h3>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          If your brand isn't providing delivery alerts directly, you can't guarantee the quality of the updates your customers are receiving. Parcel carriers often conceal delays or errors that may show them in a bad light. Using direct SMS provides your customers with instantaneous updates that are seen quickly, heightening anticipation for their delivery.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Tips for Text Message Delivery Notifications</h2>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">1. Set Up an SMS Alert System</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              With hundreds of unique orders coming in each day, it simply isn't possible for businesses to send out SMS alerts manually. Consider subscribing to an SMS alert system that allows you to send multiple messages at the same time to different customers. These systems can be integrated with your e-commerce platform or shipping carrier to ensure automated updates.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">2. Make Sure Your System Is Compliant</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              SMS for marketing and informational purposes is highly regulated. The Telephone Consumer Protection Act (TCPA) and CAN-SPAM Act both govern how businesses can interact with consumers using SMS. Provide a tick box at the checkout that states what kinds of communications you wish to send, and separate text message delivery updates from promotional messages.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">3. Send Multiple Updates Once an Order Has Been Placed</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Many brands worry that sending too many updates may negatively impact the experience. But waiting to send an SMS until an order has been dispatched leaves customers in the dark. Aim to send SMS alerts when an order is placed, during order fulfillment, upon shipping, and when out for delivery.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">4. Make It Brand-Centric</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              SMS might have a character limit of 160, but you should still inject your brand's personality into your content. Maintaining a cohesive approach in your post-purchase communications increases brand trust and provides a seamless customer experience from ordering to delivery.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">5. Add a CTA</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              SMS notifications are a crucial touchpoint. Add a CTA to prompt further behaviors that increase customer lifetime value -- signups to your newsletter, following your brand on social media, or asking them to leave a review.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">6. Stay on the Lookout for Future Marketing Opportunities</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Once your customer has opted in to receive SMS messages, this opens up a world of possibilities. Thanks to the almost 100% open rate of SMS, it's a brilliant way to drive more traffic to your website at a cheaper cost than Google ads or sponsored social media posts.
+            </p>
+          </div>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Regular and consistent shipping updates are an integral part of offering customers a positive brand experience. At parcelLab, we help businesses provide personalized and branded post-purchase experiences across multiple touchpoints, including SMS.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

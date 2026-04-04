@@ -1,0 +1,95 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Why Prime Day Should Be in Every Retailer's E-Commerce Calendar - parcelLab"
+  description="Five tips on how retailers can capitalize on Amazon Prime Day, even if they don't sell on Amazon, to drive sales and win new customers."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">Why 'Prime Day' Should Be in Every Retailer's E-Commerce Calendar</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2022-08-11">August 11, 2022</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>7 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Amazon Prime Day is one of the key holiday shopping dates, similar to Black Friday. Global consumers spent $10.40 billion on 2020 Prime Day, showcasing the spending potential of this event. Whilst your brand may not sell products on Amazon, you shouldn't exclude yourself from participating during this important shopping period.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Five Tips for Retailers to Make the Most of Prime Day</h2>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">1. Research Previous Prime Day Lists and Create Discounts</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Consumers often comparison shop Prime Day deals. Large retailers like Walmart and Target capitalize on web traffic by running competing sales. Once you know which items are on the list -- some deals are listed as early as a month prior -- check your inventory for the same or similar items. You could clear out older stock and create room for newer products while boosting your bottom line.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">2. Advertise and Promote Your Sale Items</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Determine which are the best ways to let your target audience know of your sale promotion and invest in those channels beforehand. You can also advertise to your current customers in their shipping and delivery notifications -- delivery and shipping confirmations have open rates upwards of 80%.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">3. Offer Shorter Shipping Times on Sale Items</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              A key attraction of the Amazon Prime experience is the consistent promise of 1-2 days delivery time. Consumers prioritize free shipping and will abandon their carts if they must pay for shipping costs. Reducing your shipping times or offering free shipping on sale items may encourage customers to purchase from you instead.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">4. Better Late Than Never</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              A good strategy is to target consumers who missed the sales during the two-day period but are still hunting for deals. A highly sought-after Prime Day Deal often sells out quickly and becomes backordered. This creates an opportunity for you to sell your in-stock discounted inventory to eager buyers.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">5. Prioritize a Seamless End-to-End Customer Journey</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              The sale is not the final touchpoint for the customer -- far from it. Analyze your fulfillment, shipping, and delivery processes to find gaps. Anticipate WISMO inquiries and offer a branded tracking page with proactive notifications to keep customers informed at every stage.
+            </p>
+          </div>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Shopping days such as Prime Day are key events in the e-commerce calendar, with consumers often waiting to spend money until these days. Host order tracking, shipping, and delivery pages on your website to create personalized and branded communications that are relevant to your customers. This not only allows you to leverage consumer data in your own ecosystem but also supplies more opportunities to engage and keep new customers.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

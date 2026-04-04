@@ -1,0 +1,114 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="How Online Shops Can Become More Accessible - parcelLab"
+  description="Discover why digital accessibility matters for e-commerce and practical steps online shops can take to become more inclusive."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">D2C</span>
+          <h1 class="text-display text-[var(--ink)]">How Online Shops Can Become More Accessible</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2022-11-02">November 2, 2022</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Digital accessibility means removing any barriers that might stop someone from using a website, mobile app, or other digital technology. Every web user has different needs, so there's a long list of potential barriers to overcome -- from design changes to more detailed product descriptions to offering multiple languages to enhanced customer service.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Key Stat</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">In the US alone, 1 in 4 people have a disability -- representing 25% of the potential market that disabled consumers still find their shopping choices limited for.</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">The Business Case for Accessibility</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Consumer spending by people with disabilities is worth billions annually. E-commerce retailers that ignore accessibility are leaving money on the table.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          They're also vulnerable to lawsuits. Over 80% of the top 500 online retailers have faced accessibility-related suits in the past four years. Legal action can be time-consuming, expensive, and damaging to retailers' reputations.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          Making your online store accessible means reaching a neglected 25% of your target market, tapping into more potential profits, and avoiding reputational damage.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">How Online Shops Can Become More Accessible</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Accessibility isn't a one-off achievement. Continual review and updating of websites and digital services is necessary to ensure nothing has stopped working or gone out of date. Here are key ways to upgrade your e-commerce store:
+        </p>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Accessibility Features</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Design supporting people with visual impairments and compatibility with screen readers and text-to-speech technology.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">User-Friendly Design</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Large print, simplified forms, and consistent design patterns that make navigation intuitive for everyone.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Language and Country Options</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              For international shipping, provide translated webpages and localized prices to serve customers in their preferred language.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Product Descriptions</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Highlight disability-friendly features. 43% of consumers with disabilities abandon shopping tasks when lacking accessibility information about products.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Customer Service</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Offer multiple channels -- email, chat, and phone -- letting customers choose their preferred communication method.
+            </p>
+          </div>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Many e-commerce sites fail basic accessibility tests, with fashion retailers being particularly inaccessible. When retailers embrace accessibility, they can gain positive attention and increased profits while serving a broader audience.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

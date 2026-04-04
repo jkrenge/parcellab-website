@@ -1,0 +1,97 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Returns: A Roadblock For Online Retailers? - parcelLab"
+  description="Returns don't have to be a roadblock. Learn how to turn returns management into a customer retention opportunity with the right policy and communication."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Returns</span>
+          <h1 class="text-display text-[var(--ink)]">Returns: A Roadblock For Online Retailers?</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2018-11-30">November 30, 2018</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>6 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Marketing departments should prioritize overall customer experience rather than just pushing sales. Returns management represents an opportunity to build brand loyalty rather than viewing it as a negative business expense. Here is how to reframe the returns challenge.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Problem 1: Creating a Returns Policy</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Retailers must establish clear return terms covering: circumstances for acceptance (damaged goods, unwanted items), return window duration, and refund methods (swaps, credit notes, or cash refunds).
+        </p>
+
+        <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6 mt-6">
+          <h3 class="text-lg font-semibold text-[#035740]">Solution: Make It a Customer Service Plus</h3>
+          <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+            A straightforward returns policy reduces customer support costs and serves as a competitive differentiator. A good returns policy can turn unwanted purchases into brand loyalty. Make this policy easily accessible on your website -- do not bury it in fine print.
+          </p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Problem 2: Cost of Returns</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Returns involve significant overhead including postage, packaging, logistics, refunds, staff coordination, and repackaging expenses. The direct and indirect financial impacts can be substantial.
+        </p>
+
+        <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6 mt-6">
+          <h3 class="text-lg font-semibold text-[#035740]">Solution: Focus on Retention</h3>
+          <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+            Acquiring new customers costs five times more than retaining existing ones. Selling to existing customers is nearly 60% easier than acquiring new ones. The math is clear: retention should be prioritized over constant acquisition spending.
+          </p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Problem 3: Communicating Updates</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Customers expect regular progress updates during the returns process. Current approaches include login-based tracking systems, real-time customer service, chatbots, and social media support.
+        </p>
+
+        <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6 mt-6">
+          <h3 class="text-lg font-semibold text-[#035740]">Solution: Use Updates as a Marketing Channel</h3>
+          <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+            Branded milestone emails can maintain appropriate customer contact frequency while providing marketing opportunities. Include links to blog content, promotional information, or product recommendations to turn a potentially negative moment into a positive brand touchpoint.
+          </p>
+        </div>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Key Takeaway</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">Success requires adopting the customer's perspective and determining what experience your company wants to deliver throughout the returns journey.</p>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Returns are not a roadblock -- they are a retention opportunity hiding in plain sight. The retailers who win are those who treat the returns experience with the same care and intention as the sales experience.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

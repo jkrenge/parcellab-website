@@ -1,0 +1,79 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Lidl Adds More Innovation to Post-Purchase Communications with a Facebook Messenger Chatbot - parcelLab"
+  description="Lidl's new fully integrated Facebook Messenger Chatbot means customers can receive instant, up-to-date notifications about their delivery."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">Lidl Adds More Innovation to Post-Purchase Communications with a Facebook Messenger Chatbot</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2019-09-09">September 9, 2019</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>3 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          We doubt there is a retailer out there who would turn down increased customer satisfaction and loyalty. At Lidl, the need to meet customer expectations was high on the priority list. As a result, the partnership between Lidl and parcelLab was born.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Lidl's Facebook Messenger Chatbot Increases Customer Satisfaction</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Questions such as "Where is my package?" and "When will my package finally arrive?" have likely been asked more times than a retailer can count. At present with most retailers, customers are left waiting for answers to these questions from Customer Service Agents when in reality they want one immediately.
+        </p>
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          For Lidl's customers, the wait is over thanks to parcelLab's latest feature. Lidl's new fully integrated and white-labelled Facebook Messenger Chatbot now means customers can receive instant, up-to-date notifications about their delivery. Now LiA (Lidl Assistant) always knows where the customer's parcel is located.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Key Innovation</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">LiA (Lidl Assistant) provides instant, real-time delivery notifications through Facebook Messenger -- meeting customers where they already are.</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Why Is This Important?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Social media users want information in real time. Therefore, implementing a chatbot via Facebook Messenger is the perfect solution to quickly and conveniently provide customers with important shipping updates. Customers no longer need to navigate away from platforms they already use daily.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">How Does It Work?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Setting it up is simple. The chatbot is easily integrated into Lidl's Facebook Messenger account. Then all customers have to do is go to the Facebook page of Lidl Germany and click on the news button. They can then ask LiA questions such as "Where is my nearest store?" or "Where is my package?"
+        </p>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          This is just one of the many features parcelLab offers retailers to improve their post-purchase communication. By meeting customers on the channels they prefer, brands can deliver the real-time, convenient experience modern shoppers expect.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

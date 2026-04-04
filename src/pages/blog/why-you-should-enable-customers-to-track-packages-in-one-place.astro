@@ -1,0 +1,45 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout title="Why You Should Enable Customers to Track Packages in One Place - parcelLab" description="Learn why centralized package tracking hubs reduce customer anxiety, capture web traffic, cut support tickets, and drive additional purchases.">
+  <Header client:load />
+  <main>
+    <section class="section-generous"><div class="mx-auto max-w-[1440px] px-6 md:px-12"><div class="mx-auto max-w-[800px]">
+      <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>Back to blog</a>
+      <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+      <h1 class="text-display text-[var(--ink)]">Why You Should Enable Customers to Track Packages in One Place</h1>
+      <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+        <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab</strong></span><span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+        <time datetime="2022-07-07">July 7, 2022</time><span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span><span>7 min read</span>
+      </div>
+    </div></div></section>
+    <section class="pb-16 md:pb-24"><div class="mx-auto max-w-[800px] px-6 md:px-12">
+      <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">Modern e-commerce success requires more than competitive pricing. With platforms like Shopify and Etsy lowering entry barriers, retailers must differentiate through superior post-purchase experiences. High-quality order tracking has become a vital tool for building customer relationships after checkout.</p>
+      <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Key Benefits of Centralized Tracking</h2>
+      <div class="mt-6 space-y-6">
+        <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6"><h3 class="text-lg font-semibold text-[var(--ink)]">1. Reduce Customer Anxiety</h3><p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Delivery anxiety is widespread because customers lack visibility during the waiting period. Real-time tracking on your website alleviates concerns and builds confidence for repeat purchases.</p></div>
+        <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6"><h3 class="text-lg font-semibold text-[var(--ink)]">2. Capture More Web Traffic</h3><p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">81% of customers use an order tracking system two or more times during fulfillment. Directing them to carrier websites means losing engagement opportunities.</p></div>
+        <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6"><h3 class="text-lg font-semibold text-[var(--ink)]">3. Reduce Customer Support Tickets</h3><p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">External tracking platforms provide limited control over information delivery. A branded tracker reduces "Where is my order?" inquiries that overwhelm customer service teams.</p></div>
+        <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6"><h3 class="text-lg font-semibold text-[var(--ink)]">4. Drive Additional Purchases</h3><p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Branded tracking hubs enable retargeting through product reviews, videos, blog content, and personalized recommendations during multiple customer visits.</p></div>
+        <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6"><h3 class="text-lg font-semibold text-[var(--ink)]">5. Improve Customer Experience</h3><p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Keeping customers within your branded ecosystem maintains continuity and prevents jarring transitions to third-party sites.</p></div>
+        <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6"><h3 class="text-lg font-semibold text-[var(--ink)]">6. Build Brand Loyalty</h3><p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">93% of customers are more likely to make repeat purchases with companies that offer excellent customer service. Seamless tracking experiences directly support loyalty.</p></div>
+      </div>
+      <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Implementation Strategy</h2>
+      <ul class="mt-4 space-y-3">
+        <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg><span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Build a branded tracking experience</strong> -- create cohesive visual and content integration reflecting your brand identity</span></li>
+        <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg><span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Embed tracking CTAs in notifications</strong> -- order confirmation emails achieve 65% open rates and 17% click-through rates</span></li>
+        <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg><span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Integrate with carriers and OMS</strong> -- real-time API integrations with 150+ delivery services ensure accurate tracking</span></li>
+        <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg><span class="text-[var(--ink-secondary)]"><strong class="text-[var(--ink)]">Personalize notifications using data</strong> -- leverage customer data to provide contextual details like package weight and weather forecasts</span></li>
+      </ul>
+    </div></section>
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,124 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Customer Experience Trends: Amazon, Amazon and More... Amorelie - parcelLab"
+  description="A roundup of the latest customer experience trends including Amorelie's gamification strategy, Amazon's AR initiatives, and shifts in loyalty programs and logistics."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Trends</span>
+          <h1 class="text-display text-[var(--ink)]">Customer Experience Trends: Amazon, Amazon and More... Amorelie</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2020-11-16">November 16, 2020</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>6 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          From gamification strategies to augmented reality experiences, here is a roundup of the latest developments in customer experience, loyalty programs, and logistics innovation.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Customer Binding</h2>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Amorelie's Gamification Strategy</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              E-commerce company Amorelie uses a "Love Trainer" app feature that combines education with product recommendations through gamification mechanics. It is a creative example of how brands can engage customers beyond the transaction.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Brand Boycotts on the Rise</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Research from YouGov found that 37% of Europeans have boycotted brands following scandals, with Germans showing particularly strong commitment -- 53% boycotted food brands specifically. Brand trust has never been more fragile.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Loyalty Programs Expansion</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Google introduced "Play Points" rewards in Germany, allowing users to accumulate and redeem points in the Play Store. Meanwhile, Walmart+ reported strong early adoption with 11% of survey respondents already subscribed at launch.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Customer Experience</h2>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Shipping Expectations Gap</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              A parcelLab consumer study revealed significant misalignments between retailer offerings and customer needs regarding shipping costs, carrier selection, and communication. The gap between what consumers expect and what brands deliver continues to widen.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Amazon's AR Initiative</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Amazon launched augmented reality experiences accessible via QR codes on shipping boxes, turning ordinary packaging into interactive engagement opportunities. It is a creative way to extend the brand experience beyond the digital realm.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Logistics Innovation</h2>
+
+        <div class="mt-6 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Rewe's Rapid Expansion</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              The supermarket chain rapidly deployed 500 pickup stations using commercetools' API technology, demonstrating how quickly physical infrastructure can scale when powered by modern software architecture.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Amazon's Delivery Innovation</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Amazon expanded FBA to Switzerland and tested delivery robots in T&uuml;bingen, Germany, while unveiling electric delivery vehicles as part of plans for 100,000 e-vans by 2030.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">Germany's Parcel Volume</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">
+              Germany received 3.65 billion shipments annually, averaging 44 parcels per person per year. The scale of the logistics challenge continues to grow with no signs of slowing down.
+            </p>
+          </div>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          The common thread across all these trends is clear: customer expectations are rising, and the brands that invest in innovative experiences -- from gamification to AR to sustainable logistics -- will earn the loyalty that drives growth.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

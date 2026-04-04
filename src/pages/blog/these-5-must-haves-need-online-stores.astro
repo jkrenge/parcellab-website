@@ -1,0 +1,77 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="These 5 Must-Haves Need Online Stores - parcelLab"
+  description="Online retailers must implement essential strategies to compete effectively. Explore five critical components that distinguish successful e-commerce operations."
+>
+  <Header client:load />
+  <main>
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">These 5 Must-Haves Need Online Stores</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2019-11-23">November 23, 2019</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          To stand out from the competition and build a suitable customer base, online retailers now have to dig deep into their bag of tricks. Easy and intuitive operation is extremely important to customers.
+        </p>
+
+        <div class="mt-8 space-y-6">
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">1. Improve Findability</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">A combination of SEA and SEO optimization can increase the visibility of products on the web, which is the basis for a successful business.</p>
+          </div>
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">2. Optimize Customer Experience</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">56% of German online shoppers consider a seamless shopping experience more important than a low-priced offer.</p>
+          </div>
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">3. Leverage Personalization</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">43% of consumers prefer personalized offers. Through personalized product recommendations, retailers can boost sales.</p>
+          </div>
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">4. Facilitate Check-out Processes</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Shopping cart abandonment is often as high as 60 to 80 percent. A streamlined checkout process prevents losing sales potential.</p>
+          </div>
+          <div class="rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-6">
+            <h3 class="text-lg font-semibold text-[var(--ink)]">5. Don't Forget After-Sales</h3>
+            <p class="mt-2 text-[var(--ink-secondary)] leading-relaxed">Shipping is the most emotional part of the customer journey. At Lidl, 85% of customers return to the webshop again after the purchase through post-purchase engagement.</p>
+          </div>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Running a successful online store takes effort, from valuable content to personal customer care -- even beyond the order -- to a simple checkout process.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

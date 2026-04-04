@@ -1,0 +1,99 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="New Customers vs Existing Customers: Who Should Retailers Invest In? - parcelLab"
+  description="Exploring whether retailers should focus investment on acquiring new customers or retaining existing ones, and why personalization is the key to both."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Research</span>
+          <h1 class="text-display text-[var(--ink)]">New Customers vs Existing Customers: Who Should Retailers Invest In?</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2019-12-13">December 13, 2019</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          Many retailers pursue growth by acquiring new customers at all costs, but this approach lacks strategic merit. Research consistently demonstrates that it costs five times as much to acquire a new customer as it does to look after an existing one. However, this shouldn't eliminate customer acquisition entirely -- new customers become tomorrow's loyal base.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Key Principle</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">"New customers cost money -- existing customers bring money."</p>
+        </div>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">For Whom Does Customer Acquisition Make Sense?</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Startups and small retailers must first build a foundational customer database. However, established businesses with substantial existing customer bases should prioritize retention. Without proper maintenance of current relationships, customers migrate to competitors rapidly. A balanced approach acknowledges that while acquisition is necessary initially, established retailers should focus predominantly on existing customers.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Why Existing Customers Prove More Valuable</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Loyal, satisfied customers generate recurring revenue through repeat purchases. Several factors explain this advantage:
+        </p>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Existing customers purchase more frequently and maintain larger shopping baskets</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Customer maintenance costs approximately one-fifth of acquisition expenses</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Satisfied customers provide referrals to potential new buyers</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-[var(--ink-secondary)]">Historical customer data enables more effective personalization</span>
+          </li>
+        </ul>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">The Solution: Personalization and Relevance</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Success lies in tailored, relevant engagement. Seasonal mailings, birthday campaigns, and discount promotions strengthen customer loyalty. Alternative communication channels -- including WhatsApp and Facebook Messenger -- extend reach beyond email. Personalized dispatch messages achieve open rates approaching 80 percent.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Personalization Beyond the Order</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Most retailers invest heavily in pre-purchase and purchase-phase communication but abandon customers post-order, handing them to logistics providers. However, shipping represents an emotionally significant component of the customer journey deserving continued personalization and attention.
+        </p>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Retailers should evaluate whether new or existing customer focus aligns with their business stage. Established businesses typically benefit from prioritizing existing customers through creative incentives, personal communications, and consistent engagement throughout the entire customer lifecycle -- from order placement through shipping and returns.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

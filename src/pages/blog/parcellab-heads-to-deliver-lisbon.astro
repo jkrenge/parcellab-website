@@ -1,0 +1,80 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="parcelLab Heads to Deliver, Lisbon - parcelLab"
+  description="parcelLab attended the fourth iteration of the Deliver conference in Lisbon, Europe's biggest e-Logistics marketplace with over 1,200 delegates."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Events</span>
+          <h1 class="text-display text-[var(--ink)]">parcelLab Heads to Deliver, Lisbon</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">parcelLab Team</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2019-07-01">July 1, 2019</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>3 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          International e-commerce and logistics leaders gathered for the fourth iteration of the Deliver conference, hosted in Lisbon on June 5-6. The event attracted over 1,200 high-level delegates and dozens of logistics service providers, positioning itself as "Europe's biggest e-Logistics marketplace."
+        </p>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed mt-4">
+          The conference featured one-to-one meetings between decision makers and service providers, along with workshops and talks from industry leaders including Stewart McGuire (Head of Corporate Development at Ocado) and Chunhui Zhang (Group Head of Logistics R&D at Alibaba).
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">About parcelLab</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Headquartered in London and Munich, parcelLab serves over 350 retailers including Lidl, Ikea, and Made.com. The company specializes in intelligent, personalized, and emotionally-connected delivery experiences.
+        </p>
+
+        <div class="my-10 rounded-2xl bg-[var(--surface-sunken)] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">Our Philosophy</p>
+          <p class="mt-2 text-lg font-medium text-[var(--ink)]">"Checkout is only the start of the journey."</p>
+          <p class="mt-1 text-sm text-[var(--ink-muted)]">-- parcelLab</p>
+        </div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          parcelLab focuses on helping retailers control shipping communications to build brand loyalty. By owning every touchpoint from order confirmation to delivery and returns, retailers can transform transactional moments into lasting brand experiences.
+        </p>
+
+        <h2 class="text-heading text-[var(--ink)] mt-12 mb-4">Event Attendance</h2>
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          CEO and Founder Tobias Buxhoidt and Teamlead Sales and Partner Manager Christoph Pirkl represented parcelLab at the event, meeting with e-commerce and logistics professionals from across Europe to discuss the future of post-purchase experience.
+        </p>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Deliver Lisbon reinforced the growing recognition across the logistics industry that the post-purchase experience is no longer optional -- it is a strategic imperative for any retailer serious about customer retention and brand differentiation.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

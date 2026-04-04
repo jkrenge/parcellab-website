@@ -1,0 +1,114 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/globals.css";
+import { Header } from "../../components/Header";
+import InnerPageCTA from "../../components/InnerPageCTA.astro";
+import Footer from "../../components/Footer.astro";
+
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Guide to Ecommerce Cost Cutting - parcelLab"
+  description="From automating processes to negotiating with suppliers, discover the top ecommerce cost-cutting practices to save money and boost profits."
+>
+  <Header client:load />
+  <main>
+    <!-- Article Header -->
+    <section class="section-generous">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto max-w-[800px]">
+          <a href={`${b}/blog/`} class="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:text-[#3D3AD3]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-0.5"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to blog
+          </a>
+          <span class="mb-4 inline-block rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Post-Purchase</span>
+          <h1 class="text-display text-[var(--ink)]">Guide to Ecommerce Cost Cutting</h1>
+          <div class="mt-6 flex items-center gap-4 text-sm text-[var(--ink-muted)]">
+            <span>By <strong class="font-medium text-[var(--ink-secondary)]">Tobias Buxhoidt</strong></span>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <time datetime="2023-11-14">November 14, 2023</time>
+            <span class="h-1 w-1 rounded-full bg-[var(--ink-muted)]"></span>
+            <span>14 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-16 md:pb-24">
+      <div class="mx-auto max-w-[800px] px-6 md:px-12">
+        <p class="text-[var(--ink-secondary)] leading-relaxed text-lg">
+          As an ecommerce business, every penny counts -- especially in today's economic landscape. Margins are shrinking, competition is fierce, and shoppers are savvier than ever. But no matter what your financial situation is, there are many things you can do to implement smart spending strategies and reduce business expenses without sacrificing quality.
+        </p>
+
+        <div class="mt-8 space-y-10">
+          <div>
+            <h2 class="text-heading text-[var(--ink)] mb-4">1. Start by Understanding Your Finances</h2>
+            <p class="text-[var(--ink-secondary)] leading-relaxed">
+              Ecommerce cost reduction isn't about cutting expenses across the board. It's about spending smart and maximizing value. Figure out where your money is going, identify which areas generate sales and profits, and invest more strategically in what works. This ensures you don't cut your budget in areas crucial for growth and customer satisfaction.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-heading text-[var(--ink)] mb-4">2. Automate and Streamline Processes</h2>
+            <p class="text-[var(--ink-secondary)] leading-relaxed">
+              Employees spend about 40% of their time on manual or repetitive tasks. Automate data transfer between systems, customer communications (order confirmations, shipping notifications), order processing and fulfillment, marketing campaign scheduling, supplier communications via EDI, and returns processing with self-service portals.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-heading text-[var(--ink)] mb-4">3. Negotiate with Suppliers</h2>
+            <p class="text-[var(--ink-secondary)] leading-relaxed">
+              Get bulk purchase discounts, find vendors closer to your warehouses, explore just-in-time (JIT) inventory management to reduce storage costs, and try consignment agreements to stock and sell products without purchasing upfront.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-heading text-[var(--ink)] mb-4">4. Optimize Your Marketing Spend</h2>
+            <p class="text-[var(--ink-secondary)] leading-relaxed">
+              Rather than mindlessly cutting your advertising budget, analyze and reallocate funds towards the most effective channels yielding the highest ROI. Track results to see what's working and allocate even more effectively. Allocate some budget for experimentation to stay ahead of the curve.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-heading text-[var(--ink)] mb-4">5. Minimize Refunds and Returns</h2>
+            <p class="text-[var(--ink-secondary)] leading-relaxed">
+              For every $1 billion in sales, the average retailer incurs $165 million in merchandise returns. Ensure accurate product photos and descriptions, provide size guides and fitting tools, offer product guides, secure packages to avoid damage, explore repurchase incentives on your self-service portal, and prevent return fraud -- for every $100 in returned merchandise, retailers lose $10.40 to fraud.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-heading text-[var(--ink)] mb-4">6. Implement Efficient Customer Service Processes</h2>
+            <p class="text-[var(--ink-secondary)] leading-relaxed">
+              Automate communications to reduce WISMO inquiries. Create an order portal for self-service tracking. Set up FAQ pages and a knowledge base. Use chatbots for common questions. Offer self-service returns. Hugo Boss integrated parcelLab to send branded order emails and delivery updates, personalizing the experience while decreasing WISMO requests. BBG reduced customer service requests by 24% with parcelLab.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-heading text-[var(--ink)] mb-4">7. Focus on Employee Retention</h2>
+            <p class="text-[var(--ink-secondary)] leading-relaxed">
+              It costs businesses an average of $4,683 to hire new employees. Create a positive work environment, offer competitive compensation, provide high-value benefits, double-down on employee appreciation, gather and act on employee feedback, provide learning opportunities, and offer flexible work arrangements where possible.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-heading text-[var(--ink)] mb-4">8. Reduce Shipping Costs</h2>
+            <p class="text-[var(--ink-secondary)] leading-relaxed">
+              47% of merchants spend more than 10% of an order's total value on shipping, and 41% see higher shipping costs as one of their biggest challenges. Negotiate with shipping partners, consider regional carriers, offer free shipping only above a specific amount, use technology to optimize rates and labels, optimize warehouse locations, and consider third-party logistics providers.
+            </p>
+          </div>
+        </div>
+
+        <div class="my-12 border-t border-[var(--line)]"></div>
+
+        <p class="text-[var(--ink-secondary)] leading-relaxed">
+          Ecommerce cost cutting can improve your bottom line -- as long as it's done strategically. Before cutting your budget, determine the specific areas to reduce costs and which parts of your business deserve more investment. This thoughtful approach enables cost reduction without compromising quality, output, and revenue.
+        </p>
+      </div>
+    </section>
+
+    <InnerPageCTA />
+  </main>
+  <Footer />
+</Layout>

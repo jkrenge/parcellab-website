@@ -8,71 +8,70 @@ import Footer from "../../components/Footer.astro";
 
 const b = import.meta.env.BASE_URL;
 
-const posts = [
-  {
-    title: "NRF '26 Recap: How True Classic Built a Post-Purchase Journey That Never Ends",
-    description: "At NRF, parcelLab's Chief Product Officer sat down with Jordan Gesky of True Classic to discuss redefining customer journeys beyond the checkout.",
-    category: "Featured",
-    accent: "bg-[#3D3AD3]",
-    slug: "nrf-recap-true-classic",
-  },
-  {
-    title: "How Retailers Can Reduce Their eCommerce Return Rates in 2026",
-    description: "eCommerce return rates are a thorn in most retailers' sides. Discover proven strategies to turn the tide and reduce costly returns.",
-    category: "Returns",
-    accent: "bg-[#035740]",
-    slug: "reduce-ecommerce-return-rates",
-  },
-  {
-    title: "Retail Trends and Predictions Shaping eCommerce in 2026",
-    description: "A new year always feels like a reset button. Explore the trends and predictions that will define the retail landscape this year.",
-    category: "Trends",
-    accent: "bg-[#FFC943]",
-    slug: "retail-trends-and-predictions",
-  },
-  {
-    title: "Top 6 Return Management Solutions of 2026",
-    description: "A comprehensive look at the leading return management platforms helping retailers streamline reverse logistics and recover revenue.",
-    category: "Returns",
-    accent: "bg-[#035740]",
-    slug: "top-return-management-solutions",
-  },
-  {
-    title: "The Return Shift: Why Companies Saving Most on Returns Won't Share Numbers",
-    description: "The brands achieving the biggest savings on returns are keeping their strategies close to the chest. Here's what we know.",
-    category: "Returns",
-    accent: "bg-[#F4373D]",
-    slug: "the-return-shift",
-  },
-  {
-    title: "What Is eCommerce Returns Management?",
-    description: "Everything you need to know about eCommerce returns management — from policy design to logistics optimization and customer communication.",
-    category: "Returns",
-    accent: "bg-[#3D3AD3]",
-    slug: "what-is-ecommerce-returns-management",
-  },
-  {
-    title: "Turning Returns Into ROI: A Department-by-Department Playbook",
-    description: "Returns touch every department. This playbook shows how each team can contribute to turning returns from a cost center into a growth lever.",
-    category: "Returns",
-    accent: "bg-[#FFC943]",
-    slug: "turning-returns-into-roi",
-  },
-  {
-    title: "How to Handle Customer Returns",
-    description: "Best practices for handling customer returns efficiently while preserving satisfaction and building long-term loyalty.",
-    category: "Operations",
-    accent: "bg-[#035740]",
-    slug: "how-to-handle-customer-returns",
-  },
-  {
-    title: "What Is a Self-Service Return?",
-    description: "Self-service returns empower customers and reduce support costs. Learn how to implement them and why they matter for your brand.",
-    category: "Returns",
-    accent: "bg-[#F4373D]",
-    slug: "what-is-a-self-service-return",
-  },
+// Discover all blog posts dynamically from the file system
+const allPages = import.meta.glob('./*.astro', { eager: false });
+const allSlugs = Object.keys(allPages)
+  .map((path) => path.replace('./', '').replace('.astro', ''))
+  .filter((slug) => slug !== 'index')
+  .sort();
+
+// Convert slug to readable title
+function slugToTitle(slug: string): string {
+  return slug
+    .split('-')
+    .map((word) => {
+      if (['a', 'an', 'the', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by', 'from', 'vs', 'is'].includes(word)) return word;
+      if (word === 'e') return 'e';
+      if (word === 'ai') return 'AI';
+      if (word === 'uk') return 'UK';
+      if (word === 'us') return 'US';
+      if (word === 'dtc') return 'DTC';
+      if (word === 'b2b') return 'B2B';
+      if (word === 'b2c') return 'B2C';
+      if (word === 'gdpr') return 'GDPR';
+      if (word === 'roi') return 'ROI';
+      if (word === 'nrf') return 'NRF';
+      if (word === 'cx') return 'CX';
+      if (word === 'bopis') return 'BOPIS';
+      if (word === 'bfcm') return 'BFCM';
+      if (word === 'wismo') return 'WISMO';
+      if (word === 'soc') return 'SOC';
+      if (word === 'saas') return 'SaaS';
+      if (word === 'sap') return 'SAP';
+      if (word === 'parcellab') return 'parcelLab';
+      if (word === 'ecommerce') return 'eCommerce';
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    .join(' ');
+}
+
+// Categorize posts by keyword matching
+function getCategory(slug: string): { label: string; color: string } {
+  if (slug.includes('return')) return { label: 'Returns', color: 'bg-[#035740]' };
+  if (slug.includes('ai') || slug.includes('automation')) return { label: 'AI & Tech', color: 'bg-[#8B5CF6]' };
+  if (slug.includes('trend') || slug.includes('prediction') || slug.includes('peak-season') || slug.includes('bfcm') || slug.includes('black-friday') || slug.includes('holiday') || slug.includes('christmas')) return { label: 'Trends', color: 'bg-[#FFC943]' };
+  if (slug.includes('parcellab-') && (slug.includes('award') || slug.includes('named') || slug.includes('recognized') || slug.includes('secures') || slug.includes('receives') || slug.includes('ranks') || slug.includes('features') || slug.includes('shortlisted') || slug.includes('wins'))) return { label: 'Company News', color: 'bg-[#6B7280]' };
+  if (slug.includes('podcast')) return { label: 'Podcast', color: 'bg-[#5046E5]' };
+  if (slug.includes('guide') || slug.includes('how-to') || slug.includes('tips') || slug.includes('ways') || slug.includes('steps') || slug.includes('hacks')) return { label: 'How-To', color: 'bg-[#3D3AD3]' };
+  if (slug.includes('study') || slug.includes('research') || slug.includes('findings') || slug.includes('report')) return { label: 'Research', color: 'bg-[#035740]' };
+  if (slug.includes('delivery') || slug.includes('shipping') || slug.includes('tracking') || slug.includes('last-mile')) return { label: 'Shipping', color: 'bg-[#F59E0B]' };
+  if (slug.includes('sustainability') || slug.includes('sustainable') || slug.includes('greenwashing') || slug.includes('circular')) return { label: 'Sustainability', color: 'bg-[#059669]' };
+  if (slug.includes('narvar') || slug.includes('aftership') || slug.includes('wismolabs') || slug.includes('metapack') || slug.includes('malomo') || slug.includes('comparison') || slug.includes('alternative')) return { label: 'Comparisons', color: 'bg-[#F4373D]' };
+  return { label: 'Post-Purchase', color: 'bg-[#3D3AD3]' };
+}
+
+// Featured posts (curated selection)
+const featured = [
+  { slug: "nrf-recap-true-classic", title: "NRF '26 Recap: How True Classic Built a Post-Purchase Journey That Never Ends", description: "At NRF, parcelLab's Chief Product Officer sat down with Jordan Gesky of True Classic to discuss redefining customer journeys beyond the checkout." },
+  { slug: "reduce-ecommerce-return-rates", title: "How Retailers Can Reduce Their eCommerce Return Rates in 2026", description: "eCommerce return rates are a thorn in most retailers' sides. Discover proven strategies to turn the tide and reduce costly returns." },
+  { slug: "retail-trends-and-predictions", title: "Retail Trends and Predictions Shaping eCommerce in 2026", description: "A new year always feels like a reset button. Explore the trends and predictions that will define the retail landscape this year." },
+  { slug: "the-next-era-of-post-purchase-introducing-parcellab-ai-agents", title: "The Next Era of Post-Purchase: Introducing parcelLab AI Agents", description: "How AI agents are transforming the post-purchase experience with intelligent automation." },
+  { slug: "top-return-management-solutions", title: "Top 6 Return Management Solutions of 2026", description: "A comprehensive look at the leading return management platforms helping retailers streamline reverse logistics." },
+  { slug: "how-tariffs-are-reshaping-retail-from-checkout-to-returns", title: "How Tariffs Are Reshaping Retail From Checkout to Returns", description: "The impact of tariff changes on the full retail journey and what brands can do about it." },
 ];
+
+const featuredSlugs = new Set(featured.map((p) => p.slug));
+const remainingPosts = allSlugs.filter((slug) => !featuredSlugs.has(slug));
 ---
 
 <Layout title="The Post-Purchase Experience Blog - parcelLab" description="Read our blogs for the latest industry trends, thought leadership, and best practices relating to the post-purchase experience.">
@@ -88,34 +87,59 @@ const posts = [
       <div class="mx-auto max-w-[1440px] px-6 md:px-12">
         <!-- Featured post -->
         <div class="mb-16">
-          <a href={`${b}/blog/${posts[0].slug}/`} class="group block overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] transition-shadow hover:shadow-lg">
+          <a href={`${b}/blog/${featured[0].slug}/`} class="group block overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] transition-shadow hover:shadow-lg">
             <div class="grid md:grid-cols-2">
               <div class="flex h-64 items-center justify-center bg-gradient-to-br from-[#3D3AD3] to-[#6360e8] md:h-auto">
                 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="opacity-40"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="M8 7h6"/><path d="M8 11h8"/></svg>
               </div>
               <div class="flex flex-col justify-center p-8 md:p-10">
                 <span class="mb-3 inline-block w-fit rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Featured</span>
-                <h2 class="text-heading text-[var(--ink)] group-hover:text-[#3D3AD3] transition-colors">{posts[0].title}</h2>
-                <p class="mt-3 text-[var(--ink-secondary)] leading-relaxed">{posts[0].description}</p>
+                <h2 class="text-heading text-[var(--ink)] group-hover:text-[#3D3AD3] transition-colors">{featured[0].title}</h2>
+                <p class="mt-3 text-[var(--ink-secondary)] leading-relaxed">{featured[0].description}</p>
               </div>
             </div>
           </a>
         </div>
 
-        <!-- Post grid -->
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {posts.slice(1).map((post) => (
-            <a href={`${b}/blog/${post.slug}/`} class="group flex flex-col overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] transition-shadow hover:shadow-lg">
-              <div class={`flex h-48 items-center justify-center ${post.accent}`}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="opacity-30"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="M8 7h6"/><path d="M8 11h8"/></svg>
-              </div>
-              <div class="flex flex-1 flex-col p-6">
-                <span class="mb-3 inline-block w-fit rounded-full bg-[var(--surface-sunken)] px-3 py-1 text-xs font-semibold text-[var(--ink-secondary)]">{post.category}</span>
-                <h3 class="text-lg font-medium leading-snug text-[var(--ink)] group-hover:text-[#3D3AD3] transition-colors">{post.title}</h3>
-                <p class="mt-2 flex-1 text-sm leading-relaxed text-[var(--ink-secondary)]">{post.description}</p>
-              </div>
-            </a>
-          ))}
+        <!-- Featured grid -->
+        <div class="mb-20 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {featured.slice(1).map((post) => {
+            const cat = getCategory(post.slug);
+            return (
+              <a href={`${b}/blog/${post.slug}/`} class="group flex flex-col overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] transition-shadow hover:shadow-lg">
+                <div class={`flex h-48 items-center justify-center ${cat.color}`}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="opacity-30"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="M8 7h6"/><path d="M8 11h8"/></svg>
+                </div>
+                <div class="flex flex-1 flex-col p-6">
+                  <span class="mb-3 inline-block w-fit rounded-full bg-[var(--surface-sunken)] px-3 py-1 text-xs font-semibold text-[var(--ink-secondary)]">{cat.label}</span>
+                  <h3 class="text-lg font-medium leading-snug text-[var(--ink)] group-hover:text-[#3D3AD3] transition-colors">{post.title}</h3>
+                  <p class="mt-2 flex-1 text-sm leading-relaxed text-[var(--ink-secondary)]">{post.description}</p>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+
+        <!-- All posts -->
+        <div class="border-t border-[var(--line)] pt-16">
+          <h2 class="text-display mb-2 text-[var(--ink)]">All articles</h2>
+          <p class="mb-10 text-[var(--ink-secondary)]">{allSlugs.length} posts covering post-purchase experience, returns, delivery, and more.</p>
+
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {remainingPosts.map((slug) => {
+              const cat = getCategory(slug);
+              const title = slugToTitle(slug);
+              return (
+                <a href={`${b}/blog/${slug}/`} class="group flex items-start gap-4 rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-5 transition-all hover:border-[var(--ink-muted)] hover:shadow-md">
+                  <span class={`mt-0.5 inline-block h-2.5 w-2.5 shrink-0 rounded-full ${cat.color}`} />
+                  <div class="min-w-0">
+                    <h3 class="text-sm font-medium leading-snug text-[var(--ink)] group-hover:text-[#3D3AD3] transition-colors line-clamp-2">{title}</h3>
+                    <span class="mt-1 block text-xs text-[var(--ink-muted)]">{cat.label}</span>
+                  </div>
+                </a>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
