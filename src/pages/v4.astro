@@ -1,0 +1,1150 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/globals.css";
+import { Header } from "../components/Header";
+import Footer from "../components/Footer.astro";
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout title="parcelLab - Make Every Post-Purchase Moment Count" description="Use branded tracking and intelligent returns to improve customer experience and capture new revenue for your brand.">
+  <Header client:load />
+  <main>
+
+    <!-- ════════════════════════════════════════════════════════
+         1. HERO SECTION
+         ════════════════════════════════════════════════════════ -->
+    <section class="section-generous bg-[var(--surface)]">
+      <div class="container-pl text-center">
+        <h1 class="text-hero mx-auto max-w-4xl">
+          Make every
+          <span class="v4-rotating-wrapper" aria-label="delivery, return, exchange, notification">
+            <span class="v4-rotating-word text-[#3D3AD3]" aria-hidden="true">delivery</span>
+            <span class="v4-rotating-word text-[#3D3AD3]" aria-hidden="true">return</span>
+            <span class="v4-rotating-word text-[#3D3AD3]" aria-hidden="true">exchange</span>
+            <span class="v4-rotating-word text-[#3D3AD3]" aria-hidden="true">notification</span>
+          </span>
+          <br />moment count
+        </h1>
+
+        <p class="mt-6 mx-auto max-w-2xl text-lg text-[var(--ink-secondary)] leading-relaxed">
+          Use branded tracking and intelligent returns to improve customer experience and capture new revenue for your brand.
+        </p>
+
+        <div class="mt-10">
+          <a href="#demo" class="inline-flex items-center gap-2 rounded-full bg-[#3D3AD3] px-8 py-4 text-base font-semibold text-white shadow-lg shadow-[#3D3AD3]/25 transition-all hover:bg-[#3230b8] hover:shadow-xl hover:shadow-[#3D3AD3]/30 hover:-translate-y-0.5 active:translate-y-0 active:shadow-md">
+            Book a demo
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Trust bar -->
+        <div class="mt-12 flex flex-col items-center gap-3">
+          <p class="text-sm text-[var(--ink-muted)]">Trusted by 700+ brands across Fashion, Retail, DTC, and more</p>
+          <div class="flex items-center gap-1.5 text-[#FFC943]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span class="ml-1 text-sm font-medium text-[var(--ink-secondary)]">4.6/5 on G2</span>
+          </div>
+        </div>
+
+        <!-- Logo marquee -->
+        <div class="mt-10 overflow-hidden" aria-hidden="true">
+          <div class="flex animate-marquee w-max items-center gap-16">
+            <img src={`${b}/images/logos/IKEA_Logo_Black.svg`} alt="" class="h-8 opacity-40 grayscale" loading="lazy" />
+            <img src={`${b}/images/brands/Hugo-Boss.svg`} alt="" class="h-7 opacity-40 grayscale" loading="lazy" />
+            <img src={`${b}/images/brands/Dyson.svg`} alt="" class="h-7 opacity-40 grayscale" loading="lazy" />
+            <img src={`${b}/images/brands/Puma.svg`} alt="" class="h-7 opacity-40 grayscale" loading="lazy" />
+            <img src={`${b}/images/brands/Farfetch.svg`} alt="" class="h-6 opacity-40 grayscale" loading="lazy" />
+            <img src={`${b}/images/brands/JohnLewis-1.svg`} alt="" class="h-6 opacity-40 grayscale" loading="lazy" />
+            <img src={`${b}/images/brands/True-Classic-1.svg`} alt="" class="h-6 opacity-40 grayscale" loading="lazy" />
+            <img src={`${b}/images/brands/Urban-Outfitters-1.svg`} alt="" class="h-5 opacity-40 grayscale" loading="lazy" />
+            <!-- Duplicate set for seamless loop -->
+            <img src={`${b}/images/logos/IKEA_Logo_Black.svg`} alt="" class="h-8 opacity-40 grayscale" loading="lazy" />
+            <img src={`${b}/images/brands/Hugo-Boss.svg`} alt="" class="h-7 opacity-40 grayscale" loading="lazy" />
+            <img src={`${b}/images/brands/Dyson.svg`} alt="" class="h-7 opacity-40 grayscale" loading="lazy" />
+            <img src={`${b}/images/brands/Puma.svg`} alt="" class="h-7 opacity-40 grayscale" loading="lazy" />
+            <img src={`${b}/images/brands/Farfetch.svg`} alt="" class="h-6 opacity-40 grayscale" loading="lazy" />
+            <img src={`${b}/images/brands/JohnLewis-1.svg`} alt="" class="h-6 opacity-40 grayscale" loading="lazy" />
+            <img src={`${b}/images/brands/True-Classic-1.svg`} alt="" class="h-6 opacity-40 grayscale" loading="lazy" />
+            <img src={`${b}/images/brands/Urban-Outfitters-1.svg`} alt="" class="h-5 opacity-40 grayscale" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+         2. PRODUCT TABS SECTION
+         ════════════════════════════════════════════════════════ -->
+    <section class="section-standard bg-[var(--surface-sunken)]">
+      <div class="container-pl">
+        <!-- CSS-only tabs with hidden radio inputs -->
+        <input type="radio" name="product-tab" id="tab-tracking" class="sr-only peer/tracking" checked />
+        <input type="radio" name="product-tab" id="tab-returns" class="sr-only peer/returns" />
+        <input type="radio" name="product-tab" id="tab-convert" class="sr-only peer/convert" />
+
+        <!-- Tab controls -->
+        <div class="flex justify-center mb-12">
+          <div class="inline-flex rounded-full bg-[var(--surface-raised)] p-1.5 shadow-sm border border-[var(--line)]">
+            <label for="tab-tracking" class="v4-tab-label peer-checked/tracking:bg-[#3D3AD3] peer-checked/tracking:text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+              Tracking
+            </label>
+            <label for="tab-returns" class="v4-tab-label peer-checked/returns:bg-[#3D3AD3] peer-checked/returns:text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 14 4 9 9 4"/><path d="M20 20v-7a4 4 0 0 0-4-4H4"/></svg>
+              Returns
+            </label>
+            <label for="tab-convert" class="v4-tab-label peer-checked/convert:bg-[#3D3AD3] peer-checked/convert:text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Convert
+            </label>
+          </div>
+        </div>
+
+        <!-- Tab content: Tracking -->
+        <div class="v4-tab-content peer-checked/tracking:opacity-100 peer-checked/tracking:visible peer-checked/tracking:relative">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Mock UI: Branded tracking page -->
+            <div class="bg-[var(--surface-raised)] rounded-2xl shadow-xl border border-[var(--line)] overflow-hidden">
+              <!-- Browser chrome -->
+              <div class="flex items-center gap-2 px-4 py-3 bg-[var(--surface-sunken)] border-b border-[var(--line)]">
+                <div class="flex gap-1.5">
+                  <div class="w-3 h-3 rounded-full bg-[#F4373D]/60"></div>
+                  <div class="w-3 h-3 rounded-full bg-[#FFC943]/60"></div>
+                  <div class="w-3 h-3 rounded-full bg-[#035740]/60"></div>
+                </div>
+                <div class="flex-1 ml-3 bg-white rounded-md px-3 py-1 text-xs text-[var(--ink-muted)] border border-[var(--line)]">track.yourbrand.com/order/PL-29841</div>
+              </div>
+              <!-- Tracking content -->
+              <div class="p-8">
+                <div class="flex items-center gap-3 mb-6">
+                  <div class="w-10 h-10 rounded-lg bg-[#3D3AD3]/10 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                  </div>
+                  <div>
+                    <p class="text-sm font-semibold text-[var(--ink)]">Your order is on its way!</p>
+                    <p class="text-xs text-[var(--ink-muted)]">Order #PL-29841</p>
+                  </div>
+                </div>
+                <!-- Progress stepper -->
+                <div class="relative mb-8">
+                  <div class="flex items-center justify-between relative z-10">
+                    <div class="flex flex-col items-center gap-1.5">
+                      <div class="w-8 h-8 rounded-full bg-[#3D3AD3] flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                      </div>
+                      <span class="text-[10px] font-medium text-[var(--ink)]">Ordered</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-1.5">
+                      <div class="w-8 h-8 rounded-full bg-[#3D3AD3] flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                      </div>
+                      <span class="text-[10px] font-medium text-[var(--ink)]">Shipped</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-1.5">
+                      <div class="w-8 h-8 rounded-full bg-[#3D3AD3] flex items-center justify-center ring-4 ring-[#3D3AD3]/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                      </div>
+                      <span class="text-[10px] font-medium text-[#3D3AD3]">In Transit</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-1.5">
+                      <div class="w-8 h-8 rounded-full bg-[var(--surface-sunken)] border-2 border-[var(--line)] flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--ink-muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                      </div>
+                      <span class="text-[10px] text-[var(--ink-muted)]">Delivered</span>
+                    </div>
+                  </div>
+                  <!-- Progress line -->
+                  <div class="absolute top-4 left-4 right-4 h-0.5 bg-[var(--line)] -z-0"></div>
+                  <div class="absolute top-4 left-4 h-0.5 bg-[#3D3AD3] -z-0" style="width: 65%"></div>
+                </div>
+                <!-- Campaign banner mock -->
+                <div class="rounded-xl bg-gradient-to-r from-[#3D3AD3]/5 to-[#3D3AD3]/10 border border-[#3D3AD3]/15 p-4 flex items-center gap-4">
+                  <div class="w-12 h-12 rounded-lg bg-[#3D3AD3]/10 flex items-center justify-center shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+                  </div>
+                  <div>
+                    <p class="text-xs font-semibold text-[#3D3AD3]">Complete your look</p>
+                    <p class="text-[11px] text-[var(--ink-secondary)]">Get 15% off matching accessories while you wait</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Features list -->
+            <div>
+              <span class="inline-flex items-center rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3] mb-4">Tracking</span>
+              <h3 class="text-heading text-[var(--ink)] mb-4">Branded order tracking that drives engagement</h3>
+              <p class="text-[var(--ink-secondary)] mb-8 leading-relaxed">Replace generic carrier pages with your own branded experience. Keep customers informed and turn every shipment update into a marketing opportunity.</p>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <div class="mt-0.5 w-5 h-5 rounded-full bg-[#3D3AD3]/10 flex items-center justify-center shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <span class="text-[var(--ink-secondary)]">Branded tracking pages that keep customers in your ecosystem</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="mt-0.5 w-5 h-5 rounded-full bg-[#3D3AD3]/10 flex items-center justify-center shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <span class="text-[var(--ink-secondary)]">Proactive email and SMS notifications at every milestone</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="mt-0.5 w-5 h-5 rounded-full bg-[#3D3AD3]/10 flex items-center justify-center shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <span class="text-[var(--ink-secondary)]">Campaign banners for cross-sell and upsell opportunities</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="mt-0.5 w-5 h-5 rounded-full bg-[#3D3AD3]/10 flex items-center justify-center shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <span class="text-[var(--ink-secondary)]">Multi-language support for global customer bases</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab content: Returns -->
+        <div class="v4-tab-content peer-checked/returns:opacity-100 peer-checked/returns:visible peer-checked/returns:relative">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Mock UI: Returns portal -->
+            <div class="bg-[var(--surface-raised)] rounded-2xl shadow-xl border border-[var(--line)] overflow-hidden">
+              <!-- Browser chrome -->
+              <div class="flex items-center gap-2 px-4 py-3 bg-[var(--surface-sunken)] border-b border-[var(--line)]">
+                <div class="flex gap-1.5">
+                  <div class="w-3 h-3 rounded-full bg-[#F4373D]/60"></div>
+                  <div class="w-3 h-3 rounded-full bg-[#FFC943]/60"></div>
+                  <div class="w-3 h-3 rounded-full bg-[#035740]/60"></div>
+                </div>
+                <div class="flex-1 ml-3 bg-white rounded-md px-3 py-1 text-xs text-[var(--ink-muted)] border border-[var(--line)]">returns.yourbrand.com/start</div>
+              </div>
+              <!-- Returns content -->
+              <div class="p-8">
+                <h4 class="text-sm font-semibold text-[var(--ink)] mb-1">Start your return</h4>
+                <p class="text-xs text-[var(--ink-muted)] mb-6">Select an item and choose your preferred resolution</p>
+
+                <!-- Item card -->
+                <div class="flex items-center gap-4 rounded-xl border border-[var(--line)] p-4 mb-6 bg-[var(--surface-sunken)]/50">
+                  <div class="w-16 h-16 rounded-lg bg-gradient-to-br from-[var(--surface-sunken)] to-[var(--line)] flex items-center justify-center shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--ink-muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46L16 2 12 3.46 8 2 3.62 3.46a2 2 0 0 0-1.34 1.89v13.3a2 2 0 0 0 1.34 1.89L8 22l4-1.46L16 22l4.38-1.46a2 2 0 0 0 1.34-1.89V5.35a2 2 0 0 0-1.34-1.89z"/><line x1="12" y1="22" x2="12" y2="2"/></svg>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <p class="text-sm font-medium text-[var(--ink)] truncate">Premium Cotton T-Shirt</p>
+                    <p class="text-xs text-[var(--ink-muted)]">Size L / Navy Blue</p>
+                    <p class="text-xs font-medium text-[var(--ink-secondary)] mt-1">$49.00</p>
+                  </div>
+                  <div class="w-5 h-5 rounded-full border-2 border-[#3D3AD3] flex items-center justify-center shrink-0">
+                    <div class="w-2.5 h-2.5 rounded-full bg-[#3D3AD3]"></div>
+                  </div>
+                </div>
+
+                <!-- Reason selector -->
+                <div class="mb-6">
+                  <label class="block text-xs font-medium text-[var(--ink-secondary)] mb-2">Return reason</label>
+                  <div class="flex items-center justify-between rounded-lg border border-[var(--line)] px-4 py-2.5 bg-white">
+                    <span class="text-sm text-[var(--ink)]">Size too large</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink-muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                  </div>
+                </div>
+
+                <!-- Resolution options -->
+                <label class="block text-xs font-medium text-[var(--ink-secondary)] mb-2">Choose resolution</label>
+                <div class="grid grid-cols-3 gap-3">
+                  <div class="flex flex-col items-center gap-1.5 rounded-xl border-2 border-[#3D3AD3] bg-[#3D3AD3]/5 p-3 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+                    <span class="text-[10px] font-semibold text-[#3D3AD3]">Exchange</span>
+                  </div>
+                  <div class="flex flex-col items-center gap-1.5 rounded-xl border border-[var(--line)] bg-white p-3 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink-muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                    <span class="text-[10px] font-medium text-[var(--ink-secondary)]">Store Credit</span>
+                  </div>
+                  <div class="flex flex-col items-center gap-1.5 rounded-xl border border-[var(--line)] bg-white p-3 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink-muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    <span class="text-[10px] font-medium text-[var(--ink-secondary)]">Refund</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Features list -->
+            <div>
+              <span class="inline-flex items-center rounded-full bg-[#035740]/10 px-3 py-1 text-xs font-semibold text-[#035740] mb-4">Returns</span>
+              <h3 class="text-heading text-[var(--ink)] mb-4">Turn returns into your next sale</h3>
+              <p class="text-[var(--ink-secondary)] mb-8 leading-relaxed">Transform your returns process from a cost center into a revenue retention engine. Smart exchange-first logic keeps more revenue in your business.</p>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <div class="mt-0.5 w-5 h-5 rounded-full bg-[#035740]/10 flex items-center justify-center shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <span class="text-[var(--ink-secondary)]">Self-service returns portal with exchange-first logic</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="mt-0.5 w-5 h-5 rounded-full bg-[#035740]/10 flex items-center justify-center shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <span class="text-[var(--ink-secondary)]">Smart exchange suggestions based on return reasons</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="mt-0.5 w-5 h-5 rounded-full bg-[#035740]/10 flex items-center justify-center shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <span class="text-[var(--ink-secondary)]">Retention offers and store credit incentives before refund</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="mt-0.5 w-5 h-5 rounded-full bg-[#035740]/10 flex items-center justify-center shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <span class="text-[var(--ink-secondary)]">Built-in fraud detection and abuse prevention rules</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab content: Convert -->
+        <div class="v4-tab-content peer-checked/convert:opacity-100 peer-checked/convert:visible peer-checked/convert:relative">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Mock UI: Delivery promise widget -->
+            <div class="bg-[var(--surface-raised)] rounded-2xl shadow-xl border border-[var(--line)] overflow-hidden">
+              <!-- Browser chrome -->
+              <div class="flex items-center gap-2 px-4 py-3 bg-[var(--surface-sunken)] border-b border-[var(--line)]">
+                <div class="flex gap-1.5">
+                  <div class="w-3 h-3 rounded-full bg-[#F4373D]/60"></div>
+                  <div class="w-3 h-3 rounded-full bg-[#FFC943]/60"></div>
+                  <div class="w-3 h-3 rounded-full bg-[#035740]/60"></div>
+                </div>
+                <div class="flex-1 ml-3 bg-white rounded-md px-3 py-1 text-xs text-[var(--ink-muted)] border border-[var(--line)]">yourbrand.com/product/premium-sneakers</div>
+              </div>
+              <!-- Convert content -->
+              <div class="p-8">
+                <!-- Product card mock -->
+                <div class="flex gap-6 mb-8">
+                  <div class="w-32 h-32 rounded-xl bg-gradient-to-br from-[var(--surface-sunken)] to-[var(--line)] flex items-center justify-center shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--ink-muted)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                  </div>
+                  <div>
+                    <p class="text-base font-semibold text-[var(--ink)]">Premium Running Sneakers</p>
+                    <p class="text-sm text-[var(--ink-muted)] mb-2">Cloud White / Size 10</p>
+                    <p class="text-xl font-bold text-[var(--ink)]">$159.00</p>
+                  </div>
+                </div>
+
+                <!-- Delivery promise widget -->
+                <div class="rounded-xl border-2 border-[#035740]/20 bg-[#035740]/5 p-5">
+                  <div class="flex items-center gap-2 mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                    <span class="text-sm font-semibold text-[#035740]">Estimated delivery</span>
+                  </div>
+                  <div class="flex items-baseline gap-2 mb-4">
+                    <span class="text-2xl font-bold text-[var(--ink)]">Apr 14, Mon</span>
+                    <span class="text-xs font-medium text-[#035740] bg-[#035740]/10 px-2 py-0.5 rounded-full">Free shipping</span>
+                  </div>
+                  <!-- Zip code input -->
+                  <div class="flex items-center gap-2">
+                    <div class="flex-1 flex items-center gap-2 rounded-lg border border-[var(--line)] bg-white px-3 py-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--ink-muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+                      <span class="text-sm text-[var(--ink)]">10001</span>
+                    </div>
+                    <button class="rounded-lg bg-[#035740] px-4 py-2 text-sm font-medium text-white">Update</button>
+                  </div>
+                </div>
+
+                <!-- Express option -->
+                <div class="mt-4 flex items-center justify-between rounded-lg border border-[var(--line)] px-4 py-3">
+                  <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFC943" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    <span class="text-sm text-[var(--ink)]">Express delivery</span>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-sm font-semibold text-[var(--ink)]">Apr 10, Thu</p>
+                    <p class="text-xs text-[var(--ink-muted)]">+$12.99</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Features list -->
+            <div>
+              <span class="inline-flex items-center rounded-full bg-[#FFC943]/15 px-3 py-1 text-xs font-semibold text-[#9a7600] mb-4">Convert</span>
+              <h3 class="text-heading text-[var(--ink)] mb-4">Convert more shoppers with delivery confidence</h3>
+              <p class="text-[var(--ink-secondary)] mb-8 leading-relaxed">Show accurate delivery dates at checkout to remove purchase anxiety. ML-powered predictions that improve conversion rates across every product page.</p>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <div class="mt-0.5 w-5 h-5 rounded-full bg-[#FFC943]/15 flex items-center justify-center shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#9a7600" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <span class="text-[var(--ink-secondary)]">Delivery date predictions powered by machine learning</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="mt-0.5 w-5 h-5 rounded-full bg-[#FFC943]/15 flex items-center justify-center shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#9a7600" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <span class="text-[var(--ink-secondary)]">Checkout conversion boost through delivery transparency</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="mt-0.5 w-5 h-5 rounded-full bg-[#FFC943]/15 flex items-center justify-center shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#9a7600" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <span class="text-[var(--ink-secondary)]">ML-powered accuracy that improves with every shipment</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="mt-0.5 w-5 h-5 rounded-full bg-[#FFC943]/15 flex items-center justify-center shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#9a7600" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <span class="text-[var(--ink-secondary)]">Multi-carrier intelligence across 175+ logistics providers</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+         3. PAIN POINTS SECTION
+         ════════════════════════════════════════════════════════ -->
+    <section class="section-generous bg-[var(--surface)]">
+      <div class="container-pl">
+        <div class="text-center mb-16">
+          <h2 class="text-display text-[var(--ink)]">Gaps in your post-purchase experience are costing you</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Card 1: Fragmented tracking -->
+          <div class="v4-reveal-card group rounded-2xl bg-[var(--surface-raised)] border border-[var(--line)] p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
+            <div class="w-14 h-14 rounded-xl bg-[#F4373D]/8 flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F4373D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                <line x1="9" y1="9" x2="15" y2="15" stroke="#F4373D" stroke-width="2.5" opacity="0.4"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-[var(--ink)] mb-3">Fragmented tracking breaks customer trust</h3>
+            <p class="text-sm text-[var(--ink-secondary)] leading-relaxed">When tracking pages lead to carrier sites, you lose brand control and customers lose confidence in your business.</p>
+          </div>
+
+          <!-- Card 2: Returns blind spot -->
+          <div class="v4-reveal-card group rounded-2xl bg-[var(--surface-raised)] border border-[var(--line)] p-8 shadow-sm hover:shadow-lg transition-shadow duration-300" style="animation-delay: 0.1s">
+            <div class="w-14 h-14 rounded-xl bg-[#3D3AD3]/8 flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+                <line x1="4" y1="20" x2="20" y2="4" stroke="#3D3AD3" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-[var(--ink)] mb-3">Your returns page is a revenue blind spot</h3>
+            <p class="text-sm text-[var(--ink-secondary)] leading-relaxed">Generic returns forms miss opportunities for exchanges, store credit, and upsells that keep revenue in your business.</p>
+          </div>
+
+          <!-- Card 3: Silent deliveries -->
+          <div class="v4-reveal-card group rounded-2xl bg-[var(--surface-raised)] border border-[var(--line)] p-8 shadow-sm hover:shadow-lg transition-shadow duration-300" style="animation-delay: 0.2s">
+            <div class="w-14 h-14 rounded-xl bg-[#FFC943]/15 flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9a7600" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94"/>
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-[var(--ink)] mb-3">Silent deliveries drain your support team</h3>
+            <p class="text-sm text-[var(--ink-secondary)] leading-relaxed">Without proactive updates, customers flood your support channels with WISMO calls that consume time and resources.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+         4. STATS SECTION
+         ════════════════════════════════════════════════════════ -->
+    <section class="section-generous bg-[#f5f3ff]">
+      <div class="container-pl">
+        <div class="text-center mb-16">
+          <h2 class="text-display text-[var(--ink)]">Turn post-purchase moments into profit</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-12 v4-stats-grid">
+          <div class="v4-stat-item text-center">
+            <p class="text-[clamp(3rem,8vw,5rem)] font-bold text-[#3D3AD3] leading-none tracking-tight">20%</p>
+            <p class="mt-3 text-lg font-semibold text-[var(--ink)]">fewer support tickets</p>
+            <p class="mt-1 text-sm text-[var(--ink-muted)]">with proactive tracking notifications</p>
+          </div>
+          <div class="v4-stat-item text-center">
+            <p class="text-[clamp(3rem,8vw,5rem)] font-bold text-[#3D3AD3] leading-none tracking-tight">11%</p>
+            <p class="mt-3 text-lg font-semibold text-[var(--ink)]">revenue retained</p>
+            <p class="mt-1 text-sm text-[var(--ink-muted)]">through smart exchanges and store credit</p>
+          </div>
+          <div class="v4-stat-item text-center">
+            <p class="text-[clamp(3rem,8vw,5rem)] font-bold text-[#3D3AD3] leading-none tracking-tight">5%</p>
+            <p class="mt-3 text-lg font-semibold text-[var(--ink)]">conversion lift</p>
+            <p class="mt-1 text-sm text-[var(--ink-muted)]">with accurate delivery date promises</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+         5. FEATURE DEEP-DIVES
+         ════════════════════════════════════════════════════════ -->
+
+    <!-- 5a. Proactive Tracking -->
+    <section class="section-generous bg-[var(--surface)]">
+      <div class="container-pl">
+        <div class="v4-feature-row grid lg:grid-cols-2 gap-16 items-center">
+          <div class="v4-slide-in-left">
+            <span class="inline-flex items-center rounded-full bg-[#3D3AD3]/10 px-3 py-1 text-xs font-semibold text-[#3D3AD3] mb-5">Engage</span>
+            <h2 class="text-heading text-[var(--ink)] mb-5">Build buyer trust with precise delivery data</h2>
+            <p class="text-[var(--ink-secondary)] mb-8 leading-relaxed">Keep customers in the loop at every step of their delivery journey. From order confirmation to doorstep delivery, every touchpoint is an opportunity to strengthen your brand.</p>
+
+            <ul class="space-y-5">
+              <li class="flex items-start gap-3">
+                <div class="mt-1 w-6 h-6 rounded-full bg-[#3D3AD3]/10 flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <span class="text-[var(--ink-secondary)]">15+ communication touchpoints across the delivery journey</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="mt-1 w-6 h-6 rounded-full bg-[#3D3AD3]/10 flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <span class="text-[var(--ink-secondary)]">Branded order status pages that reduce WISMO by 20%</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="mt-1 w-6 h-6 rounded-full bg-[#3D3AD3]/10 flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <span class="text-[var(--ink-secondary)]">Campaign banners that generate 29% more revenue per email</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Mock UI: Email notification -->
+          <div class="v4-slide-in-right">
+            <div class="bg-[var(--surface-raised)] rounded-2xl shadow-xl border border-[var(--line)] p-8">
+              <div class="flex items-center gap-3 mb-6 pb-5 border-b border-[var(--line)]">
+                <div class="w-10 h-10 rounded-full bg-[#3D3AD3] flex items-center justify-center">
+                  <span class="text-white text-sm font-bold">PL</span>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-[var(--ink)]">Your order is on the way</p>
+                  <p class="text-xs text-[var(--ink-muted)]">from yourbrand@parcellab.com</p>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <p class="text-sm text-[var(--ink)]">Hi Sarah, great news! Your order <span class="font-semibold">#PL-29841</span> has been shipped and is on its way to you.</p>
+                <div class="rounded-xl bg-[var(--surface-sunken)] p-4">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="text-xs font-medium text-[var(--ink-muted)]">Estimated delivery</span>
+                    <span class="text-sm font-semibold text-[#3D3AD3]">Apr 14, Monday</span>
+                  </div>
+                  <div class="w-full bg-[var(--line)] rounded-full h-2">
+                    <div class="bg-[#3D3AD3] h-2 rounded-full" style="width: 60%"></div>
+                  </div>
+                  <div class="flex justify-between mt-2">
+                    <span class="text-[10px] text-[var(--ink-muted)]">Shipped</span>
+                    <span class="text-[10px] text-[var(--ink-muted)]">Delivered</span>
+                  </div>
+                </div>
+                <a href="#" class="inline-flex items-center gap-2 rounded-lg bg-[#3D3AD3] px-5 py-2.5 text-sm font-medium text-white">
+                  Track your order
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5b. Smart Returns -->
+    <section class="section-generous bg-[var(--surface-sunken)]">
+      <div class="container-pl">
+        <div class="v4-feature-row grid lg:grid-cols-2 gap-16 items-center">
+          <!-- Mock UI: Returns analytics -->
+          <div class="v4-slide-in-left order-2 lg:order-1">
+            <div class="bg-[var(--surface-raised)] rounded-2xl shadow-xl border border-[var(--line)] p-8">
+              <div class="flex items-center justify-between mb-6">
+                <h4 class="text-sm font-semibold text-[var(--ink)]">Returns Resolution Breakdown</h4>
+                <span class="text-xs text-[var(--ink-muted)]">Last 30 days</span>
+              </div>
+              <!-- Horizontal bar chart -->
+              <div class="space-y-4">
+                <div>
+                  <div class="flex items-center justify-between mb-1.5">
+                    <span class="text-xs font-medium text-[var(--ink-secondary)]">Exchanges</span>
+                    <span class="text-xs font-semibold text-[#035740]">42%</span>
+                  </div>
+                  <div class="w-full bg-[var(--surface-sunken)] rounded-full h-3">
+                    <div class="bg-[#035740] h-3 rounded-full" style="width: 42%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center justify-between mb-1.5">
+                    <span class="text-xs font-medium text-[var(--ink-secondary)]">Store Credit</span>
+                    <span class="text-xs font-semibold text-[#3D3AD3]">28%</span>
+                  </div>
+                  <div class="w-full bg-[var(--surface-sunken)] rounded-full h-3">
+                    <div class="bg-[#3D3AD3] h-3 rounded-full" style="width: 28%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center justify-between mb-1.5">
+                    <span class="text-xs font-medium text-[var(--ink-secondary)]">Refunds</span>
+                    <span class="text-xs font-semibold text-[var(--ink-muted)]">30%</span>
+                  </div>
+                  <div class="w-full bg-[var(--surface-sunken)] rounded-full h-3">
+                    <div class="bg-[var(--ink-muted)] h-3 rounded-full" style="width: 30%"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Retention metric -->
+              <div class="mt-6 pt-5 border-t border-[var(--line)] flex items-center justify-between">
+                <div>
+                  <p class="text-xs text-[var(--ink-muted)]">Revenue retained this month</p>
+                  <p class="text-xl font-bold text-[#035740]">$127,400</p>
+                </div>
+                <div class="flex items-center gap-1 text-[#035740]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                  <span class="text-sm font-semibold">+18%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="v4-slide-in-right order-1 lg:order-2">
+            <span class="inline-flex items-center rounded-full bg-[#035740]/10 px-3 py-1 text-xs font-semibold text-[#035740] mb-5">Retain</span>
+            <h2 class="text-heading text-[var(--ink)] mb-5">Transform returns into a revenue engine</h2>
+            <p class="text-[var(--ink-secondary)] mb-8 leading-relaxed">Stop losing revenue to refunds. With exchange-first logic and smart retention offers, turn every return into an opportunity to keep the sale and strengthen customer loyalty.</p>
+
+            <ul class="space-y-5">
+              <li class="flex items-start gap-3">
+                <div class="mt-1 w-6 h-6 rounded-full bg-[#035740]/10 flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <span class="text-[var(--ink-secondary)]">Self-service portal with exchange-first logic</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="mt-1 w-6 h-6 rounded-full bg-[#035740]/10 flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <span class="text-[var(--ink-secondary)]">Retention offers before refund processing</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="mt-1 w-6 h-6 rounded-full bg-[#035740]/10 flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <span class="text-[var(--ink-secondary)]">Returns fraud detection and abuse prevention</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5c. Actionable Insights -->
+    <section class="section-generous bg-[var(--surface)]">
+      <div class="container-pl">
+        <div class="v4-feature-row grid lg:grid-cols-2 gap-16 items-center">
+          <div class="v4-slide-in-left">
+            <span class="inline-flex items-center rounded-full bg-[#FFC943]/15 px-3 py-1 text-xs font-semibold text-[#9a7600] mb-5">Insights</span>
+            <h2 class="text-heading text-[var(--ink)] mb-5">Know what happens after checkout</h2>
+            <p class="text-[var(--ink-secondary)] mb-8 leading-relaxed">Get full visibility into your post-purchase operations with AI-powered analytics. Ask questions in natural language and get actionable answers instantly.</p>
+
+            <ul class="space-y-5">
+              <li class="flex items-start gap-3">
+                <div class="mt-1 w-6 h-6 rounded-full bg-[#FFC943]/15 flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9a7600" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <span class="text-[var(--ink-secondary)]">AI Copilot for natural language data queries</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="mt-1 w-6 h-6 rounded-full bg-[#FFC943]/15 flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9a7600" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <span class="text-[var(--ink-secondary)]">Carrier benchmarking and performance analytics</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="mt-1 w-6 h-6 rounded-full bg-[#FFC943]/15 flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9a7600" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <span class="text-[var(--ink-secondary)]">Automated anomaly detection and alerts</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Mock UI: Analytics dashboard -->
+          <div class="v4-slide-in-right">
+            <div class="bg-[var(--surface-raised)] rounded-2xl shadow-xl border border-[var(--line)] p-8">
+              <!-- AI Copilot query -->
+              <div class="flex items-center gap-3 mb-6 rounded-xl bg-[var(--surface-sunken)] px-4 py-3 border border-[var(--line)]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9a7600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <span class="text-sm text-[var(--ink)]">"Show me carrier delays for last week"</span>
+                <span class="ml-auto text-[10px] text-[var(--ink-muted)] bg-[var(--surface-raised)] px-2 py-0.5 rounded border border-[var(--line)]">AI Copilot</span>
+              </div>
+
+              <!-- Metric cards row -->
+              <div class="grid grid-cols-3 gap-3 mb-6">
+                <div class="rounded-lg bg-[var(--surface-sunken)] p-3">
+                  <p class="text-[10px] text-[var(--ink-muted)] mb-1">On-time rate</p>
+                  <p class="text-lg font-bold text-[#035740]">94.2%</p>
+                  <div class="flex items-center gap-1 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
+                    <span class="text-[9px] text-[#035740]">+2.1%</span>
+                  </div>
+                </div>
+                <div class="rounded-lg bg-[var(--surface-sunken)] p-3">
+                  <p class="text-[10px] text-[var(--ink-muted)] mb-1">Avg transit</p>
+                  <p class="text-lg font-bold text-[var(--ink)]">3.2d</p>
+                  <div class="flex items-center gap-1 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/></svg>
+                    <span class="text-[9px] text-[#035740]">-0.4d</span>
+                  </div>
+                </div>
+                <div class="rounded-lg bg-[var(--surface-sunken)] p-3">
+                  <p class="text-[10px] text-[var(--ink-muted)] mb-1">Exceptions</p>
+                  <p class="text-lg font-bold text-[#F4373D]">23</p>
+                  <div class="flex items-center gap-1 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#F4373D" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
+                    <span class="text-[9px] text-[#F4373D]">+5</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Mini chart placeholder -->
+              <div class="rounded-xl bg-[var(--surface-sunken)] border border-[var(--line)] p-4">
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-xs font-medium text-[var(--ink-secondary)]">Carrier Performance (7d)</span>
+                  <div class="flex gap-3">
+                    <span class="flex items-center gap-1 text-[9px] text-[var(--ink-muted)]"><span class="w-2 h-2 rounded-full bg-[#3D3AD3] inline-block"></span> DHL</span>
+                    <span class="flex items-center gap-1 text-[9px] text-[var(--ink-muted)]"><span class="w-2 h-2 rounded-full bg-[#035740] inline-block"></span> UPS</span>
+                    <span class="flex items-center gap-1 text-[9px] text-[var(--ink-muted)]"><span class="w-2 h-2 rounded-full bg-[#FFC943] inline-block"></span> FedEx</span>
+                  </div>
+                </div>
+                <!-- SVG bar chart -->
+                <svg viewBox="0 0 280 80" class="w-full" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Grid lines -->
+                  <line x1="0" y1="20" x2="280" y2="20" stroke="var(--line)" stroke-width="0.5" stroke-dasharray="4"/>
+                  <line x1="0" y1="40" x2="280" y2="40" stroke="var(--line)" stroke-width="0.5" stroke-dasharray="4"/>
+                  <line x1="0" y1="60" x2="280" y2="60" stroke="var(--line)" stroke-width="0.5" stroke-dasharray="4"/>
+                  <!-- DHL bars -->
+                  <rect x="10" y="12" width="12" height="58" rx="2" fill="#3D3AD3" opacity="0.8"/>
+                  <rect x="50" y="8" width="12" height="62" rx="2" fill="#3D3AD3" opacity="0.8"/>
+                  <rect x="90" y="15" width="12" height="55" rx="2" fill="#3D3AD3" opacity="0.8"/>
+                  <rect x="130" y="10" width="12" height="60" rx="2" fill="#3D3AD3" opacity="0.8"/>
+                  <rect x="170" y="18" width="12" height="52" rx="2" fill="#3D3AD3" opacity="0.8"/>
+                  <rect x="210" y="5" width="12" height="65" rx="2" fill="#3D3AD3" opacity="0.8"/>
+                  <rect x="250" y="14" width="12" height="56" rx="2" fill="#3D3AD3" opacity="0.8"/>
+                  <!-- UPS bars -->
+                  <rect x="24" y="18" width="12" height="52" rx="2" fill="#035740" opacity="0.8"/>
+                  <rect x="64" y="14" width="12" height="56" rx="2" fill="#035740" opacity="0.8"/>
+                  <rect x="104" y="22" width="12" height="48" rx="2" fill="#035740" opacity="0.8"/>
+                  <rect x="144" y="16" width="12" height="54" rx="2" fill="#035740" opacity="0.8"/>
+                  <rect x="184" y="20" width="12" height="50" rx="2" fill="#035740" opacity="0.8"/>
+                  <rect x="224" y="12" width="12" height="58" rx="2" fill="#035740" opacity="0.8"/>
+                  <rect x="264" y="19" width="12" height="51" rx="2" fill="#035740" opacity="0.8"/>
+                  <!-- Day labels -->
+                  <text x="22" y="78" font-size="7" fill="var(--ink-muted)" text-anchor="middle">Mon</text>
+                  <text x="62" y="78" font-size="7" fill="var(--ink-muted)" text-anchor="middle">Tue</text>
+                  <text x="102" y="78" font-size="7" fill="var(--ink-muted)" text-anchor="middle">Wed</text>
+                  <text x="142" y="78" font-size="7" fill="var(--ink-muted)" text-anchor="middle">Thu</text>
+                  <text x="182" y="78" font-size="7" fill="var(--ink-muted)" text-anchor="middle">Fri</text>
+                  <text x="222" y="78" font-size="7" fill="var(--ink-muted)" text-anchor="middle">Sat</text>
+                  <text x="262" y="78" font-size="7" fill="var(--ink-muted)" text-anchor="middle">Sun</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+         6. CASE STUDIES
+         ════════════════════════════════════════════════════════ -->
+    <section class="section-generous bg-[var(--surface-sunken)]">
+      <div class="container-pl">
+        <div class="text-center mb-16">
+          <h2 class="text-display text-[var(--ink)]">Trusted by leading brands</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Case study 1 -->
+          <div class="v4-case-card bg-[var(--surface-raised)] rounded-2xl border border-[var(--line)] p-8 border-l-4 border-l-[#3D3AD3] shadow-sm">
+            <div class="flex items-center gap-2 mb-6">
+              <div class="w-10 h-10 rounded-lg bg-[var(--surface-sunken)] flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink-muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46L16 2 12 3.46 8 2 3.62 3.46a2 2 0 0 0-1.34 1.89v13.3a2 2 0 0 0 1.34 1.89L8 22l4-1.46L16 22l4.38-1.46a2 2 0 0 0 1.34-1.89V5.35a2 2 0 0 0-1.34-1.89z"/></svg>
+              </div>
+              <span class="text-xs font-medium text-[var(--ink-muted)] uppercase tracking-wider">Fashion Retailer</span>
+            </div>
+            <p class="text-[clamp(2.5rem,5vw,3.5rem)] font-bold text-[#3D3AD3] leading-none mb-2">25%</p>
+            <p class="text-base font-semibold text-[var(--ink)] mb-3">reduction in WISMO calls</p>
+            <p class="text-sm text-[var(--ink-secondary)] leading-relaxed">Leading fashion retailer streamlined customer communications with proactive tracking notifications and branded status pages.</p>
+          </div>
+
+          <!-- Case study 2 -->
+          <div class="v4-case-card bg-[var(--surface-raised)] rounded-2xl border border-[var(--line)] p-8 border-l-4 border-l-[#035740] shadow-sm">
+            <div class="flex items-center gap-2 mb-6">
+              <div class="w-10 h-10 rounded-lg bg-[var(--surface-sunken)] flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink-muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              </div>
+              <span class="text-xs font-medium text-[var(--ink-muted)] uppercase tracking-wider">DTC Brand</span>
+            </div>
+            <p class="text-[clamp(2.5rem,5vw,3.5rem)] font-bold text-[#035740] leading-none mb-2">21%</p>
+            <p class="text-base font-semibold text-[var(--ink)] mb-3">more exchanges vs refunds</p>
+            <p class="text-sm text-[var(--ink-secondary)] leading-relaxed">DTC brand turned returns into repeat purchases with exchange-first logic and smart retention offers at every touchpoint.</p>
+          </div>
+
+          <!-- Case study 3 -->
+          <div class="v4-case-card bg-[var(--surface-raised)] rounded-2xl border border-[var(--line)] p-8 border-l-4 border-l-[#FFC943] shadow-sm">
+            <div class="flex items-center gap-2 mb-6">
+              <div class="w-10 h-10 rounded-lg bg-[var(--surface-sunken)] flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink-muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <span class="text-xs font-medium text-[var(--ink-muted)] uppercase tracking-wider">Global Retailer</span>
+            </div>
+            <p class="text-[clamp(2.5rem,5vw,3.5rem)] font-bold text-[#9a7600] leading-none mb-2">86%</p>
+            <p class="text-base font-semibold text-[var(--ink)] mb-3">tracking page engagement</p>
+            <p class="text-sm text-[var(--ink-secondary)] leading-relaxed">Global retailer built a branded post-purchase experience that turned every delivery into a high-engagement marketing channel.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+         7. INTEGRATIONS SECTION
+         ════════════════════════════════════════════════════════ -->
+    <section class="section-generous bg-[var(--surface)]">
+      <div class="container-pl">
+        <div class="text-center mb-6">
+          <h2 class="text-display text-[var(--ink)]">Built for every commerce platform</h2>
+        </div>
+        <p class="text-center text-[var(--ink-secondary)] mb-16 max-w-2xl mx-auto">Power your entire ecosystem from small startups to global enterprises to 3PL logistics providers.</p>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Ecommerce -->
+          <div class="rounded-2xl bg-[var(--surface-raised)] border border-[var(--line)] p-8 text-center">
+            <div class="w-14 h-14 rounded-xl bg-[#3D3AD3]/8 flex items-center justify-center mx-auto mb-5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-[var(--ink)] mb-2">Ecommerce</h3>
+            <p class="text-sm text-[var(--ink-secondary)] mb-6">Accelerate your store's growth with native integrations</p>
+            <div class="flex flex-wrap justify-center gap-2">
+              <span class="inline-flex items-center rounded-lg border border-[var(--line)] bg-[var(--surface-sunken)] px-3 py-1.5 text-xs font-medium text-[var(--ink-secondary)]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="mr-1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                Shopify
+              </span>
+              <span class="inline-flex items-center rounded-lg border border-[var(--line)] bg-[var(--surface-sunken)] px-3 py-1.5 text-xs font-medium text-[var(--ink-secondary)]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="mr-1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                Magento
+              </span>
+              <span class="inline-flex items-center rounded-lg border border-[var(--line)] bg-[var(--surface-sunken)] px-3 py-1.5 text-xs font-medium text-[var(--ink-secondary)]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="mr-1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                Shopware
+              </span>
+              <span class="inline-flex items-center rounded-lg border border-[var(--line)] bg-[var(--surface-sunken)] px-3 py-1.5 text-xs font-medium text-[var(--ink-secondary)]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="mr-1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                SFCC
+              </span>
+            </div>
+          </div>
+
+          <!-- Marketplace / Enterprise -->
+          <div class="rounded-2xl bg-[var(--surface-raised)] border border-[var(--line)] p-8 text-center">
+            <div class="w-14 h-14 rounded-xl bg-[#035740]/8 flex items-center justify-center mx-auto mb-5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-[var(--ink)] mb-2">Enterprise</h3>
+            <p class="text-sm text-[var(--ink-secondary)] mb-6">Deliver enterprise-grade visibility at scale</p>
+            <div class="flex flex-wrap justify-center gap-2">
+              <span class="inline-flex items-center rounded-lg border border-[var(--line)] bg-[var(--surface-sunken)] px-3 py-1.5 text-xs font-medium text-[var(--ink-secondary)]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="mr-1.5"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+                SAP
+              </span>
+              <span class="inline-flex items-center rounded-lg border border-[var(--line)] bg-[var(--surface-sunken)] px-3 py-1.5 text-xs font-medium text-[var(--ink-secondary)]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="mr-1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                Salesforce
+              </span>
+              <span class="inline-flex items-center rounded-lg border border-[var(--line)] bg-[var(--surface-sunken)] px-3 py-1.5 text-xs font-medium text-[var(--ink-secondary)]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="mr-1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                Oracle
+              </span>
+              <span class="inline-flex items-center rounded-lg border border-[var(--line)] bg-[var(--surface-sunken)] px-3 py-1.5 text-xs font-medium text-[var(--ink-secondary)]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="mr-1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                Zendesk
+              </span>
+            </div>
+          </div>
+
+          <!-- Logistics -->
+          <div class="rounded-2xl bg-[var(--surface-raised)] border border-[var(--line)] p-8 text-center">
+            <div class="w-14 h-14 rounded-xl bg-[#FFC943]/12 flex items-center justify-center mx-auto mb-5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9a7600" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-[var(--ink)] mb-2">Logistics</h3>
+            <p class="text-sm text-[var(--ink-secondary)] mb-6">Modernize your carrier network with real-time tracking</p>
+            <div class="flex flex-wrap justify-center gap-2">
+              <span class="inline-flex items-center rounded-lg border border-[var(--line)] bg-[var(--surface-sunken)] px-3 py-1.5 text-xs font-medium text-[var(--ink-secondary)]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="mr-1.5"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                DHL
+              </span>
+              <span class="inline-flex items-center rounded-lg border border-[var(--line)] bg-[var(--surface-sunken)] px-3 py-1.5 text-xs font-medium text-[var(--ink-secondary)]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="mr-1.5"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                UPS
+              </span>
+              <span class="inline-flex items-center rounded-lg border border-[var(--line)] bg-[var(--surface-sunken)] px-3 py-1.5 text-xs font-medium text-[var(--ink-secondary)]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="mr-1.5"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                FedEx
+              </span>
+              <span class="inline-flex items-center rounded-lg border border-[var(--line)] bg-[#3D3AD3]/5 border-[#3D3AD3]/20 px-3 py-1.5 text-xs font-semibold text-[#3D3AD3]">
+                175+ carriers
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+         8. BOTTOM CTA
+         ════════════════════════════════════════════════════════ -->
+    <section class="section-generous bg-[var(--surface-dark)]" id="demo">
+      <div class="container-pl text-center">
+        <h2 class="text-display text-white mb-5">Close the post-purchase experience gap</h2>
+        <p class="text-lg text-white/60 mb-10 max-w-xl mx-auto">Connect with us to see how parcelLab can transform your customer journey from checkout to doorstep and beyond.</p>
+        <a href="https://parcellab.com/contact-us/" class="inline-flex items-center gap-2 rounded-full bg-[#3D3AD3] px-8 py-4 text-base font-semibold text-white shadow-lg shadow-[#3D3AD3]/30 transition-all hover:bg-[#4a47e8] hover:shadow-xl hover:shadow-[#3D3AD3]/40 hover:-translate-y-0.5 active:translate-y-0 active:shadow-md">
+          Book a demo
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  /* ─── Hero Rotating Words ─── */
+  .v4-rotating-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 5.5em;
+    height: 1.15em;
+    vertical-align: bottom;
+    overflow: hidden;
+  }
+
+  .v4-rotating-word {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: block;
+    opacity: 0;
+    transform: translateY(40%);
+    animation: v4-rotate-word 12s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+
+  .v4-rotating-word:nth-child(1) { animation-delay: 0s; }
+  .v4-rotating-word:nth-child(2) { animation-delay: 3s; }
+  .v4-rotating-word:nth-child(3) { animation-delay: 6s; }
+  .v4-rotating-word:nth-child(4) { animation-delay: 9s; }
+
+  @keyframes v4-rotate-word {
+    0%, 2% {
+      opacity: 0;
+      transform: translateY(40%);
+    }
+    5%, 20% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    23%, 25% {
+      opacity: 0;
+      transform: translateY(-40%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-40%);
+    }
+  }
+
+  /* ─── Product Tabs ─── */
+  .v4-tab-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--ink-secondary);
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+    user-select: none;
+  }
+
+  .v4-tab-label:hover {
+    color: var(--ink);
+    background-color: var(--surface-sunken);
+  }
+
+  .v4-tab-content {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+  }
+
+  /* ─── Scroll Reveal: Pain Point Cards ─── */
+  .v4-reveal-card {
+    opacity: 0;
+    transform: translateY(24px);
+    animation: v4-reveal 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-play-state: paused;
+  }
+
+  .v4-reveal-card.v4-visible {
+    animation-play-state: running;
+  }
+
+  @keyframes v4-reveal {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* ─── Stats Fade In ─── */
+  .v4-stat-item {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .v4-stats-grid.v4-visible .v4-stat-item {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .v4-stats-grid.v4-visible .v4-stat-item:nth-child(2) {
+    transition-delay: 0.15s;
+  }
+
+  .v4-stats-grid.v4-visible .v4-stat-item:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+
+  /* ─── Feature Slide In ─── */
+  .v4-slide-in-left {
+    opacity: 0;
+    transform: translateX(-32px);
+    transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .v4-slide-in-right {
+    opacity: 0;
+    transform: translateX(32px);
+    transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .v4-feature-row.v4-visible .v4-slide-in-left,
+  .v4-feature-row.v4-visible .v4-slide-in-right {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* ─── Case Study Cards ─── */
+  .v4-case-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .v4-case-card.v4-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .v4-case-card.v4-visible:nth-child(2) {
+    transition-delay: 0.12s;
+  }
+
+  .v4-case-card.v4-visible:nth-child(3) {
+    transition-delay: 0.24s;
+  }
+
+  /* ─── Reduced Motion ─── */
+  @media (prefers-reduced-motion: reduce) {
+    .v4-rotating-word {
+      animation: none;
+    }
+
+    .v4-rotating-word:first-child {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .v4-reveal-card,
+    .v4-stat-item,
+    .v4-slide-in-left,
+    .v4-slide-in-right,
+    .v4-case-card {
+      opacity: 1;
+      transform: none;
+      animation: none;
+      transition: none;
+    }
+
+    .v4-tab-content {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  // Intersection Observer for scroll-triggered animations
+  function initScrollAnimations() {
+    const observerOptions: IntersectionObserverInit = {
+      threshold: 0.15,
+      rootMargin: '0px 0px -40px 0px',
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('v4-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Pain point cards
+    document.querySelectorAll('.v4-reveal-card').forEach((el) => observer.observe(el));
+
+    // Stats section
+    document.querySelectorAll('.v4-stats-grid').forEach((el) => observer.observe(el));
+
+    // Feature rows
+    document.querySelectorAll('.v4-feature-row').forEach((el) => observer.observe(el));
+
+    // Case study cards
+    document.querySelectorAll('.v4-case-card').forEach((el) => observer.observe(el));
+  }
+
+  // Check for reduced motion preference
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initScrollAnimations);
+    } else {
+      initScrollAnimations();
+    }
+  } else {
+    // If reduced motion, make everything visible immediately
+    document.querySelectorAll('.v4-reveal-card, .v4-stats-grid, .v4-feature-row, .v4-case-card, .v4-stat-item, .v4-slide-in-left, .v4-slide-in-right').forEach((el) => {
+      (el as HTMLElement).style.opacity = '1';
+      (el as HTMLElement).style.transform = 'none';
+    });
+  }
+</script>

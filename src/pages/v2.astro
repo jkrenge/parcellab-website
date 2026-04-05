@@ -1,0 +1,1451 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/globals.css";
+import { Header } from "../components/Header";
+import Footer from "../components/Footer.astro";
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout title="parcelLab - Every Delivery Counts" description="The post-purchase experience platform trusted by 700+ brands. Tracking, returns, and AI-powered operations that drive retention and revenue.">
+  <Header client:load />
+
+  <main>
+    <!-- ═══════════════════════════════════════════════
+         SECTION 1 — HERO
+    ═══════════════════════════════════════════════ -->
+    <section class="v2-hero section-generous overflow-hidden">
+      <div class="container-pl">
+        <!-- Pill badge -->
+        <div class="v2-hero__badge-wrap" aria-hidden="false">
+          <span class="v2-badge">The Post-Purchase Platform Built for Retention</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="v2-hero__headline" aria-label="We exist to make every delivery count.">
+          <span class="v2-hero__line">We exist to make</span>
+          <span class="v2-hero__line">every delivery</span>
+          <span class="v2-hero__line">count<span class="v2-dot">.</span></span>
+        </h1>
+
+        <!-- Subtext -->
+        <p class="v2-hero__sub">
+          parcelLab transforms post-purchase touchpoints into personalized brand experiences
+          that increase customer loyalty, cut support costs, and unlock new revenue.
+        </p>
+
+        <!-- CTAs -->
+        <div class="v2-hero__ctas">
+          <a href="https://parcellab.com/book-a-demo" class="v2-btn-primary">Book a demo</a>
+          <a href="https://parcellab.com/platform" class="v2-btn-text">
+            See the platform
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Trusted-by logos -->
+        <div class="v2-hero__logos">
+          <p class="v2-hero__logos-label">Trusted by leading global brands</p>
+          <div class="v2-logo-row" role="list" aria-label="Trusted brands">
+            <img src={`${b}/images/logos/IKEA_Logo_Black.svg`} alt="IKEA" loading="lazy" role="listitem" />
+            <img src={`${b}/images/brands/Hugo-Boss.svg`} alt="Hugo Boss" loading="lazy" role="listitem" />
+            <img src={`${b}/images/brands/Puma.svg`} alt="Puma" loading="lazy" role="listitem" />
+            <img src={`${b}/images/brands/Farfetch.svg`} alt="Farfetch" loading="lazy" role="listitem" />
+            <img src={`${b}/images/brands/Dyson.svg`} alt="Dyson" loading="lazy" role="listitem" />
+            <img src={`${b}/images/brands/JohnLewis-1.svg`} alt="John Lewis" loading="lazy" role="listitem" />
+            <img src={`${b}/images/brands/True-Classic-1.svg`} alt="True Classic" loading="lazy" role="listitem" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 2 — BOLD MISSION STATEMENT (scroll reveal)
+    ═══════════════════════════════════════════════ -->
+    <section class="v2-mission section-generous">
+      <div class="container-pl">
+        <h2 class="v2-mission__text" id="missionText" aria-label="We exist to give your customers confidence.">
+          <span class="v2-word">We</span>
+          <span class="v2-word">exist</span>
+          <span class="v2-word">to</span>
+          <span class="v2-word">give</span>
+          <span class="v2-word">your</span>
+          <span class="v2-word">customers</span>
+          <span class="v2-word">confidence.</span>
+        </h2>
+        <p class="v2-mission__sub">Every shipment. Every return. Every touchpoint.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 3 — PRODUCT SHOWCASE (two cards)
+    ═══════════════════════════════════════════════ -->
+    <section class="v2-products section-generous bg-[var(--surface-sunken)]">
+      <div class="container-pl">
+        <div class="v2-products__grid">
+          <!-- Pre-Purchase card -->
+          <div class="v2-product-card v2-slide-left">
+            <span class="v2-product-card__label">Pre-Purchase</span>
+            <h3 class="v2-product-card__title">Show delivery dates.<br />Convert more carts.</h3>
+            <p class="v2-product-card__desc">
+              Display accurate, AI-predicted delivery promises at checkout.
+              Remove purchase hesitation and increase conversion rates
+              by setting the right expectations before customers buy.
+            </p>
+            <div class="v2-product-card__icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="8" width="40" height="32" rx="4" stroke="#3D3AD3" stroke-width="2.5"/><path d="M4 18h40" stroke="#3D3AD3" stroke-width="2.5"/><circle cx="16" cy="28" r="3" fill="#FFC943"/><circle cx="24" cy="28" r="3" fill="#FFC943"/><circle cx="32" cy="28" r="3" fill="#FFC943"/></svg>
+            </div>
+          </div>
+
+          <!-- Post-Purchase card -->
+          <div class="v2-product-card v2-slide-right">
+            <span class="v2-product-card__label">Post-Purchase</span>
+            <h3 class="v2-product-card__title">Keep customers informed.<br />Build lasting trust.</h3>
+            <p class="v2-product-card__desc">
+              Own the post-purchase experience with branded tracking pages,
+              proactive notifications, and personalized communications that
+              drive repeat purchases and reduce WISMO calls.
+            </p>
+            <div class="v2-product-card__icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="8" y="4" width="32" height="40" rx="4" stroke="#3D3AD3" stroke-width="2.5"/><path d="M16 16h16M16 24h12M16 32h8" stroke="#3D3AD3" stroke-width="2.5" stroke-linecap="round"/><circle cx="36" cy="36" r="8" fill="#035740"/><path d="M33 36l2 2 4-4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 4a — FEATURE: Operations Experience
+    ═══════════════════════════════════════════════ -->
+    <section class="v2-feature section-generous">
+      <div class="container-pl">
+        <div class="v2-feature__row">
+          <!-- Left: text -->
+          <div class="v2-feature__text v2-slide-left">
+            <span class="v2-section-label">Engage</span>
+            <h2 class="v2-feature__title">Take control of your operations experience</h2>
+            <ul class="v2-check-list" role="list">
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#FFC943"/><path d="M6 10.5l2.5 2.5L14 8" stroke="#0f172a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Proactive tracking communications
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#FFC943"/><path d="M6 10.5l2.5 2.5L14 8" stroke="#0f172a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Branded order status page
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#FFC943"/><path d="M6 10.5l2.5 2.5L14 8" stroke="#0f172a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                A/B testing for messages
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#FFC943"/><path d="M6 10.5l2.5 2.5L14 8" stroke="#0f172a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Campaign management
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#FFC943"/><path d="M6 10.5l2.5 2.5L14 8" stroke="#0f172a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                AI-powered insights
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right: mock UI -->
+          <div class="v2-feature__visual v2-slide-right">
+            <div class="v2-mock-card">
+              <div class="v2-mock-card__header">
+                <div class="v2-mock-dot v2-mock-dot--green"></div>
+                <span>Shipment Update</span>
+              </div>
+              <div class="v2-mock-card__body">
+                <div class="v2-mock-icon-row">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="2" y="6" width="28" height="20" rx="3" stroke="#3D3AD3" stroke-width="2"/><path d="M2 12h28" stroke="#3D3AD3" stroke-width="2"/><rect x="6" y="16" width="8" height="4" rx="1" fill="#FFC943" opacity="0.6"/></svg>
+                  <div>
+                    <p class="v2-mock-title">Your order is on the way!</p>
+                    <p class="v2-mock-sub">Expected delivery: Tomorrow, 2-5 PM</p>
+                  </div>
+                </div>
+                <div class="v2-mock-progress">
+                  <div class="v2-mock-progress__bar"></div>
+                </div>
+                <div class="v2-mock-steps">
+                  <span class="v2-mock-step v2-mock-step--done">Ordered</span>
+                  <span class="v2-mock-step v2-mock-step--done">Shipped</span>
+                  <span class="v2-mock-step v2-mock-step--active">In Transit</span>
+                  <span class="v2-mock-step">Delivered</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 4b — FEATURE: AI
+    ═══════════════════════════════════════════════ -->
+    <section class="v2-feature v2-feature--alt section-generous bg-[var(--surface-sunken)]">
+      <div class="container-pl">
+        <div class="v2-feature__row v2-feature__row--reverse">
+          <!-- Left: mock UI -->
+          <div class="v2-feature__visual v2-slide-left">
+            <div class="v2-mock-card v2-mock-card--dark">
+              <div class="v2-mock-card__header">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="#FFC943" stroke-width="1.5"/><path d="M7 8a3 3 0 016 0c0 2-3 3-3 5M10 15.5v.5" stroke="#FFC943" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <span>AI Copilot</span>
+              </div>
+              <div class="v2-mock-card__body v2-mock-chat">
+                <div class="v2-chat-bubble v2-chat-bubble--user">Where is my order #48291?</div>
+                <div class="v2-chat-bubble v2-chat-bubble--ai">
+                  Your order #48291 is currently in transit with DHL. It departed the Frankfurt hub this morning and is expected to arrive tomorrow between 2-5 PM. I've sent you a tracking link via email.
+                </div>
+                <div class="v2-chat-typing" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: text -->
+          <div class="v2-feature__text v2-slide-right">
+            <span class="v2-section-label">Intelligence</span>
+            <h2 class="v2-feature__title">Scale faster with artificial intelligence</h2>
+            <p class="v2-feature__desc">
+              Let AI handle the repetitive work so your team can focus on
+              strategy. From automated WISMO resolution to predictive
+              insights, parcelLab's AI suite drives efficiency at scale.
+            </p>
+            <ul class="v2-feature__pills" role="list">
+              <li>Copilot</li>
+              <li>WISMO/R Agent</li>
+              <li>Insights Agent</li>
+              <li>AI Email Editor</li>
+            </ul>
+            <div class="v2-feature__stats">
+              <div class="v2-mini-stat">
+                <span class="v2-mini-stat__num">20%</span>
+                <span class="v2-mini-stat__label">fewer WISMO calls</span>
+              </div>
+              <div class="v2-mini-stat">
+                <span class="v2-mini-stat__num">29%</span>
+                <span class="v2-mini-stat__label">higher email revenue</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 4c — FEATURE: Returns
+    ═══════════════════════════════════════════════ -->
+    <section class="v2-feature section-generous">
+      <div class="container-pl">
+        <div class="v2-feature__row">
+          <!-- Left: text -->
+          <div class="v2-feature__text v2-slide-left">
+            <span class="v2-section-label">Retain</span>
+            <h2 class="v2-feature__title">Turn returns into revenue</h2>
+            <p class="v2-feature__desc">
+              Transform your returns process from a cost center into a
+              retention engine. Offer exchanges, store credit, and smart
+              incentives that keep revenue in your ecosystem.
+            </p>
+            <ul class="v2-check-list" role="list">
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#FFC943"/><path d="M6 10.5l2.5 2.5L14 8" stroke="#0f172a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Self-service returns portal
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#FFC943"/><path d="M6 10.5l2.5 2.5L14 8" stroke="#0f172a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Exchanges and store credit
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#FFC943"/><path d="M6 10.5l2.5 2.5L14 8" stroke="#0f172a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Retention offers and incentives
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#FFC943"/><path d="M6 10.5l2.5 2.5L14 8" stroke="#0f172a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Fraud detection and policy engine
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right: mock returns UI -->
+          <div class="v2-feature__visual v2-slide-right">
+            <div class="v2-mock-card">
+              <div class="v2-mock-card__header">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M8 6l-4 4 4 4" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Return Request</span>
+              </div>
+              <div class="v2-mock-card__body">
+                <div class="v2-mock-return-item">
+                  <div class="v2-mock-return-thumb"></div>
+                  <div>
+                    <p class="v2-mock-title">Premium Running Shoes — Size 42</p>
+                    <p class="v2-mock-sub">Reason: Too small</p>
+                  </div>
+                </div>
+                <div class="v2-mock-return-options">
+                  <div class="v2-mock-return-opt v2-mock-return-opt--active">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M6 4l-4 4 4 4M10 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Exchange for Size 43
+                  </div>
+                  <div class="v2-mock-return-opt">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="2" y="4" width="12" height="8" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M5 8h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    Store credit (+5% bonus)
+                  </div>
+                  <div class="v2-mock-return-opt">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2v12M4 6l4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Refund to original payment
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 5 — TESTIMONIAL
+    ═══════════════════════════════════════════════ -->
+    <section class="v2-testimonial section-generous">
+      <div class="container-pl">
+        <div class="v2-testimonial__inner">
+          <svg class="v2-testimonial__quote" width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M14 28c-3.3 0-6-2.7-6-6s2.7-6 6-6c0-5.5 4.5-10 10-10v6c-2.2 0-4 1.8-4 4 3.3 0 6 2.7 6 6s-2.7 6-6 6h-6zm20 0c-3.3 0-6-2.7-6-6s2.7-6 6-6c0-5.5 4.5-10 10-10v6c-2.2 0-4 1.8-4 4 3.3 0 6 2.7 6 6s-2.7 6-6 6h-6z" fill="#FFC943"/></svg>
+          <blockquote class="v2-testimonial__text">
+            parcelLab has transformed how we handle post-purchase touchpoints.
+            The platform is intuitive, powerful, and the team behind it is
+            incredibly supportive.
+          </blockquote>
+          <cite class="v2-testimonial__cite">
+            — Sarah M., Director of CX Operations
+          </cite>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 6 — BIG STATS
+    ═══════════════════════════════════════════════ -->
+    <section class="v2-stats section-generous" style="background:var(--surface-dark);color:#fff;">
+      <div class="container-pl">
+        <div class="v2-stats__grid">
+          <div class="v2-stat" role="figure" aria-label="700+ brands trust parcelLab">
+            <span class="v2-stat__num" data-target="700" data-suffix="+">0</span>
+            <span class="v2-stat__label">brands trust parcelLab</span>
+          </div>
+          <div class="v2-stat" role="figure" aria-label="50 million+ shipments tracked monthly">
+            <span class="v2-stat__num" data-target="50" data-suffix="M+">0</span>
+            <span class="v2-stat__label">shipments tracked monthly</span>
+          </div>
+          <div class="v2-stat" role="figure" aria-label="175+ carrier integrations">
+            <span class="v2-stat__num" data-target="175" data-suffix="+">0</span>
+            <span class="v2-stat__label">carrier integrations</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 7 — WHY BRANDS CHOOSE PARCELLAB
+    ═══════════════════════════════════════════════ -->
+    <section class="v2-why section-generous">
+      <div class="container-pl">
+        <h2 class="v2-why__title">Why brands choose parcelLab</h2>
+        <div class="v2-why__grid">
+          <div class="v2-why__item">
+            <span class="v2-why__dot" aria-hidden="true"></span>
+            <span>AI-powered Copilot</span>
+          </div>
+          <div class="v2-why__item">
+            <span class="v2-why__dot" aria-hidden="true"></span>
+            <span>Smart returns &amp; exchanges</span>
+          </div>
+          <div class="v2-why__item">
+            <span class="v2-why__dot" aria-hidden="true"></span>
+            <span>Delivery date promises</span>
+          </div>
+          <div class="v2-why__item">
+            <span class="v2-why__dot" aria-hidden="true"></span>
+            <span>Branded tracking pages</span>
+          </div>
+          <div class="v2-why__item">
+            <span class="v2-why__dot" aria-hidden="true"></span>
+            <span>175+ carrier integrations</span>
+          </div>
+          <div class="v2-why__item">
+            <span class="v2-why__dot" aria-hidden="true"></span>
+            <span>Enterprise-grade security (SOC 2)</span>
+          </div>
+          <div class="v2-why__item">
+            <span class="v2-why__dot" aria-hidden="true"></span>
+            <span>A/B testing &amp; optimization</span>
+          </div>
+          <div class="v2-why__item">
+            <span class="v2-why__dot" aria-hidden="true"></span>
+            <span>Real-time analytics dashboard</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 8 — FAQ ACCORDION
+    ═══════════════════════════════════════════════ -->
+    <section class="v2-faq section-generous bg-[var(--surface-sunken)]">
+      <div class="container-pl max-w-3xl">
+        <h2 class="v2-faq__title">Frequently Asked Questions</h2>
+
+        <div class="v2-accordion">
+          <details class="v2-accordion__item">
+            <summary class="v2-accordion__trigger">
+              What is parcelLab?
+              <svg class="v2-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <div class="v2-accordion__content">
+              <p>parcelLab is the leading post-purchase experience platform that helps brands take control of every customer touchpoint after checkout. From delivery tracking and proactive communications to returns management and AI-powered support, parcelLab turns logistics into a brand-building opportunity.</p>
+            </div>
+          </details>
+
+          <details class="v2-accordion__item">
+            <summary class="v2-accordion__trigger">
+              How does parcelLab integrate with my store?
+              <svg class="v2-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <div class="v2-accordion__content">
+              <p>parcelLab integrates seamlessly with all major e-commerce platforms including Shopify, Salesforce Commerce Cloud, SAP, and Magento. Our REST APIs and pre-built connectors make setup fast, and our implementation team supports you through every step of the process.</p>
+            </div>
+          </details>
+
+          <details class="v2-accordion__item">
+            <summary class="v2-accordion__trigger">
+              What carriers does parcelLab support?
+              <svg class="v2-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <div class="v2-accordion__content">
+              <p>parcelLab supports over 175 carriers worldwide, including DHL, UPS, FedEx, Royal Mail, DPD, Hermes, and many regional providers. If you work with a carrier we don't yet support, our team can add new integrations quickly.</p>
+            </div>
+          </details>
+
+          <details class="v2-accordion__item">
+            <summary class="v2-accordion__trigger">
+              How does the AI Copilot work?
+              <svg class="v2-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <div class="v2-accordion__content">
+              <p>The AI Copilot uses large language models trained on logistics and e-commerce data to automate common support tasks. It can resolve WISMO inquiries, suggest message optimizations, surface actionable insights from your data, and help draft personalized communications — all within the parcelLab platform.</p>
+            </div>
+          </details>
+
+          <details class="v2-accordion__item">
+            <summary class="v2-accordion__trigger">
+              Can I manage returns with parcelLab?
+              <svg class="v2-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <div class="v2-accordion__content">
+              <p>Yes. parcelLab provides a fully branded, self-service returns portal where customers can initiate returns, choose exchanges or store credit, and print labels. You set the rules — return windows, eligibility, fraud checks — and parcelLab automates the rest.</p>
+            </div>
+          </details>
+
+          <details class="v2-accordion__item">
+            <summary class="v2-accordion__trigger">
+              What kind of analytics does parcelLab provide?
+              <svg class="v2-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <div class="v2-accordion__content">
+              <p>parcelLab offers a real-time analytics dashboard covering delivery performance, carrier SLA compliance, communication engagement rates, returns trends, and customer satisfaction scores. You can filter by time period, region, carrier, and more to surface actionable insights.</p>
+            </div>
+          </details>
+
+          <details class="v2-accordion__item">
+            <summary class="v2-accordion__trigger">
+              Is parcelLab GDPR compliant?
+              <svg class="v2-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <div class="v2-accordion__content">
+              <p>Absolutely. parcelLab is fully GDPR compliant and SOC 2 Type II certified. Data is hosted in the EU, and we follow strict data processing agreements. We support data subject access requests and provide full transparency on how customer data is handled.</p>
+            </div>
+          </details>
+
+          <details class="v2-accordion__item">
+            <summary class="v2-accordion__trigger">
+              How do I get started?
+              <svg class="v2-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <div class="v2-accordion__content">
+              <p>Getting started is simple: book a demo with our team, and we'll walk you through the platform tailored to your use case. From there, our implementation specialists handle integration, configuration, and go-live — most brands are up and running within weeks.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 9 — BOTTOM CTA
+    ═══════════════════════════════════════════════ -->
+    <section class="v2-cta section-generous">
+      <div class="container-pl text-center">
+        <h2 class="v2-cta__title">We're built for brands with high expectations</h2>
+        <div class="v2-cta__pods">
+          <div class="v2-cta__pod">
+            <span class="v2-cta__pod-num">700+</span>
+            <span class="v2-cta__pod-label">brands</span>
+          </div>
+          <div class="v2-cta__pod">
+            <span class="v2-cta__pod-num">24/5</span>
+            <span class="v2-cta__pod-label">support</span>
+          </div>
+          <div class="v2-cta__pod">
+            <span class="v2-cta__pod-num">99.9%</span>
+            <span class="v2-cta__pod-label">uptime</span>
+          </div>
+        </div>
+        <a href="https://parcellab.com/book-a-demo" class="v2-btn-primary v2-btn-primary--lg">Book a demo</a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<!-- ═══════════════════════════════════════════════════
+     STYLES
+═══════════════════════════════════════════════════ -->
+<style>
+  /* ── Global page tokens ── */
+  :root {
+    --v2-yellow: #FFC943;
+    --v2-purple: #3D3AD3;
+    --v2-green: #035740;
+    --v2-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* ── Badge ── */
+  .v2-badge {
+    display: inline-block;
+    padding: 0.4em 1.2em;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: var(--v2-yellow);
+    color: var(--ink);
+    border-radius: 999px;
+  }
+
+  /* ── HERO ── */
+  .v2-hero {
+    padding-top: clamp(6rem, 10vw, 10rem);
+  }
+
+  .v2-hero__badge-wrap {
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .v2-hero__headline {
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+    line-height: 0.95;
+    color: var(--ink);
+    margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+  }
+
+  .v2-hero__line {
+    display: block;
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  .v2-dot {
+    color: var(--v2-yellow);
+  }
+
+  .v2-hero__sub {
+    max-width: 560px;
+    font-size: clamp(1rem, 1.2vw, 1.15rem);
+    line-height: 1.7;
+    color: var(--ink-secondary);
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .v2-hero__ctas {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: clamp(3rem, 5vw, 5rem);
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  /* ── Buttons ── */
+  .v2-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85em 2em;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #fff;
+    background: var(--v2-purple);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.25s var(--v2-ease);
+    box-shadow: 0 2px 12px rgba(61, 58, 211, 0.25);
+  }
+  .v2-btn-primary:hover {
+    background: #312db8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(61, 58, 211, 0.35);
+  }
+  .v2-btn-primary:active {
+    transform: translateY(0) scale(0.97);
+  }
+  .v2-btn-primary--lg {
+    padding: 1em 2.8em;
+    font-size: 1.05rem;
+  }
+
+  .v2-btn-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--ink);
+    text-decoration: none;
+    transition: gap 0.25s var(--v2-ease);
+  }
+  .v2-btn-text:hover {
+    gap: 0.7em;
+  }
+
+  /* ── Logo row ── */
+  .v2-hero__logos {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .v2-hero__logos-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-muted);
+    margin-bottom: 1.25rem;
+  }
+
+  .v2-logo-row {
+    display: flex;
+    align-items: center;
+    gap: clamp(1.5rem, 3vw, 3rem);
+    flex-wrap: wrap;
+  }
+  .v2-logo-row img {
+    height: clamp(18px, 2.5vw, 28px);
+    opacity: 0.45;
+    filter: grayscale(1);
+    transition: opacity 0.3s ease;
+  }
+  .v2-logo-row img:hover {
+    opacity: 0.75;
+  }
+
+  /* ── MISSION ── */
+  .v2-mission {
+    text-align: center;
+  }
+
+  .v2-mission__text {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+    max-width: 56rem;
+    margin: 0 auto clamp(1.5rem, 3vw, 2.5rem);
+  }
+
+  .v2-word {
+    display: inline-block;
+    opacity: 0.12;
+    transition: opacity 0.5s var(--v2-ease);
+  }
+  .v2-word.is-visible {
+    opacity: 1;
+  }
+
+  .v2-mission__sub {
+    font-size: clamp(1rem, 1.3vw, 1.2rem);
+    color: var(--ink-muted);
+    letter-spacing: 0.02em;
+  }
+
+  /* ── PRODUCT CARDS ── */
+  .v2-products__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(1.5rem, 3vw, 2rem);
+  }
+  @media (max-width: 768px) {
+    .v2-products__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .v2-product-card {
+    background: var(--surface-raised);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: clamp(2rem, 3vw, 3rem);
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  .v2-product-card:hover {
+    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+  }
+
+  .v2-product-card__label {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--v2-purple);
+    margin-bottom: 1rem;
+  }
+
+  .v2-product-card__title {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+  }
+
+  .v2-product-card__desc {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--ink-secondary);
+    max-width: 420px;
+  }
+
+  .v2-product-card__icon {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    opacity: 0.15;
+  }
+
+  /* ── FEATURE SECTIONS ── */
+  .v2-feature__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: center;
+  }
+  .v2-feature__row--reverse {
+    direction: rtl;
+  }
+  .v2-feature__row--reverse > * {
+    direction: ltr;
+  }
+  @media (max-width: 768px) {
+    .v2-feature__row,
+    .v2-feature__row--reverse {
+      grid-template-columns: 1fr;
+      direction: ltr;
+    }
+  }
+
+  .v2-section-label {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--v2-purple);
+    margin-bottom: 0.75rem;
+  }
+
+  .v2-feature__title {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+  }
+
+  .v2-feature__desc {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--ink-secondary);
+    margin-bottom: 1.5rem;
+  }
+
+  /* ── Checklist ── */
+  .v2-check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+  .v2-check-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--ink);
+  }
+  .v2-check-list svg {
+    flex-shrink: 0;
+  }
+
+  /* ── Feature pills ── */
+  .v2-feature__pills {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .v2-feature__pills li {
+    padding: 0.35em 0.9em;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1.5px solid var(--line);
+    border-radius: 999px;
+    color: var(--ink-secondary);
+  }
+
+  /* ── Mini stats ── */
+  .v2-feature__stats {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 0.5rem;
+  }
+  .v2-mini-stat {
+    display: flex;
+    flex-direction: column;
+  }
+  .v2-mini-stat__num {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--v2-purple);
+    line-height: 1;
+  }
+  .v2-mini-stat__label {
+    font-size: 0.8rem;
+    color: var(--ink-muted);
+    margin-top: 0.2rem;
+  }
+
+  /* ── MOCK CARDS ── */
+  .v2-mock-card {
+    background: var(--surface-raised);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  }
+  .v2-mock-card--dark {
+    background: var(--surface-dark);
+    border-color: rgba(255,255,255,0.08);
+    color: #fff;
+  }
+
+  .v2-mock-card__header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.9rem 1.25rem;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--ink-secondary);
+  }
+  .v2-mock-card--dark .v2-mock-card__header {
+    border-color: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.7);
+  }
+
+  .v2-mock-card__body {
+    padding: 1.25rem;
+  }
+
+  .v2-mock-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+  .v2-mock-dot--green {
+    background: #22c55e;
+  }
+
+  .v2-mock-icon-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .v2-mock-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.15rem;
+  }
+  .v2-mock-sub {
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+  }
+
+  /* Progress bar */
+  .v2-mock-progress {
+    height: 4px;
+    background: var(--surface-sunken);
+    border-radius: 99px;
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+  }
+  .v2-mock-progress__bar {
+    width: 65%;
+    height: 100%;
+    background: var(--v2-purple);
+    border-radius: 99px;
+  }
+
+  .v2-mock-steps {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    color: var(--ink-muted);
+  }
+  .v2-mock-step--done {
+    color: var(--v2-purple);
+    font-weight: 600;
+  }
+  .v2-mock-step--active {
+    color: var(--ink);
+    font-weight: 700;
+  }
+
+  /* Chat bubbles */
+  .v2-mock-chat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .v2-chat-bubble {
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    font-size: 0.82rem;
+    line-height: 1.55;
+    max-width: 85%;
+  }
+  .v2-chat-bubble--user {
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.9);
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+  }
+  .v2-chat-bubble--ai {
+    background: rgba(61, 58, 211, 0.2);
+    color: rgba(255,255,255,0.95);
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+  }
+
+  /* Typing indicator */
+  .v2-chat-typing {
+    display: flex;
+    gap: 4px;
+    align-self: flex-start;
+    padding: 0.5rem 0.75rem;
+  }
+  .v2-chat-typing span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+    animation: v2-typing 1.4s infinite ease-in-out;
+  }
+  .v2-chat-typing span:nth-child(2) { animation-delay: 0.2s; }
+  .v2-chat-typing span:nth-child(3) { animation-delay: 0.4s; }
+
+  @keyframes v2-typing {
+    0%, 60%, 100% { opacity: 0.3; transform: translateY(0); }
+    30% { opacity: 1; transform: translateY(-4px); }
+  }
+
+  /* Returns mock */
+  .v2-mock-return-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .v2-mock-return-thumb {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background: var(--surface-sunken);
+    flex-shrink: 0;
+  }
+
+  .v2-mock-return-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .v2-mock-return-opt {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1.5px solid var(--line);
+    border-radius: 8px;
+    color: var(--ink-secondary);
+    cursor: default;
+    transition: border-color 0.2s ease;
+  }
+  .v2-mock-return-opt--active {
+    border-color: var(--v2-purple);
+    color: var(--v2-purple);
+    background: rgba(61, 58, 211, 0.04);
+    font-weight: 600;
+  }
+
+  /* ── TESTIMONIAL ── */
+  .v2-testimonial__inner {
+    max-width: 48rem;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    padding: clamp(2rem, 4vw, 3.5rem) clamp(1rem, 3vw, 3rem);
+    border-left: 4px solid var(--v2-yellow);
+  }
+
+  .v2-testimonial__quote {
+    margin: 0 auto 1.5rem;
+  }
+
+  .v2-testimonial__text {
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--ink);
+    margin: 0 0 1.5rem;
+  }
+
+  .v2-testimonial__cite {
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--ink-muted);
+  }
+
+  /* ── BIG STATS ── */
+  .v2-stats__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    text-align: center;
+  }
+  @media (max-width: 640px) {
+    .v2-stats__grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+
+  .v2-stat__num {
+    display: block;
+    font-size: clamp(4rem, 10vw, 8rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: #fff;
+  }
+  .v2-stat__label {
+    display: block;
+    font-size: clamp(0.85rem, 1.2vw, 1rem);
+    color: rgba(255,255,255,0.55);
+    margin-top: 0.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── WHY BRANDS ── */
+  .v2-why__title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+    text-align: center;
+    margin-bottom: clamp(2.5rem, 4vw, 4rem);
+  }
+
+  .v2-why__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+  @media (max-width: 900px) {
+    .v2-why__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 480px) {
+    .v2-why__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .v2-why__item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.1rem 1.25rem;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--ink);
+    background: var(--surface-raised);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+  }
+  .v2-why__item:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+    transform: translateY(-1px);
+  }
+
+  .v2-why__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--v2-yellow);
+    flex-shrink: 0;
+  }
+
+  /* ── FAQ ACCORDION ── */
+  .v2-faq__title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+    text-align: center;
+    margin-bottom: clamp(2rem, 3vw, 3rem);
+  }
+
+  .v2-accordion__item {
+    border-bottom: 1px solid var(--line);
+  }
+  .v2-accordion__item:first-child {
+    border-top: 1px solid var(--line);
+  }
+
+  .v2-accordion__trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.4rem 0;
+    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+    font-weight: 600;
+    color: var(--ink);
+    cursor: pointer;
+    list-style: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  .v2-accordion__trigger::-webkit-details-marker {
+    display: none;
+  }
+  .v2-accordion__trigger::marker {
+    display: none;
+    content: "";
+  }
+
+  .v2-accordion__icon {
+    flex-shrink: 0;
+    transition: transform 0.3s var(--v2-ease);
+    color: var(--ink-muted);
+  }
+  details[open] .v2-accordion__icon {
+    transform: rotate(180deg);
+  }
+
+  .v2-accordion__content {
+    overflow: hidden;
+    animation: v2-accordion-open 0.35s var(--v2-ease);
+  }
+  .v2-accordion__content p {
+    padding-bottom: 1.4rem;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: var(--ink-secondary);
+  }
+
+  @keyframes v2-accordion-open {
+    from {
+      opacity: 0;
+      max-height: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      max-height: 200px;
+      transform: translateY(0);
+    }
+  }
+
+  /* ── BOTTOM CTA ── */
+  .v2-cta__title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+    margin-bottom: clamp(2rem, 3vw, 3rem);
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .v2-cta__pods {
+    display: flex;
+    justify-content: center;
+    gap: clamp(2rem, 4vw, 4rem);
+    margin-bottom: 2.5rem;
+  }
+
+  .v2-cta__pod {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .v2-cta__pod-num {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--v2-purple);
+    line-height: 1;
+  }
+  .v2-cta__pod-label {
+    font-size: 0.8rem;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    margin-top: 0.3rem;
+  }
+
+  /* ── SCROLL ANIMATIONS ── */
+  .v2-slide-left,
+  .v2-slide-right {
+    opacity: 0;
+    transition: opacity 0.7s var(--v2-ease), transform 0.7s var(--v2-ease);
+  }
+  .v2-slide-left {
+    transform: translateX(-40px);
+  }
+  .v2-slide-right {
+    transform: translateX(40px);
+  }
+  .v2-slide-left.is-visible,
+  .v2-slide-right.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* ── Reduce motion ── */
+  @media (prefers-reduced-motion: reduce) {
+    .v2-hero__badge-wrap,
+    .v2-hero__line,
+    .v2-hero__sub,
+    .v2-hero__ctas,
+    .v2-hero__logos,
+    .v2-slide-left,
+    .v2-slide-right {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+      animation: none !important;
+    }
+    .v2-word {
+      opacity: 1 !important;
+      transition: none !important;
+    }
+    .v2-chat-typing span {
+      animation: none;
+    }
+    .v2-accordion__content {
+      animation: none;
+    }
+  }
+</style>
+
+<!-- ═══════════════════════════════════════════════════
+     SCRIPTS
+═══════════════════════════════════════════════════ -->
+<script>
+  // Only animate when user has not requested reduced motion
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // ── 1. Hero staggered reveal on load ──
+  function animateHero() {
+    if (prefersReducedMotion) return;
+
+    const badge = document.querySelector(".v2-hero__badge-wrap") as HTMLElement | null;
+    const lines = document.querySelectorAll<HTMLElement>(".v2-hero__line");
+    const sub = document.querySelector(".v2-hero__sub") as HTMLElement | null;
+    const ctas = document.querySelector(".v2-hero__ctas") as HTMLElement | null;
+    const logos = document.querySelector(".v2-hero__logos") as HTMLElement | null;
+
+    const elements = [badge, ...Array.from(lines), sub, ctas, logos].filter(Boolean) as HTMLElement[];
+
+    elements.forEach((el, i) => {
+      el.style.transition = `opacity 0.6s cubic-bezier(0.22,1,0.36,1) ${i * 0.1}s, transform 0.6s cubic-bezier(0.22,1,0.36,1) ${i * 0.1}s`;
+      requestAnimationFrame(() => {
+        el.style.opacity = "1";
+        el.style.transform = "translateY(0)";
+      });
+    });
+  }
+
+  // ── 2. Mission statement word-by-word scroll reveal ──
+  function initMissionReveal() {
+    if (prefersReducedMotion) return;
+
+    const words = document.querySelectorAll<HTMLElement>(".v2-word");
+    if (!words.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            (entry.target as HTMLElement).classList.add("is-visible");
+          }
+        });
+      },
+      {
+        threshold: 0.5,
+        rootMargin: "0px 0px -10% 0px",
+      }
+    );
+
+    words.forEach((word, i) => {
+      word.style.transitionDelay = `${i * 0.08}s`;
+      observer.observe(word);
+    });
+  }
+
+  // ── 3. Slide-in animations for feature sections and cards ──
+  function initSlideAnimations() {
+    if (prefersReducedMotion) return;
+
+    const slides = document.querySelectorAll<HTMLElement>(".v2-slide-left, .v2-slide-right");
+    if (!slides.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            (entry.target as HTMLElement).classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px",
+      }
+    );
+
+    slides.forEach((el) => observer.observe(el));
+  }
+
+  // ── 4. Stats count-up animation ──
+  function initCountUp() {
+    if (prefersReducedMotion) {
+      // Still set final values even without animation
+      document.querySelectorAll<HTMLElement>(".v2-stat__num").forEach((el) => {
+        const target = parseInt(el.dataset.target || "0", 10);
+        const suffix = el.dataset.suffix || "";
+        el.textContent = target + suffix;
+      });
+      return;
+    }
+
+    const stats = document.querySelectorAll<HTMLElement>(".v2-stat__num");
+    if (!stats.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target as HTMLElement;
+          observer.unobserve(el);
+
+          const target = parseInt(el.dataset.target || "0", 10);
+          const suffix = el.dataset.suffix || "";
+          const duration = 2000;
+          const startTime = performance.now();
+
+          function update(now: number) {
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // Ease out cubic
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const current = Math.round(eased * target);
+            el.textContent = current + suffix;
+            if (progress < 1) {
+              requestAnimationFrame(update);
+            }
+          }
+          requestAnimationFrame(update);
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    stats.forEach((el) => observer.observe(el));
+  }
+
+  // ── Initialise everything ──
+  document.addEventListener("DOMContentLoaded", () => {
+    animateHero();
+    initMissionReveal();
+    initSlideAnimations();
+    initCountUp();
+  });
+
+  // Also run on Astro page transitions if using View Transitions
+  document.addEventListener("astro:page-load", () => {
+    animateHero();
+    initMissionReveal();
+    initSlideAnimations();
+    initCountUp();
+  });
+</script>

@@ -1,0 +1,1096 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/globals.css";
+import { Header } from "../components/Header";
+import Footer from "../components/Footer.astro";
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="The AI-Powered Post-Purchase Platform - parcelLab"
+  description="parcelLab's AI Suite — Copilot, WISMO/R Agent, and Insights Agent — automates decisions, predicts issues, and unlocks hidden revenue across the post-purchase journey."
+>
+  <Header client:load />
+  <main>
+
+    <!-- ═══════════════════════════════════════════════════
+         SECTION 1 — HERO: "Your Post-Purchase Brain"
+    ═══════════════════════════════════════════════════ -->
+    <section class="v5-hero relative overflow-hidden bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white">
+      <!-- Animated grid background -->
+      <div class="v5-grid-bg pointer-events-none absolute inset-0" aria-hidden="true"></div>
+
+      <div class="relative z-10 mx-auto max-w-[1440px] px-6 pb-24 pt-32 md:px-12 lg:pb-32 lg:pt-40">
+        <div class="grid items-center gap-16 lg:grid-cols-[1fr_420px]">
+          <!-- Left column -->
+          <div>
+            <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm font-medium text-[#a5b4fc] backdrop-blur-sm">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              Introducing the parcelLab AI Suite
+            </p>
+
+            <h1 class="text-hero text-white">
+              The AI that knows your<br />
+              <span class="v5-cycle-word relative inline-block">
+                <span class="v5-cycle-item" data-index="0">customers</span>
+                <span class="v5-cycle-item" data-index="1">shipments</span>
+                <span class="v5-cycle-item" data-index="2">returns</span>
+                <span class="v5-cycle-item" data-index="3">revenue</span>
+              </span>
+            </h1>
+
+            <p class="mt-6 max-w-xl text-lg font-light leading-relaxed text-slate-300">
+              parcelLab's AI suite &mdash; Copilot, WISMO/R Agent, and Insights Agent &mdash; learns from billions of data points to automate decisions, predict issues, and unlock revenue you didn't know existed.
+            </p>
+
+            <div class="mt-10 flex flex-wrap gap-4">
+              <a href="#ai-agents" class="v5-cta-glow inline-flex items-center gap-2 rounded-full bg-[#3D3AD3] px-7 py-3.5 text-sm font-semibold text-white transition-all hover:bg-[#4b47e8]">
+                Meet the AI
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <a href={`${b}/live-demo/`} class="inline-flex items-center gap-2 rounded-full border border-white/30 px-7 py-3.5 text-sm font-semibold text-white transition-all hover:border-white/60 hover:bg-white/5">
+                Book a demo
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right column — Mock AI chat -->
+          <div class="v5-float-card relative">
+            <div class="rounded-2xl border border-white/10 bg-[#0f172a]/80 p-6 shadow-2xl shadow-[#3D3AD3]/10 backdrop-blur-xl">
+              <!-- Chat header -->
+              <div class="mb-4 flex items-center gap-3">
+                <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#3D3AD3]/20">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold text-white">parcelLab Copilot</p>
+                  <p class="text-[10px] text-slate-500">AI-powered data assistant</p>
+                </div>
+                <div class="ml-auto flex h-2 w-2 rounded-full bg-emerald-400">
+                  <span class="h-2 w-2 animate-ping rounded-full bg-emerald-400"></span>
+                </div>
+              </div>
+
+              <!-- User message -->
+              <div class="mb-3 flex justify-end">
+                <div class="max-w-[280px] rounded-2xl rounded-br-md bg-[#3D3AD3] px-4 py-2.5 text-[13px] leading-snug text-white">
+                  Show me which carriers had the most delays last month
+                </div>
+              </div>
+
+              <!-- AI response -->
+              <div class="flex justify-start">
+                <div class="max-w-[320px] rounded-2xl rounded-bl-md border border-white/5 bg-white/5 px-4 py-3 text-[13px] leading-relaxed text-slate-300">
+                  Based on <span class="font-semibold text-white">2.3M shipments</span>, Carrier&nbsp;X had <span class="font-semibold text-[#F4373D]">12.4% delays</span> vs network average of 4.2%. I recommend shifting volume to <span class="font-semibold text-emerald-400">Carrier&nbsp;Y</span> for routes A and B.
+                  <div class="mt-2 flex gap-2">
+                    <span class="inline-flex items-center rounded-md bg-white/5 px-2 py-0.5 text-[10px] text-slate-400">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mr-1"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                      Live data
+                    </span>
+                    <span class="inline-flex items-center rounded-md bg-white/5 px-2 py-0.5 text-[10px] text-slate-400">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mr-1"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                      0.8s response
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Input mock -->
+              <div class="mt-4 flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2">
+                <span class="text-xs text-slate-500">Ask anything about your data...</span>
+                <svg class="ml-auto" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════
+         SECTION 2 — AI CAPABILITY CARDS
+    ═══════════════════════════════════════════════════ -->
+    <section id="ai-agents" class="section-generous bg-[var(--surface)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto mb-16 max-w-2xl text-center">
+          <p class="mb-3 text-sm font-semibold uppercase tracking-wider text-[#3D3AD3]">AI Suite</p>
+          <h2 class="text-display text-[var(--ink)]">Three agents, one platform</h2>
+          <p class="mt-4 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+            Purpose-built AI agents that work across your post-purchase data to answer questions, resolve tickets, and surface insights &mdash; automatically.
+          </p>
+        </div>
+
+        <div class="v5-stagger-parent grid gap-8 md:grid-cols-3">
+          <!-- Card 1: Copilot -->
+          <div class="v5-stagger-child v5-agent-card group relative rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#3D3AD3]/8">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#3D3AD3]/10">
+              <!-- Sparkle/brain icon -->
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/>
+                <path d="M20 3v4"/><path d="M22 5h-4"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-[var(--ink)]">Copilot</h3>
+            <p class="mb-1 text-sm font-medium text-[#3D3AD3]">Chat with your data</p>
+            <p class="mt-3 text-sm font-light leading-relaxed text-[var(--ink-secondary)]">
+              Ask questions in plain English. Get instant answers from your shipment, returns, and communication data &mdash; no SQL, no dashboards, no waiting.
+            </p>
+            <div class="mt-5 space-y-2">
+              <div class="rounded-lg bg-[var(--surface-sunken)] px-3 py-2 text-xs text-[var(--ink-secondary)]">
+                <span class="mr-1.5 text-[#3D3AD3]">&rsaquo;</span> "What's my returns rate this quarter?"
+              </div>
+              <div class="rounded-lg bg-[var(--surface-sunken)] px-3 py-2 text-xs text-[var(--ink-secondary)]">
+                <span class="mr-1.5 text-[#3D3AD3]">&rsaquo;</span> "Which products have the highest exchange rate?"
+              </div>
+              <div class="rounded-lg bg-[var(--surface-sunken)] px-3 py-2 text-xs text-[var(--ink-secondary)]">
+                <span class="mr-1.5 text-[#3D3AD3]">&rsaquo;</span> "Compare carrier performance in DACH vs UK"
+              </div>
+            </div>
+            <!-- Glow effect on hover -->
+            <div class="pointer-events-none absolute -inset-px rounded-2xl border border-[#3D3AD3]/0 transition-all duration-300 group-hover:border-[#3D3AD3]/20"></div>
+          </div>
+
+          <!-- Card 2: WISMO/R Agent -->
+          <div class="v5-stagger-child v5-agent-card group relative rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#035740]/8">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#035740]/10">
+              <!-- Headset/bot icon -->
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/>
+                <path d="M21 16v2a4 4 0 0 1-4 4h-5"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-[var(--ink)]">WISMO/R Agent</h3>
+            <p class="mb-1 text-sm font-medium text-[#035740]">Automate customer service</p>
+            <p class="mt-3 text-sm font-light leading-relaxed text-[var(--ink-secondary)]">
+              Resolve &ldquo;Where is my order?&rdquo; and &ldquo;Where is my return?&rdquo; inquiries automatically. Integrates with Gorgias, Zendesk, Salesforce, and Kustomer.
+            </p>
+            <div class="mt-5 flex items-center gap-3 rounded-xl border border-[#035740]/10 bg-[#035740]/5 p-4">
+              <div class="flex h-10 w-10 items-center justify-center rounded-full bg-[#035740]/10">
+                <span class="text-lg font-bold text-[#035740]">45</span>
+              </div>
+              <div>
+                <p class="text-sm font-semibold text-[var(--ink)]">Up to 45%</p>
+                <p class="text-xs text-[var(--ink-secondary)]">automated resolution rate</p>
+              </div>
+            </div>
+            <div class="mt-3 flex flex-wrap gap-1.5">
+              {["Gorgias", "Zendesk", "Salesforce", "Kustomer"].map((name) => (
+                <span class="rounded-md bg-[var(--surface-sunken)] px-2 py-0.5 text-[10px] font-medium text-[var(--ink-muted)]">{name}</span>
+              ))}
+            </div>
+            <div class="pointer-events-none absolute -inset-px rounded-2xl border border-[#035740]/0 transition-all duration-300 group-hover:border-[#035740]/20"></div>
+          </div>
+
+          <!-- Card 3: Insights Agent -->
+          <div class="v5-stagger-child v5-agent-card group relative rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#FFC943]/10">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFC943]/15">
+              <!-- Chart/trend icon -->
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b8860b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 3v18h18"/>
+                <path d="m19 9-5 5-4-4-3 3"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-[var(--ink)]">Insights Agent</h3>
+            <p class="mb-1 text-sm font-medium text-[#b8860b]">Predictions, not just reports</p>
+            <p class="mt-3 text-sm font-light leading-relaxed text-[var(--ink-secondary)]">
+              AI-generated analysis delivered proactively. Returns forecasting, anomaly detection, and carrier performance predictions &mdash; before you even ask.
+            </p>
+            <div class="mt-5 flex items-start gap-2 rounded-xl border border-[#FFC943]/20 bg-[#FFC943]/5 px-4 py-3">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b8860b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              <p class="text-xs leading-relaxed text-[var(--ink-secondary)]">
+                <span class="font-semibold text-[var(--ink)]">Proactive alert:</span> Get alerts before problems become incidents
+              </p>
+            </div>
+            <div class="pointer-events-none absolute -inset-px rounded-2xl border border-[#FFC943]/0 transition-all duration-300 group-hover:border-[#FFC943]/20"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════
+         SECTION 3 — PLATFORM INTELLIGENCE FLOW
+    ═══════════════════════════════════════════════════ -->
+    <section class="section-generous bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto mb-16 max-w-2xl text-center">
+          <p class="mb-3 text-sm font-semibold uppercase tracking-wider text-[#3D3AD3]">Platform Intelligence</p>
+          <h2 class="text-display text-[var(--ink)]">From data to decisions</h2>
+          <p class="mt-4 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+            See how raw logistics data transforms into automated, revenue-driving actions in four steps.
+          </p>
+        </div>
+
+        <!-- Flow diagram -->
+        <div class="v5-flow-container relative grid gap-0 md:grid-cols-4">
+          <!-- Step 1 -->
+          <div class="v5-flow-step group relative flex flex-col items-center text-center">
+            <div class="relative z-10 flex h-16 w-16 items-center justify-center rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#3D3AD3]/10">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                <path d="M3 5v14a9 3 0 0 0 18 0V5"/>
+                <path d="M3 12a9 3 0 0 0 18 0"/>
+              </svg>
+            </div>
+            <h3 class="mt-4 text-sm font-semibold text-[var(--ink)]">Data Integration</h3>
+            <p class="mt-2 max-w-[200px] text-xs font-light leading-relaxed text-[var(--ink-secondary)]">
+              50M+ shipments/month from 175+ carriers flowing into a unified data lake.
+            </p>
+            <!-- Connector line (desktop) -->
+            <div class="v5-flow-line absolute right-0 top-8 hidden h-px w-[calc(50%-32px)] md:block" aria-hidden="true">
+              <div class="v5-flow-line-animated h-full w-full"></div>
+            </div>
+            <!-- Mobile connector -->
+            <div class="v5-flow-line-v mx-auto mt-4 h-8 w-px md:hidden" aria-hidden="true"></div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="v5-flow-step group relative flex flex-col items-center text-center">
+            <div class="relative z-10 flex h-16 w-16 items-center justify-center rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#3D3AD3]/10">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a4 4 0 0 0-4 4c0 2 1 3 2 4l2 2 2-2c1-1 2-2 2-4a4 4 0 0 0-4-4z"/>
+                <path d="M12 12v4"/>
+                <path d="M8 18h8"/>
+                <path d="M9 22h6"/>
+              </svg>
+            </div>
+            <h3 class="mt-4 text-sm font-semibold text-[var(--ink)]">AI Processing</h3>
+            <p class="mt-2 max-w-[200px] text-xs font-light leading-relaxed text-[var(--ink-secondary)]">
+              ML models trained on billions of historical data points identify patterns and predictions.
+            </p>
+            <div class="v5-flow-line absolute right-0 top-8 hidden h-px w-[calc(50%-32px)] md:block" aria-hidden="true">
+              <div class="v5-flow-line-animated h-full w-full"></div>
+            </div>
+            <div class="v5-flow-line absolute left-0 top-8 hidden h-px w-[calc(50%-32px)] md:block" aria-hidden="true">
+              <div class="v5-flow-line-animated h-full w-full"></div>
+            </div>
+            <div class="v5-flow-line-v mx-auto mt-4 h-8 w-px md:hidden" aria-hidden="true"></div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="v5-flow-step group relative flex flex-col items-center text-center">
+            <div class="relative z-10 flex h-16 w-16 items-center justify-center rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#3D3AD3]/10">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 12h5"/><path d="M17 12h5"/>
+                <path d="M12 2v5"/><path d="M12 17v5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <path d="m4.93 4.93 2.83 2.83"/><path d="m16.24 16.24 2.83 2.83"/>
+                <path d="m4.93 19.07 2.83-2.83"/><path d="m16.24 7.76 2.83-2.83"/>
+              </svg>
+            </div>
+            <h3 class="mt-4 text-sm font-semibold text-[var(--ink)]">Actionable Insights</h3>
+            <p class="mt-2 max-w-[200px] text-xs font-light leading-relaxed text-[var(--ink-secondary)]">
+              Real-time dashboards, benchmarking, anomaly alerts delivered when they matter most.
+            </p>
+            <div class="v5-flow-line absolute right-0 top-8 hidden h-px w-[calc(50%-32px)] md:block" aria-hidden="true">
+              <div class="v5-flow-line-animated h-full w-full"></div>
+            </div>
+            <div class="v5-flow-line absolute left-0 top-8 hidden h-px w-[calc(50%-32px)] md:block" aria-hidden="true">
+              <div class="v5-flow-line-animated h-full w-full"></div>
+            </div>
+            <div class="v5-flow-line-v mx-auto mt-4 h-8 w-px md:hidden" aria-hidden="true"></div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="v5-flow-step group relative flex flex-col items-center text-center">
+            <div class="relative z-10 flex h-16 w-16 items-center justify-center rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#3D3AD3]/10">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+              </svg>
+            </div>
+            <h3 class="mt-4 text-sm font-semibold text-[var(--ink)]">Automated Actions</h3>
+            <p class="mt-2 max-w-[200px] text-xs font-light leading-relaxed text-[var(--ink-secondary)]">
+              Triggered communications, claims resolution, carrier routing &mdash; all running autonomously.
+            </p>
+            <div class="v5-flow-line absolute left-0 top-8 hidden h-px w-[calc(50%-32px)] md:block" aria-hidden="true">
+              <div class="v5-flow-line-animated h-full w-full"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════
+         SECTION 4 — APP STORE & INTEGRATIONS
+    ═══════════════════════════════════════════════════ -->
+    <section class="section-generous bg-[var(--surface)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto mb-16 max-w-2xl text-center">
+          <p class="mb-3 text-sm font-semibold uppercase tracking-wider text-[#3D3AD3]">Integrations</p>
+          <h2 class="text-display text-[var(--ink)]">An integration for every tool in your stack</h2>
+          <p class="mt-4 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+            Connect parcelLab to your ecommerce platform, marketing tools, and support desk in minutes &mdash; not months.
+          </p>
+        </div>
+
+        <div class="v5-stagger-parent grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            { name: "Shopify", category: "Ecommerce", color: "#96bf48", icon: "M15.337 23.979l7.216-1.561s-2.604-17.613-2.625-17.73c-.018-.116-.114-.192-.211-.192s-1.929-.136-1.929-.136-1.275-1.274-1.439-1.411c-.045-.037-.075-.058-.121-.074l-.914 21.104zm-1.635-17.202c0-.138-.025-.28-.069-.418-.396-1.016-1.178-1.545-2.104-1.545-.054 0-.108.002-.163.007-.024-.03-.049-.06-.075-.089-.573-.612-1.312-.907-2.187-.882-1.705.051-3.396 1.282-4.762 3.451-0.961 1.526-1.692 3.449-1.899 4.935-1.942.601-3.296 1.021-3.326 1.031-.977.307-1.009.338-1.137 1.258C-0.031 13.632 0 23.651 0 23.651l11.459 1.98V6.777z" },
+            { name: "Magento 2", category: "Ecommerce", color: "#f46f25", icon: "M12 24l-4.455-2.572V7.106L12 4.534l4.455 2.572v14.322L12 24zM12 0L1.637 5.986v12.028L5.09 20.1V7.986L12 4.013l6.91 3.973V20.1l3.453-1.986V5.986L12 0z" },
+            { name: "Shopware", category: "Ecommerce", color: "#189eff", icon: "M22.22 9.018c-2.458-2.235-8.19-2.82-10.31-.92-2.12 1.9-1.43 5.17 2.18 6.22 3.61 1.05 4.46 1.68 3.15 3.04-1.31 1.36-5.66 1.22-8.57-.67 0 0-1.09-.7-1.6-1.19l-2.54 3.2s.79.72 1.21 1.02c3.71 2.63 10.38 3.07 13.1.82 2.72-2.25 1.84-6.15-2.51-7.4-3.03-.87-4.12-1.6-3.15-2.87.97-1.27 4.91-.88 7.22.67l2.48-3.03c-.66-.53-1.05-.79-1.05-.79z" },
+            { name: "Klaviyo", category: "Marketing", color: "#000000", icon: "M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.5 14.5l-4.5-3-4.5 3V7h9v9.5z" },
+            { name: "Postscript", category: "Marketing", color: "#6c63ff", icon: "M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12zM7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z" },
+            { name: "Gorgias", category: "Support", color: "#1f1f2e", icon: "M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" },
+            { name: "Zendesk", category: "Support", color: "#03363d", icon: "M12.707 2.293L22.414 12 12.707 21.707 12 21l9-9-9-9 .707-.707zM2 12l9 9-.707.707L.586 12l9.707-9.707L11 3l-9 9z" },
+            { name: "Kustomer", category: "Support", color: "#ff4785", icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" },
+            { name: "Salesforce", category: "Support", color: "#00a1e0", icon: "M10.006 5.15a4.1 4.1 0 0 1 3.062-1.374 4.07 4.07 0 0 1 3.878 2.804 3.42 3.42 0 0 1 1.498-.342 3.44 3.44 0 0 1 3.44 3.44c0 .08-.006.16-.01.24A2.85 2.85 0 0 1 24 12.66a2.86 2.86 0 0 1-2.674 2.85l-.186.005H4.04a4.04 4.04 0 0 1-.522-8.044 3.95 3.95 0 0 1 3.342-3.636 3.95 3.95 0 0 1 3.146 1.316z" },
+            { name: "Apple Wallet", category: "Specialized", color: "#000000", icon: "M18 3H6a3 3 0 00-3 3v12a3 3 0 003 3h12a3 3 0 003-3V6a3 3 0 00-3-3zm-6 15a6 6 0 110-12 6 6 0 010 12zm0-10a4 4 0 100 8 4 4 0 000-8z" },
+            { name: "Global-e", category: "Specialized", color: "#e60023", icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" },
+            { name: "Poshmark", category: "Specialized", color: "#7f0353", icon: "M12.004 2C6.486 2 2 6.486 2 12.004c0 5.518 4.486 10.004 10.004 10.004C17.518 22.008 22 17.522 22 12.004 22 6.486 17.518 2 12.004 2zm3.49 14.636H8.506V7.364h6.988v9.272z" },
+          ].map((integration, i) => (
+            <div class="v5-stagger-child group flex items-center gap-3 rounded-xl border border-[var(--line)] bg-[var(--surface-raised)] p-4 transition-all duration-200 hover:shadow-md hover:shadow-[#3D3AD3]/5">
+              <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg" style={`background-color: ${integration.color}12`}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill={integration.color}>
+                  <path d={integration.icon}/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-sm font-semibold text-[var(--ink)]">{integration.name}</p>
+                <p class="text-[11px] text-[var(--ink-muted)]">{integration.category}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- Carrier count -->
+        <div class="mt-16 text-center">
+          <div class="inline-flex items-center gap-4 rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] px-8 py-5">
+            <!-- Simple world map dots -->
+            <svg width="120" height="60" viewBox="0 0 120 60" fill="none" class="text-[var(--ink-muted)]" aria-hidden="true">
+              <!-- Simplified world map dots -->
+              <circle cx="25" cy="20" r="1.5" fill="currentColor" opacity="0.3"/>
+              <circle cx="30" cy="18" r="1.5" fill="currentColor" opacity="0.3"/>
+              <circle cx="35" cy="22" r="1.5" fill="currentColor" opacity="0.4"/>
+              <circle cx="28" cy="25" r="1.5" fill="currentColor" opacity="0.3"/>
+              <circle cx="33" cy="28" r="1.5" fill="currentColor" opacity="0.2"/>
+              <!-- Europe -->
+              <circle cx="55" cy="16" r="1.5" fill="#3D3AD3" opacity="0.7"/>
+              <circle cx="58" cy="14" r="1.5" fill="#3D3AD3" opacity="0.8"/>
+              <circle cx="60" cy="17" r="1.5" fill="#3D3AD3" opacity="0.6"/>
+              <circle cx="63" cy="15" r="1.5" fill="#3D3AD3" opacity="0.7"/>
+              <circle cx="56" cy="19" r="1.5" fill="#3D3AD3" opacity="0.5"/>
+              <circle cx="62" cy="20" r="1.5" fill="#3D3AD3" opacity="0.6"/>
+              <!-- Asia -->
+              <circle cx="80" cy="18" r="1.5" fill="currentColor" opacity="0.3"/>
+              <circle cx="85" cy="22" r="1.5" fill="currentColor" opacity="0.4"/>
+              <circle cx="90" cy="20" r="1.5" fill="currentColor" opacity="0.3"/>
+              <circle cx="95" cy="25" r="1.5" fill="currentColor" opacity="0.3"/>
+              <circle cx="88" cy="28" r="1.5" fill="currentColor" opacity="0.2"/>
+              <!-- Africa -->
+              <circle cx="58" cy="32" r="1.5" fill="currentColor" opacity="0.2"/>
+              <circle cx="62" cy="35" r="1.5" fill="currentColor" opacity="0.2"/>
+              <circle cx="55" cy="38" r="1.5" fill="currentColor" opacity="0.15"/>
+              <!-- South America -->
+              <circle cx="35" cy="38" r="1.5" fill="currentColor" opacity="0.2"/>
+              <circle cx="38" cy="42" r="1.5" fill="currentColor" opacity="0.2"/>
+              <circle cx="33" cy="45" r="1.5" fill="currentColor" opacity="0.15"/>
+              <!-- Oceania -->
+              <circle cx="98" cy="40" r="1.5" fill="currentColor" opacity="0.2"/>
+              <circle cx="102" cy="42" r="1.5" fill="currentColor" opacity="0.2"/>
+            </svg>
+            <div>
+              <p class="text-2xl font-bold text-[var(--ink)]">175+</p>
+              <p class="text-sm text-[var(--ink-secondary)]">carrier integrations worldwide</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════
+         SECTION 5 — A/B TESTING & OPTIMIZATION
+    ═══════════════════════════════════════════════════ -->
+    <section class="section-generous bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="grid items-center gap-16 lg:grid-cols-2">
+          <!-- Text -->
+          <div>
+            <p class="mb-3 text-sm font-semibold uppercase tracking-wider text-[#3D3AD3]">A/B Testing</p>
+            <h2 class="text-display text-[var(--ink)]">Don't guess. Test.</h2>
+            <p class="mt-4 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+              Optimize every post-purchase communication with built-in experimentation. Test subject lines, layouts, CTAs, and send times &mdash; then let AI pick the winner.
+            </p>
+            <ul class="mt-8 space-y-4">
+              <li class="flex items-start gap-3">
+                <div class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#3D3AD3]/10">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-[var(--ink)]">Test subject lines, layouts, CTAs, and send times</p>
+                  <p class="text-sm font-light text-[var(--ink-secondary)]">Run multivariate tests across all post-purchase touchpoints.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#3D3AD3]/10">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-[var(--ink)]">AI-recommended variants based on segment behavior</p>
+                  <p class="text-sm font-light text-[var(--ink-secondary)]">Machine learning analyzes past performance to suggest the highest-impact changes.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#3D3AD3]/10">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-[var(--ink)]">Statistical significance tracking built in</p>
+                  <p class="text-sm font-light text-[var(--ink-secondary)]">Know exactly when results are meaningful &mdash; no guesswork, no premature calls.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Mock A/B test UI -->
+          <div class="v5-parallax-subtle">
+            <div class="rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-6 shadow-lg">
+              <!-- Header -->
+              <div class="mb-5 flex items-center justify-between">
+                <div>
+                  <p class="text-sm font-semibold text-[var(--ink)]">Shipping confirmation email</p>
+                  <p class="text-xs text-[var(--ink-muted)]">Test running &middot; 14 days &middot; 82% significance</p>
+                </div>
+                <span class="rounded-full bg-emerald-50 px-3 py-1 text-[11px] font-semibold text-emerald-700">Active</span>
+              </div>
+              <!-- Variant comparison -->
+              <div class="grid gap-4 sm:grid-cols-2">
+                <!-- Variant A -->
+                <div class="rounded-xl border border-[var(--line)] p-4">
+                  <div class="mb-3 flex items-center justify-between">
+                    <span class="rounded-md bg-[#3D3AD3]/10 px-2 py-0.5 text-[11px] font-bold text-[#3D3AD3]">A</span>
+                    <span class="text-[10px] text-[var(--ink-muted)]">Control</span>
+                  </div>
+                  <p class="mb-3 text-xs font-medium text-[var(--ink)]">"Your order is on its way!"</p>
+                  <div class="space-y-2">
+                    <div class="flex items-center justify-between">
+                      <span class="text-[11px] text-[var(--ink-muted)]">Open rate</span>
+                      <span class="text-[11px] font-semibold text-[var(--ink)]">42.3%</span>
+                    </div>
+                    <div class="h-1.5 w-full rounded-full bg-[var(--surface-sunken)]">
+                      <div class="h-full rounded-full bg-[var(--ink-muted)]" style="width:42.3%"></div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <span class="text-[11px] text-[var(--ink-muted)]">Click rate</span>
+                      <span class="text-[11px] font-semibold text-[var(--ink)]">8.1%</span>
+                    </div>
+                    <div class="h-1.5 w-full rounded-full bg-[var(--surface-sunken)]">
+                      <div class="h-full rounded-full bg-[var(--ink-muted)]" style="width:32.4%"></div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <span class="text-[11px] text-[var(--ink-muted)]">Revenue</span>
+                      <span class="text-[11px] font-semibold text-[var(--ink)]">$12,430</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Variant B (winner) -->
+                <div class="rounded-xl border-2 border-[#3D3AD3]/30 bg-[#3D3AD3]/[0.02] p-4">
+                  <div class="mb-3 flex items-center justify-between">
+                    <span class="rounded-md bg-[#3D3AD3] px-2 py-0.5 text-[11px] font-bold text-white">B</span>
+                    <span class="flex items-center gap-1 text-[10px] font-semibold text-[#3D3AD3]">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+                      Leading
+                    </span>
+                  </div>
+                  <p class="mb-3 text-xs font-medium text-[var(--ink)]">"Julian, your Dyson is shipping now"</p>
+                  <div class="space-y-2">
+                    <div class="flex items-center justify-between">
+                      <span class="text-[11px] text-[var(--ink-muted)]">Open rate</span>
+                      <span class="text-[11px] font-semibold text-[#3D3AD3]">58.7%</span>
+                    </div>
+                    <div class="h-1.5 w-full rounded-full bg-[var(--surface-sunken)]">
+                      <div class="h-full rounded-full bg-[#3D3AD3]" style="width:58.7%"></div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <span class="text-[11px] text-[var(--ink-muted)]">Click rate</span>
+                      <span class="text-[11px] font-semibold text-[#3D3AD3]">14.2%</span>
+                    </div>
+                    <div class="h-1.5 w-full rounded-full bg-[var(--surface-sunken)]">
+                      <div class="h-full rounded-full bg-[#3D3AD3]" style="width:56.8%"></div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <span class="text-[11px] text-[var(--ink-muted)]">Revenue</span>
+                      <span class="text-[11px] font-semibold text-[#3D3AD3]">$18,920</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Uplift summary -->
+              <div class="mt-4 flex items-center gap-2 rounded-lg bg-[#3D3AD3]/5 px-4 py-2.5">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+                <p class="text-xs text-[var(--ink-secondary)]">
+                  Variant B shows <span class="font-semibold text-[#3D3AD3]">+38.7% open rate</span> and <span class="font-semibold text-[#3D3AD3]">+52% revenue uplift</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════
+         SECTION 6 — FRAUD & ABUSE DETECTION
+    ═══════════════════════════════════════════════════ -->
+    <section class="section-generous" style="background: linear-gradient(180deg, #fef2f2 0%, var(--surface) 100%);">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto mb-12 max-w-2xl text-center">
+          <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F4373D]/10">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F4373D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="M12 8v4"/><path d="M12 16h.01"/>
+            </svg>
+          </div>
+          <p class="mb-3 text-sm font-semibold uppercase tracking-wider text-[#F4373D]">Fraud Detection</p>
+          <h2 class="text-display text-[var(--ink)]">Protect your bottom line</h2>
+          <p class="mt-4 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+            AI-powered fraud detection identifies suspicious return patterns, serial returners, and policy abuse &mdash; before it impacts revenue.
+          </p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <!-- Pattern detection -->
+          <div class="rounded-2xl border border-[#F4373D]/10 bg-[var(--surface-raised)] p-6 transition-all hover:shadow-md">
+            <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#F4373D]/8">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F4373D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+                <path d="M11 8v6"/><path d="M8 11h6"/>
+              </svg>
+            </div>
+            <h3 class="text-base font-semibold text-[var(--ink)]">Pattern detection</h3>
+            <p class="mt-2 text-sm font-light leading-relaxed text-[var(--ink-secondary)]">
+              Flag unusual return behavior across customers. Machine learning spots patterns invisible to manual review &mdash; wardrobing, bracketing, and serial returns.
+            </p>
+          </div>
+
+          <!-- Policy enforcement -->
+          <div class="rounded-2xl border border-[#F4373D]/10 bg-[var(--surface-raised)] p-6 transition-all hover:shadow-md">
+            <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#F4373D]/8">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F4373D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </div>
+            <h3 class="text-base font-semibold text-[var(--ink)]">Policy enforcement</h3>
+            <p class="mt-2 text-sm font-light leading-relaxed text-[var(--ink-secondary)]">
+              Automated rules for return eligibility. Define thresholds, time windows, and exception criteria that apply consistently at scale.
+            </p>
+          </div>
+
+          <!-- Revenue protection -->
+          <div class="rounded-2xl border border-[#F4373D]/10 bg-[var(--surface-raised)] p-6 transition-all hover:shadow-md">
+            <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#F4373D]/8">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F4373D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </div>
+            <h3 class="text-base font-semibold text-[var(--ink)]">Revenue protection</h3>
+            <p class="mt-2 text-sm font-light leading-relaxed text-[var(--ink-secondary)]">
+              Quantify avoided losses in real-time. See exactly how much fraud prevention saves with dashboards tracking blocked abuse and recovered revenue.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════
+         SECTION 7 — PREMIUM ANALYTICS DASHBOARD
+    ═══════════════════════════════════════════════════ -->
+    <section class="section-generous bg-[var(--surface-sunken)]">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="mx-auto mb-16 max-w-2xl text-center">
+          <p class="mb-3 text-sm font-semibold uppercase tracking-wider text-[#3D3AD3]">Premium Analytics</p>
+          <h2 class="text-display text-[var(--ink)]">Analytics that go beyond reports</h2>
+          <p class="mt-4 text-[var(--text-body-lg)] font-light leading-relaxed text-[var(--ink-secondary)]">
+            Real-time performance dashboards, AI-powered forecasts, benchmarking against industry peers, and data exports to your BI tools.
+          </p>
+        </div>
+
+        <!-- Mock dashboard -->
+        <div class="v5-parallax-subtle rounded-2xl border border-[var(--line)] bg-[var(--surface-raised)] p-6 shadow-lg lg:p-8">
+          <!-- Dashboard header -->
+          <div class="mb-6 flex flex-wrap items-center justify-between gap-4">
+            <div>
+              <p class="text-base font-semibold text-[var(--ink)]">Post-Purchase Performance</p>
+              <p class="text-xs text-[var(--ink-muted)]">Last 30 days &middot; All regions</p>
+            </div>
+            <div class="flex gap-2">
+              <span class="rounded-lg bg-[var(--surface-sunken)] px-3 py-1.5 text-[11px] font-medium text-[var(--ink-secondary)]">Export CSV</span>
+              <span class="rounded-lg bg-[#3D3AD3] px-3 py-1.5 text-[11px] font-medium text-white">Share Report</span>
+            </div>
+          </div>
+
+          <div class="grid gap-6 lg:grid-cols-3">
+            <!-- Delivery performance bar chart -->
+            <div class="lg:col-span-2 rounded-xl border border-[var(--line)] p-5">
+              <p class="mb-4 text-sm font-semibold text-[var(--ink)]">Delivery performance by carrier</p>
+              <div class="space-y-3">
+                {[
+                  { name: "DHL Express", onTime: 94, color: "#3D3AD3" },
+                  { name: "FedEx", onTime: 91, color: "#3D3AD3" },
+                  { name: "UPS", onTime: 88, color: "#3D3AD3" },
+                  { name: "DPD", onTime: 85, color: "#FFC943" },
+                  { name: "Hermes", onTime: 72, color: "#F4373D" },
+                ].map((carrier) => (
+                  <div class="flex items-center gap-3">
+                    <span class="w-24 shrink-0 text-xs text-[var(--ink-secondary)]">{carrier.name}</span>
+                    <div class="h-5 flex-1 rounded-md bg-[var(--surface-sunken)]">
+                      <div
+                        class="flex h-full items-center rounded-md px-2 text-[10px] font-semibold text-white transition-all duration-700"
+                        style={`width: ${carrier.onTime}%; background-color: ${carrier.color};`}
+                      >
+                        {carrier.onTime}%
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <p class="mt-3 text-[10px] text-[var(--ink-muted)]">On-time delivery rate (%)</p>
+            </div>
+
+            <!-- Right column: CSAT + Returns forecast -->
+            <div class="space-y-6">
+              <!-- CSAT gauge -->
+              <div class="rounded-xl border border-[var(--line)] p-5">
+                <p class="mb-3 text-sm font-semibold text-[var(--ink)]">CSAT Score</p>
+                <div class="flex items-center gap-4">
+                  <div class="relative h-20 w-20">
+                    <svg viewBox="0 0 36 36" class="h-20 w-20 -rotate-90">
+                      <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="var(--surface-sunken)" stroke-width="3"/>
+                      <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#035740" stroke-width="3" stroke-dasharray="87, 100" stroke-linecap="round"/>
+                    </svg>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                      <span class="text-lg font-bold text-[var(--ink)]">87</span>
+                    </div>
+                  </div>
+                  <div>
+                    <p class="text-xs text-[var(--ink-secondary)]">Customer satisfaction</p>
+                    <p class="flex items-center gap-1 text-xs font-semibold text-[#035740]">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+                      +3.2 vs last month
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Returns forecast -->
+              <div class="rounded-xl border border-[var(--line)] p-5">
+                <p class="mb-3 text-sm font-semibold text-[var(--ink)]">Returns forecast</p>
+                <!-- CSS line chart -->
+                <div class="relative h-16">
+                  <svg viewBox="0 0 200 60" class="h-full w-full" preserveAspectRatio="none">
+                    <!-- Actual line -->
+                    <polyline
+                      points="0,45 25,42 50,38 75,35 100,30 125,28"
+                      fill="none"
+                      stroke="#3D3AD3"
+                      stroke-width="2"
+                    />
+                    <!-- Forecast line (dashed) -->
+                    <polyline
+                      points="125,28 150,24 175,20 200,18"
+                      fill="none"
+                      stroke="#3D3AD3"
+                      stroke-width="2"
+                      stroke-dasharray="4,4"
+                      opacity="0.5"
+                    />
+                    <!-- Confidence band -->
+                    <polygon
+                      points="125,28 150,20 175,14 200,10 200,26 175,26 150,28 125,28"
+                      fill="#3D3AD3"
+                      opacity="0.06"
+                    />
+                  </svg>
+                </div>
+                <div class="mt-2 flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <span class="h-0.5 w-4 bg-[#3D3AD3]"></span>
+                    <span class="text-[10px] text-[var(--ink-muted)]">Actual</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="h-0.5 w-4 border-b border-dashed border-[#3D3AD3]"></span>
+                    <span class="text-[10px] text-[var(--ink-muted)]">AI forecast</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carrier benchmark table -->
+          <div class="mt-6 rounded-xl border border-[var(--line)] p-5">
+            <p class="mb-4 text-sm font-semibold text-[var(--ink)]">Carrier benchmarking</p>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs">
+                <thead>
+                  <tr class="border-b border-[var(--line)]">
+                    <th class="pb-2 pr-4 font-semibold text-[var(--ink-muted)]">Carrier</th>
+                    <th class="pb-2 pr-4 font-semibold text-[var(--ink-muted)]">On-time</th>
+                    <th class="pb-2 pr-4 font-semibold text-[var(--ink-muted)]">Avg transit</th>
+                    <th class="pb-2 pr-4 font-semibold text-[var(--ink-muted)]">Damage rate</th>
+                    <th class="pb-2 font-semibold text-[var(--ink-muted)]">vs Industry</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { carrier: "DHL Express", onTime: "94.2%", transit: "2.1 days", damage: "0.3%", vs: "+8.4%", positive: true },
+                    { carrier: "FedEx", onTime: "91.0%", transit: "2.4 days", damage: "0.5%", vs: "+5.2%", positive: true },
+                    { carrier: "UPS", onTime: "88.3%", transit: "2.6 days", damage: "0.4%", vs: "+2.5%", positive: true },
+                    { carrier: "DPD", onTime: "85.1%", transit: "3.0 days", damage: "0.8%", vs: "-0.7%", positive: false },
+                    { carrier: "Hermes", onTime: "72.4%", transit: "3.8 days", damage: "1.2%", vs: "-13.4%", positive: false },
+                  ].map((row) => (
+                    <tr class="border-b border-[var(--line-subtle)]">
+                      <td class="py-2.5 pr-4 font-medium text-[var(--ink)]">{row.carrier}</td>
+                      <td class="py-2.5 pr-4 text-[var(--ink-secondary)]">{row.onTime}</td>
+                      <td class="py-2.5 pr-4 text-[var(--ink-secondary)]">{row.transit}</td>
+                      <td class="py-2.5 pr-4 text-[var(--ink-secondary)]">{row.damage}</td>
+                      <td class={`py-2.5 font-semibold ${row.positive ? "text-[#035740]" : "text-[#F4373D]"}`}>{row.vs}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom features -->
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+          {[
+            { title: "Benchmarking", desc: "Compare performance against industry peers and identify gaps to close." },
+            { title: "Data exports", desc: "Push data to Snowflake, BigQuery, or your BI tool of choice via scheduled exports." },
+            { title: "Custom report builder", desc: "Drag-and-drop report creation with granular filters and saved views." },
+          ].map((feat) => (
+            <div class="flex items-start gap-3">
+              <div class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#3D3AD3]/10">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <p class="text-sm font-semibold text-[var(--ink)]">{feat.title}</p>
+                <p class="text-sm font-light text-[var(--ink-secondary)]">{feat.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════
+         SECTION 8 — BOTTOM CTA
+    ═══════════════════════════════════════════════════ -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white">
+      <!-- Subtle grid bg reuse -->
+      <div class="v5-grid-bg pointer-events-none absolute inset-0 opacity-50" aria-hidden="true"></div>
+
+      <div class="relative z-10 mx-auto max-w-[1440px] px-6 md:px-12">
+        <div class="flex flex-col items-center py-24 text-center lg:py-32">
+          <h2 class="text-display max-w-3xl text-white">
+            Ready to put AI to work for your post-purchase experience?
+          </h2>
+          <p class="mt-5 max-w-xl text-lg font-light text-slate-400">
+            Join brands like IKEA, Hugo Boss, Puma, and Farfetch who trust parcelLab to transform every delivery and return into a competitive advantage.
+          </p>
+          <div class="mt-10 flex flex-wrap justify-center gap-4">
+            <a href={`${b}/live-demo/`} class="v5-cta-gradient-border inline-flex items-center gap-2 rounded-full bg-[#3D3AD3] px-8 py-4 text-sm font-semibold text-white transition-all hover:bg-[#4b47e8]">
+              Book a demo
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href={`${b}/post-purchase-platform/`} class="inline-flex items-center gap-2 rounded-full border border-white/30 px-8 py-4 text-sm font-semibold text-white transition-all hover:border-white/60 hover:bg-white/5">
+              Explore the platform
+            </a>
+          </div>
+
+          <!-- Trust logos -->
+          <div class="mt-16 flex flex-wrap items-center justify-center gap-8 opacity-40">
+            <img src={`${b}/images/brands/IKEA_Logo_Black.svg`} alt="IKEA" class="h-6 brightness-0 invert" loading="lazy" />
+            <img src={`${b}/images/brands/Hugo-Boss.svg`} alt="Hugo Boss" class="h-5 brightness-0 invert" loading="lazy" />
+            <img src={`${b}/images/brands/Puma.svg`} alt="Puma" class="h-5 brightness-0 invert" loading="lazy" />
+            <img src={`${b}/images/brands/Farfetch.svg`} alt="Farfetch" class="h-4 brightness-0 invert" loading="lazy" />
+            <img src={`${b}/images/brands/Dyson.svg`} alt="Dyson" class="h-5 brightness-0 invert" loading="lazy" />
+            <img src={`${b}/images/brands/True-Classic-1.svg`} alt="True Classic" class="h-5 brightness-0 invert" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+
+<!-- ═══════════════════════════════════════════════════
+     STYLES & ANIMATIONS
+═══════════════════════════════════════════════════ -->
+<style>
+  /* ─── Hero grid background with pulsing dots ─── */
+  .v5-grid-bg {
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(99,102,241,0.15) 1px, transparent 0);
+    background-size: 40px 40px;
+  }
+
+  /* Pulsing glow dots overlaid on grid */
+  .v5-hero::before,
+  .v5-hero::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .v5-hero::before {
+    width: 400px;
+    height: 400px;
+    top: 10%;
+    left: 5%;
+    background: radial-gradient(circle, rgba(61,58,211,0.15) 0%, transparent 70%);
+    animation: v5-pulse-glow 4s ease-in-out infinite;
+  }
+  .v5-hero::after {
+    width: 300px;
+    height: 300px;
+    bottom: 15%;
+    right: 10%;
+    background: radial-gradient(circle, rgba(61,58,211,0.1) 0%, transparent 70%);
+    animation: v5-pulse-glow 4s ease-in-out 2s infinite;
+  }
+
+  @keyframes v5-pulse-glow {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.15); }
+  }
+
+
+  /* ─── Cycling word animation ─── */
+  .v5-cycle-word {
+    display: inline-block;
+    position: relative;
+    min-width: 280px;
+    height: 1.15em;
+    vertical-align: bottom;
+  }
+  .v5-cycle-item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    color: #818cf8;
+    text-shadow: 0 0 30px rgba(61,58,211,0.5);
+    animation: v5-cycle 10s ease-in-out infinite;
+    white-space: nowrap;
+  }
+  .v5-cycle-item[data-index="0"] { animation-delay: 0s; }
+  .v5-cycle-item[data-index="1"] { animation-delay: 2.5s; }
+  .v5-cycle-item[data-index="2"] { animation-delay: 5s; }
+  .v5-cycle-item[data-index="3"] { animation-delay: 7.5s; }
+
+  @keyframes v5-cycle {
+    0%, 5% { opacity: 0; transform: translateY(12px); }
+    10%, 20% { opacity: 1; transform: translateY(0); }
+    25%, 100% { opacity: 0; transform: translateY(-12px); }
+  }
+
+
+  /* ─── Glowing CTA button ─── */
+  .v5-cta-glow {
+    box-shadow: 0 0 20px rgba(61,58,211,0.4), 0 0 60px rgba(61,58,211,0.15);
+    transition: all 0.3s ease;
+  }
+  .v5-cta-glow:hover {
+    box-shadow: 0 0 30px rgba(61,58,211,0.5), 0 0 80px rgba(61,58,211,0.25);
+    transform: translateY(-1px);
+  }
+
+
+  /* ─── Floating chat card ─── */
+  .v5-float-card {
+    animation: v5-float 6s ease-in-out infinite;
+  }
+  @keyframes v5-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+
+  /* ─── Staggered scroll entrance ─── */
+  .v5-stagger-child {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s cubic-bezier(0.22,1,0.36,1), transform 0.6s cubic-bezier(0.22,1,0.36,1);
+  }
+  .v5-stagger-child.v5-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+  /* ─── Flow diagram animated lines ─── */
+  .v5-flow-line-animated {
+    background: linear-gradient(90deg, transparent, #3D3AD3, transparent);
+    background-size: 200% 100%;
+    animation: v5-flow-data 3s linear infinite;
+  }
+  .v5-flow-line-v {
+    background: linear-gradient(180deg, transparent, #3D3AD3, transparent);
+    background-size: 100% 200%;
+    animation: v5-flow-data-v 3s linear infinite;
+  }
+
+  @keyframes v5-flow-data {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+  @keyframes v5-flow-data-v {
+    0% { background-position: 0 200%; }
+    100% { background-position: 0 -200%; }
+  }
+
+
+  /* ─── Gradient border CTA ─── */
+  .v5-cta-gradient-border {
+    position: relative;
+    box-shadow: 0 0 24px rgba(61,58,211,0.4);
+    transition: all 0.3s ease;
+  }
+  .v5-cta-gradient-border::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 9999px;
+    background: conic-gradient(from 0deg, #3D3AD3, #818cf8, #FFC943, #3D3AD3);
+    z-index: -1;
+    animation: v5-rotate-gradient 4s linear infinite;
+    opacity: 0.6;
+  }
+  .v5-cta-gradient-border:hover::before {
+    opacity: 1;
+  }
+  @keyframes v5-rotate-gradient {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+  }
+
+
+  /* ─── Subtle parallax placeholder (CSS only) ─── */
+  .v5-parallax-subtle {
+    transition: transform 0.3s ease;
+  }
+
+
+  /* ─── Reduced motion ─── */
+  @media (prefers-reduced-motion: reduce) {
+    .v5-hero::before,
+    .v5-hero::after {
+      animation: none;
+      opacity: 0.6;
+    }
+    .v5-cycle-item {
+      animation: none;
+    }
+    .v5-cycle-item[data-index="0"] {
+      opacity: 1;
+      transform: none;
+    }
+    .v5-float-card {
+      animation: none;
+    }
+    .v5-stagger-child {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+    .v5-flow-line-animated,
+    .v5-flow-line-v {
+      animation: none;
+      background: #3D3AD3;
+      opacity: 0.3;
+    }
+    .v5-cta-gradient-border::before {
+      animation: none;
+    }
+    .v5-cta-glow {
+      transition: none;
+    }
+  }
+</style>
+
+
+<!-- ═══════════════════════════════════════════════════
+     CLIENT-SIDE SCRIPTS
+═══════════════════════════════════════════════════ -->
+<script>
+  // Staggered scroll entrance via IntersectionObserver
+  document.addEventListener("DOMContentLoaded", () => {
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (prefersReduced) {
+      // Make everything visible immediately
+      document.querySelectorAll(".v5-stagger-child").forEach((el) => {
+        (el as HTMLElement).style.opacity = "1";
+        (el as HTMLElement).style.transform = "none";
+      });
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const children = entry.target.querySelectorAll(".v5-stagger-child");
+            children.forEach((child, i) => {
+              setTimeout(() => {
+                child.classList.add("v5-visible");
+              }, i * 100);
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    document.querySelectorAll(".v5-stagger-parent").forEach((parent) => {
+      observer.observe(parent);
+    });
+
+    // Also observe individual cards that are direct children (not in a parent)
+    const standaloneObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("v5-visible");
+            standaloneObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    document.querySelectorAll(".v5-stagger-child:not(.v5-stagger-parent .v5-stagger-child)").forEach((el) => {
+      standaloneObserver.observe(el);
+    });
+
+    // Subtle parallax on scroll for mock UIs
+    const parallaxEls = document.querySelectorAll(".v5-parallax-subtle");
+    if (parallaxEls.length > 0) {
+      let ticking = false;
+      window.addEventListener("scroll", () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            parallaxEls.forEach((el) => {
+              const rect = (el as HTMLElement).getBoundingClientRect();
+              const viewportCenter = window.innerHeight / 2;
+              const elCenter = rect.top + rect.height / 2;
+              const offset = (viewportCenter - elCenter) * 0.03;
+              (el as HTMLElement).style.transform = `translateY(${offset}px)`;
+            });
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+    }
+  });
+</script>
