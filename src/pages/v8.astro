@@ -1,0 +1,2500 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/globals.css";
+import { Header } from "../components/Header";
+import Footer from "../components/Footer.astro";
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout title="parcelLab — The ROI of Post-Purchase Excellence">
+  <Header client:load />
+  <main>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         SECTION 1 — HERO: The Cost of Doing Nothing (Split Screen)
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="v8-hero relative overflow-hidden" style="min-height: 100vh; min-height: 100dvh;">
+      <!-- Floating orbs (decorative) -->
+      <div class="v8-orb v8-orb--1 pointer-events-none absolute" aria-hidden="true"></div>
+      <div class="v8-orb v8-orb--2 pointer-events-none absolute" aria-hidden="true"></div>
+      <div class="v8-orb v8-orb--3 pointer-events-none absolute" aria-hidden="true"></div>
+
+      <div class="v8-hero-split">
+        <!-- LEFT: Dark half — the problem -->
+        <div class="v8-hero-dark">
+          <div class="v8-hero-dark-bg" aria-hidden="true"></div>
+          <div class="v8-hero-dark-mesh" aria-hidden="true"></div>
+          <div class="v8-hero-content v8-hero-content--left">
+            <div class="v8-hero-label v8-hero-label--red">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              The problem
+            </div>
+            <h1 class="v8-hero-title v8-hero-title--light">
+              Your post-purchase experience is <span class="v8-text-leak">leaking revenue</span>
+            </h1>
+            <div class="v8-counter-block v8-counter-block--red">
+              <div class="v8-counter-label">Average revenue lost per day</div>
+              <div class="v8-counter-value v8-counter-value--red" data-target="2847" data-prefix="$" data-suffix=" lost per day">
+                $0 lost per day
+              </div>
+            </div>
+            <p class="v8-hero-sub v8-hero-sub--light">
+              Average revenue lost to generic tracking pages, preventable returns, and WISMO support calls.
+            </p>
+          </div>
+        </div>
+
+        <!-- Diagonal divider -->
+        <div class="v8-hero-divider" aria-hidden="true">
+          <div class="v8-hero-divider-gradient"></div>
+        </div>
+
+        <!-- RIGHT: Light half — the solution -->
+        <div class="v8-hero-light">
+          <div class="v8-hero-light-bg" aria-hidden="true"></div>
+          <div class="v8-hero-light-dots" aria-hidden="true"></div>
+          <div class="v8-hero-content v8-hero-content--right">
+            <div class="v8-hero-label v8-hero-label--green">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              The solution
+            </div>
+            <h1 class="v8-hero-title v8-hero-title--dark">
+              parcelLab customers <span class="v8-text-recover">recover it</span>
+            </h1>
+            <div class="v8-counter-block v8-counter-block--green">
+              <div class="v8-counter-label v8-counter-label--dark">Revenue recovered per day</div>
+              <div class="v8-counter-value v8-counter-value--green" data-target="2847" data-prefix="$" data-suffix=" recovered per day">
+                $0 recovered per day
+              </div>
+            </div>
+            <p class="v8-hero-sub v8-hero-sub--dark">
+              Through branded tracking experiences, smart returns management, and proactive customer communications.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll CTA -->
+      <a href="#the-math" class="v8-scroll-cta" aria-label="See the math">
+        <span class="v8-scroll-cta-text">See the math</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+      </a>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         SECTION 2 — THE MATH: ROI Calculator Style
+         ════════════════════════════════════════════════════════════════ -->
+    <section id="the-math" class="v8-math relative overflow-hidden" style="padding-top: clamp(6rem, 10vw, 9rem); padding-bottom: clamp(6rem, 10vw, 9rem);">
+      <div class="v8-math-bg" aria-hidden="true"></div>
+      <div class="container-pl relative z-10">
+        <!-- Section header -->
+        <div class="mx-auto mb-16 max-w-3xl text-center v8-reveal">
+          <div class="v8-section-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/></svg>
+            ROI Calculator
+          </div>
+          <h2 class="v8-section-title">
+            The post-purchase <span class="v8-gradient-text">revenue equation</span>
+          </h2>
+          <p class="v8-section-desc">
+            For a brand processing 1M shipments per year, here is the measurable impact across three critical areas.
+          </p>
+        </div>
+
+        <!-- Equation cards -->
+        <div class="v8-equation-grid">
+          <!-- Card 1: WISMO -->
+          <div class="v8-equation-card v8-reveal" style="--card-accent: #3D3AD3; --card-glow: rgba(61,58,211,0.15);">
+            <div class="v8-equation-card-inner">
+              <div class="v8-equation-icon" style="background: linear-gradient(135deg, #3D3AD3, #6B68FF);">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/><line x1="15" y1="2" x2="15" y2="5"/><line x1="18" y1="5" x2="18" y2="2"/><line x1="21" y1="2" x2="21" y2="5"/></svg>
+              </div>
+              <div class="v8-equation-input">
+                <span class="v8-equation-pct v8-count-up" data-target="20">0</span>
+                <span class="v8-equation-pct-sign">%</span>
+                <span class="v8-equation-input-label">fewer WISMO calls</span>
+              </div>
+              <div class="v8-equation-equals" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/></svg>
+              </div>
+              <div class="v8-equation-output">
+                <span class="v8-equation-result v8-gradient-text">$340K</span>
+                <span class="v8-equation-output-label">saved per year</span>
+              </div>
+              <div class="v8-equation-card-glow" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <!-- Card 2: Returns to Exchanges -->
+          <div class="v8-equation-card v8-reveal" style="--card-accent: #035740; --card-glow: rgba(3,87,64,0.15);">
+            <div class="v8-equation-card-inner">
+              <div class="v8-equation-icon" style="background: linear-gradient(135deg, #035740, #0D7A5F);">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+              </div>
+              <div class="v8-equation-input">
+                <span class="v8-equation-pct v8-count-up" data-target="11">0</span>
+                <span class="v8-equation-pct-sign">%</span>
+                <span class="v8-equation-input-label">returns converted to exchanges</span>
+              </div>
+              <div class="v8-equation-equals" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/></svg>
+              </div>
+              <div class="v8-equation-output">
+                <span class="v8-equation-result v8-gradient-text-green">$890K</span>
+                <span class="v8-equation-output-label">retained per year</span>
+              </div>
+              <div class="v8-equation-card-glow" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <!-- Card 3: Conversion Lift -->
+          <div class="v8-equation-card v8-reveal" style="--card-accent: #FFC943; --card-glow: rgba(255,201,67,0.12);">
+            <div class="v8-equation-card-inner">
+              <div class="v8-equation-icon" style="background: linear-gradient(135deg, #D4A017, #FFC943);">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+              </div>
+              <div class="v8-equation-input">
+                <span class="v8-equation-pct v8-count-up" data-target="5">0</span>
+                <span class="v8-equation-pct-sign">%</span>
+                <span class="v8-equation-input-label">checkout conversion lift</span>
+              </div>
+              <div class="v8-equation-equals" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/></svg>
+              </div>
+              <div class="v8-equation-output">
+                <span class="v8-equation-result v8-gradient-text-warm">$1.2M</span>
+                <span class="v8-equation-output-label">revenue per year</span>
+              </div>
+              <div class="v8-equation-card-glow" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Total Impact bar -->
+        <div class="v8-total-bar v8-reveal">
+          <div class="v8-total-bar-inner">
+            <div class="v8-total-bar-fill" aria-hidden="true"></div>
+            <div class="v8-total-bar-content">
+              <span class="v8-total-label">Total annual impact</span>
+              <span class="v8-total-value">$2.4M+</span>
+              <span class="v8-total-sub">combined yearly value for a brand processing 1M shipments</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         SECTION 3 — BEFORE / AFTER Comparisons
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="v8-compare relative overflow-hidden" style="padding-top: clamp(6rem, 10vw, 9rem); padding-bottom: clamp(6rem, 10vw, 9rem);">
+      <div class="container-pl relative z-10">
+        <div class="mx-auto mb-20 max-w-3xl text-center v8-reveal">
+          <div class="v8-section-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="12" y1="3" x2="12" y2="21"/></svg>
+            Before vs. After
+          </div>
+          <h2 class="v8-section-title">
+            The difference is <span class="v8-gradient-text">unmistakable</span>
+          </h2>
+          <p class="v8-section-desc">
+            See how leading brands transform their post-purchase experience from generic to extraordinary.
+          </p>
+        </div>
+
+        <!-- Comparison A: Tracking Experience -->
+        <div class="v8-comparison v8-reveal">
+          <div class="v8-comparison-header">
+            <span class="v8-comparison-number">01</span>
+            <h3 class="v8-comparison-title">Tracking Experience</h3>
+          </div>
+          <div class="v8-comparison-grid">
+            <!-- Before -->
+            <div class="v8-before">
+              <div class="v8-before-label">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                Before
+              </div>
+              <div class="v8-before-frame">
+                <div class="v8-before-crack v8-before-crack--1" aria-hidden="true"></div>
+                <div class="v8-before-crack v8-before-crack--2" aria-hidden="true"></div>
+                <!-- Generic carrier page mockup -->
+                <div class="v8-mockup-carrier">
+                  <div class="v8-mockup-carrier-header">
+                    <div class="v8-mockup-carrier-logo"></div>
+                    <span style="font-size: 10px; color: #999; font-family: monospace;">CARRIER TRACKING</span>
+                  </div>
+                  <div class="v8-mockup-carrier-body">
+                    <div style="font-size: 11px; color: #666; margin-bottom: 8px;">Tracking #: 1Z999AA10123456784</div>
+                    <div style="font-size: 11px; color: #444; margin-bottom: 12px; font-weight: 600;">In Transit</div>
+                    <div class="v8-mockup-carrier-timeline">
+                      <div class="v8-mockup-carrier-step v8-mockup-carrier-step--done">
+                        <div class="v8-mockup-carrier-dot"></div>
+                        <span>Label Created</span>
+                      </div>
+                      <div class="v8-mockup-carrier-step v8-mockup-carrier-step--done">
+                        <div class="v8-mockup-carrier-dot"></div>
+                        <span>Picked Up</span>
+                      </div>
+                      <div class="v8-mockup-carrier-step v8-mockup-carrier-step--active">
+                        <div class="v8-mockup-carrier-dot"></div>
+                        <span>In Transit</span>
+                      </div>
+                      <div class="v8-mockup-carrier-step">
+                        <div class="v8-mockup-carrier-dot"></div>
+                        <span>Delivered</span>
+                      </div>
+                    </div>
+                    <div style="margin-top: 12px; font-size: 9px; color: #bbb;">No branding. No engagement. No revenue.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Metric -->
+            <div class="v8-comparison-metric">
+              <div class="v8-comparison-metric-value">85%</div>
+              <div class="v8-comparison-metric-label">engagement rate</div>
+              <div class="v8-comparison-metric-vs">vs 0%</div>
+            </div>
+
+            <!-- After -->
+            <div class="v8-after">
+              <div class="v8-after-label">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                After
+              </div>
+              <div class="v8-after-frame">
+                <div class="v8-after-glow" aria-hidden="true"></div>
+                <!-- Branded OSP mockup -->
+                <div class="v8-mockup-osp">
+                  <div class="v8-mockup-osp-banner">
+                    <span style="font-size: 10px; font-weight: 700; color: white; letter-spacing: 0.05em;">SPRING SALE: 20% OFF YOUR NEXT ORDER</span>
+                  </div>
+                  <div class="v8-mockup-osp-header">
+                    <div class="v8-mockup-osp-logo"></div>
+                    <div class="v8-mockup-osp-nav">
+                      <span>Shop</span>
+                      <span>Account</span>
+                      <span>Help</span>
+                    </div>
+                  </div>
+                  <div class="v8-mockup-osp-body">
+                    <div class="v8-mockup-osp-status">
+                      <div class="v8-mockup-osp-status-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                      </div>
+                      <div>
+                        <div style="font-size: 13px; font-weight: 700; color: #0f172a;">Your order is on its way!</div>
+                        <div style="font-size: 10px; color: #64748b;">Estimated delivery: Tomorrow by 5 PM</div>
+                      </div>
+                    </div>
+                    <div class="v8-mockup-osp-progress">
+                      <div class="v8-mockup-osp-progress-fill" style="width: 70%;"></div>
+                    </div>
+                    <div class="v8-mockup-osp-map"></div>
+                    <div class="v8-mockup-osp-cta">
+                      <span style="font-size: 10px; font-weight: 600; color: white;">Complete the look</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comparison B: Returns Process -->
+        <div class="v8-comparison v8-reveal" style="margin-top: clamp(4rem, 6vw, 6rem);">
+          <div class="v8-comparison-header">
+            <span class="v8-comparison-number">02</span>
+            <h3 class="v8-comparison-title">Returns Process</h3>
+          </div>
+          <div class="v8-comparison-grid">
+            <!-- Before -->
+            <div class="v8-before">
+              <div class="v8-before-label">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                Before
+              </div>
+              <div class="v8-before-frame">
+                <div class="v8-before-crack v8-before-crack--1" aria-hidden="true"></div>
+                <!-- Generic return email -->
+                <div class="v8-mockup-email">
+                  <div class="v8-mockup-email-header">
+                    <div style="font-size: 9px; color: #999;">From: noreply@carrier.com</div>
+                    <div style="font-size: 9px; color: #999;">Subject: Return Received</div>
+                  </div>
+                  <div class="v8-mockup-email-body">
+                    <p style="font-size: 11px; color: #666; line-height: 1.6; margin: 0;">
+                      Dear Customer,<br/><br/>
+                      Your return has been received. Please allow 5-10 business days for processing. Refund will be issued to your original payment method.<br/><br/>
+                      Thank you.
+                    </p>
+                    <div style="margin-top: 12px; font-size: 9px; color: #ccc; border-top: 1px solid #eee; padding-top: 8px;">
+                      Do not reply to this email.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Metric -->
+            <div class="v8-comparison-metric">
+              <div class="v8-comparison-metric-value">11%</div>
+              <div class="v8-comparison-metric-label">more exchanges</div>
+              <div class="v8-comparison-metric-vs">15% less fraud</div>
+            </div>
+
+            <!-- After -->
+            <div class="v8-after">
+              <div class="v8-after-label">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                After
+              </div>
+              <div class="v8-after-frame">
+                <div class="v8-after-glow" aria-hidden="true"></div>
+                <!-- Returns portal UI -->
+                <div class="v8-mockup-returns">
+                  <div class="v8-mockup-returns-header">
+                    <div class="v8-mockup-osp-logo"></div>
+                    <span style="font-size: 12px; font-weight: 700; color: #0f172a;">Returns Portal</span>
+                  </div>
+                  <div class="v8-mockup-returns-body">
+                    <div class="v8-mockup-returns-option v8-mockup-returns-option--highlight">
+                      <div class="v8-mockup-returns-radio v8-mockup-returns-radio--active"></div>
+                      <div>
+                        <div style="font-size: 11px; font-weight: 700; color: #035740;">Exchange for different size</div>
+                        <div style="font-size: 9px; color: #64748b;">Get the right fit, no extra charge</div>
+                      </div>
+                      <span class="v8-mockup-returns-badge">Recommended</span>
+                    </div>
+                    <div class="v8-mockup-returns-option">
+                      <div class="v8-mockup-returns-radio"></div>
+                      <div>
+                        <div style="font-size: 11px; font-weight: 600; color: #0f172a;">Store credit + 10% bonus</div>
+                        <div style="font-size: 9px; color: #64748b;">$55.00 credit to your account</div>
+                      </div>
+                    </div>
+                    <div class="v8-mockup-returns-option">
+                      <div class="v8-mockup-returns-radio"></div>
+                      <div>
+                        <div style="font-size: 11px; font-weight: 600; color: #0f172a;">Refund to original payment</div>
+                        <div style="font-size: 9px; color: #64748b;">5-10 business days</div>
+                      </div>
+                    </div>
+                    <div class="v8-mockup-returns-retention">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFC943" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                      <span style="font-size: 9px; font-weight: 600; color: #0f172a;">Keep the item + get 20% off your next order</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comparison C: Customer Communications -->
+        <div class="v8-comparison v8-reveal" style="margin-top: clamp(4rem, 6vw, 6rem);">
+          <div class="v8-comparison-header">
+            <span class="v8-comparison-number">03</span>
+            <h3 class="v8-comparison-title">Customer Communications</h3>
+          </div>
+          <div class="v8-comparison-grid">
+            <!-- Before -->
+            <div class="v8-before">
+              <div class="v8-before-label">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                Before
+              </div>
+              <div class="v8-before-frame">
+                <div class="v8-before-crack v8-before-crack--2" aria-hidden="true"></div>
+                <!-- Single generic email -->
+                <div class="v8-mockup-single-email">
+                  <div class="v8-mockup-single-email-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  </div>
+                  <div style="font-size: 11px; font-weight: 600; color: #666; margin-bottom: 4px;">Your package has shipped</div>
+                  <div style="font-size: 10px; color: #999; line-height: 1.5;">
+                    Your order #12345 has been shipped via Standard Shipping. Track your package using the link below.
+                  </div>
+                  <div style="margin-top: 10px; padding: 6px 12px; background: #f0f0f0; border-radius: 4px; font-size: 9px; color: #888; display: inline-block;">
+                    Track Package
+                  </div>
+                  <div style="margin-top: 16px; text-align: center; font-size: 22px; color: #e0e0e0;">1 email. That is it.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Metric -->
+            <div class="v8-comparison-metric">
+              <div class="v8-comparison-metric-value">29%</div>
+              <div class="v8-comparison-metric-label">more revenue per<br/>post-purchase email</div>
+              <div class="v8-comparison-metric-vs">8 touchpoints vs 1</div>
+            </div>
+
+            <!-- After -->
+            <div class="v8-after">
+              <div class="v8-after-label">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                After
+              </div>
+              <div class="v8-after-frame">
+                <div class="v8-after-glow" aria-hidden="true"></div>
+                <!-- 8-step communication timeline -->
+                <div class="v8-mockup-timeline">
+                  <div class="v8-mockup-timeline-item v8-mockup-timeline-item--done">
+                    <div class="v8-mockup-timeline-dot"></div>
+                    <div class="v8-mockup-timeline-content">
+                      <span class="v8-mockup-timeline-title">Order Confirmed</span>
+                      <span class="v8-mockup-timeline-desc">Branded confirmation + upsell</span>
+                    </div>
+                  </div>
+                  <div class="v8-mockup-timeline-item v8-mockup-timeline-item--done">
+                    <div class="v8-mockup-timeline-dot"></div>
+                    <div class="v8-mockup-timeline-content">
+                      <span class="v8-mockup-timeline-title">Shipped</span>
+                      <span class="v8-mockup-timeline-desc">Tracking + delivery estimate</span>
+                    </div>
+                  </div>
+                  <div class="v8-mockup-timeline-item v8-mockup-timeline-item--done">
+                    <div class="v8-mockup-timeline-dot"></div>
+                    <div class="v8-mockup-timeline-content">
+                      <span class="v8-mockup-timeline-title">In Transit</span>
+                      <span class="v8-mockup-timeline-desc">Live map + ETA update</span>
+                    </div>
+                  </div>
+                  <div class="v8-mockup-timeline-item v8-mockup-timeline-item--active">
+                    <div class="v8-mockup-timeline-dot"></div>
+                    <div class="v8-mockup-timeline-content">
+                      <span class="v8-mockup-timeline-title">Out for Delivery</span>
+                      <span class="v8-mockup-timeline-desc">Same-day notification</span>
+                    </div>
+                  </div>
+                  <div class="v8-mockup-timeline-item">
+                    <div class="v8-mockup-timeline-dot"></div>
+                    <div class="v8-mockup-timeline-content">
+                      <span class="v8-mockup-timeline-title">Delivered</span>
+                      <span class="v8-mockup-timeline-desc">Confirmation + care tips</span>
+                    </div>
+                  </div>
+                  <div class="v8-mockup-timeline-item">
+                    <div class="v8-mockup-timeline-dot"></div>
+                    <div class="v8-mockup-timeline-content">
+                      <span class="v8-mockup-timeline-title">Review Request</span>
+                      <span class="v8-mockup-timeline-desc">NPS survey + feedback</span>
+                    </div>
+                  </div>
+                  <div class="v8-mockup-timeline-item">
+                    <div class="v8-mockup-timeline-dot"></div>
+                    <div class="v8-mockup-timeline-content">
+                      <span class="v8-mockup-timeline-title">Campaign</span>
+                      <span class="v8-mockup-timeline-desc">Personalized recommendations</span>
+                    </div>
+                  </div>
+                  <div class="v8-mockup-timeline-item">
+                    <div class="v8-mockup-timeline-dot"></div>
+                    <div class="v8-mockup-timeline-content">
+                      <span class="v8-mockup-timeline-title">Reorder</span>
+                      <span class="v8-mockup-timeline-desc">Replenishment reminder</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         SECTION 4 — CUSTOMER RESULTS: Aggressive Social Proof
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="v8-results relative overflow-hidden" style="padding-top: clamp(6rem, 10vw, 9rem); padding-bottom: clamp(6rem, 10vw, 9rem);">
+      <div class="v8-results-bg" aria-hidden="true"></div>
+      <div class="v8-results-mesh" aria-hidden="true"></div>
+      <div class="container-pl relative z-10">
+        <div class="mx-auto mb-16 max-w-3xl text-center v8-reveal">
+          <div class="v8-section-badge v8-section-badge--dark">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Real Results
+          </div>
+          <h2 class="v8-section-title v8-section-title--light">
+            Real results from <span class="v8-gradient-text">real brands</span>
+          </h2>
+          <p class="v8-section-desc v8-section-desc--light">
+            From fashion retailers to global marketplaces, parcelLab delivers measurable ROI.
+          </p>
+        </div>
+
+        <!-- 2x3 Results grid -->
+        <div class="v8-results-grid">
+          <!-- Result 1 -->
+          <div class="v8-result-card v8-reveal" style="--result-accent: #3D3AD3;">
+            <div class="v8-result-card-inner">
+              <span class="v8-result-category">Fashion Retailer</span>
+              <div class="v8-result-metric v8-gradient-text">+340%</div>
+              <div class="v8-result-what">tracking page engagement</div>
+              <p class="v8-result-quote">"Our tracking page went from an afterthought to our highest-engagement channel."</p>
+              <div class="v8-result-card-border" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <!-- Result 2 -->
+          <div class="v8-result-card v8-reveal" style="--result-accent: #035740;">
+            <div class="v8-result-card-inner">
+              <span class="v8-result-category">DTC Brand</span>
+              <div class="v8-result-metric v8-gradient-text-green">-62%</div>
+              <div class="v8-result-what">WISMO call reduction</div>
+              <p class="v8-result-quote">"We freed our support team to focus on high-value conversations instead of order status."</p>
+              <div class="v8-result-card-border" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <!-- Result 3 -->
+          <div class="v8-result-card v8-reveal" style="--result-accent: #FFC943;">
+            <div class="v8-result-card-inner">
+              <span class="v8-result-category">Global Marketplace</span>
+              <div class="v8-result-metric v8-gradient-text-warm">+$2.1M</div>
+              <div class="v8-result-what">annual revenue recovered</div>
+              <p class="v8-result-quote">"The returns-to-exchanges conversion alone paid for the platform within 3 months."</p>
+              <div class="v8-result-card-border" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <!-- Result 4 -->
+          <div class="v8-result-card v8-reveal" style="--result-accent: #8B5CF6;">
+            <div class="v8-result-card-inner">
+              <span class="v8-result-category">Luxury Brand</span>
+              <div class="v8-result-metric" style="background: linear-gradient(135deg, #8B5CF6, #C084FC); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">+89%</div>
+              <div class="v8-result-what">post-purchase NPS score</div>
+              <p class="v8-result-quote">"Every delivery now feels like an extension of our brand experience."</p>
+              <div class="v8-result-card-border" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <!-- Result 5 -->
+          <div class="v8-result-card v8-reveal" style="--result-accent: #EF4444;">
+            <div class="v8-result-card-inner">
+              <span class="v8-result-category">Home & Garden</span>
+              <div class="v8-result-metric" style="background: linear-gradient(135deg, #EF4444, #F97316); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">-45%</div>
+              <div class="v8-result-what">returns rate reduction</div>
+              <p class="v8-result-quote">"Proactive delivery communications set the right expectations before the package arrives."</p>
+              <div class="v8-result-card-border" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <!-- Result 6 -->
+          <div class="v8-result-card v8-reveal" style="--result-accent: #3D3AD3;">
+            <div class="v8-result-card-inner">
+              <span class="v8-result-category">Sports & Outdoor</span>
+              <div class="v8-result-metric v8-gradient-text">+29%</div>
+              <div class="v8-result-what">repeat purchase rate</div>
+              <p class="v8-result-quote">"Post-purchase emails now drive more revenue than our promotional campaigns."</p>
+              <div class="v8-result-card-border" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Brand logos -->
+        <div class="v8-brand-strip v8-reveal">
+          <p class="v8-brand-strip-label">Trusted by 800+ brands worldwide</p>
+          <div class="v8-brand-logos">
+            <img src={`${b}/images/brands/Puma.svg`} alt="Puma" width="80" height="32" loading="lazy" />
+            <img src={`${b}/images/brands/Hugo-Boss.svg`} alt="Hugo Boss" width="80" height="32" loading="lazy" />
+            <img src={`${b}/images/logos/IKEA_Logo_Black.svg`} alt="IKEA" width="60" height="32" loading="lazy" style="filter: invert(1); opacity: 0.7;" />
+            <img src={`${b}/images/brands/Farfetch.svg`} alt="Farfetch" width="80" height="32" loading="lazy" />
+            <img src={`${b}/images/logos/Wyze_Logo_Black.svg`} alt="Wyze" width="60" height="32" loading="lazy" style="filter: invert(1); opacity: 0.7;" />
+            <img src={`${b}/images/brands/Dyson.svg`} alt="Dyson" width="70" height="32" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         SECTION 5 — PLATFORM POWER: Feature Bento Grid
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="v8-bento relative overflow-hidden" style="padding-top: clamp(6rem, 10vw, 9rem); padding-bottom: clamp(6rem, 10vw, 9rem);">
+      <div class="container-pl relative z-10">
+        <div class="mx-auto mb-16 max-w-3xl text-center v8-reveal">
+          <div class="v8-section-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            Platform
+          </div>
+          <h2 class="v8-section-title">
+            One platform. <span class="v8-gradient-text">Every advantage.</span>
+          </h2>
+        </div>
+
+        <div class="v8-bento-grid">
+          <!-- Large card: AI-Powered (spans 2 cols) -->
+          <div class="v8-bento-card v8-bento-card--large v8-bento-card--dark v8-reveal">
+            <div class="v8-bento-card-mesh" aria-hidden="true"></div>
+            <div class="v8-bento-card-content">
+              <div class="v8-bento-badge" style="background: rgba(139,92,246,0.15); color: #C084FC;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z"/></svg>
+                AI-Powered
+              </div>
+              <h3 class="v8-bento-title v8-bento-title--light">Intelligent automation<br/>at every step</h3>
+              <div class="v8-bento-ai-agents">
+                <div class="v8-bento-agent">
+                  <div class="v8-bento-agent-icon" style="background: linear-gradient(135deg, #3D3AD3, #8B5CF6);">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  </div>
+                  <div>
+                    <div style="font-size: 12px; font-weight: 700; color: white;">Copilot</div>
+                    <div style="font-size: 10px; color: rgba(255,255,255,0.5);">AI assistant for CX teams</div>
+                  </div>
+                </div>
+                <div class="v8-bento-agent">
+                  <div class="v8-bento-agent-icon" style="background: linear-gradient(135deg, #035740, #0D7A5F);">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  </div>
+                  <div>
+                    <div style="font-size: 12px; font-weight: 700; color: white;">WISMO Agent</div>
+                    <div style="font-size: 10px; color: rgba(255,255,255,0.5);">Automated order inquiries</div>
+                  </div>
+                </div>
+                <div class="v8-bento-agent">
+                  <div class="v8-bento-agent-icon" style="background: linear-gradient(135deg, #D4A017, #FFC943);">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+                  </div>
+                  <div>
+                    <div style="font-size: 12px; font-weight: 700; color: white;">Insights Agent</div>
+                    <div style="font-size: 10px; color: rgba(255,255,255,0.5);">Predictive analytics</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Medium card: 175+ Carriers -->
+          <div class="v8-bento-card v8-reveal">
+            <div class="v8-bento-card-content">
+              <div class="v8-bento-badge" style="background: rgba(3,87,64,0.1); color: #035740;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                Global
+              </div>
+              <div class="v8-bento-big-number" style="background: linear-gradient(135deg, #035740, #0D7A5F); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">175+</div>
+              <h3 class="v8-bento-title">Carrier integrations</h3>
+              <!-- World map dots -->
+              <div class="v8-bento-worldmap" aria-hidden="true">
+                <svg viewBox="0 0 200 100" fill="none" style="width: 100%; opacity: 0.15;">
+                  <circle cx="40" cy="35" r="2" fill="#035740"/><circle cx="55" cy="28" r="1.5" fill="#035740"/><circle cx="70" cy="32" r="2" fill="#035740"/>
+                  <circle cx="95" cy="30" r="2.5" fill="#035740"/><circle cx="110" cy="25" r="1.5" fill="#035740"/><circle cx="105" cy="40" r="2" fill="#035740"/>
+                  <circle cx="125" cy="35" r="1.5" fill="#035740"/><circle cx="140" cy="30" r="2" fill="#035740"/><circle cx="155" cy="45" r="2.5" fill="#035740"/>
+                  <circle cx="160" cy="65" r="1.5" fill="#035740"/><circle cx="50" cy="55" r="1.5" fill="#035740"/><circle cx="65" cy="70" r="2" fill="#035740"/>
+                  <circle cx="90" cy="60" r="1.5" fill="#035740"/><circle cx="135" cy="55" r="2" fill="#035740"/><circle cx="170" cy="35" r="1.5" fill="#035740"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Medium card: Enterprise Security -->
+          <div class="v8-bento-card v8-reveal">
+            <div class="v8-bento-card-content">
+              <div class="v8-bento-badge" style="background: rgba(61,58,211,0.1); color: #3D3AD3;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Enterprise
+              </div>
+              <h3 class="v8-bento-title">Enterprise-grade security</h3>
+              <div class="v8-bento-badges-row">
+                <span class="v8-bento-security-badge">SOC 2</span>
+                <span class="v8-bento-security-badge">GDPR</span>
+                <span class="v8-bento-security-badge">ISO 27001</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Small card: 25+ Languages -->
+          <div class="v8-bento-card v8-bento-card--small v8-reveal">
+            <div class="v8-bento-card-content">
+              <div class="v8-bento-big-number" style="background: linear-gradient(135deg, #3D3AD3, #6B68FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-size: 2rem;">25+</div>
+              <h3 class="v8-bento-title" style="font-size: 14px;">Languages supported</h3>
+              <div class="v8-bento-flags" aria-hidden="true">
+                <span>🇺🇸</span><span>🇩🇪</span><span>🇫🇷</span><span>🇪🇸</span><span>🇯🇵</span><span>🇧🇷</span><span>🇮🇹</span><span>🇳🇱</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Small card: 99.9% Uptime -->
+          <div class="v8-bento-card v8-bento-card--small v8-reveal">
+            <div class="v8-bento-card-content">
+              <div class="v8-bento-big-number" style="background: linear-gradient(135deg, #035740, #0D7A5F); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-size: 2rem;">99.9%</div>
+              <h3 class="v8-bento-title" style="font-size: 14px;">Uptime SLA</h3>
+              <div class="v8-bento-uptime-bar" aria-hidden="true">
+                <div class="v8-bento-uptime-fill"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Large card: App Store (spans 2 cols) -->
+          <div class="v8-bento-card v8-bento-card--large v8-reveal">
+            <div class="v8-bento-card-content">
+              <div class="v8-bento-badge" style="background: rgba(61,58,211,0.1); color: #3D3AD3;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                App Store
+              </div>
+              <h3 class="v8-bento-title">Integrations that just work</h3>
+              <div class="v8-bento-integrations">
+                <div class="v8-bento-integration">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="#96bf48"><path d="M15.337 3.415c-.024-.018-.368-.028-.368-.028l-.26-1.32s-.042-.26-.288-.26h-3.68c-.044-.18-.096-.336-.096-.336-.216-.768-.6-1.356-1.284-1.356h-.06c-.024-.024-.048-.036-.072-.036-.516-.036-.912.18-1.2.48C7.537.799 7.213 1.523 7.045 2.41l-1.644.504s-.492.156-.516.168c-.288.096-.3.108-.336.384L3.745 10.73l8.197 1.54.663-8.855zM11.145 2.17l-.096.024V2.05c0-.24-.024-.432-.072-.6l.804.168c-.048.18-.168.36-.636.552zM10.305 1.43c.048.18.072.432.072.696v.072l-1.56.48c.3-1.152.852-1.512 1.488-1.248zM9.741.607c.048 0 .096.012.132.036.48.36.252 1.128.132 1.5L8.373 2.65C8.625 1.523 9.189.607 9.741.607z"/></svg>
+                  <span>Shopify</span>
+                </div>
+                <div class="v8-bento-integration">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="#000"><circle cx="12" cy="12" r="10" fill="none" stroke="#000" stroke-width="1.5"/><path d="M8 12l3 3 5-5" fill="none" stroke="#000" stroke-width="2"/></svg>
+                  <span>Klaviyo</span>
+                </div>
+                <div class="v8-bento-integration">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect width="20" height="20" x="2" y="2" rx="4" fill="#F7D046"/><path d="M8 8h8v8H8z" fill="#1A1A1A"/></svg>
+                  <span>Gorgias</span>
+                </div>
+                <div class="v8-bento-integration">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect width="20" height="20" x="2" y="2" rx="4" fill="#7B68EE"/><path d="M7 12h10M12 7v10" stroke="white" stroke-width="2"/></svg>
+                  <span>Salesforce</span>
+                </div>
+                <div class="v8-bento-integration">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect width="20" height="20" x="2" y="2" rx="4" fill="#FF6600"/><path d="M7 10l5 5 5-5" stroke="white" stroke-width="2" fill="none"/></svg>
+                  <span>Zendesk</span>
+                </div>
+                <div class="v8-bento-integration">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect width="20" height="20" x="2" y="2" rx="4" fill="#0052CC"/><path d="M8 7h8v2H8zM8 11h8v2H8zM8 15h5v2H8z" fill="white"/></svg>
+                  <span>SAP</span>
+                </div>
+                <div class="v8-bento-integration">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect width="20" height="20" x="2" y="2" rx="4" fill="#5C6BC0"/><path d="M12 6v12M6 12h12" stroke="white" stroke-width="2"/></svg>
+                  <span>Magento</span>
+                </div>
+                <div class="v8-bento-integration">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect width="20" height="20" x="2" y="2" rx="4" fill="#E91E63"/><circle cx="12" cy="12" r="4" fill="white"/></svg>
+                  <span>Attentive</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         SECTION 6 — CTA: Stop the Leak
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="v8-cta relative overflow-hidden" style="padding-top: clamp(6rem, 10vw, 9rem); padding-bottom: clamp(6rem, 10vw, 9rem);">
+      <div class="v8-cta-bg" aria-hidden="true"></div>
+      <div class="v8-cta-orb v8-cta-orb--1" aria-hidden="true"></div>
+      <div class="v8-cta-orb v8-cta-orb--2" aria-hidden="true"></div>
+      <div class="container-pl relative z-10">
+        <div class="v8-cta-grid">
+          <!-- Left: messaging -->
+          <div class="v8-cta-left v8-reveal">
+            <h2 class="v8-cta-title">
+              Stop the leak.<br/>
+              <span class="v8-gradient-text">Start recovering.</span>
+            </h2>
+            <p class="v8-cta-desc">
+              Every day you wait costs your brand thousands in lost revenue, unnecessary support costs, and missed customer relationships.
+            </p>
+            <div class="v8-cta-stats">
+              <div class="v8-cta-stat">
+                <span class="v8-cta-stat-value">$2,847</span>
+                <span class="v8-cta-stat-label">lost per day on average</span>
+              </div>
+              <div class="v8-cta-stat">
+                <span class="v8-cta-stat-value">14 days</span>
+                <span class="v8-cta-stat-label">average time to go live</span>
+              </div>
+              <div class="v8-cta-stat">
+                <span class="v8-cta-stat-value">3 months</span>
+                <span class="v8-cta-stat-label">typical time to full ROI</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: form -->
+          <div class="v8-cta-right v8-reveal">
+            <div class="v8-cta-form-wrapper">
+              <div class="v8-cta-form-glow" aria-hidden="true"></div>
+              <h3 class="v8-cta-form-title">Calculate your ROI</h3>
+              <form class="v8-cta-form" onsubmit="event.preventDefault();">
+                <div class="v8-form-field">
+                  <label for="v8-name" class="v8-form-label">Full name</label>
+                  <input type="text" id="v8-name" name="name" class="v8-form-input" placeholder="Jane Smith" required />
+                </div>
+                <div class="v8-form-field">
+                  <label for="v8-email" class="v8-form-label">Work email</label>
+                  <input type="email" id="v8-email" name="email" class="v8-form-input" placeholder="jane@company.com" required />
+                </div>
+                <div class="v8-form-field">
+                  <label for="v8-company" class="v8-form-label">Company</label>
+                  <input type="text" id="v8-company" name="company" class="v8-form-input" placeholder="Acme Inc." required />
+                </div>
+                <div class="v8-form-field">
+                  <label for="v8-shipments" class="v8-form-label">Monthly shipments</label>
+                  <select id="v8-shipments" name="shipments" class="v8-form-input v8-form-select" required>
+                    <option value="" disabled selected>Select range...</option>
+                    <option value="10k">Under 10,000</option>
+                    <option value="50k">10,000 - 50,000</option>
+                    <option value="100k">50,000 - 100,000</option>
+                    <option value="500k">100,000 - 500,000</option>
+                    <option value="1m">500,000 - 1,000,000</option>
+                    <option value="1m+">1,000,000+</option>
+                  </select>
+                </div>
+                <button type="submit" class="v8-cta-submit">
+                  Calculate my ROI
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+              </form>
+              <p class="v8-cta-alt">
+                Or <a href={`${b}/live-demo/`} class="v8-cta-alt-link">book a demo directly</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<!-- ════════════════════════════════════════════════════════════════
+     STYLES
+     ════════════════════════════════════════════════════════════════ -->
+<style>
+  /* ── DESIGN TOKENS ─────────────────────────────── */
+  :root {
+    --v8-purple: #3D3AD3;
+    --v8-green: #035740;
+    --v8-yellow: #FFC943;
+    --v8-red: #F4373D;
+    --v8-ink: #0f172a;
+    --v8-surface: #fafbfc;
+  }
+
+  /* ── GRADIENT TEXT UTILITIES ─────────────────────── */
+  .v8-gradient-text {
+    background: linear-gradient(135deg, #3D3AD3 0%, #6B68FF 50%, #8B5CF6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .v8-gradient-text-green {
+    background: linear-gradient(135deg, #035740 0%, #0D7A5F 50%, #10B981 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .v8-gradient-text-warm {
+    background: linear-gradient(135deg, #D4A017 0%, #FFC943 50%, #F59E0B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ── SECTION SHARED ─────────────────────────────── */
+  .v8-section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--v8-purple);
+    background: rgba(61,58,211,0.06);
+    margin-bottom: 1.25rem;
+  }
+  .v8-section-badge--dark {
+    color: #C084FC;
+    background: rgba(139,92,246,0.12);
+  }
+  .v8-section-title {
+    font-size: clamp(2.25rem, 4vw + 0.5rem, 3.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--v8-ink);
+    margin-bottom: 1rem;
+  }
+  .v8-section-title--light { color: white; }
+  .v8-section-desc {
+    font-size: clamp(1rem, 0.5vw + 0.875rem, 1.125rem);
+    line-height: 1.6;
+    color: var(--ink-secondary);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .v8-section-desc--light { color: rgba(255,255,255,0.6); }
+
+  /* ── SCROLL REVEAL ANIMATION ────────────────────── */
+  .v8-reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1);
+  }
+  .v8-reveal.v8-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ════════════════════════════════════════════════════
+     SECTION 1 — HERO SPLIT
+     ════════════════════════════════════════════════════ */
+  .v8-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .v8-hero-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    position: relative;
+  }
+  @media (max-width: 900px) {
+    .v8-hero-split {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+  }
+
+  /* Dark half */
+  .v8-hero-dark {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .v8-hero-dark-bg {
+    position: absolute;
+    inset: 0;
+    background: var(--v8-ink);
+  }
+  .v8-hero-dark-mesh {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 80%, rgba(244,55,61,0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(61,58,211,0.06) 0%, transparent 50%);
+  }
+
+  /* Light half */
+  .v8-hero-light {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .v8-hero-light-bg {
+    position: absolute;
+    inset: 0;
+    background: var(--v8-surface);
+  }
+  .v8-hero-light-dots {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.04) 1px, transparent 0);
+    background-size: 24px 24px;
+  }
+
+  /* Diagonal divider */
+  .v8-hero-divider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 80px;
+    transform: translateX(-50%);
+    z-index: 5;
+    overflow: hidden;
+  }
+  .v8-hero-divider-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #3D3AD3, #035740, #3D3AD3);
+    clip-path: polygon(0 0, 100% 0, 60% 100%, 40% 100%);
+    opacity: 0.8;
+    animation: v8-divider-shift 6s ease-in-out infinite alternate;
+  }
+  @keyframes v8-divider-shift {
+    0% { opacity: 0.6; filter: hue-rotate(0deg); }
+    100% { opacity: 1; filter: hue-rotate(15deg); }
+  }
+  @media (max-width: 900px) {
+    .v8-hero-divider {
+      top: auto;
+      bottom: auto;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 6px;
+      position: relative;
+      transform: none;
+    }
+    .v8-hero-divider-gradient {
+      clip-path: none;
+    }
+  }
+
+  /* Hero content */
+  .v8-hero-content {
+    position: relative;
+    z-index: 2;
+    padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 4vw, 4rem);
+    max-width: 560px;
+  }
+  .v8-hero-content--left { padding-right: clamp(2rem, 5vw, 5rem); }
+  .v8-hero-content--right { padding-left: clamp(2rem, 5vw, 5rem); }
+
+  .v8-hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+  }
+  .v8-hero-label--red {
+    background: rgba(244,55,61,0.12);
+    color: #F4373D;
+  }
+  .v8-hero-label--green {
+    background: rgba(3,87,64,0.08);
+    color: #035740;
+  }
+
+  .v8-hero-title {
+    font-size: clamp(2rem, 3.5vw + 0.5rem, 3rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 2rem;
+  }
+  .v8-hero-title--light { color: white; }
+  .v8-hero-title--dark { color: var(--v8-ink); }
+
+  .v8-text-leak {
+    color: #F4373D;
+    position: relative;
+  }
+  .v8-text-leak::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #F4373D, transparent);
+    border-radius: 2px;
+  }
+  .v8-text-recover {
+    color: #035740;
+    position: relative;
+  }
+  .v8-text-recover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #035740, #10B981);
+    border-radius: 2px;
+  }
+
+  /* Counters */
+  .v8-counter-block {
+    padding: 1.25rem 1.5rem;
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+  }
+  .v8-counter-block--red {
+    background: rgba(244,55,61,0.06);
+    border: 1px solid rgba(244,55,61,0.12);
+  }
+  .v8-counter-block--green {
+    background: rgba(3,87,64,0.04);
+    border: 1px solid rgba(3,87,64,0.1);
+  }
+  .v8-counter-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 0.5rem;
+  }
+  .v8-counter-label--dark {
+    color: var(--ink-secondary);
+  }
+  .v8-counter-value {
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+  }
+  .v8-counter-value--red { color: #F4373D; }
+  .v8-counter-value--green { color: #035740; }
+
+  .v8-hero-sub {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .v8-hero-sub--light { color: rgba(255,255,255,0.45); }
+  .v8-hero-sub--dark { color: var(--ink-secondary); }
+
+  /* Scroll CTA */
+  .v8-scroll-cta {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: var(--v8-purple);
+    font-size: 13px;
+    font-weight: 600;
+    animation: v8-bounce 2s ease-in-out infinite;
+  }
+  .v8-scroll-cta-text {
+    background: white;
+    padding: 8px 20px;
+    border-radius: 100px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+  @keyframes v8-bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-8px); }
+  }
+
+  /* Floating orbs */
+  .v8-orb {
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 1;
+  }
+  .v8-orb--1 {
+    width: 400px;
+    height: 400px;
+    background: rgba(61,58,211,0.08);
+    top: -10%;
+    left: -5%;
+    animation: v8-float 20s ease-in-out infinite;
+  }
+  .v8-orb--2 {
+    width: 300px;
+    height: 300px;
+    background: rgba(3,87,64,0.06);
+    bottom: -5%;
+    right: -5%;
+    animation: v8-float 25s ease-in-out infinite reverse;
+  }
+  .v8-orb--3 {
+    width: 200px;
+    height: 200px;
+    background: rgba(255,201,67,0.06);
+    top: 30%;
+    right: 20%;
+    animation: v8-float 18s ease-in-out infinite;
+  }
+  @keyframes v8-float {
+    0%, 100% { transform: translate(0, 0); }
+    33% { transform: translate(20px, -30px); }
+    66% { transform: translate(-15px, 15px); }
+  }
+
+  /* ════════════════════════════════════════════════════
+     SECTION 2 — THE MATH
+     ════════════════════════════════════════════════════ */
+  .v8-math {
+    background: var(--v8-surface);
+  }
+  .v8-math-bg {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.03) 1px, transparent 0);
+    background-size: 32px 32px;
+  }
+
+  .v8-equation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  @media (max-width: 900px) {
+    .v8-equation-grid { grid-template-columns: 1fr; }
+  }
+
+  .v8-equation-card {
+    position: relative;
+    border-radius: 20px;
+    padding: 2px;
+    background: linear-gradient(135deg, var(--card-accent), rgba(255,255,255,0.1));
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .v8-equation-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px var(--card-glow);
+  }
+  .v8-equation-card-inner {
+    background: white;
+    border-radius: 18px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+  .v8-equation-card-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 0%, var(--card-glow), transparent 60%);
+    pointer-events: none;
+  }
+  .v8-equation-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .v8-equation-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .v8-equation-pct {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    color: var(--v8-ink);
+  }
+  .v8-equation-pct-sign {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--v8-ink);
+    display: inline;
+  }
+  .v8-equation-input-label {
+    font-size: 13px;
+    color: var(--ink-secondary);
+    margin-top: 0.25rem;
+  }
+  .v8-equation-equals {
+    color: var(--ink-muted);
+  }
+  .v8-equation-output {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .v8-equation-result {
+    font-size: clamp(2rem, 3vw, 2.75rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+  .v8-equation-output-label {
+    font-size: 13px;
+    color: var(--ink-secondary);
+    margin-top: 0.25rem;
+  }
+
+  /* Total impact bar */
+  .v8-total-bar {
+    border-radius: 20px;
+    padding: 2px;
+    background: linear-gradient(90deg, #3D3AD3, #035740, #FFC943);
+    background-size: 200% 100%;
+    animation: v8-gradient-slide 4s ease infinite;
+  }
+  @keyframes v8-gradient-slide {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  .v8-total-bar-inner {
+    background: var(--v8-ink);
+    border-radius: 18px;
+    padding: 2rem 2.5rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .v8-total-bar-fill {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(61,58,211,0.15), rgba(3,87,64,0.15), rgba(255,201,67,0.1));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 1.5s cubic-bezier(0.22,1,0.36,1);
+  }
+  .v8-total-bar.v8-visible .v8-total-bar-fill {
+    transform: scaleX(1);
+  }
+  .v8-total-bar-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
+  .v8-total-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 0.5rem;
+  }
+  .v8-total-value {
+    display: block;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    background: linear-gradient(90deg, #6B68FF, #10B981, #FFC943);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .v8-total-sub {
+    display: block;
+    font-size: 13px;
+    color: rgba(255,255,255,0.45);
+    margin-top: 0.25rem;
+  }
+
+  /* ════════════════════════════════════════════════════
+     SECTION 3 — BEFORE / AFTER
+     ════════════════════════════════════════════════════ */
+  .v8-compare {
+    background: white;
+  }
+  .v8-comparison-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .v8-comparison-number {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    background: linear-gradient(135deg, #3D3AD3, #8B5CF6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    opacity: 0.25;
+  }
+  .v8-comparison-title {
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    font-weight: 700;
+    color: var(--v8-ink);
+    letter-spacing: -0.02em;
+  }
+
+  .v8-comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 2rem;
+    align-items: stretch;
+  }
+  @media (max-width: 900px) {
+    .v8-comparison-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  /* Before card */
+  .v8-before-label, .v8-after-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+  }
+  .v8-before-label {
+    background: rgba(244,55,61,0.06);
+    color: #F4373D;
+  }
+  .v8-after-label {
+    background: rgba(3,87,64,0.06);
+    color: #035740;
+  }
+
+  .v8-before-frame {
+    position: relative;
+    background: #f8f8f8;
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
+    overflow: hidden;
+    padding: 0;
+    min-height: 280px;
+    filter: saturate(0.3);
+    transition: filter 0.3s ease;
+  }
+  .v8-before-frame:hover {
+    filter: saturate(0.5);
+  }
+  .v8-before-crack {
+    position: absolute;
+    z-index: 3;
+    pointer-events: none;
+  }
+  .v8-before-crack--1 {
+    top: -5px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-left: 2px solid rgba(0,0,0,0.08);
+    border-bottom: 2px solid rgba(0,0,0,0.05);
+    transform: rotate(15deg);
+  }
+  .v8-before-crack--2 {
+    bottom: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    border-right: 2px solid rgba(0,0,0,0.06);
+    border-top: 2px solid rgba(0,0,0,0.04);
+    transform: rotate(-10deg);
+  }
+
+  .v8-after-frame {
+    position: relative;
+    background: white;
+    border: 1px solid rgba(3,87,64,0.15);
+    border-radius: 16px;
+    overflow: hidden;
+    padding: 0;
+    min-height: 280px;
+    box-shadow: 0 8px 40px rgba(3,87,64,0.08);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  .v8-after-frame:hover {
+    box-shadow: 0 12px 50px rgba(3,87,64,0.12);
+    transform: translateY(-2px);
+  }
+  .v8-after-glow {
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    box-shadow: inset 0 0 60px rgba(3,87,64,0.03);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  /* Metric between */
+  .v8-comparison-metric {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 120px;
+  }
+  .v8-comparison-metric-value {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, #3D3AD3, #035740);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+  }
+  .v8-comparison-metric-label {
+    font-size: 12px;
+    color: var(--ink-secondary);
+    margin-top: 0.25rem;
+    line-height: 1.4;
+  }
+  .v8-comparison-metric-vs {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--ink-muted);
+    margin-top: 0.5rem;
+    padding: 4px 10px;
+    border-radius: 100px;
+    background: rgba(0,0,0,0.04);
+  }
+
+  /* Carrier mockup */
+  .v8-mockup-carrier {
+    padding: 16px;
+  }
+  .v8-mockup-carrier-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 12px;
+  }
+  .v8-mockup-carrier-logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    background: #ddd;
+  }
+  .v8-mockup-carrier-body {
+    padding: 4px 0;
+  }
+  .v8-mockup-carrier-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 4px;
+  }
+  .v8-mockup-carrier-step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+    color: #bbb;
+  }
+  .v8-mockup-carrier-step--done { color: #999; }
+  .v8-mockup-carrier-step--active { color: #666; font-weight: 600; }
+  .v8-mockup-carrier-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ddd;
+    flex-shrink: 0;
+  }
+  .v8-mockup-carrier-step--done .v8-mockup-carrier-dot { background: #bbb; }
+  .v8-mockup-carrier-step--active .v8-mockup-carrier-dot { background: #999; }
+
+  /* OSP mockup */
+  .v8-mockup-osp {
+    display: flex;
+    flex-direction: column;
+  }
+  .v8-mockup-osp-banner {
+    background: linear-gradient(90deg, #3D3AD3, #6B68FF);
+    padding: 8px;
+    text-align: center;
+  }
+  .v8-mockup-osp-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .v8-mockup-osp-logo {
+    width: 60px;
+    height: 16px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, #3D3AD3, #6B68FF);
+  }
+  .v8-mockup-osp-nav {
+    display: flex;
+    gap: 12px;
+    font-size: 9px;
+    color: #999;
+  }
+  .v8-mockup-osp-body {
+    padding: 16px;
+  }
+  .v8-mockup-osp-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .v8-mockup-osp-status-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: rgba(3,87,64,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .v8-mockup-osp-progress {
+    height: 6px;
+    border-radius: 3px;
+    background: #f0f0f0;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  .v8-mockup-osp-progress-fill {
+    height: 100%;
+    border-radius: 3px;
+    background: linear-gradient(90deg, #035740, #10B981);
+  }
+  .v8-mockup-osp-map {
+    height: 60px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #e8f4f0, #dbeafe);
+    margin-bottom: 12px;
+    position: relative;
+    overflow: hidden;
+  }
+  .v8-mockup-osp-map::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #035740;
+    box-shadow: 0 0 0 3px rgba(3,87,64,0.2);
+  }
+  .v8-mockup-osp-cta {
+    background: linear-gradient(90deg, #3D3AD3, #6B68FF);
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  /* Email mockup */
+  .v8-mockup-email {
+    padding: 16px;
+  }
+  .v8-mockup-email-header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 12px;
+  }
+  .v8-mockup-email-body {
+    padding: 4px 0;
+  }
+
+  /* Returns mockup */
+  .v8-mockup-returns {
+    display: flex;
+    flex-direction: column;
+  }
+  .v8-mockup-returns-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .v8-mockup-returns-body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .v8-mockup-returns-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    transition: border-color 0.2s;
+  }
+  .v8-mockup-returns-option--highlight {
+    border-color: #035740;
+    background: rgba(3,87,64,0.02);
+  }
+  .v8-mockup-returns-radio {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    flex-shrink: 0;
+  }
+  .v8-mockup-returns-radio--active {
+    border-color: #035740;
+    background: #035740;
+    box-shadow: inset 0 0 0 3px white;
+  }
+  .v8-mockup-returns-badge {
+    font-size: 8px;
+    font-weight: 700;
+    color: #035740;
+    background: rgba(3,87,64,0.08);
+    padding: 2px 8px;
+    border-radius: 100px;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+  .v8-mockup-returns-retention {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(255,201,67,0.08), rgba(255,201,67,0.02));
+    border: 1px dashed rgba(255,201,67,0.3);
+    margin-top: 4px;
+  }
+
+  /* Single email mockup */
+  .v8-mockup-single-email {
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .v8-mockup-single-email-icon {
+    margin-bottom: 12px;
+  }
+
+  /* Timeline mockup */
+  .v8-mockup-timeline {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .v8-mockup-timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 6px 0;
+    position: relative;
+  }
+  .v8-mockup-timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 18px;
+    bottom: -6px;
+    width: 1px;
+    background: #e5e5e5;
+  }
+  .v8-mockup-timeline-item:last-child::before {
+    display: none;
+  }
+  .v8-mockup-timeline-item--done::before {
+    background: #035740;
+  }
+  .v8-mockup-timeline-dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: 2px solid #e5e5e5;
+    background: white;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .v8-mockup-timeline-item--done .v8-mockup-timeline-dot {
+    background: #035740;
+    border-color: #035740;
+  }
+  .v8-mockup-timeline-item--active .v8-mockup-timeline-dot {
+    border-color: #3D3AD3;
+    background: #3D3AD3;
+    box-shadow: 0 0 0 3px rgba(61,58,211,0.15);
+  }
+  .v8-mockup-timeline-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .v8-mockup-timeline-title {
+    font-size: 10px;
+    font-weight: 700;
+    color: #0f172a;
+  }
+  .v8-mockup-timeline-desc {
+    font-size: 9px;
+    color: #94a3b8;
+  }
+  .v8-mockup-timeline-item--done .v8-mockup-timeline-title { color: #035740; }
+  .v8-mockup-timeline-item--active .v8-mockup-timeline-title { color: #3D3AD3; }
+
+  /* ════════════════════════════════════════════════════
+     SECTION 4 — CUSTOMER RESULTS
+     ════════════════════════════════════════════════════ */
+  .v8-results {
+    background: var(--v8-ink);
+  }
+  .v8-results-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #0f172a, #1a1f3a, #0f172a);
+  }
+  .v8-results-mesh {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 20%, rgba(61,58,211,0.08) 0%, transparent 40%),
+      radial-gradient(ellipse at 70% 80%, rgba(3,87,64,0.06) 0%, transparent 40%);
+  }
+
+  .v8-results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 3rem;
+  }
+  @media (max-width: 900px) {
+    .v8-results-grid { grid-template-columns: 1fr; }
+  }
+  @media (min-width: 901px) and (max-width: 1200px) {
+    .v8-results-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .v8-result-card {
+    position: relative;
+    border-radius: 20px;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .v8-result-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  }
+  .v8-result-card-inner {
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 19px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .v8-result-card-border {
+    position: absolute;
+    bottom: 0;
+    left: 1.5rem;
+    right: 1.5rem;
+    height: 2px;
+    background: var(--result-accent);
+    border-radius: 2px;
+    opacity: 0.5;
+  }
+  .v8-result-category {
+    font-size: 11px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .v8-result-metric {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin: 0.75rem 0 0.5rem;
+  }
+  .v8-result-what {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 1rem;
+  }
+  .v8-result-quote {
+    font-size: 13px;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.35);
+    font-style: italic;
+    margin: 0;
+  }
+
+  /* Brand strip */
+  .v8-brand-strip {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .v8-brand-strip-label {
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 1.5rem;
+  }
+  .v8-brand-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    opacity: 0.5;
+  }
+  .v8-brand-logos img {
+    height: 24px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.6;
+    transition: opacity 0.3s;
+  }
+  .v8-brand-logos img:hover { opacity: 1; }
+
+  /* ════════════════════════════════════════════════════
+     SECTION 5 — BENTO GRID
+     ════════════════════════════════════════════════════ */
+  .v8-bento { background: var(--v8-surface); }
+
+  .v8-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 1.25rem;
+  }
+  .v8-bento-card {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .v8-bento-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.06);
+  }
+  .v8-bento-card--large {
+    grid-column: span 2;
+  }
+  .v8-bento-card--small {
+    grid-column: span 1;
+  }
+  .v8-bento-card--dark {
+    background: var(--v8-ink);
+    border-color: rgba(255,255,255,0.06);
+    position: relative;
+  }
+  .v8-bento-card-mesh {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 80%, rgba(139,92,246,0.1) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(61,58,211,0.08) 0%, transparent 50%);
+    animation: v8-mesh-move 10s ease-in-out infinite alternate;
+  }
+  @keyframes v8-mesh-move {
+    0% { opacity: 0.6; }
+    100% { opacity: 1; }
+  }
+  .v8-bento-card-content {
+    padding: 1.75rem;
+    position: relative;
+    z-index: 1;
+  }
+  @media (max-width: 900px) {
+    .v8-bento-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .v8-bento-card--large {
+      grid-column: span 2;
+    }
+  }
+  @media (max-width: 600px) {
+    .v8-bento-grid {
+      grid-template-columns: 1fr;
+    }
+    .v8-bento-card--large,
+    .v8-bento-card--small {
+      grid-column: span 1;
+    }
+  }
+
+  .v8-bento-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+  }
+  .v8-bento-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--v8-ink);
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+  .v8-bento-title--light { color: white; }
+  .v8-bento-big-number {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .v8-bento-ai-agents {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .v8-bento-agent {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: background 0.2s;
+  }
+  .v8-bento-agent:hover {
+    background: rgba(255,255,255,0.08);
+  }
+  .v8-bento-agent-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .v8-bento-badges-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .v8-bento-security-badge {
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--v8-purple);
+    background: rgba(61,58,211,0.06);
+    border: 1px solid rgba(61,58,211,0.1);
+  }
+
+  .v8-bento-flags {
+    display: flex;
+    gap: 6px;
+    font-size: 16px;
+    margin-top: 0.5rem;
+  }
+
+  .v8-bento-uptime-bar {
+    height: 8px;
+    border-radius: 4px;
+    background: #f0f0f0;
+    overflow: hidden;
+    margin-top: 0.75rem;
+  }
+  .v8-bento-uptime-fill {
+    height: 100%;
+    width: 99.9%;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #035740, #10B981);
+  }
+
+  .v8-bento-integrations {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+  @media (max-width: 600px) {
+    .v8-bento-integrations { grid-template-columns: repeat(2, 1fr); }
+  }
+  .v8-bento-integration {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: #f8f9fa;
+    border: 1px solid #f0f0f0;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--v8-ink);
+    transition: background 0.2s;
+  }
+  .v8-bento-integration:hover { background: #f0f1f3; }
+
+  .v8-bento-worldmap {
+    margin-top: 0.5rem;
+  }
+
+  /* ════════════════════════════════════════════════════
+     SECTION 6 — CTA
+     ════════════════════════════════════════════════════ */
+  .v8-cta {
+    background: var(--v8-ink);
+  }
+  .v8-cta-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(61,58,211,0.15), rgba(3,87,64,0.1), rgba(61,58,211,0.15));
+    background-size: 400% 400%;
+    animation: v8-cta-gradient 8s ease infinite;
+  }
+  @keyframes v8-cta-gradient {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  .v8-cta-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    pointer-events: none;
+  }
+  .v8-cta-orb--1 {
+    width: 500px;
+    height: 500px;
+    background: rgba(61,58,211,0.12);
+    top: -200px;
+    right: -100px;
+    animation: v8-float 20s ease-in-out infinite;
+  }
+  .v8-cta-orb--2 {
+    width: 400px;
+    height: 400px;
+    background: rgba(3,87,64,0.1);
+    bottom: -150px;
+    left: -100px;
+    animation: v8-float 25s ease-in-out infinite reverse;
+  }
+
+  .v8-cta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(3rem, 6vw, 5rem);
+    align-items: center;
+  }
+  @media (max-width: 900px) {
+    .v8-cta-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+
+  .v8-cta-title {
+    font-size: clamp(2rem, 3.5vw + 0.5rem, 3.25rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: white;
+    margin-bottom: 1.25rem;
+  }
+  .v8-cta-desc {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 2rem;
+    max-width: 480px;
+  }
+  .v8-cta-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .v8-cta-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .v8-cta-stat-value {
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    letter-spacing: -0.02em;
+  }
+  .v8-cta-stat-label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* Form */
+  .v8-cta-form-wrapper {
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 24px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .v8-cta-form-glow {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 26px;
+    background: linear-gradient(135deg, rgba(61,58,211,0.3), rgba(3,87,64,0.2), rgba(255,201,67,0.15));
+    background-size: 300% 300%;
+    animation: v8-cta-gradient 6s ease infinite;
+    z-index: -1;
+    filter: blur(1px);
+  }
+  .v8-cta-form-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+  }
+  .v8-cta-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .v8-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .v8-form-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.5);
+  }
+  .v8-form-input {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 14px;
+    color: white;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+    font-family: inherit;
+  }
+  .v8-form-input::placeholder { color: rgba(255,255,255,0.25); }
+  .v8-form-input:focus {
+    border-color: rgba(61,58,211,0.5);
+    background: rgba(255,255,255,0.08);
+  }
+  .v8-form-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.4)' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 36px;
+    cursor: pointer;
+  }
+  .v8-form-select option {
+    background: #1e293b;
+    color: white;
+  }
+  .v8-cta-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 24px;
+    border-radius: 12px;
+    border: none;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    background: linear-gradient(135deg, #3D3AD3, #6B68FF);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(61,58,211,0.3), 0 0 0 0 rgba(61,58,211,0);
+    margin-top: 0.5rem;
+    font-family: inherit;
+  }
+  .v8-cta-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(61,58,211,0.4), 0 0 0 4px rgba(61,58,211,0.08);
+  }
+  .v8-cta-submit:active {
+    transform: translateY(0) scale(0.98);
+  }
+  .v8-cta-alt {
+    text-align: center;
+    font-size: 13px;
+    color: rgba(255,255,255,0.4);
+    margin-top: 1.25rem;
+  }
+  .v8-cta-alt-link {
+    color: rgba(255,255,255,0.7);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s;
+  }
+  .v8-cta-alt-link:hover { color: white; }
+
+  /* ── PREFERS REDUCED MOTION ─────────────────────── */
+  @media (prefers-reduced-motion: reduce) {
+    .v8-orb,
+    .v8-cta-orb,
+    .v8-hero-divider-gradient,
+    .v8-bento-card-mesh,
+    .v8-cta-bg,
+    .v8-total-bar,
+    .v8-scroll-cta {
+      animation: none !important;
+    }
+    .v8-reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+    .v8-total-bar-fill {
+      transform: scaleX(1);
+      transition: none;
+    }
+    .v8-equation-card,
+    .v8-result-card,
+    .v8-bento-card,
+    .v8-after-frame,
+    .v8-before-frame {
+      transition: none;
+    }
+  }
+</style>
+
+<!-- ════════════════════════════════════════════════════════════════
+     SCRIPTS
+     ════════════════════════════════════════════════════════════════ -->
+<script>
+  // ── Scroll reveal ──────────────────────────────
+  function initScrollReveal() {
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) {
+      document.querySelectorAll('.v8-reveal').forEach(el => el.classList.add('v8-visible'));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            const el = entry.target as HTMLElement;
+            // Stagger siblings
+            const parent = el.parentElement;
+            if (parent) {
+              const siblings = Array.from(parent.querySelectorAll(':scope > .v8-reveal'));
+              const idx = siblings.indexOf(el);
+              el.style.transitionDelay = `${idx * 80}ms`;
+            }
+            el.classList.add('v8-visible');
+            observer.unobserve(el);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -60px 0px' }
+    );
+
+    document.querySelectorAll('.v8-reveal').forEach(el => observer.observe(el));
+  }
+
+  // ── Animated counters (hero) ──────────────────
+  function initCounters() {
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    document.querySelectorAll<HTMLElement>('[data-target]').forEach(el => {
+      const target = parseInt(el.dataset.target || '0', 10);
+      const prefix = el.dataset.prefix || '';
+      const suffix = el.dataset.suffix || '';
+
+      if (prefersReduced) {
+        el.textContent = `${prefix}${target.toLocaleString()}${suffix}`;
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            observer.unobserve(el);
+            animateValue(el, 0, target, 2000, prefix, suffix);
+          }
+        },
+        { threshold: 0.5 }
+      );
+      observer.observe(el);
+    });
+  }
+
+  function animateValue(el: HTMLElement, start: number, end: number, duration: number, prefix: string, suffix: string) {
+    const startTime = performance.now();
+    function update(currentTime: number) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      // Ease out cubic
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(start + (end - start) * eased);
+      el.textContent = `${prefix}${current.toLocaleString()}${suffix}`;
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      }
+    }
+    requestAnimationFrame(update);
+  }
+
+  // ── Count-up for equation section ─────────────
+  function initCountUp() {
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    document.querySelectorAll<HTMLElement>('.v8-count-up').forEach(el => {
+      const target = parseInt(el.dataset.target || '0', 10);
+      if (prefersReduced) {
+        el.textContent = target.toString();
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            observer.unobserve(el);
+            animateSimple(el, 0, target, 1500);
+          }
+        },
+        { threshold: 0.5 }
+      );
+      observer.observe(el);
+    });
+  }
+
+  function animateSimple(el: HTMLElement, start: number, end: number, duration: number) {
+    const startTime = performance.now();
+    function update(currentTime: number) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(start + (end - start) * eased);
+      el.textContent = current.toString();
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      }
+    }
+    requestAnimationFrame(update);
+  }
+
+  // Initialize all
+  document.addEventListener('DOMContentLoaded', () => {
+    initScrollReveal();
+    initCounters();
+    initCountUp();
+  });
+
+  // Also handle Astro page transitions
+  document.addEventListener('astro:page-load', () => {
+    initScrollReveal();
+    initCounters();
+    initCountUp();
+  });
+</script>

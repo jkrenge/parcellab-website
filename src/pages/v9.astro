@@ -1,0 +1,2901 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/globals.css";
+import { Header } from "../components/Header";
+import Footer from "../components/Footer.astro";
+const b = import.meta.env.BASE_URL;
+---
+
+<Layout title="parcelLab — The Journey: Every Order Tells a Story">
+  <Header client:load />
+  <main class="v9-main" id="v9Main">
+
+    <!-- ═══════════════════════════════════════════════════════════
+         PROGRESS INDICATOR — right-side chapter dots
+         ═══════════════════════════════════════════════════════════ -->
+    <nav class="v9-progress" id="v9Progress" aria-label="Chapter navigation">
+      <div class="v9-progress__track">
+        <button class="v9-progress__dot active" data-chapter="1" aria-label="Chapter 1: The Promise"><span class="v9-progress__label">Promise</span></button>
+        <button class="v9-progress__dot" data-chapter="2" aria-label="Chapter 2: Confirmation"><span class="v9-progress__label">Confirm</span></button>
+        <button class="v9-progress__dot" data-chapter="3" aria-label="Chapter 3: Tracking"><span class="v9-progress__label">Track</span></button>
+        <button class="v9-progress__dot" data-chapter="4" aria-label="Chapter 4: Delivery"><span class="v9-progress__label">Deliver</span></button>
+        <button class="v9-progress__dot" data-chapter="5" aria-label="Chapter 5: Returns"><span class="v9-progress__label">Return</span></button>
+        <button class="v9-progress__dot" data-chapter="6" aria-label="Chapter 6: Re-engage"><span class="v9-progress__label">Re-engage</span></button>
+        <button class="v9-progress__dot" data-chapter="7" aria-label="Chapter 7: Platform"><span class="v9-progress__label">Platform</span></button>
+        <button class="v9-progress__dot" data-chapter="8" aria-label="Chapter 8: Start"><span class="v9-progress__label">Start</span></button>
+      </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         CHAPTER 1 — "It starts with a promise" — CHECKOUT
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="v9-chapter v9-ch1" id="chapter1" data-chapter="1">
+      <div class="v9-ch__scroll-space">
+        <div class="v9-ch__sticky">
+          <!-- Background orb -->
+          <div class="v9-orb v9-orb--purple-1" aria-hidden="true"></div>
+          <div class="v9-orb v9-orb--purple-2" aria-hidden="true"></div>
+
+          <div class="container-pl relative z-10">
+            <div class="v9-ch1__layout">
+              <!-- Left: narrative text -->
+              <div class="v9-ch1__text">
+                <span class="v9-chapter-label">Chapter 1 &mdash; Convert</span>
+                <h2 class="v9-ch1__headline v9-reveal" id="ch1Headline">
+                  It starts with<br/><span class="v9-gradient-text">a promise.</span>
+                </h2>
+                <p class="v9-ch1__sub v9-reveal" style="transition-delay: 0.1s;">
+                  A customer lands on your product page. They hesitate. Will it arrive in time?
+                </p>
+                <div class="v9-ch1__stat v9-reveal" style="transition-delay: 0.2s;">
+                  <span class="v9-stat-number">+5%</span>
+                  <span class="v9-stat-desc">cart conversion when delivery dates are shown</span>
+                </div>
+                <p class="v9-ch1__note v9-reveal" style="transition-delay: 0.3s;">
+                  That single promise &mdash; a precise, trustworthy delivery date &mdash; converts browsers into buyers.
+                </p>
+              </div>
+
+              <!-- Right: product page mockup with delivery date widget -->
+              <div class="v9-ch1__mockup v9-reveal" style="transition-delay: 0.15s;">
+                <div class="v9-mock-card v9-mock-card--product">
+                  <!-- Product image area -->
+                  <div class="v9-product-img">
+                    <div class="v9-product-img__placeholder">
+                      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                      <span>Parker's Ceramic Desk Lamp</span>
+                    </div>
+                  </div>
+                  <!-- Product details -->
+                  <div class="v9-product-details">
+                    <div class="v9-product-brand">Parker's Home</div>
+                    <div class="v9-product-name">Ceramic Desk Lamp — Matte White</div>
+                    <div class="v9-product-price">$89.00</div>
+                    <div class="v9-product-rating">
+                      <span class="v9-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                      <span class="v9-rating-count">2,847 reviews</span>
+                    </div>
+                    <!-- parcelLab Delivery Date Widget -->
+                    <div class="v9-delivery-widget" id="deliveryWidget">
+                      <div class="v9-dw-header">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                      <span class="v9-dw-title">Estimated Delivery</span>
+                    </div>
+                    <div class="v9-dw-date" id="deliveryDate">
+                      <span class="v9-dw-day">Wednesday, April 8</span>
+                      <span class="v9-dw-speed">FREE Standard Shipping</span>
+                    </div>
+                    <div class="v9-dw-urgency">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                      Order within <strong id="urgencyTimer">1h 47m</strong> for this date
+                    </div>
+                    <div class="v9-dw-zip">
+                      <label for="zipInput" class="sr-only">ZIP Code</label>
+                      <input type="text" id="zipInput" value="10001" maxlength="5" class="v9-dw-zip__input" aria-label="ZIP code for delivery estimate" />
+                      <button class="v9-dw-zip__btn" id="zipBtn" type="button">Update</button>
+                    </div>
+                    <div class="v9-dw-powered">
+                      Powered by <strong style="color:#3D3AD3;">parcelLab</strong>
+                    </div>
+                  </div>
+                  <!-- Add to cart button -->
+                  <button class="v9-product-atc" type="button">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
+         CHAPTER 2 — "The order is placed" — CONFIRMATION
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="v9-chapter v9-ch2" id="chapter2" data-chapter="2">
+      <div class="v9-ch__scroll-space">
+        <div class="v9-ch__sticky">
+          <div class="v9-orb v9-orb--violet-1" aria-hidden="true"></div>
+
+          <div class="container-pl relative z-10">
+            <div class="v9-ch2__layout">
+              <!-- Left: email mockup -->
+              <div class="v9-ch2__mockup v9-reveal">
+                <div class="v9-mock-card v9-mock-card--email" id="emailCard">
+                  <!-- Email header -->
+                  <div class="v9-email-header">
+                    <div class="v9-email-logo">
+                      <div class="v9-email-logo__icon">P</div>
+                      <span>Parker's Home</span>
+                    </div>
+                  </div>
+                  <!-- Email hero banner -->
+                  <div class="v9-email-hero">
+                    <div class="v9-email-check">
+                      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <h3 class="v9-email-hero__title">Thank you for your order!</h3>
+                    <p class="v9-email-hero__sub">Order #PK-2847391 &bull; Placed April 5, 2026</p>
+                  </div>
+                  <!-- Order summary -->
+                  <div class="v9-email-body">
+                    <div class="v9-email-item">
+                      <div class="v9-email-item__img">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                      </div>
+                      <div class="v9-email-item__info">
+                        <div class="v9-email-item__name">Ceramic Desk Lamp — Matte White</div>
+                        <div class="v9-email-item__meta">Qty: 1 &bull; $89.00</div>
+                      </div>
+                    </div>
+                    <div class="v9-email-delivery">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                      <span>Estimated delivery: <strong>Wednesday, April 8</strong></span>
+                    </div>
+                    <!-- Cross-sell campaign banner -->
+                    <div class="v9-email-campaign">
+                      <div class="v9-email-campaign__badge">Exclusive Offer</div>
+                      <div class="v9-email-campaign__text">Complete the look &mdash; <strong>15% off accessories</strong></div>
+                      <div class="v9-email-campaign__cta">Shop Now &rarr;</div>
+                    </div>
+                  </div>
+                  <!-- Email footer -->
+                  <div class="v9-email-footer">
+                    <div class="v9-email-footer__track">Track your order &rarr;</div>
+                    <div class="v9-email-footer__help">Need help? <span>Contact Support</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: narrative text -->
+              <div class="v9-ch2__text">
+                <span class="v9-chapter-label">Chapter 2 &mdash; Engage</span>
+                <h2 class="v9-section-title v9-reveal">
+                  The order<br/><span class="v9-gradient-text">is placed.</span>
+                </h2>
+                <p class="v9-body-text v9-reveal" style="transition-delay: 0.1s;">
+                  A branded confirmation email lands in their inbox. Not a generic receipt &mdash; a curated touchpoint.
+                </p>
+                <div class="v9-ch2__stats v9-reveal" style="transition-delay: 0.2s;">
+                  <div class="v9-stat-block">
+                    <span class="v9-stat-number">95%</span>
+                    <span class="v9-stat-desc">open rate on branded confirmations</span>
+                  </div>
+                  <div class="v9-stat-block">
+                    <span class="v9-stat-number">30%</span>
+                    <span class="v9-stat-desc">open rate on generic emails</span>
+                  </div>
+                </div>
+                <p class="v9-body-text v9-reveal" style="transition-delay: 0.3s;">
+                  Every email is a branded experience. Every experience is a revenue opportunity.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
+         CHAPTER 3 — "In transit" — TRACKING
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="v9-chapter v9-ch3" id="chapter3" data-chapter="3">
+      <div class="v9-ch__scroll-space">
+        <div class="v9-ch__sticky">
+          <div class="v9-orb v9-orb--blue-1" aria-hidden="true"></div>
+          <div class="v9-orb v9-orb--blue-2" aria-hidden="true"></div>
+
+          <div class="container-pl relative z-10">
+            <div class="v9-ch3__layout">
+              <!-- Left: narrative -->
+              <div class="v9-ch3__text">
+                <span class="v9-chapter-label">Chapter 3 &mdash; Engage</span>
+                <h2 class="v9-section-title v9-reveal">
+                  In<br/><span class="v9-gradient-text">transit.</span>
+                </h2>
+                <p class="v9-body-text v9-reveal" style="transition-delay: 0.1s;">
+                  The customer checks their order status. Instead of a carrier page, they land on a branded experience &mdash; yours.
+                </p>
+                <div class="v9-ch3__stats v9-reveal" style="transition-delay: 0.2s;">
+                  <div class="v9-stat-block">
+                    <span class="v9-stat-number">$8.50</span>
+                    <span class="v9-stat-desc">average additional revenue per tracking page visit</span>
+                  </div>
+                  <div class="v9-stat-block">
+                    <span class="v9-stat-number">-20%</span>
+                    <span class="v9-stat-desc">"Where is my order?" support calls</span>
+                  </div>
+                </div>
+                <p class="v9-body-text v9-reveal" style="transition-delay: 0.3s;">
+                  Every touchpoint is an opportunity. Every status check is a storefront.
+                </p>
+              </div>
+
+              <!-- Right: tracking page mockup -->
+              <div class="v9-ch3__mockup v9-reveal" style="transition-delay: 0.1s;">
+                <div class="v9-mock-card v9-mock-card--tracking">
+                  <!-- Tracking header -->
+                  <div class="v9-track-header">
+                    <div class="v9-track-logo">
+                      <div class="v9-track-logo__icon">P</div>
+                      <span>Parker's Home</span>
+                    </div>
+                    <div class="v9-track-order">Order #PK-2847391</div>
+                  </div>
+
+                  <!-- Status -->
+                  <div class="v9-track-status">
+                    <div class="v9-track-status__badge v9-track-status__badge--transit">In Transit</div>
+                    <div class="v9-track-status__eta">Estimated delivery: <strong>Wednesday, April 8</strong></div>
+                  </div>
+
+                  <!-- Progress bar with truck -->
+                  <div class="v9-track-progress" id="trackProgress">
+                    <div class="v9-track-progress__bar">
+                      <div class="v9-track-progress__fill" id="trackFill" style="width: 55%;"></div>
+                      <div class="v9-track-progress__truck" id="trackTruck" style="left: 55%;" aria-hidden="true">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                      </div>
+                    </div>
+                    <div class="v9-track-progress__labels">
+                      <span class="v9-track-progress__label done">Ordered</span>
+                      <span class="v9-track-progress__label done">Shipped</span>
+                      <span class="v9-track-progress__label active">In Transit</span>
+                      <span class="v9-track-progress__label">Delivered</span>
+                    </div>
+                  </div>
+
+                  <!-- Timeline -->
+                  <div class="v9-track-timeline">
+                    <div class="v9-timeline-item v9-timeline-item--done">
+                      <div class="v9-timeline-dot"></div>
+                      <div class="v9-timeline-content">
+                        <div class="v9-timeline-date">Apr 6, 2:14 PM</div>
+                        <div class="v9-timeline-text">Package arrived at distribution center &mdash; Newark, NJ</div>
+                      </div>
+                    </div>
+                    <div class="v9-timeline-item v9-timeline-item--done">
+                      <div class="v9-timeline-dot"></div>
+                      <div class="v9-timeline-content">
+                        <div class="v9-timeline-date">Apr 5, 6:30 PM</div>
+                        <div class="v9-timeline-text">Shipped from warehouse &mdash; Philadelphia, PA</div>
+                      </div>
+                    </div>
+                    <div class="v9-timeline-item v9-timeline-item--done">
+                      <div class="v9-timeline-dot"></div>
+                      <div class="v9-timeline-content">
+                        <div class="v9-timeline-date">Apr 5, 11:02 AM</div>
+                        <div class="v9-timeline-text">Order confirmed and processing</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Campaign banner -->
+                  <div class="v9-track-campaign">
+                    <div class="v9-track-campaign__text">Level up your WFH &mdash; <strong>Shop desk accessories</strong></div>
+                    <div class="v9-track-campaign__cta">Shop Now &rarr;</div>
+                  </div>
+
+                  <!-- Ordered items -->
+                  <div class="v9-track-items">
+                    <div class="v9-track-items__title">Items in this shipment</div>
+                    <div class="v9-track-item">
+                      <div class="v9-track-item__img">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                      </div>
+                      <div class="v9-track-item__info">
+                        <div class="v9-track-item__name">Ceramic Desk Lamp — Matte White</div>
+                        <div class="v9-track-item__meta">Qty: 1</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
+         CHAPTER 4 — "Delivered!" — DELIVERY
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="v9-chapter v9-ch4" id="chapter4" data-chapter="4">
+      <div class="v9-ch__scroll-space">
+        <div class="v9-ch__sticky">
+          <div class="v9-orb v9-orb--green-1" aria-hidden="true"></div>
+
+          <div class="container-pl relative z-10">
+            <div class="v9-ch4__layout">
+              <!-- Left: mockup area -->
+              <div class="v9-ch4__mockup v9-reveal">
+                <!-- Confetti container (CSS-only) -->
+                <div class="v9-confetti-container" id="confettiContainer" aria-hidden="true">
+                  <div class="v9-confetti v9-c1"></div><div class="v9-confetti v9-c2"></div><div class="v9-confetti v9-c3"></div>
+                  <div class="v9-confetti v9-c4"></div><div class="v9-confetti v9-c5"></div><div class="v9-confetti v9-c6"></div>
+                  <div class="v9-confetti v9-c7"></div><div class="v9-confetti v9-c8"></div><div class="v9-confetti v9-c9"></div>
+                  <div class="v9-confetti v9-c10"></div><div class="v9-confetti v9-c11"></div><div class="v9-confetti v9-c12"></div>
+                  <div class="v9-confetti v9-c13"></div><div class="v9-confetti v9-c14"></div><div class="v9-confetti v9-c15"></div>
+                  <div class="v9-confetti v9-c16"></div><div class="v9-confetti v9-c17"></div><div class="v9-confetti v9-c18"></div>
+                </div>
+
+                <div class="v9-mock-card v9-mock-card--delivered">
+                  <div class="v9-delivered-check">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  </div>
+                  <h3 class="v9-delivered-title">Delivered!</h3>
+                  <p class="v9-delivered-sub">Your order was delivered on Wednesday, April 8 at 2:34 PM</p>
+
+                  <!-- NPS Survey -->
+                  <div class="v9-nps-survey">
+                    <div class="v9-nps-question">How was your delivery experience?</div>
+                    <div class="v9-nps-stars" role="group" aria-label="Rate your experience">
+                      <button class="v9-nps-star" data-star="1" aria-label="1 star">&#9733;</button>
+                      <button class="v9-nps-star" data-star="2" aria-label="2 stars">&#9733;</button>
+                      <button class="v9-nps-star" data-star="3" aria-label="3 stars">&#9733;</button>
+                      <button class="v9-nps-star active" data-star="4" aria-label="4 stars">&#9733;</button>
+                      <button class="v9-nps-star active" data-star="5" aria-label="5 stars">&#9733;</button>
+                    </div>
+                    <!-- Satisfaction thumbs -->
+                    <div class="v9-nps-thumbs">
+                      <div class="v9-nps-thumb-group">
+                        <span class="v9-nps-thumb-label">Carrier</span>
+                        <div class="v9-thumb-btns">
+                          <button class="v9-thumb-btn v9-thumb-btn--up active" aria-label="Thumbs up">&#128077;</button>
+                          <button class="v9-thumb-btn v9-thumb-btn--down" aria-label="Thumbs down">&#128078;</button>
+                        </div>
+                      </div>
+                      <div class="v9-nps-thumb-group">
+                        <span class="v9-nps-thumb-label">Communication</span>
+                        <div class="v9-thumb-btns">
+                          <button class="v9-thumb-btn v9-thumb-btn--up active" aria-label="Thumbs up">&#128077;</button>
+                          <button class="v9-thumb-btn v9-thumb-btn--down" aria-label="Thumbs down">&#128078;</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Push notification overlay -->
+                <div class="v9-push-notification v9-reveal" style="transition-delay: 0.3s;">
+                  <div class="v9-push-icon">
+                    <div class="v9-push-icon__inner">P</div>
+                  </div>
+                  <div class="v9-push-content">
+                    <div class="v9-push-app">Parker's Home &bull; now</div>
+                    <div class="v9-push-text">Your order has been delivered! Rate your experience &rarr;</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: narrative -->
+              <div class="v9-ch4__text">
+                <span class="v9-chapter-label">Chapter 4 &mdash; Engage</span>
+                <h2 class="v9-section-title v9-reveal">
+                  <span class="v9-gradient-text-green">Delivered!</span>
+                </h2>
+                <p class="v9-body-text v9-reveal" style="transition-delay: 0.1s;">
+                  The package arrives. But the relationship doesn't end at the doorstep &mdash; it deepens.
+                </p>
+                <p class="v9-body-text v9-reveal" style="transition-delay: 0.2s;">
+                  An NPS survey captures sentiment while it's fresh. A push notification drives re-engagement. Satisfaction data feeds back to optimize carrier selection.
+                </p>
+                <div class="v9-ch4__stat v9-reveal" style="transition-delay: 0.3s;">
+                  <span class="v9-stat-number v9-stat-number--green">4.7x</span>
+                  <span class="v9-stat-desc">higher survey response rates with proactive delivery notifications</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
+         CHAPTER 5 — "Something doesn't fit" — RETURNS
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="v9-chapter v9-ch5" id="chapter5" data-chapter="5">
+      <div class="v9-ch__scroll-space">
+        <div class="v9-ch__sticky">
+          <div class="v9-orb v9-orb--amber-1" aria-hidden="true"></div>
+          <div class="v9-orb v9-orb--amber-2" aria-hidden="true"></div>
+
+          <div class="container-pl relative z-10">
+            <div class="v9-ch5__layout">
+              <!-- Left: narrative -->
+              <div class="v9-ch5__text">
+                <span class="v9-chapter-label">Chapter 5 &mdash; Retain</span>
+                <h2 class="v9-section-title v9-reveal">
+                  Something<br/><span class="v9-gradient-text-amber">doesn't fit.</span>
+                </h2>
+                <p class="v9-body-text v9-reveal" style="transition-delay: 0.1s;">
+                  Returns are inevitable. But how you handle them defines whether a customer stays or goes.
+                </p>
+                <p class="v9-body-text v9-reveal" style="transition-delay: 0.2s;">
+                  Smart returns don't just reduce costs. They create new revenue.
+                </p>
+                <div class="v9-ch5__stats v9-reveal" style="transition-delay: 0.3s;">
+                  <div class="v9-stat-block">
+                    <span class="v9-stat-number v9-stat-number--amber">11%</span>
+                    <span class="v9-stat-desc">higher retention through exchanges</span>
+                  </div>
+                  <div class="v9-stat-block">
+                    <span class="v9-stat-number v9-stat-number--amber">3x</span>
+                    <span class="v9-stat-desc">more store credit adoption</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: returns portal mockup -->
+              <div class="v9-ch5__mockup v9-reveal" style="transition-delay: 0.15s;">
+                <div class="v9-mock-card v9-mock-card--returns">
+                  <div class="v9-returns-header">
+                    <div class="v9-returns-logo">
+                      <div class="v9-returns-logo__icon">P</div>
+                      <span>Parker's Home &mdash; Returns</span>
+                    </div>
+                    <div class="v9-returns-step">Step 2 of 3: Choose Compensation</div>
+                  </div>
+
+                  <!-- Selected item -->
+                  <div class="v9-returns-item">
+                    <div class="v9-returns-item__check">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <div class="v9-returns-item__info">
+                      <div class="v9-returns-item__name">Ceramic Desk Lamp — Matte White</div>
+                      <div class="v9-returns-item__reason">Reason: Doesn't match product images</div>
+                    </div>
+                  </div>
+
+                  <!-- Compensation options -->
+                  <div class="v9-returns-options">
+                    <div class="v9-returns-option v9-returns-option--exchange v9-returns-option--recommended">
+                      <div class="v9-returns-option__badge">Recommended</div>
+                      <div class="v9-returns-option__icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035740" stroke-width="2"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
+                      </div>
+                      <div class="v9-returns-option__label">Exchange</div>
+                      <div class="v9-returns-option__desc">Swap for a different color or size</div>
+                    </div>
+                    <div class="v9-returns-option v9-returns-option--credit">
+                      <div class="v9-returns-option__bonus">+10% bonus</div>
+                      <div class="v9-returns-option__icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                      </div>
+                      <div class="v9-returns-option__label">Store Credit</div>
+                      <div class="v9-returns-option__desc">$97.90 credit ($89 + 10% bonus)</div>
+                    </div>
+                    <div class="v9-returns-option v9-returns-option--refund">
+                      <div class="v9-returns-option__icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                      </div>
+                      <div class="v9-returns-option__label">Refund</div>
+                      <div class="v9-returns-option__desc">$89.00 to original payment method</div>
+                    </div>
+                  </div>
+
+                  <!-- Retention offer -->
+                  <div class="v9-returns-retention">
+                    <div class="v9-returns-retention__pulse"></div>
+                    <div class="v9-returns-retention__content">
+                      <div class="v9-returns-retention__title">Special Offer</div>
+                      <div class="v9-returns-retention__text">Keep this item + get <strong>30% back</strong> as store credit</div>
+                      <div class="v9-returns-retention__value">That's $26.70 credit &mdash; no return needed</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
+         CHAPTER 6 — "The exchange arrives" — RE-ENGAGEMENT
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="v9-chapter v9-ch6" id="chapter6" data-chapter="6">
+      <div class="v9-ch__scroll-space">
+        <div class="v9-ch__sticky">
+          <div class="v9-orb v9-orb--teal-1" aria-hidden="true"></div>
+
+          <div class="container-pl relative z-10">
+            <div class="v9-ch6__layout">
+              <!-- Left: exchange tracking + journey circle -->
+              <div class="v9-ch6__mockup v9-reveal">
+                <!-- Mini exchange tracking card -->
+                <div class="v9-mock-card v9-mock-card--exchange-track">
+                  <div class="v9-extrack-header">
+                    <div class="v9-extrack-badge">Exchange Shipment</div>
+                    <div class="v9-extrack-order">Order #PK-2847391-EX</div>
+                  </div>
+                  <div class="v9-extrack-status">
+                    <div class="v9-track-status__badge v9-track-status__badge--transit">In Transit</div>
+                    <span>Estimated: <strong>Friday, April 17</strong></span>
+                  </div>
+                  <div class="v9-extrack-progress">
+                    <div class="v9-extrack-progress__bar">
+                      <div class="v9-extrack-progress__fill" style="width:40%;"></div>
+                    </div>
+                  </div>
+                  <div class="v9-extrack-campaign">
+                    <span>Thanks for exchanging! Here's <strong>10% off</strong> your next order</span>
+                    <div class="v9-extrack-campaign__code">WELCOME10</div>
+                  </div>
+                </div>
+
+                <!-- Journey circle diagram -->
+                <div class="v9-journey-circle" id="journeyCircle" aria-label="Customer journey lifecycle diagram">
+                  <svg viewBox="0 0 300 300" class="v9-journey-svg">
+                    <!-- Circle path -->
+                    <circle cx="150" cy="150" r="120" fill="none" stroke="#e2e8f0" stroke-width="2" />
+                    <circle cx="150" cy="150" r="120" fill="none" stroke="url(#journeyGrad)" stroke-width="3" stroke-dasharray="754" stroke-dashoffset="754" class="v9-journey-path" id="journeyPath" />
+                    <defs>
+                      <linearGradient id="journeyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#3D3AD3" />
+                        <stop offset="33%" stop-color="#035740" />
+                        <stop offset="66%" stop-color="#FFC943" />
+                        <stop offset="100%" stop-color="#3D3AD3" />
+                      </linearGradient>
+                    </defs>
+                    <!-- Journey nodes -->
+                    <g class="v9-journey-nodes">
+                      <g transform="translate(150, 30)"><circle r="10" fill="#3D3AD3" /><text y="-16" text-anchor="middle" fill="var(--ink)" font-size="10" font-weight="600">Purchase</text></g>
+                      <g transform="translate(254, 90)"><circle r="10" fill="#3D3AD3" /><text x="16" text-anchor="start" fill="var(--ink)" font-size="10" font-weight="600">Ship</text></g>
+                      <g transform="translate(270, 190)"><circle r="10" fill="#035740" /><text x="16" text-anchor="start" fill="var(--ink)" font-size="10" font-weight="600">Deliver</text></g>
+                      <g transform="translate(200, 268)"><circle r="10" fill="#FFC943" /><text y="20" text-anchor="middle" fill="var(--ink)" font-size="10" font-weight="600">Return</text></g>
+                      <g transform="translate(100, 268)"><circle r="10" fill="#FFC943" /><text y="20" text-anchor="middle" fill="var(--ink)" font-size="10" font-weight="600">Exchange</text></g>
+                      <g transform="translate(30, 190)"><circle r="10" fill="#035740" /><text x="-16" text-anchor="end" fill="var(--ink)" font-size="10" font-weight="600">Re-ship</text></g>
+                      <g transform="translate(46, 90)"><circle r="10" fill="#035740" /><text x="-16" text-anchor="end" fill="var(--ink)" font-size="10" font-weight="600">Deliver</text></g>
+                      <g transform="translate(110, 30)"><circle r="10" fill="#3D3AD3" /><text y="-16" text-anchor="middle" fill="var(--ink)" font-size="10" font-weight="600">Loyalty</text></g>
+                    </g>
+                  </svg>
+                  <div class="v9-journey-center">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3D3AD3" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    <span>Lifetime Value</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: narrative -->
+              <div class="v9-ch6__text">
+                <span class="v9-chapter-label">Chapter 6 &mdash; Retain</span>
+                <h2 class="v9-section-title v9-reveal">
+                  The loop<br/><span class="v9-gradient-text-teal">closes.</span>
+                </h2>
+                <p class="v9-body-text v9-reveal" style="transition-delay: 0.1s;">
+                  The exchange ships. A new tracking page appears &mdash; with a thank-you discount built in.
+                </p>
+                <p class="v9-body-text v9-reveal" style="transition-delay: 0.2s;">
+                  The customer stays. The relationship strengthens. The loop becomes a flywheel.
+                </p>
+                <div class="v9-ch6__stat v9-reveal" style="transition-delay: 0.3s;">
+                  <span class="v9-stat-number v9-stat-number--teal">72%</span>
+                  <span class="v9-stat-desc">of exchange customers place a second order within 90 days</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
+         CHAPTER 7 — "The full picture" — PLATFORM OVERVIEW
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="v9-chapter v9-ch7" id="chapter7" data-chapter="7">
+      <div class="v9-ch__scroll-space">
+        <div class="v9-ch__sticky v9-ch7__bg">
+
+          <div class="container-pl relative z-10">
+            <div class="v9-ch7__content">
+              <span class="v9-chapter-label v9-chapter-label--light">Chapter 7 &mdash; Platform</span>
+              <h2 class="v9-ch7__title v9-reveal">
+                One platform.<br/><span class="v9-gradient-text-multi">Every moment.</span>
+              </h2>
+
+              <!-- Horizontal flow diagram -->
+              <div class="v9-flow-diagram v9-reveal" style="transition-delay: 0.1s;">
+                <div class="v9-flow-step">
+                  <div class="v9-flow-dot" style="background:#3D3AD3;"></div>
+                  <span>Checkout</span>
+                </div>
+                <div class="v9-flow-line"></div>
+                <div class="v9-flow-step">
+                  <div class="v9-flow-dot" style="background:#3D3AD3;"></div>
+                  <span>Confirm</span>
+                </div>
+                <div class="v9-flow-line"></div>
+                <div class="v9-flow-step">
+                  <div class="v9-flow-dot" style="background:#3D3AD3;"></div>
+                  <span>Track</span>
+                </div>
+                <div class="v9-flow-line"></div>
+                <div class="v9-flow-step">
+                  <div class="v9-flow-dot" style="background:#035740;"></div>
+                  <span>Deliver</span>
+                </div>
+                <div class="v9-flow-line"></div>
+                <div class="v9-flow-step">
+                  <div class="v9-flow-dot" style="background:#FFC943;"></div>
+                  <span>Return</span>
+                </div>
+                <div class="v9-flow-line"></div>
+                <div class="v9-flow-step">
+                  <div class="v9-flow-dot" style="background:#035740;"></div>
+                  <span>Exchange</span>
+                </div>
+                <div class="v9-flow-line"></div>
+                <div class="v9-flow-step">
+                  <div class="v9-flow-dot" style="background:#3D3AD3;"></div>
+                  <span>Loyalty</span>
+                </div>
+              </div>
+
+              <!-- Three product pillars -->
+              <div class="v9-pillars v9-reveal" style="transition-delay: 0.2s;">
+                <!-- Convert -->
+                <div class="v9-pillar v9-pillar--convert">
+                  <div class="v9-pillar__header">
+                    <div class="v9-pillar__icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+                    </div>
+                    <h3 class="v9-pillar__title">Convert</h3>
+                    <div class="v9-pillar__stat">+5% cart conversion</div>
+                  </div>
+                  <ul class="v9-pillar__features">
+                    <li>Predictive delivery dates</li>
+                    <li>Carrier-intelligent estimates</li>
+                    <li>Checkout promise widgets</li>
+                    <li>A/B testing for delivery options</li>
+                  </ul>
+                </div>
+
+                <!-- Engage -->
+                <div class="v9-pillar v9-pillar--engage">
+                  <div class="v9-pillar__header">
+                    <div class="v9-pillar__icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                    </div>
+                    <h3 class="v9-pillar__title">Engage</h3>
+                    <div class="v9-pillar__stat">95% email open rate</div>
+                  </div>
+                  <ul class="v9-pillar__features">
+                    <li>Branded tracking pages</li>
+                    <li>Proactive notifications</li>
+                    <li>Cross-sell campaigns</li>
+                    <li>Delivery satisfaction surveys</li>
+                  </ul>
+                </div>
+
+                <!-- Retain -->
+                <div class="v9-pillar v9-pillar--retain">
+                  <div class="v9-pillar__header">
+                    <div class="v9-pillar__icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
+                    </div>
+                    <h3 class="v9-pillar__title">Retain</h3>
+                    <div class="v9-pillar__stat">3x store credit adoption</div>
+                  </div>
+                  <ul class="v9-pillar__features">
+                    <li>Smart returns portal</li>
+                    <li>Exchange-first flow</li>
+                    <li>Retention offers engine</li>
+                    <li>Returns analytics</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Logo bar -->
+              <div class="v9-logo-bar v9-reveal" style="transition-delay: 0.3s;">
+                <span class="v9-logo-bar__label">Trusted by leading brands</span>
+                <div class="v9-logo-bar__logos">
+                  <img src={`${b}/images/brands/Puma.svg`} alt="Puma" width="80" height="32" loading="lazy" />
+                  <img src={`${b}/images/brands/Hugo-Boss.svg`} alt="Hugo Boss" width="80" height="32" loading="lazy" />
+                  <img src={`${b}/images/brands/Farfetch.svg`} alt="Farfetch" width="80" height="32" loading="lazy" />
+                  <img src={`${b}/images/brands/Dyson.svg`} alt="Dyson" width="80" height="32" loading="lazy" />
+                  <img src={`${b}/images/logos/IKEA_Logo_Black.svg`} alt="IKEA" width="64" height="32" loading="lazy" class="v9-logo--invert" />
+                  <img src={`${b}/images/brands/JohnLewis-1.svg`} alt="John Lewis" width="80" height="32" loading="lazy" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
+         CHAPTER 8 — CTA — "Start the journey"
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="v9-chapter v9-ch8" id="chapter8" data-chapter="8">
+      <div class="v9-ch8__inner">
+        <!-- Animated gradient background -->
+        <div class="v9-ch8__gradient" aria-hidden="true"></div>
+        <div class="v9-orb v9-orb--cta-1" aria-hidden="true"></div>
+        <div class="v9-orb v9-orb--cta-2" aria-hidden="true"></div>
+
+        <div class="container-pl relative z-10">
+          <div class="v9-ch8__content">
+            <h2 class="v9-ch8__title v9-reveal">
+              Your customers are on a journey.<br/>
+              <span class="v9-gradient-text-multi">Are you guiding them?</span>
+            </h2>
+            <p class="v9-ch8__sub v9-reveal" style="transition-delay: 0.1s;">
+              From first click to lifelong loyalty &mdash; parcelLab powers every moment that matters.
+            </p>
+            <div class="v9-ch8__actions v9-reveal" style="transition-delay: 0.2s;">
+              <a href={`${b}/contact-us/`} class="v9-cta-btn-primary">
+                <span>Book a Demo</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <a href={`${b}/post-purchase-platform/`} class="v9-cta-btn-secondary">
+                Or explore the platform &rarr;
+              </a>
+            </div>
+            <!-- Trust badges -->
+            <div class="v9-ch8__trust v9-reveal" style="transition-delay: 0.3s;">
+              <div class="v9-trust-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                SOC 2 Type II
+              </div>
+              <div class="v9-trust-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                GDPR Compliant
+              </div>
+              <div class="v9-trust-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                99.9% Uptime
+              </div>
+              <div class="v9-trust-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                ISO 27001
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     STYLES — All v9-* scoped CSS
+     ═══════════════════════════════════════════════════════════════════ -->
+<style>
+  /* ── Base & Layout ─────────────────────────────────────────── */
+  .v9-main {
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  .v9-chapter {
+    position: relative;
+  }
+
+  .v9-ch__scroll-space {
+    min-height: 200vh;
+    position: relative;
+  }
+
+  .v9-ch__sticky {
+    position: sticky;
+    top: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  /* ── Progress Indicator ────────────────────────────────────── */
+  .v9-progress {
+    position: fixed;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    display: none;
+  }
+
+  @media (min-width: 1024px) {
+    .v9-progress { display: block; }
+  }
+
+  .v9-progress__track {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .v9-progress__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--ink-muted);
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    position: relative;
+    padding: 0;
+  }
+
+  .v9-progress__dot.active {
+    background: #3D3AD3;
+    border-color: #3D3AD3;
+    box-shadow: 0 0 0 4px rgba(61, 58, 211, 0.2);
+    transform: scale(1.2);
+  }
+
+  .v9-progress__label {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--ink-secondary);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .v9-progress__dot:hover .v9-progress__label,
+  .v9-progress__dot.active .v9-progress__label {
+    opacity: 1;
+  }
+
+  /* ── Reveal Animation ──────────────────────────────────────── */
+  .v9-reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .v9-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── Chapter Label ─────────────────────────────────────────── */
+  .v9-chapter-label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #3D3AD3;
+    margin-bottom: 16px;
+  }
+
+  .v9-chapter-label--light {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  /* ── Section Title ─────────────────────────────────────────── */
+  .v9-section-title {
+    font-size: clamp(2.25rem, 4vw + 0.5rem, 3.5rem);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+    color: var(--ink);
+    margin-bottom: 24px;
+  }
+
+  .v9-body-text {
+    font-size: clamp(1rem, 0.5vw + 0.75rem, 1.125rem);
+    line-height: 1.7;
+    color: var(--ink-secondary);
+    margin-bottom: 20px;
+    max-width: 480px;
+  }
+
+  /* ── Gradient Text Variants ────────────────────────────────── */
+  .v9-gradient-text {
+    background: linear-gradient(135deg, #3D3AD3 0%, #6366f1 50%, #3D3AD3 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: v9-gradient-shift 4s ease-in-out infinite;
+  }
+
+  .v9-gradient-text-green {
+    background: linear-gradient(135deg, #035740 0%, #0d9668 50%, #035740 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: v9-gradient-shift 4s ease-in-out infinite;
+  }
+
+  .v9-gradient-text-amber {
+    background: linear-gradient(135deg, #d97706 0%, #FFC943 50%, #d97706 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: v9-gradient-shift 4s ease-in-out infinite;
+  }
+
+  .v9-gradient-text-teal {
+    background: linear-gradient(135deg, #035740 0%, #14b8a6 50%, #035740 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: v9-gradient-shift 4s ease-in-out infinite;
+  }
+
+  .v9-gradient-text-multi {
+    background: linear-gradient(135deg, #3D3AD3 0%, #035740 33%, #FFC943 66%, #3D3AD3 100%);
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: v9-gradient-shift-wide 6s ease-in-out infinite;
+  }
+
+  @keyframes v9-gradient-shift {
+    0%, 100% { background-position: 0% center; }
+    50% { background-position: 100% center; }
+  }
+
+  @keyframes v9-gradient-shift-wide {
+    0%, 100% { background-position: 0% center; }
+    50% { background-position: 100% center; }
+  }
+
+  /* ── Stat Numbers ──────────────────────────────────────────── */
+  .v9-stat-number {
+    display: block;
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    color: #3D3AD3;
+  }
+
+  .v9-stat-number--green { color: #035740; }
+  .v9-stat-number--amber { color: #d97706; }
+  .v9-stat-number--teal { color: #0d9668; }
+
+  .v9-stat-desc {
+    display: block;
+    font-size: 14px;
+    color: var(--ink-secondary);
+    margin-top: 4px;
+  }
+
+  .v9-stat-block {
+    padding: 16px 0;
+  }
+
+  .v9-stat-block + .v9-stat-block {
+    border-top: 1px solid var(--line-subtle);
+  }
+
+  /* ── Floating Orbs ─────────────────────────────────────────── */
+  [class*="v9-orb"] {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.15;
+    pointer-events: none;
+  }
+
+  .v9-orb--purple-1 { width: 500px; height: 500px; background: #3D3AD3; top: -100px; right: -150px; }
+  .v9-orb--purple-2 { width: 300px; height: 300px; background: #6366f1; bottom: -50px; left: -100px; opacity: 0.08; }
+  .v9-orb--violet-1 { width: 400px; height: 400px; background: #7c3aed; top: 10%; left: -100px; }
+  .v9-orb--blue-1 { width: 500px; height: 500px; background: #3D3AD3; top: -80px; left: -200px; opacity: 0.1; }
+  .v9-orb--blue-2 { width: 300px; height: 300px; background: #0ea5e9; bottom: 0; right: -100px; opacity: 0.08; }
+  .v9-orb--green-1 { width: 500px; height: 500px; background: #035740; top: -100px; right: -200px; opacity: 0.12; }
+  .v9-orb--amber-1 { width: 400px; height: 400px; background: #FFC943; top: -50px; left: -150px; opacity: 0.12; }
+  .v9-orb--amber-2 { width: 300px; height: 300px; background: #f59e0b; bottom: -100px; right: -100px; opacity: 0.08; }
+  .v9-orb--teal-1 { width: 500px; height: 500px; background: #14b8a6; top: -100px; left: -150px; opacity: 0.1; }
+  .v9-orb--cta-1 { width: 600px; height: 600px; background: #3D3AD3; top: -200px; left: -200px; opacity: 0.12; }
+  .v9-orb--cta-2 { width: 400px; height: 400px; background: #035740; bottom: -150px; right: -150px; opacity: 0.1; }
+
+  /* ── Mock Card Base ────────────────────────────────────────── */
+  .v9-mock-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
+    box-shadow:
+      0 4px 6px -1px rgba(0, 0, 0, 0.05),
+      0 20px 40px -8px rgba(0, 0, 0, 0.08),
+      0 0 0 1px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+    transition: box-shadow 0.4s ease, transform 0.4s ease;
+    transform: perspective(1000px) rotateY(-2deg) rotateX(1deg);
+  }
+
+  .v9-mock-card:hover {
+    box-shadow:
+      0 4px 6px -1px rgba(0, 0, 0, 0.05),
+      0 25px 50px -12px rgba(0, 0, 0, 0.12),
+      0 0 0 1px rgba(61, 58, 211, 0.1),
+      0 0 40px -8px rgba(61, 58, 211, 0.08);
+    transform: perspective(1000px) rotateY(-1deg) rotateX(0.5deg) translateY(-4px);
+  }
+
+
+  /* ═══════════════════════════════════════════════════════════
+     CHAPTER 1 STYLES — Product Page / Delivery Date
+     ═══════════════════════════════════════════════════════════ */
+  .v9-ch1 {
+    background: var(--surface);
+  }
+
+  .v9-ch1 .v9-ch__sticky {
+    padding-top: 100px;
+  }
+
+  .v9-ch1__layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  @media (min-width: 1024px) {
+    .v9-ch1__layout { grid-template-columns: 1fr 420px; gap: 64px; }
+  }
+
+  .v9-ch1__headline {
+    font-size: clamp(2.75rem, 5vw + 0.5rem, 4.5rem);
+    font-weight: 800;
+    line-height: 1.04;
+    letter-spacing: -0.04em;
+    color: var(--ink);
+    margin-bottom: 24px;
+  }
+
+  .v9-ch1__sub {
+    font-size: clamp(1.05rem, 0.5vw + 0.75rem, 1.2rem);
+    line-height: 1.7;
+    color: var(--ink-secondary);
+    margin-bottom: 28px;
+    max-width: 500px;
+  }
+
+  .v9-ch1__stat {
+    margin-bottom: 24px;
+  }
+
+  .v9-ch1__note {
+    font-size: 15px;
+    color: var(--ink-secondary);
+    line-height: 1.65;
+    max-width: 460px;
+  }
+
+  /* Product card mockup */
+  .v9-mock-card--product {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .v9-product-img {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .v9-product-img__placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: var(--ink-muted);
+  }
+
+  .v9-product-img__placeholder span {
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .v9-product-details {
+    padding: 20px 24px 24px;
+  }
+
+  .v9-product-brand {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-muted);
+    margin-bottom: 4px;
+  }
+
+  .v9-product-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+
+  .v9-product-price {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+
+  .v9-product-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .v9-stars {
+    color: #FFC943;
+    font-size: 14px;
+  }
+
+  .v9-rating-count {
+    font-size: 13px;
+    color: var(--ink-muted);
+  }
+
+  /* Delivery Date Widget */
+  .v9-delivery-widget {
+    background: #f8f7ff;
+    border: 1px solid rgba(61, 58, 211, 0.15);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .v9-dw-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .v9-dw-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #3D3AD3;
+  }
+
+  .v9-dw-date {
+    margin-bottom: 10px;
+  }
+
+  .v9-dw-day {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .v9-dw-speed {
+    display: block;
+    font-size: 12px;
+    color: #035740;
+    font-weight: 500;
+    margin-top: 2px;
+  }
+
+  .v9-dw-urgency {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--ink-secondary);
+    margin-bottom: 12px;
+  }
+
+  .v9-dw-zip {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .v9-dw-zip__input {
+    flex: 1;
+    padding: 6px 10px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    font-size: 13px;
+    background: white;
+    color: var(--ink);
+  }
+
+  .v9-dw-zip__input:focus {
+    outline: none;
+    border-color: #3D3AD3;
+    box-shadow: 0 0 0 3px rgba(61, 58, 211, 0.1);
+  }
+
+  .v9-dw-zip__btn {
+    padding: 6px 14px;
+    background: #3D3AD3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .v9-dw-zip__btn:hover { background: #312dba; }
+
+  .v9-dw-powered {
+    font-size: 11px;
+    color: var(--ink-muted);
+  }
+
+  .v9-product-atc {
+    width: 100%;
+    padding: 14px;
+    background: var(--ink);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .v9-product-atc:hover { background: #1e293b; }
+
+
+  /* ═══════════════════════════════════════════════════════════
+     CHAPTER 2 STYLES — Order Confirmation Email
+     ═══════════════════════════════════════════════════════════ */
+  .v9-ch2 {
+    background: linear-gradient(180deg, var(--surface) 0%, #f0eeff 100%);
+  }
+
+  .v9-ch2__layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  @media (min-width: 1024px) {
+    .v9-ch2__layout { grid-template-columns: 400px 1fr; gap: 64px; }
+  }
+
+  .v9-ch2__stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .v9-mock-card--email {
+    max-width: 400px;
+    margin: 0 auto;
+    transform: perspective(1000px) rotateY(2deg) rotateX(1deg);
+  }
+
+  .v9-mock-card--email:hover {
+    box-shadow:
+      0 4px 6px -1px rgba(0, 0, 0, 0.05),
+      0 25px 50px -12px rgba(0, 0, 0, 0.12),
+      0 0 0 2px rgba(61, 58, 211, 0.2),
+      0 0 60px -8px rgba(61, 58, 211, 0.1);
+    transform: perspective(1000px) rotateY(1deg) rotateX(0.5deg) translateY(-4px);
+  }
+
+  .v9-email-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--line-subtle);
+  }
+
+  .v9-email-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .v9-email-logo__icon,
+  .v9-track-logo__icon,
+  .v9-returns-logo__icon,
+  .v9-push-icon__inner {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--ink);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .v9-email-hero {
+    background: linear-gradient(135deg, #3D3AD3 0%, #6366f1 100%);
+    padding: 28px 20px;
+    text-align: center;
+  }
+
+  .v9-email-check {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+  }
+
+  .v9-email-hero__title {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 4px;
+  }
+
+  .v9-email-hero__sub {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .v9-email-body {
+    padding: 20px;
+  }
+
+  .v9-email-item {
+    display: flex;
+    gap: 12px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--line-subtle);
+    margin-bottom: 16px;
+  }
+
+  .v9-email-item__img {
+    width: 52px;
+    height: 52px;
+    border-radius: 8px;
+    background: var(--surface-sunken);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .v9-email-item__name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+
+  .v9-email-item__meta {
+    font-size: 12px;
+    color: var(--ink-muted);
+  }
+
+  .v9-email-delivery {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--ink-secondary);
+    margin-bottom: 16px;
+  }
+
+  .v9-email-campaign {
+    background: linear-gradient(135deg, #f8f7ff 0%, #eef2ff 100%);
+    border: 1px solid rgba(61, 58, 211, 0.1);
+    border-radius: 10px;
+    padding: 14px 16px;
+    text-align: center;
+  }
+
+  .v9-email-campaign__badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #3D3AD3;
+    background: rgba(61, 58, 211, 0.08);
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+  }
+
+  .v9-email-campaign__text {
+    font-size: 14px;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+
+  .v9-email-campaign__cta {
+    font-size: 13px;
+    font-weight: 600;
+    color: #3D3AD3;
+    cursor: pointer;
+  }
+
+  .v9-email-footer {
+    padding: 16px 20px;
+    border-top: 1px solid var(--line-subtle);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .v9-email-footer__track {
+    font-size: 13px;
+    font-weight: 600;
+    color: #3D3AD3;
+    cursor: pointer;
+  }
+
+  .v9-email-footer__help {
+    font-size: 12px;
+    color: var(--ink-muted);
+  }
+
+  .v9-email-footer__help span {
+    color: #3D3AD3;
+    cursor: pointer;
+  }
+
+
+  /* ═══════════════════════════════════════════════════════════
+     CHAPTER 3 STYLES — Tracking Page
+     ═══════════════════════════════════════════════════════════ */
+  .v9-ch3 {
+    background: linear-gradient(180deg, #f0eeff 0%, #e8edff 100%);
+  }
+
+  .v9-ch3__layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  @media (min-width: 1024px) {
+    .v9-ch3__layout { grid-template-columns: 1fr 440px; gap: 64px; }
+  }
+
+  .v9-ch3__stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .v9-mock-card--tracking {
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  .v9-track-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--line-subtle);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .v9-track-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .v9-track-order {
+    font-size: 12px;
+    color: var(--ink-muted);
+  }
+
+  .v9-track-status {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .v9-track-status__badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .v9-track-status__badge--transit {
+    background: rgba(61, 58, 211, 0.1);
+    color: #3D3AD3;
+  }
+
+  .v9-track-status__badge--delivered {
+    background: rgba(3, 87, 64, 0.1);
+    color: #035740;
+  }
+
+  .v9-track-status__eta {
+    font-size: 14px;
+    color: var(--ink-secondary);
+  }
+
+  /* Progress bar with truck */
+  .v9-track-progress {
+    padding: 0 20px 20px;
+  }
+
+  .v9-track-progress__bar {
+    position: relative;
+    height: 6px;
+    background: var(--line);
+    border-radius: 3px;
+    margin-bottom: 12px;
+  }
+
+  .v9-track-progress__fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #3D3AD3, #6366f1);
+    border-radius: 3px;
+    transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .v9-track-progress__truck {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #3D3AD3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(61, 58, 211, 0.3);
+    transition: left 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: 2;
+  }
+
+  .v9-track-progress__labels {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .v9-track-progress__label {
+    font-size: 11px;
+    color: var(--ink-muted);
+    font-weight: 500;
+  }
+
+  .v9-track-progress__label.done { color: #3D3AD3; font-weight: 600; }
+  .v9-track-progress__label.active { color: #3D3AD3; font-weight: 700; }
+
+  /* Timeline */
+  .v9-track-timeline {
+    padding: 0 20px 20px;
+  }
+
+  .v9-timeline-item {
+    display: flex;
+    gap: 12px;
+    padding: 10px 0;
+    position: relative;
+  }
+
+  .v9-timeline-item + .v9-timeline-item {
+    border-top: 1px solid var(--line-subtle);
+  }
+
+  .v9-timeline-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--line);
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+
+  .v9-timeline-item--done .v9-timeline-dot {
+    background: #3D3AD3;
+  }
+
+  .v9-timeline-date {
+    font-size: 11px;
+    color: var(--ink-muted);
+    margin-bottom: 2px;
+  }
+
+  .v9-timeline-text {
+    font-size: 13px;
+    color: var(--ink-secondary);
+  }
+
+  /* Campaign banner */
+  .v9-track-campaign {
+    margin: 0 20px 16px;
+    background: linear-gradient(135deg, #f8f7ff, #eef2ff);
+    border: 1px solid rgba(61, 58, 211, 0.1);
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .v9-track-campaign__text {
+    font-size: 13px;
+    color: var(--ink);
+  }
+
+  .v9-track-campaign__cta {
+    font-size: 12px;
+    font-weight: 600;
+    color: #3D3AD3;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  /* Items in shipment */
+  .v9-track-items {
+    padding: 0 20px 20px;
+  }
+
+  .v9-track-items__title {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+  }
+
+  .v9-track-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .v9-track-item__img {
+    width: 40px;
+    height: 40px;
+    background: var(--surface-sunken);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .v9-track-item__name {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  .v9-track-item__meta {
+    font-size: 11px;
+    color: var(--ink-muted);
+  }
+
+
+  /* ═══════════════════════════════════════════════════════════
+     CHAPTER 4 STYLES — Delivery + Confetti
+     ═══════════════════════════════════════════════════════════ */
+  .v9-ch4 {
+    background: linear-gradient(180deg, #e8edff 0%, #ecfdf5 100%);
+  }
+
+  .v9-ch4__layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  @media (min-width: 1024px) {
+    .v9-ch4__layout { grid-template-columns: 420px 1fr; gap: 64px; }
+  }
+
+  .v9-ch4__mockup {
+    position: relative;
+  }
+
+  .v9-mock-card--delivered {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 32px 24px;
+    transform: perspective(1000px) rotateY(2deg);
+  }
+
+  .v9-delivered-check {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: rgba(3, 87, 64, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+  }
+
+  .v9-delivered-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: #035740;
+    margin-bottom: 8px;
+  }
+
+  .v9-delivered-sub {
+    font-size: 14px;
+    color: var(--ink-secondary);
+    margin-bottom: 24px;
+  }
+
+  /* NPS Survey */
+  .v9-nps-survey {
+    border-top: 1px solid var(--line-subtle);
+    padding-top: 20px;
+  }
+
+  .v9-nps-question {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+
+  .v9-nps-stars {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .v9-nps-star {
+    font-size: 28px;
+    color: var(--line);
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .v9-nps-star.active {
+    color: #FFC943;
+  }
+
+  .v9-nps-star:hover { transform: scale(1.2); }
+
+  .v9-nps-thumbs {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .v9-nps-thumb-group {
+    text-align: center;
+  }
+
+  .v9-nps-thumb-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--ink-muted);
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .v9-thumb-btns {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .v9-thumb-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background: white;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+
+  .v9-thumb-btn.active {
+    border-color: #3D3AD3;
+    background: rgba(61, 58, 211, 0.05);
+  }
+
+  /* Push notification */
+  .v9-push-notification {
+    position: absolute;
+    top: -20px;
+    right: -24px;
+    width: 280px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 14px;
+    padding: 12px 14px;
+    display: flex;
+    gap: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+
+  .v9-push-icon {
+    flex-shrink: 0;
+  }
+
+  .v9-push-icon__inner {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    font-size: 15px;
+  }
+
+  .v9-push-app {
+    font-size: 11px;
+    color: var(--ink-muted);
+    margin-bottom: 2px;
+  }
+
+  .v9-push-text {
+    font-size: 13px;
+    color: var(--ink);
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  /* CSS Confetti */
+  .v9-confetti-container {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 5;
+  }
+
+  .v9-confetti {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    opacity: 0;
+  }
+
+  .v9-ch4.v9-chapter--active .v9-confetti {
+    animation: v9-confetti-fall 2.5s ease-in-out forwards;
+  }
+
+  .v9-c1 { left: 10%; background: #3D3AD3; animation-delay: 0s; border-radius: 2px; }
+  .v9-c2 { left: 20%; background: #FFC943; animation-delay: 0.1s; border-radius: 50%; width: 6px; height: 6px; }
+  .v9-c3 { left: 30%; background: #035740; animation-delay: 0.2s; border-radius: 1px; width: 10px; height: 4px; }
+  .v9-c4 { left: 40%; background: #F4373D; animation-delay: 0.15s; border-radius: 50%; }
+  .v9-c5 { left: 50%; background: #3D3AD3; animation-delay: 0.3s; width: 6px; height: 10px; }
+  .v9-c6 { left: 60%; background: #FFC943; animation-delay: 0.05s; border-radius: 50%; width: 10px; height: 10px; }
+  .v9-c7 { left: 70%; background: #035740; animation-delay: 0.25s; }
+  .v9-c8 { left: 80%; background: #F4373D; animation-delay: 0.12s; border-radius: 50%; width: 5px; height: 5px; }
+  .v9-c9 { left: 90%; background: #3D3AD3; animation-delay: 0.18s; width: 4px; height: 12px; }
+  .v9-c10 { left: 15%; background: #FFC943; animation-delay: 0.22s; border-radius: 50%; }
+  .v9-c11 { left: 25%; background: #F4373D; animation-delay: 0.08s; width: 12px; height: 4px; }
+  .v9-c12 { left: 35%; background: #035740; animation-delay: 0.28s; border-radius: 50%; width: 7px; height: 7px; }
+  .v9-c13 { left: 45%; background: #3D3AD3; animation-delay: 0.14s; }
+  .v9-c14 { left: 55%; background: #FFC943; animation-delay: 0.32s; border-radius: 50%; }
+  .v9-c15 { left: 65%; background: #035740; animation-delay: 0.06s; width: 10px; height: 4px; }
+  .v9-c16 { left: 75%; background: #F4373D; animation-delay: 0.2s; border-radius: 50%; width: 6px; height: 6px; }
+  .v9-c17 { left: 85%; background: #3D3AD3; animation-delay: 0.26s; width: 4px; height: 10px; }
+  .v9-c18 { left: 5%; background: #FFC943; animation-delay: 0.16s; }
+
+  @keyframes v9-confetti-fall {
+    0% {
+      opacity: 1;
+      top: -10%;
+      transform: translateX(0) rotate(0deg);
+    }
+    100% {
+      opacity: 0;
+      top: 100%;
+      transform: translateX(calc(var(--drift, 20px))) rotate(720deg);
+    }
+  }
+
+  .v9-c1 { --drift: -30px; }
+  .v9-c2 { --drift: 25px; }
+  .v9-c3 { --drift: -15px; }
+  .v9-c4 { --drift: 40px; }
+  .v9-c5 { --drift: -20px; }
+  .v9-c6 { --drift: 35px; }
+  .v9-c7 { --drift: -25px; }
+  .v9-c8 { --drift: 10px; }
+  .v9-c9 { --drift: -35px; }
+  .v9-c10 { --drift: 20px; }
+  .v9-c11 { --drift: -10px; }
+  .v9-c12 { --drift: 30px; }
+  .v9-c13 { --drift: -40px; }
+  .v9-c14 { --drift: 15px; }
+  .v9-c15 { --drift: -20px; }
+  .v9-c16 { --drift: 25px; }
+  .v9-c17 { --drift: -30px; }
+  .v9-c18 { --drift: 20px; }
+
+
+  /* ═══════════════════════════════════════════════════════════
+     CHAPTER 5 STYLES — Returns Portal
+     ═══════════════════════════════════════════════════════════ */
+  .v9-ch5 {
+    background: linear-gradient(180deg, #ecfdf5 0%, #fefce8 100%);
+  }
+
+  .v9-ch5__layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  @media (min-width: 1024px) {
+    .v9-ch5__layout { grid-template-columns: 1fr 440px; gap: 64px; }
+  }
+
+  .v9-ch5__stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .v9-mock-card--returns {
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  .v9-returns-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--line-subtle);
+  }
+
+  .v9-returns-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+
+  .v9-returns-step {
+    font-size: 12px;
+    color: var(--ink-muted);
+    font-weight: 500;
+  }
+
+  .v9-returns-item {
+    display: flex;
+    gap: 12px;
+    padding: 16px 20px;
+    background: rgba(61, 58, 211, 0.03);
+    border-bottom: 1px solid var(--line-subtle);
+    align-items: flex-start;
+  }
+
+  .v9-returns-item__check {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    background: rgba(61, 58, 211, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .v9-returns-item__name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+
+  .v9-returns-item__reason {
+    font-size: 12px;
+    color: var(--ink-muted);
+  }
+
+  .v9-returns-options {
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .v9-returns-option {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+  }
+
+  .v9-returns-option:hover {
+    border-color: var(--ink-muted);
+  }
+
+  .v9-returns-option--exchange {
+    border-color: #035740;
+    background: rgba(3, 87, 64, 0.03);
+  }
+
+  .v9-returns-option--recommended .v9-returns-option__badge {
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: #035740;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+
+  .v9-returns-option--credit {
+    border-color: #3D3AD3;
+    background: rgba(61, 58, 211, 0.02);
+  }
+
+  .v9-returns-option__bonus {
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    font-size: 10px;
+    font-weight: 700;
+    background: #3D3AD3;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+
+  .v9-returns-option__icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: var(--surface-sunken);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .v9-returns-option__label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .v9-returns-option__desc {
+    font-size: 12px;
+    color: var(--ink-muted);
+  }
+
+  /* Retention offer */
+  .v9-returns-retention {
+    margin: 0 20px 20px;
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    border-radius: 10px;
+    padding: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .v9-returns-retention__pulse {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #f59e0b;
+    animation: v9-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes v9-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.5); }
+  }
+
+  .v9-returns-retention__content {
+    padding-left: 20px;
+  }
+
+  .v9-returns-retention__title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #92400e;
+    margin-bottom: 4px;
+  }
+
+  .v9-returns-retention__text {
+    font-size: 14px;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+
+  .v9-returns-retention__value {
+    font-size: 12px;
+    color: #92400e;
+  }
+
+
+  /* ═══════════════════════════════════════════════════════════
+     CHAPTER 6 STYLES — Exchange / Journey Circle
+     ═══════════════════════════════════════════════════════════ */
+  .v9-ch6 {
+    background: linear-gradient(180deg, #fefce8 0%, #ecfeff 100%);
+  }
+
+  .v9-ch6__layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  @media (min-width: 1024px) {
+    .v9-ch6__layout { grid-template-columns: 480px 1fr; gap: 64px; }
+  }
+
+  .v9-ch6__mockup {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+
+  /* Exchange tracking mini card */
+  .v9-mock-card--exchange-track {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    transform: perspective(1000px) rotateY(2deg) rotateX(1deg);
+  }
+
+  .v9-extrack-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .v9-extrack-badge {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #0d9668;
+    background: rgba(13, 150, 104, 0.08);
+    padding: 4px 10px;
+    border-radius: 6px;
+  }
+
+  .v9-extrack-order {
+    font-size: 12px;
+    color: var(--ink-muted);
+  }
+
+  .v9-extrack-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: var(--ink-secondary);
+  }
+
+  .v9-extrack-progress {
+    margin-bottom: 16px;
+  }
+
+  .v9-extrack-progress__bar {
+    height: 4px;
+    background: var(--line);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .v9-extrack-progress__fill {
+    height: 100%;
+    background: linear-gradient(90deg, #035740, #0d9668);
+    border-radius: 2px;
+  }
+
+  .v9-extrack-campaign {
+    background: rgba(13, 150, 104, 0.05);
+    border: 1px solid rgba(13, 150, 104, 0.12);
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 13px;
+    color: var(--ink);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .v9-extrack-campaign__code {
+    display: inline-block;
+    background: #035740;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 4px 12px;
+    border-radius: 4px;
+    width: fit-content;
+  }
+
+  /* Journey Circle */
+  .v9-journey-circle {
+    width: 300px;
+    height: 300px;
+    position: relative;
+  }
+
+  .v9-journey-svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .v9-journey-path {
+    transition: stroke-dashoffset 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .v9-ch6.v9-chapter--active .v9-journey-path {
+    stroke-dashoffset: 0;
+  }
+
+  .v9-journey-nodes circle {
+    transition: r 0.3s ease;
+  }
+
+  .v9-journey-nodes g:hover circle {
+    r: 13;
+  }
+
+  .v9-journey-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .v9-journey-center span {
+    font-size: 11px;
+    font-weight: 700;
+    color: #3D3AD3;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+
+  /* ═══════════════════════════════════════════════════════════
+     CHAPTER 7 STYLES — Platform Overview (Dark)
+     ═══════════════════════════════════════════════════════════ */
+  .v9-ch7__bg {
+    background: #0f172a;
+    padding: 80px 0;
+  }
+
+  .v9-ch7__content {
+    text-align: center;
+  }
+
+  .v9-ch7__title {
+    font-size: clamp(2.5rem, 5vw + 0.5rem, 4rem);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+    color: white;
+    margin-bottom: 48px;
+  }
+
+  /* Flow diagram */
+  .v9-flow-diagram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 64px;
+    overflow-x: auto;
+    padding: 16px 0;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: 768px) {
+    .v9-flow-diagram { flex-wrap: nowrap; }
+  }
+
+  .v9-flow-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 0 8px;
+  }
+
+  .v9-flow-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(61, 58, 211, 0.3);
+  }
+
+  .v9-flow-step span {
+    font-size: 11px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+    white-space: nowrap;
+  }
+
+  .v9-flow-line {
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(61, 58, 211, 0.4), rgba(3, 87, 64, 0.4));
+    flex-shrink: 0;
+    margin-top: -18px;
+  }
+
+  @media (max-width: 767px) {
+    .v9-flow-line { width: 20px; }
+  }
+
+  /* Product pillars */
+  .v9-pillars {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 64px;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: 768px) {
+    .v9-pillars { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .v9-pillar {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: left;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .v9-pillar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent 50%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .v9-pillar:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.12);
+    transform: translateY(-4px);
+  }
+
+  .v9-pillar--convert:hover { border-color: rgba(61, 58, 211, 0.3); }
+  .v9-pillar--engage:hover { border-color: rgba(61, 58, 211, 0.3); }
+  .v9-pillar--retain:hover { border-color: rgba(3, 87, 64, 0.3); }
+
+  .v9-pillar__header {
+    margin-bottom: 20px;
+  }
+
+  .v9-pillar__icon {
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 12px;
+  }
+
+  .v9-pillar__title {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 4px;
+  }
+
+  .v9-pillar__stat {
+    font-size: 13px;
+    font-weight: 600;
+    color: #FFC943;
+  }
+
+  .v9-pillar__features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .v9-pillar__features li {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    padding-left: 18px;
+    position: relative;
+  }
+
+  .v9-pillar__features li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  /* Logo bar */
+  .v9-logo-bar {
+    text-align: center;
+  }
+
+  .v9-logo-bar__label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.3);
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  .v9-logo-bar__logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    opacity: 0.4;
+  }
+
+  .v9-logo-bar__logos img {
+    height: 24px;
+    width: auto;
+    filter: brightness(0) invert(1);
+  }
+
+  .v9-logo--invert {
+    filter: brightness(0) invert(1) !important;
+  }
+
+
+  /* ═══════════════════════════════════════════════════════════
+     CHAPTER 8 STYLES — CTA
+     ═══════════════════════════════════════════════════════════ */
+  .v9-ch8 {
+    background: var(--surface);
+  }
+
+  .v9-ch8__inner {
+    position: relative;
+    padding: clamp(5rem, 10vw, 10rem) 0;
+    overflow: hidden;
+  }
+
+  .v9-ch8__gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #f8f7ff 0%, #ecfdf5 30%, #fefce8 60%, #f0f0ff 100%);
+    opacity: 0.6;
+  }
+
+  .v9-ch8__content {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .v9-ch8__title {
+    font-size: clamp(2rem, 4vw + 0.5rem, 3.25rem);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    margin-bottom: 20px;
+  }
+
+  .v9-ch8__sub {
+    font-size: clamp(1rem, 0.5vw + 0.75rem, 1.125rem);
+    color: var(--ink-secondary);
+    line-height: 1.7;
+    margin-bottom: 36px;
+  }
+
+  .v9-ch8__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .v9-cta-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 36px;
+    background: #3D3AD3;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow: 0 4px 20px rgba(61, 58, 211, 0.3), 0 0 0 0 rgba(61, 58, 211, 0);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .v9-cta-btn-primary::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 14px;
+    padding: 2px;
+    background: linear-gradient(135deg, #6366f1, #3D3AD3, #035740, #3D3AD3);
+    background-size: 300% 300%;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: v9-border-glow 4s ease-in-out infinite;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .v9-cta-btn-primary:hover::before { opacity: 1; }
+
+  .v9-cta-btn-primary:hover {
+    box-shadow: 0 8px 32px rgba(61, 58, 211, 0.4), 0 0 0 4px rgba(61, 58, 211, 0.1);
+    transform: translateY(-2px);
+  }
+
+  @keyframes v9-border-glow {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  .v9-cta-btn-secondary {
+    font-size: 15px;
+    font-weight: 600;
+    color: #3D3AD3;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .v9-cta-btn-secondary:hover { color: #312dba; }
+
+  .v9-ch8__trust {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .v9-trust-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ink-muted);
+  }
+
+  .v9-trust-badge svg {
+    color: var(--ink-muted);
+  }
+
+
+  /* ═══════════════════════════════════════════════════════════
+     REDUCED MOTION
+     ═══════════════════════════════════════════════════════════ */
+  @media (prefers-reduced-motion: reduce) {
+    .v9-reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+
+    .v9-gradient-text,
+    .v9-gradient-text-green,
+    .v9-gradient-text-amber,
+    .v9-gradient-text-teal,
+    .v9-gradient-text-multi {
+      animation: none;
+    }
+
+    .v9-confetti { animation: none !important; display: none; }
+
+    .v9-journey-path { transition: none; }
+
+    .v9-cta-btn-primary::before { animation: none; }
+
+    .v9-returns-retention__pulse { animation: none; }
+
+    .v9-mock-card {
+      transform: none;
+    }
+
+    .v9-mock-card:hover {
+      transform: none;
+    }
+
+    .v9-track-progress__fill,
+    .v9-track-progress__truck {
+      transition: none;
+    }
+  }
+
+
+  /* ═══════════════════════════════════════════════════════════
+     RESPONSIVE FINE-TUNING
+     ═══════════════════════════════════════════════════════════ */
+  @media (max-width: 1023px) {
+    .v9-ch__scroll-space {
+      min-height: auto;
+    }
+
+    .v9-ch__sticky {
+      position: relative;
+      padding: 100px 0 60px;
+    }
+
+    .v9-mock-card {
+      transform: none;
+    }
+
+    .v9-mock-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .v9-push-notification {
+      position: relative;
+      top: auto;
+      right: auto;
+      margin: 16px auto 0;
+    }
+  }
+
+  /* Utility: screen reader only */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+</style>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     SCRIPT — Scroll mechanics, IntersectionObserver, interactions
+     ═══════════════════════════════════════════════════════════════════ -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    // ─── Reveal on scroll ────────────────────────────────────
+    const reveals = document.querySelectorAll(".v9-reveal");
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+    );
+
+    reveals.forEach((el) => {
+      if (prefersReducedMotion) {
+        el.classList.add("visible");
+      } else {
+        revealObserver.observe(el);
+      }
+    });
+
+    // ─── Chapter tracking (progress dots + active states) ────
+    const chapters = document.querySelectorAll(".v9-chapter");
+    const dots = document.querySelectorAll(".v9-progress__dot");
+
+    const chapterObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const chapterNum = entry.target.dataset.chapter;
+          if (entry.isIntersecting) {
+            // Activate chapter
+            entry.target.classList.add("v9-chapter--active");
+            // Update progress dots
+            dots.forEach((dot) => {
+              dot.classList.toggle("active", dot.dataset.chapter === chapterNum);
+            });
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    chapters.forEach((ch) => chapterObserver.observe(ch));
+
+    // Dot click scrolling
+    dots.forEach((dot) => {
+      dot.addEventListener("click", () => {
+        const target = document.getElementById(`chapter${dot.dataset.chapter}`);
+        if (target) {
+          target.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth" });
+        }
+      });
+    });
+
+    // ─── Chapter 1: Delivery widget interaction ──────────────
+    const zipBtn = document.getElementById("zipBtn");
+    const zipInput = document.getElementById("zipInput") as HTMLInputElement | null;
+    const deliveryDate = document.getElementById("deliveryDate");
+    const urgencyTimer = document.getElementById("urgencyTimer");
+
+    const dateMap: Record<string, { day: string; speed: string }> = {
+      "10001": { day: "Wednesday, April 8", speed: "FREE Standard Shipping" },
+      "90210": { day: "Thursday, April 9", speed: "FREE Standard Shipping" },
+      "60601": { day: "Wednesday, April 8", speed: "FREE Standard Shipping" },
+      "30301": { day: "Tuesday, April 7", speed: "Express Shipping — $4.99" },
+      "98101": { day: "Friday, April 10", speed: "FREE Standard Shipping" },
+    };
+
+    if (zipBtn && zipInput && deliveryDate) {
+      zipBtn.addEventListener("click", () => {
+        const zip = zipInput.value.trim();
+        const data = dateMap[zip] || { day: "Thursday, April 9", speed: "FREE Standard Shipping" };
+        const dayEl = deliveryDate.querySelector(".v9-dw-day");
+        const speedEl = deliveryDate.querySelector(".v9-dw-speed");
+        if (dayEl) dayEl.textContent = data.day;
+        if (speedEl) speedEl.textContent = data.speed;
+      });
+    }
+
+    // Countdown timer (cosmetic)
+    if (urgencyTimer) {
+      let mins = 107;
+      setInterval(() => {
+        mins = Math.max(0, mins - 1);
+        const h = Math.floor(mins / 60);
+        const m = mins % 60;
+        urgencyTimer.textContent = `${h}h ${String(m).padStart(2, "0")}m`;
+      }, 60000);
+    }
+
+    // ─── Chapter 3: Truck scroll animation ───────────────────
+    if (!prefersReducedMotion) {
+      const ch3 = document.getElementById("chapter3");
+      const trackFill = document.getElementById("trackFill");
+      const trackTruck = document.getElementById("trackTruck");
+
+      if (ch3 && trackFill && trackTruck) {
+        const updateTruck = () => {
+          const rect = ch3.getBoundingClientRect();
+          const vh = window.innerHeight;
+          // Compute scroll progress through the chapter
+          const totalScroll = rect.height - vh;
+          const scrolled = -rect.top;
+          const progress = Math.max(0, Math.min(1, scrolled / totalScroll));
+          const pct = 20 + progress * 75; // 20% to 95%
+          trackFill.style.width = `${pct}%`;
+          trackTruck.style.left = `${pct}%`;
+        };
+
+        window.addEventListener("scroll", updateTruck, { passive: true });
+      }
+    }
+
+    // ─── Chapter 4: NPS stars interactivity ──────────────────
+    const npsStars = document.querySelectorAll<HTMLButtonElement>(".v9-nps-star");
+    npsStars.forEach((star) => {
+      star.addEventListener("click", () => {
+        const val = parseInt(star.dataset.star || "0", 10);
+        npsStars.forEach((s) => {
+          const sv = parseInt(s.dataset.star || "0", 10);
+          s.classList.toggle("active", sv >= 4 && sv <= 5 ? sv <= val || sv >= val : sv <= val);
+          // Re-evaluate: mark all up to clicked value
+          s.classList.toggle("active", sv <= val);
+        });
+      });
+    });
+
+    // ─── Chapter 6: Journey circle animate on enter ──────────
+    // (Handled by CSS .v9-chapter--active class from IntersectionObserver above)
+  });
+</script>
