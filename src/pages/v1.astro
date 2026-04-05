@@ -10,136 +10,147 @@ const b = import.meta.env.BASE_URL;
   <Header client:load />
   <main>
     <!-- ════════════════════════════════════════════════════════════════
-         SECTION 1 — HERO
+         SECTION 1 — HERO + BENTO (combined, full-bleed)
          ════════════════════════════════════════════════════════════════ -->
-    <section class="hero-section relative flex min-h-screen items-center overflow-hidden">
-      <div class="container-pl relative z-10 w-full py-32">
-        <div class="mx-auto max-w-4xl text-center">
+    <section class="hero-bento relative overflow-hidden pb-24 pt-32 md:pb-32 md:pt-40">
+      <!-- Animated floating orbs -->
+      <div class="hero-orbs pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div>
+        <div class="orb orb-5"></div>
+      </div>
+      <!-- Grid pattern overlay -->
+      <div class="pointer-events-none absolute inset-0 -z-[5] opacity-[0.035]" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(61,58,211,0.5) 59px, rgba(61,58,211,0.5) 60px), repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(61,58,211,0.5) 59px, rgba(61,58,211,0.5) 60px);"></div>
+
+      <div class="container-pl relative z-10">
+        <!-- Headline -->
+        <div class="mx-auto max-w-5xl text-center">
           <h1 class="hero-headline mb-6">
-            <span class="hero-line hero-line-1 block">Post-purchase experience</span>
-            <span class="hero-line hero-line-2 block">management.</span>
-            <span class="hero-line hero-line-3 block text-[#3D3AD3]">Solved.</span>
+            <span class="hero-word hero-word-1">Post-purchase</span>
+            <span class="hero-word hero-word-2">experience</span>
+            <br class="hidden sm:inline" />
+            <span class="hero-word hero-word-3">management.</span>
+            <span class="hero-word hero-word-4 hero-solved">Solved.</span>
           </h1>
           <p class="hero-subtitle mx-auto mt-8 max-w-xl text-lg text-[var(--ink-secondary)]">
             What would you like to do with parcelLab?
           </p>
         </div>
-      </div>
-      <!-- Subtle decorative gradient orb -->
-      <div class="pointer-events-none absolute top-1/2 left-1/2 -z-0 h-[800px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-30" style="background: radial-gradient(circle, rgba(61,58,211,0.08) 0%, transparent 70%);"></div>
-    </section>
 
-    <!-- ════════════════════════════════════════════════════════════════
-         SECTION 2 — BENTO SELECTOR
-         ════════════════════════════════════════════════════════════════ -->
-    <section class="bento-section section-generous" style="background-color: #f5f3ff;">
-      <div class="container-pl">
-        <div class="mx-auto max-w-5xl">
-          <h2 class="mb-4 text-center text-sm font-semibold uppercase tracking-widest text-[#3D3AD3]">Capabilities</h2>
-          <p class="mx-auto mb-12 max-w-2xl text-center text-2xl font-light text-[var(--ink)]" style="letter-spacing: -0.02em;">
-            What would you like to do?
-          </p>
-
-          <!-- Bento grid: 2 large top, 3 smaller bottom -->
-          <div class="bento-grid grid gap-4 md:grid-cols-2">
-            <!-- Card 1: Engage -->
-            <div class="bento-card group relative cursor-pointer rounded-2xl border border-[var(--line)] bg-white p-8 transition-all duration-300 hover:border-[#3D3AD3]/40 hover:shadow-lg" data-animate>
-              <div class="bento-check absolute top-6 right-6 flex h-6 w-6 items-center justify-center rounded-full border-2 border-[var(--line)] transition-all duration-300 group-hover:border-[#3D3AD3] group-hover:bg-[#3D3AD3]">
-                <svg class="h-3 w-3 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
+        <!-- Bento grid -->
+        <div class="mx-auto mt-14 max-w-5xl">
+          <div class="bento-grid grid gap-4 md:grid-cols-2 lg:grid-cols-6">
+            <!-- Card 1: Engage (spans 3) -->
+            <div class="bento-card bento-card-1 group relative cursor-pointer rounded-2xl p-7 transition-all duration-500 lg:col-span-3" data-bento>
+              <div class="bento-card-border"></div>
+              <div class="relative z-10">
+                <div class="bento-check absolute top-0 right-0 flex h-7 w-7 items-center justify-center rounded-full border-2 border-white/40 transition-all duration-300">
+                  <svg class="h-3.5 w-3.5 text-white opacity-0 transition-opacity duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div class="bento-icon mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-engage-gradient">
+                  <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                  </svg>
+                </div>
+                <h3 class="mb-2 text-lg font-semibold text-[var(--ink)]">Engage customers post-purchase</h3>
+                <p class="text-sm leading-relaxed text-[var(--ink-secondary)]">Send branded tracking updates, delivery notifications, and personalized messages across email, SMS, and push.</p>
               </div>
-              <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#3D3AD3]/10">
-                <svg class="h-6 w-6 text-[#3D3AD3]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-                </svg>
-              </div>
-              <h3 class="mb-2 text-lg font-semibold text-[var(--ink)]">Engage customers post-purchase</h3>
-              <p class="text-sm leading-relaxed text-[var(--ink-secondary)]">Send branded tracking updates, delivery notifications, and personalized messages across email, SMS, and push.</p>
             </div>
 
-            <!-- Card 2: Returns -->
-            <div class="bento-card group relative cursor-pointer rounded-2xl border border-[var(--line)] bg-white p-8 transition-all duration-300 hover:border-[#3D3AD3]/40 hover:shadow-lg" data-animate>
-              <div class="bento-check absolute top-6 right-6 flex h-6 w-6 items-center justify-center rounded-full border-2 border-[var(--line)] transition-all duration-300 group-hover:border-[#3D3AD3] group-hover:bg-[#3D3AD3]">
-                <svg class="h-3 w-3 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
+            <!-- Card 2: Returns (spans 3) -->
+            <div class="bento-card bento-card-2 group relative cursor-pointer rounded-2xl p-7 transition-all duration-500 lg:col-span-3" data-bento>
+              <div class="bento-card-border"></div>
+              <div class="relative z-10">
+                <div class="bento-check absolute top-0 right-0 flex h-7 w-7 items-center justify-center rounded-full border-2 border-white/40 transition-all duration-300">
+                  <svg class="h-3.5 w-3.5 text-white opacity-0 transition-opacity duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div class="bento-icon mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-returns-gradient">
+                  <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
+                  </svg>
+                </div>
+                <h3 class="mb-2 text-lg font-semibold text-[var(--ink)]">Manage returns & exchanges</h3>
+                <p class="text-sm leading-relaxed text-[var(--ink-secondary)]">Turn returns into retention with smart exchanges, store credit, and self-service portals.</p>
               </div>
-              <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#035740]/10">
-                <svg class="h-6 w-6 text-[#035740]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
-                </svg>
-              </div>
-              <h3 class="mb-2 text-lg font-semibold text-[var(--ink)]">Manage returns & exchanges</h3>
-              <p class="text-sm leading-relaxed text-[var(--ink-secondary)]">Turn returns into retention with smart exchanges, store credit, and self-service portals.</p>
             </div>
 
-            <!-- Card 3: Convert -->
-            <div class="bento-card group relative cursor-pointer rounded-2xl border border-[var(--line)] bg-white p-8 transition-all duration-300 hover:border-[#3D3AD3]/40 hover:shadow-lg" data-animate>
-              <div class="bento-check absolute top-6 right-6 flex h-6 w-6 items-center justify-center rounded-full border-2 border-[var(--line)] transition-all duration-300 group-hover:border-[#3D3AD3] group-hover:bg-[#3D3AD3]">
-                <svg class="h-3 w-3 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
+            <!-- Card 3: Convert (spans 2) -->
+            <div class="bento-card bento-card-3 group relative cursor-pointer rounded-2xl p-7 transition-all duration-500 lg:col-span-2" data-bento>
+              <div class="bento-card-border"></div>
+              <div class="relative z-10">
+                <div class="bento-check absolute top-0 right-0 flex h-7 w-7 items-center justify-center rounded-full border-2 border-white/40 transition-all duration-300">
+                  <svg class="h-3.5 w-3.5 text-white opacity-0 transition-opacity duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div class="bento-icon mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-convert-gradient">
+                  <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+                  </svg>
+                </div>
+                <h3 class="mb-2 text-lg font-semibold text-[var(--ink)]">Convert with delivery promises</h3>
+                <p class="text-sm leading-relaxed text-[var(--ink-secondary)]">Show accurate delivery dates at checkout to boost conversion rates by up to 5%.</p>
               </div>
-              <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFC943]/20">
-                <svg class="h-6 w-6 text-[#b8860b]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
-                </svg>
-              </div>
-              <h3 class="mb-2 text-lg font-semibold text-[var(--ink)]">Convert with delivery promises</h3>
-              <p class="text-sm leading-relaxed text-[var(--ink-secondary)]">Show accurate delivery dates at checkout to boost conversion rates by up to 5%.</p>
             </div>
 
-            <!-- Card 4: AI Insights -->
-            <div class="bento-card group relative cursor-pointer rounded-2xl border border-[var(--line)] bg-white p-8 transition-all duration-300 hover:border-[#3D3AD3]/40 hover:shadow-lg" data-animate>
-              <div class="bento-check absolute top-6 right-6 flex h-6 w-6 items-center justify-center rounded-full border-2 border-[var(--line)] transition-all duration-300 group-hover:border-[#3D3AD3] group-hover:bg-[#3D3AD3]">
-                <svg class="h-3 w-3 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
+            <!-- Card 4: AI Insights (spans 2) -->
+            <div class="bento-card bento-card-4 group relative cursor-pointer rounded-2xl p-7 transition-all duration-500 lg:col-span-2" data-bento>
+              <div class="bento-card-border"></div>
+              <div class="relative z-10">
+                <div class="bento-check absolute top-0 right-0 flex h-7 w-7 items-center justify-center rounded-full border-2 border-white/40 transition-all duration-300">
+                  <svg class="h-3.5 w-3.5 text-white opacity-0 transition-opacity duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div class="bento-icon mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-ai-gradient">
+                  <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+                  </svg>
+                </div>
+                <h3 class="mb-2 text-lg font-semibold text-[var(--ink)]">Get AI-powered insights</h3>
+                <p class="text-sm leading-relaxed text-[var(--ink-secondary)]">Chat with your data, predict trends, and get automated recommendations from our AI Copilot.</p>
               </div>
-              <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#3D3AD3]/10">
-                <svg class="h-6 w-6 text-[#3D3AD3]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
-                </svg>
-              </div>
-              <h3 class="mb-2 text-lg font-semibold text-[var(--ink)]">Get AI-powered insights</h3>
-              <p class="text-sm leading-relaxed text-[var(--ink-secondary)]">Chat with your data, predict trends, and get automated recommendations from our AI Copilot.</p>
             </div>
 
-            <!-- Card 5: Fraud Protection (spans full width on md) -->
-            <div class="bento-card group relative cursor-pointer rounded-2xl border border-[var(--line)] bg-white p-8 transition-all duration-300 hover:border-[#3D3AD3]/40 hover:shadow-lg md:col-span-2" data-animate>
-              <div class="bento-check absolute top-6 right-6 flex h-6 w-6 items-center justify-center rounded-full border-2 border-[var(--line)] transition-all duration-300 group-hover:border-[#3D3AD3] group-hover:bg-[#3D3AD3]">
-                <svg class="h-3 w-3 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <div class="md:flex md:items-start md:gap-6">
-                <div class="mb-5 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#F4373D]/10 md:mb-0">
-                  <svg class="h-6 w-6 text-[#F4373D]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <!-- Card 5: Fraud Protection (spans 2) -->
+            <div class="bento-card bento-card-5 group relative cursor-pointer rounded-2xl p-7 transition-all duration-500 lg:col-span-2" data-bento>
+              <div class="bento-card-border"></div>
+              <div class="relative z-10">
+                <div class="bento-check absolute top-0 right-0 flex h-7 w-7 items-center justify-center rounded-full border-2 border-white/40 transition-all duration-300">
+                  <svg class="h-3.5 w-3.5 text-white opacity-0 transition-opacity duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div class="bento-icon mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-fraud-gradient">
+                  <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
                   </svg>
                 </div>
-                <div>
-                  <h3 class="mb-2 text-lg font-semibold text-[var(--ink)]">Protect revenue from fraud</h3>
-                  <p class="text-sm leading-relaxed text-[var(--ink-secondary)]">Detect returns abuse and fraudulent claims before they impact your bottom line.</p>
-                </div>
+                <h3 class="mb-2 text-lg font-semibold text-[var(--ink)]">Protect revenue from fraud</h3>
+                <p class="text-sm leading-relaxed text-[var(--ink-secondary)]">Detect returns abuse and fraudulent claims before they impact your bottom line.</p>
               </div>
             </div>
           </div>
 
           <!-- CTA buttons -->
-          <div class="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
-            <a href={`${b}/contact-us/`} class="inline-flex items-center justify-center rounded-full bg-[#3D3AD3] px-8 py-4 text-base font-medium text-white shadow-md transition-all duration-300 hover:bg-[#3230b8] hover:shadow-lg hover:-translate-y-0.5">
+          <div class="hero-ctas mt-14 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
+            <a href={`${b}/contact-us/`} class="cta-primary group inline-flex items-center justify-center rounded-full px-9 py-4 text-base font-semibold text-white shadow-lg shadow-[#3D3AD3]/25 transition-all duration-300 hover:shadow-xl hover:shadow-[#3D3AD3]/30 hover:-translate-y-0.5">
               Get started
-              <svg class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <svg class="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>
             </a>
-            <a href={`${b}/contact-us/`} class="inline-flex items-center text-base font-medium text-[#3D3AD3] transition-colors duration-200 hover:text-[#3230b8]">
-              Watch a demo
-              <svg class="ml-1.5 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <a href={`${b}/contact-us/`} class="inline-flex items-center gap-2 text-base font-medium text-[#3D3AD3] transition-colors duration-200 hover:text-[#3230b8]">
+              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
               </svg>
+              Watch a demo
             </a>
           </div>
         </div>
@@ -147,188 +158,168 @@ const b = import.meta.env.BASE_URL;
     </section>
 
     <!-- ════════════════════════════════════════════════════════════════
-         SECTION 3 — STATS BAR
+         SECTION 2 — STATS BAR
          ════════════════════════════════════════════════════════════════ -->
-    <section class="section-standard border-y border-[var(--line)]">
-      <div class="container-pl">
-        <div class="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-0">
-          <!-- Stat 1 -->
-          <div class="stat-item flex flex-col items-center text-center md:border-r md:border-[var(--line)]" data-animate>
-            <span class="stat-number text-4xl font-bold text-[var(--ink)]" data-count="700">700+</span>
-            <span class="mt-1 text-sm text-[var(--ink-muted)]">Global brands</span>
+    <section class="stats-section relative overflow-hidden py-20 md:py-28">
+      <div class="container-pl relative z-10">
+        <div class="grid grid-cols-2 gap-10 md:grid-cols-4 md:gap-0">
+          <div class="stat-item flex flex-col items-center text-center md:border-r md:border-[var(--ink)]/10" data-animate>
+            <span class="stat-number font-bold text-transparent" data-count="700">700+</span>
+            <span class="mt-2 text-sm font-medium tracking-wide text-[var(--ink-secondary)]">Global brands</span>
           </div>
-          <!-- Stat 2 -->
-          <div class="stat-item flex flex-col items-center text-center md:border-r md:border-[var(--line)]" data-animate>
-            <span class="stat-number text-4xl font-bold text-[var(--ink)]" data-count="50">50M+</span>
-            <span class="mt-1 text-sm text-[var(--ink-muted)]">Shipments tracked monthly</span>
+          <div class="stat-item flex flex-col items-center text-center md:border-r md:border-[var(--ink)]/10" data-animate>
+            <span class="stat-number font-bold text-transparent" data-count="50">50M+</span>
+            <span class="mt-2 text-sm font-medium tracking-wide text-[var(--ink-secondary)]">Shipments tracked monthly</span>
           </div>
-          <!-- Stat 3 -->
-          <div class="stat-item flex flex-col items-center text-center md:border-r md:border-[var(--line)]" data-animate>
-            <span class="stat-number text-4xl font-bold text-[var(--ink)]" data-count="175">175+</span>
-            <span class="mt-1 text-sm text-[var(--ink-muted)]">Carriers integrated</span>
+          <div class="stat-item flex flex-col items-center text-center md:border-r md:border-[var(--ink)]/10" data-animate>
+            <span class="stat-number font-bold text-transparent" data-count="175">175+</span>
+            <span class="mt-2 text-sm font-medium tracking-wide text-[var(--ink-secondary)]">Carriers integrated</span>
           </div>
-          <!-- Stat 4 -->
           <div class="stat-item flex flex-col items-center text-center" data-animate>
-            <span class="stat-number text-4xl font-bold text-[var(--ink)]" data-count="52">52</span>
-            <span class="mt-1 text-sm text-[var(--ink-muted)]">Countries supported</span>
+            <span class="stat-number font-bold text-transparent" data-count="52">52</span>
+            <span class="mt-2 text-sm font-medium tracking-wide text-[var(--ink-secondary)]">Countries supported</span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ════════════════════════════════════════════════════════════════
-         SECTION 4 — PLATFORM OVERVIEW
+         SECTION 3 — PLATFORM OVERVIEW
          ════════════════════════════════════════════════════════════════ -->
-    <section class="section-generous">
+    <section class="platform-section relative overflow-hidden py-24 md:py-32">
       <div class="container-pl">
-        <div class="mx-auto max-w-3xl text-center">
-          <h2 class="mb-4 text-sm font-semibold uppercase tracking-widest text-[#3D3AD3]">Platform</h2>
-          <p class="text-display mb-4">The AI-powered post-purchase platform</p>
+        <div class="mx-auto max-w-3xl text-center" data-animate>
+          <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-[#3D3AD3]/20 bg-[#3D3AD3]/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-[#3D3AD3]">
+            <span class="inline-block h-1.5 w-1.5 rounded-full bg-[#3D3AD3]"></span>
+            Platform
+          </div>
+          <p class="platform-title mb-5">The AI-powered post-purchase platform</p>
           <p class="mx-auto max-w-2xl text-lg leading-relaxed text-[var(--ink-secondary)]">
-            parcelLab unifies tracking, communications, returns, and delivery predictions into one intelligent platform — so every customer touchpoint drives loyalty and revenue.
+            parcelLab unifies tracking, communications, returns, and delivery predictions into one intelligent platform.
           </p>
         </div>
 
-        <div class="mt-16 grid gap-8 md:grid-cols-3">
+        <div class="mt-16 grid gap-6 md:grid-cols-3">
           <!-- Feature 1: Engage -->
-          <div class="platform-card group rounded-2xl border border-[var(--line)] bg-white p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" data-animate>
-            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#3D3AD3]/8">
-              <svg class="h-7 w-7 text-[#3D3AD3]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
-              </svg>
+          <div class="platform-card group relative rounded-2xl p-8 transition-all duration-500" data-animate data-tilt>
+            <div class="platform-card-inner relative z-10">
+              <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-engage-gradient shadow-lg shadow-[#3D3AD3]/15">
+                <svg class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                </svg>
+              </div>
+              <div class="mb-3 inline-flex items-center rounded-full bg-[#3D3AD3]/8 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Engage</div>
+              <h3 class="mb-3 text-xl font-semibold text-[var(--ink)]">Branded post-purchase journeys</h3>
+              <p class="mb-6 text-sm leading-relaxed text-[var(--ink-secondary)]">
+                Send proactive updates across email, SMS, push. A/B test messaging. Reduce WISMO calls by 20%.
+              </p>
+              <a href={`${b}/enhance-delivery-experience/`} class="inline-flex items-center text-sm font-medium text-[#3D3AD3] transition-colors hover:text-[#3230b8]">
+                Learn more
+                <svg class="ml-1 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </a>
             </div>
-            <div class="mb-3 inline-flex items-center rounded-full bg-[#3D3AD3]/8 px-3 py-1 text-xs font-semibold text-[#3D3AD3]">Engage</div>
-            <h3 class="mb-3 text-xl font-semibold text-[var(--ink)]">Branded post-purchase journeys</h3>
-            <p class="mb-6 text-sm leading-relaxed text-[var(--ink-secondary)]">
-              Send proactive updates across email, SMS, push. A/B test messaging. Reduce WISMO calls by 20%.
-            </p>
-            <a href={`${b}/enhance-delivery-experience/`} class="inline-flex items-center text-sm font-medium text-[#3D3AD3] transition-colors hover:text-[#3230b8]">
-              Learn more
-              <svg class="ml-1 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-              </svg>
-            </a>
           </div>
 
           <!-- Feature 2: Retain -->
-          <div class="platform-card group rounded-2xl border border-[var(--line)] bg-white p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" data-animate>
-            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#035740]/8">
-              <svg class="h-7 w-7 text-[#035740]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3" />
-              </svg>
+          <div class="platform-card group relative rounded-2xl p-8 transition-all duration-500" data-animate data-tilt>
+            <div class="platform-card-inner relative z-10">
+              <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-returns-gradient shadow-lg shadow-[#035740]/15">
+                <svg class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3" />
+                </svg>
+              </div>
+              <div class="mb-3 inline-flex items-center rounded-full bg-[#035740]/8 px-3 py-1 text-xs font-semibold text-[#035740]">Retain</div>
+              <h3 class="mb-3 text-xl font-semibold text-[var(--ink)]">Smart returns & exchanges</h3>
+              <p class="mb-6 text-sm leading-relaxed text-[var(--ink-secondary)]">
+                Self-service returns portal with exchanges, store credit, retention offers. 11% higher retention.
+              </p>
+              <a href={`${b}/make-returns-seamless/`} class="inline-flex items-center text-sm font-medium text-[#3D3AD3] transition-colors hover:text-[#3230b8]">
+                Learn more
+                <svg class="ml-1 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </a>
             </div>
-            <div class="mb-3 inline-flex items-center rounded-full bg-[#035740]/8 px-3 py-1 text-xs font-semibold text-[#035740]">Retain</div>
-            <h3 class="mb-3 text-xl font-semibold text-[var(--ink)]">Smart returns & exchanges</h3>
-            <p class="mb-6 text-sm leading-relaxed text-[var(--ink-secondary)]">
-              Self-service returns portal with exchanges, store credit, retention offers. Monetize returns with 11% higher retention.
-            </p>
-            <a href={`${b}/make-returns-seamless/`} class="inline-flex items-center text-sm font-medium text-[#3D3AD3] transition-colors hover:text-[#3230b8]">
-              Learn more
-              <svg class="ml-1 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-              </svg>
-            </a>
           </div>
 
           <!-- Feature 3: Convert -->
-          <div class="platform-card group rounded-2xl border border-[var(--line)] bg-white p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" data-animate>
-            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#FFC943]/15">
-              <svg class="h-7 w-7 text-[#b8860b]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
-              </svg>
+          <div class="platform-card group relative rounded-2xl p-8 transition-all duration-500" data-animate data-tilt>
+            <div class="platform-card-inner relative z-10">
+              <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-convert-gradient shadow-lg shadow-[#FFC943]/20">
+                <svg class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+                </svg>
+              </div>
+              <div class="mb-3 inline-flex items-center rounded-full bg-[#FFC943]/15 px-3 py-1 text-xs font-semibold text-[#b8860b]">Convert</div>
+              <h3 class="mb-3 text-xl font-semibold text-[var(--ink)]">Delivery date promises</h3>
+              <p class="mb-6 text-sm leading-relaxed text-[var(--ink-secondary)]">
+                Accurate ETAs at checkout. 5% higher conversion. ML models trained on millions of shipments.
+              </p>
+              <a href={`${b}/boost-cart-conversion/`} class="inline-flex items-center text-sm font-medium text-[#3D3AD3] transition-colors hover:text-[#3230b8]">
+                Learn more
+                <svg class="ml-1 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </a>
             </div>
-            <div class="mb-3 inline-flex items-center rounded-full bg-[#FFC943]/15 px-3 py-1 text-xs font-semibold text-[#b8860b]">Convert</div>
-            <h3 class="mb-3 text-xl font-semibold text-[var(--ink)]">Delivery date promises</h3>
-            <p class="mb-6 text-sm leading-relaxed text-[var(--ink-secondary)]">
-              Accurate ETAs at checkout. 5% higher conversion. Powered by ML models trained on millions of shipments.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         SECTION 4 — SOCIAL PROOF (dark section)
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="social-proof-section relative overflow-hidden py-24 md:py-32">
+      <div class="container-pl relative z-10">
+        <div class="mx-auto max-w-4xl text-center" data-animate>
+          <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white/60">
+            <span class="inline-block h-1.5 w-1.5 rounded-full bg-[#FFC943]"></span>
+            Social proof
+          </div>
+          <blockquote class="mb-10">
+            <p class="social-quote text-2xl font-light leading-relaxed tracking-tight text-white sm:text-3xl md:text-4xl" style="letter-spacing: -0.02em;">
+              "parcelLab transformed our post-purchase experience. We saw a 25% reduction in WISMO tickets and our satisfaction scores increased significantly."
             </p>
-            <a href={`${b}/boost-cart-conversion/`} class="inline-flex items-center text-sm font-medium text-[#3D3AD3] transition-colors hover:text-[#3230b8]">
-              Learn more
-              <svg class="ml-1 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ════════════════════════════════════════════════════════════════
-         SECTION 5 — SOCIAL PROOF
-         ════════════════════════════════════════════════════════════════ -->
-    <section class="section-generous" style="background-color: #f5f3ff;">
-      <div class="container-pl">
-        <div class="grid gap-16 lg:grid-cols-2 lg:items-start">
-          <!-- Left: testimonials -->
-          <div data-animate>
-            <h2 class="mb-2 text-sm font-semibold uppercase tracking-widest text-[#3D3AD3]">Social proof</h2>
-            <p class="text-display mb-10">Why leading retailers choose parcelLab</p>
-
-            <div class="space-y-8">
-              <!-- Testimonial 1 -->
-              <blockquote class="rounded-2xl border border-[var(--line)] bg-white p-8">
-                <svg class="mb-4 h-8 w-8 text-[#3D3AD3]/20" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151C7.563 6.068 6 8.789 6 11h4v10H0z" />
-                </svg>
-                <p class="mb-4 text-base leading-relaxed text-[var(--ink)]">
-                  "parcelLab transformed our post-purchase experience. We saw a 25% reduction in WISMO tickets within the first quarter and our customer satisfaction scores increased significantly."
-                </p>
-                <footer class="flex items-center gap-3">
-                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-[#3D3AD3]/10 text-sm font-semibold text-[#3D3AD3]">SH</div>
-                  <div>
-                    <p class="text-sm font-semibold text-[var(--ink)]">Sarah Henderson</p>
-                    <p class="text-xs text-[var(--ink-muted)]">VP of Customer Experience, Global Retailer</p>
-                  </div>
-                </footer>
-              </blockquote>
-
-              <!-- Testimonial 2 -->
-              <blockquote class="rounded-2xl border border-[var(--line)] bg-white p-8">
-                <svg class="mb-4 h-8 w-8 text-[#3D3AD3]/20" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151C7.563 6.068 6 8.789 6 11h4v10H0z" />
-                </svg>
-                <p class="mb-4 text-base leading-relaxed text-[var(--ink)]">
-                  "The delivery date predictions alone paid for the platform. We're seeing measurable uplift in conversion at checkout since implementing parcelLab's promise engine."
-                </p>
-                <footer class="flex items-center gap-3">
-                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-[#035740]/10 text-sm font-semibold text-[#035740]">MK</div>
-                  <div>
-                    <p class="text-sm font-semibold text-[var(--ink)]">Marcus Klein</p>
-                    <p class="text-xs text-[var(--ink-muted)]">Head of eCommerce, European Fashion Brand</p>
-                  </div>
-                </footer>
-              </blockquote>
+          </blockquote>
+          <footer class="inline-flex items-center gap-4">
+            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-[#3D3AD3] to-[#7C3AED] text-sm font-semibold text-white">SH</div>
+            <div class="text-left">
+              <p class="text-sm font-semibold text-white">Sarah Henderson</p>
+              <p class="text-xs text-white/50">VP of Customer Experience, Global Retailer</p>
             </div>
-          </div>
+          </footer>
+        </div>
 
-          <!-- Right: logo grid -->
-          <div data-animate>
-            <p class="mb-8 text-sm font-semibold uppercase tracking-widest text-[var(--ink-muted)]">Trusted by 700+ brands worldwide</p>
-            <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
-              <div class="logo-card flex h-24 items-center justify-center rounded-2xl border border-[var(--line)] bg-white p-4 transition-all duration-300">
-                <img src={`${b}/images/logos/IKEA_Logo_Black.svg`} alt="IKEA" class="h-8 max-w-[100px] object-contain opacity-40 grayscale transition-all duration-300" loading="lazy" />
-              </div>
-              <div class="logo-card flex h-24 items-center justify-center rounded-2xl border border-[var(--line)] bg-white p-4 transition-all duration-300">
-                <img src={`${b}/images/brands/Hugo-Boss.svg`} alt="Hugo Boss" class="h-8 max-w-[100px] object-contain opacity-40 grayscale transition-all duration-300" loading="lazy" />
-              </div>
-              <div class="logo-card flex h-24 items-center justify-center rounded-2xl border border-[var(--line)] bg-white p-4 transition-all duration-300">
-                <img src={`${b}/images/brands/Dyson.svg`} alt="Dyson" class="h-8 max-w-[100px] object-contain opacity-40 grayscale transition-all duration-300" loading="lazy" />
-              </div>
-              <div class="logo-card flex h-24 items-center justify-center rounded-2xl border border-[var(--line)] bg-white p-4 transition-all duration-300">
-                <img src={`${b}/images/brands/Urban-Outfitters-1.svg`} alt="Urban Outfitters" class="h-8 max-w-[100px] object-contain opacity-40 grayscale transition-all duration-300" loading="lazy" />
-              </div>
-              <div class="logo-card flex h-24 items-center justify-center rounded-2xl border border-[var(--line)] bg-white p-4 transition-all duration-300">
-                <img src={`${b}/images/brands/True-Classic-1.svg`} alt="True Classic" class="h-8 max-w-[100px] object-contain opacity-40 grayscale transition-all duration-300" loading="lazy" />
-              </div>
-              <div class="logo-card flex h-24 items-center justify-center rounded-2xl border border-[var(--line)] bg-white p-4 transition-all duration-300">
-                <img src={`${b}/images/brands/Puma.svg`} alt="Puma" class="h-8 max-w-[100px] object-contain opacity-40 grayscale transition-all duration-300" loading="lazy" />
-              </div>
-              <div class="logo-card flex h-24 items-center justify-center rounded-2xl border border-[var(--line)] bg-white p-4 transition-all duration-300">
-                <img src={`${b}/images/brands/Farfetch.svg`} alt="Farfetch" class="h-8 max-w-[100px] object-contain opacity-40 grayscale transition-all duration-300" loading="lazy" />
-              </div>
-              <div class="logo-card flex h-24 items-center justify-center rounded-2xl border border-[var(--line)] bg-white p-4 transition-all duration-300">
-                <img src={`${b}/images/brands/JohnLewis-1.svg`} alt="John Lewis" class="h-8 max-w-[100px] object-contain opacity-40 grayscale transition-all duration-300" loading="lazy" />
-              </div>
+        <!-- Logo grid floating -->
+        <div class="mx-auto mt-20 max-w-4xl" data-animate>
+          <p class="mb-8 text-center text-sm font-medium uppercase tracking-widest text-white/30">Trusted by 700+ brands worldwide</p>
+          <div class="grid grid-cols-2 gap-3 sm:grid-cols-4">
+            <div class="logo-card flex h-20 items-center justify-center rounded-xl border border-white/8 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300">
+              <img src={`${b}/images/logos/IKEA_Logo_Black.svg`} alt="IKEA" class="h-7 max-w-[90px] object-contain opacity-30 brightness-0 invert transition-all duration-300" loading="lazy" />
+            </div>
+            <div class="logo-card flex h-20 items-center justify-center rounded-xl border border-white/8 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300">
+              <img src={`${b}/images/brands/Hugo-Boss.svg`} alt="Hugo Boss" class="h-7 max-w-[90px] object-contain opacity-30 brightness-0 invert transition-all duration-300" loading="lazy" />
+            </div>
+            <div class="logo-card flex h-20 items-center justify-center rounded-xl border border-white/8 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300">
+              <img src={`${b}/images/brands/Dyson.svg`} alt="Dyson" class="h-7 max-w-[90px] object-contain opacity-30 brightness-0 invert transition-all duration-300" loading="lazy" />
+            </div>
+            <div class="logo-card flex h-20 items-center justify-center rounded-xl border border-white/8 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300">
+              <img src={`${b}/images/brands/Urban-Outfitters-1.svg`} alt="Urban Outfitters" class="h-7 max-w-[90px] object-contain opacity-30 brightness-0 invert transition-all duration-300" loading="lazy" />
+            </div>
+            <div class="logo-card flex h-20 items-center justify-center rounded-xl border border-white/8 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300">
+              <img src={`${b}/images/brands/True-Classic-1.svg`} alt="True Classic" class="h-7 max-w-[90px] object-contain opacity-30 brightness-0 invert transition-all duration-300" loading="lazy" />
+            </div>
+            <div class="logo-card flex h-20 items-center justify-center rounded-xl border border-white/8 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300">
+              <img src={`${b}/images/brands/Puma.svg`} alt="Puma" class="h-7 max-w-[90px] object-contain opacity-30 brightness-0 invert transition-all duration-300" loading="lazy" />
+            </div>
+            <div class="logo-card flex h-20 items-center justify-center rounded-xl border border-white/8 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300">
+              <img src={`${b}/images/brands/Farfetch.svg`} alt="Farfetch" class="h-7 max-w-[90px] object-contain opacity-30 brightness-0 invert transition-all duration-300" loading="lazy" />
+            </div>
+            <div class="logo-card flex h-20 items-center justify-center rounded-xl border border-white/8 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300">
+              <img src={`${b}/images/brands/JohnLewis-1.svg`} alt="John Lewis" class="h-7 max-w-[90px] object-contain opacity-30 brightness-0 invert transition-all duration-300" loading="lazy" />
             </div>
           </div>
         </div>
@@ -336,25 +327,25 @@ const b = import.meta.env.BASE_URL;
     </section>
 
     <!-- ════════════════════════════════════════════════════════════════
-         SECTION 6 — BOTTOM CTA
+         SECTION 5 — BOTTOM CTA
          ════════════════════════════════════════════════════════════════ -->
-    <section class="section-generous bg-[var(--surface-dark)]">
-      <div class="container-pl">
+    <section class="cta-section relative overflow-hidden py-28 md:py-36">
+      <div class="container-pl relative z-10">
         <div class="mx-auto max-w-3xl text-center" data-animate>
-          <h2 class="mb-4 text-3xl font-light tracking-tight text-white sm:text-4xl" style="letter-spacing: -0.03em;">
-            See what parcelLab can do for you
+          <h2 class="cta-headline mb-6">
+            See what parcelLab<br />can do for <span class="cta-gradient-text">you</span>
           </h2>
-          <p class="mx-auto mb-10 max-w-xl text-base leading-relaxed text-white/60">
+          <p class="mx-auto mb-12 max-w-xl text-lg leading-relaxed text-[var(--ink-secondary)]">
             Join 700+ brands that trust parcelLab to turn every post-purchase moment into a growth opportunity.
           </p>
           <div class="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-5">
-            <a href={`${b}/contact-us/`} class="inline-flex items-center justify-center rounded-full bg-[#3D3AD3] px-8 py-4 text-base font-medium text-white shadow-lg transition-all duration-300 hover:bg-[#3230b8] hover:shadow-xl hover:-translate-y-0.5">
+            <a href={`${b}/contact-us/`} class="cta-glow-btn group inline-flex items-center justify-center rounded-full px-10 py-5 text-lg font-semibold text-white transition-all duration-300 hover:-translate-y-1">
               Book a demo
-              <svg class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <svg class="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>
             </a>
-            <a href={`${b}/post-purchase-platform/`} class="inline-flex items-center justify-center rounded-full border border-white/25 px-8 py-4 text-base font-medium text-white transition-all duration-300 hover:border-white/50 hover:bg-white/5">
+            <a href={`${b}/post-purchase-platform/`} class="inline-flex items-center justify-center rounded-full border-2 border-[var(--ink)]/15 px-8 py-4 text-base font-semibold text-[var(--ink)] transition-all duration-300 hover:border-[#3D3AD3]/40 hover:bg-[#3D3AD3]/5">
               Take a product tour
             </a>
           </div>
@@ -366,97 +357,484 @@ const b = import.meta.env.BASE_URL;
 </Layout>
 
 <style>
-  /* ─── Hero Section ─── */
-  .hero-section {
-    background: linear-gradient(180deg, #ffffff 0%, #f8f7ff 100%);
+  /* ═══════════════════════════════════════════════════════════════════
+     HERO + BENTO COMBINED SECTION
+     ═══════════════════════════════════════════════════════════════════ */
+  .hero-bento {
+    background:
+      radial-gradient(ellipse at 20% 50%, rgba(61,58,211,0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(3,87,64,0.10) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 80%, rgba(255,201,67,0.08) 0%, transparent 50%),
+      linear-gradient(135deg, #fafbfc 0%, #f0eeff 50%, #fafbfc 100%);
   }
 
+  /* ─── Floating orbs ─── */
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+  }
+  .orb-1 {
+    width: 500px; height: 500px;
+    top: -10%; left: -5%;
+    background: radial-gradient(circle, rgba(61,58,211,0.18) 0%, transparent 70%);
+  }
+  .orb-2 {
+    width: 400px; height: 400px;
+    top: 20%; right: -8%;
+    background: radial-gradient(circle, rgba(124,58,237,0.12) 0%, transparent 70%);
+  }
+  .orb-3 {
+    width: 350px; height: 350px;
+    bottom: 10%; left: 15%;
+    background: radial-gradient(circle, rgba(3,87,64,0.10) 0%, transparent 70%);
+  }
+  .orb-4 {
+    width: 300px; height: 300px;
+    top: 50%; right: 20%;
+    background: radial-gradient(circle, rgba(255,201,67,0.10) 0%, transparent 70%);
+  }
+  .orb-5 {
+    width: 250px; height: 250px;
+    bottom: -5%; right: 10%;
+    background: radial-gradient(circle, rgba(61,58,211,0.08) 0%, transparent 70%);
+  }
+
+  /* ─── Hero Typography ─── */
   .hero-headline {
-    font-size: clamp(3rem, 5vw + 1rem, 5.5rem);
-    font-weight: 300;
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 700;
     letter-spacing: -0.04em;
     line-height: 1.05;
     color: var(--ink);
+  }
+
+  .hero-word {
+    display: inline-block;
+    margin-right: 0.2em;
+  }
+
+  .hero-solved {
+    font-size: 1.2em;
+    background: linear-gradient(135deg, #3D3AD3, #7C3AED, #3D3AD3);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .hero-subtitle {
     font-weight: 400;
   }
 
-  /* ─── Hero Entrance Animation ─── */
+  /* ─── Gradient Icon Backgrounds ─── */
+  .bg-engage-gradient { background: linear-gradient(135deg, #3D3AD3, #7C3AED); }
+  .bg-returns-gradient { background: linear-gradient(135deg, #035740, #0d9b6e); }
+  .bg-convert-gradient { background: linear-gradient(135deg, #FFC943, #f59e0b); }
+  .bg-ai-gradient { background: linear-gradient(135deg, #7C3AED, #ec4899); }
+  .bg-fraud-gradient { background: linear-gradient(135deg, #F4373D, #f97316); }
+
+  /* ─── Glass Bento Cards ─── */
+  .bento-card {
+    background: rgba(255,255,255,0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.5);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.03);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bento-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    transition: all 0.5s ease;
+  }
+
+  .bento-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06), 0 20px 48px rgba(61,58,211,0.08);
+    border-color: rgba(61,58,211,0.2);
+  }
+
+  .bento-card:hover::before {
+    background: linear-gradient(135deg, rgba(61,58,211,0.4), rgba(124,58,237,0.2), rgba(61,58,211,0.4));
+  }
+
+  .bento-card:hover .bento-icon {
+    transform: translateY(-3px);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .bento-icon {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  /* ─── Selected bento card: animated gradient border ─── */
+  .bento-card.is-selected {
+    border-color: transparent;
+    background: rgba(255,255,255,0.85);
+  }
+
+  .bento-card.is-selected::before {
+    background: conic-gradient(
+      from var(--border-angle, 0deg),
+      #3D3AD3,
+      #7C3AED,
+      #ec4899,
+      #3D3AD3
+    );
+    padding: 2px;
+  }
+
+  .bento-card.is-selected .bento-check {
+    border-color: #3D3AD3;
+    background: linear-gradient(135deg, #3D3AD3, #7C3AED);
+  }
+
+  .bento-card.is-selected .bento-check svg {
+    opacity: 1;
+  }
+
+  /* ─── CTA Primary Button ─── */
+  .cta-primary {
+    background: linear-gradient(135deg, #3D3AD3 0%, #5046e5 50%, #3D3AD3 100%);
+    background-size: 200% 200%;
+    animation: cta-gradient-slide 3s ease infinite;
+  }
+  .cta-primary:hover {
+    background-size: 200% 200%;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════
+     STATS SECTION
+     ═══════════════════════════════════════════════════════════════════ */
+  .stats-section {
+    background:
+      linear-gradient(180deg, #ffffff 0%, #f0eeff 40%, #e8e4ff 100%);
+  }
+
+  .stat-number {
+    font-size: clamp(3rem, 8vw, 5rem);
+    letter-spacing: -0.04em;
+    line-height: 1;
+    background: linear-gradient(135deg, #3D3AD3, #7C3AED);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════
+     PLATFORM SECTION
+     ═══════════════════════════════════════════════════════════════════ */
+  .platform-section {
+    background:
+      radial-gradient(ellipse at 30% 50%, rgba(61,58,211,0.04) 0%, transparent 50%),
+      radial-gradient(ellipse at 70% 80%, rgba(3,87,64,0.03) 0%, transparent 50%),
+      #fafbfc;
+  }
+
+  .platform-title {
+    font-size: clamp(2.25rem, 4vw, 3.5rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    color: var(--ink);
+  }
+
+  .platform-card {
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+
+  .platform-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04);
+    border-color: rgba(61,58,211,0.15);
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════
+     SOCIAL PROOF SECTION (dark)
+     ═══════════════════════════════════════════════════════════════════ */
+  .social-proof-section {
+    background:
+      radial-gradient(ellipse at 20% 30%, rgba(61,58,211,0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 70%, rgba(124,58,237,0.08) 0%, transparent 50%),
+      linear-gradient(180deg, #0f0d2e 0%, #141231 50%, #0f0d2e 100%);
+  }
+
+  .social-quote {
+    background: linear-gradient(135deg, #ffffff, rgba(255,255,255,0.7), #ffffff);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .social-proof-section .logo-card:hover {
+    border-color: rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.08);
+  }
+  .social-proof-section .logo-card:hover img {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+  .social-proof-section .logo-card img {
+    transition: all 0.3s ease;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════
+     CTA SECTION
+     ═══════════════════════════════════════════════════════════════════ */
+  .cta-section {
+    background:
+      radial-gradient(ellipse at 50% 50%, rgba(61,58,211,0.06) 0%, transparent 60%),
+      radial-gradient(ellipse at 20% 80%, rgba(255,201,67,0.04) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(124,58,237,0.04) 0%, transparent 50%),
+      #fafbfc;
+  }
+
+  .cta-headline {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    color: var(--ink);
+  }
+
+  .cta-gradient-text {
+    background: linear-gradient(135deg, #3D3AD3, #7C3AED, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .cta-glow-btn {
+    background: linear-gradient(135deg, #3D3AD3 0%, #5046e5 50%, #7C3AED 100%);
+    box-shadow:
+      0 4px 15px rgba(61,58,211,0.3),
+      0 0 40px rgba(61,58,211,0.1);
+    transition: all 0.3s ease;
+  }
+  .cta-glow-btn:hover {
+    box-shadow:
+      0 8px 25px rgba(61,58,211,0.4),
+      0 0 60px rgba(61,58,211,0.15);
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════
+     ANIMATIONS — MOTION-SAFE ONLY
+     ═══════════════════════════════════════════════════════════════════ */
   @media (prefers-reduced-motion: no-preference) {
-    .hero-line {
-      opacity: 0;
-      transform: translateY(40px);
-      animation: hero-slide-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    /* Orb floating animation */
+    .orb-1 { animation: float-1 18s ease-in-out infinite; }
+    .orb-2 { animation: float-2 22s ease-in-out infinite; }
+    .orb-3 { animation: float-3 20s ease-in-out infinite; }
+    .orb-4 { animation: float-4 16s ease-in-out infinite; }
+    .orb-5 { animation: float-5 24s ease-in-out infinite; }
+
+    @keyframes float-1 {
+      0%, 100% { transform: translate(0, 0); }
+      25% { transform: translate(30px, -20px); }
+      50% { transform: translate(-20px, 30px); }
+      75% { transform: translate(15px, 10px); }
+    }
+    @keyframes float-2 {
+      0%, 100% { transform: translate(0, 0); }
+      25% { transform: translate(-25px, 15px); }
+      50% { transform: translate(20px, -25px); }
+      75% { transform: translate(-10px, 20px); }
+    }
+    @keyframes float-3 {
+      0%, 100% { transform: translate(0, 0); }
+      33% { transform: translate(20px, 25px); }
+      66% { transform: translate(-15px, -20px); }
+    }
+    @keyframes float-4 {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(-30px, 15px); }
+    }
+    @keyframes float-5 {
+      0%, 100% { transform: translate(0, 0); }
+      33% { transform: translate(15px, -15px); }
+      66% { transform: translate(-20px, 10px); }
     }
 
-    .hero-line-1 { animation-delay: 0ms; }
-    .hero-line-2 { animation-delay: 100ms; }
-    .hero-line-3 { animation-delay: 200ms; }
+    /* Animated gradient on "Solved." */
+    .hero-solved {
+      animation: gradient-shift 3s ease infinite;
+    }
+    @keyframes gradient-shift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    /* Animated gradient on social quote */
+    .social-quote {
+      animation: gradient-shift 4s ease infinite;
+    }
+
+    /* Hero word mask-clip-in from bottom */
+    .hero-word {
+      opacity: 0;
+      clip-path: inset(100% 0 0 0);
+      animation: word-reveal 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    .hero-word-1 { animation-delay: 0ms; }
+    .hero-word-2 { animation-delay: 100ms; }
+    .hero-word-3 { animation-delay: 200ms; }
+    .hero-word-4 { animation-delay: 350ms; }
+
+    @keyframes word-reveal {
+      from {
+        opacity: 0;
+        clip-path: inset(100% 0 0 0);
+      }
+      to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+      }
+    }
 
     .hero-subtitle {
       opacity: 0;
       transform: translateY(20px);
-      animation: hero-slide-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-      animation-delay: 350ms;
+      animation: slide-fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      animation-delay: 500ms;
     }
 
-    @keyframes hero-slide-up {
+    @keyframes slide-fade-up {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Bento cards fly in with stagger + spring overshoot */
+    .bento-card {
+      opacity: 0;
+      transform: translateY(40px) scale(0.96);
+      animation: bento-fly-in 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+    .bento-card-1 { animation-delay: 600ms; }
+    .bento-card-2 { animation-delay: 700ms; }
+    .bento-card-3 { animation-delay: 800ms; }
+    .bento-card-4 { animation-delay: 900ms; }
+    .bento-card-5 { animation-delay: 1000ms; }
+
+    @keyframes bento-fly-in {
       from {
         opacity: 0;
-        transform: translateY(40px);
+        transform: translateY(40px) scale(0.96);
       }
       to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
       }
     }
 
-    /* ─── Scroll-triggered fade-in ─── */
-    [data-animate] {
+    /* CTA buttons appear with pulse */
+    .hero-ctas {
       opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
-                  transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+      animation: slide-fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      animation-delay: 1100ms;
     }
 
+    .cta-primary {
+      animation: cta-gradient-slide 3s ease infinite;
+    }
+    @keyframes cta-gradient-slide {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    /* Selected card border rotation */
+    .bento-card.is-selected {
+      animation: border-rotate 3s linear infinite;
+    }
+    @keyframes border-rotate {
+      from { --border-angle: 0deg; }
+      to { --border-angle: 360deg; }
+    }
+    @property --border-angle {
+      syntax: '<angle>';
+      inherits: false;
+      initial-value: 0deg;
+    }
+
+    /* Scroll-triggered fade-in */
+    [data-animate] {
+      opacity: 0;
+      transform: translateY(30px);
+      transition:
+        opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
     [data-animate].is-visible {
       opacity: 1;
       transform: translateY(0);
     }
 
-    /* ─── Bento card stagger ─── */
-    .bento-card:nth-child(1) { transition-delay: 0ms; }
-    .bento-card:nth-child(2) { transition-delay: 80ms; }
-    .bento-card:nth-child(3) { transition-delay: 160ms; }
-    .bento-card:nth-child(4) { transition-delay: 240ms; }
-    .bento-card:nth-child(5) { transition-delay: 320ms; }
-
-    /* ─── Stat items stagger ─── */
+    /* Stat items stagger */
     .stat-item:nth-child(1) { transition-delay: 0ms; }
-    .stat-item:nth-child(2) { transition-delay: 100ms; }
-    .stat-item:nth-child(3) { transition-delay: 200ms; }
-    .stat-item:nth-child(4) { transition-delay: 300ms; }
+    .stat-item:nth-child(2) { transition-delay: 120ms; }
+    .stat-item:nth-child(3) { transition-delay: 240ms; }
+    .stat-item:nth-child(4) { transition-delay: 360ms; }
 
-    /* ─── Platform cards stagger ─── */
+    /* Stat number scale-up during count */
+    .stat-number.is-counting {
+      animation: stat-scale 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    @keyframes stat-scale {
+      0% { transform: scale(0.8); }
+      60% { transform: scale(1.02); }
+      100% { transform: scale(1); }
+    }
+
+    /* Platform cards stagger */
     .platform-card:nth-child(1) { transition-delay: 0ms; }
-    .platform-card:nth-child(2) { transition-delay: 120ms; }
-    .platform-card:nth-child(3) { transition-delay: 240ms; }
+    .platform-card:nth-child(2) { transition-delay: 150ms; }
+    .platform-card:nth-child(3) { transition-delay: 300ms; }
 
-    /* ─── Logo hover ─── */
-    .logo-card:hover img {
-      opacity: 1;
-      filter: grayscale(0);
+    /* 3D tilt on platform cards */
+    .platform-card {
+      transform-style: preserve-3d;
+      transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
+    }
+
+    /* Logo hover in dark section */
+    .social-proof-section .logo-card {
+      transition: all 0.3s ease;
     }
   }
 
   /* ─── Reduced motion: show everything immediately ─── */
   @media (prefers-reduced-motion: reduce) {
-    .hero-line,
-    .hero-subtitle {
+    .hero-word,
+    .hero-subtitle,
+    .hero-ctas {
+      opacity: 1;
+      clip-path: none;
+      transform: none;
+      animation: none;
+    }
+
+    .bento-card {
       opacity: 1;
       transform: none;
+      animation: none;
+    }
+
+    .hero-solved {
       animation: none;
     }
 
@@ -465,38 +843,16 @@ const b = import.meta.env.BASE_URL;
       transform: none;
       transition: none;
     }
-  }
 
-  /* ─── Bento grid on larger screens: 2 top, 3 bottom ─── */
-  @media (min-width: 768px) {
-    .bento-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  /* ─── Active/selected bento card state ─── */
-  .bento-card.is-selected {
-    border-color: #3D3AD3;
-    background-color: #f8f7ff;
-  }
-
-  .bento-card.is-selected .bento-check {
-    border-color: #3D3AD3;
-    background-color: #3D3AD3;
-  }
-
-  .bento-card.is-selected .bento-check svg {
-    opacity: 1;
+    .orb { animation: none; }
   }
 </style>
 
 <script>
-  // ─── IntersectionObserver for scroll animations ───
   function initScrollAnimations() {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     if (prefersReducedMotion) {
-      // Show everything immediately
       document.querySelectorAll("[data-animate]").forEach((el) => {
         el.classList.add("is-visible");
       });
@@ -512,10 +868,7 @@ const b = import.meta.env.BASE_URL;
           }
         });
       },
-      {
-        threshold: 0.1,
-        rootMargin: "0px 0px -40px 0px",
-      }
+      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
     );
 
     document.querySelectorAll("[data-animate]").forEach((el) => {
@@ -523,16 +876,14 @@ const b = import.meta.env.BASE_URL;
     });
   }
 
-  // ─── Bento card toggle ───
   function initBentoCards() {
-    document.querySelectorAll(".bento-card").forEach((card) => {
+    document.querySelectorAll("[data-bento]").forEach((card) => {
       card.addEventListener("click", () => {
         card.classList.toggle("is-selected");
       });
     });
   }
 
-  // ─── Stat counter animation ───
   function initStatCounters() {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReducedMotion) return;
@@ -548,13 +899,14 @@ const b = import.meta.env.BASE_URL;
 
             const target = parseInt(numMatch[1], 10);
             const suffix = finalText.replace(/\d+/, "");
-            const duration = 1500;
+            const duration = 1800;
             const start = performance.now();
+
+            el.classList.add("is-counting");
 
             function tick(now: number) {
               const elapsed = now - start;
               const progress = Math.min(elapsed / duration, 1);
-              // Ease out cubic
               const eased = 1 - Math.pow(1 - progress, 3);
               const current = Math.floor(eased * target);
               el.textContent = current + suffix;
@@ -579,17 +931,35 @@ const b = import.meta.env.BASE_URL;
     });
   }
 
-  // ─── Init ───
-  document.addEventListener("DOMContentLoaded", () => {
-    initScrollAnimations();
-    initBentoCards();
-    initStatCounters();
-  });
+  function init3DTilt() {
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) return;
 
-  // Also run on Astro page transitions
-  document.addEventListener("astro:page-load", () => {
+    document.querySelectorAll<HTMLElement>("[data-tilt]").forEach((card) => {
+      card.addEventListener("mousemove", (e: MouseEvent) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * -4;
+        const rotateY = ((x - centerX) / centerX) * 5;
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+      });
+
+      card.addEventListener("mouseleave", () => {
+        card.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)";
+      });
+    });
+  }
+
+  function initAll() {
     initScrollAnimations();
     initBentoCards();
     initStatCounters();
-  });
+    init3DTilt();
+  }
+
+  document.addEventListener("DOMContentLoaded", initAll);
+  document.addEventListener("astro:page-load", initAll);
 </script>

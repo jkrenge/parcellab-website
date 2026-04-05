@@ -13,34 +13,41 @@ const b = import.meta.env.BASE_URL;
     <!-- ═══════════════════════════════════════════════════════════════
          SECTION 1 — HERO
          ═══════════════════════════════════════════════════════════════ -->
-    <section class="relative overflow-hidden" style="background: linear-gradient(180deg, #ffffff 0%, #f8f7ff 100%);">
-      <div class="container-pl section-generous">
+    <section class="v3-hero-section relative overflow-hidden">
+      <!-- Mesh gradient background with floating orbs -->
+      <div class="v3-hero-bg pointer-events-none absolute inset-0" aria-hidden="true">
+        <div class="v3-orb v3-orb-1"></div>
+        <div class="v3-orb v3-orb-2"></div>
+        <div class="v3-orb v3-orb-3"></div>
+      </div>
+
+      <div class="container-pl section-generous relative z-10">
         <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <!-- Left column -->
           <div class="max-w-xl">
-            <h1 class="v3-hero-entrance v3-stagger-1" style="font-size: clamp(2.75rem, 5vw, 4.5rem); font-weight: 600; line-height: 1.08; letter-spacing: -0.035em;">
-              Predictability<br />drives <span class="v3-gradient-text">profitability</span>
+            <h1 class="v3-hero-entrance v3-stagger-1" style="font-size: clamp(3rem, 6vw, 5rem); font-weight: 600; line-height: 1.06; letter-spacing: -0.04em;">
+              Predictability<br />drives <span class="v3-gradient-text-animated">profitability</span>
             </h1>
 
             <ul class="mt-8 flex flex-col gap-4 v3-hero-entrance v3-stagger-2">
-              <li class="flex items-start gap-3 text-[var(--ink-secondary)]" style="font-size: clamp(0.95rem, 0.5vw + 0.8rem, 1.1rem);">
-                <svg class="mt-0.5 h-5 w-5 shrink-0 text-[#035740]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <li class="v3-check-item flex items-start gap-3 text-[var(--ink-secondary)]" style="font-size: clamp(0.95rem, 0.5vw + 0.8rem, 1.1rem);">
+                <svg class="v3-check-icon mt-0.5 h-5 w-5 shrink-0 text-[#035740]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" class="v3-check-path"/></svg>
                 Deliver accurate promises that convert 5% more carts
               </li>
-              <li class="flex items-start gap-3 text-[var(--ink-secondary)]" style="font-size: clamp(0.95rem, 0.5vw + 0.8rem, 1.1rem);">
-                <svg class="mt-0.5 h-5 w-5 shrink-0 text-[#035740]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <li class="v3-check-item flex items-start gap-3 text-[var(--ink-secondary)]" style="font-size: clamp(0.95rem, 0.5vw + 0.8rem, 1.1rem);">
+                <svg class="v3-check-icon mt-0.5 h-5 w-5 shrink-0 text-[#035740]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" class="v3-check-path"/></svg>
                 Send proactive updates that reduce WISMO calls by 20%
               </li>
-              <li class="flex items-start gap-3 text-[var(--ink-secondary)]" style="font-size: clamp(0.95rem, 0.5vw + 0.8rem, 1.1rem);">
-                <svg class="mt-0.5 h-5 w-5 shrink-0 text-[#035740]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <li class="v3-check-item flex items-start gap-3 text-[var(--ink-secondary)]" style="font-size: clamp(0.95rem, 0.5vw + 0.8rem, 1.1rem);">
+                <svg class="v3-check-icon mt-0.5 h-5 w-5 shrink-0 text-[#035740]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" class="v3-check-path"/></svg>
                 Turn returns into exchanges that retain 11% more revenue
               </li>
             </ul>
 
             <div class="mt-10 flex flex-wrap items-center gap-4 v3-hero-entrance v3-stagger-3">
-              <a href="/contact-us/" class="inline-flex items-center gap-2 rounded-xl bg-[#3D3AD3] px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#3D3AD3]/25 transition-all duration-200 hover:bg-[#3230b8] hover:shadow-xl hover:shadow-[#3D3AD3]/30 hover:-translate-y-px active:translate-y-0">
+              <a href="/contact-us/" class="v3-cta-primary group inline-flex items-center gap-2 rounded-xl px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-px active:translate-y-0">
                 Book a demo
-                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
               </a>
               <a href="/post-purchase-platform/" class="inline-flex items-center gap-2 text-sm font-medium text-[#3D3AD3] transition-colors hover:text-[#3230b8]">
                 <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z"/></svg>
@@ -51,75 +58,91 @@ const b = import.meta.env.BASE_URL;
 
           <!-- Right column — floating UI mockup -->
           <div class="relative v3-hero-entrance v3-stagger-4">
-            <div class="relative mx-auto max-w-md lg:max-w-none">
-              <!-- Main tracking card -->
-              <div class="rounded-2xl bg-white p-6 shadow-xl shadow-slate-200/60 ring-1 ring-[var(--line)]">
-                <!-- Header -->
-                <div class="flex items-center justify-between border-b border-[var(--line)] pb-4">
-                  <div class="flex items-center gap-3">
-                    <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#3D3AD3]/10">
-                      <svg class="h-5 w-5 text-[#3D3AD3]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25m-2.25 0h-2.25m0 0V6.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v3.75m-5.25 0h5.25"/></svg>
+            <div class="relative mx-auto max-w-md lg:max-w-none" style="perspective: 1000px;">
+              <!-- Main tracking card with glassmorphism + animated border -->
+              <div class="v3-glass-card v3-card-tilt rounded-2xl p-6">
+                <div class="v3-card-inner rounded-2xl bg-white/90 p-6 shadow-xl shadow-slate-200/60 ring-1 ring-white/50 backdrop-blur-md">
+                  <!-- Header -->
+                  <div class="flex items-center justify-between border-b border-[var(--line)] pb-4">
+                    <div class="flex items-center gap-3">
+                      <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#3D3AD3]/10">
+                        <svg class="h-5 w-5 text-[#3D3AD3]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25m-2.25 0h-2.25m0 0V6.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v3.75m-5.25 0h5.25"/></svg>
+                      </div>
+                      <div>
+                        <p class="text-sm font-semibold text-[var(--ink)]">Order #PL-29481</p>
+                        <p class="text-xs text-[var(--ink-muted)]">Premium Wireless Headphones</p>
+                      </div>
                     </div>
-                    <div>
-                      <p class="text-sm font-semibold text-[var(--ink)]">Order #PL-29481</p>
-                      <p class="text-xs text-[var(--ink-muted)]">Premium Wireless Headphones</p>
-                    </div>
+                    <span class="v3-badge-pulse rounded-full bg-[#035740]/10 px-3 py-1 text-xs font-medium text-[#035740]">In Transit</span>
                   </div>
-                  <span class="rounded-full bg-[#035740]/10 px-3 py-1 text-xs font-medium text-[#035740]">In Transit</span>
-                </div>
 
-                <!-- Progress bar -->
-                <div class="mt-5">
-                  <div class="flex items-center justify-between text-xs text-[var(--ink-muted)]">
-                    <span>Shipped</span><span>In Transit</span><span>Out for Delivery</span><span>Delivered</span>
-                  </div>
-                  <div class="relative mt-2 h-2 rounded-full bg-[var(--surface-sunken)]">
-                    <div class="absolute left-0 top-0 h-full w-[55%] rounded-full bg-gradient-to-r from-[#3D3AD3] to-[#7C3AED]"></div>
-                  </div>
-                </div>
-
-                <!-- ETA -->
-                <div class="mt-5 rounded-xl bg-[#f5f3ff] p-4">
-                  <div class="flex items-center gap-3">
-                    <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-[#3D3AD3]">
-                      <svg class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  <!-- Progress bar -->
+                  <div class="mt-5">
+                    <div class="flex items-center justify-between text-xs text-[var(--ink-muted)]">
+                      <span>Shipped</span><span>In Transit</span><span>Out for Delivery</span><span>Delivered</span>
                     </div>
-                    <div>
-                      <p class="text-xs text-[var(--ink-muted)]">Estimated Delivery</p>
-                      <p class="text-sm font-semibold text-[var(--ink)]">Tomorrow, Apr 6 &middot; 2:00 - 5:00 PM</p>
+                    <div class="relative mt-2 h-2 rounded-full bg-[var(--surface-sunken)]">
+                      <div class="v3-progress-shimmer absolute left-0 top-0 h-full w-[55%] rounded-full bg-gradient-to-r from-[#3D3AD3] to-[#7C3AED]"></div>
                     </div>
                   </div>
-                </div>
 
-                <!-- Upsell banner -->
-                <div class="mt-4 flex items-center gap-3 rounded-xl border border-[#FFC943]/30 bg-[#FFC943]/10 p-3">
-                  <svg class="h-5 w-5 shrink-0 text-[#b8860b]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z"/></svg>
-                  <p class="text-xs text-[#78570a]"><strong>Recommended:</strong> Protective Case &mdash; 15% off with your order</p>
-                </div>
-              </div>
-
-              <!-- Floating notification card -->
-              <div class="absolute -bottom-6 -left-8 rounded-xl bg-white p-4 shadow-lg shadow-slate-200/60 ring-1 ring-[var(--line)] max-[1024px]:hidden v3-float" style="animation-delay: 0.8s;">
-                <div class="flex items-center gap-3">
-                  <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#035740]/10">
-                    <svg class="h-4 w-4 text-[#035740]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  <!-- ETA -->
+                  <div class="mt-5 rounded-xl bg-[#f5f3ff] p-4">
+                    <div class="flex items-center gap-3">
+                      <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-[#3D3AD3] to-[#7C3AED]">
+                        <svg class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                      </div>
+                      <div>
+                        <p class="text-xs text-[var(--ink-muted)]">Estimated Delivery</p>
+                        <p class="text-sm font-semibold text-[var(--ink)]">Tomorrow, Apr 6 &middot; 2:00 - 5:00 PM</p>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <p class="text-xs font-medium text-[var(--ink)]">SMS sent successfully</p>
-                    <p class="text-[11px] text-[var(--ink-muted)]">Delivery update &middot; 2 min ago</p>
+
+                  <!-- Upsell banner -->
+                  <div class="mt-4 flex items-center gap-3 rounded-xl border border-[#FFC943]/30 bg-[#FFC943]/10 p-3">
+                    <svg class="h-5 w-5 shrink-0 text-[#b8860b]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z"/></svg>
+                    <p class="text-xs text-[#78570a]"><strong>Recommended:</strong> Protective Case &mdash; 15% off with your order</p>
                   </div>
                 </div>
               </div>
 
-              <!-- Floating stat card -->
-              <div class="absolute -right-6 -top-4 rounded-xl bg-white p-4 shadow-lg shadow-slate-200/60 ring-1 ring-[var(--line)] max-[1024px]:hidden v3-float" style="animation-delay: 1.2s;">
-                <div class="flex items-center gap-3">
-                  <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#3D3AD3]/10">
-                    <svg class="h-4 w-4 text-[#3D3AD3]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/></svg>
+              <!-- Floating notification card — depth layer 1 -->
+              <div class="v3-float-card absolute -bottom-6 -left-8 max-[1024px]:hidden" style="animation-delay: 0.8s; z-index: 20;">
+                <div class="v3-glass-mini rounded-xl bg-white/90 p-4 shadow-lg shadow-slate-200/60 ring-1 ring-white/50 backdrop-blur-md">
+                  <div class="flex items-center gap-3">
+                    <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#035740]/10">
+                      <svg class="h-4 w-4 text-[#035740]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <div>
+                      <p class="text-xs font-medium text-[var(--ink)]">SMS sent successfully</p>
+                      <p class="text-[11px] text-[var(--ink-muted)]">Delivery update &middot; 2 min ago</p>
+                    </div>
                   </div>
-                  <div>
-                    <p class="text-xs font-medium text-[var(--ink)]">Conversion rate</p>
-                    <p class="text-lg font-bold text-[#3D3AD3]">+5.2%</p>
+                </div>
+              </div>
+
+              <!-- Floating stat card — depth layer 2 -->
+              <div class="v3-float-card absolute -right-6 -top-4 max-[1024px]:hidden" style="animation-delay: 1.2s; z-index: 20;">
+                <div class="v3-glass-mini rounded-xl bg-white/90 p-4 shadow-lg shadow-slate-200/60 ring-1 ring-white/50 backdrop-blur-md">
+                  <div class="flex items-center gap-3">
+                    <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#3D3AD3]/10">
+                      <svg class="h-4 w-4 text-[#3D3AD3]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/></svg>
+                    </div>
+                    <div>
+                      <p class="text-xs font-medium text-[var(--ink)]">Conversion rate</p>
+                      <p class="text-lg font-bold text-[#3D3AD3]">+5.2%</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Extra floating element — depth layer 3 -->
+              <div class="v3-float-card absolute -right-4 bottom-16 max-[1024px]:hidden" style="animation-delay: 2s; z-index: 15;">
+                <div class="v3-glass-mini rounded-xl bg-white/90 p-3 shadow-lg shadow-slate-200/60 ring-1 ring-white/50 backdrop-blur-md">
+                  <div class="flex items-center gap-2">
+                    <div class="v3-pulse-dot h-2 w-2 rounded-full bg-[#035740]"></div>
+                    <p class="text-[11px] font-medium text-[var(--ink)]">Live tracking active</p>
                   </div>
                 </div>
               </div>
@@ -129,28 +152,28 @@ const b = import.meta.env.BASE_URL;
       </div>
 
       <!-- Logo bar -->
-      <div class="border-t border-[var(--line)] bg-white/60 backdrop-blur-sm">
+      <div class="relative z-10 border-t border-[var(--line)] bg-white/60 backdrop-blur-sm">
         <div class="container-pl py-8">
           <p class="mb-6 text-center text-sm font-medium text-[var(--ink-muted)]">Trusted by 700+ leading brands</p>
           <div class="relative overflow-hidden">
             <div class="flex animate-marquee items-center gap-16" style="width: max-content;">
-              <img src={`${b}/images/logos/IKEA_Logo_Black.svg`} alt="IKEA" class="h-7 w-auto opacity-40 grayscale" loading="lazy" />
-              <img src={`${b}/images/brands/Hugo-Boss.svg`} alt="Hugo Boss" class="h-6 w-auto opacity-40 grayscale" loading="lazy" />
-              <img src={`${b}/images/brands/Dyson.svg`} alt="Dyson" class="h-6 w-auto opacity-40 grayscale" loading="lazy" />
-              <img src={`${b}/images/brands/Puma.svg`} alt="Puma" class="h-6 w-auto opacity-40 grayscale" loading="lazy" />
-              <img src={`${b}/images/brands/Farfetch.svg`} alt="Farfetch" class="h-5 w-auto opacity-40 grayscale" loading="lazy" />
-              <img src={`${b}/images/brands/JohnLewis-1.svg`} alt="John Lewis" class="h-6 w-auto opacity-40 grayscale" loading="lazy" />
-              <img src={`${b}/images/brands/True-Classic-1.svg`} alt="True Classic" class="h-6 w-auto opacity-40 grayscale" loading="lazy" />
-              <img src={`${b}/images/brands/Urban-Outfitters-1.svg`} alt="Urban Outfitters" class="h-5 w-auto opacity-40 grayscale" loading="lazy" />
+              <img src={`${b}/images/logos/IKEA_Logo_Black.svg`} alt="IKEA" class="v3-logo-hover h-7 w-auto opacity-40 grayscale" loading="lazy" />
+              <img src={`${b}/images/brands/Hugo-Boss.svg`} alt="Hugo Boss" class="v3-logo-hover h-6 w-auto opacity-40 grayscale" loading="lazy" />
+              <img src={`${b}/images/brands/Dyson.svg`} alt="Dyson" class="v3-logo-hover h-6 w-auto opacity-40 grayscale" loading="lazy" />
+              <img src={`${b}/images/brands/Puma.svg`} alt="Puma" class="v3-logo-hover h-6 w-auto opacity-40 grayscale" loading="lazy" />
+              <img src={`${b}/images/brands/Farfetch.svg`} alt="Farfetch" class="v3-logo-hover h-5 w-auto opacity-40 grayscale" loading="lazy" />
+              <img src={`${b}/images/brands/JohnLewis-1.svg`} alt="John Lewis" class="v3-logo-hover h-6 w-auto opacity-40 grayscale" loading="lazy" />
+              <img src={`${b}/images/brands/True-Classic-1.svg`} alt="True Classic" class="v3-logo-hover h-6 w-auto opacity-40 grayscale" loading="lazy" />
+              <img src={`${b}/images/brands/Urban-Outfitters-1.svg`} alt="Urban Outfitters" class="v3-logo-hover h-5 w-auto opacity-40 grayscale" loading="lazy" />
               <!-- Duplicate for seamless loop -->
-              <img src={`${b}/images/logos/IKEA_Logo_Black.svg`} alt="IKEA" class="h-7 w-auto opacity-40 grayscale" loading="lazy" />
-              <img src={`${b}/images/brands/Hugo-Boss.svg`} alt="Hugo Boss" class="h-6 w-auto opacity-40 grayscale" loading="lazy" />
-              <img src={`${b}/images/brands/Dyson.svg`} alt="Dyson" class="h-6 w-auto opacity-40 grayscale" loading="lazy" />
-              <img src={`${b}/images/brands/Puma.svg`} alt="Puma" class="h-6 w-auto opacity-40 grayscale" loading="lazy" />
-              <img src={`${b}/images/brands/Farfetch.svg`} alt="Farfetch" class="h-5 w-auto opacity-40 grayscale" loading="lazy" />
-              <img src={`${b}/images/brands/JohnLewis-1.svg`} alt="John Lewis" class="h-6 w-auto opacity-40 grayscale" loading="lazy" />
-              <img src={`${b}/images/brands/True-Classic-1.svg`} alt="True Classic" class="h-6 w-auto opacity-40 grayscale" loading="lazy" />
-              <img src={`${b}/images/brands/Urban-Outfitters-1.svg`} alt="Urban Outfitters" class="h-5 w-auto opacity-40 grayscale" loading="lazy" />
+              <img src={`${b}/images/logos/IKEA_Logo_Black.svg`} alt="IKEA" class="v3-logo-hover h-7 w-auto opacity-40 grayscale" loading="lazy" />
+              <img src={`${b}/images/brands/Hugo-Boss.svg`} alt="Hugo Boss" class="v3-logo-hover h-6 w-auto opacity-40 grayscale" loading="lazy" />
+              <img src={`${b}/images/brands/Dyson.svg`} alt="Dyson" class="v3-logo-hover h-6 w-auto opacity-40 grayscale" loading="lazy" />
+              <img src={`${b}/images/brands/Puma.svg`} alt="Puma" class="v3-logo-hover h-6 w-auto opacity-40 grayscale" loading="lazy" />
+              <img src={`${b}/images/brands/Farfetch.svg`} alt="Farfetch" class="v3-logo-hover h-5 w-auto opacity-40 grayscale" loading="lazy" />
+              <img src={`${b}/images/brands/JohnLewis-1.svg`} alt="John Lewis" class="v3-logo-hover h-6 w-auto opacity-40 grayscale" loading="lazy" />
+              <img src={`${b}/images/brands/True-Classic-1.svg`} alt="True Classic" class="v3-logo-hover h-6 w-auto opacity-40 grayscale" loading="lazy" />
+              <img src={`${b}/images/brands/Urban-Outfitters-1.svg`} alt="Urban Outfitters" class="v3-logo-hover h-5 w-auto opacity-40 grayscale" loading="lazy" />
             </div>
             <!-- Fade edges -->
             <div class="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white/80 to-transparent"></div>
@@ -164,11 +187,13 @@ const b = import.meta.env.BASE_URL;
     <!-- ═══════════════════════════════════════════════════════════════
          SECTION 2 — INTELLIGENT PERSONALIZATION (TABBED)
          ═══════════════════════════════════════════════════════════════ -->
-    <section class="bg-[var(--surface)] section-generous">
-      <div class="container-pl">
+    <section class="v3-tab-section relative overflow-hidden section-generous">
+      <!-- Subtle gradient overlay -->
+      <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#f5f3ff]/40 via-[var(--surface)] to-[#ecfdf5]/30" aria-hidden="true"></div>
+      <div class="container-pl relative z-10">
         <div class="mx-auto max-w-3xl text-center v3-reveal">
           <h2 class="text-display text-[var(--ink)]">
-            Intelligent Personalization <span class="v3-gradient-text">Beyond Buy</span>
+            Intelligent Personalization <span class="v3-gradient-text-animated">Beyond Buy</span>
           </h2>
           <p class="mt-5 text-[var(--ink-secondary)]" style="font-size: clamp(1rem, 0.5vw + 0.75rem, 1.125rem); line-height: 1.7;">
             Powered by AI and trained on billions of shipments, parcelLab's platform adapts every touchpoint to each customer's context &mdash; from checkout to delivery to returns.
@@ -202,7 +227,7 @@ const b = import.meta.env.BASE_URL;
           <div class="mt-8">
             <!-- Promise panel -->
             <div class="v3-tab-panel" id="v3-panel-promise">
-              <div class="grid grid-cols-1 items-center gap-10 rounded-2xl bg-[var(--surface-raised)] p-8 shadow-sm ring-1 ring-[var(--line)] lg:grid-cols-2 lg:p-12">
+              <div class="grid grid-cols-1 items-center gap-10 rounded-2xl p-8 shadow-sm ring-1 ring-[var(--line)] lg:grid-cols-2 lg:p-12" style="background: linear-gradient(135deg, rgba(245,243,255,0.5) 0%, rgba(255,255,255,0.9) 100%);">
                 <div>
                   <div class="inline-flex items-center gap-2 rounded-full bg-[#3D3AD3]/10 px-4 py-1.5 text-xs font-semibold text-[#3D3AD3]">
                     <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75"/></svg>
@@ -216,9 +241,9 @@ const b = import.meta.env.BASE_URL;
                     <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-[#3D3AD3]"></span>Carrier cutoff time awareness</li>
                   </ul>
                 </div>
-                <!-- Mock delivery widget -->
+                <!-- Mock delivery widget with glassmorphism -->
                 <div class="flex justify-center">
-                  <div class="w-full max-w-xs rounded-xl border border-[var(--line)] bg-white p-5 shadow-sm">
+                  <div class="v3-glass-widget w-full max-w-xs rounded-xl border border-white/50 bg-white/80 p-5 shadow-sm backdrop-blur-md">
                     <p class="text-xs font-medium uppercase tracking-wide text-[var(--ink-muted)]">Delivery estimate</p>
                     <div class="mt-3 flex items-baseline gap-2">
                       <svg class="h-5 w-5 text-[#035740]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25"/></svg>
@@ -226,7 +251,7 @@ const b = import.meta.env.BASE_URL;
                     </div>
                     <p class="mt-1 text-xs text-[var(--ink-muted)]">Standard shipping &middot; Free</p>
                     <div class="mt-4 border-t border-[var(--line)] pt-4">
-                      <div class="flex items-center gap-2 text-xs text-[#035740]">
+                      <div class="v3-countdown-pulse flex items-center gap-2 text-xs text-[#035740]">
                         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                         Order within 2h 14m for dispatch today
                       </div>
@@ -242,7 +267,7 @@ const b = import.meta.env.BASE_URL;
 
             <!-- Engage panel -->
             <div class="v3-tab-panel" id="v3-panel-engage">
-              <div class="grid grid-cols-1 items-center gap-10 rounded-2xl bg-[var(--surface-raised)] p-8 shadow-sm ring-1 ring-[var(--line)] lg:grid-cols-2 lg:p-12">
+              <div class="grid grid-cols-1 items-center gap-10 rounded-2xl p-8 shadow-sm ring-1 ring-[var(--line)] lg:grid-cols-2 lg:p-12" style="background: linear-gradient(135deg, rgba(236,253,245,0.4) 0%, rgba(255,255,255,0.9) 100%);">
                 <div>
                   <div class="inline-flex items-center gap-2 rounded-full bg-[#035740]/10 px-4 py-1.5 text-xs font-semibold text-[#035740]">
                     <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75"/></svg>
@@ -256,10 +281,10 @@ const b = import.meta.env.BASE_URL;
                     <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-[#035740]"></span>AI-optimized send times</li>
                   </ul>
                 </div>
-                <!-- Mock email notification -->
+                <!-- Mock email notification with glassmorphism -->
                 <div class="flex justify-center">
-                  <div class="w-full max-w-xs overflow-hidden rounded-xl border border-[var(--line)] bg-white shadow-sm">
-                    <div class="bg-[#3D3AD3] px-5 py-4">
+                  <div class="v3-glass-widget w-full max-w-xs overflow-hidden rounded-xl border border-white/50 bg-white/80 shadow-sm backdrop-blur-md">
+                    <div class="bg-gradient-to-r from-[#3D3AD3] to-[#7C3AED] px-5 py-4">
                       <p class="text-xs font-medium text-white/70">SHIPPING UPDATE</p>
                       <p class="mt-1 text-sm font-semibold text-white">Your order is on its way!</p>
                     </div>
@@ -272,7 +297,7 @@ const b = import.meta.env.BASE_URL;
                         </div>
                       </div>
                       <div class="my-4 h-px bg-[var(--line)]"></div>
-                      <div class="rounded-lg bg-[var(--surface-sunken)] p-3 text-center">
+                      <div class="rounded-lg bg-gradient-to-r from-[#f5f3ff] to-[#ede9fe] p-3 text-center">
                         <p class="text-xs font-medium text-[#3D3AD3]">Track your package</p>
                       </div>
                       <div class="mt-4">
@@ -291,7 +316,7 @@ const b = import.meta.env.BASE_URL;
 
             <!-- Retain panel -->
             <div class="v3-tab-panel" id="v3-panel-retain">
-              <div class="grid grid-cols-1 items-center gap-10 rounded-2xl bg-[var(--surface-raised)] p-8 shadow-sm ring-1 ring-[var(--line)] lg:grid-cols-2 lg:p-12">
+              <div class="grid grid-cols-1 items-center gap-10 rounded-2xl p-8 shadow-sm ring-1 ring-[var(--line)] lg:grid-cols-2 lg:p-12" style="background: linear-gradient(135deg, rgba(255,201,67,0.08) 0%, rgba(255,255,255,0.9) 100%);">
                 <div>
                   <div class="inline-flex items-center gap-2 rounded-full bg-[#FFC943]/20 px-4 py-1.5 text-xs font-semibold text-[#8a6d1b]">
                     <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7"/></svg>
@@ -305,9 +330,9 @@ const b = import.meta.env.BASE_URL;
                     <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-[#b8860b]"></span>Fraud pattern detection</li>
                   </ul>
                 </div>
-                <!-- Mock returns portal -->
+                <!-- Mock returns portal with glassmorphism -->
                 <div class="flex justify-center">
-                  <div class="w-full max-w-xs overflow-hidden rounded-xl border border-[var(--line)] bg-white shadow-sm">
+                  <div class="v3-glass-widget w-full max-w-xs overflow-hidden rounded-xl border border-white/50 bg-white/80 shadow-sm backdrop-blur-md">
                     <div class="border-b border-[var(--line)] px-5 py-4">
                       <p class="text-sm font-semibold text-[var(--ink)]">Return or Exchange</p>
                       <p class="text-xs text-[var(--ink-muted)]">Order #PL-29481 &middot; Headphones</p>
@@ -322,7 +347,7 @@ const b = import.meta.env.BASE_URL;
                         <p class="text-xs font-medium text-[#035740]">We recommend an exchange!</p>
                         <p class="mt-1 text-[11px] text-[var(--ink-secondary)]">Get the right size with free express shipping.</p>
                         <div class="mt-2 flex gap-2">
-                          <div class="rounded-md bg-[#035740] px-3 py-1.5 text-xs font-medium text-white">Exchange</div>
+                          <div class="rounded-md bg-gradient-to-r from-[#035740] to-[#047857] px-3 py-1.5 text-xs font-medium text-white">Exchange</div>
                           <div class="rounded-md bg-white px-3 py-1.5 text-xs text-[var(--ink-muted)] ring-1 ring-[var(--line)]">Refund</div>
                         </div>
                       </div>
@@ -351,43 +376,44 @@ const b = import.meta.env.BASE_URL;
             </p>
           </div>
 
-          <!-- Right side — timeline -->
+          <!-- Right side — animated timeline -->
           <div class="v3-reveal">
             <div class="v3-timeline relative flex items-center justify-between overflow-x-auto pb-4 scrollbar-none" role="list" aria-label="Post-purchase journey">
-              <div class="v3-timeline-line absolute left-0 top-1/2 h-0.5 w-full -translate-y-1/2 bg-[var(--line)]" style="transform-origin: left center;"></div>
+              <!-- Animated gradient line -->
+              <div class="v3-timeline-line absolute left-0 top-1/2 h-0.5 w-full -translate-y-1/2" style="transform-origin: left center;"></div>
               <!-- Touchpoint items -->
               <div class="v3-timeline-node relative z-10 flex shrink-0 flex-col items-center gap-2 px-3" role="listitem">
-                <div class="flex h-11 w-11 items-center justify-center rounded-full bg-[#3D3AD3] text-white shadow-md shadow-[#3D3AD3]/20">
+                <div class="v3-node-glow flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-[#3D3AD3] to-[#7C3AED] text-white shadow-md shadow-[#3D3AD3]/20">
                   <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"/></svg>
                 </div>
                 <span class="text-[11px] font-medium text-[var(--ink)]">Checkout</span>
               </div>
               <div class="v3-timeline-node relative z-10 flex shrink-0 flex-col items-center gap-2 px-3" role="listitem">
-                <div class="flex h-11 w-11 items-center justify-center rounded-full bg-[#3D3AD3] text-white shadow-md shadow-[#3D3AD3]/20">
+                <div class="v3-node-glow flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-[#3D3AD3] to-[#6366F1] text-white shadow-md shadow-[#3D3AD3]/20">
                   <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25"/></svg>
                 </div>
                 <span class="text-[11px] font-medium text-[var(--ink)]">Shipped</span>
               </div>
               <div class="v3-timeline-node relative z-10 flex shrink-0 flex-col items-center gap-2 px-3" role="listitem">
-                <div class="flex h-11 w-11 items-center justify-center rounded-full bg-[#3D3AD3] text-white shadow-md shadow-[#3D3AD3]/20">
+                <div class="v3-node-glow flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-[#6366F1] to-[#3D3AD3] text-white shadow-md shadow-[#3D3AD3]/20">
                   <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25"/></svg>
                 </div>
                 <span class="text-[11px] font-medium text-[var(--ink)]">In Transit</span>
               </div>
               <div class="v3-timeline-node relative z-10 flex shrink-0 flex-col items-center gap-2 px-3" role="listitem">
-                <div class="flex h-11 w-11 items-center justify-center rounded-full bg-[#035740] text-white shadow-md shadow-[#035740]/20">
+                <div class="v3-node-glow flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-[#035740] to-[#059669] text-white shadow-md shadow-[#035740]/20">
                   <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75"/></svg>
                 </div>
                 <span class="text-[11px] font-medium text-[var(--ink)]">Delivered</span>
               </div>
               <div class="v3-timeline-node relative z-10 flex shrink-0 flex-col items-center gap-2 px-3" role="listitem">
-                <div class="flex h-11 w-11 items-center justify-center rounded-full bg-[#FFC943] text-[#78570a] shadow-md shadow-[#FFC943]/20">
+                <div class="v3-node-glow flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-[#FFC943] to-[#F59E0B] text-[#78570a] shadow-md shadow-[#FFC943]/20">
                   <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182"/></svg>
                 </div>
                 <span class="text-[11px] font-medium text-[var(--ink)]">Return</span>
               </div>
               <div class="v3-timeline-node relative z-10 flex shrink-0 flex-col items-center gap-2 px-3" role="listitem">
-                <div class="flex h-11 w-11 items-center justify-center rounded-full bg-[#035740] text-white shadow-md shadow-[#035740]/20">
+                <div class="v3-node-glow flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-[#035740] to-[#10B981] text-white shadow-md shadow-[#035740]/20">
                   <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"/></svg>
                 </div>
                 <span class="text-[11px] font-medium text-[var(--ink)]">Exchange</span>
@@ -399,48 +425,48 @@ const b = import.meta.env.BASE_URL;
         <!-- Feature cards grid -->
         <div class="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <!-- Card 1: Order Status Page -->
-          <div class="v3-feature-card v3-reveal group rounded-2xl bg-[var(--surface-raised)] p-6 ring-1 ring-[var(--line)] transition-all duration-200 hover:shadow-md hover:ring-[#3D3AD3]/20">
-            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#3D3AD3]/10 transition-colors group-hover:bg-[#3D3AD3]/15">
+          <div class="v3-feature-card v3-reveal group rounded-2xl bg-[var(--surface-raised)] p-6 ring-1 ring-[var(--line)] transition-all duration-300 hover:shadow-lg hover:ring-[#3D3AD3]/20 hover:-translate-y-1" style="transform-style: preserve-3d;">
+            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#3D3AD3]/10 transition-all duration-300 group-hover:bg-[#3D3AD3]/15 group-hover:shadow-md group-hover:shadow-[#3D3AD3]/10">
               <svg class="h-5 w-5 text-[#3D3AD3]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25"/></svg>
             </div>
             <h3 class="mt-4 text-sm font-semibold text-[var(--ink)]">Order Status Page</h3>
             <p class="mt-1.5 text-sm leading-relaxed text-[var(--ink-secondary)]">Branded tracking pages that keep customers on your site and drive repeat visits.</p>
           </div>
           <!-- Card 2: Email & SMS -->
-          <div class="v3-feature-card v3-reveal group rounded-2xl bg-[var(--surface-raised)] p-6 ring-1 ring-[var(--line)] transition-all duration-200 hover:shadow-md hover:ring-[#3D3AD3]/20">
-            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#035740]/10 transition-colors group-hover:bg-[#035740]/15">
+          <div class="v3-feature-card v3-reveal group rounded-2xl bg-[var(--surface-raised)] p-6 ring-1 ring-[var(--line)] transition-all duration-300 hover:shadow-lg hover:ring-[#035740]/20 hover:-translate-y-1">
+            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#035740]/10 transition-all duration-300 group-hover:bg-[#035740]/15 group-hover:shadow-md group-hover:shadow-[#035740]/10">
               <svg class="h-5 w-5 text-[#035740]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
             </div>
             <h3 class="mt-4 text-sm font-semibold text-[var(--ink)]">Email &amp; SMS</h3>
             <p class="mt-1.5 text-sm leading-relaxed text-[var(--ink-secondary)]">Proactive notifications at every milestone, driving 29% more revenue per message.</p>
           </div>
           <!-- Card 3: Campaigns -->
-          <div class="v3-feature-card v3-reveal group rounded-2xl bg-[var(--surface-raised)] p-6 ring-1 ring-[var(--line)] transition-all duration-200 hover:shadow-md hover:ring-[#3D3AD3]/20">
-            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#FFC943]/15 transition-colors group-hover:bg-[#FFC943]/25">
+          <div class="v3-feature-card v3-reveal group rounded-2xl bg-[var(--surface-raised)] p-6 ring-1 ring-[var(--line)] transition-all duration-300 hover:shadow-lg hover:ring-[#FFC943]/30 hover:-translate-y-1">
+            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#FFC943]/15 transition-all duration-300 group-hover:bg-[#FFC943]/25 group-hover:shadow-md group-hover:shadow-[#FFC943]/10">
               <svg class="h-5 w-5 text-[#b8860b]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 110-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 01-1.44-4.282m3.102.069a18.03 18.03 0 01-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 018.835 2.535M10.34 6.66a23.847 23.847 0 008.835-2.535m0 0A23.74 23.74 0 0018.795 3m.38 1.125a23.91 23.91 0 011.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 001.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 010 3.46"/></svg>
             </div>
             <h3 class="mt-4 text-sm font-semibold text-[var(--ink)]">Campaigns</h3>
             <p class="mt-1.5 text-sm leading-relaxed text-[var(--ink-secondary)]">Upsell and cross-sell during delivery when engagement is at its peak.</p>
           </div>
           <!-- Card 4: Returns Portal -->
-          <div class="v3-feature-card v3-reveal group rounded-2xl bg-[var(--surface-raised)] p-6 ring-1 ring-[var(--line)] transition-all duration-200 hover:shadow-md hover:ring-[#3D3AD3]/20">
-            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#3D3AD3]/10 transition-colors group-hover:bg-[#3D3AD3]/15">
+          <div class="v3-feature-card v3-reveal group rounded-2xl bg-[var(--surface-raised)] p-6 ring-1 ring-[var(--line)] transition-all duration-300 hover:shadow-lg hover:ring-[#3D3AD3]/20 hover:-translate-y-1">
+            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#3D3AD3]/10 transition-all duration-300 group-hover:bg-[#3D3AD3]/15 group-hover:shadow-md group-hover:shadow-[#3D3AD3]/10">
               <svg class="h-5 w-5 text-[#3D3AD3]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182M3.985 14.652l3.181-3.182"/></svg>
             </div>
             <h3 class="mt-4 text-sm font-semibold text-[var(--ink)]">Returns Portal</h3>
             <p class="mt-1.5 text-sm leading-relaxed text-[var(--ink-secondary)]">Self-service returns with intelligent exchange recommendations and fraud prevention.</p>
           </div>
           <!-- Card 5: Claims Manager -->
-          <div class="v3-feature-card v3-reveal group rounded-2xl bg-[var(--surface-raised)] p-6 ring-1 ring-[var(--line)] transition-all duration-200 hover:shadow-md hover:ring-[#3D3AD3]/20">
-            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#F4373D]/10 transition-colors group-hover:bg-[#F4373D]/15">
+          <div class="v3-feature-card v3-reveal group rounded-2xl bg-[var(--surface-raised)] p-6 ring-1 ring-[var(--line)] transition-all duration-300 hover:shadow-lg hover:ring-[#F4373D]/20 hover:-translate-y-1">
+            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#F4373D]/10 transition-all duration-300 group-hover:bg-[#F4373D]/15 group-hover:shadow-md group-hover:shadow-[#F4373D]/10">
               <svg class="h-5 w-5 text-[#F4373D]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m0-10.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.249-8.25-3.286zm0 13.036h.008v.008H12v-.008z"/></svg>
             </div>
             <h3 class="mt-4 text-sm font-semibold text-[var(--ink)]">Claims Manager</h3>
             <p class="mt-1.5 text-sm leading-relaxed text-[var(--ink-secondary)]">Automate exception handling for lost, damaged, or delayed shipments at scale.</p>
           </div>
           <!-- Card 6: Control Tower -->
-          <div class="v3-feature-card v3-reveal group rounded-2xl bg-[var(--surface-raised)] p-6 ring-1 ring-[var(--line)] transition-all duration-200 hover:shadow-md hover:ring-[#3D3AD3]/20">
-            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#035740]/10 transition-colors group-hover:bg-[#035740]/15">
+          <div class="v3-feature-card v3-reveal group rounded-2xl bg-[var(--surface-raised)] p-6 ring-1 ring-[var(--line)] transition-all duration-300 hover:shadow-lg hover:ring-[#035740]/20 hover:-translate-y-1">
+            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#035740]/10 transition-all duration-300 group-hover:bg-[#035740]/15 group-hover:shadow-md group-hover:shadow-[#035740]/10">
               <svg class="h-5 w-5 text-[#035740]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605"/></svg>
             </div>
             <h3 class="mt-4 text-sm font-semibold text-[var(--ink)]">Control Tower</h3>
@@ -454,8 +480,10 @@ const b = import.meta.env.BASE_URL;
     <!-- ═══════════════════════════════════════════════════════════════
          SECTION 4 — STAT CARDS
          ═══════════════════════════════════════════════════════════════ -->
-    <section class="section-generous" style="background: linear-gradient(180deg, #f5f3ff 0%, #ffffff 100%);">
-      <div class="container-pl">
+    <section class="v3-stats-section relative overflow-hidden section-generous">
+      <!-- Animated background pattern -->
+      <div class="v3-stats-bg pointer-events-none absolute inset-0" aria-hidden="true"></div>
+      <div class="container-pl relative z-10">
         <div class="mx-auto max-w-3xl text-center v3-reveal">
           <h2 class="text-display text-[var(--ink)]">Results that speak for themselves</h2>
           <p class="mt-4 text-[var(--ink-secondary)]" style="font-size: clamp(1rem, 0.5vw + 0.75rem, 1.1rem);">
@@ -465,20 +493,23 @@ const b = import.meta.env.BASE_URL;
 
         <div class="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <!-- Stat 1 -->
-          <div class="v3-stat-card v3-reveal rounded-2xl bg-[var(--surface-raised)] p-8 shadow-sm ring-1 ring-[var(--line)]" style="border-top: 4px solid #035740;">
-            <p class="text-5xl font-bold text-[var(--ink)]">20%</p>
+          <div class="v3-stat-card v3-reveal rounded-2xl bg-[var(--surface-raised)] p-8 shadow-sm ring-1 ring-[var(--line)]">
+            <div class="v3-stat-border-green"></div>
+            <p class="v3-stat-number v3-stat-gradient-green text-5xl font-bold">20%</p>
             <p class="mt-3 text-base font-medium text-[var(--ink)]">Reduction in WISMO &amp; WISMR calls</p>
             <p class="mt-2 text-sm leading-relaxed text-[var(--ink-secondary)]">Proactive communications resolve customer questions before they reach your support team.</p>
           </div>
           <!-- Stat 2 -->
-          <div class="v3-stat-card v3-reveal rounded-2xl bg-[var(--surface-raised)] p-8 shadow-sm ring-1 ring-[var(--line)]" style="border-top: 4px solid #3D3AD3;">
-            <p class="text-5xl font-bold text-[var(--ink)]">11%</p>
+          <div class="v3-stat-card v3-reveal rounded-2xl bg-[var(--surface-raised)] p-8 shadow-sm ring-1 ring-[var(--line)]">
+            <div class="v3-stat-border-purple"></div>
+            <p class="v3-stat-number v3-stat-gradient-purple text-5xl font-bold">11%</p>
             <p class="mt-3 text-base font-medium text-[var(--ink)]">Higher retention through smart returns</p>
             <p class="mt-2 text-sm leading-relaxed text-[var(--ink-secondary)]">Intelligent exchange suggestions and incentives turn would-be refunds into retained revenue.</p>
           </div>
           <!-- Stat 3 -->
-          <div class="v3-stat-card v3-reveal rounded-2xl bg-[var(--surface-raised)] p-8 shadow-sm ring-1 ring-[var(--line)] sm:col-span-2 lg:col-span-1" style="border-top: 4px solid #FFC943;">
-            <p class="text-5xl font-bold text-[var(--ink)]">29%</p>
+          <div class="v3-stat-card v3-reveal rounded-2xl bg-[var(--surface-raised)] p-8 shadow-sm ring-1 ring-[var(--line)] sm:col-span-2 lg:col-span-1">
+            <div class="v3-stat-border-gold"></div>
+            <p class="v3-stat-number v3-stat-gradient-gold text-5xl font-bold">29%</p>
             <p class="mt-3 text-base font-medium text-[var(--ink)]">More revenue per post-purchase email</p>
             <p class="mt-2 text-sm leading-relaxed text-[var(--ink-secondary)]">Branded delivery communications outperform generic carrier messages with higher open and click rates.</p>
           </div>
@@ -562,11 +593,11 @@ const b = import.meta.env.BASE_URL;
           <!-- Right side — contextual visual -->
           <div class="hidden lg:flex lg:items-center lg:justify-center v3-reveal">
             <div class="relative w-full max-w-sm">
-              <!-- Dashboard mockup -->
-              <div class="rounded-2xl bg-[var(--surface-raised)] p-6 shadow-lg ring-1 ring-[var(--line)]">
+              <!-- Dashboard mockup with glassmorphism -->
+              <div class="v3-glass-widget rounded-2xl bg-white/90 p-6 shadow-lg ring-1 ring-white/50 backdrop-blur-md">
                 <div class="flex items-center justify-between border-b border-[var(--line)] pb-4">
                   <p class="text-sm font-semibold text-[var(--ink)]">Team Dashboard</p>
-                  <span class="rounded-full bg-[#035740]/10 px-2.5 py-1 text-[10px] font-medium text-[#035740]">Live</span>
+                  <span class="v3-badge-pulse rounded-full bg-[#035740]/10 px-2.5 py-1 text-[10px] font-medium text-[#035740]">Live</span>
                 </div>
                 <div class="mt-4 grid grid-cols-2 gap-3">
                   <div class="rounded-xl bg-[var(--surface-sunken)] p-3">
@@ -602,17 +633,17 @@ const b = import.meta.env.BASE_URL;
                     </div>
                   </div>
                 </div>
-                <!-- Mini chart -->
+                <!-- Mini chart with animated bars -->
                 <div class="mt-4 rounded-xl bg-[var(--surface-sunken)] p-3">
                   <p class="text-[10px] text-[var(--ink-muted)]">Weekly Delivery Performance</p>
-                  <div class="mt-2 flex items-end gap-1.5" style="height: 48px;">
-                    <div class="w-full rounded-sm bg-[#3D3AD3]/20" style="height: 60%;"></div>
-                    <div class="w-full rounded-sm bg-[#3D3AD3]/30" style="height: 75%;"></div>
-                    <div class="w-full rounded-sm bg-[#3D3AD3]/40" style="height: 65%;"></div>
-                    <div class="w-full rounded-sm bg-[#3D3AD3]/50" style="height: 85%;"></div>
-                    <div class="w-full rounded-sm bg-[#3D3AD3]/60" style="height: 90%;"></div>
-                    <div class="w-full rounded-sm bg-[#3D3AD3]/70" style="height: 80%;"></div>
-                    <div class="w-full rounded-sm bg-[#3D3AD3]" style="height: 95%;"></div>
+                  <div class="v3-chart-bars mt-2 flex items-end gap-1.5" style="height: 48px;">
+                    <div class="v3-chart-bar w-full rounded-sm bg-gradient-to-t from-[#3D3AD3]/40 to-[#3D3AD3]/20" style="--bar-height: 60%;"></div>
+                    <div class="v3-chart-bar w-full rounded-sm bg-gradient-to-t from-[#3D3AD3]/50 to-[#3D3AD3]/30" style="--bar-height: 75%;"></div>
+                    <div class="v3-chart-bar w-full rounded-sm bg-gradient-to-t from-[#3D3AD3]/60 to-[#3D3AD3]/40" style="--bar-height: 65%;"></div>
+                    <div class="v3-chart-bar w-full rounded-sm bg-gradient-to-t from-[#3D3AD3]/70 to-[#3D3AD3]/50" style="--bar-height: 85%;"></div>
+                    <div class="v3-chart-bar w-full rounded-sm bg-gradient-to-t from-[#3D3AD3]/80 to-[#3D3AD3]/60" style="--bar-height: 90%;"></div>
+                    <div class="v3-chart-bar w-full rounded-sm bg-gradient-to-t from-[#3D3AD3]/90 to-[#3D3AD3]/70" style="--bar-height: 80%;"></div>
+                    <div class="v3-chart-bar w-full rounded-sm bg-gradient-to-t from-[#3D3AD3] to-[#7C3AED]" style="--bar-height: 95%;"></div>
                   </div>
                   <div class="mt-1 flex justify-between text-[9px] text-[var(--ink-muted)]">
                     <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
@@ -640,40 +671,40 @@ const b = import.meta.env.BASE_URL;
 
         <div class="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
           <!-- Case Study 1 -->
-          <div class="v3-reveal rounded-2xl bg-[var(--surface-raised)] p-7 shadow-sm ring-1 ring-[var(--line)]" style="border-left: 4px solid #035740;">
+          <div class="v3-reveal v3-case-card group rounded-2xl bg-[var(--surface-raised)] p-7 shadow-sm ring-1 ring-[var(--line)] transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="border-left: 4px solid #035740;">
             <div class="flex items-center gap-3">
               <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#035740]/10">
                 <svg class="h-5 w-5 text-[#035740]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72"/></svg>
               </div>
               <p class="text-sm font-semibold text-[var(--ink)]">Global Fashion Retailer</p>
             </div>
-            <p class="mt-5 text-4xl font-bold text-[#035740]">+25%</p>
+            <p class="mt-5 text-4xl font-bold v3-stat-gradient-green">+25%</p>
             <p class="mt-1 text-sm font-medium text-[var(--ink)]">Reduction in WISMO calls</p>
             <p class="mt-4 text-sm italic leading-relaxed text-[var(--ink-secondary)]">"parcelLab's proactive communications dramatically reduced our call volume while improving customer satisfaction scores across all markets."</p>
           </div>
 
           <!-- Case Study 2 -->
-          <div class="v3-reveal rounded-2xl bg-[var(--surface-raised)] p-7 shadow-sm ring-1 ring-[var(--line)]" style="border-left: 4px solid #3D3AD3;">
+          <div class="v3-reveal v3-case-card group rounded-2xl bg-[var(--surface-raised)] p-7 shadow-sm ring-1 ring-[var(--line)] transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="border-left: 4px solid #3D3AD3;">
             <div class="flex items-center gap-3">
               <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#3D3AD3]/10">
                 <svg class="h-5 w-5 text-[#3D3AD3]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>
               </div>
               <p class="text-sm font-semibold text-[var(--ink)]">Premium DTC Brand</p>
             </div>
-            <p class="mt-5 text-4xl font-bold text-[#3D3AD3]">11%</p>
+            <p class="mt-5 text-4xl font-bold v3-stat-gradient-purple">11%</p>
             <p class="mt-1 text-sm font-medium text-[var(--ink)]">More exchanges vs refunds</p>
             <p class="mt-4 text-sm italic leading-relaxed text-[var(--ink-secondary)]">"The intelligent returns portal guided customers to exchange instead of refund. We retained revenue we would have lost with our previous process."</p>
           </div>
 
           <!-- Case Study 3 -->
-          <div class="v3-reveal rounded-2xl bg-[var(--surface-raised)] p-7 shadow-sm ring-1 ring-[var(--line)]" style="border-left: 4px solid #FFC943;">
+          <div class="v3-reveal v3-case-card group rounded-2xl bg-[var(--surface-raised)] p-7 shadow-sm ring-1 ring-[var(--line)] transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="border-left: 4px solid #FFC943;">
             <div class="flex items-center gap-3">
               <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#FFC943]/15">
                 <svg class="h-5 w-5 text-[#b8860b]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"/></svg>
               </div>
               <p class="text-sm font-semibold text-[var(--ink)]">Enterprise E-commerce</p>
             </div>
-            <p class="mt-5 text-4xl font-bold text-[#b8860b]">5%</p>
+            <p class="mt-5 text-4xl font-bold v3-stat-gradient-gold">5%</p>
             <p class="mt-1 text-sm font-medium text-[var(--ink)]">Checkout conversion lift</p>
             <p class="mt-4 text-sm italic leading-relaxed text-[var(--ink-secondary)]">"Adding precise delivery dates at checkout was the single highest-impact conversion optimization we made all year. It built immediate trust."</p>
           </div>
@@ -694,7 +725,7 @@ const b = import.meta.env.BASE_URL;
 
         <div class="mx-auto mt-10 flex max-w-3xl flex-wrap items-center justify-center gap-6 v3-reveal">
           <!-- SOC 2 -->
-          <div class="flex items-center gap-3 rounded-xl bg-[var(--surface-raised)] px-6 py-4 shadow-sm ring-1 ring-[var(--line)]">
+          <div class="v3-trust-badge flex items-center gap-3 rounded-xl bg-[var(--surface-raised)] px-6 py-4 shadow-sm ring-1 ring-[var(--line)] transition-all duration-300 hover:shadow-md hover:-translate-y-0.5">
             <svg class="h-8 w-8 text-[#3D3AD3]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
             <div>
               <p class="text-sm font-semibold text-[var(--ink)]">SOC 2 Type II</p>
@@ -702,7 +733,7 @@ const b = import.meta.env.BASE_URL;
             </div>
           </div>
           <!-- GDPR -->
-          <div class="flex items-center gap-3 rounded-xl bg-[var(--surface-raised)] px-6 py-4 shadow-sm ring-1 ring-[var(--line)]">
+          <div class="v3-trust-badge flex items-center gap-3 rounded-xl bg-[var(--surface-raised)] px-6 py-4 shadow-sm ring-1 ring-[var(--line)] transition-all duration-300 hover:shadow-md hover:-translate-y-0.5">
             <svg class="h-8 w-8 text-[#035740]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>
             <div>
               <p class="text-sm font-semibold text-[var(--ink)]">GDPR</p>
@@ -710,7 +741,7 @@ const b = import.meta.env.BASE_URL;
             </div>
           </div>
           <!-- ISO 27001 -->
-          <div class="flex items-center gap-3 rounded-xl bg-[var(--surface-raised)] px-6 py-4 shadow-sm ring-1 ring-[var(--line)]">
+          <div class="v3-trust-badge flex items-center gap-3 rounded-xl bg-[var(--surface-raised)] px-6 py-4 shadow-sm ring-1 ring-[var(--line)] transition-all duration-300 hover:shadow-md hover:-translate-y-0.5">
             <svg class="h-8 w-8 text-[#b8860b]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17l-5.384 3.318a.75.75 0 01-1.15-.797l2.046-6.178-5.153-3.858a.75.75 0 01.448-1.348l6.39-.247 2.197-6.048a.75.75 0 011.372 0l2.197 6.048 6.39.247a.75.75 0 01.448 1.348l-5.153 3.858 2.046 6.178a.75.75 0 01-1.15.797l-5.384-3.318z"/></svg>
             <div>
               <p class="text-sm font-semibold text-[var(--ink)]">ISO 27001</p>
@@ -742,19 +773,20 @@ const b = import.meta.env.BASE_URL;
     <!-- ═══════════════════════════════════════════════════════════════
          SECTION 8 — BOTTOM CTA
          ═══════════════════════════════════════════════════════════════ -->
-    <section class="section-generous" style="background: linear-gradient(135deg, #f8f7ff 0%, #ede9fe 50%, #f5f3ff 100%);">
-      <div class="container-pl">
+    <section class="v3-cta-section relative overflow-hidden section-generous">
+      <div class="v3-cta-bg pointer-events-none absolute inset-0" aria-hidden="true"></div>
+      <div class="container-pl relative z-10">
         <div class="mx-auto max-w-2xl text-center v3-reveal">
           <h2 class="text-display text-[var(--ink)]">Power every moment after the buy</h2>
           <p class="mt-5 text-[var(--ink-secondary)]" style="font-size: clamp(1rem, 0.5vw + 0.75rem, 1.125rem); line-height: 1.7;">
             Join 700+ brands delivering exceptional post-purchase experiences with parcelLab. Start seeing results in weeks, not months.
           </p>
           <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <a href="/contact-us/" class="inline-flex items-center gap-2 rounded-xl bg-[#3D3AD3] px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-[#3D3AD3]/25 transition-all duration-200 hover:bg-[#3230b8] hover:shadow-xl hover:shadow-[#3D3AD3]/30 hover:-translate-y-px active:translate-y-0">
+            <a href="/contact-us/" class="v3-cta-primary group inline-flex items-center gap-2 rounded-xl px-8 py-4 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-px active:translate-y-0">
               Book a demo
-              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
-            <a href="/post-purchase-platform/" class="inline-flex items-center gap-2 rounded-xl border border-[var(--line)] bg-white px-8 py-4 text-sm font-semibold text-[var(--ink)] shadow-sm transition-all duration-200 hover:border-[#3D3AD3]/30 hover:shadow-md hover:-translate-y-px active:translate-y-0">
+            <a href="/post-purchase-platform/" class="inline-flex items-center gap-2 rounded-xl border border-[var(--line)] bg-white px-8 py-4 text-sm font-semibold text-[var(--ink)] shadow-sm transition-all duration-300 hover:border-[#3D3AD3]/30 hover:shadow-md hover:-translate-y-px active:translate-y-0">
               Explore the platform
             </a>
           </div>
@@ -771,12 +803,98 @@ const b = import.meta.env.BASE_URL;
      STYLES
      ═══════════════════════════════════════════════════════════════════ -->
 <style>
-  /* ── Gradient text ── */
-  .v3-gradient-text {
-    background: linear-gradient(135deg, #3D3AD3 0%, #7C3AED 100%);
+  /* ── Animated gradient text ── */
+  .v3-gradient-text-animated {
+    background: linear-gradient(135deg, #3D3AD3, #7C3AED, #EC4899, #3D3AD3);
+    background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: v3-gradient-shift 4s ease infinite;
+  }
+
+  @keyframes v3-gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* ── Stat gradient text variants ── */
+  .v3-stat-gradient-green {
+    background: linear-gradient(135deg, #035740, #059669, #10B981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .v3-stat-gradient-purple {
+    background: linear-gradient(135deg, #3D3AD3, #7C3AED, #8B5CF6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .v3-stat-gradient-gold {
+    background: linear-gradient(135deg, #b8860b, #D97706, #F59E0B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ── Hero section mesh gradient background ── */
+  .v3-hero-section {
+    background: linear-gradient(180deg, #ffffff 0%, #f8f7ff 100%);
+  }
+  .v3-hero-bg {
+    background:
+      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(61, 58, 211, 0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 60% at 80% 50%, rgba(124, 58, 237, 0.04) 0%, transparent 50%),
+      radial-gradient(ellipse 50% 50% at 20% 80%, rgba(3, 87, 64, 0.03) 0%, transparent 50%);
+  }
+
+  /* Floating orbs */
+  .v3-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+  }
+  .v3-orb-1 {
+    width: 500px;
+    height: 500px;
+    top: -100px;
+    right: -100px;
+    background: radial-gradient(circle, rgba(61, 58, 211, 0.15) 0%, transparent 70%);
+    animation: v3-orb-float-1 12s ease-in-out infinite;
+  }
+  .v3-orb-2 {
+    width: 400px;
+    height: 400px;
+    bottom: -50px;
+    left: -100px;
+    background: radial-gradient(circle, rgba(124, 58, 237, 0.1) 0%, transparent 70%);
+    animation: v3-orb-float-2 15s ease-in-out infinite;
+  }
+  .v3-orb-3 {
+    width: 300px;
+    height: 300px;
+    top: 30%;
+    left: 40%;
+    background: radial-gradient(circle, rgba(3, 87, 64, 0.08) 0%, transparent 70%);
+    animation: v3-orb-float-3 10s ease-in-out infinite;
+  }
+
+  @keyframes v3-orb-float-1 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(-30px, 20px) scale(1.05); }
+    66% { transform: translate(20px, -15px) scale(0.95); }
+  }
+  @keyframes v3-orb-float-2 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(25px, -20px) scale(1.1); }
+    66% { transform: translate(-15px, 25px) scale(0.9); }
+  }
+  @keyframes v3-orb-float-3 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(20px, 20px) scale(1.15); }
   }
 
   /* ── Hero entrance animation ── */
@@ -793,26 +911,133 @@ const b = import.meta.env.BASE_URL;
   }
 
   @keyframes v3-hero-enter {
-    from {
-      opacity: 0;
-      transform: translateY(24px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
-  /* ── Floating cards animation ── */
+  /* ── Glass card with animated gradient border ── */
+  .v3-glass-card {
+    position: relative;
+    background: conic-gradient(from 0deg, #3D3AD3, #7C3AED, #EC4899, #3D3AD3);
+    background-size: 100% 100%;
+    animation: v3-border-rotate 6s linear infinite;
+    padding: 2px;
+    border-radius: 1rem;
+  }
+  .v3-card-inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  @keyframes v3-border-rotate {
+    from { filter: hue-rotate(0deg); }
+    to { filter: hue-rotate(360deg); }
+  }
+
+  /* ── Floating cards animation with tilt ── */
   @media (prefers-reduced-motion: no-preference) {
-    .v3-float {
-      animation: v3-float 4s ease-in-out infinite;
+    .v3-float-card {
+      animation: v3-float-tilt 5s ease-in-out infinite;
+    }
+    .v3-float-card:nth-child(2) { animation-duration: 6s; animation-delay: 0.8s; }
+    .v3-float-card:nth-child(3) { animation-duration: 4.5s; animation-delay: 1.2s; }
+    .v3-float-card:nth-child(4) { animation-duration: 5.5s; animation-delay: 2s; }
+  }
+
+  @keyframes v3-float-tilt {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    }
+    25% {
+      transform: translateY(-6px) rotate(0.5deg);
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.12);
+    }
+    50% {
+      transform: translateY(-10px) rotate(-0.5deg);
+      box-shadow: 0 22px 55px rgba(0, 0, 0, 0.14);
+    }
+    75% {
+      transform: translateY(-4px) rotate(0.3deg);
+      box-shadow: 0 14px 45px rgba(0, 0, 0, 0.1);
     }
   }
 
-  @keyframes v3-float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-8px); }
+  /* ── Pulse dot ── */
+  .v3-pulse-dot {
+    animation: v3-pulse-dot 2s ease-in-out infinite;
+  }
+  @keyframes v3-pulse-dot {
+    0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(3, 87, 64, 0.4); }
+    50% { opacity: 0.7; box-shadow: 0 0 0 6px rgba(3, 87, 64, 0); }
+  }
+
+  /* ── Badge pulse ── */
+  .v3-badge-pulse {
+    animation: v3-badge-glow 3s ease-in-out infinite;
+  }
+  @keyframes v3-badge-glow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(3, 87, 64, 0.1); }
+    50% { box-shadow: 0 0 0 4px rgba(3, 87, 64, 0.05); }
+  }
+
+  /* ── Progress bar shimmer ── */
+  .v3-progress-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  .v3-progress-shimmer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
+    animation: v3-shimmer 2s ease-in-out infinite;
+  }
+  @keyframes v3-shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  /* ── Countdown pulse ── */
+  .v3-countdown-pulse {
+    animation: v3-countdown 2s ease-in-out infinite;
+  }
+  @keyframes v3-countdown {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+
+  /* ── Check icon draw animation ── */
+  .v3-check-path {
+    stroke-dasharray: 30;
+    stroke-dashoffset: 30;
+    transition: stroke-dashoffset 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .v3-check-item.v3-check-visible .v3-check-path {
+    stroke-dashoffset: 0;
+  }
+
+  /* ── Logo hover ── */
+  .v3-logo-hover {
+    transition: all 0.3s ease;
+  }
+  .v3-logo-hover:hover {
+    opacity: 0.8 !important;
+    filter: grayscale(0) !important;
+    transform: scale(1.15);
+  }
+
+  /* ── CTA button with gradient slide ── */
+  .v3-cta-primary {
+    background: linear-gradient(135deg, #3D3AD3 0%, #5B21B6 50%, #3D3AD3 100%);
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+    box-shadow: 0 4px 20px rgba(61, 58, 211, 0.3);
+    transition: all 0.3s ease;
+  }
+  .v3-cta-primary:hover {
+    background-position: 100% 50%;
+    box-shadow: 0 8px 30px rgba(61, 58, 211, 0.45);
   }
 
   /* ── Scroll reveal ── */
@@ -826,23 +1051,7 @@ const b = import.meta.env.BASE_URL;
     transform: translateY(0);
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    .v3-reveal {
-      opacity: 1;
-      transform: none;
-      transition: none;
-    }
-    .v3-hero-entrance {
-      opacity: 1;
-      transform: none;
-      animation: none;
-    }
-    .v3-float {
-      animation: none;
-    }
-  }
-
-  /* ── CSS-only tabs ── */
+  /* ── CSS-only tabs — enhanced ── */
   .v3-tab-label {
     display: inline-flex;
     align-items: center;
@@ -855,8 +1064,9 @@ const b = import.meta.env.BASE_URL;
     background: var(--surface-raised);
     border: 1px solid var(--line);
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     user-select: none;
+    position: relative;
   }
   .v3-tab-label:hover {
     color: var(--ink);
@@ -864,25 +1074,47 @@ const b = import.meta.env.BASE_URL;
     background: #f5f3ff;
   }
 
-  /* Active tab styles */
+  /* Active tab with animated gradient underline */
   #v3-tab-promise:checked ~ div .v3-tab-label[for="v3-tab-promise"],
   #v3-tab-engage:checked ~ div .v3-tab-label[for="v3-tab-engage"],
   #v3-tab-retain:checked ~ div .v3-tab-label[for="v3-tab-retain"] {
     color: #3D3AD3;
     background: #f5f3ff;
-    border-color: #3D3AD3;
-    box-shadow: 0 0 0 1px rgba(61, 58, 211, 0.1);
+    border-color: transparent;
+    box-shadow:
+      0 0 0 1px rgba(61, 58, 211, 0.2),
+      0 4px 12px rgba(61, 58, 211, 0.1);
+  }
+  #v3-tab-promise:checked ~ div .v3-tab-label[for="v3-tab-promise"]::after,
+  #v3-tab-engage:checked ~ div .v3-tab-label[for="v3-tab-engage"]::after,
+  #v3-tab-retain:checked ~ div .v3-tab-label[for="v3-tab-retain"]::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 20%;
+    right: 20%;
+    height: 2px;
+    background: linear-gradient(90deg, #3D3AD3, #7C3AED, #EC4899);
+    background-size: 200% 100%;
+    border-radius: 1px;
+    animation: v3-tab-underline 2s ease infinite;
+  }
+
+  @keyframes v3-tab-underline {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
 
   /* Hide all panels by default */
   .v3-tab-panel {
     display: none;
-    animation: v3-tab-fade 0.35s ease;
+    animation: v3-tab-fade 0.45s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   @keyframes v3-tab-fade {
-    from { opacity: 0; transform: translateY(8px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(10px) scale(0.99); filter: blur(2px); }
+    to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0px); }
   }
 
   /* Show selected panel */
@@ -892,12 +1124,9 @@ const b = import.meta.env.BASE_URL;
     display: block;
   }
 
-  /* Panel wrapper so sibling selector works */
+  /* Panel wrapper */
   .v3-tabs {
     position: relative;
-  }
-  .v3-tabs > div {
-    /* panels and labels share the same parent */
   }
 
   /* Fix: restructured selectors for nested panel structure */
@@ -907,7 +1136,33 @@ const b = import.meta.env.BASE_URL;
     display: block;
   }
 
-  /* ── Timeline ── */
+  /* ── Glass widgets ── */
+  .v3-glass-widget {
+    transition: all 0.3s ease;
+  }
+  .v3-glass-widget:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  }
+
+  /* ── Timeline — animated gradient line ── */
+  .v3-timeline-line {
+    background: linear-gradient(90deg, #3D3AD3, #7C3AED, #035740, #FFC943, #035740);
+    background-size: 200% 100%;
+    transform: scaleX(0);
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    animation: v3-timeline-flow 4s ease infinite paused;
+  }
+  .v3-timeline.v3-visible .v3-timeline-line {
+    transform: scaleX(1);
+    animation-play-state: running;
+  }
+
+  @keyframes v3-timeline-flow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+  }
+
+  /* Timeline nodes */
   .v3-timeline-node {
     opacity: 0;
     transform: scale(0.8);
@@ -923,67 +1178,188 @@ const b = import.meta.env.BASE_URL;
   .v3-timeline.v3-visible .v3-timeline-node:nth-child(5) { transition-delay: 0.4s; }
   .v3-timeline.v3-visible .v3-timeline-node:nth-child(6) { transition-delay: 0.5s; }
 
-  .v3-timeline-line {
-    transform: scaleX(0);
-    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  /* Node pulse on visible */
+  .v3-node-glow {
+    transition: box-shadow 0.4s ease;
   }
-  .v3-timeline.v3-visible .v3-timeline-line {
-    transform: scaleX(1);
+  .v3-timeline.v3-visible .v3-node-glow {
+    animation: v3-node-pulse 2s ease-in-out 1;
+    animation-delay: 0.6s;
   }
-
-  @media (prefers-reduced-motion: reduce) {
-    .v3-timeline-node {
-      opacity: 1;
-      transform: none;
-      transition: none;
-    }
-    .v3-timeline-line {
-      transform: scaleX(1);
-      transition: none;
-    }
+  @keyframes v3-node-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(61, 58, 211, 0.3); }
+    50% { box-shadow: 0 0 0 8px rgba(61, 58, 211, 0); }
   }
 
-  /* ── Stat cards ── */
+  /* Particle-like connecting shadows between nodes */
+  .v3-timeline.v3-visible .v3-timeline-node::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -30%;
+    width: 60%;
+    height: 2px;
+    background: radial-gradient(circle, rgba(61, 58, 211, 0.2) 0%, transparent 70%);
+    animation: v3-particle-flow 3s ease-in-out infinite;
+    pointer-events: none;
+  }
+  .v3-timeline-node:first-child::before { display: none; }
+
+  @keyframes v3-particle-flow {
+    0%, 100% { opacity: 0.3; transform: translateY(-50%) translateX(0); }
+    50% { opacity: 0.8; transform: translateY(-50%) translateX(5px); }
+  }
+
+  /* ── Stat cards — enhanced ── */
   .v3-stat-card {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: none;
+    padding-top: calc(2rem + 4px);
   }
   .v3-stat-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transform: translateY(-6px);
+    box-shadow:
+      0 20px 50px rgba(0, 0, 0, 0.1),
+      0 0 0 1px rgba(61, 58, 211, 0.05);
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    .v3-stat-card:hover {
-      transform: none;
-    }
+  /* Animated gradient top borders */
+  .v3-stat-border-green,
+  .v3-stat-border-purple,
+  .v3-stat-border-gold {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-size: 200% 100%;
+    animation: v3-border-shimmer 3s ease infinite;
+  }
+  .v3-stat-border-green {
+    background: linear-gradient(90deg, #035740, #059669, #10B981, #035740);
+    background-size: 200% 100%;
+  }
+  .v3-stat-border-purple {
+    background: linear-gradient(90deg, #3D3AD3, #7C3AED, #8B5CF6, #3D3AD3);
+    background-size: 200% 100%;
+  }
+  .v3-stat-border-gold {
+    background: linear-gradient(90deg, #b8860b, #D97706, #F59E0B, #b8860b);
+    background-size: 200% 100%;
+  }
+  @keyframes v3-border-shimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
 
-  /* ── Accordion ── */
+  /* Stat number entrance */
+  .v3-stat-number {
+    transition: transform 0.3s ease;
+  }
+  .v3-stat-card:hover .v3-stat-number {
+    transform: scale(1.05);
+  }
+
+  /* ── Stats section animated background ── */
+  .v3-stats-section {
+    background: linear-gradient(180deg, #f5f3ff 0%, #ffffff 100%);
+  }
+  .v3-stats-bg {
+    background:
+      radial-gradient(ellipse 80% 60% at 30% 40%, rgba(61, 58, 211, 0.04) 0%, transparent 50%),
+      radial-gradient(ellipse 60% 50% at 70% 60%, rgba(124, 58, 237, 0.03) 0%, transparent 50%);
+    animation: v3-stats-bg-shift 12s ease-in-out infinite;
+  }
+  @keyframes v3-stats-bg-shift {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+  }
+
+  /* ── Accordion — enhanced ── */
   .v3-accordion {
-    transition: box-shadow 0.2s ease;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
   }
+  .v3-accordion::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, #3D3AD3, #7C3AED);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .v3-accordion[open]::before {
+    opacity: 1;
+    animation: v3-accordion-border 2s ease infinite;
+  }
+  @keyframes v3-accordion-border {
+    0%, 100% { background-position: 0% 0%; }
+    50% { background-position: 0% 100%; }
+  }
+
   .v3-accordion[open] {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    ring: 1px solid rgba(61, 58, 211, 0.1);
   }
+
   .v3-accordion-content {
-    animation: v3-accordion-open 0.3s ease;
+    animation: v3-accordion-open 0.35s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   @keyframes v3-accordion-open {
-    from {
-      opacity: 0;
-      transform: translateY(-4px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(-4px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    .v3-accordion-content {
-      animation: none;
-    }
+  /* ── Chart bars animated ── */
+  .v3-chart-bar {
+    height: 0;
+    transition: height 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .v3-visible .v3-chart-bar,
+  .v3-chart-bars.v3-bars-visible .v3-chart-bar {
+    height: var(--bar-height);
+  }
+  .v3-chart-bar:nth-child(1) { transition-delay: 0.05s; }
+  .v3-chart-bar:nth-child(2) { transition-delay: 0.1s; }
+  .v3-chart-bar:nth-child(3) { transition-delay: 0.15s; }
+  .v3-chart-bar:nth-child(4) { transition-delay: 0.2s; }
+  .v3-chart-bar:nth-child(5) { transition-delay: 0.25s; }
+  .v3-chart-bar:nth-child(6) { transition-delay: 0.3s; }
+  .v3-chart-bar:nth-child(7) { transition-delay: 0.35s; }
+
+  /* ── Trust badges subtle pulse ── */
+  .v3-trust-badge {
+    animation: v3-trust-pulse 4s ease-in-out infinite;
+  }
+  .v3-trust-badge:nth-child(2) { animation-delay: 1.3s; }
+  .v3-trust-badge:nth-child(3) { animation-delay: 2.6s; }
+
+  @keyframes v3-trust-pulse {
+    0%, 100% { box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    50% { box-shadow: 0 2px 12px rgba(61, 58, 211, 0.08); }
+  }
+
+  /* ── CTA section animated gradient ── */
+  .v3-cta-section {
+    background: linear-gradient(135deg, #f8f7ff 0%, #ede9fe 50%, #f5f3ff 100%);
+  }
+  .v3-cta-bg {
+    background:
+      radial-gradient(ellipse 70% 50% at 30% 50%, rgba(61, 58, 211, 0.06) 0%, transparent 50%),
+      radial-gradient(ellipse 50% 60% at 70% 50%, rgba(124, 58, 237, 0.05) 0%, transparent 50%);
+    animation: v3-cta-bg-shift 8s ease-in-out infinite;
+  }
+  @keyframes v3-cta-bg-shift {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
   }
 
   /* ── Feature cards stagger ── */
@@ -993,6 +1369,128 @@ const b = import.meta.env.BASE_URL;
   .v3-feature-card:nth-child(4) { transition-delay: 0.15s; }
   .v3-feature-card:nth-child(5) { transition-delay: 0.2s; }
   .v3-feature-card:nth-child(6) { transition-delay: 0.25s; }
+
+  /* ── Case study cards hover gradient shadow ── */
+  .v3-case-card:hover {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  }
+
+  /* ══════════════════════════════════════════════
+     REDUCED MOTION — disable all animations
+     ══════════════════════════════════════════════ */
+  @media (prefers-reduced-motion: reduce) {
+    .v3-gradient-text-animated {
+      animation: none;
+      background-size: 100% 100%;
+    }
+    .v3-reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+    .v3-hero-entrance {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+    .v3-float-card {
+      animation: none;
+    }
+    .v3-orb {
+      animation: none;
+    }
+    .v3-glass-card {
+      animation: none;
+    }
+    .v3-progress-shimmer::after {
+      animation: none;
+    }
+    .v3-countdown-pulse {
+      animation: none;
+    }
+    .v3-pulse-dot {
+      animation: none;
+    }
+    .v3-badge-pulse {
+      animation: none;
+    }
+    .v3-timeline-node {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+    .v3-timeline-node::before {
+      animation: none;
+    }
+    .v3-timeline-line {
+      transform: scaleX(1);
+      transition: none;
+      animation: none;
+    }
+    .v3-node-glow {
+      animation: none;
+    }
+    .v3-stat-card:hover {
+      transform: none;
+    }
+    .v3-stat-border-green,
+    .v3-stat-border-purple,
+    .v3-stat-border-gold {
+      animation: none;
+    }
+    .v3-stat-number {
+      transition: none;
+    }
+    .v3-stat-card:hover .v3-stat-number {
+      transform: none;
+    }
+    .v3-stats-bg {
+      animation: none;
+    }
+    .v3-accordion::before {
+      animation: none;
+    }
+    .v3-accordion-content {
+      animation: none;
+    }
+    .v3-chart-bar {
+      height: var(--bar-height);
+      transition: none;
+    }
+    .v3-trust-badge {
+      animation: none;
+    }
+    .v3-cta-bg {
+      animation: none;
+    }
+    .v3-cta-primary {
+      background-size: 100% 100%;
+    }
+    .v3-cta-primary:hover {
+      background-position: 0% 50%;
+    }
+    .v3-tab-panel {
+      animation: none;
+    }
+    #v3-tab-promise:checked ~ div .v3-tab-label[for="v3-tab-promise"]::after,
+    #v3-tab-engage:checked ~ div .v3-tab-label[for="v3-tab-engage"]::after,
+    #v3-tab-retain:checked ~ div .v3-tab-label[for="v3-tab-retain"]::after {
+      animation: none;
+    }
+    .v3-logo-hover:hover {
+      transform: none;
+    }
+    .v3-check-path {
+      stroke-dasharray: none;
+      stroke-dashoffset: 0;
+    }
+    .v3-feature-card:hover {
+      transform: none;
+    }
+    .v3-case-card:hover {
+      transform: none;
+    }
+  }
 </style>
 
 
@@ -1000,10 +1498,10 @@ const b = import.meta.env.BASE_URL;
      SCRIPTS
      ═══════════════════════════════════════════════════════════════════ -->
 <script>
-  // Scroll-triggered reveal animations
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   if (!prefersReducedMotion) {
+    // ── Scroll-triggered reveal ──
     const revealObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -1016,12 +1514,11 @@ const b = import.meta.env.BASE_URL;
       { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
     );
 
-    // Observe all reveal elements
     document.querySelectorAll(".v3-reveal").forEach((el) => {
       revealObserver.observe(el);
     });
 
-    // Timeline-specific observer
+    // ── Timeline observer ──
     const timelineObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -1038,7 +1535,41 @@ const b = import.meta.env.BASE_URL;
       timelineObserver.observe(el);
     });
 
-    // Subtle parallax on scroll for hero mockup
+    // ── Check icon draw-in animation ──
+    const checkObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("v3-check-visible");
+            checkObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    document.querySelectorAll(".v3-check-item").forEach((el) => {
+      checkObserver.observe(el);
+    });
+
+    // ── Chart bars animation ──
+    const chartObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("v3-bars-visible");
+            chartObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    document.querySelectorAll(".v3-chart-bars").forEach((el) => {
+      chartObserver.observe(el);
+    });
+
+    // ── Subtle parallax on scroll for hero mockup ──
     const heroMockup = document.querySelector(".v3-stagger-4");
     if (heroMockup) {
       let ticking = false;
@@ -1055,13 +1586,40 @@ const b = import.meta.env.BASE_URL;
         }
       }, { passive: true });
     }
+
+    // ── 3D tilt on feature cards ──
+    document.querySelectorAll(".v3-feature-card").forEach((card) => {
+      card.addEventListener("mousemove", (e: Event) => {
+        const mouseEvent = e as MouseEvent;
+        const rect = (card as HTMLElement).getBoundingClientRect();
+        const x = mouseEvent.clientX - rect.left;
+        const y = mouseEvent.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * -3;
+        const rotateY = ((x - centerX) / centerX) * 3;
+
+        (card as HTMLElement).style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+      });
+
+      card.addEventListener("mouseleave", () => {
+        (card as HTMLElement).style.transform = "";
+      });
+    });
+
   } else {
-    // Make everything visible immediately for reduced motion
+    // Make everything visible for reduced motion
     document.querySelectorAll(".v3-reveal").forEach((el) => {
       el.classList.add("v3-visible");
     });
     document.querySelectorAll(".v3-timeline").forEach((el) => {
       el.classList.add("v3-visible");
+    });
+    document.querySelectorAll(".v3-check-item").forEach((el) => {
+      el.classList.add("v3-check-visible");
+    });
+    document.querySelectorAll(".v3-chart-bars").forEach((el) => {
+      el.classList.add("v3-bars-visible");
     });
   }
 </script>

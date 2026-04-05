@@ -14,17 +14,27 @@ const b = import.meta.env.BASE_URL;
          SECTION 1 — HERO
     ═══════════════════════════════════════════════ -->
     <section class="v2-hero section-generous overflow-hidden">
-      <div class="container-pl">
+      <!-- Animated background orbs -->
+      <div class="v2-hero__orbs" aria-hidden="true">
+        <div class="v2-orb v2-orb--1"></div>
+        <div class="v2-orb v2-orb--2"></div>
+        <div class="v2-orb v2-orb--3"></div>
+        <div class="v2-orb v2-orb--4"></div>
+      </div>
+      <!-- Noise texture overlay -->
+      <div class="v2-noise" aria-hidden="true"></div>
+
+      <div class="container-pl" style="position:relative;z-index:2;">
         <!-- Pill badge -->
         <div class="v2-hero__badge-wrap" aria-hidden="false">
           <span class="v2-badge">The Post-Purchase Platform Built for Retention</span>
         </div>
 
-        <!-- Headline -->
+        <!-- Headline with gradient text -->
         <h1 class="v2-hero__headline" aria-label="We exist to make every delivery count.">
-          <span class="v2-hero__line">We exist to make</span>
-          <span class="v2-hero__line">every delivery</span>
-          <span class="v2-hero__line">count<span class="v2-dot">.</span></span>
+          <span class="v2-hero__line"><span class="v2-gradient-text">We exist to make</span></span>
+          <span class="v2-hero__line"><span class="v2-gradient-text">every delivery</span></span>
+          <span class="v2-hero__line"><span class="v2-gradient-text">count</span><span class="v2-dot">.</span></span>
         </h1>
 
         <!-- Subtext -->
@@ -62,15 +72,16 @@ const b = import.meta.env.BASE_URL;
          SECTION 2 — BOLD MISSION STATEMENT (scroll reveal)
     ═══════════════════════════════════════════════ -->
     <section class="v2-mission section-generous">
-      <div class="container-pl">
+      <div class="v2-mission__gradient-bg" aria-hidden="true"></div>
+      <div class="container-pl" style="position:relative;z-index:2;">
         <h2 class="v2-mission__text" id="missionText" aria-label="We exist to give your customers confidence.">
-          <span class="v2-word">We</span>
-          <span class="v2-word">exist</span>
-          <span class="v2-word">to</span>
-          <span class="v2-word">give</span>
-          <span class="v2-word">your</span>
-          <span class="v2-word">customers</span>
-          <span class="v2-word">confidence.</span>
+          <span class="v2-word"><span class="v2-gradient-text-mission">We</span></span>
+          <span class="v2-word"><span class="v2-gradient-text-mission">exist</span></span>
+          <span class="v2-word"><span class="v2-gradient-text-mission">to</span></span>
+          <span class="v2-word"><span class="v2-gradient-text-mission">give</span></span>
+          <span class="v2-word"><span class="v2-gradient-text-mission">your</span></span>
+          <span class="v2-word"><span class="v2-gradient-text-mission">customers</span></span>
+          <span class="v2-word"><span class="v2-gradient-text-mission">confidence.</span></span>
         </h2>
         <p class="v2-mission__sub">Every shipment. Every return. Every touchpoint.</p>
       </div>
@@ -83,7 +94,7 @@ const b = import.meta.env.BASE_URL;
       <div class="container-pl">
         <div class="v2-products__grid">
           <!-- Pre-Purchase card -->
-          <div class="v2-product-card v2-slide-left">
+          <div class="v2-product-card v2-slide-left v2-tilt-card">
             <span class="v2-product-card__label">Pre-Purchase</span>
             <h3 class="v2-product-card__title">Show delivery dates.<br />Convert more carts.</h3>
             <p class="v2-product-card__desc">
@@ -97,7 +108,7 @@ const b = import.meta.env.BASE_URL;
           </div>
 
           <!-- Post-Purchase card -->
-          <div class="v2-product-card v2-slide-right">
+          <div class="v2-product-card v2-slide-right v2-tilt-card">
             <span class="v2-product-card__label">Post-Purchase</span>
             <h3 class="v2-product-card__title">Keep customers informed.<br />Build lasting trust.</h3>
             <p class="v2-product-card__desc">
@@ -116,7 +127,7 @@ const b = import.meta.env.BASE_URL;
     <!-- ═══════════════════════════════════════════════
          SECTION 4a — FEATURE: Operations Experience
     ═══════════════════════════════════════════════ -->
-    <section class="v2-feature section-generous">
+    <section class="v2-feature v2-feature--purple-tint section-generous">
       <div class="container-pl">
         <div class="v2-feature__row">
           <!-- Left: text -->
@@ -147,9 +158,9 @@ const b = import.meta.env.BASE_URL;
             </ul>
           </div>
 
-          <!-- Right: mock UI -->
-          <div class="v2-feature__visual v2-slide-right">
-            <div class="v2-mock-card">
+          <!-- Right: mock UI (glassmorphism) -->
+          <div class="v2-feature__visual v2-slide-right v2-parallax" data-speed="0.06">
+            <div class="v2-mock-card v2-glass-card">
               <div class="v2-mock-card__header">
                 <div class="v2-mock-dot v2-mock-dot--green"></div>
                 <span>Shipment Update</span>
@@ -181,12 +192,12 @@ const b = import.meta.env.BASE_URL;
     <!-- ═══════════════════════════════════════════════
          SECTION 4b — FEATURE: AI
     ═══════════════════════════════════════════════ -->
-    <section class="v2-feature v2-feature--alt section-generous bg-[var(--surface-sunken)]">
+    <section class="v2-feature v2-feature--green-tint v2-feature--alt section-generous">
       <div class="container-pl">
         <div class="v2-feature__row v2-feature__row--reverse">
-          <!-- Left: mock UI -->
-          <div class="v2-feature__visual v2-slide-left">
-            <div class="v2-mock-card v2-mock-card--dark">
+          <!-- Left: mock UI (glassmorphism dark) -->
+          <div class="v2-feature__visual v2-slide-left v2-parallax" data-speed="-0.05">
+            <div class="v2-mock-card v2-mock-card--dark v2-glass-card-dark">
               <div class="v2-mock-card__header">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="#FFC943" stroke-width="1.5"/><path d="M7 8a3 3 0 016 0c0 2-3 3-3 5M10 15.5v.5" stroke="#FFC943" stroke-width="1.5" stroke-linecap="round"/></svg>
                 <span>AI Copilot</span>
@@ -236,7 +247,7 @@ const b = import.meta.env.BASE_URL;
     <!-- ═══════════════════════════════════════════════
          SECTION 4c — FEATURE: Returns
     ═══════════════════════════════════════════════ -->
-    <section class="v2-feature section-generous">
+    <section class="v2-feature v2-feature--yellow-tint section-generous">
       <div class="container-pl">
         <div class="v2-feature__row">
           <!-- Left: text -->
@@ -268,9 +279,9 @@ const b = import.meta.env.BASE_URL;
             </ul>
           </div>
 
-          <!-- Right: mock returns UI -->
-          <div class="v2-feature__visual v2-slide-right">
-            <div class="v2-mock-card">
+          <!-- Right: mock returns UI (glassmorphism) -->
+          <div class="v2-feature__visual v2-slide-right v2-parallax" data-speed="0.04">
+            <div class="v2-mock-card v2-glass-card">
               <div class="v2-mock-card__header">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M8 6l-4 4 4 4" stroke="#3D3AD3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 <span>Return Request</span>
@@ -309,7 +320,7 @@ const b = import.meta.env.BASE_URL;
     ═══════════════════════════════════════════════ -->
     <section class="v2-testimonial section-generous">
       <div class="container-pl">
-        <div class="v2-testimonial__inner">
+        <div class="v2-testimonial__inner v2-tilt-card">
           <svg class="v2-testimonial__quote" width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M14 28c-3.3 0-6-2.7-6-6s2.7-6 6-6c0-5.5 4.5-10 10-10v6c-2.2 0-4 1.8-4 4 3.3 0 6 2.7 6 6s-2.7 6-6 6h-6zm20 0c-3.3 0-6-2.7-6-6s2.7-6 6-6c0-5.5 4.5-10 10-10v6c-2.2 0-4 1.8-4 4 3.3 0 6 2.7 6 6s-2.7 6-6 6h-6z" fill="#FFC943"/></svg>
           <blockquote class="v2-testimonial__text">
             parcelLab has transformed how we handle post-purchase touchpoints.
@@ -324,21 +335,22 @@ const b = import.meta.env.BASE_URL;
     </section>
 
     <!-- ═══════════════════════════════════════════════
-         SECTION 6 — BIG STATS
+         SECTION 6 — BIG STATS (with starfield + glow)
     ═══════════════════════════════════════════════ -->
-    <section class="v2-stats section-generous" style="background:var(--surface-dark);color:#fff;">
-      <div class="container-pl">
+    <section class="v2-stats section-generous">
+      <div class="v2-stats__starfield" aria-hidden="true"></div>
+      <div class="container-pl" style="position:relative;z-index:2;">
         <div class="v2-stats__grid">
           <div class="v2-stat" role="figure" aria-label="700+ brands trust parcelLab">
-            <span class="v2-stat__num" data-target="700" data-suffix="+">0</span>
+            <span class="v2-stat__num v2-glow-num" data-target="700" data-suffix="+">0</span>
             <span class="v2-stat__label">brands trust parcelLab</span>
           </div>
           <div class="v2-stat" role="figure" aria-label="50 million+ shipments tracked monthly">
-            <span class="v2-stat__num" data-target="50" data-suffix="M+">0</span>
+            <span class="v2-stat__num v2-glow-num" data-target="50" data-suffix="M+">0</span>
             <span class="v2-stat__label">shipments tracked monthly</span>
           </div>
           <div class="v2-stat" role="figure" aria-label="175+ carrier integrations">
-            <span class="v2-stat__num" data-target="175" data-suffix="+">0</span>
+            <span class="v2-stat__num v2-glow-num" data-target="175" data-suffix="+">0</span>
             <span class="v2-stat__label">carrier integrations</span>
           </div>
         </div>
@@ -352,36 +364,36 @@ const b = import.meta.env.BASE_URL;
       <div class="container-pl">
         <h2 class="v2-why__title">Why brands choose parcelLab</h2>
         <div class="v2-why__grid">
-          <div class="v2-why__item">
-            <span class="v2-why__dot" aria-hidden="true"></span>
+          <div class="v2-why__item v2-gradient-border-card v2-tilt-card">
+            <span class="v2-why__dot v2-pulse-dot" aria-hidden="true"></span>
             <span>AI-powered Copilot</span>
           </div>
-          <div class="v2-why__item">
-            <span class="v2-why__dot" aria-hidden="true"></span>
+          <div class="v2-why__item v2-gradient-border-card v2-tilt-card">
+            <span class="v2-why__dot v2-pulse-dot" aria-hidden="true"></span>
             <span>Smart returns &amp; exchanges</span>
           </div>
-          <div class="v2-why__item">
-            <span class="v2-why__dot" aria-hidden="true"></span>
+          <div class="v2-why__item v2-gradient-border-card v2-tilt-card">
+            <span class="v2-why__dot v2-pulse-dot" aria-hidden="true"></span>
             <span>Delivery date promises</span>
           </div>
-          <div class="v2-why__item">
-            <span class="v2-why__dot" aria-hidden="true"></span>
+          <div class="v2-why__item v2-gradient-border-card v2-tilt-card">
+            <span class="v2-why__dot v2-pulse-dot" aria-hidden="true"></span>
             <span>Branded tracking pages</span>
           </div>
-          <div class="v2-why__item">
-            <span class="v2-why__dot" aria-hidden="true"></span>
+          <div class="v2-why__item v2-gradient-border-card v2-tilt-card">
+            <span class="v2-why__dot v2-pulse-dot" aria-hidden="true"></span>
             <span>175+ carrier integrations</span>
           </div>
-          <div class="v2-why__item">
-            <span class="v2-why__dot" aria-hidden="true"></span>
+          <div class="v2-why__item v2-gradient-border-card v2-tilt-card">
+            <span class="v2-why__dot v2-pulse-dot" aria-hidden="true"></span>
             <span>Enterprise-grade security (SOC 2)</span>
           </div>
-          <div class="v2-why__item">
-            <span class="v2-why__dot" aria-hidden="true"></span>
+          <div class="v2-why__item v2-gradient-border-card v2-tilt-card">
+            <span class="v2-why__dot v2-pulse-dot" aria-hidden="true"></span>
             <span>A/B testing &amp; optimization</span>
           </div>
-          <div class="v2-why__item">
-            <span class="v2-why__dot" aria-hidden="true"></span>
+          <div class="v2-why__item v2-gradient-border-card v2-tilt-card">
+            <span class="v2-why__dot v2-pulse-dot" aria-hidden="true"></span>
             <span>Real-time analytics dashboard</span>
           </div>
         </div>
@@ -399,7 +411,9 @@ const b = import.meta.env.BASE_URL;
           <details class="v2-accordion__item">
             <summary class="v2-accordion__trigger">
               What is parcelLab?
-              <svg class="v2-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="v2-accordion__icon-wrap">
+                <svg class="v2-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
             </summary>
             <div class="v2-accordion__content">
               <p>parcelLab is the leading post-purchase experience platform that helps brands take control of every customer touchpoint after checkout. From delivery tracking and proactive communications to returns management and AI-powered support, parcelLab turns logistics into a brand-building opportunity.</p>
@@ -409,7 +423,9 @@ const b = import.meta.env.BASE_URL;
           <details class="v2-accordion__item">
             <summary class="v2-accordion__trigger">
               How does parcelLab integrate with my store?
-              <svg class="v2-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="v2-accordion__icon-wrap">
+                <svg class="v2-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
             </summary>
             <div class="v2-accordion__content">
               <p>parcelLab integrates seamlessly with all major e-commerce platforms including Shopify, Salesforce Commerce Cloud, SAP, and Magento. Our REST APIs and pre-built connectors make setup fast, and our implementation team supports you through every step of the process.</p>
@@ -419,7 +435,9 @@ const b = import.meta.env.BASE_URL;
           <details class="v2-accordion__item">
             <summary class="v2-accordion__trigger">
               What carriers does parcelLab support?
-              <svg class="v2-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="v2-accordion__icon-wrap">
+                <svg class="v2-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
             </summary>
             <div class="v2-accordion__content">
               <p>parcelLab supports over 175 carriers worldwide, including DHL, UPS, FedEx, Royal Mail, DPD, Hermes, and many regional providers. If you work with a carrier we don't yet support, our team can add new integrations quickly.</p>
@@ -429,7 +447,9 @@ const b = import.meta.env.BASE_URL;
           <details class="v2-accordion__item">
             <summary class="v2-accordion__trigger">
               How does the AI Copilot work?
-              <svg class="v2-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="v2-accordion__icon-wrap">
+                <svg class="v2-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
             </summary>
             <div class="v2-accordion__content">
               <p>The AI Copilot uses large language models trained on logistics and e-commerce data to automate common support tasks. It can resolve WISMO inquiries, suggest message optimizations, surface actionable insights from your data, and help draft personalized communications — all within the parcelLab platform.</p>
@@ -439,7 +459,9 @@ const b = import.meta.env.BASE_URL;
           <details class="v2-accordion__item">
             <summary class="v2-accordion__trigger">
               Can I manage returns with parcelLab?
-              <svg class="v2-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="v2-accordion__icon-wrap">
+                <svg class="v2-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
             </summary>
             <div class="v2-accordion__content">
               <p>Yes. parcelLab provides a fully branded, self-service returns portal where customers can initiate returns, choose exchanges or store credit, and print labels. You set the rules — return windows, eligibility, fraud checks — and parcelLab automates the rest.</p>
@@ -449,7 +471,9 @@ const b = import.meta.env.BASE_URL;
           <details class="v2-accordion__item">
             <summary class="v2-accordion__trigger">
               What kind of analytics does parcelLab provide?
-              <svg class="v2-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="v2-accordion__icon-wrap">
+                <svg class="v2-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
             </summary>
             <div class="v2-accordion__content">
               <p>parcelLab offers a real-time analytics dashboard covering delivery performance, carrier SLA compliance, communication engagement rates, returns trends, and customer satisfaction scores. You can filter by time period, region, carrier, and more to surface actionable insights.</p>
@@ -459,7 +483,9 @@ const b = import.meta.env.BASE_URL;
           <details class="v2-accordion__item">
             <summary class="v2-accordion__trigger">
               Is parcelLab GDPR compliant?
-              <svg class="v2-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="v2-accordion__icon-wrap">
+                <svg class="v2-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
             </summary>
             <div class="v2-accordion__content">
               <p>Absolutely. parcelLab is fully GDPR compliant and SOC 2 Type II certified. Data is hosted in the EU, and we follow strict data processing agreements. We support data subject access requests and provide full transparency on how customer data is handled.</p>
@@ -469,7 +495,9 @@ const b = import.meta.env.BASE_URL;
           <details class="v2-accordion__item">
             <summary class="v2-accordion__trigger">
               How do I get started?
-              <svg class="v2-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="v2-accordion__icon-wrap">
+                <svg class="v2-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
             </summary>
             <div class="v2-accordion__content">
               <p>Getting started is simple: book a demo with our team, and we'll walk you through the platform tailored to your use case. From there, our implementation specialists handle integration, configuration, and go-live — most brands are up and running within weeks.</p>
@@ -508,6 +536,16 @@ const b = import.meta.env.BASE_URL;
 </Layout>
 
 <!-- ═══════════════════════════════════════════════════
+     SVG FILTERS (noise texture)
+═══════════════════════════════════════════════════ -->
+<svg style="position:absolute;width:0;height:0;" aria-hidden="true">
+  <filter id="v2-grain">
+    <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+    <feColorMatrix type="saturate" values="0"/>
+  </filter>
+</svg>
+
+<!-- ═══════════════════════════════════════════════════
      STYLES
 ═══════════════════════════════════════════════════ -->
 <style>
@@ -519,7 +557,135 @@ const b = import.meta.env.BASE_URL;
     --v2-ease: cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  /* ── Badge ── */
+  /* ═══════════════════════════════════════
+     ANIMATED GRADIENT TEXT
+  ═══════════════════════════════════════ */
+  .v2-gradient-text {
+    background: linear-gradient(135deg, #0f172a 0%, #3D3AD3 50%, #0f172a 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: v2-gradient-shift 4s ease infinite;
+  }
+
+  .v2-gradient-text-mission {
+    background: linear-gradient(135deg, #0f172a 0%, #3D3AD3 40%, #035740 70%, #0f172a 100%);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: v2-gradient-shift-mission 6s ease infinite;
+  }
+
+  @keyframes v2-gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes v2-gradient-shift-mission {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* ═══════════════════════════════════════
+     FLOATING GRADIENT ORBS
+  ═══════════════════════════════════════ */
+  .v2-hero {
+    position: relative;
+    overflow: hidden;
+    padding-top: clamp(6rem, 10vw, 10rem);
+  }
+
+  .v2-hero__orbs {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .v2-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.25;
+    will-change: transform;
+  }
+  .v2-orb--1 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #3D3AD3 0%, transparent 70%);
+    top: -10%;
+    right: -5%;
+    animation: v2-orb-float-1 20s ease-in-out infinite;
+  }
+  .v2-orb--2 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #FFC943 0%, transparent 70%);
+    bottom: 10%;
+    left: -8%;
+    animation: v2-orb-float-2 25s ease-in-out infinite;
+  }
+  .v2-orb--3 {
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, #035740 0%, transparent 70%);
+    top: 40%;
+    left: 50%;
+    animation: v2-orb-float-3 22s ease-in-out infinite;
+  }
+  .v2-orb--4 {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, #3D3AD3 0%, transparent 70%);
+    bottom: -5%;
+    right: 30%;
+    animation: v2-orb-float-4 18s ease-in-out infinite;
+  }
+
+  @keyframes v2-orb-float-1 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(-60px, 40px) scale(1.1); }
+    50% { transform: translate(-30px, 80px) scale(0.95); }
+    75% { transform: translate(40px, 20px) scale(1.05); }
+  }
+  @keyframes v2-orb-float-2 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(50px, -30px) scale(1.05); }
+    50% { transform: translate(80px, -60px) scale(1.1); }
+    75% { transform: translate(30px, -20px) scale(0.95); }
+  }
+  @keyframes v2-orb-float-3 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(-70px, 50px) scale(1.08); }
+    66% { transform: translate(40px, -30px) scale(0.92); }
+  }
+  @keyframes v2-orb-float-4 {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(60px, -40px); }
+  }
+
+  /* ═══════════════════════════════════════
+     NOISE TEXTURE OVERLAY
+  ═══════════════════════════════════════ */
+  .v2-noise {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.035;
+    filter: url(#v2-grain);
+    width: 100%;
+    height: 100%;
+  }
+
+  /* ═══════════════════════════════════════
+     BADGE
+  ═══════════════════════════════════════ */
   .v2-badge {
     display: inline-block;
     padding: 0.4em 1.2em;
@@ -532,11 +698,9 @@ const b = import.meta.env.BASE_URL;
     border-radius: 999px;
   }
 
-  /* ── HERO ── */
-  .v2-hero {
-    padding-top: clamp(6rem, 10vw, 10rem);
-  }
-
+  /* ═══════════════════════════════════════
+     HERO
+  ═══════════════════════════════════════ */
   .v2-hero__badge-wrap {
     margin-bottom: 2rem;
     opacity: 0;
@@ -544,11 +708,11 @@ const b = import.meta.env.BASE_URL;
   }
 
   .v2-hero__headline {
-    font-size: clamp(3rem, 8vw, 7rem);
+    font-size: clamp(3.5rem, 10vw, 8rem);
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: -0.03em;
-    line-height: 0.95;
+    letter-spacing: -0.05em;
+    line-height: 0.92;
     color: var(--ink);
     margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
   }
@@ -556,11 +720,13 @@ const b = import.meta.env.BASE_URL;
   .v2-hero__line {
     display: block;
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(40px) scale(0.7);
+    filter: blur(10px);
   }
 
   .v2-dot {
     color: var(--v2-yellow);
+    -webkit-text-fill-color: var(--v2-yellow);
   }
 
   .v2-hero__sub {
@@ -583,7 +749,9 @@ const b = import.meta.env.BASE_URL;
     transform: translateY(20px);
   }
 
-  /* ── Buttons ── */
+  /* ═══════════════════════════════════════
+     BUTTONS (gradient slide on hover)
+  ═══════════════════════════════════════ */
   .v2-btn-primary {
     display: inline-flex;
     align-items: center;
@@ -592,16 +760,33 @@ const b = import.meta.env.BASE_URL;
     font-size: 0.95rem;
     font-weight: 600;
     color: #fff;
-    background: var(--v2-purple);
+    background: linear-gradient(135deg, #3D3AD3 0%, #5855e0 50%, #3D3AD3 100%);
+    background-size: 200% 200%;
+    background-position: 0% 50%;
     border-radius: 8px;
     text-decoration: none;
-    transition: all 0.25s var(--v2-ease);
+    transition: all 0.4s var(--v2-ease);
     box-shadow: 0 2px 12px rgba(61, 58, 211, 0.25);
+    position: relative;
+    overflow: hidden;
+  }
+  .v2-btn-primary::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.15) 50%, transparent 100%);
+    background-size: 200% 200%;
+    background-position: 100% 100%;
+    transition: background-position 0.5s ease;
+    border-radius: inherit;
   }
   .v2-btn-primary:hover {
-    background: #312db8;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 20px rgba(61, 58, 211, 0.35);
+    background-position: 100% 50%;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(61, 58, 211, 0.4);
+  }
+  .v2-btn-primary:hover::before {
+    background-position: 0% 0%;
   }
   .v2-btn-primary:active {
     transform: translateY(0) scale(0.97);
@@ -625,7 +810,9 @@ const b = import.meta.env.BASE_URL;
     gap: 0.7em;
   }
 
-  /* ── Logo row ── */
+  /* ═══════════════════════════════════════
+     LOGO ROW
+  ═══════════════════════════════════════ */
   .v2-hero__logos {
     opacity: 0;
     transform: translateY(20px);
@@ -656,28 +843,52 @@ const b = import.meta.env.BASE_URL;
     opacity: 0.75;
   }
 
-  /* ── MISSION ── */
+  /* ═══════════════════════════════════════
+     MISSION (gradient overlay + word reveal)
+  ═══════════════════════════════════════ */
   .v2-mission {
     text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .v2-mission__gradient-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(61,58,211,0.03) 0%, rgba(3,87,64,0.03) 50%, rgba(255,201,67,0.03) 100%);
+    background-size: 400% 400%;
+    animation: v2-mission-gradient-shift 10s ease infinite;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  @keyframes v2-mission-gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
 
   .v2-mission__text {
-    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-size: clamp(3rem, 8vw, 6rem);
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: -0.025em;
-    line-height: 1.05;
+    letter-spacing: -0.05em;
+    line-height: 1.02;
     max-width: 56rem;
     margin: 0 auto clamp(1.5rem, 3vw, 2.5rem);
   }
 
   .v2-word {
     display: inline-block;
-    opacity: 0.12;
-    transition: opacity 0.5s var(--v2-ease);
+    opacity: 0.08;
+    transform: scale(0.85);
+    filter: blur(4px);
+    transition: opacity 0.6s var(--v2-ease), transform 0.6s var(--v2-ease), filter 0.6s var(--v2-ease);
   }
   .v2-word.is-visible {
     opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
   }
 
   .v2-mission__sub {
@@ -686,7 +897,9 @@ const b = import.meta.env.BASE_URL;
     letter-spacing: 0.02em;
   }
 
-  /* ── PRODUCT CARDS ── */
+  /* ═══════════════════════════════════════
+     PRODUCT CARDS
+  ═══════════════════════════════════════ */
   .v2-products__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -708,8 +921,8 @@ const b = import.meta.env.BASE_URL;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
   }
   .v2-product-card:hover {
-    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
-    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+    transform: translateY(-3px);
   }
 
   .v2-product-card__label {
@@ -744,7 +957,19 @@ const b = import.meta.env.BASE_URL;
     opacity: 0.15;
   }
 
-  /* ── FEATURE SECTIONS ── */
+  /* ═══════════════════════════════════════
+     FEATURE SECTIONS (gradient tints)
+  ═══════════════════════════════════════ */
+  .v2-feature--purple-tint {
+    background: linear-gradient(180deg, rgba(61,58,211,0.02) 0%, rgba(61,58,211,0.06) 100%);
+  }
+  .v2-feature--green-tint {
+    background: linear-gradient(180deg, rgba(3,87,64,0.02) 0%, rgba(3,87,64,0.06) 100%);
+  }
+  .v2-feature--yellow-tint {
+    background: linear-gradient(180deg, rgba(255,201,67,0.02) 0%, rgba(255,201,67,0.08) 100%);
+  }
+
   .v2-feature__row {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -779,7 +1004,7 @@ const b = import.meta.env.BASE_URL;
     font-size: clamp(1.75rem, 3vw, 2.5rem);
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
     line-height: 1.1;
     margin-bottom: 1.25rem;
   }
@@ -828,6 +1053,11 @@ const b = import.meta.env.BASE_URL;
     border: 1.5px solid var(--line);
     border-radius: 999px;
     color: var(--ink-secondary);
+    transition: border-color 0.3s ease, color 0.3s ease;
+  }
+  .v2-feature__pills li:hover {
+    border-color: var(--v2-purple);
+    color: var(--v2-purple);
   }
 
   /* ── Mini stats ── */
@@ -852,18 +1082,68 @@ const b = import.meta.env.BASE_URL;
     margin-top: 0.2rem;
   }
 
-  /* ── MOCK CARDS ── */
-  .v2-mock-card {
-    background: var(--surface-raised);
-    border: 1px solid var(--line);
-    border-radius: 12px;
+  /* ═══════════════════════════════════════
+     GLASSMORPHISM MOCK CARDS
+  ═══════════════════════════════════════ */
+  .v2-glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    box-shadow:
+      0 4px 24px rgba(0, 0, 0, 0.06),
+      inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    position: relative;
   }
-  .v2-mock-card--dark {
-    background: var(--surface-dark);
-    border-color: rgba(255,255,255,0.08);
+  .v2-glass-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(61,58,211,0.3), rgba(255,201,67,0.2), rgba(3,87,64,0.3));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    animation: v2-border-gradient-rotate 4s linear infinite;
+    background-size: 300% 300%;
+  }
+
+  .v2-glass-card-dark {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow:
+      0 4px 30px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
     color: #fff;
+    position: relative;
+  }
+  .v2-glass-card-dark::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(61,58,211,0.4), rgba(255,201,67,0.2), rgba(61,58,211,0.4));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    animation: v2-border-gradient-rotate 4s linear infinite;
+    background-size: 300% 300%;
+  }
+
+  @keyframes v2-border-gradient-rotate {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
 
   .v2-mock-card__header {
@@ -871,12 +1151,12 @@ const b = import.meta.env.BASE_URL;
     align-items: center;
     gap: 0.6rem;
     padding: 0.9rem 1.25rem;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
     font-size: 0.8rem;
     font-weight: 600;
     color: var(--ink-secondary);
   }
-  .v2-mock-card--dark .v2-mock-card__header {
+  .v2-glass-card-dark .v2-mock-card__header {
     border-color: rgba(255,255,255,0.08);
     color: rgba(255,255,255,0.7);
   }
@@ -892,6 +1172,7 @@ const b = import.meta.env.BASE_URL;
   }
   .v2-mock-dot--green {
     background: #22c55e;
+    box-shadow: 0 0 8px rgba(34, 197, 94, 0.4);
   }
 
   .v2-mock-icon-row {
@@ -923,8 +1204,14 @@ const b = import.meta.env.BASE_URL;
   .v2-mock-progress__bar {
     width: 65%;
     height: 100%;
-    background: var(--v2-purple);
+    background: linear-gradient(90deg, var(--v2-purple), #7c79f5);
     border-radius: 99px;
+    animation: v2-progress-shimmer 2s ease-in-out infinite;
+    background-size: 200% 100%;
+  }
+  @keyframes v2-progress-shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
   }
 
   .v2-mock-steps {
@@ -1023,7 +1310,10 @@ const b = import.meta.env.BASE_URL;
     border-radius: 8px;
     color: var(--ink-secondary);
     cursor: default;
-    transition: border-color 0.2s ease;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .v2-mock-return-opt:hover {
+    transform: translateX(4px);
   }
   .v2-mock-return-opt--active {
     border-color: var(--v2-purple);
@@ -1032,7 +1322,9 @@ const b = import.meta.env.BASE_URL;
     font-weight: 600;
   }
 
-  /* ── TESTIMONIAL ── */
+  /* ═══════════════════════════════════════
+     TESTIMONIAL
+  ═══════════════════════════════════════ */
   .v2-testimonial__inner {
     max-width: 48rem;
     margin: 0 auto;
@@ -1040,6 +1332,8 @@ const b = import.meta.env.BASE_URL;
     position: relative;
     padding: clamp(2rem, 4vw, 3.5rem) clamp(1rem, 3vw, 3rem);
     border-left: 4px solid var(--v2-yellow);
+    background: linear-gradient(135deg, rgba(255,201,67,0.02) 0%, rgba(61,58,211,0.02) 100%);
+    border-radius: 0 12px 12px 0;
   }
 
   .v2-testimonial__quote {
@@ -1062,7 +1356,80 @@ const b = import.meta.env.BASE_URL;
     color: var(--ink-muted);
   }
 
-  /* ── BIG STATS ── */
+  /* ═══════════════════════════════════════
+     BIG STATS (gradient bg + starfield + glow)
+  ═══════════════════════════════════════ */
+  .v2-stats {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 40%, #0f172a 100%);
+    color: #fff;
+  }
+
+  .v2-stats__starfield {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+  }
+  /* CSS-only star particles using box-shadows */
+  .v2-stats__starfield::before,
+  .v2-stats__starfield::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: white;
+    animation: v2-stars-drift 60s linear infinite;
+  }
+  .v2-stats__starfield::before {
+    box-shadow:
+      20px 30px 0 0 rgba(255,255,255,0.4),
+      80px 80px 0 0 rgba(255,255,255,0.2),
+      150px 20px 0 0 rgba(255,255,255,0.5),
+      220px 120px 0 0 rgba(255,255,255,0.3),
+      300px 50px 0 0 rgba(255,255,255,0.4),
+      380px 140px 0 0 rgba(255,255,255,0.2),
+      450px 30px 0 0 rgba(255,255,255,0.5),
+      520px 90px 0 0 rgba(255,255,255,0.3),
+      600px 160px 0 0 rgba(255,255,255,0.4),
+      680px 40px 0 0 rgba(255,255,255,0.2),
+      760px 130px 0 0 rgba(255,255,255,0.5),
+      840px 70px 0 0 rgba(255,255,255,0.3),
+      920px 150px 0 0 rgba(255,255,255,0.4),
+      1000px 20px 0 0 rgba(255,255,255,0.2),
+      1100px 100px 0 0 rgba(255,255,255,0.3),
+      1200px 60px 0 0 rgba(255,255,255,0.5),
+      50px 170px 0 0 rgba(255,255,255,0.3),
+      200px 200px 0 0 rgba(255,255,255,0.2),
+      400px 190px 0 0 rgba(255,255,255,0.4),
+      700px 180px 0 0 rgba(255,255,255,0.5);
+  }
+  .v2-stats__starfield::after {
+    box-shadow:
+      40px 60px 0 0.5px rgba(255,255,255,0.3),
+      120px 20px 0 0.5px rgba(255,255,255,0.4),
+      200px 100px 0 0.5px rgba(255,255,255,0.2),
+      320px 140px 0 0.5px rgba(255,255,255,0.5),
+      420px 70px 0 0.5px rgba(255,255,255,0.3),
+      540px 120px 0 0.5px rgba(255,255,255,0.4),
+      660px 40px 0 0.5px rgba(255,255,255,0.2),
+      780px 160px 0 0.5px rgba(255,255,255,0.5),
+      900px 80px 0 0.5px rgba(255,255,255,0.3),
+      1050px 140px 0 0.5px rgba(255,255,255,0.4),
+      100px 220px 0 0.5px rgba(255,255,255,0.2),
+      350px 240px 0 0.5px rgba(255,255,255,0.5),
+      550px 210px 0 0.5px rgba(255,255,255,0.3),
+      800px 230px 0 0.5px rgba(255,255,255,0.4);
+    animation: v2-stars-drift 80s linear infinite reverse;
+  }
+
+  @keyframes v2-stars-drift {
+    0% { transform: translateY(0) translateX(0); }
+    100% { transform: translateY(-30px) translateX(20px); }
+  }
+
   .v2-stats__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1084,6 +1451,25 @@ const b = import.meta.env.BASE_URL;
     letter-spacing: -0.03em;
     color: #fff;
   }
+
+  /* Glow effect for counting stats */
+  .v2-glow-num {
+    text-shadow: 0 0 20px rgba(61, 58, 211, 0), 0 0 40px rgba(61, 58, 211, 0);
+    transition: text-shadow 0.5s ease;
+  }
+  .v2-glow-num.is-counting {
+    text-shadow: 0 0 30px rgba(61, 58, 211, 0.6), 0 0 60px rgba(61, 58, 211, 0.3), 0 0 100px rgba(61, 58, 211, 0.15);
+  }
+  .v2-glow-num.is-done {
+    animation: v2-glow-pulse 2s ease-in-out;
+  }
+
+  @keyframes v2-glow-pulse {
+    0% { text-shadow: 0 0 30px rgba(61, 58, 211, 0.6), 0 0 60px rgba(61, 58, 211, 0.3); }
+    50% { text-shadow: 0 0 50px rgba(255, 201, 67, 0.6), 0 0 80px rgba(255, 201, 67, 0.3); }
+    100% { text-shadow: 0 0 20px rgba(61, 58, 211, 0.2), 0 0 40px rgba(61, 58, 211, 0.1); }
+  }
+
   .v2-stat__label {
     display: block;
     font-size: clamp(0.85rem, 1.2vw, 1rem);
@@ -1094,12 +1480,14 @@ const b = import.meta.env.BASE_URL;
     letter-spacing: 0.05em;
   }
 
-  /* ── WHY BRANDS ── */
+  /* ═══════════════════════════════════════
+     WHY BRANDS (gradient border cards)
+  ═══════════════════════════════════════ */
   .v2-why__title {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.03em;
     line-height: 1.05;
     text-align: center;
     margin-bottom: clamp(2.5rem, 4vw, 4rem);
@@ -1121,6 +1509,32 @@ const b = import.meta.env.BASE_URL;
     }
   }
 
+  .v2-gradient-border-card {
+    position: relative;
+    background: var(--surface-raised);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .v2-gradient-border-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.5px;
+    background: linear-gradient(135deg, rgba(61,58,211,0.4), rgba(255,201,67,0.4), rgba(3,87,64,0.4), rgba(61,58,211,0.4));
+    background-size: 300% 300%;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    animation: v2-border-gradient-rotate 4s linear infinite;
+  }
+  .v2-gradient-border-card:hover::before {
+    opacity: 1;
+  }
+
   .v2-why__item {
     display: flex;
     align-items: center;
@@ -1132,13 +1546,15 @@ const b = import.meta.env.BASE_URL;
     font-weight: 600;
     color: var(--ink);
     background: var(--surface-raised);
-    transition: box-shadow 0.25s ease, transform 0.25s ease;
+    transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
   }
   .v2-why__item:hover {
-    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
-    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+    border-color: transparent;
   }
 
+  /* Pulsing yellow dots */
   .v2-why__dot {
     width: 8px;
     height: 8px;
@@ -1146,13 +1562,24 @@ const b = import.meta.env.BASE_URL;
     background: var(--v2-yellow);
     flex-shrink: 0;
   }
+  .v2-pulse-dot {
+    animation: v2-pulse 2s ease-in-out infinite;
+    box-shadow: 0 0 0 0 rgba(255, 201, 67, 0.4);
+  }
+  @keyframes v2-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 201, 67, 0.4); }
+    70% { box-shadow: 0 0 0 8px rgba(255, 201, 67, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 201, 67, 0); }
+  }
 
-  /* ── FAQ ACCORDION ── */
+  /* ═══════════════════════════════════════
+     FAQ ACCORDION (gradient accent)
+  ═══════════════════════════════════════ */
   .v2-faq__title {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.03em;
     line-height: 1.05;
     text-align: center;
     margin-bottom: clamp(2rem, 3vw, 3rem);
@@ -1178,6 +1605,10 @@ const b = import.meta.env.BASE_URL;
     list-style: none;
     -webkit-user-select: none;
     user-select: none;
+    transition: color 0.3s ease;
+  }
+  .v2-accordion__trigger:hover {
+    color: var(--v2-purple);
   }
   .v2-accordion__trigger::-webkit-details-marker {
     display: none;
@@ -1187,10 +1618,25 @@ const b = import.meta.env.BASE_URL;
     content: "";
   }
 
+  .v2-accordion__icon-wrap {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(61,58,211,0.08), rgba(255,201,67,0.08));
+    transition: background 0.3s ease;
+  }
+  details[open] .v2-accordion__icon-wrap {
+    background: linear-gradient(135deg, rgba(61,58,211,0.15), rgba(255,201,67,0.15));
+  }
+
   .v2-accordion__icon {
     flex-shrink: 0;
-    transition: transform 0.3s var(--v2-ease);
-    color: var(--ink-muted);
+    transition: transform 0.4s var(--v2-ease);
+    color: var(--v2-purple);
   }
   details[open] .v2-accordion__icon {
     transform: rotate(180deg);
@@ -1220,12 +1666,14 @@ const b = import.meta.env.BASE_URL;
     }
   }
 
-  /* ── BOTTOM CTA ── */
+  /* ═══════════════════════════════════════
+     BOTTOM CTA
+  ═══════════════════════════════════════ */
   .v2-cta__title {
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.03em;
     line-height: 1.05;
     margin-bottom: clamp(2rem, 3vw, 3rem);
     max-width: 40rem;
@@ -1249,7 +1697,10 @@ const b = import.meta.env.BASE_URL;
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 800;
     letter-spacing: -0.02em;
-    color: var(--v2-purple);
+    background: linear-gradient(135deg, #3D3AD3, #5855e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     line-height: 1;
   }
   .v2-cta__pod-label {
@@ -1261,7 +1712,18 @@ const b = import.meta.env.BASE_URL;
     margin-top: 0.3rem;
   }
 
-  /* ── SCROLL ANIMATIONS ── */
+  /* ═══════════════════════════════════════
+     3D TILT ON HOVER
+  ═══════════════════════════════════════ */
+  .v2-tilt-card {
+    transition: transform 0.3s var(--v2-ease);
+    transform-style: preserve-3d;
+    perspective: 800px;
+  }
+
+  /* ═══════════════════════════════════════
+     SCROLL ANIMATIONS
+  ═══════════════════════════════════════ */
   .v2-slide-left,
   .v2-slide-right {
     opacity: 0;
@@ -1279,7 +1741,9 @@ const b = import.meta.env.BASE_URL;
     transform: translateX(0);
   }
 
-  /* ── Reduce motion ── */
+  /* ═══════════════════════════════════════
+     REDUCE MOTION
+  ═══════════════════════════════════════ */
   @media (prefers-reduced-motion: reduce) {
     .v2-hero__badge-wrap,
     .v2-hero__line,
@@ -1292,9 +1756,12 @@ const b = import.meta.env.BASE_URL;
       transform: none !important;
       transition: none !important;
       animation: none !important;
+      filter: none !important;
     }
     .v2-word {
       opacity: 1 !important;
+      transform: none !important;
+      filter: none !important;
       transition: none !important;
     }
     .v2-chat-typing span {
@@ -1303,6 +1770,39 @@ const b = import.meta.env.BASE_URL;
     .v2-accordion__content {
       animation: none;
     }
+    .v2-gradient-text,
+    .v2-gradient-text-mission {
+      animation: none;
+      background-size: 100% 100%;
+    }
+    .v2-orb {
+      animation: none !important;
+    }
+    .v2-pulse-dot {
+      animation: none;
+    }
+    .v2-glow-num {
+      text-shadow: none !important;
+      animation: none !important;
+    }
+    .v2-stats__starfield::before,
+    .v2-stats__starfield::after {
+      animation: none;
+    }
+    .v2-glass-card::before,
+    .v2-glass-card-dark::before,
+    .v2-gradient-border-card::before {
+      animation: none;
+    }
+    .v2-mock-progress__bar {
+      animation: none;
+    }
+    .v2-mission__gradient-bg {
+      animation: none;
+    }
+    .v2-btn-primary::before {
+      display: none;
+    }
   }
 </style>
 
@@ -1310,10 +1810,9 @@ const b = import.meta.env.BASE_URL;
      SCRIPTS
 ═══════════════════════════════════════════════════ -->
 <script>
-  // Only animate when user has not requested reduced motion
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  // ── 1. Hero staggered reveal on load ──
+  // ── 1. Hero staggered reveal (scale + blur-to-sharp) ──
   function animateHero() {
     if (prefersReducedMotion) return;
 
@@ -1323,10 +1822,31 @@ const b = import.meta.env.BASE_URL;
     const ctas = document.querySelector(".v2-hero__ctas") as HTMLElement | null;
     const logos = document.querySelector(".v2-hero__logos") as HTMLElement | null;
 
-    const elements = [badge, ...Array.from(lines), sub, ctas, logos].filter(Boolean) as HTMLElement[];
+    // Badge animates first
+    if (badge) {
+      badge.style.transition = `opacity 0.6s cubic-bezier(0.22,1,0.36,1) 0.1s, transform 0.6s cubic-bezier(0.22,1,0.36,1) 0.1s`;
+      requestAnimationFrame(() => {
+        badge.style.opacity = "1";
+        badge.style.transform = "translateY(0)";
+      });
+    }
 
-    elements.forEach((el, i) => {
-      el.style.transition = `opacity 0.6s cubic-bezier(0.22,1,0.36,1) ${i * 0.1}s, transform 0.6s cubic-bezier(0.22,1,0.36,1) ${i * 0.1}s`;
+    // Lines scale in from 0.7 with blur-to-sharp
+    lines.forEach((line, i) => {
+      const delay = 0.2 + i * 0.15;
+      line.style.transition = `opacity 0.8s cubic-bezier(0.22,1,0.36,1) ${delay}s, transform 0.8s cubic-bezier(0.22,1,0.36,1) ${delay}s, filter 0.8s cubic-bezier(0.22,1,0.36,1) ${delay}s`;
+      requestAnimationFrame(() => {
+        line.style.opacity = "1";
+        line.style.transform = "translateY(0) scale(1)";
+        line.style.filter = "blur(0)";
+      });
+    });
+
+    // Sub, CTAs, logos
+    const rest = [sub, ctas, logos].filter(Boolean) as HTMLElement[];
+    rest.forEach((el, i) => {
+      const delay = 0.6 + i * 0.12;
+      el.style.transition = `opacity 0.6s cubic-bezier(0.22,1,0.36,1) ${delay}s, transform 0.6s cubic-bezier(0.22,1,0.36,1) ${delay}s`;
       requestAnimationFrame(() => {
         el.style.opacity = "1";
         el.style.transform = "translateY(0)";
@@ -1334,7 +1854,7 @@ const b = import.meta.env.BASE_URL;
     });
   }
 
-  // ── 2. Mission statement word-by-word scroll reveal ──
+  // ── 2. Mission statement word-by-word (scale + blur) ──
   function initMissionReveal() {
     if (prefersReducedMotion) return;
 
@@ -1356,12 +1876,12 @@ const b = import.meta.env.BASE_URL;
     );
 
     words.forEach((word, i) => {
-      word.style.transitionDelay = `${i * 0.08}s`;
+      word.style.transitionDelay = `${i * 0.1}s`;
       observer.observe(word);
     });
   }
 
-  // ── 3. Slide-in animations for feature sections and cards ──
+  // ── 3. Slide-in animations ──
   function initSlideAnimations() {
     if (prefersReducedMotion) return;
 
@@ -1386,10 +1906,9 @@ const b = import.meta.env.BASE_URL;
     slides.forEach((el) => observer.observe(el));
   }
 
-  // ── 4. Stats count-up animation ──
+  // ── 4. Stats count-up with glow ──
   function initCountUp() {
     if (prefersReducedMotion) {
-      // Still set final values even without animation
       document.querySelectorAll<HTMLElement>(".v2-stat__num").forEach((el) => {
         const target = parseInt(el.dataset.target || "0", 10);
         const suffix = el.dataset.suffix || "";
@@ -1413,15 +1932,21 @@ const b = import.meta.env.BASE_URL;
           const duration = 2000;
           const startTime = performance.now();
 
+          // Add glow while counting
+          el.classList.add("is-counting");
+
           function update(now: number) {
             const elapsed = now - startTime;
             const progress = Math.min(elapsed / duration, 1);
-            // Ease out cubic
             const eased = 1 - Math.pow(1 - progress, 3);
             const current = Math.round(eased * target);
             el.textContent = current + suffix;
             if (progress < 1) {
               requestAnimationFrame(update);
+            } else {
+              // Counting done — transition to pulse then fade glow
+              el.classList.remove("is-counting");
+              el.classList.add("is-done");
             }
           }
           requestAnimationFrame(update);
@@ -1433,19 +1958,68 @@ const b = import.meta.env.BASE_URL;
     stats.forEach((el) => observer.observe(el));
   }
 
-  // ── Initialise everything ──
-  document.addEventListener("DOMContentLoaded", () => {
-    animateHero();
-    initMissionReveal();
-    initSlideAnimations();
-    initCountUp();
-  });
+  // ── 5. Parallax effect for mock UI cards ──
+  function initParallax() {
+    if (prefersReducedMotion) return;
 
-  // Also run on Astro page transitions if using View Transitions
-  document.addEventListener("astro:page-load", () => {
+    const parallaxEls = document.querySelectorAll<HTMLElement>(".v2-parallax");
+    if (!parallaxEls.length) return;
+
+    let ticking = false;
+
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        parallaxEls.forEach((el) => {
+          const speed = parseFloat(el.dataset.speed || "0.05");
+          const rect = el.getBoundingClientRect();
+          const center = rect.top + rect.height / 2;
+          const viewCenter = window.innerHeight / 2;
+          const offset = (center - viewCenter) * speed;
+          el.style.transform = `translateY(${offset}px)`;
+        });
+        ticking = false;
+      });
+    }
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
+  // ── 6. 3D tilt effect on hover ──
+  function initTiltCards() {
+    if (prefersReducedMotion) return;
+
+    const cards = document.querySelectorAll<HTMLElement>(".v2-tilt-card");
+    cards.forEach((card) => {
+      card.addEventListener("mousemove", (e: MouseEvent) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * -4;
+        const rotateY = ((x - centerX) / centerX) * 4;
+        card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(4px)`;
+      });
+
+      card.addEventListener("mouseleave", () => {
+        card.style.transform = "perspective(800px) rotateX(0) rotateY(0) translateZ(0)";
+      });
+    });
+  }
+
+  // ── Initialise everything ──
+  function initAll() {
     animateHero();
     initMissionReveal();
     initSlideAnimations();
     initCountUp();
-  });
+    initParallax();
+    initTiltCards();
+  }
+
+  document.addEventListener("DOMContentLoaded", initAll);
+  document.addEventListener("astro:page-load", initAll);
 </script>
